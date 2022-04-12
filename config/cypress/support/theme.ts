@@ -1,0 +1,222 @@
+//@ts-nocheck dont know how to do this
+export const setCypressDarkTheme = () => {
+	const head = Cypress.$(parent.window.document.head)
+	if (head.find('#cypress-dark').length > 0)
+		return
+	head.append(`<style type="text/css" id="cypress-dark">\n${dark}</style>`)
+}
+
+
+/*removed the following, leave my iframe alone
+.runner .aut-iframe {
+  background-color: var(--background);
+}
+*/
+const dark = `
+
+@media (prefers-color-scheme: dark) {
+
+:root {
+	--background: #222426;
+	--dark-background: #171717;
+	--lighter-background: #3a3a3a;
+	--light-element: #444648;
+	--active-button: #292c2e;
+	--active-color: #cccccc;
+	--button-border: 1px solid #3a3a3a;
+	--command-border: 1px solid #606060;
+	--command-important-border: 1px solid #aaaaaa;
+	--active-command-border: 1px solid #707070;
+	--highlighted-text: #dddddd;
+	--pinned-command-background-color: #3b1654;
+	--pinned-command-background-color-hover: #531f77;
+	--icons-color: #999999;
+	--icons-hover-color: #cccccc;
+	/* passed and failed commands */
+	--failed-command-background-color: inherit;
+	--state-failed-background-color: #ae3a46;
+	--state-failed-color: #f0adad;
+}
+body, nav, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td {
+    background-color: var(--background);
+    color: var(--active-color);
+    margin: 0;
+    padding: 0;
+}
+.reporter, .reporter .runnable-header{
+    background-color: var(--background);
+    color: var(--active-color);
+}
+
+[data-cy="specs-list"] {
+    background-color: var(--background);
+    color: var(--active-color);
+}
+  
+
+.runner header {
+  background-color: var(--background);
+}
+.runner header .url {
+  color: #aaaaaa;
+  background-color: var(--background);
+}
+.runner .url:hover,
+.runner .url:focus,
+.runner .url:active {
+  color: #eeeeee;
+}
+.runner .highlighted .url {
+  background-color: var(--light-element);
+}
+.runner .url:focus {
+  background-color: var(--light-element);
+}
+
+.runner .viewport-info button {
+  text-shadow: none;
+}
+.runner .viewport-info button:hover {
+  color: var(--active-color);
+}
+.runner {
+  background-image: none;
+  background-color: var(--lighter-background);
+}
+
+.reporter .container {
+  border: none;
+}
+
+.runner .selector-playground-toggle:hover {
+  background: none;
+  color: var(--active-color);
+}
+
+.reporter header {
+  background-color: var(--background);
+  color: var(--active-color);
+}
+.reporter header button {
+  background-color: var(--background);
+}
+.reporter header button:hover {
+  background-color: var(--background);
+  color: var(--active-color);
+}
+
+.reporter .runnable {
+  background-color: var(--background);
+}
+.reporter .runnable:hover {
+  background-color: var(--background);
+}
+.reporter .commands-container {
+  background-color: var(--active-button);
+}
+.reporter .command-wrapper:hover {
+  background-color: var(--active-button);
+  color: var(--highlighted-text);
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+.reporter .focus-tests button {
+  border-right: var(--button-border);
+}
+.reporter .stats .duration {
+  border-left: var(--button-border);
+  border-right: var(--button-border);
+}
+.reporter .controls > span:last-child button {
+  border-right: var(--button-border);
+}
+
+.reporter .command-state-pending > span > .command-wrapper {
+  background-color: var(--lighter-background);
+}
+.reporter .command-type-parent {
+  border-top: var(--command-border);
+}
+.reporter .command-type-parent:hover {
+  border-top: var(--active-command-border);
+}
+
+.reporter .runnable.suite > div > .runnable-wrapper .runnable-title {
+  color: var(--active-color);
+}
+
+.reporter .hooks-container .hook-name:hover {
+  color: var(--highlighted-text);
+}
+
+.reporter .command-is-pinned > span > .command-wrapper {
+  background-color: var(--pinned-command-background-color);
+}
+.reporter .command-is-pinned > span > .command-wrapper:hover {
+  background-color: var(--pinned-command-background-color-hover);
+}
+.runner .message-controls {
+  background-color: var(--background);
+}
+.runner .snapshot-controls.showing-selection .toggle-selection {
+  background-color: var(--active-button);
+}
+.runner .snapshot-controls button:active {
+  background-color: var(--active-button);
+  color: var(--active-color);
+}
+.runner .snapshot-controls .snapshot-state-picker button.state-is-selected {
+  background-color: #666565;
+  color: yellow;
+}
+.runner .snapshot-controls button:hover {
+  background-color: var(--active-button);
+  color: var(--active-color);
+}
+.reporter .command-name-assert.command-state-passed .command-method span {
+  background-color: #045e45;
+  color: #17cf20;
+}
+
+.reporter ::-webkit-scrollbar-thumb {
+  background-color: var(--background);
+}
+.reporter ::-webkit-scrollbar-track {
+  background-color: var(--dark-background);
+}
+
+.reporter .command-state-failed > span > .command-wrapper {
+  background-color: var(--failed-command-background-color);
+}
+.reporter .command-state-failed > span > .command-wrapper:hover {
+  background-color: var(--failed-command-background-color);
+}
+.reporter .command-name-assert.command-state-failed .command-method span {
+  background-color: var(--state-failed-background-color);
+  color: var(--state-failed-color);
+}
+.reporter .runnable pre {
+  background-color: var(--background);
+}
+.reporter .runnable pre:hover {
+  background-color: var(--lighter-background);
+}
+.reporter pre {
+  border: var(--command-important-border);
+}
+
+.reporter .runnable-controls i {
+  color: var(--icons-color);
+}
+.reporter .runnable-controls i:hover {
+  color: var(--icons-hover-color);
+}
+.reporter
+  .runnable.suite.runnable-failed
+  > div
+  > .runnable-wrapper
+  .collapsible-more {
+  margin-left: 5px;
+}
+}
+`

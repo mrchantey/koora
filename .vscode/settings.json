@@ -1,0 +1,23 @@
+{
+	"files.exclude": {
+		"**/node_modules": true,
+		"**/.docusaurus": true,
+		"**/package-lock.json": false,
+		"LICENSE": true,
+	},
+	//linting settings
+	"eslint.format.enable": true,
+	"eslint.options": {
+		"configFile": "./config/eslint/.eslintrc.json",
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "dbaeumer.vscode-eslint"
+	},
+	"[typescriptreact]": {
+		"editor.defaultFormatter": "dbaeumer.vscode-eslint"
+	},
+	"editor.codeActionsOnSave": {
+		"editor.action.indentationToTabs": true,
+		"source.fixAll.eslint": true,
+	},
+}

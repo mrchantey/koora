@@ -1,2 +1,2 @@
 # koora
-Assemblyscript 3D Game Framework
+Assemblyscript Game Framework

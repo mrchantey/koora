@@ -1,0 +1,23 @@
+{
+	"$schema": "https://json.schemastore.org/tsconfig",
+	"extends": "../typescript/tsconfig.dom.json",
+	"compilerOptions": {
+		//enables including json files for tests
+		"composite": false,
+		//in case of multiple dirs
+		"rootDir": "../../",
+		//allow absolute imports from root
+		"baseUrl": "../.."
+		// ,
+		// "types": [
+		//     "cypress"
+		// ]
+	},
+	"include": [
+		"support/types.d.ts",
+		"../../packages/*/src/**/*",
+		"../../packages/*/test/common/**/*",
+		"../../packages/*/test/cypress/**/*",
+		"../../packages/*/test/integration/**/*"
+	]
+}

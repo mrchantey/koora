@@ -1,0 +1,15 @@
+{
+	"$schema": "https://raw.githubusercontent.com/cypress-io/cypress/develop/cli/schema/cypress.schema.json",
+	"component": {
+		"testFiles": "**/*.test.{js,ts,jsx,tsx}",
+		"componentFolder": "./test/cypress"
+	},
+	"integrationFolder": "./test/integration",
+	"testFiles": "**/*.test.{js,ts,jsx,tsx}",
+	"downloadsFolder": "../../config/cypress/downloads",
+	"fixturesFolder": "../../config/cypress/fixtures",
+	"videosFolder": "../../config/cypress/videos",
+	"screenshotsFolder": "../../config/cypress/screenshots",
+	"pluginsFile": "../../config/cypress/plugins/index.ts",
+	"supportFile": "../../config/cypress/support/index.ts"
+}

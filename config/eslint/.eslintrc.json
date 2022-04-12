@@ -1,0 +1,128 @@
+{
+	"$schema": "https://json.schemastore.org/eslintrc",
+	"env": {
+		"browser": true,
+		"node": true,
+		"es2021": true
+	},
+	"extends": [
+		"eslint:recommended",
+		"plugin:react/recommended",
+		"plugin:@typescript-eslint/recommended"
+	],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"ecmaVersion": 12,
+		"sourceType": "module"
+	},
+	"plugins": [
+		"react",
+		"@typescript-eslint"
+	],
+	"rules": {
+		"indent": [
+			"error",
+			"tab"
+		],
+		"linebreak-style": [
+			"error",
+			"unix"
+		],
+		"quotes": [
+			"error",
+			"single"
+		],
+		"semi": [
+			"error",
+			"never"
+		],
+		// START Spacing Layout
+		"space-infix-ops": "error", // a = b
+		"keyword-spacing": [ // } else if {
+			"error",
+			{
+				"before": true,
+				"after": true
+			}
+		],
+		"arrow-spacing": "error", // a = () => b
+		"space-in-parens": [ // a = (b) => c
+			"error",
+			"never"
+		],
+		"array-bracket-spacing": [ // a = [b,c,d]
+			"error",
+			"never"
+		],
+		"object-curly-spacing": [ //a = { b: 1 }
+			"error",
+			"always"
+		],
+		"comma-spacing": [ //a = { b: 1, c:2 }
+			"error",
+			{
+				"before": false,
+				"after": true
+			}
+		],
+		"prefer-const": [ //let {a,b} = c; a = 2
+			"error",
+			{
+				"destructuring": "all",
+				"ignoreReadBeforeAssign": false
+			}
+		],
+		"block-spacing": "error", // a = ()=>{ return 2 }
+		"key-spacing": [
+			"error",
+			{
+				"afterColon": true //a = {b: c}
+			}
+		],
+		"semi-spacing": "error", //a = 1; b = 2
+		"@typescript-eslint/type-annotation-spacing": "error", //let a: number
+		// END Spacing Layout
+		"no-mixed-spaces-and-tabs": "error",
+		"no-unused-vars": "off",
+		"@typescript-eslint/no-unused-vars": [
+			"warn",
+			{
+				"ignoreRestSiblings": true, //let {foo, ...baz} = data
+				"argsIgnorePattern": "^_" // function foo(x,_y)
+			}
+		],
+		"@typescript-eslint/member-delimiter-style": [
+			"error",
+			{
+				"multiline": {
+					"delimiter": "none"
+				},
+				"singleline": {
+					"delimiter": "semi"
+				}
+			}
+		],
+		"no-empty-pattern": "warn",
+		"@typescript-eslint/no-empty-interface": "off",
+		"@typescript-eslint/no-empty-function": "off",
+		"@typescript-eslint/no-explicit-any": "off",
+		"@typescript-eslint/no-inferrable-types": "off",
+		"@typescript-eslint/no-var-requires": "off",
+		"@typescript-eslint/ban-ts-comment": [
+			"warn",
+			{
+				"ts-expect-error": "allow-with-description",
+				"ts-ignore": "allow-with-description",
+				"ts-nocheck": "allow-with-description"
+			}
+		]
+	},
+	"settings": {
+		"react": {
+			"version": "detect"
+		}
+	}
+}

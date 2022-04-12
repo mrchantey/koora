@@ -1,0 +1,17 @@
+{
+	"scripts": {
+		"lint": "eslint -c ./config/eslint/.eslintrc.json ./packages/*/{src,test,config}/**/*.{js,jsx,ts,tsx,d.ts}",
+		"lint-fix": "npm run lint -- --fix"
+	},
+	"workspaces": [
+		"packages/*"
+	],
+	"devDependencies": {
+		"@typescript-eslint/eslint-plugin": "^5.0.0",
+		"@typescript-eslint/parser": "^5.0.0",
+		"cross-env": "^7.0.3",
+		"eslint": "^7.32.0",
+		"eslint-plugin-react": "^7.26.1",
+		"typescript": "^4.6.3"
+	}
+}

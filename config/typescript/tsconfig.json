@@ -1,0 +1,117 @@
+{
+	"$schema": "https://json.schemastore.org/tsconfig",
+	"compilerOptions": {
+		"lib": [
+			"DOM",
+			"ESNext"
+		],
+		//CommonJS - easy compatibility
+		"module": "CommonJS",
+		//es5 - allow accessors, es6 - allow iterators
+		"target": "ES6",
+		//required for json imports and react-dom
+		"moduleResolution": "Node",
+		//allow absolute imports relative to src
+		"baseUrl": "../../",
+		//only include source files
+		"rootDir": "../../",
+		//where does it go
+		"outDir": "../../dist",
+		//allow use of jsx
+		"jsx": "react",
+		//can be referenced, but means json fules must be explicitly referenced in 'files' https://github.com/microsoft/TypeScript/issues/25636
+		"composite": true,
+		//create source maps
+		"sourceMap": true,
+		"declaration": true,
+		//allow json, ie import * as myFile from "myFile.json"
+		"resolveJsonModule": true,
+		//handle commonJS imports (require) smoothly
+		"esModuleInterop": true,
+		//ignore node_modules
+		"skipLibCheck": true,
+		// "noImplicitThis": ,
+		"noFallthroughCasesInSwitch": true,
+		"paths": {
+			"@koora/app": [
+				"packages/app/src"
+			],
+			"@koora/app/*": [
+				"packages/app/src/*"
+			],
+			"@koora/cli": [
+				"packages/cli/src"
+			],
+			"@koora/cli/*": [
+				"packages/cli/src/*"
+			],
+			"@koora/core": [
+				"packages/core/src"
+			],
+			"@koora/core/*": [
+				"packages/core/src/*"
+			],
+			"@koora/core-fs": [
+				"packages/core-fs/src"
+			],
+			"@koora/core-fs/*": [
+				"packages/core-fs/src/*"
+			],
+			"@koora/dom": [
+				"packages/dom/src"
+			],
+			"@koora/dom/*": [
+				"packages/dom/src/*"
+			],
+			"@koora/ecs": [
+				"packages/ecs/src"
+			],
+			"@koora/ecs/*": [
+				"packages/ecs/src/*"
+			],
+			"@koora/flow": [
+				"packages/flow/src"
+			],
+			"@koora/flow/*": [
+				"packages/flow/src/*"
+			],
+			"@koora/functions": [
+				"packages/functions/src"
+			],
+			"@koora/functions/*": [
+				"packages/functions/src/*"
+			],
+			"@koora/play": [
+				"packages/play/src"
+			],
+			"@koora/play/*": [
+				"packages/play/src/*"
+			],
+			"@koora/services": [
+				"packages/services/src"
+			],
+			"@koora/services/*": [
+				"packages/services/src/*"
+			],
+			"@koora/wasm": [
+				"packages/wasm/src"
+			],
+			"@koora/wasm/*": [
+				"packages/wasm/src/*"
+			]
+		}
+	},
+	"files": [
+		"./moduleExt.d.ts"
+	],
+	"include": [
+		//this is needed alongside root dir
+		"../../packages/*/src/**/*"
+	],
+	"ts-node": {
+		// Do not forget to `npm i -D tsconfig-paths`
+		"require": [
+			"tsconfig-paths/register"
+		]
+	}
+}
