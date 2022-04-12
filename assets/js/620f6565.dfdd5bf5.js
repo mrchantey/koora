@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_koora_site=self.webpackChunk_koora_site||[]).push([[691],{9468:function(o){o.exports=JSON.parse('{"permalink":"/koora/blog/tags/assemblyscript","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
