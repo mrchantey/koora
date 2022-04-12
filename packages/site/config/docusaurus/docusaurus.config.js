@@ -29,12 +29,12 @@ const config = {
 				docs: {
 					sidebarPath: require.resolve('./sidebars.js'),
 					// Please change this to your repo.
-					editUrl: 'https://github.com/mrchantey/koora/tree/main/packages/site/docs/',
+					editUrl: 'https://github.com/mrchantey/koora/tree/main/packages/site/',
 				},
 				blog: {
 					showReadingTime: true,
 					// Please change this to your repo.
-					editUrl: 'https://github.com/mrchantey/koora/tree/main/packages/site/blog/',
+					editUrl: 'https://github.com/mrchantey/koora/tree/main/packages/site/',
 				},
 				theme: {
 					customCss: require.resolve('../../src/css/custom.css'),
