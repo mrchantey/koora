@@ -11,8 +11,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula')
 const config = {
 	title: 'Koora',
 	tagline: 'Assemblyscript Game Framework',
-	url: 'https://mrchantey.github.io',
-	// url: 'https://koora.dev',
+	// url: 'https://mrchantey.github.io',
+	url: 'https://koora.dev',
 	baseUrl: '/',
 	onBrokenLinks: 'throw',
 	onBrokenMarkdownLinks: 'warn',
