@@ -1,16 +1,10 @@
 {
-    "$schema": "https://json.schemastore.org/tsconfig",
-    "extends": "./tsconfig.json",
-    "compilerOptions": {
-        "declaration": false,
-        "composite": false,
-        // ESNext - async imports in webpack
-        "module": "ESNext"
-    },
-	"exclude": [
-		//packages that don't play nice with webpack (ts-loader)
-		"../../packages/core-fs/src/**/*",
-		"../../packages/functions/src/**/*",
-		"../../packages/cli/src/**/*"
-	]
+	"$schema": "https://json.schemastore.org/tsconfig",
+	"extends": "./tsconfig.json",
+	"compilerOptions": {
+		"declaration": false,
+		"composite": false,
+		// ESNext - async imports in webpack
+		"module": "ESNext"
+	},
 }
