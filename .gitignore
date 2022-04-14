@@ -1,6 +1,7 @@
 node_modules
 packages/**/node_modules
 packages/**/build
+packages/**/dist
 
 packages/site/.docusaurus
 packages/site/.cache-loader
