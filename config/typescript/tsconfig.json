@@ -33,71 +33,11 @@
 		// "noImplicitThis": ,
 		"noFallthroughCasesInSwitch": true,
 		"paths": {
-			"@koora/app": [
-				"packages/app/src"
-			],
-			"@koora/app/*": [
-				"packages/app/src/*"
-			],
-			"@koora/cli": [
-				"packages/cli/src"
-			],
-			"@koora/cli/*": [
-				"packages/cli/src/*"
-			],
 			"@koora/core": [
 				"packages/core/src"
 			],
 			"@koora/core/*": [
 				"packages/core/src/*"
-			],
-			"@koora/core-fs": [
-				"packages/core-fs/src"
-			],
-			"@koora/core-fs/*": [
-				"packages/core-fs/src/*"
-			],
-			"@koora/dom": [
-				"packages/dom/src"
-			],
-			"@koora/dom/*": [
-				"packages/dom/src/*"
-			],
-			"@koora/ecs": [
-				"packages/ecs/src"
-			],
-			"@koora/ecs/*": [
-				"packages/ecs/src/*"
-			],
-			"@koora/flow": [
-				"packages/flow/src"
-			],
-			"@koora/flow/*": [
-				"packages/flow/src/*"
-			],
-			"@koora/functions": [
-				"packages/functions/src"
-			],
-			"@koora/functions/*": [
-				"packages/functions/src/*"
-			],
-			"@koora/play": [
-				"packages/play/src"
-			],
-			"@koora/play/*": [
-				"packages/play/src/*"
-			],
-			"@koora/services": [
-				"packages/services/src"
-			],
-			"@koora/services/*": [
-				"packages/services/src/*"
-			],
-			"@koora/wasm": [
-				"packages/wasm/src"
-			],
-			"@koora/wasm/*": [
-				"packages/wasm/src/*"
 			]
 		}
 	},

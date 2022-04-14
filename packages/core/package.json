@@ -1,0 +1,27 @@
+{
+	"name": "koora",
+	"version": "0.0.1",
+	"description": "Assemblyscript Game Framework",
+	"scripts": {
+		"asbuild": "asc src-as/index.ts --target debug --config ./config/asconfig.json --exportRuntime --enable reference-types",
+		"aswatch": "onchange -i \"src-as/**/*\" -- npm run asbuild",
+		"watch-html": "onchange -i -k \"dist/**/*\" -- npm run test-html",
+		"test-html": "live-server --no-browser --watch=./dist,./test"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/mrchantey/koora.git"
+	},
+	"keywords": [
+		"koora",
+		"assemblyscript",
+		"3d",
+		"game"
+	],
+	"author": "mrchantey",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/mrchantey/koora/issues"
+	},
+	"homepage": "https://github.com/mrchantey/koora#readme"
+}

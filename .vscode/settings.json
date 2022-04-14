@@ -3,7 +3,7 @@
 		"**/node_modules": true,
 		"**/.docusaurus": true,
 		"**/package-lock.json": false,
-		"LICENSE": true,
+		"**/LICENSE": true,
 	},
 	//linting settings
 	"eslint.format.enable": true,
