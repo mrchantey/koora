@@ -1,5 +1,5 @@
 import { TimeSystem, TransformSystem, World } from '../base'
-import { Mesh, Rotator } from '../components'
+import { Mesh, Rotator, Transform } from '../components'
 import { Color } from '../math'
 import { CubeGeometry, RenderSystem, StandardMaterial, unlitVertexColorShader } from '../rendering'
 import { WebGLRenderSystem } from '../WebGL2'
@@ -13,6 +13,7 @@ export function update(): void{
 	World.main.update()
 }
 
+
 export function defaultWorld(): World{
 	World.main
 		.addSystem<TimeSystem>()
@@ -21,7 +22,8 @@ export function defaultWorld(): World{
 		.addSystem<WebGLRenderSystem>()
 	
 	const renderSystem = World.main.get<WebGLRenderSystem>()
-	renderSystem.clearColor(new Color(0.5, 0.5, .5, 1))
+	renderSystem.clearColor(new Color(0, 0, 0, 0))
+
 	// renderSystem.clear()
 	// World.main.createEntity()
 	// 	.attach(new DirectionalLight().setDirection(0, 1, 0))
@@ -36,6 +38,12 @@ export function unlitRotatingCube(): void{
 	const entity = World.main.createEntity()
 		.attach(new Mesh(CubeGeometry.default, new StandardMaterial(unlitVertexColorShader)))
 		.add<Rotator>()
+	const parent = World.main.createEntity()
+		.add<Transform>()
+	const transform = entity.get<Transform>()
+	const parentTransform = parent.get<Transform>()
+	parentTransform.position.y = 1
+	transform.setParent(parentTransform)	
 }
 
 

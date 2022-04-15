@@ -1,5 +1,5 @@
 import { Mesh } from '../../components'
-import { domUtils } from '../../imports'
+import { host } from '../../imports'
 import { WebGLMesh } from '../components'
 import { gl } from '../imports'
 import { WebGLGeometrySystem } from './WebGLGeometrySystem'
@@ -29,7 +29,7 @@ export class WebGLMeshSystem{
 	}
 	render(mesh: Mesh): void{
 		const glMesh = this.meshMap.get(mesh)
-		const program = domUtils.get(glMesh.shader.programId)
+		const program = host.get(glMesh.shader.programId)
 		gl.useProgram(program)
 		this.materialSystem.beforeRender(glMesh.material)
 		this.geometrySystem.render(glMesh.geometry)

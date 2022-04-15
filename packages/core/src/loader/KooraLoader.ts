@@ -54,7 +54,7 @@ export class KooraLoader extends GlueBase{
 	async load(wasmUrl = '/debug.wasm'): Promise<KooraLoader>{
 		const wasmImports = {
 			gl: this.gl,
-			utils: {
+			host: {
 				log: console.log.bind(console),
 				elapsed: performance.now.bind(performance),
 				now: Date.now.bind(Date),

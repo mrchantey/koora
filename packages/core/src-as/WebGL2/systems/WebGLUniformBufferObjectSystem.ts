@@ -1,4 +1,4 @@
-import { domUtils } from '../../imports'
+import { host } from '../../imports'
 import { UniformBufferObject, UniformBufferObjectSystem, UniformType, Uniform_f32 } from '../../rendering'
 import { WebGLShader, WebGLUniformBufferObject } from '../components'
 import { gl } from '../imports'
@@ -10,7 +10,7 @@ export class WebGLUniformBufferObjectSystem extends UniformBufferObjectSystem{
 	uboIndexIncr: u32 = 0
 	
 	assignToShader(ubo: UniformBufferObject, shader: WebGLShader): WebGLUniformBufferObject | null{
-		const program = domUtils.get(shader.programId)
+		const program = host.get(shader.programId)
 		const shaderIndex = gl.getUniformBlockIndex(program, ubo.name)		
 		if (shaderIndex === -1 || shaderIndex === 4294967295)//where does this number come from?
 			return null
@@ -28,7 +28,7 @@ export class WebGLUniformBufferObjectSystem extends UniformBufferObjectSystem{
 	}
 
 	create(ubo: UniformBufferObject, shader: WebGLShader): WebGLUniformBufferObject{
-		const program = domUtils.get(shader.programId)
+		const program = host.get(shader.programId)
 		const uniformNames = new Array<string>(ubo.uniformArr.length)
 		for (let i = 0; i < ubo.uniformArr.length; i++){
 			uniformNames[i] = ubo.uniformArr[i].name
@@ -52,7 +52,7 @@ export class WebGLUniformBufferObjectSystem extends UniformBufferObjectSystem{
 		const instance: WebGLUniformBufferObject = {			
 			name: ubo.name,
 			index: uboIndex,
-			bufferId: domUtils.set(uboBuffer),
+			bufferId: host.set(uboBuffer),
 			uniforms: ubo.uniformArr,
 			uniformOffsets
 		}
@@ -64,7 +64,7 @@ export class WebGLUniformBufferObjectSystem extends UniformBufferObjectSystem{
 			return //no materials are using this ubo
 			// throw new Error(`UBO not found - ${ubo.name}`)
 		const glUbo = this.uboMap.get(ubo)
-		const buffer = domUtils.get(glUbo.bufferId)		
+		const buffer = host.get(glUbo.bufferId)		
 		gl.bindBuffer(gl.BufferType.UNIFORM_BUFFER, buffer)
 		
 		for (let i = 0; i < glUbo.uniforms.length; i++){

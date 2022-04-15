@@ -1,13 +1,17 @@
 import { KooraLoader } from './loader/KooraLoader'
-import './style.css'
+// import './style.css'
 const a: number = 2
 
 // console.log('hello', a)
 
-async function run(){
-	const loader = await new KooraLoader().load()
+async function run(canvas?: HTMLCanvasElement, wasmLocation?: string){
+	const loader = new KooraLoader(canvas)
+	await loader.load(wasmLocation)
 	loader.start()
+	return loader
 }
-
-run()
-
+//@ts-ignore
+window.startKoora = (canvas?: HTMLCanvasElement) => {
+	//@ts-ignore
+	return run(canvas, '/wasm/debug.wasm')
+}

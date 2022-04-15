@@ -1,6 +1,6 @@
 export async function instantiate(module, imports = {}) {
   const __module0 = imports.gl;
-  const __module1 = imports.utils;
+  const __module1 = imports.host;
   const adaptedImports = {
     env: Object.assign(Object.create(globalThis), imports.env || {}, {
       seed() {
@@ -289,9 +289,9 @@ export async function instantiate(module, imports = {}) {
         __module0.uniformMatrix4fv(location, transpose, data, srcOffset, srcLength);
       },
     }),
-    utils: Object.assign(Object.create(__module1), {
+    host: Object.assign(Object.create(__module1), {
       get(id) {
-        // src-as/imports/_domUtils/get(u32) => externref
+        // src-as/imports/_host/get(u32) => externref
         id = id >>> 0;
         return __module1.get(id);
       },

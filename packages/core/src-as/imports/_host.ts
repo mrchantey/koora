@@ -1,19 +1,19 @@
 import { ExternID } from './types'
 
 //@ts-ignore external
-@external("utils", "log")
+@external("host", "log")
 export declare function log(val: string): void
 
 //@ts-ignore external
-@external("utils", "log")
+@external("host", "log")
 export declare function log_externref(val: externref): void
 
 //@ts-ignore external
-@external("utils", "elapsed")
+@external("host", "elapsed")
 export declare function elapsed(): f32
 
 //@ts-ignore external
-@external("utils", "now")
+@external("host", "now")
 export declare function now(): f64
 
 
@@ -21,13 +21,13 @@ export declare function now(): f64
 
 
 //@ts-ignore external
-@external("utils", "get")
+@external("host", "get")
 export declare function get(id: ExternID): externref
 
 //@ts-ignore external
-@external("utils", "set")
+@external("host", "set")
 export declare function set(val: externref): ExternID
 
 //@ts-ignore external
-@external("utils", "delete")
+@external("host", "delete")
 export declare function remove(id: ExternID): void

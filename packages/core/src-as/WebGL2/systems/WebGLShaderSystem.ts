@@ -1,4 +1,4 @@
-import { domUtils } from '../../imports'
+import { host } from '../../imports'
 import { Shader } from '../../rendering'
 import { stringOrEmpty } from '../../utility/stringUtils'
 import { WebGLShader } from '../components'
@@ -63,7 +63,7 @@ export class WebGLShaderSystem{
 		gl.deleteShader(fShader)
 		gl.deleteShader(vShader)
 
-		const programId = domUtils.set(program)
+		const programId = host.set(program)
 
 		return {
 			programId,

@@ -4,7 +4,6 @@ import { kooraExports } from './kooraWasm'
 
 
 
-
 export class GlueBase{
 
 	gl: WebGL2RenderingContext

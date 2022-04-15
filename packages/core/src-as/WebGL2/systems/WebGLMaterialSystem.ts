@@ -1,4 +1,4 @@
-import { domUtils } from '../../imports'
+import { host } from '../../imports'
 import { Culling, Material, Uniform, UniformType, Uniform_bitmap, Uniform_f32, Uniform_texture } from '../../rendering'
 import { WebGLMaterial, WebGLShader, WebGLTextureUniform, WebGLUniform, WebGLUniformBufferObject, WebGLUniform_float, WebGLUniform_mat4, WebGLUniform_vec2, WebGLUniform_vec3, WebGLUniform_vec4 } from '../components'
 import { gl } from '../imports'
@@ -46,7 +46,7 @@ export class WebGLMaterialSystem{
 	}
 
 	createUniform(uniform: Uniform, shader: WebGLShader): WebGLUniform | null {
-		const program = domUtils.get(shader.programId)
+		const program = host.get(shader.programId)
 		const location = gl.getUniformLocation(program, uniform.name)
 		// if (location == -1)
 		// 	return null

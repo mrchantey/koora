@@ -1,5 +1,5 @@
-import * as domUtils from './_domUtils'
+import * as host from './_host'
 
 export {
-	domUtils
+	host as host
 }

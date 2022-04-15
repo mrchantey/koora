@@ -1,4 +1,4 @@
-import { domUtils } from '../../imports'
+import { host } from '../../imports'
 import { Attribute, Attribute_f32, Attribute_u8, Geometry } from '../../rendering'
 import { WebGLAttribute, WebGLBindAttributeOptions, WebGLGeometry, WebGLShader, WebGLVAOOptions } from '../components'
 import { gl } from '../imports'
@@ -53,10 +53,10 @@ export class WebGLGeometrySystem{
 			: null
 		
 		const instance: WebGLGeometry = {
-			vao: domUtils.set(vao),
-			vaoSwap: vaoSwap ? domUtils.set(vaoSwap) : 0,
-			feedback: domUtils.set(feedback),
-			feedbackSwap: feedbackSwap ? domUtils.set(feedbackSwap) : 0,
+			vao: host.set(vao),
+			vaoSwap: vaoSwap ? host.set(vaoSwap) : 0,
+			feedback: host.set(feedback),
+			feedbackSwap: feedbackSwap ? host.set(feedbackSwap) : 0,
 			attributes,
 			instanceCount: geometry.instanceCount,
 			primitiveType: geometry.primitiveType,
@@ -96,7 +96,7 @@ export class WebGLGeometrySystem{
 		
 		for (let i = 0; i < varyings.length; i++){
 			const bufferId = useSwap ? varyings[i].bufferSwap : varyings[i].buffer
-			const buffer = domUtils.get(bufferId)
+			const buffer = host.get(bufferId)
 			gl.bindBufferBase(gl.BufferType.TRANSFORM_FEEDBACK_BUFFER, i, buffer)
 		}
 		gl.bindBuffer(gl.BufferType.ARRAY_BUFFER, null)
@@ -105,7 +105,7 @@ export class WebGLGeometrySystem{
 	}
 	
 	bindAttribute(attr: WebGLAttribute, shader: WebGLShader, options: WebGLBindAttributeOptions): void{
-		const program = domUtils.get(shader.programId)
+		const program = host.get(shader.programId)
 		const loc = gl.getAttribLocation(program, attr.name)
 		
 		if (loc === -1)//attribute not used by shader
@@ -113,7 +113,7 @@ export class WebGLGeometrySystem{
 		const bufferId = attr.bufferSwap && options.useSwap 
 			? attr.bufferSwap
 			: attr.buffer
-		const buffer = domUtils.get(bufferId)
+		const buffer = host.get(bufferId)
 		gl.bindBuffer(gl.BufferType.ARRAY_BUFFER, buffer)
 		gl.enableVertexAttribArray(loc)
 		gl.vertexAttribPointer(loc, attr.elementSize, attr.type, attr.normalize, 0, 0)
@@ -137,8 +137,8 @@ export class WebGLGeometrySystem{
 			: null
 		return {
 			name: attr.name,
-			buffer: domUtils.set(buffer),
-			bufferSwap: bufferSwap ? domUtils.set(bufferSwap) : 0,
+			buffer: host.set(buffer),
+			bufferSwap: bufferSwap ? host.set(bufferSwap) : 0,
 			type: attr.type,
 			normalize: !!attr.normalize,
 			elementSize: attr.elementSize,
@@ -163,7 +163,7 @@ export class WebGLGeometrySystem{
 
 	render(geometry: WebGLGeometry): void{
 		
-		const vao = domUtils.get(geometry.vao)
+		const vao = host.get(geometry.vao)
 		// domUtils.log_externref(vao)
 		// console.log(`${geometry.vao}`)
 		gl.bindVertexArray(vao)
@@ -174,7 +174,7 @@ export class WebGLGeometrySystem{
 			//read from 1
 			gl.enable(gl.Parameter.RASTERIZER_DISCARD)
 			//write to next
-			gl.bindTransformFeedback(gl.TransformFeedback.TRANSFORM_FEEDBACK, domUtils.get(geometry.feedback))
+			gl.bindTransformFeedback(gl.TransformFeedback.TRANSFORM_FEEDBACK, host.get(geometry.feedback))
 			gl.beginTransformFeedback(gl.Primitive.POINTS)
 			gl.drawArrays(gl.Primitive.POINTS, 0, geometry.drawCount)
 			gl.disable(gl.Parameter.RASTERIZER_DISCARD)

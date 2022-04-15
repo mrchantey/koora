@@ -31,5 +31,5 @@ declare class __Internref71 extends Number {
 export declare function instantiate(module: WebAssembly.Module, imports: {
   env: unknown,
   gl: unknown,
-  utils: unknown,
+  host: unknown,
 }): Promise<typeof __AdaptedExports>;

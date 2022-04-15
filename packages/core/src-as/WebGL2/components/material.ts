@@ -1,4 +1,4 @@
-import { domUtils, ExternID } from '../../imports'
+import { host, ExternID } from '../../imports'
 import { Culling, Uniform, UniformType } from '../../rendering'
 import { gl } from '../imports'
 
@@ -31,7 +31,7 @@ export class WebGLUniformBufferObject{
 export class WebGLUniform{
 	locationId: ExternID
 	constructor(location: gl.WebGLUniformLocation){
-		this.locationId = domUtils.set(location)
+		this.locationId = host.set(location)
 	}
 	// location:u32
 	// arr: TypedArray
@@ -45,19 +45,19 @@ export class WebGLUniform_typed<T> extends WebGLUniform{
 	}
 }
 export class WebGLUniform_float extends WebGLUniform_typed<Float32Array>{
-	apply(): void { gl.uniform1fv(domUtils.get(this.locationId), this.value) }
+	apply(): void { gl.uniform1fv(host.get(this.locationId), this.value) }
 }
 export class WebGLUniform_vec2 extends WebGLUniform_typed<Float32Array>{
-	apply(): void { gl.uniform2fv(domUtils.get(this.locationId), this.value) }
+	apply(): void { gl.uniform2fv(host.get(this.locationId), this.value) }
 }
 export class WebGLUniform_vec3 extends WebGLUniform_typed<Float32Array>{
-	apply(): void { gl.uniform3fv(domUtils.get(this.locationId), this.value) }
+	apply(): void { gl.uniform3fv(host.get(this.locationId), this.value) }
 }
 export class WebGLUniform_vec4 extends WebGLUniform_typed<Float32Array>{
-	apply(): void { gl.uniform4fv(domUtils.get(this.locationId), this.value) }
+	apply(): void { gl.uniform4fv(host.get(this.locationId), this.value) }
 }
 export class WebGLUniform_mat4 extends WebGLUniform_typed<Float32Array>{
-	apply(): void { gl.uniformMatrix4fv(domUtils.get(this.locationId), false, this.value) }
+	apply(): void { gl.uniformMatrix4fv(host.get(this.locationId), false, this.value) }
 }
 
 
@@ -71,6 +71,6 @@ export class WebGLTextureUniform extends WebGLUniform{
 	}
 
 	apply(): void{
-		gl.uniform1i(domUtils.get(this.locationId), this.texIndex)
+		gl.uniform1i(host.get(this.locationId), this.texIndex)
 	}
 }
