@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_koora_site=self.webpackChunk_koora_site||[]).push([[535],{5641:function(e){e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"Hello Cube","permalink":"/blog/hello-cube"},{"title":"Motivation","permalink":"/blog/motivation"}]}')}}]);
