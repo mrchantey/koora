@@ -1,5 +1,9 @@
 declare namespace __AdaptedExports {
   /**
+   * src-as/exports/mainFactories/main
+   */
+  export function main(): void;
+  /**
    * src-as/exports/mainFactories/update
    */
   export function update(): void;
