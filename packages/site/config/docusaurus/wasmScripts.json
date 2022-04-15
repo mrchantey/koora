@@ -1,15 +1,7 @@
 {
   "scripts": [
     {
-      "src": "/wasm/main.86b9fcc1af456b92d0fa.js",
-      "async": false
-    },
-    {
-      "src": "/wasm/runtime.6c177b43f29dc9e80e2d.js",
-      "async": false
-    },
-    {
-      "src": "/wasm/vendor-sync.a4f47b249af9e09ff3ea.js",
+      "src": "/wasm/main.js",
       "async": false
     }
   ]
