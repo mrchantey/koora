@@ -51,15 +51,11 @@ const config = {
 		/** @type {import('@docusaurus/preset-classic').ThemeConfig} */
 		({
 			//TODO
-			// 	<meta property="og:image" content="http://example.com/logo.jpg">
-			// <meta property="og:image:type" content="image/png">
-			// <meta property="og:image:width" content="1024">
-			// <meta property="og:image:height" content="1024"></meta>
 			metadata: [
-				{
-					property: 'HOWDY',
-					content: 'DOODY'
-				}
+				{ property: 'og:image', content: '/img/og-thumb.png' },
+				{ property: 'og:image:type', content: 'image/png' },
+				{ property: 'og:image:width', content: '1200' },
+				{ property: 'og:image:height', content: '630' },			
 			],
 			colorMode: {
 				respectPrefersColorScheme: true
