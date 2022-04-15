@@ -1,6 +1,6 @@
 import { applyGLOverloads, autoBind } from '../utils'
 import { GlueBase } from './GlueBase'
-import { kooraWasm } from './kooraWasm'
+import { KooraBindings, kooraBindings } from './kooraBindings'
 import { RenderGlue } from './RenderGlue'
 
 const listen = (gl, val) => {
@@ -50,7 +50,9 @@ export class KooraLoader extends GlueBase{
 		return this.externMap.delete(id)
 	}
 
-	async load(wasmUrl = '/debug.wasm'): Promise<KooraLoader>{
+	async load(wasmUrl?: string, bindings?: KooraBindings): Promise<KooraLoader>{
+		wasmUrl ??= '/debug.wasm'
+		bindings ??= kooraBindings
 		const wasmImports = {
 			gl: this.gl,
 			host: {
@@ -65,13 +67,13 @@ export class KooraLoader extends GlueBase{
 		}
 		// console.dir(wasmImports)
 		const wasmModule = await WebAssembly.compileStreaming(fetch(wasmUrl))
-		const wasmExports = await kooraWasm.instantiate(wasmModule, wasmImports)
+		const wasmExports = await bindings.instantiate(wasmModule, wasmImports)
 		for (const glue of this.glues)
 			glue.onLoad(wasmExports)
 		
 		return this
 	}
-	start(): kooraWasm.__Internref71{
+	start(): kooraBindings.__Internref71{
 		const world = this.wasmExports.defaultWorld()
 		// console.dir(a.toString())
 		this.renderGlue.resize()
@@ -92,9 +94,15 @@ export class KooraLoader extends GlueBase{
 
 }
 
-export const initKoora = async(canvas?: HTMLCanvasElement, wasmLocation?: string) => {	
+interface InitOptions{
+	canvas?: HTMLCanvasElement
+	wasmUrl?: string
+	bindings?: KooraBindings
+}
+
+export const initKoora = async({ canvas, wasmUrl, bindings }: InitOptions = {}) => {	
 	const loader = new KooraLoader(canvas)
-	await loader.load(wasmLocation)
+	await loader.load(wasmUrl, bindings)
 	loader.start()
 	return loader
 }

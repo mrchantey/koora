@@ -17,6 +17,8 @@ export const parseArgs = (args: DirtyArgs): CleanArgs => {
 	if (!args.favicon || !fs.existsSync(args.favicon))
 		args.favicon = false
 	args.out ??= 'dist'
+	args.optimize ??= true
+	args.contentHash ??= true
 	args.title ??= pkgConfig.displayName || 'Web App'
 	args.description ??= pkgConfig.description || 'An amazing web app.'
 	args.prod ??= false

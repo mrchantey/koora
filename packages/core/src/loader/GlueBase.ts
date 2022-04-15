@@ -1,7 +1,4 @@
-import { kooraExports } from './kooraWasm'
-
-
-
+import { kooraExports } from './kooraBindings'
 
 
 export class GlueBase{

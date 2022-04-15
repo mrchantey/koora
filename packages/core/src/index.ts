@@ -1,1 +1,1 @@
-export * from './loader/kooraLoader'
+export * from './loader/KooraLoader'

@@ -1,13 +1,16 @@
 {
 	"name": "koora",
-	"version": "0.0.2",
+	"version": "0.0.6",
 	"description": "AssemblyScript Game Framework",
+	"exports": {
+		"./loader": "./dist/main.js"
+	},
 	"scripts": {
+		"prepublish": "npm version patch",
 		"build-as": "asc src-as/index.ts --target debug --config ./config/asconfig.json --exportRuntime --enable reference-types",
 		"watch-as": "onchange -i \"src-as/**/*\" -- npm run build-as",
-		"watch-src-test": "cross-env TS_NODE_PROJECT=\"../../config/webpack/tsconfig.webpack.json\" webpack --watch --config ../../config/webpack/webpack.config.ts",
-		"build-src": "tsc --project ./config/tsconfig.src.json",
-		"watch-src": "cross-env TS_NODE_PROJECT=\"../../config/webpack/tsconfig.webpack.json\" webpack --watch --config ../../config/webpack/webpack.config.ts --env entry=./src/index.ts",
+		"watch-src-test": "cross-env TS_NODE_PROJECT=\"../../config/webpack/tsconfig.webpack.json\" webpack --watch --config ../../config/webpack/webpack.config.ts --env entry=./src/_entry.ts",
+		"watch-src": "cross-env TS_NODE_PROJECT=\"../../config/webpack/tsconfig.webpack.json\" webpack --watch --config ../../config/webpack/webpack.config.ts --env optimize=false --env contentHash=false --env entry=./src/index.ts",
 		"DELETEME-watch-html": "onchange -i -k \"dist/**/*\" -- npm run test-html",
 		"start": "live-server ./dist --no-browser",
 		"test-html": "live-server --no-browser --watch=./dist,./test",

@@ -14,8 +14,12 @@ export const Canvas = ({ className, onMount }: Props) => {
 	const canvasRef = React.useRef<HTMLCanvasElement>()
 
 	React.useEffect(() => {
+		const initOptions = {
+			canvas: canvasRef.current,
+			wasmUrl: '/wasm/debug.wasm'
+		}
 		//@ts-ignore
-		window.initKoora(canvasRef.current, '/wasm/debug.wasm')
+		window.initKoora(initOptions)
 			.then(onMount)
 	}, [])
 	

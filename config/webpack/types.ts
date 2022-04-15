@@ -16,6 +16,8 @@ interface ArgsBase {
     analyzeBundle: boolean
     analyzeCircular: boolean
     https: boolean
+	optimize: boolean
+	contentHash: boolean
 	host: string
 }
 

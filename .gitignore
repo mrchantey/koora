@@ -3,6 +3,10 @@ packages/**/node_modules
 packages/**/build
 packages/**/dist
 
+**/*.tsbuildinfo
+
+packages/core/build-loader
+
 packages/site/.docusaurus
 packages/site/.cache-loader
 

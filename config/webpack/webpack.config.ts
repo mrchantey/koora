@@ -1,6 +1,6 @@
 import { DefinePlugin, WebpackPluginInstance } from 'webpack'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
-import { DirtyArgs, iWebpackConfig } from './types'
+import { CleanArgs, DirtyArgs, iWebpackConfig } from './types'
 import fs from 'fs'
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 const CircularDependencyPlugin = require('circular-dependency-plugin')
@@ -15,8 +15,9 @@ const {
 export default (dirtyArgs: DirtyArgs): iWebpackConfig => {
 	const {
 		entryPath, templatePath, outputPath, faviconPath,
-		analyzeBundle, analyzeCircular, prod, description, title, https, host
-	} = parseArgs(dirtyArgs)
+		analyzeBundle, analyzeCircular, prod, description, title, https, host,
+		optimize, contentHash
+	} = parseArgs(dirtyArgs) as CleanArgs
 
 
 	let initMsg = `
@@ -71,7 +72,7 @@ starting webpack...
 			maxAssetSize: prod ? SIZE_LIMIT_ASSET : SIZE_LIMIT_ASSET * 100000,
 		},
 		plugins: [...configBase.plugins, ...plugins],
-		optimization: {
+		optimization: !optimize ? {} : {
 			usedExports: true,
 			//TODO share chunks between async and sync, do it later
 			//https://webpack.js.org/guides/caching/
@@ -108,6 +109,8 @@ starting webpack...
 		},
 		output: {
 			...configBase.output,
+			filename: contentHash ? '[name].[contenthash].js' : '[name].js',
+			chunkFilename: contentHash ? '[name].[contenthash].bundle.js' : '[name].bundle.js',	
 			path: outputPath,
 			clean: {
 				keep: (filename => cleanKeep.includes(filename))
@@ -118,10 +121,11 @@ starting webpack...
 
 const cleanKeep = [
 	//assemblyscript builds
-	'untouched.wat',
-	'untouched.wasm.map',
-	'untouched.wasm',
-	'types.d.ts'
+	'debug.js',
+	'debug.d.ts',
+	'debug.wasm',
+	'debug.wat',
+	'debug.wasm.map',
 ]
 
 const splitModules = [
