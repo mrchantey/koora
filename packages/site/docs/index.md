@@ -4,13 +4,19 @@ sidebar_position: 1
 
 # Introduction
 
-Koora enables the creation of 3D games with Assemblyscript. It currently supports rendering 3D graphics with a WebGL2 layer.
+Koora enables the creation of 3D games with AssemblyScript.
 
 ## Overview
 
 The framework prioritizes modularity through an entity-component style architecture:
 
 ```ts
+
+const world = new World()
+	.addSystem<TransformSystem>()
+	.addSystem<HealthSystem>()
+	.addSystem<InputSystem>()
+
 const player = world.createEntity()
 	.add<Transform>()
 	.add<Health>()

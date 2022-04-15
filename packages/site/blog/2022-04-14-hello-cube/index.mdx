@@ -1,0 +1,27 @@
+---
+slug: hello-cube
+title: Hello Cube
+authors: mrchantey
+tags: [assemblyscript]
+---
+import {Canvas} from '../../src'
+
+
+
+![its-working](./its-working.jpg)
+<!--truncate-->
+
+First AssemblyScript hello cube! Getting this going was one of those coding times when the stuff you thought would be really hard was no problem and the stuff you expected to *just work* took half a day 😅
+
+```ts
+const world = defaultWorld()
+const geometry = new CubeGeometry()
+const material = new StandardMaterial(unlitVertexColorShader)
+
+const cube = world.createEntity()
+	.attach(new Mesh(geometry,material))
+	.add<Rotator>()
+```
+
+<Canvas/>
+

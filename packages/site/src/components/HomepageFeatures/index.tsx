@@ -10,9 +10,9 @@ interface FeatureInfo{
 
 const FeatureList: FeatureInfo[] = [
 	{
-		title: 'Ready to go',
+		title: 'Game On!',
 		Svg: require('@site/static/img/playCircleIcon.svg').default,
-		description: (<>The portability of the web with the predictability of WebAssembly</>),
+		description: (<>The portability of the web with the predictability of AssemblyScript</>),
 	},
 	{
 		title: 'Open Source',

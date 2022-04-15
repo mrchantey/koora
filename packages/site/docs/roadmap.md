@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # Roadmap
 
-
+## Summary
 
 | Feature             | Status |
 | ------------------- | ------ |
@@ -13,5 +13,15 @@ sidebar_position: 3
 | WebXR               | 🔨      |
 | WebGPU Layer        | 💤      |
 | GLTF Imports        | 💤      |
-| Frustum Culling     | 💤      |
 | Collision Detection | 💤      |
+| WebGL1 Layer        | ❌      |
+
+## WebGL2
+
+| Feature                | Status |
+| ---------------------- | ------ |
+| Vertex Array Objects   | ✔️      |
+| Uniform Buffer Objects | ✔️      |
+| Directional Lighting   | 🔨      |
+| Transform Feedback     | 🔨      |
+| Frustum Culling        | 💤      |

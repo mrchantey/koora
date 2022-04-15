@@ -4,13 +4,15 @@
 const lightCodeTheme = require('prism-react-renderer/themes/github')
 const darkCodeTheme = require('prism-react-renderer/themes/dracula')
 
+//@ts-ignore
+const wasmScripts = require('./wasmScripts.json').scripts
 // const root = process.cwd()
 // const path = require('path');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
 	title: 'Koora',
-	tagline: 'Assemblyscript Game Framework',
+	tagline: 'AssemblyScript Game Framework',
 	// url: 'https://mrchantey.github.io',
 	url: 'https://koora.dev',
 	baseUrl: '/',
@@ -21,6 +23,7 @@ const config = {
 	projectName: 'koora', // Usually your repo name.
 	deploymentBranch: 'gh-pages',
 	trailingSlash: false,
+	scripts: wasmScripts,
 	presets: [
 		[
 			'classic',
