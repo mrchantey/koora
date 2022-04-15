@@ -1,18 +1,14 @@
-import { TimeSystem, TransformSystem, World } from '../base'
-import { Mesh, Rotator, Transform } from '../components'
+import { Entity, TimeSystem, TransformSystem, World } from '../base'
+import { DirectionalLight, Mesh, Rotator, Transform } from '../components'
 import { Color } from '../math'
 import { CubeGeometry, RenderSystem, StandardMaterial, unlitVertexColorShader } from '../rendering'
 import { WebGLRenderSystem } from '../WebGL2'
 import { defaultCamera } from './cameraFactories'
 
-export function start(): void{
-	defaultWorld()
-}
 
 export function update(): void{
 	World.main.update()
 }
-
 
 export function defaultWorld(): World{
 	World.main
@@ -27,24 +23,13 @@ export function defaultWorld(): World{
 	// renderSystem.clear()
 	// World.main.createEntity()
 	// 	.attach(new DirectionalLight().setDirection(0, 1, 0))
-	// World.main.createEntity()
-	// 	.attach(new DirectionalLight().setDirection(-1, -1, -1))
+	World.main.createEntity()
+		.attach(new DirectionalLight().setDirection(-1, -1, -1))
 	defaultCamera()
-	unlitRotatingCube()
+	// unlitRotatingCube()
 	return World.main
 }
 
-export function unlitRotatingCube(): void{
-	const entity = World.main.createEntity()
-		.attach(new Mesh(CubeGeometry.default, new StandardMaterial(unlitVertexColorShader)))
-		.add<Rotator>()
-	const parent = World.main.createEntity()
-		.add<Transform>()
-	const transform = entity.get<Transform>()
-	const parentTransform = parent.get<Transform>()
-	parentTransform.position.y = 1
-	transform.setParent(parentTransform)	
-}
 
 
 export function handleResize(width: u32, height: u32): void{

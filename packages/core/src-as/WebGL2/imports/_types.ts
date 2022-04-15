@@ -555,6 +555,10 @@ export declare function texImage2D__4(target: GLenum, level: GLint, internalform
 export declare function texImage2D__5(target: GLenum, level: GLint, internalformat: GLint, width: GLsizei, height: GLsizei, border: GLint, format: GLenum, type: GLenum, srcData: ArrayBufferView, srcOffset: GLuint): void
 
 //@ts-ignore external
+@external('gl', 'texImage2D__6')
+export declare function texImage2D__6(target: GLenum, level: GLint, internalformat: GLint, width: GLsizei, height: GLsizei, border: GLint, format: GLenum, type: GLenum, pixels: Uint8Array): void
+
+//@ts-ignore external
 @external('gl', 'texSubImage2D__1')
 export declare function texSubImage2D__1(target: GLenum, level: GLint, xoffset: GLint, yoffset: GLint, width: GLsizei, height: GLsizei, format: GLenum, type: GLenum, pixels: ArrayBufferView): void
 

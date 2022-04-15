@@ -12,7 +12,8 @@ export const parseArgs = (args: DirtyArgs): CleanArgs => {
 	args.app ??= false
 	args.entry ??= getEntryPoint()
 	args.html ??= '../../config/webpack/index.html'
-	args.favicon ??= 'src/assets/favicon.ico'
+	// args.favicon ??= 'src/assets/favicon.ico'
+	args.favicon ??= undefined
 	if (!args.favicon || !fs.existsSync(args.favicon))
 		args.favicon = false
 	args.out ??= 'dist'

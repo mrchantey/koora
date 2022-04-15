@@ -54,25 +54,27 @@ export class SpatialMaterial extends Material{
 export class StandardMaterial extends SpatialMaterial{
 
 	color: Color
-	texture: Texture | null = null
+	texture: Texture = Texture.white
 	static new(shader: Shader): StandardMaterial{ return new StandardMaterial(shader) }
 	constructor(shader: Shader){
 		super(shader)
 		this.color = new Color()
 		this.addUniform(Uniform.Float(UniformName.Time))
 		this.addUniform(Uniform.Vec4(UniformName.Color, this.color.m))
+		this.addUniform(Uniform.Texture(UniformName.Texture, this.texture))
 	}
 	setColor(r: f32, g: f32, b: f32): StandardMaterial{
 		this.color.set(r, g, b)
 		return this
 	}
-	setTexture(texture: Texture): StandardMaterial{
-		this.texture = texture
-		this.addUniform(Uniform.Texture(UniformName.Texture, texture))
-		return this
-	}
-	setBitmap(bitmap: Bitmap): StandardMaterial{
-		this.addUniform(Uniform.Bitmap(UniformName.Texture, bitmap))
-		return this
-	}
+	//untested
+	// setTexture(texture: Texture): StandardMaterial{
+	// 	this.texture = texture;
+	// 	(this.getUniform(UniformName.Texture) as Uniform_texture).value = texture
+	// 	return this
+	// }
+	// setBitmap(bitmap: Bitmap): StandardMaterial{
+	// 	this.addUniform(Uniform.Bitmap(UniformName.Texture, bitmap))
+	// 	return this
+	// }
 }

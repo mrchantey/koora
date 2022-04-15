@@ -1,8 +1,8 @@
 // import { Mesh } from '../../components'
-import { UniformName, AttributeName, Ubo } from '../constants'
-import { StandardMaterial } from '../material'
-import { lightConstants, lightUtils } from './glsl'
-import { Shader } from './Shader'
+import { UniformName, AttributeName, Ubo } from '../../constants'
+import { StandardMaterial } from '../../material'
+import { lightConstants, lightUtils } from '../glsl'
+import { Shader } from '../Shader'
 
 // ${Mesh.ubo.block}
 const vert = /*glsl*/
@@ -41,7 +41,7 @@ out vec4 o_color;
 
 void main(void) {
 	//TODO input color for lighting first
-	vec4 diffuse = (${UniformName.Color} + texture(${UniformName.Texture}, v_texcoord));
+	vec4 diffuse = (${UniformName.Color} * texture(${UniformName.Texture}, v_texcoord));
 	vec3 outputColor = calculateLighting(diffuse.xyz, v_normal);
 	o_color = vec4(outputColor,${UniformName.Color}.a);
 }

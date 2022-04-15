@@ -48,8 +48,10 @@ export class WebGLMaterialSystem{
 	createUniform(uniform: Uniform, shader: WebGLShader): WebGLUniform | null {
 		const program = host.get(shader.programId)
 		const location = gl.getUniformLocation(program, uniform.name)
+		//TODO handle null
 		// if (location == -1)
 		// 	return null
+		//TODO share textures
 		if (uniform.type === UniformType.TEXTURE || uniform.type === UniformType.BITMAP){
 			const texIndex = this.textureIndex++
 			if (texIndex >= 32)
@@ -102,7 +104,7 @@ export class WebGLMaterialSystem{
 	setTextureUniform(_uniform: Uniform): void{
 		const uniform = _uniform as Uniform_texture
 		const tex = uniform.value
-		gl.texImage2D__1(gl.Texture.TEXTURE_2D, 0, gl.PixelFormat.RGBA, tex.width, tex.height, 
+		gl.texImage2D__6(gl.Texture.TEXTURE_2D, 0, gl.PixelFormat.RGBA, tex.width, tex.height, 
 			0, gl.PixelFormat.RGBA, gl.PixelType.UNSIGNED_BYTE, tex.pixels)
 	}
 

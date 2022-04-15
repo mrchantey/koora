@@ -13,7 +13,7 @@ export class GlueBase{
 		this.gl = gl
 	}
 
-	init(wasmExports){
+	onLoad(wasmExports){
 		this.wasmExports = wasmExports
 	}
 

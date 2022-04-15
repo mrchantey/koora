@@ -28,6 +28,77 @@ export async function instantiate(module, imports = {}) {
         mask = mask >>> 0;
         __module0.clear(mask);
       },
+      bindBuffer(target, buffer) {
+        // src-as/WebGL2/imports/_types/bindBuffer(u32, externref) => void
+        target = target >>> 0;
+        __module0.bindBuffer(target, buffer);
+      },
+      bufferSubData__2(target, dstByteOffset, srcData, srcOffset, length) {
+        // src-as/WebGL2/imports/_types/bufferSubData__2(u32, i32, ~lib/typedarray/Float32Array, u32, u32?) => void
+        target = target >>> 0;
+        srcData = __liftTypedArray(Float32Array, srcData >>> 0);
+        srcOffset = srcOffset >>> 0;
+        length = length >>> 0;
+        __module0.bufferSubData__2(target, dstByteOffset, srcData, srcOffset, length);
+      },
+      enable(cap) {
+        // src-as/WebGL2/imports/_types/enable(u32) => void
+        cap = cap >>> 0;
+        __module0.enable(cap);
+      },
+      depthFunc(func) {
+        // src-as/WebGL2/imports/_types/depthFunc(u32) => void
+        func = func >>> 0;
+        __module0.depthFunc(func);
+      },
+      disable(cap) {
+        // src-as/WebGL2/imports/_types/disable(u32) => void
+        cap = cap >>> 0;
+        __module0.disable(cap);
+      },
+      cullFace(mode) {
+        // src-as/WebGL2/imports/_types/cullFace(u32) => void
+        mode = mode >>> 0;
+        __module0.cullFace(mode);
+      },
+      bindTransformFeedback(target, tf) {
+        // src-as/WebGL2/imports/_types/bindTransformFeedback(u32, externref) => void
+        target = target >>> 0;
+        __module0.bindTransformFeedback(target, tf);
+      },
+      beginTransformFeedback(primitiveMode) {
+        // src-as/WebGL2/imports/_types/beginTransformFeedback(u32) => void
+        primitiveMode = primitiveMode >>> 0;
+        __module0.beginTransformFeedback(primitiveMode);
+      },
+      drawArrays(mode, first, count) {
+        // src-as/WebGL2/imports/_types/drawArrays(u32, i32, i32) => void
+        mode = mode >>> 0;
+        __module0.drawArrays(mode, first, count);
+      },
+      drawElementsInstanced(mode, count, type, offset, instanceCount) {
+        // src-as/WebGL2/imports/_types/drawElementsInstanced(u32, i32, u32, i32, i32) => void
+        mode = mode >>> 0;
+        type = type >>> 0;
+        __module0.drawElementsInstanced(mode, count, type, offset, instanceCount);
+      },
+      drawArraysInstanced(mode, first, count, instanceCount) {
+        // src-as/WebGL2/imports/_types/drawArraysInstanced(u32, i32, i32, i32) => void
+        mode = mode >>> 0;
+        __module0.drawArraysInstanced(mode, first, count, instanceCount);
+      },
+      drawElements(mode, count, type, offset) {
+        // src-as/WebGL2/imports/_types/drawElements(u32, i32, u32, i32) => void
+        mode = mode >>> 0;
+        type = type >>> 0;
+        __module0.drawElements(mode, count, type, offset);
+      },
+      blendFunc(sfactor, dfactor) {
+        // src-as/WebGL2/imports/_types/blendFunc(u32, u32) => void
+        sfactor = sfactor >>> 0;
+        dfactor = dfactor >>> 0;
+        __module0.blendFunc(sfactor, dfactor);
+      },
       createShader(type) {
         // src-as/WebGL2/imports/_types/createShader(u32) => externref
         type = type >>> 0;
@@ -61,11 +132,6 @@ export async function instantiate(module, imports = {}) {
       getProgramInfoLog(program) {
         // src-as/WebGL2/imports/_types/getProgramInfoLog(externref) => ~lib/string/String
         return __lowerString(__module0.getProgramInfoLog(program)) || __notnull();
-      },
-      bindBuffer(target, buffer) {
-        // src-as/WebGL2/imports/_types/bindBuffer(u32, externref) => void
-        target = target >>> 0;
-        __module0.bindBuffer(target, buffer);
       },
       bufferData__3(target, srcData, usage) {
         // src-as/WebGL2/imports/_types/bufferData__3(u32, ~lib/typedarray/Float32Array, u32) => void
@@ -110,11 +176,6 @@ export async function instantiate(module, imports = {}) {
         srcData = __liftTypedArray(Uint16Array, srcData >>> 0);
         usage = usage >>> 0;
         __module0.bufferData__5(target, srcData, usage);
-      },
-      bindTransformFeedback(target, tf) {
-        // src-as/WebGL2/imports/_types/bindTransformFeedback(u32, externref) => void
-        target = target >>> 0;
-        __module0.bindTransformFeedback(target, tf);
       },
       bindBufferBase(target, index, buffer) {
         // src-as/WebGL2/imports/_types/bindBufferBase(u32, u32, externref) => void
@@ -172,13 +233,13 @@ export async function instantiate(module, imports = {}) {
         target = target >>> 0;
         __module0.bindTexture(target, texture);
       },
-      texImage2D__1(target, level, internalformat, width, height, border, format, type, pixels) {
-        // src-as/WebGL2/imports/_types/texImage2D__1(u32, i32, i32, i32, i32, i32, u32, u32, ~lib/arraybuffer/ArrayBufferView) => void
+      texImage2D__6(target, level, internalformat, width, height, border, format, type, pixels) {
+        // src-as/WebGL2/imports/_types/texImage2D__6(u32, i32, i32, i32, i32, i32, u32, u32, ~lib/typedarray/Uint8Array) => void
         target = target >>> 0;
         format = format >>> 0;
         type = type >>> 0;
-        pixels = __liftTypedArray(ArrayBufferView, pixels >>> 0);
-        __module0.texImage2D__1(target, level, internalformat, width, height, border, format, type, pixels);
+        pixels = __liftTypedArray(Uint8Array, pixels >>> 0);
+        __module0.texImage2D__6(target, level, internalformat, width, height, border, format, type, pixels);
       },
       generateMipmap(target) {
         // src-as/WebGL2/imports/_types/generateMipmap(u32) => void
@@ -190,67 +251,6 @@ export async function instantiate(module, imports = {}) {
         target = target >>> 0;
         pname = pname >>> 0;
         __module0.texParameteri(target, pname, param);
-      },
-      bufferSubData__2(target, dstByteOffset, srcData, srcOffset, length) {
-        // src-as/WebGL2/imports/_types/bufferSubData__2(u32, i32, ~lib/typedarray/Float32Array, u32, u32?) => void
-        target = target >>> 0;
-        srcData = __liftTypedArray(Float32Array, srcData >>> 0);
-        srcOffset = srcOffset >>> 0;
-        length = length >>> 0;
-        __module0.bufferSubData__2(target, dstByteOffset, srcData, srcOffset, length);
-      },
-      enable(cap) {
-        // src-as/WebGL2/imports/_types/enable(u32) => void
-        cap = cap >>> 0;
-        __module0.enable(cap);
-      },
-      depthFunc(func) {
-        // src-as/WebGL2/imports/_types/depthFunc(u32) => void
-        func = func >>> 0;
-        __module0.depthFunc(func);
-      },
-      disable(cap) {
-        // src-as/WebGL2/imports/_types/disable(u32) => void
-        cap = cap >>> 0;
-        __module0.disable(cap);
-      },
-      cullFace(mode) {
-        // src-as/WebGL2/imports/_types/cullFace(u32) => void
-        mode = mode >>> 0;
-        __module0.cullFace(mode);
-      },
-      beginTransformFeedback(primitiveMode) {
-        // src-as/WebGL2/imports/_types/beginTransformFeedback(u32) => void
-        primitiveMode = primitiveMode >>> 0;
-        __module0.beginTransformFeedback(primitiveMode);
-      },
-      drawArrays(mode, first, count) {
-        // src-as/WebGL2/imports/_types/drawArrays(u32, i32, i32) => void
-        mode = mode >>> 0;
-        __module0.drawArrays(mode, first, count);
-      },
-      drawElementsInstanced(mode, count, type, offset, instanceCount) {
-        // src-as/WebGL2/imports/_types/drawElementsInstanced(u32, i32, u32, i32, i32) => void
-        mode = mode >>> 0;
-        type = type >>> 0;
-        __module0.drawElementsInstanced(mode, count, type, offset, instanceCount);
-      },
-      drawArraysInstanced(mode, first, count, instanceCount) {
-        // src-as/WebGL2/imports/_types/drawArraysInstanced(u32, i32, i32, i32) => void
-        mode = mode >>> 0;
-        __module0.drawArraysInstanced(mode, first, count, instanceCount);
-      },
-      drawElements(mode, count, type, offset) {
-        // src-as/WebGL2/imports/_types/drawElements(u32, i32, u32, i32) => void
-        mode = mode >>> 0;
-        type = type >>> 0;
-        __module0.drawElements(mode, count, type, offset);
-      },
-      blendFunc(sfactor, dfactor) {
-        // src-as/WebGL2/imports/_types/blendFunc(u32, u32) => void
-        sfactor = sfactor >>> 0;
-        dfactor = dfactor >>> 0;
-        __module0.blendFunc(sfactor, dfactor);
       },
       uniform1fv(location, data, srcOffset, srcLength) {
         // src-as/WebGL2/imports/_types/uniform1fv(externref, ~lib/typedarray/Float32Array, u32?, u32?) => void
@@ -301,8 +301,31 @@ export async function instantiate(module, imports = {}) {
   const memory = exports.memory || imports.env.memory;
   const adaptedExports = Object.setPrototypeOf({
     defaultWorld() {
-      // src-as/factories/mainFactories/defaultWorld() => src-as/base/World/World
+      // src-as/exports/mainFactories/defaultWorld() => src-as/base/World/World
       return __liftInternref(exports.defaultWorld() >>> 0);
+    },
+    defaultCamera() {
+      // src-as/exports/cameraFactories/defaultCamera() => src-as/base/Entity/Entity
+      return __liftInternref(exports.defaultCamera() >>> 0);
+    },
+    rotatingCube(_shader) {
+      // src-as/exports/demos/rotatingCube(src-as/rendering/shader/Shader/Shader | null) => src-as/base/Entity/Entity
+      _shader = __lowerInternref(_shader);
+      return __liftInternref(exports.rotatingCube(_shader) >>> 0);
+    },
+    unlitVertexColorShader: {
+      // src-as/rendering/shader/unlit/unlitVertexColors/unlitVertexColorShader: src-as/rendering/shader/Shader/Shader
+      valueOf() { return this.value; },
+      get value() {
+        return __liftInternref(exports.unlitVertexColorShader.value >>> 0);
+      }
+    },
+    litShader: {
+      // src-as/rendering/shader/lit/litShader/litShader: src-as/rendering/shader/Shader/Shader
+      valueOf() { return this.value; },
+      get value() {
+        return __liftInternref(exports.litShader.value >>> 0);
+      }
     },
   }, exports);
   function __liftString(pointer) {
@@ -367,6 +390,11 @@ export async function instantiate(module, imports = {}) {
     const sentinel = new Internref(__retain(pointer));
     registry.register(sentinel, pointer);
     return sentinel;
+  }
+  function __lowerInternref(value) {
+    if (value == null) return 0;
+    if (value instanceof Internref) return value.valueOf();
+    throw TypeError("internref expected");
   }
   const refcounts = new Map();
   function __retain(pointer) {

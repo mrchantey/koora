@@ -1,1 +1,1 @@
-export * from './factories'
+export * from './exports'

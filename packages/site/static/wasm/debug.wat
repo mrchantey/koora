@@ -5,11 +5,11 @@
  (type $i32_i32_i32_=>_i32 (func (param i32 i32 i32) (result i32)))
  (type $none_=>_none (func))
  (type $i32_=>_none (func (param i32)))
- (type $none_=>_i32 (func (result i32)))
  (type $i32_i32_i32_=>_none (func (param i32 i32 i32)))
+ (type $none_=>_i32 (func (result i32)))
  (type $i32_f32_=>_none (func (param i32 f32)))
- (type $i32_=>_f32 (func (param i32) (result f32)))
  (type $i32_i32_i32_i32_=>_i32 (func (param i32 i32 i32 i32) (result i32)))
+ (type $i32_=>_f32 (func (param i32) (result f32)))
  (type $i32_i32_=>_f32 (func (param i32 i32) (result f32)))
  (type $i32_i32_i32_i32_i32_=>_i32 (func (param i32 i32 i32 i32 i32) (result i32)))
  (type $i32_f32_f32_f32_f32_=>_i32 (func (param i32 f32 f32 f32 f32) (result i32)))
@@ -20,20 +20,20 @@
  (type $externref_i32_=>_i32 (func (param externref i32) (result i32)))
  (type $none_=>_externref (func (result externref)))
  (type $i32_i32_f32_=>_none (func (param i32 i32 f32)))
+ (type $i32_f32_=>_i32 (func (param i32 f32) (result i32)))
  (type $i32_i32_i32_i32_i32_=>_none (func (param i32 i32 i32 i32 i32)))
  (type $externref_i32_i32_i32_=>_none (func (param externref i32 i32 i32)))
  (type $f32_f32_f32_=>_i32 (func (param f32 f32 f32) (result i32)))
- (type $i32_f32_=>_i32 (func (param i32 f32) (result i32)))
+ (type $i32_f32_f32_f32_=>_i32 (func (param i32 f32 f32 f32) (result i32)))
  (type $i32_i32_i32_i32_i32_i32_=>_none (func (param i32 i32 i32 i32 i32 i32)))
  (type $i32_f32_f32_=>_i32 (func (param i32 f32 f32) (result i32)))
- (type $externref_=>_i32 (func (param externref) (result i32)))
  (type $i32_externref_=>_none (func (param i32 externref)))
+ (type $externref_=>_i32 (func (param externref) (result i32)))
  (type $none_=>_f32 (func (result f32)))
  (type $f32_f32_=>_f32 (func (param f32 f32) (result f32)))
  (type $f32_f32_f32_=>_f32 (func (param f32 f32 f32) (result f32)))
  (type $i32_i32_f32_=>_i32 (func (param i32 i32 f32) (result i32)))
  (type $i32_i32_i32_f32_=>_i32 (func (param i32 i32 i32 f32) (result i32)))
- (type $i32_f32_f32_f32_=>_i32 (func (param i32 f32 f32 f32) (result i32)))
  (type $f32_f32_=>_i32 (func (param f32 f32) (result i32)))
  (type $i32_i32_i32_i32_i32_f32_=>_i32 (func (param i32 i32 i32 i32 i32 f32) (result i32)))
  (type $i32_=>_externref (func (param i32) (result externref)))
@@ -66,6 +66,24 @@
  (import "gl" "clearColor" (func $src-as/WebGL2/imports/_types/clearColor (param f32 f32 f32 f32)))
  (import "host" "elapsed" (func $src-as/imports/_host/elapsed (result f32)))
  (import "gl" "clear" (func $src-as/WebGL2/imports/_types/clear (param i32)))
+ (import "host" "get" (func $src-as/imports/_host/get (param i32) (result externref)))
+ (import "gl" "bindBuffer" (func $src-as/WebGL2/imports/_types/bindBuffer (param i32 externref)))
+ (import "gl" "bufferSubData__2" (func $src-as/WebGL2/imports/_types/bufferSubData__2 (param i32 i32 i32 i32 i32)))
+ (import "gl" "viewport" (func $src-as/WebGL2/imports/_types/viewport (param i32 i32 i32 i32)))
+ (import "gl" "enable" (func $src-as/WebGL2/imports/_types/enable (param i32)))
+ (import "gl" "depthFunc" (func $src-as/WebGL2/imports/_types/depthFunc (param i32)))
+ (import "gl" "disable" (func $src-as/WebGL2/imports/_types/disable (param i32)))
+ (import "gl" "useProgram" (func $src-as/WebGL2/imports/_types/useProgram (param externref)))
+ (import "gl" "cullFace" (func $src-as/WebGL2/imports/_types/cullFace (param i32)))
+ (import "gl" "bindVertexArray" (func $src-as/WebGL2/imports/_types/bindVertexArray (param externref)))
+ (import "gl" "bindTransformFeedback" (func $src-as/WebGL2/imports/_types/bindTransformFeedback (param i32 externref)))
+ (import "gl" "beginTransformFeedback" (func $src-as/WebGL2/imports/_types/beginTransformFeedback (param i32)))
+ (import "gl" "drawArrays" (func $src-as/WebGL2/imports/_types/drawArrays (param i32 i32 i32)))
+ (import "gl" "endTransformFeedback" (func $src-as/WebGL2/imports/_types/endTransformFeedback))
+ (import "gl" "drawElementsInstanced" (func $src-as/WebGL2/imports/_types/drawElementsInstanced (param i32 i32 i32 i32 i32)))
+ (import "gl" "drawArraysInstanced" (func $src-as/WebGL2/imports/_types/drawArraysInstanced (param i32 i32 i32 i32)))
+ (import "gl" "drawElements" (func $src-as/WebGL2/imports/_types/drawElements (param i32 i32 i32 i32)))
+ (import "gl" "blendFunc" (func $src-as/WebGL2/imports/_types/blendFunc (param i32 i32)))
  (import "gl" "createShader" (func $src-as/WebGL2/imports/_types/createShader (param i32) (result externref)))
  (import "gl" "shaderSource" (func $src-as/WebGL2/imports/_types/shaderSource (param externref i32)))
  (import "gl" "compileShader" (func $src-as/WebGL2/imports/_types/compileShader (param externref)))
@@ -83,19 +101,15 @@
  (import "gl" "detachShader" (func $src-as/WebGL2/imports/_types/detachShader (param externref externref)))
  (import "host" "set" (func $src-as/imports/_host/set (param externref) (result i32)))
  (import "gl" "createBuffer" (func $src-as/WebGL2/imports/_types/createBuffer (result externref)))
- (import "gl" "bindBuffer" (func $src-as/WebGL2/imports/_types/bindBuffer (param i32 externref)))
  (import "gl" "bufferData__3" (func $src-as/WebGL2/imports/_types/bufferData__3 (param i32 i32 i32)))
  (import "gl" "bufferData__4" (func $src-as/WebGL2/imports/_types/bufferData__4 (param i32 i32 i32)))
  (import "gl" "createVertexArray" (func $src-as/WebGL2/imports/_types/createVertexArray (result externref)))
- (import "gl" "bindVertexArray" (func $src-as/WebGL2/imports/_types/bindVertexArray (param externref)))
- (import "host" "get" (func $src-as/imports/_host/get (param i32) (result externref)))
  (import "gl" "getAttribLocation" (func $src-as/WebGL2/imports/_types/getAttribLocation (param externref i32) (result i32)))
  (import "gl" "enableVertexAttribArray" (func $src-as/WebGL2/imports/_types/enableVertexAttribArray (param i32)))
  (import "gl" "vertexAttribPointer" (func $src-as/WebGL2/imports/_types/vertexAttribPointer (param i32 i32 i32 i32 i32 i32)))
  (import "gl" "vertexAttribDivisor" (func $src-as/WebGL2/imports/_types/vertexAttribDivisor (param i32 i32)))
  (import "gl" "bufferData__5" (func $src-as/WebGL2/imports/_types/bufferData__5 (param i32 i32 i32)))
  (import "gl" "createTransformFeedback" (func $src-as/WebGL2/imports/_types/createTransformFeedback (result externref)))
- (import "gl" "bindTransformFeedback" (func $src-as/WebGL2/imports/_types/bindTransformFeedback (param i32 externref)))
  (import "gl" "bindBufferBase" (func $src-as/WebGL2/imports/_types/bindBufferBase (param i32 i32 externref)))
  (import "gl" "getUniformBlockIndex" (func $src-as/WebGL2/imports/_types/getUniformBlockIndex (param externref i32) (result i32)))
  (import "gl" "getActiveUniformBlockParameter__1" (func $src-as/WebGL2/imports/_types/getActiveUniformBlockParameter__1 (param externref i32 i32) (result i32)))
@@ -107,23 +121,9 @@
  (import "gl" "createTexture" (func $src-as/WebGL2/imports/_types/createTexture (result externref)))
  (import "gl" "activeTexture" (func $src-as/WebGL2/imports/_types/activeTexture (param i32)))
  (import "gl" "bindTexture" (func $src-as/WebGL2/imports/_types/bindTexture (param i32 externref)))
- (import "gl" "texImage2D__1" (func $src-as/WebGL2/imports/_types/texImage2D__1 (param i32 i32 i32 i32 i32 i32 i32 i32 i32)))
+ (import "gl" "texImage2D__6" (func $src-as/WebGL2/imports/_types/texImage2D__6 (param i32 i32 i32 i32 i32 i32 i32 i32 i32)))
  (import "gl" "generateMipmap" (func $src-as/WebGL2/imports/_types/generateMipmap (param i32)))
  (import "gl" "texParameteri" (func $src-as/WebGL2/imports/_types/texParameteri (param i32 i32 i32)))
- (import "gl" "bufferSubData__2" (func $src-as/WebGL2/imports/_types/bufferSubData__2 (param i32 i32 i32 i32 i32)))
- (import "gl" "viewport" (func $src-as/WebGL2/imports/_types/viewport (param i32 i32 i32 i32)))
- (import "gl" "enable" (func $src-as/WebGL2/imports/_types/enable (param i32)))
- (import "gl" "depthFunc" (func $src-as/WebGL2/imports/_types/depthFunc (param i32)))
- (import "gl" "disable" (func $src-as/WebGL2/imports/_types/disable (param i32)))
- (import "gl" "useProgram" (func $src-as/WebGL2/imports/_types/useProgram (param externref)))
- (import "gl" "cullFace" (func $src-as/WebGL2/imports/_types/cullFace (param i32)))
- (import "gl" "beginTransformFeedback" (func $src-as/WebGL2/imports/_types/beginTransformFeedback (param i32)))
- (import "gl" "drawArrays" (func $src-as/WebGL2/imports/_types/drawArrays (param i32 i32 i32)))
- (import "gl" "endTransformFeedback" (func $src-as/WebGL2/imports/_types/endTransformFeedback))
- (import "gl" "drawElementsInstanced" (func $src-as/WebGL2/imports/_types/drawElementsInstanced (param i32 i32 i32 i32 i32)))
- (import "gl" "drawArraysInstanced" (func $src-as/WebGL2/imports/_types/drawArraysInstanced (param i32 i32 i32 i32)))
- (import "gl" "drawElements" (func $src-as/WebGL2/imports/_types/drawElements (param i32 i32 i32 i32)))
- (import "gl" "blendFunc" (func $src-as/WebGL2/imports/_types/blendFunc (param i32 i32)))
  (import "gl" "uniform1fv" (func $src-as/WebGL2/imports/_types/uniform1fv (param externref i32 i32 i32)))
  (import "gl" "uniform2fv" (func $src-as/WebGL2/imports/_types/uniform2fv (param externref i32 i32 i32)))
  (import "gl" "uniform3fv" (func $src-as/WebGL2/imports/_types/uniform3fv (param externref i32 i32 i32)))
@@ -892,9 +892,9 @@
  (global $src-as/rendering/shader/glsl/utility/glslUtils i32 (i32.const 7424))
  (global $src-as/rendering/shader/glsl/utility/lightConstants i32 (i32.const 8128))
  (global $src-as/rendering/shader/glsl/utility/lightUtils (mut i32) (i32.const 0))
- (global $src-as/rendering/shader/litShader/vert (mut i32) (i32.const 0))
- (global $src-as/rendering/shader/litShader/frag (mut i32) (i32.const 0))
- (global $src-as/rendering/shader/litShader/litShader (mut i32) (i32.const 0))
+ (global $src-as/rendering/shader/lit/litShader/vert (mut i32) (i32.const 0))
+ (global $src-as/rendering/shader/lit/litShader/frag (mut i32) (i32.const 0))
+ (global $src-as/rendering/shader/lit/litShader/litShader (mut i32) (i32.const 0))
  (global $src-as/rendering/shader/particleShader/a_pos i32 (i32.const 3264))
  (global $src-as/rendering/shader/particleShader/a_iPos i32 (i32.const 3520))
  (global $src-as/rendering/shader/particleShader/a_texcoord i32 (i32.const 3408))
@@ -902,7 +902,7 @@
  (global $src-as/rendering/shader/particleShader/u_v i32 (i32.const 2400))
  (global $src-as/rendering/shader/particleShader/u_p i32 (i32.const 2432))
  (global $src-as/rendering/shader/particleShader/vert (mut i32) (i32.const 0))
- (global $src-as/rendering/shader/particleShader/frag i32 (i32.const 12144))
+ (global $src-as/rendering/shader/particleShader/frag i32 (i32.const 12224))
  (global $src-as/rendering/shader/particleShader/particleRenderShader (mut i32) (i32.const 0))
  (global $src-as/rendering/shader/transformFeedback/a_pos i32 (i32.const 3520))
  (global $src-as/rendering/shader/transformFeedback/a_vel i32 (i32.const 3584))
@@ -911,22 +911,23 @@
  (global $src-as/rendering/shader/transformFeedback/u_acc i32 (i32.const 3008))
  (global $src-as/rendering/shader/transformFeedback/u_dt i32 (i32.const 2864))
  (global $src-as/rendering/shader/transformFeedback/vert (mut i32) (i32.const 0))
- (global $src-as/rendering/shader/transformFeedback/frag i32 (i32.const 13696))
+ (global $src-as/rendering/shader/transformFeedback/frag i32 (i32.const 13776))
  (global $src-as/rendering/shader/transformFeedback/transformFeedbackShader (mut i32) (i32.const 0))
  (global $src-as/rendering/shader/transformFeedbackSimple/vert (mut i32) (i32.const 0))
- (global $src-as/rendering/shader/transformFeedbackSimple/frag i32 (i32.const 13696))
+ (global $src-as/rendering/shader/transformFeedbackSimple/frag i32 (i32.const 13776))
  (global $src-as/rendering/shader/transformFeedbackSimple/transformFeedbackSimpleShader (mut i32) (i32.const 0))
- (global $src-as/rendering/shader/unlit/vert (mut i32) (i32.const 0))
- (global $src-as/rendering/shader/unlit/frag i32 (i32.const 14480))
- (global $src-as/rendering/shader/unlit/unlitShader (mut i32) (i32.const 0))
- (global $src-as/rendering/shader/unlitVertexColors/vert (mut i32) (i32.const 0))
- (global $src-as/rendering/shader/unlitVertexColors/frag i32 (i32.const 15072))
- (global $src-as/rendering/shader/unlitVertexColors/unlitVertexColorShader (mut i32) (i32.const 0))
- (global $src-as/rendering/shader/uvDebug/vert i32 (i32.const 15392))
- (global $src-as/rendering/shader/uvDebug/frag i32 (i32.const 15696))
+ (global $src-as/rendering/shader/unlit/unlit/vert (mut i32) (i32.const 0))
+ (global $src-as/rendering/shader/unlit/unlit/frag i32 (i32.const 14560))
+ (global $src-as/rendering/shader/unlit/unlit/unlitShader (mut i32) (i32.const 0))
+ (global $src-as/rendering/shader/unlit/unlitVertexColors/vert (mut i32) (i32.const 0))
+ (global $src-as/rendering/shader/unlit/unlitVertexColors/frag i32 (i32.const 15152))
+ (global $src-as/rendering/shader/unlit/unlitVertexColors/unlitVertexColorShader (mut i32) (i32.const 0))
+ (global $src-as/rendering/shader/uvDebug/vert i32 (i32.const 15472))
+ (global $src-as/rendering/shader/uvDebug/frag i32 (i32.const 15776))
  (global $src-as/rendering/shader/uvDebug/uvDebugShader (mut i32) (i32.const 0))
  (global $src-as/rendering/systems/RenderSystem/RenderSystem.canvasWidth (mut i32) (i32.const 100))
  (global $src-as/rendering/systems/RenderSystem/RenderSystem.canvasHeight (mut i32) (i32.const 100))
+ (global $src-as/math/Texture/Texture.white (mut i32) (i32.const 0))
  (global $src-as/math/Texture/Texture.testTexture (mut i32) (i32.const 0))
  (global $src-as/math/Texture/Texture.testTexture2 (mut i32) (i32.const 0))
  (global $src-as/components/DirectionalLight/DirectionalLight.directionBuffer (mut i32) (i32.const 0))
@@ -1051,10 +1052,11 @@
  (global $src-as/components/XRRig/XREye.Right i32 (i32.const 1))
  (global $src-as/components/XRRig/XREye.Center i32 (i32.const 2))
  (global $~lib/builtins/u32.MAX_VALUE i32 (i32.const -1))
- (global $~lib/rt/__rtti_base i32 (i32.const 21712))
- (global $~lib/memory/__data_end i32 (i32.const 22964))
- (global $~lib/memory/__stack_pointer (mut i32) (i32.const 39348))
- (global $~lib/memory/__heap_base i32 (i32.const 39348))
+ (global $~lib/typedarray/Float32Array.BYTES_PER_ELEMENT i32 (i32.const 4))
+ (global $~lib/rt/__rtti_base i32 (i32.const 21824))
+ (global $~lib/memory/__data_end i32 (i32.const 23092))
+ (global $~lib/memory/__stack_pointer (mut i32) (i32.const 39476))
+ (global $~lib/memory/__heap_base i32 (i32.const 39476))
  (memory $0 1)
  (data (i32.const 12) "\1c\00\00\00\00\00\00\00\00\00\00\00\05\00\00\00\08\00\00\00\01\00\00\00\00\00\00\00\00\00\00\00")
  (data (i32.const 44) "\1c\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\06\00\00\00z\00y\00x\00\00\00\00\00\00\00")
@@ -1202,140 +1204,144 @@
  (data (i32.const 8108) "\ac\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\9a\00\00\00\n\00#\00i\00f\00n\00d\00e\00f\00 \00L\00I\00G\00H\00T\00_\00C\00O\00N\00S\00T\00A\00N\00T\00S\00\n\00#\00d\00e\00f\00i\00n\00e\00 \00L\00I\00G\00H\00T\00_\00C\00O\00N\00S\00T\00A\00N\00T\00S\00\n\00#\00d\00e\00f\00i\00n\00e\00 \00N\00U\00M\00_\00L\00I\00G\00H\00T\00S\00 \008\00\n\00#\00e\00n\00d\00i\00f\00\n\00\00\00")
  (data (i32.const 8284) "<\01\00\00\00\00\00\00\00\00\00\00\01\00\00\00,\01\00\00\n\00#\00i\00f\00n\00d\00e\00f\00 \00L\00I\00G\00H\00T\00_\00U\00T\00I\00L\00S\00\n\00#\00d\00e\00f\00i\00n\00e\00 \00L\00I\00G\00H\00T\00_\00U\00T\00I\00L\00S\00\n\00v\00e\00c\003\00 \00c\00a\00l\00c\00u\00l\00a\00t\00e\00D\00i\00r\00e\00c\00t\00i\00o\00n\00a\00l\00L\00i\00g\00h\00t\00A\00t\00I\00n\00d\00e\00x\00(\00v\00e\00c\003\00 \00d\00i\00f\00f\00u\00s\00e\00,\00v\00e\00c\003\00 \00n\00o\00r\00m\00a\00l\00,\00i\00n\00t\00 \00i\00n\00d\00e\00x\00)\00{\00\n\00\t\00f\00l\00o\00a\00t\00 \00s\00t\00r\00e\00n\00g\00t\00h\00 \00=\00 \00m\00a\00x\00(\00d\00o\00t\00(\00n\00o\00r\00m\00a\00l\00,\00-\00")
  (data (i32.const 8604) "\8c\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00r\00\00\00[\00i\00n\00d\00e\00x\00]\00)\00,\000\00.\00)\00;\00\n\00\t\00r\00e\00t\00u\00r\00n\00 \00\n\00\t\00d\00i\00f\00f\00u\00s\00e\00 \00*\00 \00s\00t\00r\00e\00n\00g\00t\00h\00 \00+\00 \00\n\00\t\00d\00i\00f\00f\00u\00s\00e\00 \00*\00 \00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 8748) "l\02\00\00\00\00\00\00\00\00\00\00\01\00\00\00N\02\00\00[\00i\00n\00d\00e\00x\00]\00;\00\n\00\t\00/\00/\00 \00r\00e\00t\00u\00r\00n\00 \00v\00e\00c\003\00(\000\00.\00,\000\00.\00,\000\00.\00)\00;\00\n\00}\00\n\00\n\00v\00e\00c\003\00 \00c\00a\00l\00c\00u\00l\00a\00t\00e\00L\00i\00g\00h\00t\00i\00n\00g\00(\00v\00e\00c\003\00 \00d\00i\00f\00f\00u\00s\00e\00,\00v\00e\00c\003\00 \00n\00o\00r\00m\00a\00l\00)\00{\00\n\00\t\00n\00o\00r\00m\00a\00l\00 \00=\00 \00n\00o\00r\00m\00a\00l\00i\00z\00e\00(\00n\00o\00r\00m\00a\00l\00)\00;\00\n\00\t\00v\00e\00c\003\00 \00o\00u\00t\00p\00u\00t\00C\00o\00l\00o\00r\00 \00=\00 \00v\00e\00c\003\00(\000\00.\00,\000\00.\00,\000\00.\00)\00;\00\n\00\t\00f\00o\00r\00(\00i\00n\00t\00 \00i\00 \00=\00 \000\00;\00 \00i\00 \00<\00 \00N\00U\00M\00_\00L\00I\00G\00H\00T\00S\00;\00 \00i\00+\00+\00)\00{\00\n\00\t\00\t\00o\00u\00t\00p\00u\00t\00C\00o\00l\00o\00r\00 \00+\00=\00 \00c\00a\00l\00c\00u\00l\00a\00t\00e\00D\00i\00r\00e\00c\00t\00i\00o\00n\00a\00l\00L\00i\00g\00h\00t\00A\00t\00I\00n\00d\00e\00x\00(\00d\00i\00f\00f\00u\00s\00e\00,\00n\00o\00r\00m\00a\00l\00,\00i\00)\00;\00\n\00\t\00}\00\n\00\t\00r\00e\00t\00u\00r\00n\00 \00o\00u\00t\00p\00u\00t\00C\00o\00l\00o\00r\00;\00\n\00}\00\n\00\n\00#\00e\00n\00d\00i\00f\00\n\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 9372) ",\00\00\00\00\00\00\00\00\00\00\00\1c\00\00\00\14\00\00\00p \00\00\00\00\00\00\b0!\00\00\00\00\00\00@\"\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 9420) ",\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\14\00\00\00\n\00\n\00i\00n\00 \00v\00e\00c\004\00 \00\00\00\00\00\00\00\00\00")
- (data (i32.const 9468) "\ac\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\9a\00\00\00;\00\n\00\n\00o\00u\00t\00 \00v\00e\00c\003\00 \00v\00_\00n\00o\00r\00m\00a\00l\00;\00\n\00o\00u\00t\00 \00v\00e\00c\002\00 \00v\00_\00t\00e\00x\00c\00o\00o\00r\00d\00;\00\n\00\n\00v\00o\00i\00d\00 \00m\00a\00i\00n\00(\00v\00o\00i\00d\00)\00 \00{\00\n\00\t\00g\00l\00_\00P\00o\00s\00i\00t\00i\00o\00n\00 \00=\00 \00\00\00")
- (data (i32.const 9644) "\1c\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\06\00\00\00 \00*\00 \00\00\00\00\00\00\00")
- (data (i32.const 9676) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00&\00\00\00;\00\n\00\t\00v\00_\00n\00o\00r\00m\00a\00l\00 \00=\00 \00m\00a\00t\003\00(\00\00\00\00\00\00\00")
- (data (i32.const 9740) "\1c\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\08\00\00\00)\00 \00*\00 \00\00\00\00\00")
- (data (i32.const 9772) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00 \00\00\00;\00\n\00\t\00v\00_\00t\00e\00x\00c\00o\00o\00r\00d\00 \00=\00 \00\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 9836) "\1c\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\08\00\00\00;\00\n\00}\00\n\00\00\00\00\00")
- (data (i32.const 9868) "l\00\00\00\00\00\00\00\00\00\00\00\1c\00\00\00T\00\00\00`\15\00\00\00\00\00\00\a0\15\00\00\00\00\00\00\e0$\00\00\00\00\00\00 \16\00\00\00\00\00\00P\16\00\00\00\00\00\00\10%\00\00\00\00\00\00\c0%\00\00\00\00\00\00\e0%\00\00\00\00\00\00 &\00\00\00\00\00\00@&\00\00\00\00\00\00\80&\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 9980) "l\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00R\00\00\00#\00v\00e\00r\00s\00i\00o\00n\00 \003\000\000\00 \00e\00s\00\n\00p\00r\00e\00c\00i\00s\00i\00o\00n\00 \00m\00e\00d\00i\00u\00m\00p\00 \00f\00l\00o\00a\00t\00;\00\n\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 10092) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\1e\00\00\00\n\00\n\00u\00n\00i\00f\00o\00r\00m\00 \00v\00e\00c\004\00 \00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 10156) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00(\00\00\00;\00\n\00u\00n\00i\00f\00o\00r\00m\00 \00s\00a\00m\00p\00l\00e\00r\002\00D\00 \00\00\00\00\00")
- (data (i32.const 10220) "\1c\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\06\00\00\00;\00\n\00\n\00\00\00\00\00\00\00")
- (data (i32.const 10252) "\1c\01\00\00\00\00\00\00\00\00\00\00\01\00\00\00\n\01\00\00\n\00\n\00i\00n\00 \00v\00e\00c\003\00 \00v\00_\00n\00o\00r\00m\00a\00l\00;\00\n\00i\00n\00 \00v\00e\00c\002\00 \00v\00_\00t\00e\00x\00c\00o\00o\00r\00d\00;\00\n\00o\00u\00t\00 \00v\00e\00c\004\00 \00o\00_\00c\00o\00l\00o\00r\00;\00\n\00\n\00v\00o\00i\00d\00 \00m\00a\00i\00n\00(\00v\00o\00i\00d\00)\00 \00{\00\n\00\t\00/\00/\00T\00O\00D\00O\00 \00i\00n\00p\00u\00t\00 \00c\00o\00l\00o\00r\00 \00f\00o\00r\00 \00l\00i\00g\00h\00t\00i\00n\00g\00 \00f\00i\00r\00s\00t\00\n\00\t\00v\00e\00c\004\00 \00d\00i\00f\00f\00u\00s\00e\00 \00=\00 \00(\00\00\00")
- (data (i32.const 10540) ",\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\16\00\00\00 \00+\00 \00t\00e\00x\00t\00u\00r\00e\00(\00\00\00\00\00\00\00")
- (data (i32.const 10588) "\ec\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\d4\00\00\00,\00 \00v\00_\00t\00e\00x\00c\00o\00o\00r\00d\00)\00)\00;\00\n\00\t\00v\00e\00c\003\00 \00o\00u\00t\00p\00u\00t\00C\00o\00l\00o\00r\00 \00=\00 \00c\00a\00l\00c\00u\00l\00a\00t\00e\00L\00i\00g\00h\00t\00i\00n\00g\00(\00d\00i\00f\00f\00u\00s\00e\00.\00x\00y\00z\00,\00 \00v\00_\00n\00o\00r\00m\00a\00l\00)\00;\00\n\00\t\00o\00_\00c\00o\00l\00o\00r\00 \00=\00 \00v\00e\00c\004\00(\00o\00u\00t\00p\00u\00t\00C\00o\00l\00o\00r\00,\00\00\00\00\00\00\00\00\00")
- (data (i32.const 10828) ",\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\0e\00\00\00.\00a\00)\00;\00\n\00}\00\n\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 10876) "\\\00\00\00\00\00\00\00\00\00\00\00\1c\00\00\00D\00\00\00\10\'\00\00\00\00\00\00\a0\15\00\00\00\00\00\00\80\'\00\00\00\00\00\00\c0\'\00\00\00\00\00\00\00(\00\00\00\00\00\00 (\00\00\00\00\00\00@)\00\00\00\00\00\00p)\00\00\00\00\00\00`*\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 10972) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\"\00\00\00#\00v\00e\00r\00s\00i\00o\00n\00 \003\000\000\00 \00e\00s\00\n\00\n\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 11036) "\ac\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\8e\00\00\00;\00\n\00o\00u\00t\00 \00v\00e\00c\002\00 \00v\00_\00u\00v\00;\00\n\00o\00u\00t\00 \00f\00l\00o\00a\00t\00 \00v\00_\00c\00o\00l\00;\00\n\00\n\00v\00o\00i\00d\00 \00m\00a\00i\00n\00(\00)\00 \00{\00\n\00\t\00v\00e\00c\004\00 \00m\00o\00d\00e\00l\00P\00o\00s\00 \00=\00 \00v\00e\00c\004\00(\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 11212) ",\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\14\00\00\00[\003\00]\00.\00x\00y\00z\00 \00+\00 \00\00\00\00\00\00\00\00\00")
- (data (i32.const 11260) "L\00\00\00\00\00\00\00\00\00\00\00\01\00\00\004\00\00\00,\001\00)\00;\00\n\00\t\00v\00e\00c\004\00 \00m\00o\00d\00e\00l\00V\00i\00e\00w\00P\00o\00s\00 \00=\00 \00\00\00\00\00\00\00\00\00")
- (data (i32.const 11340) "\\\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00D\00\00\00 \00*\00 \00m\00o\00d\00e\00l\00P\00o\00s\00;\00\n\00\t\00v\00e\00c\003\00 \00v\00e\00r\00t\00M\00o\00d\00e\00l\00P\00o\00s\00 \00=\00 \00\00\00\00\00\00\00\00\00")
- (data (i32.const 11436) "\ac\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\94\00\00\00;\00\n\00\t\00v\00e\00c\004\00 \00v\00e\00r\00t\00P\00o\00s\00 \00=\00 \00v\00e\00c\004\00(\00m\00o\00d\00e\00l\00V\00i\00e\00w\00P\00o\00s\00.\00x\00y\00z\00 \00+\00 \00v\00e\00r\00t\00M\00o\00d\00e\00l\00P\00o\00s\00,\001\00)\00;\00\n\00\t\00g\00l\00_\00P\00o\00s\00i\00t\00i\00o\00n\00 \00=\00 \00\00\00\00\00\00\00\00\00")
- (data (i32.const 11612) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00*\00\00\00 \00*\00 \00v\00e\00r\00t\00P\00o\00s\00;\00\n\00\t\00v\00_\00u\00v\00 \00=\00 \00\t\00\00\00")
- (data (i32.const 11676) "\9c\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\80\00\00\00;\00\n\00\t\00v\00_\00c\00o\00l\00 \00=\00 \00r\00a\00n\00d\00(\00v\00e\00c\002\00(\00g\00l\00_\00I\00n\00s\00t\00a\00n\00c\00e\00I\00D\00,\000\00)\00)\00;\00\n\00\t\00/\00/\00 \00v\00e\00c\004\00 \00v\00e\00r\00t\00P\00o\00s\00 \00=\00 \00v\00e\00c\004\00(\00\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 11836) "\1c\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\06\00\00\00 \00+\00 \00\00\00\00\00\00\00")
- (data (i32.const 11868) "l\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00T\00\00\00,\001\00)\00;\00\n\00\t\00/\00/\00 \00g\00l\00_\00P\00o\00s\00i\00t\00i\00o\00n\00 \00=\00 \00u\00_\00m\00v\00p\00 \00*\00 \00v\00e\00r\00t\00P\00o\00s\00;\00\n\00}\00\n\00\00\00\00\00\00\00\00\00")
- (data (i32.const 11980) "\8c\00\00\00\00\00\00\00\00\00\00\00\1c\00\00\00t\00\00\00\f0*\00\00\00\00\00\00\a0\15\00\00\00\00\00\00\a0\15\00\00\00\00\00\00\c0\15\00\00\00\00\00\00 \16\00\00\00\00\00\00P\16\00\00\00\00\00\000+\00\00\00\00\00\00\e0+\00\00\00\00\00\00\10,\00\00\00\00\00\00`,\00\00\00\00\00\00\c0,\00\00\00\00\00\00p-\00\00\00\00\00\00\b0-\00\00\00\00\00\00P.\00\00\00\00\00\00p.\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 12124) "\cc\01\00\00\00\00\00\00\00\00\00\00\01\00\00\00\b6\01\00\00#\00v\00e\00r\00s\00i\00o\00n\00 \003\000\000\00 \00e\00s\00\n\00p\00r\00e\00c\00i\00s\00i\00o\00n\00 \00m\00e\00d\00i\00u\00m\00p\00 \00f\00l\00o\00a\00t\00;\00\n\00\n\00\n\00i\00n\00 \00v\00e\00c\002\00 \00v\00_\00u\00v\00;\00\n\00i\00n\00 \00f\00l\00o\00a\00t\00 \00v\00_\00c\00o\00l\00;\00\n\00\n\00o\00u\00t\00 \00v\00e\00c\004\00 \00o\00_\00c\00o\00l\00o\00r\00;\00\n\00v\00o\00i\00d\00 \00m\00a\00i\00n\00(\00)\00 \00{\00\n\00\t\00v\00e\00c\002\00 \00s\00i\00g\00n\00e\00d\00U\00V\00 \00=\00 \00v\00_\00u\00v\00 \00*\00 \002\00.\00 \00-\00 \001\00.\00;\00\n\00\t\00f\00l\00o\00a\00t\00 \00l\00e\00n\00 \00=\00 \00m\00i\00n\00(\00l\00e\00n\00g\00t\00h\00(\00s\00i\00g\00n\00e\00d\00U\00V\00)\00,\001\00.\00)\00;\00\n\00\t\00o\00_\00c\00o\00l\00o\00r\00 \00=\00 \00v\00e\00c\004\00(\000\00.\00,\00v\00_\00c\00o\00l\00,\001\00.\00,\001\00.\00 \00-\00 \00l\00e\00n\00)\00;\00\n\00}\00\n\00\00\00\00\00\00\00")
- (data (i32.const 12588) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00 \00\00\00\n\00\n\00u\00n\00i\00f\00o\00r\00m\00 \00f\00l\00o\00a\00t\00 \00\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 12652) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\1e\00\00\00;\00\n\00u\00n\00i\00f\00o\00r\00m\00 \00v\00e\00c\003\00 \00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 12716) ",\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\16\00\00\00;\00\n\00\n\00i\00n\00 \00v\00e\00c\003\00 \00\00\00\00\00\00\00")
- (data (i32.const 12764) ",\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\16\00\00\00;\00\n\00o\00u\00t\00 \00v\00e\00c\003\00 \00\00\00\00\00\00\00")
- (data (i32.const 12812) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00&\00\00\00;\00\n\00\n\00\n\00v\00o\00i\00d\00 \00m\00a\00i\00n\00(\00)\00 \00{\00\n\00\t\00\00\00\00\00\00\00")
- (data (i32.const 12876) "\1c\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\06\00\00\00 \00=\00 \00\00\00\00\00\00\00")
- (data (i32.const 12908) "\1c\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\06\00\00\00;\00\n\00\t\00\00\00\00\00\00\00")
- (data (i32.const 12940) "\1c\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\0c\00\00\00;\00\n\00\t\00i\00f\00(\00")
- (data (i32.const 12972) "\dc\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\be\00\00\00.\00y\00 \00<\00 \000\00.\00)\00{\00\n\00\t\00\t\00f\00l\00o\00a\00t\00 \00r\00n\00d\00 \00=\00 \00r\00a\00n\00d\00(\00v\00e\00c\002\00(\00g\00l\00_\00V\00e\00r\00t\00e\00x\00I\00D\00,\000\00)\00)\00;\00\n\00\t\00\t\00f\00l\00o\00a\00t\00 \00r\00n\00d\002\00 \00=\00 \00r\00a\00n\00d\00(\00v\00e\00c\002\00(\000\00,\00g\00l\00_\00V\00e\00r\00t\00e\00x\00I\00D\00)\00)\00;\00\n\00\t\00\t\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 13196) "L\00\00\00\00\00\00\00\00\00\00\00\01\00\00\004\00\00\00 \00=\00 \00v\00e\00c\003\00(\000\00.\00,\00r\00n\00d\002\00,\001\00.\00)\00;\00\n\00\t\00\t\00/\00/\00 \00\00\00\00\00\00\00\00\00")
- (data (i32.const 13276) "l\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00V\00\00\00 \00=\00 \00v\00e\00c\003\00(\00(\00r\00n\00d\00 \00*\00 \002\00.\00 \00-\00 \001\00.\00)\00 \00*\00 \005\000\00.\00,\001\000\000\00.\00,\00 \000\00.\00)\00;\00\n\00\t\00\t\00\00\00\00\00\00\00")
- (data (i32.const 13388) "l\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00X\00\00\00 \00=\00 \00v\00e\00c\003\00(\00(\00r\00n\00d\00 \00*\00 \002\00.\00 \00-\00 \001\00.\00)\00 \00*\00 \005\00.\00,\001\000\00.\00,\00 \000\00.\00)\00;\00\n\00\t\00}\00\n\00}\00\n\00\00\00\00\00")
- (data (i32.const 13500) "\ac\00\00\00\00\00\00\00\00\00\00\00\1c\00\00\00\9c\00\00\00\f0*\00\00\00\00\00\00@1\00\00\00\00\00\00\801\00\00\00\00\00\00\c01\00\00\00\00\00\00 \16\00\00\00\00\00\00\f01\00\00\00\00\00\00\f01\00\00\00\00\00\00 2\00\00\00\00\00\00`2\00\00\00\00\00\00P.\00\00\00\00\00\00\c0%\00\00\00\00\00\00\802\00\00\00\00\00\00`2\00\00\00\00\00\00P.\00\00\00\00\00\00\c0%\00\00\00\00\00\00\a02\00\00\00\00\00\00\c02\00\00\00\00\00\00\a03\00\00\00\00\00\00\f03\00\00\00\00\00\00`4\00\00")
- (data (i32.const 13676) "|\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00l\00\00\00#\00v\00e\00r\00s\00i\00o\00n\00 \003\000\000\00 \00e\00s\00\n\00p\00r\00e\00c\00i\00s\00i\00o\00n\00 \00h\00i\00g\00h\00p\00 \00f\00l\00o\00a\00t\00;\00\n\00v\00o\00i\00d\00 \00m\00a\00i\00n\00(\00)\00 \00{\00}\00\n\00")
- (data (i32.const 13804) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\08\00\00\00\b0\0e\00\00\f0\0e\00\00\00\00\00\00")
- (data (i32.const 13836) "L\00\00\00\00\00\00\00\00\00\00\00\01\00\00\000\00\00\00#\00v\00e\00r\00s\00i\00o\00n\00 \003\000\000\00 \00e\00s\00\n\00i\00n\00 \00v\00e\00c\003\00 \00\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 13916) "\\\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00F\00\00\00;\00\n\00/\00/\00 \00i\00n\00 \00v\00e\00c\003\00 \00a\00_\00v\00e\00l\00o\00c\00i\00t\00y\00;\00 \00\n\00o\00u\00t\00 \00v\00e\00c\003\00 \00\00\00\00\00\00\00")
- (data (i32.const 14012) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00&\00\00\00;\00\n\00 \00\n\00v\00o\00i\00d\00 \00m\00a\00i\00n\00(\00)\00 \00{\00\n\00\t\00\00\00\00\00\00\00")
- (data (i32.const 14076) "L\00\00\00\00\00\00\00\00\00\00\00\01\00\00\006\00\00\00 \00+\00 \00v\00e\00c\003\00(\000\00.\000\001\00,\000\00.\000\001\00,\000\00.\000\001\00)\00;\00\n\00}\00\n\00\00\00\00\00\00\00")
- (data (i32.const 14156) "<\00\00\00\00\00\00\00\00\00\00\00\1c\00\00\00$\00\00\00 6\00\00\00\00\00\00p6\00\00\00\00\00\00\d06\00\00\00\00\00\00`2\00\00\00\00\00\00\107\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 14220) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\04\00\00\00\b0\0e\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 14252) ",\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\12\00\00\00\n\00i\00n\00 \00v\00e\00c\004\00 \00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 14300) "\\\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00H\00\00\00;\00\n\00\n\00v\00o\00i\00d\00 \00m\00a\00i\00n\00(\00v\00o\00i\00d\00)\00 \00{\00\n\00\t\00g\00l\00_\00P\00o\00s\00i\00t\00i\00o\00n\00 \00=\00 \00\00\00\00\00")
- (data (i32.const 14396) "<\00\00\00\00\00\00\00\00\00\00\00\1c\00\00\00$\00\00\00`\15\00\00\00\00\00\00\c07\00\00\00\00\00\00\f07\00\00\00\00\00\00\c0%\00\00\00\00\00\00\80&\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 14460) "\0c\01\00\00\00\00\00\00\00\00\00\00\01\00\00\00\f6\00\00\00#\00v\00e\00r\00s\00i\00o\00n\00 \003\000\000\00 \00e\00s\00\n\00p\00r\00e\00c\00i\00s\00i\00o\00n\00 \00m\00e\00d\00i\00u\00m\00p\00 \00f\00l\00o\00a\00t\00;\00\n\00\n\00u\00n\00i\00f\00o\00r\00m\00 \00v\00e\00c\004\00 \00u\00_\00c\00o\00l\00o\00r\00;\00\n\00o\00u\00t\00 \00v\00e\00c\004\00 \00o\00_\00c\00o\00l\00o\00r\00;\00\n\00\n\00v\00o\00i\00d\00 \00m\00a\00i\00n\00(\00v\00o\00i\00d\00)\00 \00{\00\n\00\t\00o\00_\00c\00o\00l\00o\00r\00 \00=\00 \00u\00_\00c\00o\00l\00o\00r\00;\00\n\00}\00\n\00\00\00\00\00\00\00")
- (data (i32.const 14732) "\ac\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\90\00\00\00;\00\n\00i\00n\00 \00v\00e\00c\004\00 \00a\00_\00c\00o\00l\00o\00r\00;\00\n\00\n\00o\00u\00t\00 \00v\00e\00c\004\00 \00v\00_\00c\00o\00l\00o\00r\00;\00\n\00\n\00v\00o\00i\00d\00 \00m\00a\00i\00n\00(\00v\00o\00i\00d\00)\00 \00{\00\n\00\t\00g\00l\00_\00P\00o\00s\00i\00t\00i\00o\00n\00 \00=\00 \00\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 14908) "L\00\00\00\00\00\00\00\00\00\00\00\01\00\00\000\00\00\00;\00\n\00\t\00v\00_\00c\00o\00l\00o\00r\00 \00=\00 \00a\00_\00c\00o\00l\00o\00r\00;\00\n\00}\00\n\00\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 14988) "<\00\00\00\00\00\00\00\00\00\00\00\1c\00\00\00,\00\00\00`\15\00\00\00\00\00\00\a0\15\00\00\00\00\00\00\e0$\00\00\00\00\00\00\a09\00\00\00\00\00\00\c0%\00\00\00\00\00\00P:\00\00")
- (data (i32.const 15052) "<\01\00\00\00\00\00\00\00\00\00\00\01\00\00\00,\01\00\00#\00v\00e\00r\00s\00i\00o\00n\00 \003\000\000\00 \00e\00s\00\n\00p\00r\00e\00c\00i\00s\00i\00o\00n\00 \00m\00e\00d\00i\00u\00m\00p\00 \00f\00l\00o\00a\00t\00;\00\n\00\n\00u\00n\00i\00f\00o\00r\00m\00 \00v\00e\00c\004\00 \00u\00_\00c\00o\00l\00o\00r\00;\00\n\00i\00n\00 \00v\00e\00c\004\00 \00v\00_\00c\00o\00l\00o\00r\00;\00\n\00o\00u\00t\00 \00v\00e\00c\004\00 \00o\00_\00c\00o\00l\00o\00r\00;\00\n\00\n\00v\00o\00i\00d\00 \00m\00a\00i\00n\00(\00v\00o\00i\00d\00)\00 \00{\00\n\00\t\00o\00_\00c\00o\00l\00o\00r\00 \00=\00 \00u\00_\00c\00o\00l\00o\00r\00 \00*\00 \00v\00_\00c\00o\00l\00o\00r\00;\00\n\00}\00\n\00")
- (data (i32.const 15372) ",\01\00\00\00\00\00\00\00\00\00\00\01\00\00\00\1a\01\00\00#\00v\00e\00r\00s\00i\00o\00n\00 \003\000\000\00 \00e\00s\00\n\00\n\00i\00n\00 \00v\00e\00c\004\00 \00a\00_\00p\00o\00s\00i\00t\00i\00o\00n\00;\00\n\00i\00n\00 \00v\00e\00c\002\00 \00a\00_\00t\00e\00x\00c\00o\00o\00r\00d\00;\00\n\00\n\00o\00u\00t\00 \00v\00e\00c\002\00 \00v\00_\00u\00v\00;\00\n\00\n\00v\00o\00i\00d\00 \00m\00a\00i\00n\00(\00v\00o\00i\00d\00)\00 \00{\00\n\00\t\00g\00l\00_\00P\00o\00s\00i\00t\00i\00o\00n\00 \00=\00 \00a\00_\00p\00o\00s\00i\00t\00i\00o\00n\00;\00\n\00\t\00v\00_\00u\00v\00 \00=\00 \00a\00_\00t\00e\00x\00c\00o\00o\00r\00d\00;\00\n\00}\00\n\00\00\00")
- (data (i32.const 15676) "\0c\01\00\00\00\00\00\00\00\00\00\00\01\00\00\00\f8\00\00\00#\00v\00e\00r\00s\00i\00o\00n\00 \003\000\000\00 \00e\00s\00\n\00p\00r\00e\00c\00i\00s\00i\00o\00n\00 \00m\00e\00d\00i\00u\00m\00p\00 \00f\00l\00o\00a\00t\00;\00\n\00o\00u\00t\00 \00v\00e\00c\004\00 \00o\00_\00c\00o\00l\00o\00r\00;\00\n\00i\00n\00 \00v\00e\00c\002\00 \00v\00_\00u\00v\00;\00\n\00\n\00v\00o\00i\00d\00 \00m\00a\00i\00n\00(\00v\00o\00i\00d\00)\00 \00{\00\n\00\t\00o\00_\00c\00o\00l\00o\00r\00 \00=\00 \00v\00e\00c\004\00(\00v\00_\00u\00v\00.\00x\00y\00,\001\00,\001\00)\00;\00\n\00}\00\n\00\00\00\00\00")
- (data (i32.const 15948) ",\00\00\00\00\00\00\00\00\00\00\00.\00\00\00\10\00\00\00\00\00\00\ff\ff\00\00\ff\00\ff\00\ff\ff\ff\00\ff\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 15996) ",\00\00\00\00\00\00\00\00\00\00\00.\00\00\00\10\00\00\00\00\00\ff\ff\ff\00\ff\ff\00\ff\ff\ff\ff\ff\ff\ff\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 16044) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 16076) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 16112) "\be\f3\f8y\eca\f6?\190\96[\c6\fe\de\bf=\88\afJ\edq\f5?\a4\fc\d42h\0b\db\bf\b0\10\f0\f09\95\f4?{\b7\1f\n\8bA\d7\bf\85\03\b8\b0\95\c9\f3?{\cfm\1a\e9\9d\d3\bf\a5d\88\0c\19\0d\f3?1\b6\f2\f3\9b\1d\d0\bf\a0\8e\0b{\"^\f2?\f0z;\1b\1d|\c9\bf?4\1aJJ\bb\f1?\9f<\af\93\e3\f9\c2\bf\ba\e5\8a\f0X#\f1?\\\8dx\bf\cb`\b9\bf\a7\00\99A?\95\f0?\ce_G\b6\9do\aa\bf\00\00\00\00\00\00\f0?\00\00\00\00\00\00\00\00\acG\9a\fd\8c`\ee?=\f5$\9f\ca8\b3?\a0j\02\1f\b3\a4\ec?\ba\918T\a9v\c4?\e6\fcjW6 \eb?\d2\e4\c4J\0b\84\ce?-\aa\a1c\d1\c2\e9?\1ce\c6\f0E\06\d4?\edAx\03\e6\86\e8?\f8\9f\1b,\9c\8e\d8?bHS\f5\dcg\e7?\cc{\b1N\a4\e0\dc?")
- (data (i32.const 16368) "\00\00\00\00\00\00\f0?t\85\15\d3\b0\d9\ef?\0f\89\f9lX\b5\ef?Q[\12\d0\01\93\ef?{Q}<\b8r\ef?\aa\b9h1\87T\ef?8bunz8\ef?\e1\de\1f\f5\9d\1e\ef?\15\b71\n\fe\06\ef?\cb\a9:7\a7\f1\ee?\"4\12L\a6\de\ee?-\89a`\08\ce\ee?\'*6\d5\da\bf\ee?\82O\9dV+\b4\ee?)TH\dd\07\ab\ee?\85U:\b0~\a4\ee?\cd;\7ff\9e\a0\ee?t_\ec\e8u\9f\ee?\87\01\ebs\14\a1\ee?\13\ceL\99\89\a5\ee?\db\a0*B\e5\ac\ee?\e5\c5\cd\b07\b7\ee?\90\f0\a3\82\91\c4\ee?]%>\b2\03\d5\ee?\ad\d3Z\99\9f\e8\ee?G^\fb\f2v\ff\ee?\9cR\85\dd\9b\19\ef?i\90\ef\dc 7\ef?\87\a4\fb\dc\18X\ef?_\9b{3\97|\ef?\da\90\a4\a2\af\a4\ef?@En[v\d0\ef?")
- (data (i32.const 16636) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 16668) "\ac\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\94\00\00\00s\00y\00s\00t\00e\00m\00s\00 \00w\00a\00s\00 \00c\00r\00e\00a\00t\00e\00d\00 \00w\00i\00t\00h\00 \00a\00 \00d\00i\00f\00f\00e\00r\00e\00n\00t\00 \00w\00o\00r\00l\00d\00,\00 \00p\00l\00e\00a\00s\00e\00 \00c\00a\00l\00l\00 \00w\00o\00r\00l\00d\00.\00b\00i\00n\00d\00(\00)\00 \00f\00i\00r\00s\00t\00\00\00\00\00\00\00\00\00")
- (data (i32.const 16844) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00(\00\00\00s\00r\00c\00-\00a\00s\00/\00b\00a\00s\00e\00/\00W\00o\00r\00l\00d\00.\00t\00s\00\00\00\00\00")
- (data (i32.const 16908) "\1c\00\00\00\00\00\00\00\00\00\00\00\85\00\00\00\08\00\00\004\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 16940) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\04\00\00\00^\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 16972) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\04\00\00\00^\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 17004) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 17036) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 17068) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00$\00\00\00K\00e\00y\00 \00d\00o\00e\00s\00 \00n\00o\00t\00 \00e\00x\00i\00s\00t\00\00\00\00\00\00\00\00\00")
- (data (i32.const 17132) ",\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\16\00\00\00~\00l\00i\00b\00/\00m\00a\00p\00.\00t\00s\00\00\00\00\00\00\00")
- (data (i32.const 17180) "l\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00N\00\00\00k\00e\00e\00p\00 \00w\00o\00r\00l\00d\00 \00p\00o\00s\00i\00t\00i\00o\00n\00 \00n\00o\00t\00 \00y\00e\00t\00 \00i\00m\00p\00l\00e\00m\00e\00n\00t\00e\00d\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 17292) "L\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00<\00\00\00s\00r\00c\00-\00a\00s\00/\00c\00o\00m\00p\00o\00n\00e\00n\00t\00s\00/\00T\00r\00a\00n\00s\00f\00o\00r\00m\00.\00t\00s\00")
- (data (i32.const 17372) "\bc\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\a6\00\00\00c\00o\00m\00p\00o\00n\00e\00n\00t\00 \00w\00a\00s\00 \00i\00n\00s\00t\00a\00n\00t\00i\00a\00t\00e\00d\00 \00w\00i\00t\00h\00 \00a\00 \00d\00i\00f\00f\00e\00r\00e\00n\00t\00 \00e\00n\00t\00i\00t\00y\00,\00 \00p\00l\00e\00a\00s\00e\00 \00c\00a\00l\00l\00 \00e\00n\00t\00i\00t\00y\00.\00b\00i\00n\00d\00(\00)\00 \00f\00i\00r\00s\00t\00\00\00\00\00\00\00")
- (data (i32.const 17564) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00*\00\00\00s\00r\00c\00-\00a\00s\00/\00b\00a\00s\00e\00/\00E\00n\00t\00i\00t\00y\00.\00t\00s\00\00\00")
- (data (i32.const 17628) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\"\00\00\00u\00n\00e\00x\00p\00e\00c\00t\00e\00d\00 \00u\00p\00c\00a\00s\00t\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 17692) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 17724) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 17756) "\1c\00\00\00\00\00\00\00\00\00\00\00\86\00\00\00\08\00\00\005\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 17788) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\04\00\00\00k\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 17820) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\04\00\00\00f\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 17852) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 17884) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 17916) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 17948) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 17980) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 18012) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00*\00\00\00O\00b\00j\00e\00c\00t\00 \00a\00l\00r\00e\00a\00d\00y\00 \00p\00i\00n\00n\00e\00d\00\00\00")
- (data (i32.const 18076) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00(\00\00\00O\00b\00j\00e\00c\00t\00 \00i\00s\00 \00n\00o\00t\00 \00p\00i\00n\00n\00e\00d\00\00\00\00\00")
- (data (i32.const 18140) "\\\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00J\00\00\00s\00r\00c\00-\00a\00s\00/\00c\00o\00m\00p\00o\00n\00e\00n\00t\00s\00/\00D\00i\00r\00e\00c\00t\00i\00o\00n\00a\00l\00L\00i\00g\00h\00t\00.\00t\00s\00\00\00")
- (data (i32.const 18236) "L\00\00\00\00\00\00\00\00\00\00\00\01\00\00\006\00\00\00s\00r\00c\00-\00a\00s\00/\00c\00o\00m\00p\00o\00n\00e\00n\00t\00s\00/\00C\00a\00m\00e\00r\00a\00.\00t\00s\00\00\00\00\00\00\00")
- (data (i32.const 18316) "L\00\00\00\00\00\00\00\00\00\00\00\01\00\00\002\00\00\00s\00r\00c\00-\00a\00s\00/\00c\00o\00m\00p\00o\00n\00e\00n\00t\00s\00/\00M\00e\00s\00h\00.\00t\00s\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 18396) "l\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00P\00\00\00s\00r\00c\00-\00a\00s\00/\00r\00e\00n\00d\00e\00r\00i\00n\00g\00/\00s\00y\00s\00t\00e\00m\00s\00/\00R\00e\00n\00d\00e\00r\00S\00y\00s\00t\00e\00m\00.\00t\00s\00\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 18508) "L\00\00\00\00\00\00\00\00\00\00\00\01\00\00\002\00\00\00U\00n\00i\00f\00o\00r\00m\00 \00n\00o\00t\00 \00i\00m\00p\00l\00e\00m\00e\00n\00t\00e\00d\00:\00 \00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 18588) "L\00\00\00\00\00\00\00\00\00\00\00\01\00\00\002\00\00\00E\00r\00r\00o\00r\00 \00c\00o\00m\00p\00i\00l\00i\00n\00g\00 \00s\00h\00a\00d\00e\00r\00 \00:\00 \00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 18668) "l\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00T\00\00\00s\00r\00c\00-\00a\00s\00/\00W\00e\00b\00G\00L\002\00/\00s\00y\00s\00t\00e\00m\00s\00/\00W\00e\00b\00G\00L\00S\00h\00a\00d\00e\00r\00S\00y\00s\00t\00e\00m\00.\00t\00s\00\00\00\00\00\00\00\00\00")
- (data (i32.const 18780) "\\\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00>\00\00\00E\00r\00r\00o\00r\00 \00c\00r\00e\00a\00t\00i\00n\00g\00 \00s\00h\00a\00d\00e\00r\00 \00p\00r\00o\00g\00r\00a\00m\00.\00\n\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 18876) "L\00\00\00\00\00\00\00\00\00\00\00\01\00\00\002\00\00\00E\00r\00r\00o\00r\00 \00v\00a\00l\00i\00d\00a\00t\00i\00n\00g\00 \00p\00r\00o\00g\00r\00a\00m\00\n\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 18956) "l\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00X\00\00\00s\00r\00c\00-\00a\00s\00/\00W\00e\00b\00G\00L\002\00/\00s\00y\00s\00t\00e\00m\00s\00/\00W\00e\00b\00G\00L\00G\00e\00o\00m\00e\00t\00r\00y\00S\00y\00s\00t\00e\00m\00.\00t\00s\00\00\00\00\00")
- (data (i32.const 19068) "\1c\00\00\00\00\00\00\00\00\00\00\00\8e\00\00\00\08\00\00\006\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 19100) ",\01\00\00\00\00\00\00\00\00\00\00\01\00\00\00\10\01\00\00G\00e\00o\00m\00e\00t\00r\00y\00 \00G\00l\00u\00e\00 \00-\00 \00S\00h\00a\00d\00e\00r\00 \00u\00s\00e\00s\00 \00T\00r\00a\00n\00s\00f\00o\00r\00m\00 \00F\00e\00e\00d\00b\00a\00c\00k\00 \00b\00u\00t\00 \00n\00o\00 \00a\00t\00t\00r\00i\00b\00u\00t\00e\00s\00 \00f\00o\00u\00n\00d\00 \00m\00a\00r\00k\00e\00d\00 \00a\00s\00 \00v\00a\00r\00y\00i\00n\00g\00.\00 \00D\00i\00d\00 \00y\00o\00u\00 \00f\00o\00r\00 \00g\00e\00t\00 \00t\00o\00 \00n\00e\00w\00 \00A\00t\00t\00r\00i\00b\00u\00t\00e\00(\00)\00.\00a\00s\00V\00a\00r\00y\00i\00n\00g\00(\00)\00\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 19404) "\1c\00\00\00\00\00\00\00\00\00\00\00\8e\00\00\00\08\00\00\007\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 19436) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 19468) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 19500) "\\\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00D\00\00\00M\00a\00x\00i\00m\00u\00m\00 \00t\00e\00x\00t\00u\00r\00e\00 \00c\00o\00u\00n\00t\00 \00r\00e\00a\00c\00h\00e\00d\00 \00-\00 \003\002\00\00\00\00\00\00\00\00\00")
- (data (i32.const 19596) "l\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00X\00\00\00s\00r\00c\00-\00a\00s\00/\00W\00e\00b\00G\00L\002\00/\00s\00y\00s\00t\00e\00m\00s\00/\00W\00e\00b\00G\00L\00M\00a\00t\00e\00r\00i\00a\00l\00S\00y\00s\00t\00e\00m\00.\00t\00s\00\00\00\00\00")
- (data (i32.const 19708) "|\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00d\00\00\00t\00o\00S\00t\00r\00i\00n\00g\00(\00)\00 \00r\00a\00d\00i\00x\00 \00a\00r\00g\00u\00m\00e\00n\00t\00 \00m\00u\00s\00t\00 \00b\00e\00 \00b\00e\00t\00w\00e\00e\00n\00 \002\00 \00a\00n\00d\00 \003\006\00\00\00\00\00\00\00\00\00")
- (data (i32.const 19836) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00&\00\00\00~\00l\00i\00b\00/\00u\00t\00i\00l\00/\00n\00u\00m\00b\00e\00r\00.\00t\00s\00\00\00\00\00\00\00")
- (data (i32.const 19900) "\1c\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\02\00\00\000\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 19932) "0\000\000\001\000\002\000\003\000\004\000\005\000\006\000\007\000\008\000\009\001\000\001\001\001\002\001\003\001\004\001\005\001\006\001\007\001\008\001\009\002\000\002\001\002\002\002\003\002\004\002\005\002\006\002\007\002\008\002\009\003\000\003\001\003\002\003\003\003\004\003\005\003\006\003\007\003\008\003\009\004\000\004\001\004\002\004\003\004\004\004\005\004\006\004\007\004\008\004\009\005\000\005\001\005\002\005\003\005\004\005\005\005\006\005\007\005\008\005\009\006\000\006\001\006\002\006\003\006\004\006\005\006\006\006\007\006\008\006\009\007\000\007\001\007\002\007\003\007\004\007\005\007\006\007\007\007\008\007\009\008\000\008\001\008\002\008\003\008\004\008\005\008\006\008\007\008\008\008\009\009\000\009\001\009\002\009\003\009\004\009\005\009\006\009\007\009\008\009\009\00")
- (data (i32.const 20332) "\1c\04\00\00\00\00\00\00\00\00\00\00\01\00\00\00\00\04\00\000\000\000\001\000\002\000\003\000\004\000\005\000\006\000\007\000\008\000\009\000\00a\000\00b\000\00c\000\00d\000\00e\000\00f\001\000\001\001\001\002\001\003\001\004\001\005\001\006\001\007\001\008\001\009\001\00a\001\00b\001\00c\001\00d\001\00e\001\00f\002\000\002\001\002\002\002\003\002\004\002\005\002\006\002\007\002\008\002\009\002\00a\002\00b\002\00c\002\00d\002\00e\002\00f\003\000\003\001\003\002\003\003\003\004\003\005\003\006\003\007\003\008\003\009\003\00a\003\00b\003\00c\003\00d\003\00e\003\00f\004\000\004\001\004\002\004\003\004\004\004\005\004\006\004\007\004\008\004\009\004\00a\004\00b\004\00c\004\00d\004\00e\004\00f\005\000\005\001\005\002\005\003\005\004\005\005\005\006\005\007\005\008\005\009\005\00a\005\00b\005\00c\005\00d\005\00e\005\00f\006\000\006\001\006\002\006\003\006\004\006\005\006\006\006\007\006\008\006\009\006\00a\006\00b\006\00c\006\00d\006\00e\006\00f\007\000\007\001\007\002\007\003\007\004\007\005\007\006\007\007\007\008\007\009\007\00a\007\00b\007\00c\007\00d\007\00e\007\00f\008\000\008\001\008\002\008\003\008\004\008\005\008\006\008\007\008\008\008\009\008\00a\008\00b\008\00c\008\00d\008\00e\008\00f\009\000\009\001\009\002\009\003\009\004\009\005\009\006\009\007\009\008\009\009\009\00a\009\00b\009\00c\009\00d\009\00e\009\00f\00a\000\00a\001\00a\002\00a\003\00a\004\00a\005\00a\006\00a\007\00a\008\00a\009\00a\00a\00a\00b\00a\00c\00a\00d\00a\00e\00a\00f\00b\000\00b\001\00b\002\00b\003\00b\004\00b\005\00b\006\00b\007\00b\008\00b\009\00b\00a\00b\00b\00b\00c\00b\00d\00b\00e\00b\00f\00c\000\00c\001\00c\002\00c\003\00c\004\00c\005\00c\006\00c\007\00c\008\00c\009\00c\00a\00c\00b\00c\00c\00c\00d\00c\00e\00c\00f\00d\000\00d\001\00d\002\00d\003\00d\004\00d\005\00d\006\00d\007\00d\008\00d\009\00d\00a\00d\00b\00d\00c\00d\00d\00d\00e\00d\00f\00e\000\00e\001\00e\002\00e\003\00e\004\00e\005\00e\006\00e\007\00e\008\00e\009\00e\00a\00e\00b\00e\00c\00e\00d\00e\00e\00e\00f\00f\000\00f\001\00f\002\00f\003\00f\004\00f\005\00f\006\00f\007\00f\008\00f\009\00f\00a\00f\00b\00f\00c\00f\00d\00f\00e\00f\00f\00\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 21388) "\\\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00H\00\00\000\001\002\003\004\005\006\007\008\009\00a\00b\00c\00d\00e\00f\00g\00h\00i\00j\00k\00l\00m\00n\00o\00p\00q\00r\00s\00t\00u\00v\00w\00x\00y\00z\00\00\00\00\00")
- (data (i32.const 21484) "L\00\00\00\00\00\00\00\00\00\00\00\01\00\00\008\00\00\00U\00n\00i\00m\00p\00l\00e\00m\00e\00n\00t\00e\00d\00 \00u\00n\00i\00f\00o\00r\00m\00 \00t\00y\00p\00e\00:\00 \00\00\00\00\00")
- (data (i32.const 21564) "\8c\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00n\00\00\00s\00r\00c\00-\00a\00s\00/\00W\00e\00b\00G\00L\002\00/\00s\00y\00s\00t\00e\00m\00s\00/\00W\00e\00b\00G\00L\00U\00n\00i\00f\00o\00r\00m\00B\00u\00f\00f\00e\00r\00O\00b\00j\00e\00c\00t\00S\00y\00s\00t\00e\00m\00.\00t\00s\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 21712) "\9c\00\00\00 \00\00\00\00\00\00\00 \00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\01\19\00\00\02\00\00\00\02\19\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00A\00\00\00\02\00\00\00\04A\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\02A\00\00\00\00\00\00\10A\82\00\00\00\00\00\02\t\00\00\00\00\00\00\00\00\00\00#\00\00\00\00\00\00\00\1e\00\00\00\00\00\00\00%\00\00\00\00\00\00\00&\00\00\00\00\00\00\00\'\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\10A\82\00\00\00\00\00\02A\00\00\00\00\00\00\81\00\00\00\02\00\00\00$\19\00\00\00\00\00\00\a4\00\00\00\00\00\00\00d\00\00\00\00\00\00\00\02A\00\00\00\00\00\00B\00\00\00\00\00\00\00\02A\00\00\00\00\00\00\00\00\00\003\00\00\00\00\00\00\00(\00\00\00\00\00\00\005\00\00\00\00\00\00\00(\00\00\00\00\00\00\00$\00\00\00\82\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\02A\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00<\00\00\00\00\00\00\00\00\00\00\00\02A\00\00\00\00\00\00\00\00\00\00A\00\00\00\00\00\00\00@\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\02A\00\00\00\00\00\00 \00\00\00\00\00\00\00\00\00\00\00E\00\00\00\00\00\00\00F\00\00\00 \00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00F\00\00\00\10A\02\00\00\00\00\00\02A\00\00\00\00\00\00\10A\02\00\00\00\00\00\10A\02\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\02\01\00\00\00\00\00\00\08A\00\00\00\00\00\00\02A\00\00\00\00\00\00\10A\02\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00E\00\00\00\02A\00\00\00\00\00\00\10A\02\00\00\00\00\00\00\00\00\00I\00\00\00\02A\00\00\00\00\00\00\00\00\00\00E\00\00\00\00\00\00\00\00\00\00\00\08\t\00\00\00\00\00\00\00\00\00\00U\00\00\00\00\00\00\00I\00\00\00\08A\00\00\00\00\00\00\00\00\00\00O\00\00\00\02A\00\00\00\00\00\00\00\00\00\00E\00\00\00 \00\00\00F\00\00\00\00\00\00\00e\00\00\00\00\00\00\00U\00\00\00\00\00\00\00g\00\00\00\00\00\00\00X\00\00\00 \00\00\00\00\00\00\00\00\00\00\00O\00\00\00\02A\00\00\00\00\00\00\00\00\00\00g\00\00\00\00\00\00\00\00\00\00\00\02A\00\00\00\00\00\00\02A\00\00\00\00\00\00 \00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00 \00\00\00\00\00\00\00\10A\82\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\02A\00\00\00\00\00\00\10A\82\00\00\00\00\00\10A\82\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00 \00\00\00\00\00\00\00\02A\00\00\00\00\00\00\00\00\00\00\00\00\00\00\02A\00\00\00\00\00\00\10A\82\00\00\00\00\00\00\00\00\00o\00\00\00\10A\82\00\00\00\00\00\00\00\00\00\00\00\00\00\10A\82\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00g\00\00\00\00\00\00\00\8a\00\00\00\00\00\00\00l\00\00\00\02A\00\00\00\00\00\00\00\00\00\00\8d\00\00\00 \00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\90\00\00\00\00\00\00\00\1e\00\00\00\00\00\00\00\93\00\00\00 \00\00\00\00\00\00\00\00\00\00\00\1e\00\00\00 \00\00\00|\00\00\00\00\00\00\00\96\00\00\00\00\00\00\00|\00\00\00\00\00\00\00\96\00\00\00\00\00\00\00\96\00\00\00\00\00\00\00\96\00\00\00\00\00\00\00\96\00\00\00 \00\00\00\00\00\00\00")
+ (data (i32.const 8748) "\bc\02\00\00\00\00\00\00\00\00\00\00\01\00\00\00\a0\02\00\00[\00i\00n\00d\00e\00x\00]\00;\00\n\00\t\00/\00/\00 \00r\00e\00t\00u\00r\00n\00 \00v\00e\00c\003\00(\000\00.\00,\000\00.\00,\000\00.\00)\00;\00\n\00}\00\n\00\n\00v\00e\00c\003\00 \00c\00a\00l\00c\00u\00l\00a\00t\00e\00L\00i\00g\00h\00t\00i\00n\00g\00(\00v\00e\00c\003\00 \00d\00i\00f\00f\00u\00s\00e\00,\00v\00e\00c\003\00 \00n\00o\00r\00m\00a\00l\00)\00{\00\n\00\t\00n\00o\00r\00m\00a\00l\00 \00=\00 \00n\00o\00r\00m\00a\00l\00i\00z\00e\00(\00n\00o\00r\00m\00a\00l\00)\00;\00\n\00\t\00v\00e\00c\003\00 \00o\00u\00t\00p\00u\00t\00C\00o\00l\00o\00r\00 \00=\00 \00v\00e\00c\003\00(\000\00.\00,\000\00.\00,\000\00.\00)\00;\00\n\00\t\00/\00/\00T\00O\00D\00O\00 \00o\00n\00l\00y\00 \00i\00t\00e\00r\00a\00t\00e\00 \00i\00n\00s\00t\00a\00n\00t\00i\00a\00t\00e\00d\00 \00l\00i\00g\00h\00t\00s\00\n\00\t\00f\00o\00r\00(\00i\00n\00t\00 \00i\00 \00=\00 \000\00;\00 \00i\00 \00<\00 \00N\00U\00M\00_\00L\00I\00G\00H\00T\00S\00;\00 \00i\00+\00+\00)\00{\00\n\00\t\00\t\00o\00u\00t\00p\00u\00t\00C\00o\00l\00o\00r\00 \00+\00=\00 \00c\00a\00l\00c\00u\00l\00a\00t\00e\00D\00i\00r\00e\00c\00t\00i\00o\00n\00a\00l\00L\00i\00g\00h\00t\00A\00t\00I\00n\00d\00e\00x\00(\00d\00i\00f\00f\00u\00s\00e\00,\00n\00o\00r\00m\00a\00l\00,\00i\00)\00;\00\n\00\t\00}\00\n\00\t\00r\00e\00t\00u\00r\00n\00 \00o\00u\00t\00p\00u\00t\00C\00o\00l\00o\00r\00;\00\n\00}\00\n\00\n\00#\00e\00n\00d\00i\00f\00\n\00\00\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 9452) ",\00\00\00\00\00\00\00\00\00\00\00\1c\00\00\00\14\00\00\00p \00\00\00\00\00\00\b0!\00\00\00\00\00\00@\"\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 9500) ",\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\14\00\00\00\n\00\n\00i\00n\00 \00v\00e\00c\004\00 \00\00\00\00\00\00\00\00\00")
+ (data (i32.const 9548) "\ac\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\9a\00\00\00;\00\n\00\n\00o\00u\00t\00 \00v\00e\00c\003\00 \00v\00_\00n\00o\00r\00m\00a\00l\00;\00\n\00o\00u\00t\00 \00v\00e\00c\002\00 \00v\00_\00t\00e\00x\00c\00o\00o\00r\00d\00;\00\n\00\n\00v\00o\00i\00d\00 \00m\00a\00i\00n\00(\00v\00o\00i\00d\00)\00 \00{\00\n\00\t\00g\00l\00_\00P\00o\00s\00i\00t\00i\00o\00n\00 \00=\00 \00\00\00")
+ (data (i32.const 9724) "\1c\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\06\00\00\00 \00*\00 \00\00\00\00\00\00\00")
+ (data (i32.const 9756) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00&\00\00\00;\00\n\00\t\00v\00_\00n\00o\00r\00m\00a\00l\00 \00=\00 \00m\00a\00t\003\00(\00\00\00\00\00\00\00")
+ (data (i32.const 9820) "\1c\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\08\00\00\00)\00 \00*\00 \00\00\00\00\00")
+ (data (i32.const 9852) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00 \00\00\00;\00\n\00\t\00v\00_\00t\00e\00x\00c\00o\00o\00r\00d\00 \00=\00 \00\00\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 9916) "\1c\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\08\00\00\00;\00\n\00}\00\n\00\00\00\00\00")
+ (data (i32.const 9948) "l\00\00\00\00\00\00\00\00\00\00\00\1c\00\00\00T\00\00\00`\15\00\00\00\00\00\00\a0\15\00\00\00\00\00\000%\00\00\00\00\00\00 \16\00\00\00\00\00\00P\16\00\00\00\00\00\00`%\00\00\00\00\00\00\10&\00\00\00\00\00\000&\00\00\00\00\00\00p&\00\00\00\00\00\00\90&\00\00\00\00\00\00\d0&\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 10060) "l\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00R\00\00\00#\00v\00e\00r\00s\00i\00o\00n\00 \003\000\000\00 \00e\00s\00\n\00p\00r\00e\00c\00i\00s\00i\00o\00n\00 \00m\00e\00d\00i\00u\00m\00p\00 \00f\00l\00o\00a\00t\00;\00\n\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 10172) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\1e\00\00\00\n\00\n\00u\00n\00i\00f\00o\00r\00m\00 \00v\00e\00c\004\00 \00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 10236) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00(\00\00\00;\00\n\00u\00n\00i\00f\00o\00r\00m\00 \00s\00a\00m\00p\00l\00e\00r\002\00D\00 \00\00\00\00\00")
+ (data (i32.const 10300) "\1c\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\06\00\00\00;\00\n\00\n\00\00\00\00\00\00\00")
+ (data (i32.const 10332) "\1c\01\00\00\00\00\00\00\00\00\00\00\01\00\00\00\n\01\00\00\n\00\n\00i\00n\00 \00v\00e\00c\003\00 \00v\00_\00n\00o\00r\00m\00a\00l\00;\00\n\00i\00n\00 \00v\00e\00c\002\00 \00v\00_\00t\00e\00x\00c\00o\00o\00r\00d\00;\00\n\00o\00u\00t\00 \00v\00e\00c\004\00 \00o\00_\00c\00o\00l\00o\00r\00;\00\n\00\n\00v\00o\00i\00d\00 \00m\00a\00i\00n\00(\00v\00o\00i\00d\00)\00 \00{\00\n\00\t\00/\00/\00T\00O\00D\00O\00 \00i\00n\00p\00u\00t\00 \00c\00o\00l\00o\00r\00 \00f\00o\00r\00 \00l\00i\00g\00h\00t\00i\00n\00g\00 \00f\00i\00r\00s\00t\00\n\00\t\00v\00e\00c\004\00 \00d\00i\00f\00f\00u\00s\00e\00 \00=\00 \00(\00\00\00")
+ (data (i32.const 10620) ",\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\16\00\00\00 \00*\00 \00t\00e\00x\00t\00u\00r\00e\00(\00\00\00\00\00\00\00")
+ (data (i32.const 10668) "\ec\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\d4\00\00\00,\00 \00v\00_\00t\00e\00x\00c\00o\00o\00r\00d\00)\00)\00;\00\n\00\t\00v\00e\00c\003\00 \00o\00u\00t\00p\00u\00t\00C\00o\00l\00o\00r\00 \00=\00 \00c\00a\00l\00c\00u\00l\00a\00t\00e\00L\00i\00g\00h\00t\00i\00n\00g\00(\00d\00i\00f\00f\00u\00s\00e\00.\00x\00y\00z\00,\00 \00v\00_\00n\00o\00r\00m\00a\00l\00)\00;\00\n\00\t\00o\00_\00c\00o\00l\00o\00r\00 \00=\00 \00v\00e\00c\004\00(\00o\00u\00t\00p\00u\00t\00C\00o\00l\00o\00r\00,\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 10908) ",\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\0e\00\00\00.\00a\00)\00;\00\n\00}\00\n\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 10956) "\\\00\00\00\00\00\00\00\00\00\00\00\1c\00\00\00D\00\00\00`\'\00\00\00\00\00\00\a0\15\00\00\00\00\00\00\d0\'\00\00\00\00\00\00\10(\00\00\00\00\00\00P(\00\00\00\00\00\00p(\00\00\00\00\00\00\90)\00\00\00\00\00\00\c0)\00\00\00\00\00\00\b0*\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 11052) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\"\00\00\00#\00v\00e\00r\00s\00i\00o\00n\00 \003\000\000\00 \00e\00s\00\n\00\n\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 11116) "\ac\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\8e\00\00\00;\00\n\00o\00u\00t\00 \00v\00e\00c\002\00 \00v\00_\00u\00v\00;\00\n\00o\00u\00t\00 \00f\00l\00o\00a\00t\00 \00v\00_\00c\00o\00l\00;\00\n\00\n\00v\00o\00i\00d\00 \00m\00a\00i\00n\00(\00)\00 \00{\00\n\00\t\00v\00e\00c\004\00 \00m\00o\00d\00e\00l\00P\00o\00s\00 \00=\00 \00v\00e\00c\004\00(\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 11292) ",\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\14\00\00\00[\003\00]\00.\00x\00y\00z\00 \00+\00 \00\00\00\00\00\00\00\00\00")
+ (data (i32.const 11340) "L\00\00\00\00\00\00\00\00\00\00\00\01\00\00\004\00\00\00,\001\00)\00;\00\n\00\t\00v\00e\00c\004\00 \00m\00o\00d\00e\00l\00V\00i\00e\00w\00P\00o\00s\00 \00=\00 \00\00\00\00\00\00\00\00\00")
+ (data (i32.const 11420) "\\\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00D\00\00\00 \00*\00 \00m\00o\00d\00e\00l\00P\00o\00s\00;\00\n\00\t\00v\00e\00c\003\00 \00v\00e\00r\00t\00M\00o\00d\00e\00l\00P\00o\00s\00 \00=\00 \00\00\00\00\00\00\00\00\00")
+ (data (i32.const 11516) "\ac\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\94\00\00\00;\00\n\00\t\00v\00e\00c\004\00 \00v\00e\00r\00t\00P\00o\00s\00 \00=\00 \00v\00e\00c\004\00(\00m\00o\00d\00e\00l\00V\00i\00e\00w\00P\00o\00s\00.\00x\00y\00z\00 \00+\00 \00v\00e\00r\00t\00M\00o\00d\00e\00l\00P\00o\00s\00,\001\00)\00;\00\n\00\t\00g\00l\00_\00P\00o\00s\00i\00t\00i\00o\00n\00 \00=\00 \00\00\00\00\00\00\00\00\00")
+ (data (i32.const 11692) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00*\00\00\00 \00*\00 \00v\00e\00r\00t\00P\00o\00s\00;\00\n\00\t\00v\00_\00u\00v\00 \00=\00 \00\t\00\00\00")
+ (data (i32.const 11756) "\9c\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\80\00\00\00;\00\n\00\t\00v\00_\00c\00o\00l\00 \00=\00 \00r\00a\00n\00d\00(\00v\00e\00c\002\00(\00g\00l\00_\00I\00n\00s\00t\00a\00n\00c\00e\00I\00D\00,\000\00)\00)\00;\00\n\00\t\00/\00/\00 \00v\00e\00c\004\00 \00v\00e\00r\00t\00P\00o\00s\00 \00=\00 \00v\00e\00c\004\00(\00\00\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 11916) "\1c\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\06\00\00\00 \00+\00 \00\00\00\00\00\00\00")
+ (data (i32.const 11948) "l\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00T\00\00\00,\001\00)\00;\00\n\00\t\00/\00/\00 \00g\00l\00_\00P\00o\00s\00i\00t\00i\00o\00n\00 \00=\00 \00u\00_\00m\00v\00p\00 \00*\00 \00v\00e\00r\00t\00P\00o\00s\00;\00\n\00}\00\n\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 12060) "\8c\00\00\00\00\00\00\00\00\00\00\00\1c\00\00\00t\00\00\00@+\00\00\00\00\00\00\a0\15\00\00\00\00\00\00\a0\15\00\00\00\00\00\00\c0\15\00\00\00\00\00\00 \16\00\00\00\00\00\00P\16\00\00\00\00\00\00\80+\00\00\00\00\00\000,\00\00\00\00\00\00`,\00\00\00\00\00\00\b0,\00\00\00\00\00\00\10-\00\00\00\00\00\00\c0-\00\00\00\00\00\00\00.\00\00\00\00\00\00\a0.\00\00\00\00\00\00\c0.\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 12204) "\cc\01\00\00\00\00\00\00\00\00\00\00\01\00\00\00\b6\01\00\00#\00v\00e\00r\00s\00i\00o\00n\00 \003\000\000\00 \00e\00s\00\n\00p\00r\00e\00c\00i\00s\00i\00o\00n\00 \00m\00e\00d\00i\00u\00m\00p\00 \00f\00l\00o\00a\00t\00;\00\n\00\n\00\n\00i\00n\00 \00v\00e\00c\002\00 \00v\00_\00u\00v\00;\00\n\00i\00n\00 \00f\00l\00o\00a\00t\00 \00v\00_\00c\00o\00l\00;\00\n\00\n\00o\00u\00t\00 \00v\00e\00c\004\00 \00o\00_\00c\00o\00l\00o\00r\00;\00\n\00v\00o\00i\00d\00 \00m\00a\00i\00n\00(\00)\00 \00{\00\n\00\t\00v\00e\00c\002\00 \00s\00i\00g\00n\00e\00d\00U\00V\00 \00=\00 \00v\00_\00u\00v\00 \00*\00 \002\00.\00 \00-\00 \001\00.\00;\00\n\00\t\00f\00l\00o\00a\00t\00 \00l\00e\00n\00 \00=\00 \00m\00i\00n\00(\00l\00e\00n\00g\00t\00h\00(\00s\00i\00g\00n\00e\00d\00U\00V\00)\00,\001\00.\00)\00;\00\n\00\t\00o\00_\00c\00o\00l\00o\00r\00 \00=\00 \00v\00e\00c\004\00(\000\00.\00,\00v\00_\00c\00o\00l\00,\001\00.\00,\001\00.\00 \00-\00 \00l\00e\00n\00)\00;\00\n\00}\00\n\00\00\00\00\00\00\00")
+ (data (i32.const 12668) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00 \00\00\00\n\00\n\00u\00n\00i\00f\00o\00r\00m\00 \00f\00l\00o\00a\00t\00 \00\00\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 12732) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\1e\00\00\00;\00\n\00u\00n\00i\00f\00o\00r\00m\00 \00v\00e\00c\003\00 \00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 12796) ",\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\16\00\00\00;\00\n\00\n\00i\00n\00 \00v\00e\00c\003\00 \00\00\00\00\00\00\00")
+ (data (i32.const 12844) ",\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\16\00\00\00;\00\n\00o\00u\00t\00 \00v\00e\00c\003\00 \00\00\00\00\00\00\00")
+ (data (i32.const 12892) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00&\00\00\00;\00\n\00\n\00\n\00v\00o\00i\00d\00 \00m\00a\00i\00n\00(\00)\00 \00{\00\n\00\t\00\00\00\00\00\00\00")
+ (data (i32.const 12956) "\1c\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\06\00\00\00 \00=\00 \00\00\00\00\00\00\00")
+ (data (i32.const 12988) "\1c\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\06\00\00\00;\00\n\00\t\00\00\00\00\00\00\00")
+ (data (i32.const 13020) "\1c\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\0c\00\00\00;\00\n\00\t\00i\00f\00(\00")
+ (data (i32.const 13052) "\dc\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\be\00\00\00.\00y\00 \00<\00 \000\00.\00)\00{\00\n\00\t\00\t\00f\00l\00o\00a\00t\00 \00r\00n\00d\00 \00=\00 \00r\00a\00n\00d\00(\00v\00e\00c\002\00(\00g\00l\00_\00V\00e\00r\00t\00e\00x\00I\00D\00,\000\00)\00)\00;\00\n\00\t\00\t\00f\00l\00o\00a\00t\00 \00r\00n\00d\002\00 \00=\00 \00r\00a\00n\00d\00(\00v\00e\00c\002\00(\000\00,\00g\00l\00_\00V\00e\00r\00t\00e\00x\00I\00D\00)\00)\00;\00\n\00\t\00\t\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 13276) "L\00\00\00\00\00\00\00\00\00\00\00\01\00\00\004\00\00\00 \00=\00 \00v\00e\00c\003\00(\000\00.\00,\00r\00n\00d\002\00,\001\00.\00)\00;\00\n\00\t\00\t\00/\00/\00 \00\00\00\00\00\00\00\00\00")
+ (data (i32.const 13356) "l\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00V\00\00\00 \00=\00 \00v\00e\00c\003\00(\00(\00r\00n\00d\00 \00*\00 \002\00.\00 \00-\00 \001\00.\00)\00 \00*\00 \005\000\00.\00,\001\000\000\00.\00,\00 \000\00.\00)\00;\00\n\00\t\00\t\00\00\00\00\00\00\00")
+ (data (i32.const 13468) "l\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00X\00\00\00 \00=\00 \00v\00e\00c\003\00(\00(\00r\00n\00d\00 \00*\00 \002\00.\00 \00-\00 \001\00.\00)\00 \00*\00 \005\00.\00,\001\000\00.\00,\00 \000\00.\00)\00;\00\n\00\t\00}\00\n\00}\00\n\00\00\00\00\00")
+ (data (i32.const 13580) "\ac\00\00\00\00\00\00\00\00\00\00\00\1c\00\00\00\9c\00\00\00@+\00\00\00\00\00\00\901\00\00\00\00\00\00\d01\00\00\00\00\00\00\102\00\00\00\00\00\00 \16\00\00\00\00\00\00@2\00\00\00\00\00\00@2\00\00\00\00\00\00p2\00\00\00\00\00\00\b02\00\00\00\00\00\00\a0.\00\00\00\00\00\00\10&\00\00\00\00\00\00\d02\00\00\00\00\00\00\b02\00\00\00\00\00\00\a0.\00\00\00\00\00\00\10&\00\00\00\00\00\00\f02\00\00\00\00\00\00\103\00\00\00\00\00\00\f03\00\00\00\00\00\00@4\00\00\00\00\00\00\b04\00\00")
+ (data (i32.const 13756) "|\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00l\00\00\00#\00v\00e\00r\00s\00i\00o\00n\00 \003\000\000\00 \00e\00s\00\n\00p\00r\00e\00c\00i\00s\00i\00o\00n\00 \00h\00i\00g\00h\00p\00 \00f\00l\00o\00a\00t\00;\00\n\00v\00o\00i\00d\00 \00m\00a\00i\00n\00(\00)\00 \00{\00}\00\n\00")
+ (data (i32.const 13884) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\08\00\00\00\b0\0e\00\00\f0\0e\00\00\00\00\00\00")
+ (data (i32.const 13916) "L\00\00\00\00\00\00\00\00\00\00\00\01\00\00\000\00\00\00#\00v\00e\00r\00s\00i\00o\00n\00 \003\000\000\00 \00e\00s\00\n\00i\00n\00 \00v\00e\00c\003\00 \00\00\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 13996) "\\\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00F\00\00\00;\00\n\00/\00/\00 \00i\00n\00 \00v\00e\00c\003\00 \00a\00_\00v\00e\00l\00o\00c\00i\00t\00y\00;\00 \00\n\00o\00u\00t\00 \00v\00e\00c\003\00 \00\00\00\00\00\00\00")
+ (data (i32.const 14092) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00&\00\00\00;\00\n\00 \00\n\00v\00o\00i\00d\00 \00m\00a\00i\00n\00(\00)\00 \00{\00\n\00\t\00\00\00\00\00\00\00")
+ (data (i32.const 14156) "L\00\00\00\00\00\00\00\00\00\00\00\01\00\00\006\00\00\00 \00+\00 \00v\00e\00c\003\00(\000\00.\000\001\00,\000\00.\000\001\00,\000\00.\000\001\00)\00;\00\n\00}\00\n\00\00\00\00\00\00\00")
+ (data (i32.const 14236) "<\00\00\00\00\00\00\00\00\00\00\00\1c\00\00\00$\00\00\00p6\00\00\00\00\00\00\c06\00\00\00\00\00\00 7\00\00\00\00\00\00\b02\00\00\00\00\00\00`7\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 14300) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\04\00\00\00\b0\0e\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 14332) ",\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\12\00\00\00\n\00i\00n\00 \00v\00e\00c\004\00 \00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 14380) "\\\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00H\00\00\00;\00\n\00\n\00v\00o\00i\00d\00 \00m\00a\00i\00n\00(\00v\00o\00i\00d\00)\00 \00{\00\n\00\t\00g\00l\00_\00P\00o\00s\00i\00t\00i\00o\00n\00 \00=\00 \00\00\00\00\00")
+ (data (i32.const 14476) "<\00\00\00\00\00\00\00\00\00\00\00\1c\00\00\00$\00\00\00`\15\00\00\00\00\00\00\108\00\00\00\00\00\00@8\00\00\00\00\00\00\10&\00\00\00\00\00\00\d0&\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 14540) "\0c\01\00\00\00\00\00\00\00\00\00\00\01\00\00\00\f6\00\00\00#\00v\00e\00r\00s\00i\00o\00n\00 \003\000\000\00 \00e\00s\00\n\00p\00r\00e\00c\00i\00s\00i\00o\00n\00 \00m\00e\00d\00i\00u\00m\00p\00 \00f\00l\00o\00a\00t\00;\00\n\00\n\00u\00n\00i\00f\00o\00r\00m\00 \00v\00e\00c\004\00 \00u\00_\00c\00o\00l\00o\00r\00;\00\n\00o\00u\00t\00 \00v\00e\00c\004\00 \00o\00_\00c\00o\00l\00o\00r\00;\00\n\00\n\00v\00o\00i\00d\00 \00m\00a\00i\00n\00(\00v\00o\00i\00d\00)\00 \00{\00\n\00\t\00o\00_\00c\00o\00l\00o\00r\00 \00=\00 \00u\00_\00c\00o\00l\00o\00r\00;\00\n\00}\00\n\00\00\00\00\00\00\00")
+ (data (i32.const 14812) "\ac\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\90\00\00\00;\00\n\00i\00n\00 \00v\00e\00c\004\00 \00a\00_\00c\00o\00l\00o\00r\00;\00\n\00\n\00o\00u\00t\00 \00v\00e\00c\004\00 \00v\00_\00c\00o\00l\00o\00r\00;\00\n\00\n\00v\00o\00i\00d\00 \00m\00a\00i\00n\00(\00v\00o\00i\00d\00)\00 \00{\00\n\00\t\00g\00l\00_\00P\00o\00s\00i\00t\00i\00o\00n\00 \00=\00 \00\00\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 14988) "L\00\00\00\00\00\00\00\00\00\00\00\01\00\00\000\00\00\00;\00\n\00\t\00v\00_\00c\00o\00l\00o\00r\00 \00=\00 \00a\00_\00c\00o\00l\00o\00r\00;\00\n\00}\00\n\00\00\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 15068) "<\00\00\00\00\00\00\00\00\00\00\00\1c\00\00\00,\00\00\00`\15\00\00\00\00\00\00\a0\15\00\00\00\00\00\000%\00\00\00\00\00\00\f09\00\00\00\00\00\00\10&\00\00\00\00\00\00\a0:\00\00")
+ (data (i32.const 15132) "<\01\00\00\00\00\00\00\00\00\00\00\01\00\00\00,\01\00\00#\00v\00e\00r\00s\00i\00o\00n\00 \003\000\000\00 \00e\00s\00\n\00p\00r\00e\00c\00i\00s\00i\00o\00n\00 \00m\00e\00d\00i\00u\00m\00p\00 \00f\00l\00o\00a\00t\00;\00\n\00\n\00u\00n\00i\00f\00o\00r\00m\00 \00v\00e\00c\004\00 \00u\00_\00c\00o\00l\00o\00r\00;\00\n\00i\00n\00 \00v\00e\00c\004\00 \00v\00_\00c\00o\00l\00o\00r\00;\00\n\00o\00u\00t\00 \00v\00e\00c\004\00 \00o\00_\00c\00o\00l\00o\00r\00;\00\n\00\n\00v\00o\00i\00d\00 \00m\00a\00i\00n\00(\00v\00o\00i\00d\00)\00 \00{\00\n\00\t\00o\00_\00c\00o\00l\00o\00r\00 \00=\00 \00u\00_\00c\00o\00l\00o\00r\00 \00*\00 \00v\00_\00c\00o\00l\00o\00r\00;\00\n\00}\00\n\00")
+ (data (i32.const 15452) ",\01\00\00\00\00\00\00\00\00\00\00\01\00\00\00\1a\01\00\00#\00v\00e\00r\00s\00i\00o\00n\00 \003\000\000\00 \00e\00s\00\n\00\n\00i\00n\00 \00v\00e\00c\004\00 \00a\00_\00p\00o\00s\00i\00t\00i\00o\00n\00;\00\n\00i\00n\00 \00v\00e\00c\002\00 \00a\00_\00t\00e\00x\00c\00o\00o\00r\00d\00;\00\n\00\n\00o\00u\00t\00 \00v\00e\00c\002\00 \00v\00_\00u\00v\00;\00\n\00\n\00v\00o\00i\00d\00 \00m\00a\00i\00n\00(\00v\00o\00i\00d\00)\00 \00{\00\n\00\t\00g\00l\00_\00P\00o\00s\00i\00t\00i\00o\00n\00 \00=\00 \00a\00_\00p\00o\00s\00i\00t\00i\00o\00n\00;\00\n\00\t\00v\00_\00u\00v\00 \00=\00 \00a\00_\00t\00e\00x\00c\00o\00o\00r\00d\00;\00\n\00}\00\n\00\00\00")
+ (data (i32.const 15756) "\0c\01\00\00\00\00\00\00\00\00\00\00\01\00\00\00\f8\00\00\00#\00v\00e\00r\00s\00i\00o\00n\00 \003\000\000\00 \00e\00s\00\n\00p\00r\00e\00c\00i\00s\00i\00o\00n\00 \00m\00e\00d\00i\00u\00m\00p\00 \00f\00l\00o\00a\00t\00;\00\n\00o\00u\00t\00 \00v\00e\00c\004\00 \00o\00_\00c\00o\00l\00o\00r\00;\00\n\00i\00n\00 \00v\00e\00c\002\00 \00v\00_\00u\00v\00;\00\n\00\n\00v\00o\00i\00d\00 \00m\00a\00i\00n\00(\00v\00o\00i\00d\00)\00 \00{\00\n\00\t\00o\00_\00c\00o\00l\00o\00r\00 \00=\00 \00v\00e\00c\004\00(\00v\00_\00u\00v\00.\00x\00y\00,\001\00,\001\00)\00;\00\n\00}\00\n\00\00\00\00\00")
+ (data (i32.const 16028) "\1c\00\00\00\00\00\00\00\00\00\00\00.\00\00\00\04\00\00\00\ff\ff\ff\ff\00\00\00\00\00\00\00\00")
+ (data (i32.const 16060) ",\00\00\00\00\00\00\00\00\00\00\00.\00\00\00\10\00\00\00\00\00\00\ff\ff\00\00\ff\00\ff\00\ff\ff\ff\00\ff\00\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 16108) ",\00\00\00\00\00\00\00\00\00\00\00.\00\00\00\10\00\00\00\00\00\ff\ff\ff\00\ff\ff\00\ff\ff\ff\ff\ff\ff\ff\00\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 16156) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 16188) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 16224) "\be\f3\f8y\eca\f6?\190\96[\c6\fe\de\bf=\88\afJ\edq\f5?\a4\fc\d42h\0b\db\bf\b0\10\f0\f09\95\f4?{\b7\1f\n\8bA\d7\bf\85\03\b8\b0\95\c9\f3?{\cfm\1a\e9\9d\d3\bf\a5d\88\0c\19\0d\f3?1\b6\f2\f3\9b\1d\d0\bf\a0\8e\0b{\"^\f2?\f0z;\1b\1d|\c9\bf?4\1aJJ\bb\f1?\9f<\af\93\e3\f9\c2\bf\ba\e5\8a\f0X#\f1?\\\8dx\bf\cb`\b9\bf\a7\00\99A?\95\f0?\ce_G\b6\9do\aa\bf\00\00\00\00\00\00\f0?\00\00\00\00\00\00\00\00\acG\9a\fd\8c`\ee?=\f5$\9f\ca8\b3?\a0j\02\1f\b3\a4\ec?\ba\918T\a9v\c4?\e6\fcjW6 \eb?\d2\e4\c4J\0b\84\ce?-\aa\a1c\d1\c2\e9?\1ce\c6\f0E\06\d4?\edAx\03\e6\86\e8?\f8\9f\1b,\9c\8e\d8?bHS\f5\dcg\e7?\cc{\b1N\a4\e0\dc?")
+ (data (i32.const 16480) "\00\00\00\00\00\00\f0?t\85\15\d3\b0\d9\ef?\0f\89\f9lX\b5\ef?Q[\12\d0\01\93\ef?{Q}<\b8r\ef?\aa\b9h1\87T\ef?8bunz8\ef?\e1\de\1f\f5\9d\1e\ef?\15\b71\n\fe\06\ef?\cb\a9:7\a7\f1\ee?\"4\12L\a6\de\ee?-\89a`\08\ce\ee?\'*6\d5\da\bf\ee?\82O\9dV+\b4\ee?)TH\dd\07\ab\ee?\85U:\b0~\a4\ee?\cd;\7ff\9e\a0\ee?t_\ec\e8u\9f\ee?\87\01\ebs\14\a1\ee?\13\ceL\99\89\a5\ee?\db\a0*B\e5\ac\ee?\e5\c5\cd\b07\b7\ee?\90\f0\a3\82\91\c4\ee?]%>\b2\03\d5\ee?\ad\d3Z\99\9f\e8\ee?G^\fb\f2v\ff\ee?\9cR\85\dd\9b\19\ef?i\90\ef\dc 7\ef?\87\a4\fb\dc\18X\ef?_\9b{3\97|\ef?\da\90\a4\a2\af\a4\ef?@En[v\d0\ef?")
+ (data (i32.const 16748) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 16780) "\ac\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\94\00\00\00s\00y\00s\00t\00e\00m\00s\00 \00w\00a\00s\00 \00c\00r\00e\00a\00t\00e\00d\00 \00w\00i\00t\00h\00 \00a\00 \00d\00i\00f\00f\00e\00r\00e\00n\00t\00 \00w\00o\00r\00l\00d\00,\00 \00p\00l\00e\00a\00s\00e\00 \00c\00a\00l\00l\00 \00w\00o\00r\00l\00d\00.\00b\00i\00n\00d\00(\00)\00 \00f\00i\00r\00s\00t\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 16956) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00(\00\00\00s\00r\00c\00-\00a\00s\00/\00b\00a\00s\00e\00/\00W\00o\00r\00l\00d\00.\00t\00s\00\00\00\00\00")
+ (data (i32.const 17020) "\1c\00\00\00\00\00\00\00\00\00\00\00\85\00\00\00\08\00\00\004\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 17052) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\04\00\00\00^\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 17084) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\04\00\00\00^\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 17116) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 17148) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 17180) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00$\00\00\00K\00e\00y\00 \00d\00o\00e\00s\00 \00n\00o\00t\00 \00e\00x\00i\00s\00t\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 17244) ",\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\16\00\00\00~\00l\00i\00b\00/\00m\00a\00p\00.\00t\00s\00\00\00\00\00\00\00")
+ (data (i32.const 17292) "l\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00N\00\00\00k\00e\00e\00p\00 \00w\00o\00r\00l\00d\00 \00p\00o\00s\00i\00t\00i\00o\00n\00 \00n\00o\00t\00 \00y\00e\00t\00 \00i\00m\00p\00l\00e\00m\00e\00n\00t\00e\00d\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 17404) "L\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00<\00\00\00s\00r\00c\00-\00a\00s\00/\00c\00o\00m\00p\00o\00n\00e\00n\00t\00s\00/\00T\00r\00a\00n\00s\00f\00o\00r\00m\00.\00t\00s\00")
+ (data (i32.const 17484) "\bc\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\a6\00\00\00c\00o\00m\00p\00o\00n\00e\00n\00t\00 \00w\00a\00s\00 \00i\00n\00s\00t\00a\00n\00t\00i\00a\00t\00e\00d\00 \00w\00i\00t\00h\00 \00a\00 \00d\00i\00f\00f\00e\00r\00e\00n\00t\00 \00e\00n\00t\00i\00t\00y\00,\00 \00p\00l\00e\00a\00s\00e\00 \00c\00a\00l\00l\00 \00e\00n\00t\00i\00t\00y\00.\00b\00i\00n\00d\00(\00)\00 \00f\00i\00r\00s\00t\00\00\00\00\00\00\00")
+ (data (i32.const 17676) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00*\00\00\00s\00r\00c\00-\00a\00s\00/\00b\00a\00s\00e\00/\00E\00n\00t\00i\00t\00y\00.\00t\00s\00\00\00")
+ (data (i32.const 17740) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\"\00\00\00u\00n\00e\00x\00p\00e\00c\00t\00e\00d\00 \00u\00p\00c\00a\00s\00t\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 17804) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 17836) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 17868) "\1c\00\00\00\00\00\00\00\00\00\00\00\86\00\00\00\08\00\00\005\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 17900) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\04\00\00\00k\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 17932) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\04\00\00\00f\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 17964) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 17996) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 18028) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 18060) "\\\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00J\00\00\00s\00r\00c\00-\00a\00s\00/\00c\00o\00m\00p\00o\00n\00e\00n\00t\00s\00/\00D\00i\00r\00e\00c\00t\00i\00o\00n\00a\00l\00L\00i\00g\00h\00t\00.\00t\00s\00\00\00")
+ (data (i32.const 18156) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 18188) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 18220) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00*\00\00\00O\00b\00j\00e\00c\00t\00 \00a\00l\00r\00e\00a\00d\00y\00 \00p\00i\00n\00n\00e\00d\00\00\00")
+ (data (i32.const 18284) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00(\00\00\00O\00b\00j\00e\00c\00t\00 \00i\00s\00 \00n\00o\00t\00 \00p\00i\00n\00n\00e\00d\00\00\00\00\00")
+ (data (i32.const 18348) "L\00\00\00\00\00\00\00\00\00\00\00\01\00\00\006\00\00\00s\00r\00c\00-\00a\00s\00/\00c\00o\00m\00p\00o\00n\00e\00n\00t\00s\00/\00C\00a\00m\00e\00r\00a\00.\00t\00s\00\00\00\00\00\00\00")
+ (data (i32.const 18428) "L\00\00\00\00\00\00\00\00\00\00\00\01\00\00\002\00\00\00s\00r\00c\00-\00a\00s\00/\00c\00o\00m\00p\00o\00n\00e\00n\00t\00s\00/\00M\00e\00s\00h\00.\00t\00s\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 18508) "l\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00P\00\00\00s\00r\00c\00-\00a\00s\00/\00r\00e\00n\00d\00e\00r\00i\00n\00g\00/\00s\00y\00s\00t\00e\00m\00s\00/\00R\00e\00n\00d\00e\00r\00S\00y\00s\00t\00e\00m\00.\00t\00s\00\00\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 18620) "L\00\00\00\00\00\00\00\00\00\00\00\01\00\00\002\00\00\00U\00n\00i\00f\00o\00r\00m\00 \00n\00o\00t\00 \00i\00m\00p\00l\00e\00m\00e\00n\00t\00e\00d\00:\00 \00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 18700) "\8c\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00n\00\00\00s\00r\00c\00-\00a\00s\00/\00W\00e\00b\00G\00L\002\00/\00s\00y\00s\00t\00e\00m\00s\00/\00W\00e\00b\00G\00L\00U\00n\00i\00f\00o\00r\00m\00B\00u\00f\00f\00e\00r\00O\00b\00j\00e\00c\00t\00S\00y\00s\00t\00e\00m\00.\00t\00s\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 18844) "L\00\00\00\00\00\00\00\00\00\00\00\01\00\00\002\00\00\00E\00r\00r\00o\00r\00 \00c\00o\00m\00p\00i\00l\00i\00n\00g\00 \00s\00h\00a\00d\00e\00r\00 \00:\00 \00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 18924) "l\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00T\00\00\00s\00r\00c\00-\00a\00s\00/\00W\00e\00b\00G\00L\002\00/\00s\00y\00s\00t\00e\00m\00s\00/\00W\00e\00b\00G\00L\00S\00h\00a\00d\00e\00r\00S\00y\00s\00t\00e\00m\00.\00t\00s\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 19036) "\\\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00>\00\00\00E\00r\00r\00o\00r\00 \00c\00r\00e\00a\00t\00i\00n\00g\00 \00s\00h\00a\00d\00e\00r\00 \00p\00r\00o\00g\00r\00a\00m\00.\00\n\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 19132) "L\00\00\00\00\00\00\00\00\00\00\00\01\00\00\002\00\00\00E\00r\00r\00o\00r\00 \00v\00a\00l\00i\00d\00a\00t\00i\00n\00g\00 \00p\00r\00o\00g\00r\00a\00m\00\n\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 19212) "l\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00X\00\00\00s\00r\00c\00-\00a\00s\00/\00W\00e\00b\00G\00L\002\00/\00s\00y\00s\00t\00e\00m\00s\00/\00W\00e\00b\00G\00L\00G\00e\00o\00m\00e\00t\00r\00y\00S\00y\00s\00t\00e\00m\00.\00t\00s\00\00\00\00\00")
+ (data (i32.const 19324) "\1c\00\00\00\00\00\00\00\00\00\00\00\93\00\00\00\08\00\00\006\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 19356) ",\01\00\00\00\00\00\00\00\00\00\00\01\00\00\00\10\01\00\00G\00e\00o\00m\00e\00t\00r\00y\00 \00G\00l\00u\00e\00 \00-\00 \00S\00h\00a\00d\00e\00r\00 \00u\00s\00e\00s\00 \00T\00r\00a\00n\00s\00f\00o\00r\00m\00 \00F\00e\00e\00d\00b\00a\00c\00k\00 \00b\00u\00t\00 \00n\00o\00 \00a\00t\00t\00r\00i\00b\00u\00t\00e\00s\00 \00f\00o\00u\00n\00d\00 \00m\00a\00r\00k\00e\00d\00 \00a\00s\00 \00v\00a\00r\00y\00i\00n\00g\00.\00 \00D\00i\00d\00 \00y\00o\00u\00 \00f\00o\00r\00 \00g\00e\00t\00 \00t\00o\00 \00n\00e\00w\00 \00A\00t\00t\00r\00i\00b\00u\00t\00e\00(\00)\00.\00a\00s\00V\00a\00r\00y\00i\00n\00g\00(\00)\00\00\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 19660) "\1c\00\00\00\00\00\00\00\00\00\00\00\93\00\00\00\08\00\00\007\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 19692) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 19724) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 19756) "\\\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00D\00\00\00M\00a\00x\00i\00m\00u\00m\00 \00t\00e\00x\00t\00u\00r\00e\00 \00c\00o\00u\00n\00t\00 \00r\00e\00a\00c\00h\00e\00d\00 \00-\00 \003\002\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 19852) "l\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00X\00\00\00s\00r\00c\00-\00a\00s\00/\00W\00e\00b\00G\00L\002\00/\00s\00y\00s\00t\00e\00m\00s\00/\00W\00e\00b\00G\00L\00M\00a\00t\00e\00r\00i\00a\00l\00S\00y\00s\00t\00e\00m\00.\00t\00s\00\00\00\00\00")
+ (data (i32.const 19964) "|\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00d\00\00\00t\00o\00S\00t\00r\00i\00n\00g\00(\00)\00 \00r\00a\00d\00i\00x\00 \00a\00r\00g\00u\00m\00e\00n\00t\00 \00m\00u\00s\00t\00 \00b\00e\00 \00b\00e\00t\00w\00e\00e\00n\00 \002\00 \00a\00n\00d\00 \003\006\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 20092) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00&\00\00\00~\00l\00i\00b\00/\00u\00t\00i\00l\00/\00n\00u\00m\00b\00e\00r\00.\00t\00s\00\00\00\00\00\00\00")
+ (data (i32.const 20156) "\1c\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\02\00\00\000\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 20188) "0\000\000\001\000\002\000\003\000\004\000\005\000\006\000\007\000\008\000\009\001\000\001\001\001\002\001\003\001\004\001\005\001\006\001\007\001\008\001\009\002\000\002\001\002\002\002\003\002\004\002\005\002\006\002\007\002\008\002\009\003\000\003\001\003\002\003\003\003\004\003\005\003\006\003\007\003\008\003\009\004\000\004\001\004\002\004\003\004\004\004\005\004\006\004\007\004\008\004\009\005\000\005\001\005\002\005\003\005\004\005\005\005\006\005\007\005\008\005\009\006\000\006\001\006\002\006\003\006\004\006\005\006\006\006\007\006\008\006\009\007\000\007\001\007\002\007\003\007\004\007\005\007\006\007\007\007\008\007\009\008\000\008\001\008\002\008\003\008\004\008\005\008\006\008\007\008\008\008\009\009\000\009\001\009\002\009\003\009\004\009\005\009\006\009\007\009\008\009\009\00")
+ (data (i32.const 20588) "\1c\04\00\00\00\00\00\00\00\00\00\00\01\00\00\00\00\04\00\000\000\000\001\000\002\000\003\000\004\000\005\000\006\000\007\000\008\000\009\000\00a\000\00b\000\00c\000\00d\000\00e\000\00f\001\000\001\001\001\002\001\003\001\004\001\005\001\006\001\007\001\008\001\009\001\00a\001\00b\001\00c\001\00d\001\00e\001\00f\002\000\002\001\002\002\002\003\002\004\002\005\002\006\002\007\002\008\002\009\002\00a\002\00b\002\00c\002\00d\002\00e\002\00f\003\000\003\001\003\002\003\003\003\004\003\005\003\006\003\007\003\008\003\009\003\00a\003\00b\003\00c\003\00d\003\00e\003\00f\004\000\004\001\004\002\004\003\004\004\004\005\004\006\004\007\004\008\004\009\004\00a\004\00b\004\00c\004\00d\004\00e\004\00f\005\000\005\001\005\002\005\003\005\004\005\005\005\006\005\007\005\008\005\009\005\00a\005\00b\005\00c\005\00d\005\00e\005\00f\006\000\006\001\006\002\006\003\006\004\006\005\006\006\006\007\006\008\006\009\006\00a\006\00b\006\00c\006\00d\006\00e\006\00f\007\000\007\001\007\002\007\003\007\004\007\005\007\006\007\007\007\008\007\009\007\00a\007\00b\007\00c\007\00d\007\00e\007\00f\008\000\008\001\008\002\008\003\008\004\008\005\008\006\008\007\008\008\008\009\008\00a\008\00b\008\00c\008\00d\008\00e\008\00f\009\000\009\001\009\002\009\003\009\004\009\005\009\006\009\007\009\008\009\009\009\00a\009\00b\009\00c\009\00d\009\00e\009\00f\00a\000\00a\001\00a\002\00a\003\00a\004\00a\005\00a\006\00a\007\00a\008\00a\009\00a\00a\00a\00b\00a\00c\00a\00d\00a\00e\00a\00f\00b\000\00b\001\00b\002\00b\003\00b\004\00b\005\00b\006\00b\007\00b\008\00b\009\00b\00a\00b\00b\00b\00c\00b\00d\00b\00e\00b\00f\00c\000\00c\001\00c\002\00c\003\00c\004\00c\005\00c\006\00c\007\00c\008\00c\009\00c\00a\00c\00b\00c\00c\00c\00d\00c\00e\00c\00f\00d\000\00d\001\00d\002\00d\003\00d\004\00d\005\00d\006\00d\007\00d\008\00d\009\00d\00a\00d\00b\00d\00c\00d\00d\00d\00e\00d\00f\00e\000\00e\001\00e\002\00e\003\00e\004\00e\005\00e\006\00e\007\00e\008\00e\009\00e\00a\00e\00b\00e\00c\00e\00d\00e\00e\00e\00f\00f\000\00f\001\00f\002\00f\003\00f\004\00f\005\00f\006\00f\007\00f\008\00f\009\00f\00a\00f\00b\00f\00c\00f\00d\00f\00e\00f\00f\00\00\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 21644) "\\\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00H\00\00\000\001\002\003\004\005\006\007\008\009\00a\00b\00c\00d\00e\00f\00g\00h\00i\00j\00k\00l\00m\00n\00o\00p\00q\00r\00s\00t\00u\00v\00w\00x\00y\00z\00\00\00\00\00")
+ (data (i32.const 21740) "L\00\00\00\00\00\00\00\00\00\00\00\01\00\00\008\00\00\00U\00n\00i\00m\00p\00l\00e\00m\00e\00n\00t\00e\00d\00 \00u\00n\00i\00f\00o\00r\00m\00 \00t\00y\00p\00e\00:\00 \00\00\00\00\00")
+ (data (i32.const 21824) "\9e\00\00\00 \00\00\00\00\00\00\00 \00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\01\19\00\00\02\00\00\00\02\19\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00A\00\00\00\02\00\00\00\04A\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\02A\00\00\00\00\00\00\10A\82\00\00\00\00\00\02\t\00\00\00\00\00\00\00\00\00\00#\00\00\00\00\00\00\00\1e\00\00\00\00\00\00\00%\00\00\00\00\00\00\00&\00\00\00\00\00\00\00\'\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\10A\82\00\00\00\00\00\02A\00\00\00\00\00\00\81\00\00\00\02\00\00\00$\19\00\00\00\00\00\00\a4\00\00\00\00\00\00\00d\00\00\00\00\00\00\00\02A\00\00\00\00\00\00B\00\00\00\00\00\00\00\02A\00\00\00\00\00\00\00\00\00\003\00\00\00\00\00\00\00(\00\00\00\00\00\00\005\00\00\00\00\00\00\00(\00\00\00\00\00\00\00$\00\00\00\82\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\02A\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00<\00\00\00\00\00\00\00\00\00\00\00\02A\00\00\00\00\00\00\00\00\00\00A\00\00\00\00\00\00\00@\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\02A\00\00\00\00\00\00 \00\00\00\00\00\00\00\00\00\00\00E\00\00\00\00\00\00\00F\00\00\00 \00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00F\00\00\00\10A\02\00\00\00\00\00\02A\00\00\00\00\00\00\10A\02\00\00\00\00\00\10A\02\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\02\01\00\00\00\00\00\00\08A\00\00\00\00\00\00\02A\00\00\00\00\00\00\10A\02\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00E\00\00\00\02A\00\00\00\00\00\00\10A\02\00\00\00\00\00\00\00\00\00I\00\00\00\02A\00\00\00\00\00\00\00\00\00\00E\00\00\00\00\00\00\00\00\00\00\00\08\t\00\00\00\00\00\00\00\00\00\00U\00\00\00\00\00\00\00I\00\00\00\08A\00\00\00\00\00\00\00\00\00\00O\00\00\00\02A\00\00\00\00\00\00\00\00\00\00E\00\00\00 \00\00\00F\00\00\00\00\00\00\00e\00\00\00\00\00\00\00U\00\00\00\00\00\00\00g\00\00\00\00\00\00\00X\00\00\00 \00\00\00\00\00\00\00\00\00\00\00O\00\00\00\02A\00\00\00\00\00\00\00\00\00\00g\00\00\00\00\00\00\00\00\00\00\00\02A\00\00\00\00\00\00\02A\00\00\00\00\00\00 \00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00 \00\00\00\00\00\00\00\10A\82\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\02A\00\00\00\00\00\00\10A\82\00\00\00\00\00\10A\82\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00 \00\00\00\00\00\00\00\02A\00\00\00\00\00\00\00\00\00\00\00\00\00\00\02A\00\00\00\00\00\00\10A\82\00\00\00\00\00\00\00\00\00o\00\00\00\10A\82\00\00\00\00\00\00\00\00\00\00\00\00\00\10A\82\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00g\00\00\00\02A\00\00\00\00\00\00\00\00\00\00\8b\00\00\00\00\00\00\00l\00\00\00\00\00\00\00\8d\00\00\00\00\00\00\00\1e\00\00\00\00\00\00\00g\00\00\00\02A\00\00\00\00\00\00 \00\00\00\00\00\00\00\00\00\00\00\92\00\00\00 \00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\96\00\00\00 \00\00\00\00\00\00\00\00\00\00\00\1e\00\00\00 \00\00\00|\00\00\00\00\00\00\00\99\00\00\00\00\00\00\00|\00\00\00\00\00\00\00\99\00\00\00\00\00\00\00\99\00\00\00\00\00\00\00\99\00\00\00\00\00\00\00\99\00\00\00")
  (table $0 56 56 funcref)
  (elem $0 (i32.const 1) $~lib/math/NativeMathf.random $src-as/glMatrix/_mat2d/multiply $src-as/glMatrix/_mat2d/subtract $src-as/glMatrix/_vec3/subtract $src-as/glMatrix/_vec3/multiply $src-as/glMatrix/_vec3/divide $~lib/math/NativeMathf.hypot $src-as/glMatrix/_vec3/distance $src-as/glMatrix/_vec3/squaredDistance $src-as/glMatrix/_vec3/length $src-as/glMatrix/_vec3/squaredLength $src-as/glMatrix/_vec4/subtract $src-as/glMatrix/_vec4/multiply $src-as/glMatrix/_vec4/divide $src-as/glMatrix/_vec4/distance $src-as/glMatrix/_vec4/squaredDistance $src-as/glMatrix/_vec4/length $src-as/glMatrix/_vec4/squaredLength $src-as/glMatrix/_vec4/clone $src-as/glMatrix/_vec4/fromValues $src-as/glMatrix/_vec4/copy $src-as/glMatrix/_vec4/set $src-as/glMatrix/_vec4/add $src-as/glMatrix/_quat/multiply $src-as/glMatrix/_vec4/scale $src-as/glMatrix/_vec4/dot $src-as/glMatrix/_vec4/lerp $src-as/glMatrix/_vec4/normalize $src-as/glMatrix/_vec4/exactEquals $start:src-as/glMatrix/_quat~anonymous|0~anonymous|0 $start:src-as/glMatrix/_quat~anonymous|0 $start:src-as/glMatrix/_quat~anonymous|1~anonymous|0 $start:src-as/glMatrix/_quat~anonymous|1 $start:src-as/glMatrix/_quat~anonymous|2~anonymous|0 $start:src-as/glMatrix/_quat~anonymous|2 $src-as/glMatrix/_quat2/multiply $src-as/glMatrix/_mat4/perspectiveNO $src-as/glMatrix/_mat4/orthoNO $src-as/glMatrix/_mat4/multiply $src-as/glMatrix/_mat4/subtract $src-as/glMatrix/_mat3/multiply $src-as/glMatrix/_mat3/subtract $src-as/glMatrix/_vec2/length $src-as/glMatrix/_vec2/subtract $src-as/glMatrix/_vec2/multiply $src-as/glMatrix/_vec2/divide $src-as/glMatrix/_vec2/distance $src-as/glMatrix/_vec2/squaredDistance $src-as/glMatrix/_vec2/squaredLength $src-as/glMatrix/_mat2/multiply $src-as/glMatrix/_mat2/subtract $src-as/base/SystemPriority/SystemPriority.sortSystems<src-as/base/System/System>~anonymous|0 $src-as/base/SystemPriority/SystemPriority.sortSystems<src-as/base/System/ListenerSystem>~anonymous|0 $src-as/WebGL2/systems/WebGLGeometrySystem/WebGLGeometrySystem#create~anonymous|0 $src-as/WebGL2/systems/WebGLGeometrySystem/WebGLGeometrySystem#createFeedback~anonymous|0)
- (export "start" (func $src-as/factories/mainFactories/start))
- (export "update" (func $src-as/factories/mainFactories/update))
- (export "defaultWorld" (func $src-as/factories/mainFactories/defaultWorld))
- (export "unlitRotatingCube" (func $src-as/factories/mainFactories/unlitRotatingCube))
- (export "handleResize" (func $src-as/factories/mainFactories/handleResize))
+ (export "update" (func $src-as/exports/mainFactories/update))
+ (export "defaultWorld" (func $src-as/exports/mainFactories/defaultWorld))
+ (export "handleResize" (func $src-as/exports/mainFactories/handleResize))
+ (export "defaultCamera" (func $src-as/exports/cameraFactories/defaultCamera))
+ (export "removeAllCameras" (func $src-as/exports/cameraFactories/removeAllCameras))
+ (export "unlitVertexColorShader" (global $src-as/rendering/shader/unlit/unlitVertexColors/unlitVertexColorShader))
+ (export "litShader" (global $src-as/rendering/shader/lit/litShader/litShader))
  (export "__new" (func $~lib/rt/itcms/__new))
  (export "__pin" (func $~lib/rt/itcms/__pin))
  (export "__unpin" (func $~lib/rt/itcms/__unpin))
  (export "__collect" (func $~lib/rt/itcms/__collect))
  (export "__rtti_base" (global $~lib/rt/__rtti_base))
  (export "memory" (memory $0))
+ (export "rotatingCube" (func $export:src-as/exports/demos/rotatingCube))
  (start $~start)
  (func $~lib/math/murmurHash3 (param $0 i64) (result i64)
   local.get $0
@@ -12064,15 +12070,21 @@
  (func $start:src-as/rendering/shader/glsl/index
   call $start:src-as/rendering/shader/glsl/utility
  )
+ (func $start:src-as/rendering/shader/lit/index
+  call $start:src-as/rendering/shader/lit/litShader
+ )
+ (func $start:src-as/rendering/shader/unlit/index
+  call $start:src-as/rendering/shader/unlit/unlit
+  call $start:src-as/rendering/shader/unlit/unlitVertexColors
+ )
  (func $start:src-as/rendering/shader/index
   call $start:src-as/rendering/shader/debugNormals
   call $start:src-as/rendering/shader/glsl/index
-  call $start:src-as/rendering/shader/litShader
+  call $start:src-as/rendering/shader/lit/index
   call $start:src-as/rendering/shader/particleShader
   call $start:src-as/rendering/shader/transformFeedback
   call $start:src-as/rendering/shader/transformFeedbackSimple
-  call $start:src-as/rendering/shader/unlit
-  call $start:src-as/rendering/shader/unlitVertexColors
+  call $start:src-as/rendering/shader/unlit/index
   call $start:src-as/rendering/shader/uvDebug
  )
  (func $start:src-as/rendering/material/Material
@@ -12601,7 +12613,7 @@
    i32.const 23
    i32.shr_s
    local.set $14
-   i32.const 16112
+   i32.const 16224
    local.get $11
    i32.const 1
    i32.const 3
@@ -12610,7 +12622,7 @@
    i32.add
    f64.load
    local.set $15
-   i32.const 16112
+   i32.const 16224
    local.get $11
    i32.const 1
    i32.const 3
@@ -12744,7 +12756,7 @@
    f64.sub
    f64.sub
    local.set $19
-   i32.const 16368
+   i32.const 16480
    local.get $23
    i32.wrap_i64
    i32.const 31
@@ -12876,14 +12888,14 @@
  (func $start:src-as/base/index
   call $start:src-as/base/Component
  )
- (func $start:src-as/factories/mainFactories
+ (func $start:src-as/exports/mainFactories
   call $start:src-as/base/index
  )
- (func $start:src-as/factories/index
-  call $start:src-as/factories/mainFactories
+ (func $start:src-as/exports/index
+  call $start:src-as/exports/mainFactories
  )
  (func $start:src-as/index
-  call $start:src-as/factories/index
+  call $start:src-as/exports/index
  )
  (func $src-as/base/World/World.set:main (param $0 i32)
   local.get $0
@@ -13132,6 +13144,13 @@
   local.get $0
   local.get $1
   i32.store offset=20
+ )
+ (func $~lib/array/Array<src-as/base/System/System>#get:length (param $0 i32) (result i32)
+  local.get $0
+  i32.load offset=12
+ )
+ (func $src-as/base/System/System#update (param $0 i32)
+  nop
  )
  (func $~lib/util/hash/HASH<u32> (param $0 i32) (result i32)
   (local $1 i32)
@@ -14742,8 +14761,8 @@
   local.get $2
   i32.eqz
   if
-   i32.const 17088
-   i32.const 17152
+   i32.const 17200
+   i32.const 17264
    i32.const 105
    i32.const 17
    call $~lib/builtins/abort
@@ -16265,8 +16284,8 @@
   local.get $2
   i32.eqz
   if
-   i32.const 17088
-   i32.const 17152
+   i32.const 17200
+   i32.const 17264
    i32.const 105
    i32.const 17
    call $~lib/builtins/abort
@@ -16330,8 +16349,8 @@
   local.get $2
   i32.eqz
   if
-   i32.const 17088
-   i32.const 17152
+   i32.const 17200
+   i32.const 17264
    i32.const 105
    i32.const 17
    call $~lib/builtins/abort
@@ -16402,8 +16421,8 @@
   local.get $2
   i32.eqz
   if
-   i32.const 17088
-   i32.const 17152
+   i32.const 17200
+   i32.const 17264
    i32.const 105
    i32.const 17
    call $~lib/builtins/abort
@@ -17870,6 +17889,152 @@
   call $src-as/math/Color/Color#get:a
   call $src-as/WebGL2/imports/_types/clearColor
  )
+ (func $src-as/base/Component/SpatialComponent#set:transform (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=8
+  local.get $0
+  local.get $1
+  i32.const 0
+  call $~lib/rt/itcms/__link
+ )
+ (func $~lib/array/Array<src-as/math/Vector3/Vector3>#set:length_ (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=12
+ )
+ (func $~lib/array/Array<src-as/math/Vector3/Vector3>#push (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  (local $3 i32)
+  local.get $0
+  i32.load offset=12
+  local.set $2
+  local.get $2
+  i32.const 1
+  i32.add
+  local.set $3
+  local.get $0
+  local.get $3
+  i32.const 2
+  i32.const 1
+  call $~lib/array/ensureCapacity
+  i32.const 1
+  drop
+  local.get $0
+  i32.load offset=4
+  local.get $2
+  i32.const 2
+  i32.shl
+  i32.add
+  local.get $1
+  i32.store
+  local.get $0
+  local.get $1
+  i32.const 1
+  call $~lib/rt/itcms/__link
+  local.get $0
+  local.get $3
+  call $~lib/array/Array<src-as/math/Vector3/Vector3>#set:length_
+  local.get $3
+ )
+ (func $~lib/array/Array<src-as/math/Vector3/Vector3>#get:length (param $0 i32) (result i32)
+  local.get $0
+  i32.load offset=12
+ )
+ (func $src-as/math/SharedBuffer/SharedBuffer_f32<src-as/math/Vector3/Vector3>#get:strideBytes (param $0 i32) (result i32)
+  local.get $0
+  i32.load16_u offset=8
+  global.get $~lib/typedarray/Float32Array.BYTES_PER_ELEMENT
+  i32.mul
+ )
+ (func $~lib/arraybuffer/ArrayBuffer#get:byteLength (param $0 i32) (result i32)
+  local.get $0
+  i32.const 20
+  i32.sub
+  i32.load offset=16
+ )
+ (func $src-as/components/DirectionalLight/DirectionalLight#set:direction (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=16
+  local.get $0
+  local.get $1
+  i32.const 0
+  call $~lib/rt/itcms/__link
+ )
+ (func $src-as/math/Vector1/Vector1Base<~lib/typedarray/Float32Array,f32>#set:m (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store
+  local.get $0
+  local.get $1
+  i32.const 0
+  call $~lib/rt/itcms/__link
+ )
+ (func $~lib/array/Array<src-as/math/Vector1/Vector1>#set:length_ (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=12
+ )
+ (func $~lib/array/Array<src-as/math/Vector1/Vector1>#push (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  (local $3 i32)
+  local.get $0
+  i32.load offset=12
+  local.set $2
+  local.get $2
+  i32.const 1
+  i32.add
+  local.set $3
+  local.get $0
+  local.get $3
+  i32.const 2
+  i32.const 1
+  call $~lib/array/ensureCapacity
+  i32.const 1
+  drop
+  local.get $0
+  i32.load offset=4
+  local.get $2
+  i32.const 2
+  i32.shl
+  i32.add
+  local.get $1
+  i32.store
+  local.get $0
+  local.get $1
+  i32.const 1
+  call $~lib/rt/itcms/__link
+  local.get $0
+  local.get $3
+  call $~lib/array/Array<src-as/math/Vector1/Vector1>#set:length_
+  local.get $3
+ )
+ (func $~lib/array/Array<src-as/math/Vector1/Vector1>#get:length (param $0 i32) (result i32)
+  local.get $0
+  i32.load offset=12
+ )
+ (func $src-as/math/SharedBuffer/SharedBuffer_f32<src-as/math/Vector1/Vector1>#get:strideBytes (param $0 i32) (result i32)
+  local.get $0
+  i32.load16_u offset=8
+  global.get $~lib/typedarray/Float32Array.BYTES_PER_ELEMENT
+  i32.mul
+ )
+ (func $src-as/math/Vector1/Vector1Base<~lib/typedarray/Float32Array,f32>#set (param $0 i32) (param $1 f32) (result i32)
+  local.get $0
+  local.get $1
+  call $src-as/math/Vector1/Vector1Base<~lib/typedarray/Float32Array,f32>#set:value
+  local.get $0
+ )
+ (func $src-as/components/DirectionalLight/DirectionalLight#set:ambientIntensity (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=12
+  local.get $0
+  local.get $1
+  i32.const 0
+  call $~lib/rt/itcms/__link
+ )
  (func $src-as/math/Quaternion/Quaternion#fromEulerAngles (param $0 i32) (param $1 i32) (result i32)
   (local $2 f32)
   (local $3 f32)
@@ -17975,15 +18140,6 @@
   f32.add
   call $src-as/math/Quaternion/Quaternion#set:w
   local.get $0
- )
- (func $src-as/base/Component/SpatialComponent#set:transform (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=8
-  local.get $0
-  local.get $1
-  i32.const 0
-  call $~lib/rt/itcms/__link
  )
  (func $src-as/components/Camera/Camera#set:_fov (param $0 i32) (param $1 f32)
   local.get $0
@@ -18101,59 +18257,491 @@
   local.get $4
   call $src-as/components/Camera/Camera#constructor
  )
- (func $src-as/components/Mesh/Mesh#set:geometry (param $0 i32) (param $1 i32)
+ (func $~lib/array/Array<src-as/components/Camera/Camera>#get:length (param $0 i32) (result i32)
+  local.get $0
+  i32.load offset=12
+ )
+ (func $src-as/components/Camera/Camera#set:aspect (param $0 i32) (param $1 f32)
+  local.get $0
+  local.get $1
+  call $src-as/components/Camera/Camera#set:_aspect
+  local.get $0
+  call $src-as/components/Camera/Camera#_updatePerspective
+  drop
+ )
+ (func $src-as/components/Camera/Camera#setViewport (param $0 i32) (param $1 i32) (param $2 i32) (param $3 i32) (param $4 i32) (param $5 f32) (result i32)
+  local.get $0
+  i32.load offset=12
+  local.get $1
+  call $src-as/utility/Viewport/Viewport#set:x
+  local.get $0
+  i32.load offset=12
+  local.get $2
+  call $src-as/utility/Viewport/Viewport#set:y
+  local.get $0
+  i32.load offset=12
+  local.get $3
+  call $src-as/utility/Viewport/Viewport#set:width
+  local.get $0
+  i32.load offset=12
+  local.get $4
+  call $src-as/utility/Viewport/Viewport#set:height
+  local.get $0
+  local.get $5
+  call $src-as/components/Camera/Camera#set:aspect
+  local.get $0
+ )
+ (func $~lib/array/Array<u32>#set:buffer (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store
+  local.get $0
+  local.get $1
+  i32.const 0
+  call $~lib/rt/itcms/__link
+ )
+ (func $~lib/array/Array<u32>#set:dataStart (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=4
+ )
+ (func $~lib/array/Array<u32>#set:byteLength (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=8
+ )
+ (func $~lib/array/Array<u32>#set:length_ (param $0 i32) (param $1 i32)
   local.get $0
   local.get $1
   i32.store offset=12
+ )
+ (func $~lib/array/Array<u32>#__uset (param $0 i32) (param $1 i32) (param $2 i32)
+  local.get $0
+  i32.load offset=4
+  local.get $1
+  i32.const 2
+  i32.shl
+  i32.add
+  local.get $2
+  i32.store
+  i32.const 0
+  drop
+ )
+ (func $~lib/array/Array<u32>#__set (param $0 i32) (param $1 i32) (param $2 i32)
+  local.get $1
+  local.get $0
+  i32.load offset=12
+  i32.ge_u
+  if
+   local.get $1
+   i32.const 0
+   i32.lt_s
+   if
+    i32.const 96
+    i32.const 4208
+    i32.const 130
+    i32.const 22
+    call $~lib/builtins/abort
+    unreachable
+   end
+   local.get $0
+   local.get $1
+   i32.const 1
+   i32.add
+   i32.const 2
+   i32.const 1
+   call $~lib/array/ensureCapacity
+   local.get $0
+   local.get $1
+   i32.const 1
+   i32.add
+   call $~lib/array/Array<u32>#set:length_
+  end
+  local.get $0
+  local.get $1
+  local.get $2
+  call $~lib/array/Array<u32>#__uset
+ )
+ (func $~lib/array/Array<u32>#set:length (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.const 2
+  i32.const 0
+  call $~lib/array/ensureCapacity
+  local.get $0
+  local.get $1
+  call $~lib/array/Array<u32>#set:length_
+ )
+ (func $~lib/array/Array<src-as/base/Component/Component>#set:buffer (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store
   local.get $0
   local.get $1
   i32.const 0
   call $~lib/rt/itcms/__link
  )
- (func $src-as/components/Mesh/Mesh#set:material (param $0 i32) (param $1 i32)
+ (func $~lib/array/Array<src-as/base/Component/Component>#set:dataStart (param $0 i32) (param $1 i32)
   local.get $0
   local.get $1
-  i32.store offset=16
+  i32.store offset=4
+ )
+ (func $~lib/array/Array<src-as/base/Component/Component>#set:byteLength (param $0 i32) (param $1 i32)
   local.get $0
   local.get $1
-  i32.const 0
+  i32.store offset=8
+ )
+ (func $~lib/array/Array<src-as/base/Component/Component>#set:length_ (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=12
+ )
+ (func $~lib/array/Array<src-as/base/Component/Component>#__uset (param $0 i32) (param $1 i32) (param $2 i32)
+  local.get $0
+  i32.load offset=4
+  local.get $1
+  i32.const 2
+  i32.shl
+  i32.add
+  local.get $2
+  i32.store
+  i32.const 1
+  drop
+  local.get $0
+  local.get $2
+  i32.const 1
   call $~lib/rt/itcms/__link
  )
- (func $src-as/components/Mesh/Mesh#set:shader (param $0 i32) (param $1 i32)
+ (func $~lib/array/Array<src-as/base/Component/Component>#__set (param $0 i32) (param $1 i32) (param $2 i32)
+  local.get $1
+  local.get $0
+  i32.load offset=12
+  i32.ge_u
+  if
+   local.get $1
+   i32.const 0
+   i32.lt_s
+   if
+    i32.const 96
+    i32.const 4208
+    i32.const 130
+    i32.const 22
+    call $~lib/builtins/abort
+    unreachable
+   end
+   local.get $0
+   local.get $1
+   i32.const 1
+   i32.add
+   i32.const 2
+   i32.const 1
+   call $~lib/array/ensureCapacity
+   local.get $0
+   local.get $1
+   i32.const 1
+   i32.add
+   call $~lib/array/Array<src-as/base/Component/Component>#set:length_
+  end
   local.get $0
   local.get $1
-  i32.store offset=20
-  local.get $0
-  local.get $1
-  i32.const 0
-  call $~lib/rt/itcms/__link
+  local.get $2
+  call $~lib/array/Array<src-as/base/Component/Component>#__uset
  )
- (func $src-as/components/Mesh/Mesh#set:modelView (param $0 i32) (param $1 i32)
+ (func $~lib/array/Array<src-as/base/Component/Component>#set:length (param $0 i32) (param $1 i32)
   local.get $0
   local.get $1
-  i32.store offset=24
-  local.get $0
-  local.get $1
+  i32.const 2
   i32.const 0
-  call $~lib/rt/itcms/__link
+  call $~lib/array/ensureCapacity
+  local.get $0
+  local.get $1
+  call $~lib/array/Array<src-as/base/Component/Component>#set:length_
  )
- (func $src-as/components/Mesh/Mesh#set:modelViewProjection (param $0 i32) (param $1 i32)
+ (func $~lib/array/Array<src-as/base/Component/Component>#get:length (param $0 i32) (result i32)
   local.get $0
-  local.get $1
-  i32.store offset=28
-  local.get $0
-  local.get $1
-  i32.const 0
-  call $~lib/rt/itcms/__link
+  i32.load offset=12
  )
- (func $src-as/components/Mesh/Mesh#set:inverseTransposeModel (param $0 i32) (param $1 i32)
+ (func $~lib/set/Set<src-as/base/Entity/Entity>#has (param $0 i32) (param $1 i32) (result i32)
   local.get $0
   local.get $1
-  i32.store offset=32
-  local.get $0
   local.get $1
+  call $~lib/util/hash/HASH<src-as/base/Entity/Entity>
+  call $~lib/set/Set<src-as/base/Entity/Entity>#find
   i32.const 0
-  call $~lib/rt/itcms/__link
+  i32.ne
+ )
+ (func $~lib/set/Set<src-as/base/Entity/Entity>#delete (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  local.get $0
+  local.get $1
+  local.get $1
+  call $~lib/util/hash/HASH<src-as/base/Entity/Entity>
+  call $~lib/set/Set<src-as/base/Entity/Entity>#find
+  local.set $2
+  local.get $2
+  i32.eqz
+  if
+   i32.const 0
+   return
+  end
+  local.get $2
+  local.get $2
+  i32.load offset=4
+  i32.const 1
+  i32.or
+  call $~lib/set/SetEntry<src-as/base/Entity/Entity>#set:taggedNext
+  local.get $0
+  local.get $0
+  i32.load offset=20
+  i32.const 1
+  i32.sub
+  call $~lib/set/Set<src-as/base/Entity/Entity>#set:entriesCount
+  local.get $0
+  i32.load offset=4
+  i32.const 1
+  i32.shr_u
+  local.set $3
+  local.get $3
+  i32.const 1
+  i32.add
+  i32.const 4
+  local.tee $4
+  local.get $0
+  i32.load offset=20
+  local.tee $5
+  local.get $4
+  local.get $5
+  i32.gt_u
+  select
+  i32.ge_u
+  if (result i32)
+   local.get $0
+   i32.load offset=20
+   local.get $0
+   i32.load offset=12
+   i32.const 3
+   i32.mul
+   i32.const 4
+   i32.div_s
+   i32.lt_s
+  else
+   i32.const 0
+  end
+  if
+   local.get $0
+   local.get $3
+   call $~lib/set/Set<src-as/base/Entity/Entity>#rehash
+  end
+  i32.const 1
+ )
+ (func $src-as/base/System/ListenerSystem#onRemove (param $0 i32) (param $1 i32)
+  nop
+ )
+ (func $~lib/array/Array<src-as/base/Component/BehaviorComponent>#indexOf (param $0 i32) (param $1 i32) (param $2 i32) (result i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  (local $6 i32)
+  local.get $0
+  i32.load offset=12
+  local.set $3
+  local.get $3
+  i32.const 0
+  i32.eq
+  if (result i32)
+   i32.const 1
+  else
+   local.get $2
+   local.get $3
+   i32.ge_s
+  end
+  if
+   i32.const -1
+   return
+  end
+  local.get $2
+  i32.const 0
+  i32.lt_s
+  if
+   local.get $3
+   local.get $2
+   i32.add
+   local.tee $4
+   i32.const 0
+   local.tee $5
+   local.get $4
+   local.get $5
+   i32.gt_s
+   select
+   local.set $2
+  end
+  local.get $0
+  i32.load offset=4
+  local.set $6
+  loop $while-continue|0
+   local.get $2
+   local.get $3
+   i32.lt_s
+   local.set $4
+   local.get $4
+   if
+    local.get $6
+    local.get $2
+    i32.const 2
+    i32.shl
+    i32.add
+    i32.load
+    local.get $1
+    i32.eq
+    if
+     local.get $2
+     return
+    end
+    local.get $2
+    i32.const 1
+    i32.add
+    local.set $2
+    br $while-continue|0
+   end
+  end
+  i32.const -1
+ )
+ (func $~lib/map/Map<u32,src-as/base/Component/Component>#delete (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  local.get $0
+  local.get $1
+  local.get $1
+  call $~lib/util/hash/HASH<u32>
+  call $~lib/map/Map<u32,src-as/base/Component/Component>#find
+  local.set $2
+  local.get $2
+  i32.eqz
+  if
+   i32.const 0
+   return
+  end
+  local.get $2
+  local.get $2
+  i32.load offset=8
+  i32.const 1
+  i32.or
+  call $~lib/map/MapEntry<u32,src-as/base/Component/Component>#set:taggedNext
+  local.get $0
+  local.get $0
+  i32.load offset=20
+  i32.const 1
+  i32.sub
+  call $~lib/map/Map<u32,src-as/base/Component/Component>#set:entriesCount
+  local.get $0
+  i32.load offset=4
+  i32.const 1
+  i32.shr_u
+  local.set $3
+  local.get $3
+  i32.const 1
+  i32.add
+  i32.const 4
+  local.tee $4
+  local.get $0
+  i32.load offset=20
+  local.tee $5
+  local.get $4
+  local.get $5
+  i32.gt_u
+  select
+  i32.ge_u
+  if (result i32)
+   local.get $0
+   i32.load offset=20
+   local.get $0
+   i32.load offset=12
+   i32.const 3
+   i32.mul
+   i32.const 4
+   i32.div_s
+   i32.lt_s
+  else
+   i32.const 0
+  end
+  if
+   local.get $0
+   local.get $3
+   call $~lib/map/Map<u32,src-as/base/Component/Component>#rehash
+  end
+  i32.const 1
+ )
+ (func $~lib/map/Map<u32,src-as/base/Entity/Entity>#delete (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  local.get $0
+  local.get $1
+  local.get $1
+  call $~lib/util/hash/HASH<u32>
+  call $~lib/map/Map<u32,src-as/base/Entity/Entity>#find
+  local.set $2
+  local.get $2
+  i32.eqz
+  if
+   i32.const 0
+   return
+  end
+  local.get $2
+  local.get $2
+  i32.load offset=8
+  i32.const 1
+  i32.or
+  call $~lib/map/MapEntry<u32,src-as/base/Entity/Entity>#set:taggedNext
+  local.get $0
+  local.get $0
+  i32.load offset=20
+  i32.const 1
+  i32.sub
+  call $~lib/map/Map<u32,src-as/base/Entity/Entity>#set:entriesCount
+  local.get $0
+  i32.load offset=4
+  i32.const 1
+  i32.shr_u
+  local.set $3
+  local.get $3
+  i32.const 1
+  i32.add
+  i32.const 4
+  local.tee $4
+  local.get $0
+  i32.load offset=20
+  local.tee $5
+  local.get $4
+  local.get $5
+  i32.gt_u
+  select
+  i32.ge_u
+  if (result i32)
+   local.get $0
+   i32.load offset=20
+   local.get $0
+   i32.load offset=12
+   i32.const 3
+   i32.mul
+   i32.const 4
+   i32.div_s
+   i32.lt_s
+  else
+   i32.const 0
+  end
+  if
+   local.get $0
+   local.get $3
+   call $~lib/map/Map<u32,src-as/base/Entity/Entity>#rehash
+  end
+  i32.const 1
  )
  (func $src-as/rendering/material/Material/Material#set:shader (param $0 i32) (param $1 i32)
   local.get $0
@@ -18295,10 +18883,80 @@
   global.get $src-as/rendering/constants/enums/UniformType.FLOAT_VEC4
   call $src-as/rendering/material/Uniform/Uniform_f32#constructor
  )
+ (func $src-as/rendering/material/Uniform/TypedUniform<src-as/math/Texture/Texture>#set:value (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=12
+  local.get $0
+  local.get $1
+  i32.const 0
+  call $~lib/rt/itcms/__link
+ )
+ (func $src-as/rendering/material/Uniform/Uniform.Texture (param $0 i32) (param $1 i32) (result i32)
+  i32.const 0
+  local.get $0
+  local.get $1
+  global.get $src-as/rendering/constants/enums/UniformType.TEXTURE
+  call $src-as/rendering/material/Uniform/Uniform_texture#constructor
+ )
  (func $src-as/rendering/material/Material/StandardMaterial#set:texture (param $0 i32) (param $1 i32)
   local.get $0
   local.get $1
   i32.store offset=28
+  local.get $0
+  local.get $1
+  i32.const 0
+  call $~lib/rt/itcms/__link
+ )
+ (func $src-as/components/Mesh/Mesh#set:geometry (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=12
+  local.get $0
+  local.get $1
+  i32.const 0
+  call $~lib/rt/itcms/__link
+ )
+ (func $src-as/components/Mesh/Mesh#set:material (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=16
+  local.get $0
+  local.get $1
+  i32.const 0
+  call $~lib/rt/itcms/__link
+ )
+ (func $src-as/components/Mesh/Mesh#set:shader (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=20
+  local.get $0
+  local.get $1
+  i32.const 0
+  call $~lib/rt/itcms/__link
+ )
+ (func $src-as/components/Mesh/Mesh#set:modelView (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=24
+  local.get $0
+  local.get $1
+  i32.const 0
+  call $~lib/rt/itcms/__link
+ )
+ (func $src-as/components/Mesh/Mesh#set:modelViewProjection (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=28
+  local.get $0
+  local.get $1
+  i32.const 0
+  call $~lib/rt/itcms/__link
+ )
+ (func $src-as/components/Mesh/Mesh#set:inverseTransposeModel (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=32
   local.get $0
   local.get $1
   i32.const 0
@@ -18309,50 +18967,14 @@
   local.get $1
   f32.store offset=12
  )
- (func $src-as/factories/mainFactories/start
-  call $src-as/factories/mainFactories/defaultWorld
-  drop
- )
- (func $~lib/array/Array<src-as/base/System/System>#get:length (param $0 i32) (result i32)
-  local.get $0
-  i32.load offset=12
- )
- (func $src-as/base/System/System#update (param $0 i32)
-  nop
- )
- (func $~lib/array/Array<src-as/components/Camera/Camera>#get:length (param $0 i32) (result i32)
-  local.get $0
-  i32.load offset=12
- )
- (func $src-as/components/Camera/Camera#set:aspect (param $0 i32) (param $1 f32)
+ (func $src-as/components/Rotator/Rotator#set:offset (param $0 i32) (param $1 i32)
   local.get $0
   local.get $1
-  call $src-as/components/Camera/Camera#set:_aspect
+  i32.store offset=16
   local.get $0
-  call $src-as/components/Camera/Camera#_updatePerspective
-  drop
- )
- (func $src-as/components/Camera/Camera#setViewport (param $0 i32) (param $1 i32) (param $2 i32) (param $3 i32) (param $4 i32) (param $5 f32) (result i32)
-  local.get $0
-  i32.load offset=12
   local.get $1
-  call $src-as/utility/Viewport/Viewport#set:x
-  local.get $0
-  i32.load offset=12
-  local.get $2
-  call $src-as/utility/Viewport/Viewport#set:y
-  local.get $0
-  i32.load offset=12
-  local.get $3
-  call $src-as/utility/Viewport/Viewport#set:width
-  local.get $0
-  i32.load offset=12
-  local.get $4
-  call $src-as/utility/Viewport/Viewport#set:height
-  local.get $0
-  local.get $5
-  call $src-as/components/Camera/Camera#set:aspect
-  local.get $0
+  i32.const 0
+  call $~lib/rt/itcms/__link
  )
  (func $~lib/rt/itcms/__pin (param $0 i32) (result i32)
   (local $1 i32)
@@ -18367,7 +18989,7 @@
    i32.const 3
    i32.eq
    if
-    i32.const 18032
+    i32.const 18240
     i32.const 944
     i32.const 337
     i32.const 7
@@ -18399,7 +19021,7 @@
   i32.const 3
   i32.ne
   if
-   i32.const 18096
+   i32.const 18304
    i32.const 944
    i32.const 351
    i32.const 5
@@ -18471,126 +19093,6 @@
   drop
   i32.const 0
   drop
- )
- (func $~lib/array/Array<src-as/components/Transform/Transform>#set:length_ (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=12
- )
- (func $~lib/array/Array<src-as/components/Transform/Transform>#push (param $0 i32) (param $1 i32) (result i32)
-  (local $2 i32)
-  (local $3 i32)
-  local.get $0
-  i32.load offset=12
-  local.set $2
-  local.get $2
-  i32.const 1
-  i32.add
-  local.set $3
-  local.get $0
-  local.get $3
-  i32.const 2
-  i32.const 1
-  call $~lib/array/ensureCapacity
-  i32.const 1
-  drop
-  local.get $0
-  i32.load offset=4
-  local.get $2
-  i32.const 2
-  i32.shl
-  i32.add
-  local.get $1
-  i32.store
-  local.get $0
-  local.get $1
-  i32.const 1
-  call $~lib/rt/itcms/__link
-  local.get $0
-  local.get $3
-  call $~lib/array/Array<src-as/components/Transform/Transform>#set:length_
-  local.get $3
- )
- (func $~lib/array/Array<src-as/components/Camera/Camera>#set:length_ (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=12
- )
- (func $~lib/array/Array<src-as/components/Camera/Camera>#push (param $0 i32) (param $1 i32) (result i32)
-  (local $2 i32)
-  (local $3 i32)
-  local.get $0
-  i32.load offset=12
-  local.set $2
-  local.get $2
-  i32.const 1
-  i32.add
-  local.set $3
-  local.get $0
-  local.get $3
-  i32.const 2
-  i32.const 1
-  call $~lib/array/ensureCapacity
-  i32.const 1
-  drop
-  local.get $0
-  i32.load offset=4
-  local.get $2
-  i32.const 2
-  i32.shl
-  i32.add
-  local.get $1
-  i32.store
-  local.get $0
-  local.get $1
-  i32.const 1
-  call $~lib/rt/itcms/__link
-  local.get $0
-  local.get $3
-  call $~lib/array/Array<src-as/components/Camera/Camera>#set:length_
-  local.get $3
- )
- (func $~lib/array/Array<src-as/components/Mesh/Mesh>#set:length_ (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=12
- )
- (func $~lib/array/Array<src-as/components/Mesh/Mesh>#push (param $0 i32) (param $1 i32) (result i32)
-  (local $2 i32)
-  (local $3 i32)
-  local.get $0
-  i32.load offset=12
-  local.set $2
-  local.get $2
-  i32.const 1
-  i32.add
-  local.set $3
-  local.get $0
-  local.get $3
-  i32.const 2
-  i32.const 1
-  call $~lib/array/ensureCapacity
-  i32.const 1
-  drop
-  local.get $0
-  i32.load offset=4
-  local.get $2
-  i32.const 2
-  i32.shl
-  i32.add
-  local.get $1
-  i32.store
-  local.get $0
-  local.get $1
-  i32.const 1
-  call $~lib/rt/itcms/__link
-  local.get $0
-  local.get $3
-  call $~lib/array/Array<src-as/components/Mesh/Mesh>#set:length_
-  local.get $3
- )
- (func $src-as/rendering/systems/RenderSystem/RenderSystem#handleCreateMesh (param $0 i32) (param $1 i32)
-  nop
  )
  (func $~lib/array/Array<src-as/base/Entity/Entity>#set:buffer (param $0 i32) (param $1 i32)
   local.get $0
@@ -19595,6 +20097,11 @@
   local.get $1
   i32.store offset=8
  )
+ (func $~lib/array/Array<src-as/components/Transform/Transform>#set:length_ (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=12
+ )
  (func $~lib/array/Array<src-as/components/Transform/Transform>#__uset (param $0 i32) (param $1 i32) (param $2 i32)
   local.get $0
   i32.load offset=4
@@ -19720,8 +20227,8 @@
   local.get $2
   i32.eqz
   if
-   i32.const 17088
-   i32.const 17152
+   i32.const 17200
+   i32.const 17264
    i32.const 105
    i32.const 17
    call $~lib/builtins/abort
@@ -19956,6 +20463,819 @@
   local.get $0
   call $src-as/rendering/systems/RenderSystem/RenderSystem#update
  )
+ (func $~lib/array/Array<src-as/components/Transform/Transform>#push (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  (local $3 i32)
+  local.get $0
+  i32.load offset=12
+  local.set $2
+  local.get $2
+  i32.const 1
+  i32.add
+  local.set $3
+  local.get $0
+  local.get $3
+  i32.const 2
+  i32.const 1
+  call $~lib/array/ensureCapacity
+  i32.const 1
+  drop
+  local.get $0
+  i32.load offset=4
+  local.get $2
+  i32.const 2
+  i32.shl
+  i32.add
+  local.get $1
+  i32.store
+  local.get $0
+  local.get $1
+  i32.const 1
+  call $~lib/rt/itcms/__link
+  local.get $0
+  local.get $3
+  call $~lib/array/Array<src-as/components/Transform/Transform>#set:length_
+  local.get $3
+ )
+ (func $~lib/array/Array<src-as/components/Camera/Camera>#set:length_ (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=12
+ )
+ (func $~lib/array/Array<src-as/components/Camera/Camera>#push (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  (local $3 i32)
+  local.get $0
+  i32.load offset=12
+  local.set $2
+  local.get $2
+  i32.const 1
+  i32.add
+  local.set $3
+  local.get $0
+  local.get $3
+  i32.const 2
+  i32.const 1
+  call $~lib/array/ensureCapacity
+  i32.const 1
+  drop
+  local.get $0
+  i32.load offset=4
+  local.get $2
+  i32.const 2
+  i32.shl
+  i32.add
+  local.get $1
+  i32.store
+  local.get $0
+  local.get $1
+  i32.const 1
+  call $~lib/rt/itcms/__link
+  local.get $0
+  local.get $3
+  call $~lib/array/Array<src-as/components/Camera/Camera>#set:length_
+  local.get $3
+ )
+ (func $~lib/array/Array<src-as/components/Mesh/Mesh>#set:length_ (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=12
+ )
+ (func $~lib/array/Array<src-as/components/Mesh/Mesh>#push (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  (local $3 i32)
+  local.get $0
+  i32.load offset=12
+  local.set $2
+  local.get $2
+  i32.const 1
+  i32.add
+  local.set $3
+  local.get $0
+  local.get $3
+  i32.const 2
+  i32.const 1
+  call $~lib/array/ensureCapacity
+  i32.const 1
+  drop
+  local.get $0
+  i32.load offset=4
+  local.get $2
+  i32.const 2
+  i32.shl
+  i32.add
+  local.get $1
+  i32.store
+  local.get $0
+  local.get $1
+  i32.const 1
+  call $~lib/rt/itcms/__link
+  local.get $0
+  local.get $3
+  call $~lib/array/Array<src-as/components/Mesh/Mesh>#set:length_
+  local.get $3
+ )
+ (func $src-as/rendering/systems/RenderSystem/RenderSystem#handleCreateMesh (param $0 i32) (param $1 i32)
+  nop
+ )
+ (func $~lib/array/Array<src-as/components/Transform/Transform>#indexOf (param $0 i32) (param $1 i32) (param $2 i32) (result i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  (local $6 i32)
+  local.get $0
+  i32.load offset=12
+  local.set $3
+  local.get $3
+  i32.const 0
+  i32.eq
+  if (result i32)
+   i32.const 1
+  else
+   local.get $2
+   local.get $3
+   i32.ge_s
+  end
+  if
+   i32.const -1
+   return
+  end
+  local.get $2
+  i32.const 0
+  i32.lt_s
+  if
+   local.get $3
+   local.get $2
+   i32.add
+   local.tee $4
+   i32.const 0
+   local.tee $5
+   local.get $4
+   local.get $5
+   i32.gt_s
+   select
+   local.set $2
+  end
+  local.get $0
+  i32.load offset=4
+  local.set $6
+  loop $while-continue|0
+   local.get $2
+   local.get $3
+   i32.lt_s
+   local.set $4
+   local.get $4
+   if
+    local.get $6
+    local.get $2
+    i32.const 2
+    i32.shl
+    i32.add
+    i32.load
+    local.get $1
+    i32.eq
+    if
+     local.get $2
+     return
+    end
+    local.get $2
+    i32.const 1
+    i32.add
+    local.set $2
+    br $while-continue|0
+   end
+  end
+  i32.const -1
+ )
+ (func $~lib/array/Array<src-as/components/Camera/Camera>#indexOf (param $0 i32) (param $1 i32) (param $2 i32) (result i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  (local $6 i32)
+  local.get $0
+  i32.load offset=12
+  local.set $3
+  local.get $3
+  i32.const 0
+  i32.eq
+  if (result i32)
+   i32.const 1
+  else
+   local.get $2
+   local.get $3
+   i32.ge_s
+  end
+  if
+   i32.const -1
+   return
+  end
+  local.get $2
+  i32.const 0
+  i32.lt_s
+  if
+   local.get $3
+   local.get $2
+   i32.add
+   local.tee $4
+   i32.const 0
+   local.tee $5
+   local.get $4
+   local.get $5
+   i32.gt_s
+   select
+   local.set $2
+  end
+  local.get $0
+  i32.load offset=4
+  local.set $6
+  loop $while-continue|0
+   local.get $2
+   local.get $3
+   i32.lt_s
+   local.set $4
+   local.get $4
+   if
+    local.get $6
+    local.get $2
+    i32.const 2
+    i32.shl
+    i32.add
+    i32.load
+    local.get $1
+    i32.eq
+    if
+     local.get $2
+     return
+    end
+    local.get $2
+    i32.const 1
+    i32.add
+    local.set $2
+    br $while-continue|0
+   end
+  end
+  i32.const -1
+ )
+ (func $src-as/base/systems/TransformSystem/TransformSystem#onRemove (param $0 i32) (param $1 i32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  global.get $~lib/memory/__stack_pointer
+  local.get $1
+  call $src-as/base/Entity/Entity#get<src-as/components/Transform/Transform>
+  local.tee $2
+  i32.store
+  local.get $2
+  i32.load offset=36
+  local.get $0
+  i32.load offset=20
+  i32.eq
+  if
+   local.get $2
+   i32.const 0
+   i32.const 0
+   call $src-as/components/Transform/Transform#setParent
+   drop
+  end
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+ )
+ (func $src-as/math/PolarCoords/PolarCoords#set:radius (param $0 i32) (param $1 f32)
+  local.get $0
+  local.get $1
+  f32.store offset=4
+ )
+ (func $src-as/math/PolarCoords/PolarCoords#set:angle (param $0 i32) (param $1 f32)
+  local.get $0
+  local.get $1
+  f32.store
+ )
+ (func $src-as/math/Vector2/Vector2.fromPolar (param $0 i32) (param $1 i32) (result i32)
+  local.get $1
+  local.get $0
+  f32.load
+  call $~lib/math/NativeMathf.cos
+  local.get $0
+  f32.load offset=4
+  f32.mul
+  call $src-as/math/Vector2/Vector2#set:x
+  local.get $1
+  local.get $0
+  f32.load
+  call $~lib/math/NativeMathf.sin
+  local.get $0
+  f32.load offset=4
+  f32.mul
+  call $src-as/math/Vector2/Vector2#set:y
+  local.get $1
+ )
+ (func $src-as/math/Vector2/Vector2#set:m (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store
+  local.get $0
+  local.get $1
+  i32.const 0
+  call $~lib/rt/itcms/__link
+ )
+ (func $src-as/math/Vector2/Vector2#toVector3 (param $0 i32) (param $1 i32) (result i32)
+  local.get $1
+  local.get $0
+  call $src-as/math/Vector2/Vector2#get:x
+  call $src-as/math/Vector3/Vector3#set:x
+  local.get $1
+  local.get $0
+  call $src-as/math/Vector2/Vector2#get:y
+  call $src-as/math/Vector3/Vector3#set:y
+  local.get $1
+  f32.const 0
+  call $src-as/math/Vector3/Vector3#set:z
+  local.get $1
+ )
+ (func $src-as/math/Vector3/Vector3#add (param $0 i32) (param $1 i32) (result i32)
+  local.get $0
+  local.get $0
+  call $src-as/math/Vector3/Vector3#get:x
+  local.get $1
+  call $src-as/math/Vector3/Vector3#get:x
+  f32.add
+  call $src-as/math/Vector3/Vector3#set:x
+  local.get $0
+  local.get $0
+  call $src-as/math/Vector3/Vector3#get:y
+  local.get $1
+  call $src-as/math/Vector3/Vector3#get:y
+  f32.add
+  call $src-as/math/Vector3/Vector3#set:y
+  local.get $0
+  local.get $0
+  call $src-as/math/Vector3/Vector3#get:z
+  local.get $1
+  call $src-as/math/Vector3/Vector3#get:z
+  f32.add
+  call $src-as/math/Vector3/Vector3#set:z
+  local.get $0
+ )
+ (func $~lib/util/hash/HASH<src-as/rendering/material/UniformBufferObject/UniformBufferObject> (param $0 i32) (result i32)
+  (local $1 i32)
+  (local $2 i32)
+  (local $3 i32)
+  i32.const 0
+  drop
+  i32.const 1
+  drop
+  i32.const 4
+  i32.const 4
+  i32.eq
+  drop
+  local.get $0
+  local.set $1
+  i32.const 4
+  local.set $2
+  i32.const 0
+  i32.const 374761393
+  i32.add
+  local.get $2
+  i32.add
+  local.set $3
+  local.get $3
+  local.get $1
+  i32.const -1028477379
+  i32.mul
+  i32.add
+  local.set $3
+  local.get $3
+  i32.const 17
+  i32.rotl
+  i32.const 668265263
+  i32.mul
+  local.set $3
+  local.get $3
+  local.get $3
+  i32.const 15
+  i32.shr_u
+  i32.xor
+  local.set $3
+  local.get $3
+  i32.const -2048144777
+  i32.mul
+  local.set $3
+  local.get $3
+  local.get $3
+  i32.const 13
+  i32.shr_u
+  i32.xor
+  local.set $3
+  local.get $3
+  i32.const -1028477379
+  i32.mul
+  local.set $3
+  local.get $3
+  local.get $3
+  i32.const 16
+  i32.shr_u
+  i32.xor
+  local.set $3
+  local.get $3
+  return
+ )
+ (func $~lib/map/Map<src-as/rendering/material/UniformBufferObject/UniformBufferObject,src-as/WebGL2/components/material/WebGLUniformBufferObject>#find (param $0 i32) (param $1 i32) (param $2 i32) (result i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  local.get $0
+  i32.load
+  local.get $2
+  local.get $0
+  i32.load offset=4
+  i32.and
+  i32.const 4
+  i32.mul
+  i32.add
+  i32.load
+  local.set $3
+  loop $while-continue|0
+   local.get $3
+   local.set $4
+   local.get $4
+   if
+    local.get $3
+    i32.load offset=8
+    local.set $5
+    local.get $5
+    i32.const 1
+    i32.and
+    i32.eqz
+    if (result i32)
+     local.get $3
+     i32.load
+     local.get $1
+     i32.eq
+    else
+     i32.const 0
+    end
+    if
+     local.get $3
+     return
+    end
+    local.get $5
+    i32.const 1
+    i32.const -1
+    i32.xor
+    i32.and
+    local.set $3
+    br $while-continue|0
+   end
+  end
+  i32.const 0
+ )
+ (func $~lib/map/Map<src-as/rendering/material/UniformBufferObject/UniformBufferObject,src-as/WebGL2/components/material/WebGLUniformBufferObject>#has (param $0 i32) (param $1 i32) (result i32)
+  local.get $0
+  local.get $1
+  local.get $1
+  call $~lib/util/hash/HASH<src-as/rendering/material/UniformBufferObject/UniformBufferObject>
+  call $~lib/map/Map<src-as/rendering/material/UniformBufferObject/UniformBufferObject,src-as/WebGL2/components/material/WebGLUniformBufferObject>#find
+  i32.const 0
+  i32.ne
+ )
+ (func $~lib/map/Map<src-as/rendering/material/UniformBufferObject/UniformBufferObject,src-as/WebGL2/components/material/WebGLUniformBufferObject>#get (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  local.get $0
+  local.get $1
+  local.get $1
+  call $~lib/util/hash/HASH<src-as/rendering/material/UniformBufferObject/UniformBufferObject>
+  call $~lib/map/Map<src-as/rendering/material/UniformBufferObject/UniformBufferObject,src-as/WebGL2/components/material/WebGLUniformBufferObject>#find
+  local.set $2
+  local.get $2
+  i32.eqz
+  if
+   i32.const 17200
+   i32.const 17264
+   i32.const 105
+   i32.const 17
+   call $~lib/builtins/abort
+   unreachable
+  end
+  local.get $2
+  i32.load offset=4
+ )
+ (func $src-as/WebGL2/systems/WebGLRenderSystem/WebGLRenderSystem#handleViewport (param $0 i32) (param $1 i32)
+  local.get $1
+  i32.load
+  local.get $1
+  i32.load offset=4
+  local.get $1
+  i32.load offset=8
+  local.get $1
+  i32.load offset=12
+  call $src-as/WebGL2/imports/_types/viewport
+ )
+ (func $src-as/WebGL2/systems/WebGLRenderSystem/WebGLRenderSystem#handlePrepareOpaque (param $0 i32)
+  global.get $src-as/WebGL2/imports/_constants/Toggle.DEPTH_TEST
+  call $src-as/WebGL2/imports/_types/enable
+  global.get $src-as/WebGL2/imports/_constants/Test.LEQUAL
+  call $src-as/WebGL2/imports/_types/depthFunc
+  global.get $src-as/WebGL2/imports/_constants/Toggle.BLEND
+  call $src-as/WebGL2/imports/_types/disable
+ )
+ (func $~lib/util/hash/HASH<src-as/components/Mesh/Mesh> (param $0 i32) (result i32)
+  (local $1 i32)
+  (local $2 i32)
+  (local $3 i32)
+  i32.const 0
+  drop
+  i32.const 1
+  drop
+  i32.const 4
+  i32.const 4
+  i32.eq
+  drop
+  local.get $0
+  local.set $1
+  i32.const 4
+  local.set $2
+  i32.const 0
+  i32.const 374761393
+  i32.add
+  local.get $2
+  i32.add
+  local.set $3
+  local.get $3
+  local.get $1
+  i32.const -1028477379
+  i32.mul
+  i32.add
+  local.set $3
+  local.get $3
+  i32.const 17
+  i32.rotl
+  i32.const 668265263
+  i32.mul
+  local.set $3
+  local.get $3
+  local.get $3
+  i32.const 15
+  i32.shr_u
+  i32.xor
+  local.set $3
+  local.get $3
+  i32.const -2048144777
+  i32.mul
+  local.set $3
+  local.get $3
+  local.get $3
+  i32.const 13
+  i32.shr_u
+  i32.xor
+  local.set $3
+  local.get $3
+  i32.const -1028477379
+  i32.mul
+  local.set $3
+  local.get $3
+  local.get $3
+  i32.const 16
+  i32.shr_u
+  i32.xor
+  local.set $3
+  local.get $3
+  return
+ )
+ (func $~lib/map/Map<src-as/components/Mesh/Mesh,src-as/WebGL2/components/mesh/WebGLMesh>#find (param $0 i32) (param $1 i32) (param $2 i32) (result i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  local.get $0
+  i32.load
+  local.get $2
+  local.get $0
+  i32.load offset=4
+  i32.and
+  i32.const 4
+  i32.mul
+  i32.add
+  i32.load
+  local.set $3
+  loop $while-continue|0
+   local.get $3
+   local.set $4
+   local.get $4
+   if
+    local.get $3
+    i32.load offset=8
+    local.set $5
+    local.get $5
+    i32.const 1
+    i32.and
+    i32.eqz
+    if (result i32)
+     local.get $3
+     i32.load
+     local.get $1
+     i32.eq
+    else
+     i32.const 0
+    end
+    if
+     local.get $3
+     return
+    end
+    local.get $5
+    i32.const 1
+    i32.const -1
+    i32.xor
+    i32.and
+    local.set $3
+    br $while-continue|0
+   end
+  end
+  i32.const 0
+ )
+ (func $~lib/map/Map<src-as/components/Mesh/Mesh,src-as/WebGL2/components/mesh/WebGLMesh>#get (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  local.get $0
+  local.get $1
+  local.get $1
+  call $~lib/util/hash/HASH<src-as/components/Mesh/Mesh>
+  call $~lib/map/Map<src-as/components/Mesh/Mesh,src-as/WebGL2/components/mesh/WebGLMesh>#find
+  local.set $2
+  local.get $2
+  i32.eqz
+  if
+   i32.const 17200
+   i32.const 17264
+   i32.const 105
+   i32.const 17
+   call $~lib/builtins/abort
+   unreachable
+  end
+  local.get $2
+  i32.load offset=4
+ )
+ (func $~lib/array/Array<src-as/WebGL2/components/material/WebGLUniform>#get:length (param $0 i32) (result i32)
+  local.get $0
+  i32.load offset=12
+ )
+ (func $src-as/WebGL2/components/material/WebGLUniform#apply (param $0 i32)
+  nop
+ )
+ (func $src-as/WebGL2/components/geometry/WebGLGeometry#set:vao (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=20
+ )
+ (func $src-as/WebGL2/components/geometry/WebGLGeometry#set:vaoSwap (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=24
+ )
+ (func $src-as/WebGL2/components/geometry/WebGLGeometry#set:feedback (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=28
+ )
+ (func $src-as/WebGL2/components/geometry/WebGLGeometry#set:feedbackSwap (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=32
+ )
+ (func $src-as/WebGL2/systems/WebGLGeometrySystem/WebGLGeometrySystem#render (param $0 i32) (param $1 i32)
+  (local $2 externref)
+  (local $3 i32)
+  local.get $1
+  i32.load offset=20
+  call $src-as/imports/_host/get
+  local.set $2
+  local.get $2
+  call $src-as/WebGL2/imports/_types/bindVertexArray
+  local.get $1
+  i32.load offset=28
+  if
+   global.get $src-as/WebGL2/imports/_constants/Parameter.RASTERIZER_DISCARD
+   call $src-as/WebGL2/imports/_types/enable
+   global.get $src-as/WebGL2/imports/_constants/TransformFeedback.TRANSFORM_FEEDBACK
+   local.get $1
+   i32.load offset=28
+   call $src-as/imports/_host/get
+   call $src-as/WebGL2/imports/_types/bindTransformFeedback
+   global.get $src-as/WebGL2/imports/_constants/Primitive.POINTS
+   call $src-as/WebGL2/imports/_types/beginTransformFeedback
+   global.get $src-as/WebGL2/imports/_constants/Primitive.POINTS
+   i32.const 0
+   local.get $1
+   i32.load offset=8
+   call $src-as/WebGL2/imports/_types/drawArrays
+   global.get $src-as/WebGL2/imports/_constants/Parameter.RASTERIZER_DISCARD
+   call $src-as/WebGL2/imports/_types/disable
+   call $src-as/WebGL2/imports/_types/endTransformFeedback
+   global.get $src-as/WebGL2/imports/_constants/TransformFeedback.TRANSFORM_FEEDBACK
+   ref.null extern
+   call $src-as/WebGL2/imports/_types/bindTransformFeedback
+  else
+   local.get $1
+   i32.load offset=12
+   i32.const 0
+   i32.gt_u
+   if (result i32)
+    local.get $1
+    i32.load8_u offset=16
+   else
+    i32.const 0
+   end
+   if
+    local.get $1
+    i32.load
+    local.get $1
+    i32.load offset=8
+    global.get $src-as/WebGL2/imports/_constants/DataType.UNSIGNED_SHORT
+    i32.const 0
+    local.get $1
+    i32.load offset=12
+    call $src-as/WebGL2/imports/_types/drawElementsInstanced
+   else
+    local.get $1
+    i32.load offset=12
+    i32.const 0
+    i32.gt_u
+    if
+     local.get $1
+     i32.load
+     i32.const 0
+     local.get $1
+     i32.load offset=8
+     local.get $1
+     i32.load offset=12
+     call $src-as/WebGL2/imports/_types/drawArraysInstanced
+    else
+     local.get $1
+     i32.load8_u offset=16
+     if
+      local.get $1
+      i32.load
+      local.get $1
+      i32.load offset=8
+      global.get $src-as/WebGL2/imports/_constants/DataType.UNSIGNED_SHORT
+      i32.const 0
+      call $src-as/WebGL2/imports/_types/drawElements
+     else
+      local.get $1
+      i32.load
+      i32.const 0
+      local.get $1
+      i32.load offset=8
+      call $src-as/WebGL2/imports/_types/drawArrays
+     end
+    end
+   end
+  end
+  ref.null extern
+  call $src-as/WebGL2/imports/_types/bindVertexArray
+  local.get $1
+  i32.load offset=24
+  if
+   local.get $1
+   i32.load offset=20
+   local.set $3
+   local.get $1
+   local.get $1
+   i32.load offset=24
+   call $src-as/WebGL2/components/geometry/WebGLGeometry#set:vao
+   local.get $1
+   local.get $3
+   call $src-as/WebGL2/components/geometry/WebGLGeometry#set:vaoSwap
+  end
+  local.get $1
+  i32.load offset=32
+  if
+   local.get $1
+   i32.load offset=28
+   local.set $3
+   local.get $1
+   local.get $1
+   i32.load offset=32
+   call $src-as/WebGL2/components/geometry/WebGLGeometry#set:feedback
+   local.get $1
+   local.get $3
+   call $src-as/WebGL2/components/geometry/WebGLGeometry#set:feedbackSwap
+  end
+ )
+ (func $src-as/WebGL2/systems/WebGLRenderSystem/WebGLRenderSystem#handlePrepareTransparent (param $0 i32)
+  global.get $src-as/WebGL2/imports/_constants/Toggle.BLEND
+  call $src-as/WebGL2/imports/_types/enable
+  global.get $src-as/WebGL2/imports/_constants/Blend.SRC_ALPHA
+  global.get $src-as/WebGL2/imports/_constants/Blend.ONE_MINUS_SRC_ALPHA
+  call $src-as/WebGL2/imports/_types/blendFunc
+  global.get $src-as/WebGL2/imports/_constants/Toggle.DEPTH_TEST
+  call $src-as/WebGL2/imports/_types/disable
+ )
  (func $~lib/util/hash/HASH<src-as/rendering/shader/Shader/Shader> (param $0 i32) (result i32)
   (local $1 i32)
   (local $2 i32)
@@ -20089,8 +21409,8 @@
   local.get $2
   i32.eqz
   if
-   i32.const 17088
-   i32.const 17152
+   i32.const 17200
+   i32.const 17264
    i32.const 105
    i32.const 17
    call $~lib/builtins/abort
@@ -20419,8 +21739,8 @@
   local.get $2
   i32.eqz
   if
-   i32.const 17088
-   i32.const 17152
+   i32.const 17200
+   i32.const 17264
    i32.const 105
    i32.const 17
    call $~lib/builtins/abort
@@ -20594,8 +21914,8 @@
   local.get $2
   i32.eqz
   if
-   i32.const 17088
-   i32.const 17152
+   i32.const 17200
+   i32.const 17264
    i32.const 105
    i32.const 17
    call $~lib/builtins/abort
@@ -20930,26 +22250,6 @@
   call $~lib/array/Array<src-as/WebGL2/components/geometry/WebGLAttribute>#set:length_
   local.get $3
  )
- (func $src-as/WebGL2/components/geometry/WebGLGeometry#set:vao (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=20
- )
- (func $src-as/WebGL2/components/geometry/WebGLGeometry#set:vaoSwap (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=24
- )
- (func $src-as/WebGL2/components/geometry/WebGLGeometry#set:feedback (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=28
- )
- (func $src-as/WebGL2/components/geometry/WebGLGeometry#set:feedbackSwap (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=32
- )
  (func $src-as/WebGL2/components/geometry/WebGLGeometry#set:attributes (param $0 i32) (param $1 i32)
   local.get $0
   local.get $1
@@ -21270,8 +22570,8 @@
   local.get $2
   i32.eqz
   if
-   i32.const 17088
-   i32.const 17152
+   i32.const 17200
+   i32.const 17264
    i32.const 105
    i32.const 17
    call $~lib/builtins/abort
@@ -21283,149 +22583,6 @@
  (func $~lib/array/Array<src-as/rendering/material/UniformBufferObject/UniformBufferObject>#get:length (param $0 i32) (result i32)
   local.get $0
   i32.load offset=12
- )
- (func $~lib/util/hash/HASH<src-as/rendering/material/UniformBufferObject/UniformBufferObject> (param $0 i32) (result i32)
-  (local $1 i32)
-  (local $2 i32)
-  (local $3 i32)
-  i32.const 0
-  drop
-  i32.const 1
-  drop
-  i32.const 4
-  i32.const 4
-  i32.eq
-  drop
-  local.get $0
-  local.set $1
-  i32.const 4
-  local.set $2
-  i32.const 0
-  i32.const 374761393
-  i32.add
-  local.get $2
-  i32.add
-  local.set $3
-  local.get $3
-  local.get $1
-  i32.const -1028477379
-  i32.mul
-  i32.add
-  local.set $3
-  local.get $3
-  i32.const 17
-  i32.rotl
-  i32.const 668265263
-  i32.mul
-  local.set $3
-  local.get $3
-  local.get $3
-  i32.const 15
-  i32.shr_u
-  i32.xor
-  local.set $3
-  local.get $3
-  i32.const -2048144777
-  i32.mul
-  local.set $3
-  local.get $3
-  local.get $3
-  i32.const 13
-  i32.shr_u
-  i32.xor
-  local.set $3
-  local.get $3
-  i32.const -1028477379
-  i32.mul
-  local.set $3
-  local.get $3
-  local.get $3
-  i32.const 16
-  i32.shr_u
-  i32.xor
-  local.set $3
-  local.get $3
-  return
- )
- (func $~lib/map/Map<src-as/rendering/material/UniformBufferObject/UniformBufferObject,src-as/WebGL2/components/material/WebGLUniformBufferObject>#find (param $0 i32) (param $1 i32) (param $2 i32) (result i32)
-  (local $3 i32)
-  (local $4 i32)
-  (local $5 i32)
-  local.get $0
-  i32.load
-  local.get $2
-  local.get $0
-  i32.load offset=4
-  i32.and
-  i32.const 4
-  i32.mul
-  i32.add
-  i32.load
-  local.set $3
-  loop $while-continue|0
-   local.get $3
-   local.set $4
-   local.get $4
-   if
-    local.get $3
-    i32.load offset=8
-    local.set $5
-    local.get $5
-    i32.const 1
-    i32.and
-    i32.eqz
-    if (result i32)
-     local.get $3
-     i32.load
-     local.get $1
-     i32.eq
-    else
-     i32.const 0
-    end
-    if
-     local.get $3
-     return
-    end
-    local.get $5
-    i32.const 1
-    i32.const -1
-    i32.xor
-    i32.and
-    local.set $3
-    br $while-continue|0
-   end
-  end
-  i32.const 0
- )
- (func $~lib/map/Map<src-as/rendering/material/UniformBufferObject/UniformBufferObject,src-as/WebGL2/components/material/WebGLUniformBufferObject>#has (param $0 i32) (param $1 i32) (result i32)
-  local.get $0
-  local.get $1
-  local.get $1
-  call $~lib/util/hash/HASH<src-as/rendering/material/UniformBufferObject/UniformBufferObject>
-  call $~lib/map/Map<src-as/rendering/material/UniformBufferObject/UniformBufferObject,src-as/WebGL2/components/material/WebGLUniformBufferObject>#find
-  i32.const 0
-  i32.ne
- )
- (func $~lib/map/Map<src-as/rendering/material/UniformBufferObject/UniformBufferObject,src-as/WebGL2/components/material/WebGLUniformBufferObject>#get (param $0 i32) (param $1 i32) (result i32)
-  (local $2 i32)
-  local.get $0
-  local.get $1
-  local.get $1
-  call $~lib/util/hash/HASH<src-as/rendering/material/UniformBufferObject/UniformBufferObject>
-  call $~lib/map/Map<src-as/rendering/material/UniformBufferObject/UniformBufferObject,src-as/WebGL2/components/material/WebGLUniformBufferObject>#find
-  local.set $2
-  local.get $2
-  i32.eqz
-  if
-   i32.const 17088
-   i32.const 17152
-   i32.const 105
-   i32.const 17
-   call $~lib/builtins/abort
-   unreachable
-  end
-  local.get $2
-  i32.load offset=4
  )
  (func $~lib/array/Array<~lib/string/String>#set:buffer (param $0 i32) (param $1 i32)
   local.get $0
@@ -21749,14 +22906,14 @@
   global.get $~lib/memory/__stack_pointer
   local.get $1
   local.tee $2
-  i32.const 145
+  i32.const 148
   call $~lib/rt/__instanceof
   if (result i32)
    local.get $2
   else
-   i32.const 17648
-   i32.const 19616
-   i32.const 96
+   i32.const 17760
+   i32.const 19872
+   i32.const 98
    i32.const 19
    call $~lib/builtins/abort
    unreachable
@@ -21877,14 +23034,14 @@
     i32.const 100
     i32.rem_u
     local.set $7
-    i32.const 19932
+    i32.const 20188
     local.get $6
     i32.const 2
     i32.shl
     i32.add
     i64.load32_u
     local.set $8
-    i32.const 19932
+    i32.const 20188
     local.get $7
     i32.const 2
     i32.shl
@@ -21927,7 +23084,7 @@
    i32.const 2
    i32.sub
    local.set $2
-   i32.const 19932
+   i32.const 20188
    local.get $10
    i32.const 2
    i32.shl
@@ -21950,7 +23107,7 @@
    i32.const 2
    i32.sub
    local.set $2
-   i32.const 19932
+   i32.const 20188
    local.get $1
    i32.const 2
    i32.shl
@@ -22000,7 +23157,7 @@
     i32.const 1
     i32.shl
     i32.add
-    i32.const 20352
+    i32.const 20608
     local.get $1
     i32.wrap_i64
     i32.const 255
@@ -22022,7 +23179,7 @@
   i32.and
   if
    local.get $0
-   i32.const 20352
+   i32.const 20608
    local.get $1
    i32.wrap_i64
    i32.const 6
@@ -22144,7 +23301,7 @@
     i32.const 1
     i32.shl
     i32.add
-    i32.const 21408
+    i32.const 21664
     local.get $1
     local.get $6
     i64.and
@@ -22178,7 +23335,7 @@
     i32.const 1
     i32.shl
     i32.add
-    i32.const 21408
+    i32.const 21664
     local.get $1
     local.get $6
     local.get $4
@@ -22456,119 +23613,6 @@
   i32.const 0
   call $~lib/rt/itcms/__link
  )
- (func $~lib/util/hash/HASH<src-as/components/Mesh/Mesh> (param $0 i32) (result i32)
-  (local $1 i32)
-  (local $2 i32)
-  (local $3 i32)
-  i32.const 0
-  drop
-  i32.const 1
-  drop
-  i32.const 4
-  i32.const 4
-  i32.eq
-  drop
-  local.get $0
-  local.set $1
-  i32.const 4
-  local.set $2
-  i32.const 0
-  i32.const 374761393
-  i32.add
-  local.get $2
-  i32.add
-  local.set $3
-  local.get $3
-  local.get $1
-  i32.const -1028477379
-  i32.mul
-  i32.add
-  local.set $3
-  local.get $3
-  i32.const 17
-  i32.rotl
-  i32.const 668265263
-  i32.mul
-  local.set $3
-  local.get $3
-  local.get $3
-  i32.const 15
-  i32.shr_u
-  i32.xor
-  local.set $3
-  local.get $3
-  i32.const -2048144777
-  i32.mul
-  local.set $3
-  local.get $3
-  local.get $3
-  i32.const 13
-  i32.shr_u
-  i32.xor
-  local.set $3
-  local.get $3
-  i32.const -1028477379
-  i32.mul
-  local.set $3
-  local.get $3
-  local.get $3
-  i32.const 16
-  i32.shr_u
-  i32.xor
-  local.set $3
-  local.get $3
-  return
- )
- (func $~lib/map/Map<src-as/components/Mesh/Mesh,src-as/WebGL2/components/mesh/WebGLMesh>#find (param $0 i32) (param $1 i32) (param $2 i32) (result i32)
-  (local $3 i32)
-  (local $4 i32)
-  (local $5 i32)
-  local.get $0
-  i32.load
-  local.get $2
-  local.get $0
-  i32.load offset=4
-  i32.and
-  i32.const 4
-  i32.mul
-  i32.add
-  i32.load
-  local.set $3
-  loop $while-continue|0
-   local.get $3
-   local.set $4
-   local.get $4
-   if
-    local.get $3
-    i32.load offset=8
-    local.set $5
-    local.get $5
-    i32.const 1
-    i32.and
-    i32.eqz
-    if (result i32)
-     local.get $3
-     i32.load
-     local.get $1
-     i32.eq
-    else
-     i32.const 0
-    end
-    if
-     local.get $3
-     return
-    end
-    local.get $5
-    i32.const 1
-    i32.const -1
-    i32.xor
-    i32.and
-    local.set $3
-    br $while-continue|0
-   end
-  end
-  i32.const 0
- )
  (func $~lib/map/MapEntry<src-as/components/Mesh/Mesh,src-as/WebGL2/components/mesh/WebGLMesh>#set:value (param $0 i32) (param $1 i32)
   local.get $0
   local.get $1
@@ -22727,234 +23771,6 @@
   i32.add
   global.set $~lib/memory/__stack_pointer
  )
- (func $src-as/math/PolarCoords/PolarCoords#set:radius (param $0 i32) (param $1 f32)
-  local.get $0
-  local.get $1
-  f32.store offset=4
- )
- (func $src-as/math/PolarCoords/PolarCoords#set:angle (param $0 i32) (param $1 f32)
-  local.get $0
-  local.get $1
-  f32.store
- )
- (func $src-as/math/Vector2/Vector2.fromPolar (param $0 i32) (param $1 i32) (result i32)
-  local.get $1
-  local.get $0
-  f32.load
-  call $~lib/math/NativeMathf.cos
-  local.get $0
-  f32.load offset=4
-  f32.mul
-  call $src-as/math/Vector2/Vector2#set:x
-  local.get $1
-  local.get $0
-  f32.load
-  call $~lib/math/NativeMathf.sin
-  local.get $0
-  f32.load offset=4
-  f32.mul
-  call $src-as/math/Vector2/Vector2#set:y
-  local.get $1
- )
- (func $src-as/math/Vector2/Vector2#set:m (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store
-  local.get $0
-  local.get $1
-  i32.const 0
-  call $~lib/rt/itcms/__link
- )
- (func $src-as/math/Vector2/Vector2#toVector3 (param $0 i32) (param $1 i32) (result i32)
-  local.get $1
-  local.get $0
-  call $src-as/math/Vector2/Vector2#get:x
-  call $src-as/math/Vector3/Vector3#set:x
-  local.get $1
-  local.get $0
-  call $src-as/math/Vector2/Vector2#get:y
-  call $src-as/math/Vector3/Vector3#set:y
-  local.get $1
-  f32.const 0
-  call $src-as/math/Vector3/Vector3#set:z
-  local.get $1
- )
- (func $src-as/WebGL2/systems/WebGLRenderSystem/WebGLRenderSystem#handleViewport (param $0 i32) (param $1 i32)
-  local.get $1
-  i32.load
-  local.get $1
-  i32.load offset=4
-  local.get $1
-  i32.load offset=8
-  local.get $1
-  i32.load offset=12
-  call $src-as/WebGL2/imports/_types/viewport
- )
- (func $src-as/WebGL2/systems/WebGLRenderSystem/WebGLRenderSystem#handlePrepareOpaque (param $0 i32)
-  global.get $src-as/WebGL2/imports/_constants/Toggle.DEPTH_TEST
-  call $src-as/WebGL2/imports/_types/enable
-  global.get $src-as/WebGL2/imports/_constants/Test.LEQUAL
-  call $src-as/WebGL2/imports/_types/depthFunc
-  global.get $src-as/WebGL2/imports/_constants/Toggle.BLEND
-  call $src-as/WebGL2/imports/_types/disable
- )
- (func $~lib/map/Map<src-as/components/Mesh/Mesh,src-as/WebGL2/components/mesh/WebGLMesh>#get (param $0 i32) (param $1 i32) (result i32)
-  (local $2 i32)
-  local.get $0
-  local.get $1
-  local.get $1
-  call $~lib/util/hash/HASH<src-as/components/Mesh/Mesh>
-  call $~lib/map/Map<src-as/components/Mesh/Mesh,src-as/WebGL2/components/mesh/WebGLMesh>#find
-  local.set $2
-  local.get $2
-  i32.eqz
-  if
-   i32.const 17088
-   i32.const 17152
-   i32.const 105
-   i32.const 17
-   call $~lib/builtins/abort
-   unreachable
-  end
-  local.get $2
-  i32.load offset=4
- )
- (func $~lib/array/Array<src-as/WebGL2/components/material/WebGLUniform>#get:length (param $0 i32) (result i32)
-  local.get $0
-  i32.load offset=12
- )
- (func $src-as/WebGL2/components/material/WebGLUniform#apply (param $0 i32)
-  nop
- )
- (func $src-as/WebGL2/systems/WebGLGeometrySystem/WebGLGeometrySystem#render (param $0 i32) (param $1 i32)
-  (local $2 externref)
-  (local $3 i32)
-  local.get $1
-  i32.load offset=20
-  call $src-as/imports/_host/get
-  local.set $2
-  local.get $2
-  call $src-as/WebGL2/imports/_types/bindVertexArray
-  local.get $1
-  i32.load offset=28
-  if
-   global.get $src-as/WebGL2/imports/_constants/Parameter.RASTERIZER_DISCARD
-   call $src-as/WebGL2/imports/_types/enable
-   global.get $src-as/WebGL2/imports/_constants/TransformFeedback.TRANSFORM_FEEDBACK
-   local.get $1
-   i32.load offset=28
-   call $src-as/imports/_host/get
-   call $src-as/WebGL2/imports/_types/bindTransformFeedback
-   global.get $src-as/WebGL2/imports/_constants/Primitive.POINTS
-   call $src-as/WebGL2/imports/_types/beginTransformFeedback
-   global.get $src-as/WebGL2/imports/_constants/Primitive.POINTS
-   i32.const 0
-   local.get $1
-   i32.load offset=8
-   call $src-as/WebGL2/imports/_types/drawArrays
-   global.get $src-as/WebGL2/imports/_constants/Parameter.RASTERIZER_DISCARD
-   call $src-as/WebGL2/imports/_types/disable
-   call $src-as/WebGL2/imports/_types/endTransformFeedback
-   global.get $src-as/WebGL2/imports/_constants/TransformFeedback.TRANSFORM_FEEDBACK
-   ref.null extern
-   call $src-as/WebGL2/imports/_types/bindTransformFeedback
-  else
-   local.get $1
-   i32.load offset=12
-   i32.const 0
-   i32.gt_u
-   if (result i32)
-    local.get $1
-    i32.load8_u offset=16
-   else
-    i32.const 0
-   end
-   if
-    local.get $1
-    i32.load
-    local.get $1
-    i32.load offset=8
-    global.get $src-as/WebGL2/imports/_constants/DataType.UNSIGNED_SHORT
-    i32.const 0
-    local.get $1
-    i32.load offset=12
-    call $src-as/WebGL2/imports/_types/drawElementsInstanced
-   else
-    local.get $1
-    i32.load offset=12
-    i32.const 0
-    i32.gt_u
-    if
-     local.get $1
-     i32.load
-     i32.const 0
-     local.get $1
-     i32.load offset=8
-     local.get $1
-     i32.load offset=12
-     call $src-as/WebGL2/imports/_types/drawArraysInstanced
-    else
-     local.get $1
-     i32.load8_u offset=16
-     if
-      local.get $1
-      i32.load
-      local.get $1
-      i32.load offset=8
-      global.get $src-as/WebGL2/imports/_constants/DataType.UNSIGNED_SHORT
-      i32.const 0
-      call $src-as/WebGL2/imports/_types/drawElements
-     else
-      local.get $1
-      i32.load
-      i32.const 0
-      local.get $1
-      i32.load offset=8
-      call $src-as/WebGL2/imports/_types/drawArrays
-     end
-    end
-   end
-  end
-  ref.null extern
-  call $src-as/WebGL2/imports/_types/bindVertexArray
-  local.get $1
-  i32.load offset=24
-  if
-   local.get $1
-   i32.load offset=20
-   local.set $3
-   local.get $1
-   local.get $1
-   i32.load offset=24
-   call $src-as/WebGL2/components/geometry/WebGLGeometry#set:vao
-   local.get $1
-   local.get $3
-   call $src-as/WebGL2/components/geometry/WebGLGeometry#set:vaoSwap
-  end
-  local.get $1
-  i32.load offset=32
-  if
-   local.get $1
-   i32.load offset=28
-   local.set $3
-   local.get $1
-   local.get $1
-   i32.load offset=32
-   call $src-as/WebGL2/components/geometry/WebGLGeometry#set:feedback
-   local.get $1
-   local.get $3
-   call $src-as/WebGL2/components/geometry/WebGLGeometry#set:feedbackSwap
-  end
- )
- (func $src-as/WebGL2/systems/WebGLRenderSystem/WebGLRenderSystem#handlePrepareTransparent (param $0 i32)
-  global.get $src-as/WebGL2/imports/_constants/Toggle.BLEND
-  call $src-as/WebGL2/imports/_types/enable
-  global.get $src-as/WebGL2/imports/_constants/Blend.SRC_ALPHA
-  global.get $src-as/WebGL2/imports/_constants/Blend.ONE_MINUS_SRC_ALPHA
-  call $src-as/WebGL2/imports/_types/blendFunc
-  global.get $src-as/WebGL2/imports/_constants/Toggle.DEPTH_TEST
-  call $src-as/WebGL2/imports/_types/disable
- )
  (func $src-as/WebGL2/components/material/WebGLTextureUniform#apply (param $0 i32)
   local.get $0
   i32.load
@@ -22962,6 +23778,82 @@
   local.get $0
   i32.load offset=4
   call $src-as/WebGL2/imports/_types/uniform1i
+ )
+ (func $src-as/base/System/System#update@virtual (param $0 i32)
+  (local $1 i32)
+  block $default
+   block $case6
+    block $case5
+     block $case4
+      block $case3
+       block $case2
+        block $case1
+         block $case0
+          local.get $0
+          i32.const 8
+          i32.sub
+          i32.load
+          local.set $1
+          local.get $1
+          i32.const 85
+          i32.eq
+          br_if $case0
+          local.get $1
+          i32.const 68
+          i32.eq
+          br_if $case1
+          local.get $1
+          i32.const 90
+          i32.eq
+          br_if $case2
+          local.get $1
+          i32.const 93
+          i32.eq
+          br_if $case3
+          local.get $1
+          i32.const 98
+          i32.eq
+          br_if $case4
+          local.get $1
+          i32.const 101
+          i32.eq
+          br_if $case5
+          local.get $1
+          i32.const 100
+          i32.eq
+          br_if $case6
+          br $default
+         end
+         local.get $0
+         call $src-as/base/System/ListenerSystem#update
+         return
+        end
+        local.get $0
+        call $src-as/base/systems/BehaviorSystem/BehaviorSystem#update
+        return
+       end
+       local.get $0
+       call $src-as/base/systems/InputSystem/InputSystem#update
+       return
+      end
+      local.get $0
+      call $src-as/base/systems/TransformSystem/TransformSystem#update
+      return
+     end
+     local.get $0
+     call $src-as/base/systems/TimeSystem/TimeSystem#update
+     return
+    end
+    local.get $0
+    call $src-as/rendering/systems/RenderSystem/RenderSystem#update
+    return
+   end
+   local.get $0
+   call $src-as/WebGL2/systems/WebGLRenderSystem/WebGLRenderSystem#update
+   return
+  end
+  local.get $0
+  call $src-as/base/System/System#update
  )
  (func $src-as/base/Query/Query#addEntity@virtual (param $0 i32) (param $1 i32)
   (local $2 i32)
@@ -23045,7 +23937,7 @@
     i32.load
     local.set $1
     local.get $1
-    i32.const 136
+    i32.const 142
     i32.eq
     br_if $case0
     br $default
@@ -23057,83 +23949,41 @@
   local.get $0
   call $src-as/base/Component/BehaviorComponent#start
  )
- (func $src-as/base/System/System#update@virtual (param $0 i32)
-  (local $1 i32)
+ (func $src-as/base/Query/Query#removeEntity@virtual (param $0 i32) (param $1 i32)
+  (local $2 i32)
   block $default
-   block $case6
-    block $case5
-     block $case4
-      block $case3
-       block $case2
-        block $case1
-         block $case0
-          local.get $0
-          i32.const 8
-          i32.sub
-          i32.load
-          local.set $1
-          local.get $1
-          i32.const 85
-          i32.eq
-          br_if $case0
-          local.get $1
-          i32.const 68
-          i32.eq
-          br_if $case1
-          local.get $1
-          i32.const 90
-          i32.eq
-          br_if $case2
-          local.get $1
-          i32.const 93
-          i32.eq
-          br_if $case3
-          local.get $1
-          i32.const 98
-          i32.eq
-          br_if $case4
-          local.get $1
-          i32.const 101
-          i32.eq
-          br_if $case5
-          local.get $1
-          i32.const 100
-          i32.eq
-          br_if $case6
-          br $default
-         end
-         local.get $0
-         call $src-as/base/System/ListenerSystem#update
-         return
-        end
-        local.get $0
-        call $src-as/base/systems/BehaviorSystem/BehaviorSystem#update
-        return
-       end
-       local.get $0
-       call $src-as/base/systems/InputSystem/InputSystem#update
-       return
-      end
-      local.get $0
-      call $src-as/base/systems/TransformSystem/TransformSystem#update
-      return
-     end
+   block $case1
+    block $case0
      local.get $0
-     call $src-as/base/systems/TimeSystem/TimeSystem#update
-     return
+     i32.const 8
+     i32.sub
+     i32.load
+     local.set $2
+     local.get $2
+     i32.const 96
+     i32.eq
+     br_if $case0
+     local.get $2
+     i32.const 105
+     i32.eq
+     br_if $case1
+     br $default
     end
     local.get $0
-    call $src-as/rendering/systems/RenderSystem/RenderSystem#update
+    local.get $1
+    call $src-as/base/Query/TypedQuery<src-as/components/Transform/Transform>#removeEntity
     return
    end
    local.get $0
-   call $src-as/WebGL2/systems/WebGLRenderSystem/WebGLRenderSystem#update
+   local.get $1
+   call $src-as/base/Query/TypedQuery<src-as/components/Camera/Camera>#removeEntity
    return
   end
   local.get $0
-  call $src-as/base/System/System#update
+  local.get $1
+  call $src-as/base/Query/Query#removeEntity
  )
- (func $src-as/rendering/systems/RenderSystem/RenderSystem#handleCreateMesh@virtual (param $0 i32) (param $1 i32)
+ (func $src-as/base/System/ListenerSystem#onRemove@virtual (param $0 i32) (param $1 i32)
   (local $2 i32)
   block $default
    block $case0
@@ -23143,19 +23993,19 @@
     i32.load
     local.set $2
     local.get $2
-    i32.const 100
+    i32.const 93
     i32.eq
     br_if $case0
     br $default
    end
    local.get $0
    local.get $1
-   call $src-as/WebGL2/systems/WebGLRenderSystem/WebGLRenderSystem#handleCreateMesh
+   call $src-as/base/systems/TransformSystem/TransformSystem#onRemove
    return
   end
   local.get $0
   local.get $1
-  call $src-as/rendering/systems/RenderSystem/RenderSystem#handleCreateMesh
+  call $src-as/base/System/ListenerSystem#onRemove
  )
  (func $src-as/base/Component/BehaviorComponent#update@virtual (param $0 i32)
   (local $1 i32)
@@ -23172,7 +24022,7 @@
      i32.eq
      br_if $case0
      local.get $1
-     i32.const 136
+     i32.const 142
      i32.eq
      br_if $case1
      br $default
@@ -23304,6 +24154,30 @@
   local.get $0
   call $src-as/rendering/systems/RenderSystem/RenderSystem#handlePrepareTransparent
  )
+ (func $src-as/rendering/systems/RenderSystem/RenderSystem#handleCreateMesh@virtual (param $0 i32) (param $1 i32)
+  (local $2 i32)
+  block $default
+   block $case0
+    local.get $0
+    i32.const 8
+    i32.sub
+    i32.load
+    local.set $2
+    local.get $2
+    i32.const 100
+    i32.eq
+    br_if $case0
+    br $default
+   end
+   local.get $0
+   local.get $1
+   call $src-as/WebGL2/systems/WebGLRenderSystem/WebGLRenderSystem#handleCreateMesh
+   return
+  end
+  local.get $0
+  local.get $1
+  call $src-as/rendering/systems/RenderSystem/RenderSystem#handleCreateMesh
+ )
  (func $src-as/WebGL2/components/material/WebGLUniform#apply@virtual (param $0 i32)
   (local $1 i32)
   block $default
@@ -23319,27 +24193,27 @@
          i32.load
          local.set $1
          local.get $1
-         i32.const 149
+         i32.const 152
          i32.eq
          br_if $case0
          local.get $1
-         i32.const 151
+         i32.const 154
          i32.eq
          br_if $case1
          local.get $1
-         i32.const 152
+         i32.const 155
          i32.eq
          br_if $case2
          local.get $1
-         i32.const 153
+         i32.const 156
          i32.eq
          br_if $case3
          local.get $1
-         i32.const 154
+         i32.const 157
          i32.eq
          br_if $case4
          local.get $1
-         i32.const 148
+         i32.const 151
          i32.eq
          br_if $case5
          br $default
@@ -23382,22 +24256,22 @@
   i32.const 4256
   local.get $0
   call $~lib/rt/itcms/__visit
-  i32.const 17088
+  i32.const 17200
   local.get $0
   call $~lib/rt/itcms/__visit
   i32.const 880
   local.get $0
   call $~lib/rt/itcms/__visit
-  i32.const 18032
+  i32.const 18240
   local.get $0
   call $~lib/rt/itcms/__visit
-  i32.const 18096
+  i32.const 18304
   local.get $0
   call $~lib/rt/itcms/__visit
-  i32.const 20352
+  i32.const 20608
   local.get $0
   call $~lib/rt/itcms/__visit
-  i32.const 21408
+  i32.const 21664
   local.get $0
   call $~lib/rt/itcms/__visit
   global.get $src-as/base/SystemPriority/rootSystemPriority
@@ -23547,6 +24421,13 @@
    local.get $0
    call $~lib/rt/itcms/__visit
   end
+  global.get $src-as/math/Texture/Texture.white
+  local.tee $1
+  if
+   local.get $1
+   local.get $0
+   call $~lib/rt/itcms/__visit
+  end
   global.get $src-as/math/Texture/Texture.testTexture
   local.tee $1
   if
@@ -23681,27 +24562,6 @@
    call $~lib/rt/itcms/__visit
   end
   global.get $src-as/rendering/shader/debugNormals/debugNormalsShader
-  local.tee $1
-  if
-   local.get $1
-   local.get $0
-   call $~lib/rt/itcms/__visit
-  end
-  global.get $src-as/rendering/shader/litShader/vert
-  local.tee $1
-  if
-   local.get $1
-   local.get $0
-   call $~lib/rt/itcms/__visit
-  end
-  global.get $src-as/rendering/shader/litShader/frag
-  local.tee $1
-  if
-   local.get $1
-   local.get $0
-   call $~lib/rt/itcms/__visit
-  end
-  global.get $src-as/rendering/shader/litShader/litShader
   local.tee $1
   if
    local.get $1
@@ -23849,48 +24709,6 @@
    call $~lib/rt/itcms/__visit
   end
   global.get $src-as/rendering/shader/transformFeedbackSimple/transformFeedbackSimpleShader
-  local.tee $1
-  if
-   local.get $1
-   local.get $0
-   call $~lib/rt/itcms/__visit
-  end
-  global.get $src-as/rendering/shader/unlit/vert
-  local.tee $1
-  if
-   local.get $1
-   local.get $0
-   call $~lib/rt/itcms/__visit
-  end
-  global.get $src-as/rendering/shader/unlit/frag
-  local.tee $1
-  if
-   local.get $1
-   local.get $0
-   call $~lib/rt/itcms/__visit
-  end
-  global.get $src-as/rendering/shader/unlit/unlitShader
-  local.tee $1
-  if
-   local.get $1
-   local.get $0
-   call $~lib/rt/itcms/__visit
-  end
-  global.get $src-as/rendering/shader/unlitVertexColors/vert
-  local.tee $1
-  if
-   local.get $1
-   local.get $0
-   call $~lib/rt/itcms/__visit
-  end
-  global.get $src-as/rendering/shader/unlitVertexColors/frag
-  local.tee $1
-  if
-   local.get $1
-   local.get $0
-   call $~lib/rt/itcms/__visit
-  end
-  global.get $src-as/rendering/shader/unlitVertexColors/unlitVertexColorShader
   local.tee $1
   if
    local.get $1
@@ -24129,6 +24947,69 @@
    call $~lib/rt/itcms/__visit
   end
   global.get $src-as/rendering/shader/glsl/utility/lightUtils
+  local.tee $1
+  if
+   local.get $1
+   local.get $0
+   call $~lib/rt/itcms/__visit
+  end
+  global.get $src-as/rendering/shader/lit/litShader/vert
+  local.tee $1
+  if
+   local.get $1
+   local.get $0
+   call $~lib/rt/itcms/__visit
+  end
+  global.get $src-as/rendering/shader/lit/litShader/frag
+  local.tee $1
+  if
+   local.get $1
+   local.get $0
+   call $~lib/rt/itcms/__visit
+  end
+  global.get $src-as/rendering/shader/lit/litShader/litShader
+  local.tee $1
+  if
+   local.get $1
+   local.get $0
+   call $~lib/rt/itcms/__visit
+  end
+  global.get $src-as/rendering/shader/unlit/unlit/vert
+  local.tee $1
+  if
+   local.get $1
+   local.get $0
+   call $~lib/rt/itcms/__visit
+  end
+  global.get $src-as/rendering/shader/unlit/unlit/frag
+  local.tee $1
+  if
+   local.get $1
+   local.get $0
+   call $~lib/rt/itcms/__visit
+  end
+  global.get $src-as/rendering/shader/unlit/unlit/unlitShader
+  local.tee $1
+  if
+   local.get $1
+   local.get $0
+   call $~lib/rt/itcms/__visit
+  end
+  global.get $src-as/rendering/shader/unlit/unlitVertexColors/vert
+  local.tee $1
+  if
+   local.get $1
+   local.get $0
+   call $~lib/rt/itcms/__visit
+  end
+  global.get $src-as/rendering/shader/unlit/unlitVertexColors/frag
+  local.tee $1
+  if
+   local.get $1
+   local.get $0
+   call $~lib/rt/itcms/__visit
+  end
+  global.get $src-as/rendering/shader/unlit/unlitVertexColors/unlitVertexColorShader
   local.tee $1
   if
    local.get $1
@@ -27763,10 +28644,77 @@
    call $~lib/rt/itcms/__visit
   end
  )
- (func $src-as/components/Rotator/Rotator~visit (param $0 i32) (param $1 i32)
+ (func $src-as/components/DirectionalLight/DirectionalLight~visit (param $0 i32) (param $1 i32)
+  (local $2 i32)
   local.get $0
   local.get $1
   call $src-as/base/Component/SpatialComponent~visit
+  local.get $0
+  i32.load offset=12
+  local.tee $2
+  if
+   local.get $2
+   local.get $1
+   call $~lib/rt/itcms/__visit
+  end
+  local.get $0
+  i32.load offset=16
+  local.tee $2
+  if
+   local.get $2
+   local.get $1
+   call $~lib/rt/itcms/__visit
+  end
+ )
+ (func $~lib/array/Array<src-as/base/Component/Component>#__visit (param $0 i32) (param $1 i32)
+  (local $2 i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  i32.const 1
+  drop
+  local.get $0
+  i32.load offset=4
+  local.set $2
+  local.get $2
+  local.get $0
+  i32.load offset=12
+  i32.const 2
+  i32.shl
+  i32.add
+  local.set $3
+  loop $while-continue|0
+   local.get $2
+   local.get $3
+   i32.lt_u
+   local.set $4
+   local.get $4
+   if
+    local.get $2
+    i32.load
+    local.set $5
+    local.get $5
+    if
+     local.get $5
+     local.get $1
+     call $~lib/rt/itcms/__visit
+    end
+    local.get $2
+    i32.const 4
+    i32.add
+    local.set $2
+    br $while-continue|0
+   end
+  end
+  local.get $0
+  i32.load
+  local.get $1
+  call $~lib/rt/itcms/__visit
+ )
+ (func $~lib/array/Array<src-as/base/Component/Component>~visit (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  call $~lib/array/Array<src-as/base/Component/Component>#__visit
  )
  (func $src-as/rendering/material/Material/StandardMaterial~visit (param $0 i32) (param $1 i32)
   (local $2 i32)
@@ -27794,6 +28742,39 @@
   local.get $0
   local.get $1
   call $src-as/rendering/material/Material/Material~visit
+ )
+ (func $src-as/rendering/material/Uniform/Uniform_texture~visit (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  call $src-as/rendering/material/Uniform/TypedUniform<src-as/math/Texture/Texture>~visit
+ )
+ (func $src-as/rendering/material/Uniform/TypedUniform<src-as/math/Texture/Texture>~visit (param $0 i32) (param $1 i32)
+  (local $2 i32)
+  local.get $0
+  local.get $1
+  call $src-as/rendering/material/Uniform/Uniform~visit
+  local.get $0
+  i32.load offset=12
+  local.tee $2
+  if
+   local.get $2
+   local.get $1
+   call $~lib/rt/itcms/__visit
+  end
+ )
+ (func $src-as/components/Rotator/Rotator~visit (param $0 i32) (param $1 i32)
+  (local $2 i32)
+  local.get $0
+  local.get $1
+  call $src-as/base/Component/SpatialComponent~visit
+  local.get $0
+  i32.load offset=16
+  local.tee $2
+  if
+   local.get $2
+   local.get $1
+   call $~lib/rt/itcms/__visit
+  end
  )
  (func $~lib/array/Array<src-as/base/Entity/Entity>#__visit (param $0 i32) (param $1 i32)
   (local $2 i32)
@@ -27873,25 +28854,6 @@
   local.get $1
   call $~lib/function/Function<%28src-as/WebGL2/components/geometry/WebGLAttribute%2Ci32%2C~lib/array/Array<src-as/WebGL2/components/geometry/WebGLAttribute>%29=>bool>#__visit
  )
- (func $src-as/rendering/material/Uniform/Uniform_texture~visit (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  call $src-as/rendering/material/Uniform/TypedUniform<src-as/math/Texture/Texture>~visit
- )
- (func $src-as/rendering/material/Uniform/TypedUniform<src-as/math/Texture/Texture>~visit (param $0 i32) (param $1 i32)
-  (local $2 i32)
-  local.get $0
-  local.get $1
-  call $src-as/rendering/material/Uniform/Uniform~visit
-  local.get $0
-  i32.load offset=12
-  local.tee $2
-  if
-   local.get $2
-   local.get $1
-   call $~lib/rt/itcms/__visit
-  end
- )
  (func $src-as/rendering/material/Uniform/Uniform_bitmap~visit (param $0 i32) (param $1 i32)
   local.get $0
   local.get $1
@@ -27955,898 +28917,910 @@
  )
  (func $~lib/rt/__visit_members (param $0 i32) (param $1 i32)
   block $invalid
-   block $src-as/math/PolarCoords/PolarCoords
-    block $src-as/WebGL2/components/material/WebGLUniform_mat4
-     block $src-as/WebGL2/components/material/WebGLUniform_vec4
-      block $src-as/WebGL2/components/material/WebGLUniform_vec3
-       block $src-as/WebGL2/components/material/WebGLUniform_vec2
-        block $src-as/WebGL2/components/material/WebGLUniform_typed<~lib/typedarray/Float32Array>
-         block $src-as/WebGL2/components/material/WebGLUniform_float
-          block $src-as/WebGL2/components/material/WebGLTextureUniform
-           block $src-as/rendering/material/Uniform/TypedUniform<src-as/math/Bitmap/Bitmap>
-            block $src-as/math/Bitmap/Bitmap
-             block $src-as/rendering/material/Uniform/Uniform_bitmap
-              block $src-as/rendering/material/Uniform/TypedUniform<src-as/math/Texture/Texture>
-               block $src-as/rendering/material/Uniform/Uniform_texture
-                block $~lib/function/Function<%28src-as/WebGL2/components/geometry/WebGLAttribute%2Ci32%2C~lib/array/Array<src-as/WebGL2/components/geometry/WebGLAttribute>%29=>bool>
-                 block $src-as/WebGL2/components/geometry/WebGLBindAttributeOptions
-                  block $src-as/WebGL2/components/geometry/WebGLVAOOptions
-                   block $~lib/array/Array<src-as/base/Entity/Entity>
-                    block $src-as/rendering/material/Material/SpatialMaterial
-                     block $src-as/rendering/material/Material/StandardMaterial
-                      block $src-as/components/Rotator/Rotator
-                       block $src-as/math/Color/Color
-                        block $~lib/function/Function<%28src-as/base/System/ListenerSystem%2Csrc-as/base/System/ListenerSystem%29=>i32>
-                         block $~lib/function/Function<%28src-as/base/System/System%2Csrc-as/base/System/System%29=>i32>
-                          block $~lib/map/Map<src-as/components/Mesh/Mesh,src-as/WebGL2/components/mesh/WebGLMesh>
-                           block $src-as/WebGL2/components/mesh/WebGLMesh
-                            block $~lib/map/Map<src-as/rendering/material/UniformBufferObject/UniformBufferObject,src-as/WebGL2/components/material/WebGLUniformBufferObject>
-                             block $src-as/WebGL2/systems/WebGLUniformBufferObjectSystem/WebGLUniformBufferObjectSystem
-                              block $~lib/map/Map<src-as/rendering/material/Material/Material,src-as/WebGL2/components/material/WebGLMaterial>
-                               block $~lib/array/Array<src-as/WebGL2/components/material/WebGLUniformBufferObject>
-                                block $src-as/WebGL2/components/material/WebGLUniformBufferObject
-                                 block $~lib/array/Array<src-as/WebGL2/components/material/WebGLUniform>
-                                  block $src-as/WebGL2/components/material/WebGLUniform
-                                   block $src-as/WebGL2/components/material/WebGLMaterial
-                                    block $src-as/WebGL2/systems/WebGLMaterialSystem/WebGLMaterialSystem
-                                     block $~lib/map/Map<src-as/rendering/geometry/Attribute/Attribute,src-as/WebGL2/components/geometry/WebGLAttribute>
-                                      block $~lib/map/Map<src-as/rendering/geometry/Geometry/Geometry,src-as/WebGL2/components/geometry/WebGLGeometry>
-                                       block $~lib/array/Array<src-as/WebGL2/components/geometry/WebGLAttribute>
-                                        block $src-as/WebGL2/components/geometry/WebGLAttribute
-                                         block $src-as/WebGL2/components/geometry/WebGLGeometry
-                                          block $src-as/WebGL2/systems/WebGLGeometrySystem/WebGLGeometrySystem
-                                           block $~lib/map/Map<src-as/rendering/shader/Shader/Shader,src-as/WebGL2/components/shader/WebGLShader>
-                                            block $src-as/WebGL2/components/shader/WebGLShader
-                                             block $src-as/WebGL2/systems/WebGLShaderSystem/WebGLShaderSystem
-                                              block $src-as/WebGL2/systems/WebGLMeshSystem/WebGLMeshSystem
-                                               block $src-as/rendering/systems/UniformBufferObjectSystem/UniformBufferObjectSystem
-                                                block $~lib/array/Array<src-as/components/Mesh/Mesh>
-                                                 block $~lib/array/Array<src-as/rendering/material/UniformBufferObject/UniformBufferObject>
-                                                  block $src-as/rendering/material/Material/Material
-                                                   block $src-as/components/Mesh/Mesh
-                                                    block $~lib/array/Array<src-as/components/Camera/Camera>
-                                                     block $src-as/base/Query/TypedQuery<src-as/components/Camera/Camera>
-                                                      block $src-as/utility/Viewport/Viewport
-                                                       block $src-as/base/Component/SpatialComponent
-                                                        block $src-as/components/Camera/Camera
-                                                         block $src-as/rendering/systems/RenderSystem/RenderSystem
-                                                          block $src-as/WebGL2/systems/WebGLRenderSystem/WebGLRenderSystem
-                                                           block $src-as/components/Time/Time
-                                                            block $src-as/base/systems/TimeSystem/TimeSystem
-                                                             block $~lib/array/Array<src-as/components/Transform/Transform>
-                                                              block $src-as/base/Query/TypedQuery<src-as/components/Transform/Transform>
-                                                               block $~lib/set/Set<src-as/components/Transform/Transform>
-                                                                block $src-as/components/Transform/Transform
-                                                                 block $src-as/base/systems/TransformSystem/TransformSystem
-                                                                  block $~lib/set/Set<i32>
-                                                                   block $src-as/math/Vector2/Vector2
-                                                                    block $src-as/base/systems/InputSystem/InputSystem
-                                                                     block $~lib/array/Array<src-as/base/Component/BehaviorComponent>
-                                                                      block $src-as/base/Component/BehaviorComponent
-                                                                       block $~lib/map/Map<u32,~lib/array/Array<src-as/base/System/ListenerSystem>>
-                                                                        block $~lib/array/Array<src-as/base/System/ListenerSystem>
-                                                                         block $src-as/base/System/ListenerSystem
-                                                                          block $src-as/base/ListenerSystemManager/ListenerSystemManager
-                                                                           block $~lib/map/Map<u32,~lib/array/Array<src-as/base/Query/Query>>
-                                                                            block $~lib/array/Array<src-as/base/Query/Query>
-                                                                             block $~lib/set/Set<src-as/base/Entity/Entity>
-                                                                              block $~lib/array/Array<u32>
-                                                                               block $src-as/base/Query/Query
-                                                                                block $src-as/base/QueryManager/QueryManager
-                                                                                 block $~lib/map/Map<u32,src-as/base/Object/ObjectBase>
-                                                                                  block $~lib/map/Map<u32,src-as/base/Entity/Entity>
-                                                                                   block $~lib/array/Array<src-as/base/System/System>
-                                                                                    block $~lib/map/Map<u32,src-as/base/Component/Component>
-                                                                                     block $src-as/base/Component/Component
-                                                                                      block $src-as/base/Entity/Entity
-                                                                                       block $src-as/base/World/World
-                                                                                        block $src-as/base/Object/ObjectBase
-                                                                                         block $src-as/base/System/System
-                                                                                          block $src-as/base/systems/BehaviorSystem/BehaviorSystem
-                                                                                           block $src-as/base/SystemPriority/SystemPriority
-                                                                                            block $~lib/array/Array<src-as/math/Vector1/Vector1>
-                                                                                             block $src-as/math/SharedBuffer/SharedBuffer_f32<src-as/math/Vector1/Vector1>
-                                                                                              block $src-as/math/Vector1/Vector1Base<~lib/typedarray/Float32Array,f32>
-                                                                                               block $src-as/math/Vector1/Vector1
-                                                                                                block $src-as/math/SharedBuffer/SharedBufferVector1
-                                                                                                 block $~lib/array/Array<src-as/math/Vector3/Vector3>
-                                                                                                  block $src-as/math/SharedBuffer/SharedBuffer_f32<src-as/math/Vector3/Vector3>
-                                                                                                   block $src-as/math/SharedBuffer/SharedBufferVector3
-                                                                                                    block $src-as/math/Texture/Texture
-                                                                                                     block $~lib/array/Array<~lib/string/String>
-                                                                                                      block $src-as/rendering/shader/Shader/Shader
-                                                                                                       block $~lib/array/Array<u16>
-                                                                                                        block $src-as/rendering/geometry/QuadGeometry/QuadGeometry
-                                                                                                         block $src-as/rendering/geometry/Attribute/TypedAttribute<~lib/typedarray/Uint8Array>
-                                                                                                          block $src-as/rendering/geometry/Attribute/Attribute_u8
-                                                                                                           block $src-as/rendering/geometry/Attribute/TypedAttribute<~lib/typedarray/Float32Array>
-                                                                                                            block $src-as/rendering/geometry/Attribute/Attribute_f32
-                                                                                                             block $~lib/array/Array<~lib/array/Array<u8>>
-                                                                                                              block $~lib/array/Array<u8>
-                                                                                                               block $~lib/array/Array<~lib/array/Array<f32>>
-                                                                                                                block $~lib/staticarray/StaticArray<u8>
-                                                                                                                 block $~lib/staticarray/StaticArray<u16>
-                                                                                                                  block $~lib/staticarray/StaticArray<f32>
-                                                                                                                   block $~lib/typedarray/Uint16Array
-                                                                                                                    block $~lib/array/Array<src-as/rendering/geometry/Attribute/Attribute>
-                                                                                                                     block $~lib/map/Map<~lib/string/String,src-as/rendering/geometry/Attribute/Attribute>
-                                                                                                                      block $src-as/rendering/geometry/Attribute/Attribute
-                                                                                                                       block $src-as/rendering/geometry/Geometry/Geometry
-                                                                                                                        block $src-as/rendering/geometry/Geometry/PositionGeometry
-                                                                                                                         block $src-as/rendering/geometry/Geometry/IndexGeometry
-                                                                                                                          block $src-as/rendering/geometry/Geometry/StandardGeometry
-                                                                                                                           block $src-as/rendering/material/Uniform/TypedUniform<~lib/typedarray/Float32Array>
-                                                                                                                            block $src-as/rendering/material/Uniform/Uniform_f32
-                                                                                                                             block $~lib/array/Array<i32>
-                                                                                                                              block $~lib/map/Map<~lib/string/String,src-as/rendering/material/Uniform/Uniform>
-                                                                                                                               block $~lib/array/Array<src-as/rendering/material/Uniform/Uniform>
-                                                                                                                                block $src-as/rendering/material/Uniform/Uniform
-                                                                                                                                 block $src-as/rendering/material/UniformBufferObject/UniformBufferObject
-                                                                                                                                  block $~lib/staticarray/StaticArray<~lib/string/String>
-                                                                                                                                   block $~lib/typedarray/Uint8Array
-                                                                                                                                    block $src-as/math/Color8/Color8
-                                                                                                                                     block $src-as/math/Vector3/Vector3
-                                                                                                                                      block $src-as/math/Matrix/Matrix
-                                                                                                                                       block $src-as/math/Quaternion/Quaternion
-                                                                                                                                        block $~lib/function/Function<%28~lib/typedarray/Float32Array%2Cf32%2Cf32%2Cf32%2Cf32%2Cf32%2Cf32%29=>~lib/typedarray/Float32Array>
-                                                                                                                                         block $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>~lib/typedarray/Float32Array>
-                                                                                                                                          block $~lib/function/Function<%28%29=>%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>~lib/typedarray/Float32Array>
-                                                                                                                                           block $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2Cf32%29=>~lib/typedarray/Float32Array>
-                                                                                                                                            block $~lib/function/Function<%28%29=>%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2Cf32%29=>~lib/typedarray/Float32Array>
-                                                                                                                                             block $~lib/function/Function<%28%29=>%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>~lib/typedarray/Float32Array>
-                                                                                                                                              block $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>bool>
-                                                                                                                                               block $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2Cf32%29=>~lib/typedarray/Float32Array>
-                                                                                                                                                block $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2Cf32%29=>~lib/typedarray/Float32Array>
-                                                                                                                                                 block $~lib/function/Function<%28~lib/typedarray/Float32Array%2Cf32%2Cf32%2Cf32%2Cf32%29=>~lib/typedarray/Float32Array>
-                                                                                                                                                  block $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>~lib/typedarray/Float32Array>
-                                                                                                                                                   block $~lib/function/Function<%28f32%2Cf32%2Cf32%2Cf32%29=>~lib/typedarray/Float32Array>
-                                                                                                                                                    block $~lib/function/Function<%28~lib/typedarray/Float32Array%29=>~lib/typedarray/Float32Array>
-                                                                                                                                                     block $~lib/function/Function<%28~lib/typedarray/Float32Array%29=>f32>
-                                                                                                                                                      block $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>f32>
-                                                                                                                                                       block $~lib/function/Function<%28f32%2Cf32%29=>f32>
-                                                                                                                                                        block $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>~lib/typedarray/Float32Array>
-                                                                                                                                                         block $~lib/function/Function<%28%29=>f32>
-                                                                                                                                                          block $~lib/array/Array<f32>
-                                                                                                                                                           block $~lib/typedarray/Float32Array
-                                                                                                                                                            block $~lib/arraybuffer/ArrayBufferView
-                                                                                                                                                             block $~lib/string/String
-                                                                                                                                                              block $~lib/arraybuffer/ArrayBuffer
-                                                                                                                                                               local.get $0
-                                                                                                                                                               i32.const 8
-                                                                                                                                                               i32.sub
-                                                                                                                                                               i32.load
-                                                                                                                                                               br_table $~lib/arraybuffer/ArrayBuffer $~lib/string/String $~lib/arraybuffer/ArrayBufferView $~lib/typedarray/Float32Array $~lib/array/Array<f32> $~lib/function/Function<%28%29=>f32> $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>~lib/typedarray/Float32Array> $~lib/function/Function<%28f32%2Cf32%29=>f32> $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>f32> $~lib/function/Function<%28~lib/typedarray/Float32Array%29=>f32> $~lib/function/Function<%28~lib/typedarray/Float32Array%29=>~lib/typedarray/Float32Array> $~lib/function/Function<%28f32%2Cf32%2Cf32%2Cf32%29=>~lib/typedarray/Float32Array> $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>~lib/typedarray/Float32Array> $~lib/function/Function<%28~lib/typedarray/Float32Array%2Cf32%2Cf32%2Cf32%2Cf32%29=>~lib/typedarray/Float32Array> $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2Cf32%29=>~lib/typedarray/Float32Array> $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2Cf32%29=>~lib/typedarray/Float32Array> $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>bool> $~lib/function/Function<%28%29=>%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>~lib/typedarray/Float32Array> $~lib/function/Function<%28%29=>%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2Cf32%29=>~lib/typedarray/Float32Array> $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2Cf32%29=>~lib/typedarray/Float32Array> $~lib/function/Function<%28%29=>%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>~lib/typedarray/Float32Array> $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>~lib/typedarray/Float32Array> $~lib/function/Function<%28~lib/typedarray/Float32Array%2Cf32%2Cf32%2Cf32%2Cf32%2Cf32%2Cf32%29=>~lib/typedarray/Float32Array> $src-as/math/Quaternion/Quaternion $src-as/math/Matrix/Matrix $src-as/math/Vector3/Vector3 $src-as/math/Color8/Color8 $~lib/typedarray/Uint8Array $~lib/staticarray/StaticArray<~lib/string/String> $src-as/rendering/material/UniformBufferObject/UniformBufferObject $src-as/rendering/material/Uniform/Uniform $~lib/array/Array<src-as/rendering/material/Uniform/Uniform> $~lib/map/Map<~lib/string/String,src-as/rendering/material/Uniform/Uniform> $~lib/array/Array<i32> $src-as/rendering/material/Uniform/Uniform_f32 $src-as/rendering/material/Uniform/TypedUniform<~lib/typedarray/Float32Array> $src-as/rendering/geometry/Geometry/StandardGeometry $src-as/rendering/geometry/Geometry/IndexGeometry $src-as/rendering/geometry/Geometry/PositionGeometry $src-as/rendering/geometry/Geometry/Geometry $src-as/rendering/geometry/Attribute/Attribute $~lib/map/Map<~lib/string/String,src-as/rendering/geometry/Attribute/Attribute> $~lib/array/Array<src-as/rendering/geometry/Attribute/Attribute> $~lib/typedarray/Uint16Array $~lib/staticarray/StaticArray<f32> $~lib/staticarray/StaticArray<u16> $~lib/staticarray/StaticArray<u8> $~lib/array/Array<~lib/array/Array<f32>> $~lib/array/Array<u8> $~lib/array/Array<~lib/array/Array<u8>> $src-as/rendering/geometry/Attribute/Attribute_f32 $src-as/rendering/geometry/Attribute/TypedAttribute<~lib/typedarray/Float32Array> $src-as/rendering/geometry/Attribute/Attribute_u8 $src-as/rendering/geometry/Attribute/TypedAttribute<~lib/typedarray/Uint8Array> $src-as/rendering/geometry/QuadGeometry/QuadGeometry $~lib/array/Array<u16> $src-as/rendering/shader/Shader/Shader $~lib/array/Array<~lib/string/String> $src-as/math/Texture/Texture $src-as/math/SharedBuffer/SharedBufferVector3 $src-as/math/SharedBuffer/SharedBuffer_f32<src-as/math/Vector3/Vector3> $~lib/array/Array<src-as/math/Vector3/Vector3> $src-as/math/SharedBuffer/SharedBufferVector1 $src-as/math/Vector1/Vector1 $src-as/math/Vector1/Vector1Base<~lib/typedarray/Float32Array,f32> $src-as/math/SharedBuffer/SharedBuffer_f32<src-as/math/Vector1/Vector1> $~lib/array/Array<src-as/math/Vector1/Vector1> $src-as/base/SystemPriority/SystemPriority $src-as/base/systems/BehaviorSystem/BehaviorSystem $src-as/base/System/System $src-as/base/Object/ObjectBase $src-as/base/World/World $src-as/base/Entity/Entity $src-as/base/Component/Component $~lib/map/Map<u32,src-as/base/Component/Component> $~lib/array/Array<src-as/base/System/System> $~lib/map/Map<u32,src-as/base/Entity/Entity> $~lib/map/Map<u32,src-as/base/Object/ObjectBase> $src-as/base/QueryManager/QueryManager $src-as/base/Query/Query $~lib/array/Array<u32> $~lib/set/Set<src-as/base/Entity/Entity> $~lib/array/Array<src-as/base/Query/Query> $~lib/map/Map<u32,~lib/array/Array<src-as/base/Query/Query>> $src-as/base/ListenerSystemManager/ListenerSystemManager $src-as/base/System/ListenerSystem $~lib/array/Array<src-as/base/System/ListenerSystem> $~lib/map/Map<u32,~lib/array/Array<src-as/base/System/ListenerSystem>> $src-as/base/Component/BehaviorComponent $~lib/array/Array<src-as/base/Component/BehaviorComponent> $src-as/base/systems/InputSystem/InputSystem $src-as/math/Vector2/Vector2 $~lib/set/Set<i32> $src-as/base/systems/TransformSystem/TransformSystem $src-as/components/Transform/Transform $~lib/set/Set<src-as/components/Transform/Transform> $src-as/base/Query/TypedQuery<src-as/components/Transform/Transform> $~lib/array/Array<src-as/components/Transform/Transform> $src-as/base/systems/TimeSystem/TimeSystem $src-as/components/Time/Time $src-as/WebGL2/systems/WebGLRenderSystem/WebGLRenderSystem $src-as/rendering/systems/RenderSystem/RenderSystem $src-as/components/Camera/Camera $src-as/base/Component/SpatialComponent $src-as/utility/Viewport/Viewport $src-as/base/Query/TypedQuery<src-as/components/Camera/Camera> $~lib/array/Array<src-as/components/Camera/Camera> $src-as/components/Mesh/Mesh $src-as/rendering/material/Material/Material $~lib/array/Array<src-as/rendering/material/UniformBufferObject/UniformBufferObject> $~lib/array/Array<src-as/components/Mesh/Mesh> $src-as/rendering/systems/UniformBufferObjectSystem/UniformBufferObjectSystem $src-as/WebGL2/systems/WebGLMeshSystem/WebGLMeshSystem $src-as/WebGL2/systems/WebGLShaderSystem/WebGLShaderSystem $src-as/WebGL2/components/shader/WebGLShader $~lib/map/Map<src-as/rendering/shader/Shader/Shader,src-as/WebGL2/components/shader/WebGLShader> $src-as/WebGL2/systems/WebGLGeometrySystem/WebGLGeometrySystem $src-as/WebGL2/components/geometry/WebGLGeometry $src-as/WebGL2/components/geometry/WebGLAttribute $~lib/array/Array<src-as/WebGL2/components/geometry/WebGLAttribute> $~lib/map/Map<src-as/rendering/geometry/Geometry/Geometry,src-as/WebGL2/components/geometry/WebGLGeometry> $~lib/map/Map<src-as/rendering/geometry/Attribute/Attribute,src-as/WebGL2/components/geometry/WebGLAttribute> $src-as/WebGL2/systems/WebGLMaterialSystem/WebGLMaterialSystem $src-as/WebGL2/components/material/WebGLMaterial $src-as/WebGL2/components/material/WebGLUniform $~lib/array/Array<src-as/WebGL2/components/material/WebGLUniform> $src-as/WebGL2/components/material/WebGLUniformBufferObject $~lib/array/Array<src-as/WebGL2/components/material/WebGLUniformBufferObject> $~lib/map/Map<src-as/rendering/material/Material/Material,src-as/WebGL2/components/material/WebGLMaterial> $src-as/WebGL2/systems/WebGLUniformBufferObjectSystem/WebGLUniformBufferObjectSystem $~lib/map/Map<src-as/rendering/material/UniformBufferObject/UniformBufferObject,src-as/WebGL2/components/material/WebGLUniformBufferObject> $src-as/WebGL2/components/mesh/WebGLMesh $~lib/map/Map<src-as/components/Mesh/Mesh,src-as/WebGL2/components/mesh/WebGLMesh> $~lib/function/Function<%28src-as/base/System/System%2Csrc-as/base/System/System%29=>i32> $~lib/function/Function<%28src-as/base/System/ListenerSystem%2Csrc-as/base/System/ListenerSystem%29=>i32> $src-as/math/Color/Color $src-as/components/Rotator/Rotator $src-as/rendering/material/Material/StandardMaterial $src-as/rendering/material/Material/SpatialMaterial $~lib/array/Array<src-as/base/Entity/Entity> $src-as/WebGL2/components/geometry/WebGLVAOOptions $src-as/WebGL2/components/geometry/WebGLBindAttributeOptions $~lib/function/Function<%28src-as/WebGL2/components/geometry/WebGLAttribute%2Ci32%2C~lib/array/Array<src-as/WebGL2/components/geometry/WebGLAttribute>%29=>bool> $src-as/rendering/material/Uniform/Uniform_texture $src-as/rendering/material/Uniform/TypedUniform<src-as/math/Texture/Texture> $src-as/rendering/material/Uniform/Uniform_bitmap $src-as/math/Bitmap/Bitmap $src-as/rendering/material/Uniform/TypedUniform<src-as/math/Bitmap/Bitmap> $src-as/WebGL2/components/material/WebGLTextureUniform $src-as/WebGL2/components/material/WebGLUniform_float $src-as/WebGL2/components/material/WebGLUniform_typed<~lib/typedarray/Float32Array> $src-as/WebGL2/components/material/WebGLUniform_vec2 $src-as/WebGL2/components/material/WebGLUniform_vec3 $src-as/WebGL2/components/material/WebGLUniform_vec4 $src-as/WebGL2/components/material/WebGLUniform_mat4 $src-as/math/PolarCoords/PolarCoords $invalid
+   block $src-as/WebGL2/components/material/WebGLUniform_mat4
+    block $src-as/WebGL2/components/material/WebGLUniform_vec4
+     block $src-as/WebGL2/components/material/WebGLUniform_vec3
+      block $src-as/WebGL2/components/material/WebGLUniform_vec2
+       block $src-as/WebGL2/components/material/WebGLUniform_typed<~lib/typedarray/Float32Array>
+        block $src-as/WebGL2/components/material/WebGLUniform_float
+         block $src-as/WebGL2/components/material/WebGLTextureUniform
+          block $src-as/rendering/material/Uniform/TypedUniform<src-as/math/Bitmap/Bitmap>
+           block $src-as/math/Bitmap/Bitmap
+            block $src-as/rendering/material/Uniform/Uniform_bitmap
+             block $~lib/function/Function<%28src-as/WebGL2/components/geometry/WebGLAttribute%2Ci32%2C~lib/array/Array<src-as/WebGL2/components/geometry/WebGLAttribute>%29=>bool>
+              block $src-as/WebGL2/components/geometry/WebGLBindAttributeOptions
+               block $src-as/WebGL2/components/geometry/WebGLVAOOptions
+                block $src-as/math/PolarCoords/PolarCoords
+                 block $~lib/array/Array<src-as/base/Entity/Entity>
+                  block $src-as/components/Rotator/Rotator
+                   block $src-as/rendering/material/Uniform/TypedUniform<src-as/math/Texture/Texture>
+                    block $src-as/rendering/material/Uniform/Uniform_texture
+                     block $src-as/rendering/material/Material/SpatialMaterial
+                      block $src-as/rendering/material/Material/StandardMaterial
+                       block $~lib/array/Array<src-as/base/Component/Component>
+                        block $src-as/components/DirectionalLight/DirectionalLight
+                         block $src-as/math/Color/Color
+                          block $~lib/function/Function<%28src-as/base/System/ListenerSystem%2Csrc-as/base/System/ListenerSystem%29=>i32>
+                           block $~lib/function/Function<%28src-as/base/System/System%2Csrc-as/base/System/System%29=>i32>
+                            block $~lib/map/Map<src-as/components/Mesh/Mesh,src-as/WebGL2/components/mesh/WebGLMesh>
+                             block $src-as/WebGL2/components/mesh/WebGLMesh
+                              block $~lib/map/Map<src-as/rendering/material/UniformBufferObject/UniformBufferObject,src-as/WebGL2/components/material/WebGLUniformBufferObject>
+                               block $src-as/WebGL2/systems/WebGLUniformBufferObjectSystem/WebGLUniformBufferObjectSystem
+                                block $~lib/map/Map<src-as/rendering/material/Material/Material,src-as/WebGL2/components/material/WebGLMaterial>
+                                 block $~lib/array/Array<src-as/WebGL2/components/material/WebGLUniformBufferObject>
+                                  block $src-as/WebGL2/components/material/WebGLUniformBufferObject
+                                   block $~lib/array/Array<src-as/WebGL2/components/material/WebGLUniform>
+                                    block $src-as/WebGL2/components/material/WebGLUniform
+                                     block $src-as/WebGL2/components/material/WebGLMaterial
+                                      block $src-as/WebGL2/systems/WebGLMaterialSystem/WebGLMaterialSystem
+                                       block $~lib/map/Map<src-as/rendering/geometry/Attribute/Attribute,src-as/WebGL2/components/geometry/WebGLAttribute>
+                                        block $~lib/map/Map<src-as/rendering/geometry/Geometry/Geometry,src-as/WebGL2/components/geometry/WebGLGeometry>
+                                         block $~lib/array/Array<src-as/WebGL2/components/geometry/WebGLAttribute>
+                                          block $src-as/WebGL2/components/geometry/WebGLAttribute
+                                           block $src-as/WebGL2/components/geometry/WebGLGeometry
+                                            block $src-as/WebGL2/systems/WebGLGeometrySystem/WebGLGeometrySystem
+                                             block $~lib/map/Map<src-as/rendering/shader/Shader/Shader,src-as/WebGL2/components/shader/WebGLShader>
+                                              block $src-as/WebGL2/components/shader/WebGLShader
+                                               block $src-as/WebGL2/systems/WebGLShaderSystem/WebGLShaderSystem
+                                                block $src-as/WebGL2/systems/WebGLMeshSystem/WebGLMeshSystem
+                                                 block $src-as/rendering/systems/UniformBufferObjectSystem/UniformBufferObjectSystem
+                                                  block $~lib/array/Array<src-as/components/Mesh/Mesh>
+                                                   block $~lib/array/Array<src-as/rendering/material/UniformBufferObject/UniformBufferObject>
+                                                    block $src-as/rendering/material/Material/Material
+                                                     block $src-as/components/Mesh/Mesh
+                                                      block $~lib/array/Array<src-as/components/Camera/Camera>
+                                                       block $src-as/base/Query/TypedQuery<src-as/components/Camera/Camera>
+                                                        block $src-as/utility/Viewport/Viewport
+                                                         block $src-as/base/Component/SpatialComponent
+                                                          block $src-as/components/Camera/Camera
+                                                           block $src-as/rendering/systems/RenderSystem/RenderSystem
+                                                            block $src-as/WebGL2/systems/WebGLRenderSystem/WebGLRenderSystem
+                                                             block $src-as/components/Time/Time
+                                                              block $src-as/base/systems/TimeSystem/TimeSystem
+                                                               block $~lib/array/Array<src-as/components/Transform/Transform>
+                                                                block $src-as/base/Query/TypedQuery<src-as/components/Transform/Transform>
+                                                                 block $~lib/set/Set<src-as/components/Transform/Transform>
+                                                                  block $src-as/components/Transform/Transform
+                                                                   block $src-as/base/systems/TransformSystem/TransformSystem
+                                                                    block $~lib/set/Set<i32>
+                                                                     block $src-as/math/Vector2/Vector2
+                                                                      block $src-as/base/systems/InputSystem/InputSystem
+                                                                       block $~lib/array/Array<src-as/base/Component/BehaviorComponent>
+                                                                        block $src-as/base/Component/BehaviorComponent
+                                                                         block $~lib/map/Map<u32,~lib/array/Array<src-as/base/System/ListenerSystem>>
+                                                                          block $~lib/array/Array<src-as/base/System/ListenerSystem>
+                                                                           block $src-as/base/System/ListenerSystem
+                                                                            block $src-as/base/ListenerSystemManager/ListenerSystemManager
+                                                                             block $~lib/map/Map<u32,~lib/array/Array<src-as/base/Query/Query>>
+                                                                              block $~lib/array/Array<src-as/base/Query/Query>
+                                                                               block $~lib/set/Set<src-as/base/Entity/Entity>
+                                                                                block $~lib/array/Array<u32>
+                                                                                 block $src-as/base/Query/Query
+                                                                                  block $src-as/base/QueryManager/QueryManager
+                                                                                   block $~lib/map/Map<u32,src-as/base/Object/ObjectBase>
+                                                                                    block $~lib/map/Map<u32,src-as/base/Entity/Entity>
+                                                                                     block $~lib/array/Array<src-as/base/System/System>
+                                                                                      block $~lib/map/Map<u32,src-as/base/Component/Component>
+                                                                                       block $src-as/base/Component/Component
+                                                                                        block $src-as/base/Entity/Entity
+                                                                                         block $src-as/base/World/World
+                                                                                          block $src-as/base/Object/ObjectBase
+                                                                                           block $src-as/base/System/System
+                                                                                            block $src-as/base/systems/BehaviorSystem/BehaviorSystem
+                                                                                             block $src-as/base/SystemPriority/SystemPriority
+                                                                                              block $~lib/array/Array<src-as/math/Vector1/Vector1>
+                                                                                               block $src-as/math/SharedBuffer/SharedBuffer_f32<src-as/math/Vector1/Vector1>
+                                                                                                block $src-as/math/Vector1/Vector1Base<~lib/typedarray/Float32Array,f32>
+                                                                                                 block $src-as/math/Vector1/Vector1
+                                                                                                  block $src-as/math/SharedBuffer/SharedBufferVector1
+                                                                                                   block $~lib/array/Array<src-as/math/Vector3/Vector3>
+                                                                                                    block $src-as/math/SharedBuffer/SharedBuffer_f32<src-as/math/Vector3/Vector3>
+                                                                                                     block $src-as/math/SharedBuffer/SharedBufferVector3
+                                                                                                      block $src-as/math/Texture/Texture
+                                                                                                       block $~lib/array/Array<~lib/string/String>
+                                                                                                        block $src-as/rendering/shader/Shader/Shader
+                                                                                                         block $~lib/array/Array<u16>
+                                                                                                          block $src-as/rendering/geometry/QuadGeometry/QuadGeometry
+                                                                                                           block $src-as/rendering/geometry/Attribute/TypedAttribute<~lib/typedarray/Uint8Array>
+                                                                                                            block $src-as/rendering/geometry/Attribute/Attribute_u8
+                                                                                                             block $src-as/rendering/geometry/Attribute/TypedAttribute<~lib/typedarray/Float32Array>
+                                                                                                              block $src-as/rendering/geometry/Attribute/Attribute_f32
+                                                                                                               block $~lib/array/Array<~lib/array/Array<u8>>
+                                                                                                                block $~lib/array/Array<u8>
+                                                                                                                 block $~lib/array/Array<~lib/array/Array<f32>>
+                                                                                                                  block $~lib/staticarray/StaticArray<u8>
+                                                                                                                   block $~lib/staticarray/StaticArray<u16>
+                                                                                                                    block $~lib/staticarray/StaticArray<f32>
+                                                                                                                     block $~lib/typedarray/Uint16Array
+                                                                                                                      block $~lib/array/Array<src-as/rendering/geometry/Attribute/Attribute>
+                                                                                                                       block $~lib/map/Map<~lib/string/String,src-as/rendering/geometry/Attribute/Attribute>
+                                                                                                                        block $src-as/rendering/geometry/Attribute/Attribute
+                                                                                                                         block $src-as/rendering/geometry/Geometry/Geometry
+                                                                                                                          block $src-as/rendering/geometry/Geometry/PositionGeometry
+                                                                                                                           block $src-as/rendering/geometry/Geometry/IndexGeometry
+                                                                                                                            block $src-as/rendering/geometry/Geometry/StandardGeometry
+                                                                                                                             block $src-as/rendering/material/Uniform/TypedUniform<~lib/typedarray/Float32Array>
+                                                                                                                              block $src-as/rendering/material/Uniform/Uniform_f32
+                                                                                                                               block $~lib/array/Array<i32>
+                                                                                                                                block $~lib/map/Map<~lib/string/String,src-as/rendering/material/Uniform/Uniform>
+                                                                                                                                 block $~lib/array/Array<src-as/rendering/material/Uniform/Uniform>
+                                                                                                                                  block $src-as/rendering/material/Uniform/Uniform
+                                                                                                                                   block $src-as/rendering/material/UniformBufferObject/UniformBufferObject
+                                                                                                                                    block $~lib/staticarray/StaticArray<~lib/string/String>
+                                                                                                                                     block $~lib/typedarray/Uint8Array
+                                                                                                                                      block $src-as/math/Color8/Color8
+                                                                                                                                       block $src-as/math/Vector3/Vector3
+                                                                                                                                        block $src-as/math/Matrix/Matrix
+                                                                                                                                         block $src-as/math/Quaternion/Quaternion
+                                                                                                                                          block $~lib/function/Function<%28~lib/typedarray/Float32Array%2Cf32%2Cf32%2Cf32%2Cf32%2Cf32%2Cf32%29=>~lib/typedarray/Float32Array>
+                                                                                                                                           block $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>~lib/typedarray/Float32Array>
+                                                                                                                                            block $~lib/function/Function<%28%29=>%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>~lib/typedarray/Float32Array>
+                                                                                                                                             block $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2Cf32%29=>~lib/typedarray/Float32Array>
+                                                                                                                                              block $~lib/function/Function<%28%29=>%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2Cf32%29=>~lib/typedarray/Float32Array>
+                                                                                                                                               block $~lib/function/Function<%28%29=>%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>~lib/typedarray/Float32Array>
+                                                                                                                                                block $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>bool>
+                                                                                                                                                 block $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2Cf32%29=>~lib/typedarray/Float32Array>
+                                                                                                                                                  block $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2Cf32%29=>~lib/typedarray/Float32Array>
+                                                                                                                                                   block $~lib/function/Function<%28~lib/typedarray/Float32Array%2Cf32%2Cf32%2Cf32%2Cf32%29=>~lib/typedarray/Float32Array>
+                                                                                                                                                    block $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>~lib/typedarray/Float32Array>
+                                                                                                                                                     block $~lib/function/Function<%28f32%2Cf32%2Cf32%2Cf32%29=>~lib/typedarray/Float32Array>
+                                                                                                                                                      block $~lib/function/Function<%28~lib/typedarray/Float32Array%29=>~lib/typedarray/Float32Array>
+                                                                                                                                                       block $~lib/function/Function<%28~lib/typedarray/Float32Array%29=>f32>
+                                                                                                                                                        block $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>f32>
+                                                                                                                                                         block $~lib/function/Function<%28f32%2Cf32%29=>f32>
+                                                                                                                                                          block $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>~lib/typedarray/Float32Array>
+                                                                                                                                                           block $~lib/function/Function<%28%29=>f32>
+                                                                                                                                                            block $~lib/array/Array<f32>
+                                                                                                                                                             block $~lib/typedarray/Float32Array
+                                                                                                                                                              block $~lib/arraybuffer/ArrayBufferView
+                                                                                                                                                               block $~lib/string/String
+                                                                                                                                                                block $~lib/arraybuffer/ArrayBuffer
+                                                                                                                                                                 local.get $0
+                                                                                                                                                                 i32.const 8
+                                                                                                                                                                 i32.sub
+                                                                                                                                                                 i32.load
+                                                                                                                                                                 br_table $~lib/arraybuffer/ArrayBuffer $~lib/string/String $~lib/arraybuffer/ArrayBufferView $~lib/typedarray/Float32Array $~lib/array/Array<f32> $~lib/function/Function<%28%29=>f32> $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>~lib/typedarray/Float32Array> $~lib/function/Function<%28f32%2Cf32%29=>f32> $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>f32> $~lib/function/Function<%28~lib/typedarray/Float32Array%29=>f32> $~lib/function/Function<%28~lib/typedarray/Float32Array%29=>~lib/typedarray/Float32Array> $~lib/function/Function<%28f32%2Cf32%2Cf32%2Cf32%29=>~lib/typedarray/Float32Array> $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>~lib/typedarray/Float32Array> $~lib/function/Function<%28~lib/typedarray/Float32Array%2Cf32%2Cf32%2Cf32%2Cf32%29=>~lib/typedarray/Float32Array> $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2Cf32%29=>~lib/typedarray/Float32Array> $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2Cf32%29=>~lib/typedarray/Float32Array> $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>bool> $~lib/function/Function<%28%29=>%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>~lib/typedarray/Float32Array> $~lib/function/Function<%28%29=>%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2Cf32%29=>~lib/typedarray/Float32Array> $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2Cf32%29=>~lib/typedarray/Float32Array> $~lib/function/Function<%28%29=>%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>~lib/typedarray/Float32Array> $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>~lib/typedarray/Float32Array> $~lib/function/Function<%28~lib/typedarray/Float32Array%2Cf32%2Cf32%2Cf32%2Cf32%2Cf32%2Cf32%29=>~lib/typedarray/Float32Array> $src-as/math/Quaternion/Quaternion $src-as/math/Matrix/Matrix $src-as/math/Vector3/Vector3 $src-as/math/Color8/Color8 $~lib/typedarray/Uint8Array $~lib/staticarray/StaticArray<~lib/string/String> $src-as/rendering/material/UniformBufferObject/UniformBufferObject $src-as/rendering/material/Uniform/Uniform $~lib/array/Array<src-as/rendering/material/Uniform/Uniform> $~lib/map/Map<~lib/string/String,src-as/rendering/material/Uniform/Uniform> $~lib/array/Array<i32> $src-as/rendering/material/Uniform/Uniform_f32 $src-as/rendering/material/Uniform/TypedUniform<~lib/typedarray/Float32Array> $src-as/rendering/geometry/Geometry/StandardGeometry $src-as/rendering/geometry/Geometry/IndexGeometry $src-as/rendering/geometry/Geometry/PositionGeometry $src-as/rendering/geometry/Geometry/Geometry $src-as/rendering/geometry/Attribute/Attribute $~lib/map/Map<~lib/string/String,src-as/rendering/geometry/Attribute/Attribute> $~lib/array/Array<src-as/rendering/geometry/Attribute/Attribute> $~lib/typedarray/Uint16Array $~lib/staticarray/StaticArray<f32> $~lib/staticarray/StaticArray<u16> $~lib/staticarray/StaticArray<u8> $~lib/array/Array<~lib/array/Array<f32>> $~lib/array/Array<u8> $~lib/array/Array<~lib/array/Array<u8>> $src-as/rendering/geometry/Attribute/Attribute_f32 $src-as/rendering/geometry/Attribute/TypedAttribute<~lib/typedarray/Float32Array> $src-as/rendering/geometry/Attribute/Attribute_u8 $src-as/rendering/geometry/Attribute/TypedAttribute<~lib/typedarray/Uint8Array> $src-as/rendering/geometry/QuadGeometry/QuadGeometry $~lib/array/Array<u16> $src-as/rendering/shader/Shader/Shader $~lib/array/Array<~lib/string/String> $src-as/math/Texture/Texture $src-as/math/SharedBuffer/SharedBufferVector3 $src-as/math/SharedBuffer/SharedBuffer_f32<src-as/math/Vector3/Vector3> $~lib/array/Array<src-as/math/Vector3/Vector3> $src-as/math/SharedBuffer/SharedBufferVector1 $src-as/math/Vector1/Vector1 $src-as/math/Vector1/Vector1Base<~lib/typedarray/Float32Array,f32> $src-as/math/SharedBuffer/SharedBuffer_f32<src-as/math/Vector1/Vector1> $~lib/array/Array<src-as/math/Vector1/Vector1> $src-as/base/SystemPriority/SystemPriority $src-as/base/systems/BehaviorSystem/BehaviorSystem $src-as/base/System/System $src-as/base/Object/ObjectBase $src-as/base/World/World $src-as/base/Entity/Entity $src-as/base/Component/Component $~lib/map/Map<u32,src-as/base/Component/Component> $~lib/array/Array<src-as/base/System/System> $~lib/map/Map<u32,src-as/base/Entity/Entity> $~lib/map/Map<u32,src-as/base/Object/ObjectBase> $src-as/base/QueryManager/QueryManager $src-as/base/Query/Query $~lib/array/Array<u32> $~lib/set/Set<src-as/base/Entity/Entity> $~lib/array/Array<src-as/base/Query/Query> $~lib/map/Map<u32,~lib/array/Array<src-as/base/Query/Query>> $src-as/base/ListenerSystemManager/ListenerSystemManager $src-as/base/System/ListenerSystem $~lib/array/Array<src-as/base/System/ListenerSystem> $~lib/map/Map<u32,~lib/array/Array<src-as/base/System/ListenerSystem>> $src-as/base/Component/BehaviorComponent $~lib/array/Array<src-as/base/Component/BehaviorComponent> $src-as/base/systems/InputSystem/InputSystem $src-as/math/Vector2/Vector2 $~lib/set/Set<i32> $src-as/base/systems/TransformSystem/TransformSystem $src-as/components/Transform/Transform $~lib/set/Set<src-as/components/Transform/Transform> $src-as/base/Query/TypedQuery<src-as/components/Transform/Transform> $~lib/array/Array<src-as/components/Transform/Transform> $src-as/base/systems/TimeSystem/TimeSystem $src-as/components/Time/Time $src-as/WebGL2/systems/WebGLRenderSystem/WebGLRenderSystem $src-as/rendering/systems/RenderSystem/RenderSystem $src-as/components/Camera/Camera $src-as/base/Component/SpatialComponent $src-as/utility/Viewport/Viewport $src-as/base/Query/TypedQuery<src-as/components/Camera/Camera> $~lib/array/Array<src-as/components/Camera/Camera> $src-as/components/Mesh/Mesh $src-as/rendering/material/Material/Material $~lib/array/Array<src-as/rendering/material/UniformBufferObject/UniformBufferObject> $~lib/array/Array<src-as/components/Mesh/Mesh> $src-as/rendering/systems/UniformBufferObjectSystem/UniformBufferObjectSystem $src-as/WebGL2/systems/WebGLMeshSystem/WebGLMeshSystem $src-as/WebGL2/systems/WebGLShaderSystem/WebGLShaderSystem $src-as/WebGL2/components/shader/WebGLShader $~lib/map/Map<src-as/rendering/shader/Shader/Shader,src-as/WebGL2/components/shader/WebGLShader> $src-as/WebGL2/systems/WebGLGeometrySystem/WebGLGeometrySystem $src-as/WebGL2/components/geometry/WebGLGeometry $src-as/WebGL2/components/geometry/WebGLAttribute $~lib/array/Array<src-as/WebGL2/components/geometry/WebGLAttribute> $~lib/map/Map<src-as/rendering/geometry/Geometry/Geometry,src-as/WebGL2/components/geometry/WebGLGeometry> $~lib/map/Map<src-as/rendering/geometry/Attribute/Attribute,src-as/WebGL2/components/geometry/WebGLAttribute> $src-as/WebGL2/systems/WebGLMaterialSystem/WebGLMaterialSystem $src-as/WebGL2/components/material/WebGLMaterial $src-as/WebGL2/components/material/WebGLUniform $~lib/array/Array<src-as/WebGL2/components/material/WebGLUniform> $src-as/WebGL2/components/material/WebGLUniformBufferObject $~lib/array/Array<src-as/WebGL2/components/material/WebGLUniformBufferObject> $~lib/map/Map<src-as/rendering/material/Material/Material,src-as/WebGL2/components/material/WebGLMaterial> $src-as/WebGL2/systems/WebGLUniformBufferObjectSystem/WebGLUniformBufferObjectSystem $~lib/map/Map<src-as/rendering/material/UniformBufferObject/UniformBufferObject,src-as/WebGL2/components/material/WebGLUniformBufferObject> $src-as/WebGL2/components/mesh/WebGLMesh $~lib/map/Map<src-as/components/Mesh/Mesh,src-as/WebGL2/components/mesh/WebGLMesh> $~lib/function/Function<%28src-as/base/System/System%2Csrc-as/base/System/System%29=>i32> $~lib/function/Function<%28src-as/base/System/ListenerSystem%2Csrc-as/base/System/ListenerSystem%29=>i32> $src-as/math/Color/Color $src-as/components/DirectionalLight/DirectionalLight $~lib/array/Array<src-as/base/Component/Component> $src-as/rendering/material/Material/StandardMaterial $src-as/rendering/material/Material/SpatialMaterial $src-as/rendering/material/Uniform/Uniform_texture $src-as/rendering/material/Uniform/TypedUniform<src-as/math/Texture/Texture> $src-as/components/Rotator/Rotator $~lib/array/Array<src-as/base/Entity/Entity> $src-as/math/PolarCoords/PolarCoords $src-as/WebGL2/components/geometry/WebGLVAOOptions $src-as/WebGL2/components/geometry/WebGLBindAttributeOptions $~lib/function/Function<%28src-as/WebGL2/components/geometry/WebGLAttribute%2Ci32%2C~lib/array/Array<src-as/WebGL2/components/geometry/WebGLAttribute>%29=>bool> $src-as/rendering/material/Uniform/Uniform_bitmap $src-as/math/Bitmap/Bitmap $src-as/rendering/material/Uniform/TypedUniform<src-as/math/Bitmap/Bitmap> $src-as/WebGL2/components/material/WebGLTextureUniform $src-as/WebGL2/components/material/WebGLUniform_float $src-as/WebGL2/components/material/WebGLUniform_typed<~lib/typedarray/Float32Array> $src-as/WebGL2/components/material/WebGLUniform_vec2 $src-as/WebGL2/components/material/WebGLUniform_vec3 $src-as/WebGL2/components/material/WebGLUniform_vec4 $src-as/WebGL2/components/material/WebGLUniform_mat4 $invalid
+                                                                                                                                                                end
+                                                                                                                                                                return
+                                                                                                                                                               end
+                                                                                                                                                               return
                                                                                                                                                               end
+                                                                                                                                                              local.get $0
+                                                                                                                                                              local.get $1
+                                                                                                                                                              call $~lib/arraybuffer/ArrayBufferView~visit
                                                                                                                                                               return
                                                                                                                                                              end
+                                                                                                                                                             local.get $0
+                                                                                                                                                             local.get $1
+                                                                                                                                                             call $~lib/typedarray/Float32Array~visit
                                                                                                                                                              return
                                                                                                                                                             end
                                                                                                                                                             local.get $0
                                                                                                                                                             local.get $1
-                                                                                                                                                            call $~lib/arraybuffer/ArrayBufferView~visit
+                                                                                                                                                            call $~lib/array/Array<f32>~visit
                                                                                                                                                             return
                                                                                                                                                            end
                                                                                                                                                            local.get $0
                                                                                                                                                            local.get $1
-                                                                                                                                                           call $~lib/typedarray/Float32Array~visit
+                                                                                                                                                           call $~lib/function/Function<%28%29=>f32>~visit
                                                                                                                                                            return
                                                                                                                                                           end
                                                                                                                                                           local.get $0
                                                                                                                                                           local.get $1
-                                                                                                                                                          call $~lib/array/Array<f32>~visit
+                                                                                                                                                          call $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>~lib/typedarray/Float32Array>~visit
                                                                                                                                                           return
                                                                                                                                                          end
                                                                                                                                                          local.get $0
                                                                                                                                                          local.get $1
-                                                                                                                                                         call $~lib/function/Function<%28%29=>f32>~visit
+                                                                                                                                                         call $~lib/function/Function<%28f32%2Cf32%29=>f32>~visit
                                                                                                                                                          return
                                                                                                                                                         end
                                                                                                                                                         local.get $0
                                                                                                                                                         local.get $1
-                                                                                                                                                        call $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>~lib/typedarray/Float32Array>~visit
+                                                                                                                                                        call $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>f32>~visit
                                                                                                                                                         return
                                                                                                                                                        end
                                                                                                                                                        local.get $0
                                                                                                                                                        local.get $1
-                                                                                                                                                       call $~lib/function/Function<%28f32%2Cf32%29=>f32>~visit
+                                                                                                                                                       call $~lib/function/Function<%28~lib/typedarray/Float32Array%29=>f32>~visit
                                                                                                                                                        return
                                                                                                                                                       end
                                                                                                                                                       local.get $0
                                                                                                                                                       local.get $1
-                                                                                                                                                      call $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>f32>~visit
+                                                                                                                                                      call $~lib/function/Function<%28~lib/typedarray/Float32Array%29=>~lib/typedarray/Float32Array>~visit
                                                                                                                                                       return
                                                                                                                                                      end
                                                                                                                                                      local.get $0
                                                                                                                                                      local.get $1
-                                                                                                                                                     call $~lib/function/Function<%28~lib/typedarray/Float32Array%29=>f32>~visit
+                                                                                                                                                     call $~lib/function/Function<%28f32%2Cf32%2Cf32%2Cf32%29=>~lib/typedarray/Float32Array>~visit
                                                                                                                                                      return
                                                                                                                                                     end
                                                                                                                                                     local.get $0
                                                                                                                                                     local.get $1
-                                                                                                                                                    call $~lib/function/Function<%28~lib/typedarray/Float32Array%29=>~lib/typedarray/Float32Array>~visit
+                                                                                                                                                    call $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>~lib/typedarray/Float32Array>~visit
                                                                                                                                                     return
                                                                                                                                                    end
                                                                                                                                                    local.get $0
                                                                                                                                                    local.get $1
-                                                                                                                                                   call $~lib/function/Function<%28f32%2Cf32%2Cf32%2Cf32%29=>~lib/typedarray/Float32Array>~visit
+                                                                                                                                                   call $~lib/function/Function<%28~lib/typedarray/Float32Array%2Cf32%2Cf32%2Cf32%2Cf32%29=>~lib/typedarray/Float32Array>~visit
                                                                                                                                                    return
                                                                                                                                                   end
                                                                                                                                                   local.get $0
                                                                                                                                                   local.get $1
-                                                                                                                                                  call $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>~lib/typedarray/Float32Array>~visit
+                                                                                                                                                  call $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2Cf32%29=>~lib/typedarray/Float32Array>~visit
                                                                                                                                                   return
                                                                                                                                                  end
                                                                                                                                                  local.get $0
                                                                                                                                                  local.get $1
-                                                                                                                                                 call $~lib/function/Function<%28~lib/typedarray/Float32Array%2Cf32%2Cf32%2Cf32%2Cf32%29=>~lib/typedarray/Float32Array>~visit
+                                                                                                                                                 call $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2Cf32%29=>~lib/typedarray/Float32Array>~visit
                                                                                                                                                  return
                                                                                                                                                 end
                                                                                                                                                 local.get $0
                                                                                                                                                 local.get $1
-                                                                                                                                                call $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2Cf32%29=>~lib/typedarray/Float32Array>~visit
+                                                                                                                                                call $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>bool>~visit
                                                                                                                                                 return
                                                                                                                                                end
                                                                                                                                                local.get $0
                                                                                                                                                local.get $1
-                                                                                                                                               call $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2Cf32%29=>~lib/typedarray/Float32Array>~visit
+                                                                                                                                               call $~lib/function/Function<%28%29=>%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>~lib/typedarray/Float32Array>~visit
                                                                                                                                                return
                                                                                                                                               end
                                                                                                                                               local.get $0
                                                                                                                                               local.get $1
-                                                                                                                                              call $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>bool>~visit
+                                                                                                                                              call $~lib/function/Function<%28%29=>%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2Cf32%29=>~lib/typedarray/Float32Array>~visit
                                                                                                                                               return
                                                                                                                                              end
                                                                                                                                              local.get $0
                                                                                                                                              local.get $1
-                                                                                                                                             call $~lib/function/Function<%28%29=>%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>~lib/typedarray/Float32Array>~visit
+                                                                                                                                             call $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2Cf32%29=>~lib/typedarray/Float32Array>~visit
                                                                                                                                              return
                                                                                                                                             end
                                                                                                                                             local.get $0
                                                                                                                                             local.get $1
-                                                                                                                                            call $~lib/function/Function<%28%29=>%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2Cf32%29=>~lib/typedarray/Float32Array>~visit
+                                                                                                                                            call $~lib/function/Function<%28%29=>%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>~lib/typedarray/Float32Array>~visit
                                                                                                                                             return
                                                                                                                                            end
                                                                                                                                            local.get $0
                                                                                                                                            local.get $1
-                                                                                                                                           call $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2Cf32%29=>~lib/typedarray/Float32Array>~visit
+                                                                                                                                           call $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>~lib/typedarray/Float32Array>~visit
                                                                                                                                            return
                                                                                                                                           end
                                                                                                                                           local.get $0
                                                                                                                                           local.get $1
-                                                                                                                                          call $~lib/function/Function<%28%29=>%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>~lib/typedarray/Float32Array>~visit
+                                                                                                                                          call $~lib/function/Function<%28~lib/typedarray/Float32Array%2Cf32%2Cf32%2Cf32%2Cf32%2Cf32%2Cf32%29=>~lib/typedarray/Float32Array>~visit
                                                                                                                                           return
                                                                                                                                          end
                                                                                                                                          local.get $0
                                                                                                                                          local.get $1
-                                                                                                                                         call $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>~lib/typedarray/Float32Array>~visit
+                                                                                                                                         call $src-as/math/Quaternion/Quaternion~visit
                                                                                                                                          return
                                                                                                                                         end
                                                                                                                                         local.get $0
                                                                                                                                         local.get $1
-                                                                                                                                        call $~lib/function/Function<%28~lib/typedarray/Float32Array%2Cf32%2Cf32%2Cf32%2Cf32%2Cf32%2Cf32%29=>~lib/typedarray/Float32Array>~visit
+                                                                                                                                        call $src-as/math/Matrix/Matrix~visit
                                                                                                                                         return
                                                                                                                                        end
                                                                                                                                        local.get $0
                                                                                                                                        local.get $1
-                                                                                                                                       call $src-as/math/Quaternion/Quaternion~visit
+                                                                                                                                       call $src-as/math/Vector3/Vector3~visit
                                                                                                                                        return
                                                                                                                                       end
                                                                                                                                       local.get $0
                                                                                                                                       local.get $1
-                                                                                                                                      call $src-as/math/Matrix/Matrix~visit
+                                                                                                                                      call $src-as/math/Color8/Color8~visit
                                                                                                                                       return
                                                                                                                                      end
                                                                                                                                      local.get $0
                                                                                                                                      local.get $1
-                                                                                                                                     call $src-as/math/Vector3/Vector3~visit
+                                                                                                                                     call $~lib/typedarray/Uint8Array~visit
                                                                                                                                      return
                                                                                                                                     end
                                                                                                                                     local.get $0
                                                                                                                                     local.get $1
-                                                                                                                                    call $src-as/math/Color8/Color8~visit
+                                                                                                                                    call $~lib/staticarray/StaticArray<~lib/string/String>~visit
                                                                                                                                     return
                                                                                                                                    end
                                                                                                                                    local.get $0
                                                                                                                                    local.get $1
-                                                                                                                                   call $~lib/typedarray/Uint8Array~visit
+                                                                                                                                   call $src-as/rendering/material/UniformBufferObject/UniformBufferObject~visit
                                                                                                                                    return
                                                                                                                                   end
                                                                                                                                   local.get $0
                                                                                                                                   local.get $1
-                                                                                                                                  call $~lib/staticarray/StaticArray<~lib/string/String>~visit
+                                                                                                                                  call $src-as/rendering/material/Uniform/Uniform~visit
                                                                                                                                   return
                                                                                                                                  end
                                                                                                                                  local.get $0
                                                                                                                                  local.get $1
-                                                                                                                                 call $src-as/rendering/material/UniformBufferObject/UniformBufferObject~visit
+                                                                                                                                 call $~lib/array/Array<src-as/rendering/material/Uniform/Uniform>~visit
                                                                                                                                  return
                                                                                                                                 end
                                                                                                                                 local.get $0
                                                                                                                                 local.get $1
-                                                                                                                                call $src-as/rendering/material/Uniform/Uniform~visit
+                                                                                                                                call $~lib/map/Map<~lib/string/String,src-as/rendering/material/Uniform/Uniform>~visit
                                                                                                                                 return
                                                                                                                                end
                                                                                                                                local.get $0
                                                                                                                                local.get $1
-                                                                                                                               call $~lib/array/Array<src-as/rendering/material/Uniform/Uniform>~visit
+                                                                                                                               call $~lib/array/Array<i32>~visit
                                                                                                                                return
                                                                                                                               end
                                                                                                                               local.get $0
                                                                                                                               local.get $1
-                                                                                                                              call $~lib/map/Map<~lib/string/String,src-as/rendering/material/Uniform/Uniform>~visit
+                                                                                                                              call $src-as/rendering/material/Uniform/Uniform_f32~visit
                                                                                                                               return
                                                                                                                              end
                                                                                                                              local.get $0
                                                                                                                              local.get $1
-                                                                                                                             call $~lib/array/Array<i32>~visit
+                                                                                                                             call $src-as/rendering/material/Uniform/TypedUniform<~lib/typedarray/Float32Array>~visit
                                                                                                                              return
                                                                                                                             end
                                                                                                                             local.get $0
                                                                                                                             local.get $1
-                                                                                                                            call $src-as/rendering/material/Uniform/Uniform_f32~visit
+                                                                                                                            call $src-as/rendering/geometry/Geometry/StandardGeometry~visit
                                                                                                                             return
                                                                                                                            end
                                                                                                                            local.get $0
                                                                                                                            local.get $1
-                                                                                                                           call $src-as/rendering/material/Uniform/TypedUniform<~lib/typedarray/Float32Array>~visit
+                                                                                                                           call $src-as/rendering/geometry/Geometry/IndexGeometry~visit
                                                                                                                            return
                                                                                                                           end
                                                                                                                           local.get $0
                                                                                                                           local.get $1
-                                                                                                                          call $src-as/rendering/geometry/Geometry/StandardGeometry~visit
+                                                                                                                          call $src-as/rendering/geometry/Geometry/PositionGeometry~visit
                                                                                                                           return
                                                                                                                          end
                                                                                                                          local.get $0
                                                                                                                          local.get $1
-                                                                                                                         call $src-as/rendering/geometry/Geometry/IndexGeometry~visit
+                                                                                                                         call $src-as/rendering/geometry/Geometry/Geometry~visit
                                                                                                                          return
                                                                                                                         end
                                                                                                                         local.get $0
                                                                                                                         local.get $1
-                                                                                                                        call $src-as/rendering/geometry/Geometry/PositionGeometry~visit
+                                                                                                                        call $src-as/rendering/geometry/Attribute/Attribute~visit
                                                                                                                         return
                                                                                                                        end
                                                                                                                        local.get $0
                                                                                                                        local.get $1
-                                                                                                                       call $src-as/rendering/geometry/Geometry/Geometry~visit
+                                                                                                                       call $~lib/map/Map<~lib/string/String,src-as/rendering/geometry/Attribute/Attribute>~visit
                                                                                                                        return
                                                                                                                       end
                                                                                                                       local.get $0
                                                                                                                       local.get $1
-                                                                                                                      call $src-as/rendering/geometry/Attribute/Attribute~visit
+                                                                                                                      call $~lib/array/Array<src-as/rendering/geometry/Attribute/Attribute>~visit
                                                                                                                       return
                                                                                                                      end
                                                                                                                      local.get $0
                                                                                                                      local.get $1
-                                                                                                                     call $~lib/map/Map<~lib/string/String,src-as/rendering/geometry/Attribute/Attribute>~visit
+                                                                                                                     call $~lib/typedarray/Uint16Array~visit
                                                                                                                      return
                                                                                                                     end
-                                                                                                                    local.get $0
-                                                                                                                    local.get $1
-                                                                                                                    call $~lib/array/Array<src-as/rendering/geometry/Attribute/Attribute>~visit
                                                                                                                     return
                                                                                                                    end
-                                                                                                                   local.get $0
-                                                                                                                   local.get $1
-                                                                                                                   call $~lib/typedarray/Uint16Array~visit
                                                                                                                    return
                                                                                                                   end
                                                                                                                   return
                                                                                                                  end
+                                                                                                                 local.get $0
+                                                                                                                 local.get $1
+                                                                                                                 call $~lib/array/Array<~lib/array/Array<f32>>~visit
                                                                                                                  return
                                                                                                                 end
+                                                                                                                local.get $0
+                                                                                                                local.get $1
+                                                                                                                call $~lib/array/Array<u8>~visit
                                                                                                                 return
                                                                                                                end
                                                                                                                local.get $0
                                                                                                                local.get $1
-                                                                                                               call $~lib/array/Array<~lib/array/Array<f32>>~visit
+                                                                                                               call $~lib/array/Array<~lib/array/Array<u8>>~visit
                                                                                                                return
                                                                                                               end
                                                                                                               local.get $0
                                                                                                               local.get $1
-                                                                                                              call $~lib/array/Array<u8>~visit
+                                                                                                              call $src-as/rendering/geometry/Attribute/Attribute_f32~visit
                                                                                                               return
                                                                                                              end
                                                                                                              local.get $0
                                                                                                              local.get $1
-                                                                                                             call $~lib/array/Array<~lib/array/Array<u8>>~visit
+                                                                                                             call $src-as/rendering/geometry/Attribute/TypedAttribute<~lib/typedarray/Float32Array>~visit
                                                                                                              return
                                                                                                             end
                                                                                                             local.get $0
                                                                                                             local.get $1
-                                                                                                            call $src-as/rendering/geometry/Attribute/Attribute_f32~visit
+                                                                                                            call $src-as/rendering/geometry/Attribute/Attribute_u8~visit
                                                                                                             return
                                                                                                            end
                                                                                                            local.get $0
                                                                                                            local.get $1
-                                                                                                           call $src-as/rendering/geometry/Attribute/TypedAttribute<~lib/typedarray/Float32Array>~visit
+                                                                                                           call $src-as/rendering/geometry/Attribute/TypedAttribute<~lib/typedarray/Uint8Array>~visit
                                                                                                            return
                                                                                                           end
                                                                                                           local.get $0
                                                                                                           local.get $1
-                                                                                                          call $src-as/rendering/geometry/Attribute/Attribute_u8~visit
+                                                                                                          call $src-as/rendering/geometry/QuadGeometry/QuadGeometry~visit
                                                                                                           return
                                                                                                          end
                                                                                                          local.get $0
                                                                                                          local.get $1
-                                                                                                         call $src-as/rendering/geometry/Attribute/TypedAttribute<~lib/typedarray/Uint8Array>~visit
+                                                                                                         call $~lib/array/Array<u16>~visit
                                                                                                          return
                                                                                                         end
                                                                                                         local.get $0
                                                                                                         local.get $1
-                                                                                                        call $src-as/rendering/geometry/QuadGeometry/QuadGeometry~visit
+                                                                                                        call $src-as/rendering/shader/Shader/Shader~visit
                                                                                                         return
                                                                                                        end
                                                                                                        local.get $0
                                                                                                        local.get $1
-                                                                                                       call $~lib/array/Array<u16>~visit
+                                                                                                       call $~lib/array/Array<~lib/string/String>~visit
                                                                                                        return
                                                                                                       end
                                                                                                       local.get $0
                                                                                                       local.get $1
-                                                                                                      call $src-as/rendering/shader/Shader/Shader~visit
+                                                                                                      call $src-as/math/Texture/Texture~visit
                                                                                                       return
                                                                                                      end
                                                                                                      local.get $0
                                                                                                      local.get $1
-                                                                                                     call $~lib/array/Array<~lib/string/String>~visit
+                                                                                                     call $src-as/math/SharedBuffer/SharedBufferVector3~visit
                                                                                                      return
                                                                                                     end
                                                                                                     local.get $0
                                                                                                     local.get $1
-                                                                                                    call $src-as/math/Texture/Texture~visit
+                                                                                                    call $src-as/math/SharedBuffer/SharedBuffer_f32<src-as/math/Vector3/Vector3>~visit
                                                                                                     return
                                                                                                    end
                                                                                                    local.get $0
                                                                                                    local.get $1
-                                                                                                   call $src-as/math/SharedBuffer/SharedBufferVector3~visit
+                                                                                                   call $~lib/array/Array<src-as/math/Vector3/Vector3>~visit
                                                                                                    return
                                                                                                   end
                                                                                                   local.get $0
                                                                                                   local.get $1
-                                                                                                  call $src-as/math/SharedBuffer/SharedBuffer_f32<src-as/math/Vector3/Vector3>~visit
+                                                                                                  call $src-as/math/SharedBuffer/SharedBufferVector1~visit
                                                                                                   return
                                                                                                  end
                                                                                                  local.get $0
                                                                                                  local.get $1
-                                                                                                 call $~lib/array/Array<src-as/math/Vector3/Vector3>~visit
+                                                                                                 call $src-as/math/Vector1/Vector1~visit
                                                                                                  return
                                                                                                 end
                                                                                                 local.get $0
                                                                                                 local.get $1
-                                                                                                call $src-as/math/SharedBuffer/SharedBufferVector1~visit
+                                                                                                call $src-as/math/Vector1/Vector1Base<~lib/typedarray/Float32Array,f32>~visit
                                                                                                 return
                                                                                                end
                                                                                                local.get $0
                                                                                                local.get $1
-                                                                                               call $src-as/math/Vector1/Vector1~visit
+                                                                                               call $src-as/math/SharedBuffer/SharedBuffer_f32<src-as/math/Vector1/Vector1>~visit
                                                                                                return
                                                                                               end
                                                                                               local.get $0
                                                                                               local.get $1
-                                                                                              call $src-as/math/Vector1/Vector1Base<~lib/typedarray/Float32Array,f32>~visit
+                                                                                              call $~lib/array/Array<src-as/math/Vector1/Vector1>~visit
                                                                                               return
                                                                                              end
-                                                                                             local.get $0
-                                                                                             local.get $1
-                                                                                             call $src-as/math/SharedBuffer/SharedBuffer_f32<src-as/math/Vector1/Vector1>~visit
                                                                                              return
                                                                                             end
                                                                                             local.get $0
                                                                                             local.get $1
-                                                                                            call $~lib/array/Array<src-as/math/Vector1/Vector1>~visit
+                                                                                            call $src-as/base/systems/BehaviorSystem/BehaviorSystem~visit
                                                                                             return
                                                                                            end
+                                                                                           local.get $0
+                                                                                           local.get $1
+                                                                                           call $src-as/base/System/System~visit
                                                                                            return
                                                                                           end
-                                                                                          local.get $0
-                                                                                          local.get $1
-                                                                                          call $src-as/base/systems/BehaviorSystem/BehaviorSystem~visit
                                                                                           return
                                                                                          end
                                                                                          local.get $0
                                                                                          local.get $1
-                                                                                         call $src-as/base/System/System~visit
+                                                                                         call $src-as/base/World/World~visit
                                                                                          return
                                                                                         end
+                                                                                        local.get $0
+                                                                                        local.get $1
+                                                                                        call $src-as/base/Entity/Entity~visit
                                                                                         return
                                                                                        end
                                                                                        local.get $0
                                                                                        local.get $1
-                                                                                       call $src-as/base/World/World~visit
+                                                                                       call $src-as/base/Component/Component~visit
                                                                                        return
                                                                                       end
                                                                                       local.get $0
                                                                                       local.get $1
-                                                                                      call $src-as/base/Entity/Entity~visit
+                                                                                      call $~lib/map/Map<u32,src-as/base/Component/Component>~visit
                                                                                       return
                                                                                      end
                                                                                      local.get $0
                                                                                      local.get $1
-                                                                                     call $src-as/base/Component/Component~visit
+                                                                                     call $~lib/array/Array<src-as/base/System/System>~visit
                                                                                      return
                                                                                     end
                                                                                     local.get $0
                                                                                     local.get $1
-                                                                                    call $~lib/map/Map<u32,src-as/base/Component/Component>~visit
+                                                                                    call $~lib/map/Map<u32,src-as/base/Entity/Entity>~visit
                                                                                     return
                                                                                    end
                                                                                    local.get $0
                                                                                    local.get $1
-                                                                                   call $~lib/array/Array<src-as/base/System/System>~visit
+                                                                                   call $~lib/map/Map<u32,src-as/base/Object/ObjectBase>~visit
                                                                                    return
                                                                                   end
                                                                                   local.get $0
                                                                                   local.get $1
-                                                                                  call $~lib/map/Map<u32,src-as/base/Entity/Entity>~visit
+                                                                                  call $src-as/base/QueryManager/QueryManager~visit
                                                                                   return
                                                                                  end
                                                                                  local.get $0
                                                                                  local.get $1
-                                                                                 call $~lib/map/Map<u32,src-as/base/Object/ObjectBase>~visit
+                                                                                 call $src-as/base/Query/Query~visit
                                                                                  return
                                                                                 end
                                                                                 local.get $0
                                                                                 local.get $1
-                                                                                call $src-as/base/QueryManager/QueryManager~visit
+                                                                                call $~lib/array/Array<u32>~visit
                                                                                 return
                                                                                end
                                                                                local.get $0
                                                                                local.get $1
-                                                                               call $src-as/base/Query/Query~visit
+                                                                               call $~lib/set/Set<src-as/base/Entity/Entity>~visit
                                                                                return
                                                                               end
                                                                               local.get $0
                                                                               local.get $1
-                                                                              call $~lib/array/Array<u32>~visit
+                                                                              call $~lib/array/Array<src-as/base/Query/Query>~visit
                                                                               return
                                                                              end
                                                                              local.get $0
                                                                              local.get $1
-                                                                             call $~lib/set/Set<src-as/base/Entity/Entity>~visit
+                                                                             call $~lib/map/Map<u32,~lib/array/Array<src-as/base/Query/Query>>~visit
                                                                              return
                                                                             end
                                                                             local.get $0
                                                                             local.get $1
-                                                                            call $~lib/array/Array<src-as/base/Query/Query>~visit
+                                                                            call $src-as/base/ListenerSystemManager/ListenerSystemManager~visit
                                                                             return
                                                                            end
                                                                            local.get $0
                                                                            local.get $1
-                                                                           call $~lib/map/Map<u32,~lib/array/Array<src-as/base/Query/Query>>~visit
+                                                                           call $src-as/base/System/ListenerSystem~visit
                                                                            return
                                                                           end
                                                                           local.get $0
                                                                           local.get $1
-                                                                          call $src-as/base/ListenerSystemManager/ListenerSystemManager~visit
+                                                                          call $~lib/array/Array<src-as/base/System/ListenerSystem>~visit
                                                                           return
                                                                          end
                                                                          local.get $0
                                                                          local.get $1
-                                                                         call $src-as/base/System/ListenerSystem~visit
+                                                                         call $~lib/map/Map<u32,~lib/array/Array<src-as/base/System/ListenerSystem>>~visit
                                                                          return
                                                                         end
                                                                         local.get $0
                                                                         local.get $1
-                                                                        call $~lib/array/Array<src-as/base/System/ListenerSystem>~visit
+                                                                        call $src-as/base/Component/BehaviorComponent~visit
                                                                         return
                                                                        end
                                                                        local.get $0
                                                                        local.get $1
-                                                                       call $~lib/map/Map<u32,~lib/array/Array<src-as/base/System/ListenerSystem>>~visit
+                                                                       call $~lib/array/Array<src-as/base/Component/BehaviorComponent>~visit
                                                                        return
                                                                       end
                                                                       local.get $0
                                                                       local.get $1
-                                                                      call $src-as/base/Component/BehaviorComponent~visit
+                                                                      call $src-as/base/systems/InputSystem/InputSystem~visit
                                                                       return
                                                                      end
                                                                      local.get $0
                                                                      local.get $1
-                                                                     call $~lib/array/Array<src-as/base/Component/BehaviorComponent>~visit
+                                                                     call $src-as/math/Vector2/Vector2~visit
                                                                      return
                                                                     end
                                                                     local.get $0
                                                                     local.get $1
-                                                                    call $src-as/base/systems/InputSystem/InputSystem~visit
+                                                                    call $~lib/set/Set<i32>~visit
                                                                     return
                                                                    end
                                                                    local.get $0
                                                                    local.get $1
-                                                                   call $src-as/math/Vector2/Vector2~visit
+                                                                   call $src-as/base/systems/TransformSystem/TransformSystem~visit
                                                                    return
                                                                   end
                                                                   local.get $0
                                                                   local.get $1
-                                                                  call $~lib/set/Set<i32>~visit
+                                                                  call $src-as/components/Transform/Transform~visit
                                                                   return
                                                                  end
                                                                  local.get $0
                                                                  local.get $1
-                                                                 call $src-as/base/systems/TransformSystem/TransformSystem~visit
+                                                                 call $~lib/set/Set<src-as/components/Transform/Transform>~visit
                                                                  return
                                                                 end
                                                                 local.get $0
                                                                 local.get $1
-                                                                call $src-as/components/Transform/Transform~visit
+                                                                call $src-as/base/Query/TypedQuery<src-as/components/Transform/Transform>~visit
                                                                 return
                                                                end
                                                                local.get $0
                                                                local.get $1
-                                                               call $~lib/set/Set<src-as/components/Transform/Transform>~visit
+                                                               call $~lib/array/Array<src-as/components/Transform/Transform>~visit
                                                                return
                                                               end
                                                               local.get $0
                                                               local.get $1
-                                                              call $src-as/base/Query/TypedQuery<src-as/components/Transform/Transform>~visit
+                                                              call $src-as/base/systems/TimeSystem/TimeSystem~visit
                                                               return
                                                              end
-                                                             local.get $0
-                                                             local.get $1
-                                                             call $~lib/array/Array<src-as/components/Transform/Transform>~visit
                                                              return
                                                             end
                                                             local.get $0
                                                             local.get $1
-                                                            call $src-as/base/systems/TimeSystem/TimeSystem~visit
+                                                            call $src-as/WebGL2/systems/WebGLRenderSystem/WebGLRenderSystem~visit
                                                             return
                                                            end
+                                                           local.get $0
+                                                           local.get $1
+                                                           call $src-as/rendering/systems/RenderSystem/RenderSystem~visit
                                                            return
                                                           end
                                                           local.get $0
                                                           local.get $1
-                                                          call $src-as/WebGL2/systems/WebGLRenderSystem/WebGLRenderSystem~visit
+                                                          call $src-as/components/Camera/Camera~visit
                                                           return
                                                          end
                                                          local.get $0
                                                          local.get $1
-                                                         call $src-as/rendering/systems/RenderSystem/RenderSystem~visit
+                                                         call $src-as/base/Component/SpatialComponent~visit
                                                          return
                                                         end
-                                                        local.get $0
-                                                        local.get $1
-                                                        call $src-as/components/Camera/Camera~visit
                                                         return
                                                        end
                                                        local.get $0
                                                        local.get $1
-                                                       call $src-as/base/Component/SpatialComponent~visit
+                                                       call $src-as/base/Query/TypedQuery<src-as/components/Camera/Camera>~visit
                                                        return
                                                       end
+                                                      local.get $0
+                                                      local.get $1
+                                                      call $~lib/array/Array<src-as/components/Camera/Camera>~visit
                                                       return
                                                      end
                                                      local.get $0
                                                      local.get $1
-                                                     call $src-as/base/Query/TypedQuery<src-as/components/Camera/Camera>~visit
+                                                     call $src-as/components/Mesh/Mesh~visit
                                                      return
                                                     end
                                                     local.get $0
                                                     local.get $1
-                                                    call $~lib/array/Array<src-as/components/Camera/Camera>~visit
+                                                    call $src-as/rendering/material/Material/Material~visit
                                                     return
                                                    end
                                                    local.get $0
                                                    local.get $1
-                                                   call $src-as/components/Mesh/Mesh~visit
+                                                   call $~lib/array/Array<src-as/rendering/material/UniformBufferObject/UniformBufferObject>~visit
                                                    return
                                                   end
                                                   local.get $0
                                                   local.get $1
-                                                  call $src-as/rendering/material/Material/Material~visit
+                                                  call $~lib/array/Array<src-as/components/Mesh/Mesh>~visit
                                                   return
                                                  end
-                                                 local.get $0
-                                                 local.get $1
-                                                 call $~lib/array/Array<src-as/rendering/material/UniformBufferObject/UniformBufferObject>~visit
                                                  return
                                                 end
                                                 local.get $0
                                                 local.get $1
-                                                call $~lib/array/Array<src-as/components/Mesh/Mesh>~visit
+                                                call $src-as/WebGL2/systems/WebGLMeshSystem/WebGLMeshSystem~visit
                                                 return
                                                end
+                                               local.get $0
+                                               local.get $1
+                                               call $src-as/WebGL2/systems/WebGLShaderSystem/WebGLShaderSystem~visit
                                                return
                                               end
-                                              local.get $0
-                                              local.get $1
-                                              call $src-as/WebGL2/systems/WebGLMeshSystem/WebGLMeshSystem~visit
                                               return
                                              end
                                              local.get $0
                                              local.get $1
-                                             call $src-as/WebGL2/systems/WebGLShaderSystem/WebGLShaderSystem~visit
+                                             call $~lib/map/Map<src-as/rendering/shader/Shader/Shader,src-as/WebGL2/components/shader/WebGLShader>~visit
                                              return
                                             end
+                                            local.get $0
+                                            local.get $1
+                                            call $src-as/WebGL2/systems/WebGLGeometrySystem/WebGLGeometrySystem~visit
                                             return
                                            end
                                            local.get $0
                                            local.get $1
-                                           call $~lib/map/Map<src-as/rendering/shader/Shader/Shader,src-as/WebGL2/components/shader/WebGLShader>~visit
+                                           call $src-as/WebGL2/components/geometry/WebGLGeometry~visit
                                            return
                                           end
                                           local.get $0
                                           local.get $1
-                                          call $src-as/WebGL2/systems/WebGLGeometrySystem/WebGLGeometrySystem~visit
+                                          call $src-as/WebGL2/components/geometry/WebGLAttribute~visit
                                           return
                                          end
                                          local.get $0
                                          local.get $1
-                                         call $src-as/WebGL2/components/geometry/WebGLGeometry~visit
+                                         call $~lib/array/Array<src-as/WebGL2/components/geometry/WebGLAttribute>~visit
                                          return
                                         end
                                         local.get $0
                                         local.get $1
-                                        call $src-as/WebGL2/components/geometry/WebGLAttribute~visit
+                                        call $~lib/map/Map<src-as/rendering/geometry/Geometry/Geometry,src-as/WebGL2/components/geometry/WebGLGeometry>~visit
                                         return
                                        end
                                        local.get $0
                                        local.get $1
-                                       call $~lib/array/Array<src-as/WebGL2/components/geometry/WebGLAttribute>~visit
+                                       call $~lib/map/Map<src-as/rendering/geometry/Attribute/Attribute,src-as/WebGL2/components/geometry/WebGLAttribute>~visit
                                        return
                                       end
                                       local.get $0
                                       local.get $1
-                                      call $~lib/map/Map<src-as/rendering/geometry/Geometry/Geometry,src-as/WebGL2/components/geometry/WebGLGeometry>~visit
+                                      call $src-as/WebGL2/systems/WebGLMaterialSystem/WebGLMaterialSystem~visit
                                       return
                                      end
                                      local.get $0
                                      local.get $1
-                                     call $~lib/map/Map<src-as/rendering/geometry/Attribute/Attribute,src-as/WebGL2/components/geometry/WebGLAttribute>~visit
+                                     call $src-as/WebGL2/components/material/WebGLMaterial~visit
                                      return
                                     end
-                                    local.get $0
-                                    local.get $1
-                                    call $src-as/WebGL2/systems/WebGLMaterialSystem/WebGLMaterialSystem~visit
                                     return
                                    end
                                    local.get $0
                                    local.get $1
-                                   call $src-as/WebGL2/components/material/WebGLMaterial~visit
+                                   call $~lib/array/Array<src-as/WebGL2/components/material/WebGLUniform>~visit
                                    return
                                   end
+                                  local.get $0
+                                  local.get $1
+                                  call $src-as/WebGL2/components/material/WebGLUniformBufferObject~visit
                                   return
                                  end
                                  local.get $0
                                  local.get $1
-                                 call $~lib/array/Array<src-as/WebGL2/components/material/WebGLUniform>~visit
+                                 call $~lib/array/Array<src-as/WebGL2/components/material/WebGLUniformBufferObject>~visit
                                  return
                                 end
                                 local.get $0
                                 local.get $1
-                                call $src-as/WebGL2/components/material/WebGLUniformBufferObject~visit
+                                call $~lib/map/Map<src-as/rendering/material/Material/Material,src-as/WebGL2/components/material/WebGLMaterial>~visit
                                 return
                                end
                                local.get $0
                                local.get $1
-                               call $~lib/array/Array<src-as/WebGL2/components/material/WebGLUniformBufferObject>~visit
+                               call $src-as/WebGL2/systems/WebGLUniformBufferObjectSystem/WebGLUniformBufferObjectSystem~visit
                                return
                               end
                               local.get $0
                               local.get $1
-                              call $~lib/map/Map<src-as/rendering/material/Material/Material,src-as/WebGL2/components/material/WebGLMaterial>~visit
+                              call $~lib/map/Map<src-as/rendering/material/UniformBufferObject/UniformBufferObject,src-as/WebGL2/components/material/WebGLUniformBufferObject>~visit
                               return
                              end
                              local.get $0
                              local.get $1
-                             call $src-as/WebGL2/systems/WebGLUniformBufferObjectSystem/WebGLUniformBufferObjectSystem~visit
+                             call $src-as/WebGL2/components/mesh/WebGLMesh~visit
                              return
                             end
                             local.get $0
                             local.get $1
-                            call $~lib/map/Map<src-as/rendering/material/UniformBufferObject/UniformBufferObject,src-as/WebGL2/components/material/WebGLUniformBufferObject>~visit
+                            call $~lib/map/Map<src-as/components/Mesh/Mesh,src-as/WebGL2/components/mesh/WebGLMesh>~visit
                             return
                            end
                            local.get $0
                            local.get $1
-                           call $src-as/WebGL2/components/mesh/WebGLMesh~visit
+                           call $~lib/function/Function<%28src-as/base/System/System%2Csrc-as/base/System/System%29=>i32>~visit
                            return
                           end
                           local.get $0
                           local.get $1
-                          call $~lib/map/Map<src-as/components/Mesh/Mesh,src-as/WebGL2/components/mesh/WebGLMesh>~visit
+                          call $~lib/function/Function<%28src-as/base/System/ListenerSystem%2Csrc-as/base/System/ListenerSystem%29=>i32>~visit
                           return
                          end
                          local.get $0
                          local.get $1
-                         call $~lib/function/Function<%28src-as/base/System/System%2Csrc-as/base/System/System%29=>i32>~visit
+                         call $src-as/math/Color/Color~visit
                          return
                         end
                         local.get $0
                         local.get $1
-                        call $~lib/function/Function<%28src-as/base/System/ListenerSystem%2Csrc-as/base/System/ListenerSystem%29=>i32>~visit
+                        call $src-as/components/DirectionalLight/DirectionalLight~visit
                         return
                        end
                        local.get $0
                        local.get $1
-                       call $src-as/math/Color/Color~visit
+                       call $~lib/array/Array<src-as/base/Component/Component>~visit
                        return
                       end
                       local.get $0
                       local.get $1
-                      call $src-as/components/Rotator/Rotator~visit
+                      call $src-as/rendering/material/Material/StandardMaterial~visit
                       return
                      end
                      local.get $0
                      local.get $1
-                     call $src-as/rendering/material/Material/StandardMaterial~visit
+                     call $src-as/rendering/material/Material/SpatialMaterial~visit
                      return
                     end
                     local.get $0
                     local.get $1
-                    call $src-as/rendering/material/Material/SpatialMaterial~visit
+                    call $src-as/rendering/material/Uniform/Uniform_texture~visit
                     return
                    end
                    local.get $0
                    local.get $1
-                   call $~lib/array/Array<src-as/base/Entity/Entity>~visit
+                   call $src-as/rendering/material/Uniform/TypedUniform<src-as/math/Texture/Texture>~visit
                    return
                   end
                   local.get $0
                   local.get $1
-                  call $src-as/WebGL2/components/geometry/WebGLVAOOptions~visit
+                  call $src-as/components/Rotator/Rotator~visit
                   return
                  end
+                 local.get $0
+                 local.get $1
+                 call $~lib/array/Array<src-as/base/Entity/Entity>~visit
                  return
                 end
-                local.get $0
-                local.get $1
-                call $~lib/function/Function<%28src-as/WebGL2/components/geometry/WebGLAttribute%2Ci32%2C~lib/array/Array<src-as/WebGL2/components/geometry/WebGLAttribute>%29=>bool>~visit
                 return
                end
                local.get $0
                local.get $1
-               call $src-as/rendering/material/Uniform/Uniform_texture~visit
+               call $src-as/WebGL2/components/geometry/WebGLVAOOptions~visit
                return
               end
-              local.get $0
-              local.get $1
-              call $src-as/rendering/material/Uniform/TypedUniform<src-as/math/Texture/Texture>~visit
               return
              end
              local.get $0
              local.get $1
-             call $src-as/rendering/material/Uniform/Uniform_bitmap~visit
+             call $~lib/function/Function<%28src-as/WebGL2/components/geometry/WebGLAttribute%2Ci32%2C~lib/array/Array<src-as/WebGL2/components/geometry/WebGLAttribute>%29=>bool>~visit
              return
             end
+            local.get $0
+            local.get $1
+            call $src-as/rendering/material/Uniform/Uniform_bitmap~visit
             return
            end
-           local.get $0
-           local.get $1
-           call $src-as/rendering/material/Uniform/TypedUniform<src-as/math/Bitmap/Bitmap>~visit
            return
           end
+          local.get $0
+          local.get $1
+          call $src-as/rendering/material/Uniform/TypedUniform<src-as/math/Bitmap/Bitmap>~visit
           return
          end
-         local.get $0
-         local.get $1
-         call $src-as/WebGL2/components/material/WebGLUniform_float~visit
          return
         end
         local.get $0
         local.get $1
-        call $src-as/WebGL2/components/material/WebGLUniform_typed<~lib/typedarray/Float32Array>~visit
+        call $src-as/WebGL2/components/material/WebGLUniform_float~visit
         return
        end
        local.get $0
        local.get $1
-       call $src-as/WebGL2/components/material/WebGLUniform_vec2~visit
+       call $src-as/WebGL2/components/material/WebGLUniform_typed<~lib/typedarray/Float32Array>~visit
        return
       end
       local.get $0
       local.get $1
-      call $src-as/WebGL2/components/material/WebGLUniform_vec3~visit
+      call $src-as/WebGL2/components/material/WebGLUniform_vec2~visit
       return
      end
      local.get $0
      local.get $1
-     call $src-as/WebGL2/components/material/WebGLUniform_vec4~visit
+     call $src-as/WebGL2/components/material/WebGLUniform_vec3~visit
      return
     end
     local.get $0
     local.get $1
-    call $src-as/WebGL2/components/material/WebGLUniform_mat4~visit
+    call $src-as/WebGL2/components/material/WebGLUniform_vec4~visit
     return
    end
+   local.get $0
+   local.get $1
+   call $src-as/WebGL2/components/material/WebGLUniform_mat4~visit
    return
   end
   unreachable
@@ -28859,8 +29833,8 @@
   global.get $~lib/memory/__data_end
   i32.lt_s
   if
-   i32.const 39376
-   i32.const 39424
+   i32.const 39504
+   i32.const 39552
    i32.const 1
    i32.const 1
    call $~lib/builtins/abort
@@ -32866,7 +33840,7 @@
   global.get $src-as/rendering/constants/_uniforms/DirectionalLights_ambientIntensity
   local.tee $1
   i32.store offset=4
-  i32.const 9392
+  i32.const 9472
   local.set $2
   global.get $~lib/memory/__stack_pointer
   local.get $2
@@ -32875,7 +33849,7 @@
   i32.const 1
   local.get $0
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 9392
+  i32.const 9472
   local.set $2
   global.get $~lib/memory/__stack_pointer
   local.get $2
@@ -32884,7 +33858,7 @@
   i32.const 3
   local.get $1
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 9392
+  i32.const 9472
   local.set $2
   global.get $~lib/memory/__stack_pointer
   local.get $2
@@ -32903,7 +33877,7 @@
   i32.add
   global.set $~lib/memory/__stack_pointer
  )
- (func $start:src-as/rendering/shader/litShader
+ (func $start:src-as/rendering/shader/lit/litShader
   (local $0 i32)
   (local $1 i32)
   (local $2 i32)
@@ -32966,7 +33940,7 @@
   global.get $src-as/rendering/constants/_attributes/Texcoord
   local.tee $9
   i32.store offset=36
-  i32.const 9888
+  i32.const 9968
   local.set $10
   global.get $~lib/memory/__stack_pointer
   local.get $10
@@ -32975,7 +33949,7 @@
   i32.const 1
   local.get $0
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 9888
+  i32.const 9968
   local.set $10
   global.get $~lib/memory/__stack_pointer
   local.get $10
@@ -32984,7 +33958,7 @@
   i32.const 3
   local.get $1
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 9888
+  i32.const 9968
   local.set $10
   global.get $~lib/memory/__stack_pointer
   local.get $10
@@ -32993,7 +33967,7 @@
   i32.const 5
   local.get $2
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 9888
+  i32.const 9968
   local.set $10
   global.get $~lib/memory/__stack_pointer
   local.get $10
@@ -33002,7 +33976,7 @@
   i32.const 7
   local.get $3
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 9888
+  i32.const 9968
   local.set $10
   global.get $~lib/memory/__stack_pointer
   local.get $10
@@ -33011,7 +33985,7 @@
   i32.const 9
   local.get $4
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 9888
+  i32.const 9968
   local.set $10
   global.get $~lib/memory/__stack_pointer
   local.get $10
@@ -33020,7 +33994,7 @@
   i32.const 11
   local.get $5
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 9888
+  i32.const 9968
   local.set $10
   global.get $~lib/memory/__stack_pointer
   local.get $10
@@ -33029,7 +34003,7 @@
   i32.const 13
   local.get $6
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 9888
+  i32.const 9968
   local.set $10
   global.get $~lib/memory/__stack_pointer
   local.get $10
@@ -33038,7 +34012,7 @@
   i32.const 15
   local.get $7
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 9888
+  i32.const 9968
   local.set $10
   global.get $~lib/memory/__stack_pointer
   local.get $10
@@ -33047,7 +34021,7 @@
   i32.const 17
   local.get $8
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 9888
+  i32.const 9968
   local.set $10
   global.get $~lib/memory/__stack_pointer
   local.get $10
@@ -33056,7 +34030,7 @@
   i32.const 19
   local.get $9
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 9888
+  i32.const 9968
   local.set $10
   global.get $~lib/memory/__stack_pointer
   local.get $10
@@ -33069,7 +34043,7 @@
   i32.store offset=44
   local.get $10
   call $~lib/staticarray/StaticArray<~lib/string/String>#join
-  global.set $src-as/rendering/shader/litShader/vert
+  global.set $src-as/rendering/shader/lit/litShader/vert
   global.get $~lib/memory/__stack_pointer
   global.get $src-as/rendering/shader/glsl/utility/lightConstants
   local.tee $9
@@ -33103,7 +34077,7 @@
   global.get $src-as/rendering/constants/_uniforms/Color
   local.tee $2
   i32.store offset=8
-  i32.const 10896
+  i32.const 10976
   local.set $10
   global.get $~lib/memory/__stack_pointer
   local.get $10
@@ -33112,7 +34086,7 @@
   i32.const 1
   local.get $9
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 10896
+  i32.const 10976
   local.set $10
   global.get $~lib/memory/__stack_pointer
   local.get $10
@@ -33121,7 +34095,7 @@
   i32.const 3
   local.get $8
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 10896
+  i32.const 10976
   local.set $10
   global.get $~lib/memory/__stack_pointer
   local.get $10
@@ -33130,7 +34104,7 @@
   i32.const 5
   local.get $7
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 10896
+  i32.const 10976
   local.set $10
   global.get $~lib/memory/__stack_pointer
   local.get $10
@@ -33139,7 +34113,7 @@
   i32.const 7
   local.get $6
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 10896
+  i32.const 10976
   local.set $10
   global.get $~lib/memory/__stack_pointer
   local.get $10
@@ -33148,7 +34122,7 @@
   i32.const 9
   local.get $5
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 10896
+  i32.const 10976
   local.set $10
   global.get $~lib/memory/__stack_pointer
   local.get $10
@@ -33157,7 +34131,7 @@
   i32.const 11
   local.get $4
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 10896
+  i32.const 10976
   local.set $10
   global.get $~lib/memory/__stack_pointer
   local.get $10
@@ -33166,7 +34140,7 @@
   i32.const 13
   local.get $3
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 10896
+  i32.const 10976
   local.set $10
   global.get $~lib/memory/__stack_pointer
   local.get $10
@@ -33175,7 +34149,7 @@
   i32.const 15
   local.get $2
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 10896
+  i32.const 10976
   local.set $10
   global.get $~lib/memory/__stack_pointer
   local.get $10
@@ -33188,15 +34162,15 @@
   i32.store offset=44
   local.get $10
   call $~lib/staticarray/StaticArray<~lib/string/String>#join
-  global.set $src-as/rendering/shader/litShader/frag
+  global.set $src-as/rendering/shader/lit/litShader/frag
   i32.const 0
-  global.get $src-as/rendering/shader/litShader/vert
+  global.get $src-as/rendering/shader/lit/litShader/vert
   local.set $10
   global.get $~lib/memory/__stack_pointer
   local.get $10
   i32.store offset=44
   local.get $10
-  global.get $src-as/rendering/shader/litShader/frag
+  global.get $src-as/rendering/shader/lit/litShader/frag
   local.set $10
   global.get $~lib/memory/__stack_pointer
   local.get $10
@@ -33206,7 +34180,7 @@
   global.set $~argumentsLength
   i32.const 0
   call $src-as/rendering/shader/Shader/Shader#constructor@varargs
-  global.set $src-as/rendering/shader/litShader/litShader
+  global.set $src-as/rendering/shader/lit/litShader/litShader
   global.get $~lib/memory/__stack_pointer
   i32.const 52
   i32.add
@@ -33295,7 +34269,7 @@
   global.get $src-as/rendering/shader/particleShader/a_pos
   local.tee $13
   i32.store offset=52
-  i32.const 12000
+  i32.const 12080
   local.set $14
   global.get $~lib/memory/__stack_pointer
   local.get $14
@@ -33304,7 +34278,7 @@
   i32.const 1
   local.get $0
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 12000
+  i32.const 12080
   local.set $14
   global.get $~lib/memory/__stack_pointer
   local.get $14
@@ -33313,7 +34287,7 @@
   i32.const 3
   local.get $1
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 12000
+  i32.const 12080
   local.set $14
   global.get $~lib/memory/__stack_pointer
   local.get $14
@@ -33322,7 +34296,7 @@
   i32.const 5
   local.get $2
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 12000
+  i32.const 12080
   local.set $14
   global.get $~lib/memory/__stack_pointer
   local.get $14
@@ -33331,7 +34305,7 @@
   i32.const 7
   local.get $3
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 12000
+  i32.const 12080
   local.set $14
   global.get $~lib/memory/__stack_pointer
   local.get $14
@@ -33340,7 +34314,7 @@
   i32.const 9
   local.get $4
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 12000
+  i32.const 12080
   local.set $14
   global.get $~lib/memory/__stack_pointer
   local.get $14
@@ -33349,7 +34323,7 @@
   i32.const 11
   local.get $5
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 12000
+  i32.const 12080
   local.set $14
   global.get $~lib/memory/__stack_pointer
   local.get $14
@@ -33358,7 +34332,7 @@
   i32.const 13
   local.get $6
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 12000
+  i32.const 12080
   local.set $14
   global.get $~lib/memory/__stack_pointer
   local.get $14
@@ -33367,7 +34341,7 @@
   i32.const 15
   local.get $7
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 12000
+  i32.const 12080
   local.set $14
   global.get $~lib/memory/__stack_pointer
   local.get $14
@@ -33376,7 +34350,7 @@
   i32.const 17
   local.get $8
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 12000
+  i32.const 12080
   local.set $14
   global.get $~lib/memory/__stack_pointer
   local.get $14
@@ -33385,7 +34359,7 @@
   i32.const 19
   local.get $9
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 12000
+  i32.const 12080
   local.set $14
   global.get $~lib/memory/__stack_pointer
   local.get $14
@@ -33394,7 +34368,7 @@
   i32.const 21
   local.get $10
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 12000
+  i32.const 12080
   local.set $14
   global.get $~lib/memory/__stack_pointer
   local.get $14
@@ -33403,7 +34377,7 @@
   i32.const 23
   local.get $11
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 12000
+  i32.const 12080
   local.set $14
   global.get $~lib/memory/__stack_pointer
   local.get $14
@@ -33412,7 +34386,7 @@
   i32.const 25
   local.get $12
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 12000
+  i32.const 12080
   local.set $14
   global.get $~lib/memory/__stack_pointer
   local.get $14
@@ -33421,7 +34395,7 @@
   i32.const 27
   local.get $13
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 12000
+  i32.const 12080
   local.set $14
   global.get $~lib/memory/__stack_pointer
   local.get $14
@@ -33564,7 +34538,7 @@
   global.get $src-as/rendering/shader/transformFeedback/v_pos
   local.tee $18
   i32.store offset=72
-  i32.const 13520
+  i32.const 13600
   local.set $19
   global.get $~lib/memory/__stack_pointer
   local.get $19
@@ -33573,7 +34547,7 @@
   i32.const 1
   local.get $0
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 13520
+  i32.const 13600
   local.set $19
   global.get $~lib/memory/__stack_pointer
   local.get $19
@@ -33582,7 +34556,7 @@
   i32.const 3
   local.get $1
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 13520
+  i32.const 13600
   local.set $19
   global.get $~lib/memory/__stack_pointer
   local.get $19
@@ -33591,7 +34565,7 @@
   i32.const 5
   local.get $2
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 13520
+  i32.const 13600
   local.set $19
   global.get $~lib/memory/__stack_pointer
   local.get $19
@@ -33600,7 +34574,7 @@
   i32.const 7
   local.get $3
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 13520
+  i32.const 13600
   local.set $19
   global.get $~lib/memory/__stack_pointer
   local.get $19
@@ -33609,7 +34583,7 @@
   i32.const 9
   local.get $4
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 13520
+  i32.const 13600
   local.set $19
   global.get $~lib/memory/__stack_pointer
   local.get $19
@@ -33618,7 +34592,7 @@
   i32.const 11
   local.get $5
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 13520
+  i32.const 13600
   local.set $19
   global.get $~lib/memory/__stack_pointer
   local.get $19
@@ -33627,7 +34601,7 @@
   i32.const 13
   local.get $6
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 13520
+  i32.const 13600
   local.set $19
   global.get $~lib/memory/__stack_pointer
   local.get $19
@@ -33636,7 +34610,7 @@
   i32.const 15
   local.get $7
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 13520
+  i32.const 13600
   local.set $19
   global.get $~lib/memory/__stack_pointer
   local.get $19
@@ -33645,7 +34619,7 @@
   i32.const 17
   local.get $8
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 13520
+  i32.const 13600
   local.set $19
   global.get $~lib/memory/__stack_pointer
   local.get $19
@@ -33654,7 +34628,7 @@
   i32.const 19
   local.get $9
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 13520
+  i32.const 13600
   local.set $19
   global.get $~lib/memory/__stack_pointer
   local.get $19
@@ -33663,7 +34637,7 @@
   i32.const 21
   local.get $10
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 13520
+  i32.const 13600
   local.set $19
   global.get $~lib/memory/__stack_pointer
   local.get $19
@@ -33672,7 +34646,7 @@
   i32.const 23
   local.get $11
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 13520
+  i32.const 13600
   local.set $19
   global.get $~lib/memory/__stack_pointer
   local.get $19
@@ -33681,7 +34655,7 @@
   i32.const 25
   local.get $12
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 13520
+  i32.const 13600
   local.set $19
   global.get $~lib/memory/__stack_pointer
   local.get $19
@@ -33690,7 +34664,7 @@
   i32.const 27
   local.get $13
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 13520
+  i32.const 13600
   local.set $19
   global.get $~lib/memory/__stack_pointer
   local.get $19
@@ -33699,7 +34673,7 @@
   i32.const 29
   local.get $14
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 13520
+  i32.const 13600
   local.set $19
   global.get $~lib/memory/__stack_pointer
   local.get $19
@@ -33708,7 +34682,7 @@
   i32.const 31
   local.get $15
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 13520
+  i32.const 13600
   local.set $19
   global.get $~lib/memory/__stack_pointer
   local.get $19
@@ -33717,7 +34691,7 @@
   i32.const 33
   local.get $16
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 13520
+  i32.const 13600
   local.set $19
   global.get $~lib/memory/__stack_pointer
   local.get $19
@@ -33726,7 +34700,7 @@
   i32.const 35
   local.get $17
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 13520
+  i32.const 13600
   local.set $19
   global.get $~lib/memory/__stack_pointer
   local.get $19
@@ -33735,7 +34709,7 @@
   i32.const 37
   local.get $18
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 13520
+  i32.const 13600
   local.set $19
   global.get $~lib/memory/__stack_pointer
   local.get $19
@@ -33765,7 +34739,7 @@
   i32.const 2
   i32.const 2
   i32.const 57
-  i32.const 13824
+  i32.const 13904
   call $~lib/rt/__newArray
   local.set $19
   global.get $~lib/memory/__stack_pointer
@@ -33810,7 +34784,7 @@
   global.get $src-as/rendering/constants/_attributes/InstancePosition
   local.tee $3
   i32.store offset=12
-  i32.const 14176
+  i32.const 14256
   local.set $4
   global.get $~lib/memory/__stack_pointer
   local.get $4
@@ -33819,7 +34793,7 @@
   i32.const 1
   local.get $0
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 14176
+  i32.const 14256
   local.set $4
   global.get $~lib/memory/__stack_pointer
   local.get $4
@@ -33828,7 +34802,7 @@
   i32.const 3
   local.get $1
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 14176
+  i32.const 14256
   local.set $4
   global.get $~lib/memory/__stack_pointer
   local.get $4
@@ -33837,7 +34811,7 @@
   i32.const 5
   local.get $2
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 14176
+  i32.const 14256
   local.set $4
   global.get $~lib/memory/__stack_pointer
   local.get $4
@@ -33846,7 +34820,7 @@
   i32.const 7
   local.get $3
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 14176
+  i32.const 14256
   local.set $4
   global.get $~lib/memory/__stack_pointer
   local.get $4
@@ -33876,7 +34850,7 @@
   i32.const 1
   i32.const 2
   i32.const 57
-  i32.const 14240
+  i32.const 14320
   call $~lib/rt/__newArray
   local.set $4
   global.get $~lib/memory/__stack_pointer
@@ -33890,7 +34864,7 @@
   i32.add
   global.set $~lib/memory/__stack_pointer
  )
- (func $start:src-as/rendering/shader/unlit
+ (func $start:src-as/rendering/shader/unlit/unlit
   (local $0 i32)
   (local $1 i32)
   (local $2 i32)
@@ -33922,7 +34896,7 @@
   global.get $src-as/rendering/constants/_attributes/Position
   local.tee $3
   i32.store offset=12
-  i32.const 14416
+  i32.const 14496
   local.set $4
   global.get $~lib/memory/__stack_pointer
   local.get $4
@@ -33931,7 +34905,7 @@
   i32.const 1
   local.get $0
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 14416
+  i32.const 14496
   local.set $4
   global.get $~lib/memory/__stack_pointer
   local.get $4
@@ -33940,7 +34914,7 @@
   i32.const 3
   local.get $1
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 14416
+  i32.const 14496
   local.set $4
   global.get $~lib/memory/__stack_pointer
   local.get $4
@@ -33949,7 +34923,7 @@
   i32.const 5
   local.get $2
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 14416
+  i32.const 14496
   local.set $4
   global.get $~lib/memory/__stack_pointer
   local.get $4
@@ -33958,7 +34932,7 @@
   i32.const 7
   local.get $3
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 14416
+  i32.const 14496
   local.set $4
   global.get $~lib/memory/__stack_pointer
   local.get $4
@@ -33971,15 +34945,15 @@
   i32.store offset=20
   local.get $4
   call $~lib/staticarray/StaticArray<~lib/string/String>#join
-  global.set $src-as/rendering/shader/unlit/vert
+  global.set $src-as/rendering/shader/unlit/unlit/vert
   i32.const 0
-  global.get $src-as/rendering/shader/unlit/vert
+  global.get $src-as/rendering/shader/unlit/unlit/vert
   local.set $4
   global.get $~lib/memory/__stack_pointer
   local.get $4
   i32.store offset=20
   local.get $4
-  global.get $src-as/rendering/shader/unlit/frag
+  global.get $src-as/rendering/shader/unlit/unlit/frag
   local.set $4
   global.get $~lib/memory/__stack_pointer
   local.get $4
@@ -33989,13 +34963,13 @@
   global.set $~argumentsLength
   i32.const 0
   call $src-as/rendering/shader/Shader/Shader#constructor@varargs
-  global.set $src-as/rendering/shader/unlit/unlitShader
+  global.set $src-as/rendering/shader/unlit/unlit/unlitShader
   global.get $~lib/memory/__stack_pointer
   i32.const 28
   i32.add
   global.set $~lib/memory/__stack_pointer
  )
- (func $start:src-as/rendering/shader/unlitVertexColors
+ (func $start:src-as/rendering/shader/unlit/unlitVertexColors
   (local $0 i32)
   (local $1 i32)
   (local $2 i32)
@@ -34033,7 +35007,7 @@
   global.get $src-as/rendering/constants/_attributes/Position
   local.tee $4
   i32.store offset=16
-  i32.const 15008
+  i32.const 15088
   local.set $5
   global.get $~lib/memory/__stack_pointer
   local.get $5
@@ -34042,7 +35016,7 @@
   i32.const 1
   local.get $0
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 15008
+  i32.const 15088
   local.set $5
   global.get $~lib/memory/__stack_pointer
   local.get $5
@@ -34051,7 +35025,7 @@
   i32.const 3
   local.get $1
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 15008
+  i32.const 15088
   local.set $5
   global.get $~lib/memory/__stack_pointer
   local.get $5
@@ -34060,7 +35034,7 @@
   i32.const 5
   local.get $2
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 15008
+  i32.const 15088
   local.set $5
   global.get $~lib/memory/__stack_pointer
   local.get $5
@@ -34069,7 +35043,7 @@
   i32.const 7
   local.get $3
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 15008
+  i32.const 15088
   local.set $5
   global.get $~lib/memory/__stack_pointer
   local.get $5
@@ -34078,7 +35052,7 @@
   i32.const 9
   local.get $4
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 15008
+  i32.const 15088
   local.set $5
   global.get $~lib/memory/__stack_pointer
   local.get $5
@@ -34091,15 +35065,15 @@
   i32.store offset=24
   local.get $5
   call $~lib/staticarray/StaticArray<~lib/string/String>#join
-  global.set $src-as/rendering/shader/unlitVertexColors/vert
+  global.set $src-as/rendering/shader/unlit/unlitVertexColors/vert
   i32.const 0
-  global.get $src-as/rendering/shader/unlitVertexColors/vert
+  global.get $src-as/rendering/shader/unlit/unlitVertexColors/vert
   local.set $5
   global.get $~lib/memory/__stack_pointer
   local.get $5
   i32.store offset=24
   local.get $5
-  global.get $src-as/rendering/shader/unlitVertexColors/frag
+  global.get $src-as/rendering/shader/unlit/unlitVertexColors/frag
   local.set $5
   global.get $~lib/memory/__stack_pointer
   local.get $5
@@ -34109,7 +35083,7 @@
   global.set $~argumentsLength
   i32.const 0
   call $src-as/rendering/shader/Shader/Shader#constructor@varargs
-  global.set $src-as/rendering/shader/unlitVertexColors/unlitVertexColorShader
+  global.set $src-as/rendering/shader/unlit/unlitVertexColors/unlitVertexColorShader
   global.get $~lib/memory/__stack_pointer
   i32.const 32
   i32.add
@@ -34161,11 +35135,31 @@
   i64.store
   call $start:src-as/utility/index
   i32.const 0
+  i32.const 1
+  i32.const 1
+  i32.const 4
+  i32.const 46
+  i32.const 16048
+  call $~lib/rt/__newBuffer
+  local.set $1
+  global.get $~lib/memory/__stack_pointer
+  local.get $1
+  i32.store offset=4
+  local.get $1
+  call $src-as/utility/_ArrayUtils/toTyped_u8
+  local.set $1
+  global.get $~lib/memory/__stack_pointer
+  local.get $1
+  i32.store
+  local.get $1
+  call $src-as/math/Texture/Texture#constructor
+  global.set $src-as/math/Texture/Texture.white
+  i32.const 0
   i32.const 2
   i32.const 2
   i32.const 16
   i32.const 46
-  i32.const 15968
+  i32.const 16080
   call $~lib/rt/__newBuffer
   local.set $1
   global.get $~lib/memory/__stack_pointer
@@ -34185,7 +35179,7 @@
   i32.const 2
   i32.const 16
   i32.const 46
-  i32.const 16016
+  i32.const 16128
   call $~lib/rt/__newBuffer
   local.set $1
   global.get $~lib/memory/__stack_pointer
@@ -34260,6 +35254,87 @@
   local.get $0
   call $src-as/base/SystemPriority/SystemPriority.after
   global.set $src-as/base/SystemPriority/defaultSystemPriority
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+ )
+ (func $src-as/base/World/World#update (param $0 i32) (result i32)
+  (local $1 i32)
+  (local $2 i32)
+  (local $3 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  i32.const 0
+  local.set $1
+  loop $for-loop|0
+   local.get $1
+   local.get $0
+   i32.load offset=4
+   local.set $3
+   global.get $~lib/memory/__stack_pointer
+   local.get $3
+   i32.store
+   local.get $3
+   call $~lib/array/Array<src-as/base/System/System>#get:length
+   i32.lt_s
+   local.set $2
+   local.get $2
+   if
+    local.get $0
+    i32.load offset=4
+    local.set $3
+    global.get $~lib/memory/__stack_pointer
+    local.get $3
+    i32.store offset=4
+    local.get $3
+    local.get $1
+    call $~lib/array/Array<src-as/base/System/System>#__get
+    local.set $3
+    global.get $~lib/memory/__stack_pointer
+    local.get $3
+    i32.store
+    local.get $3
+    call $src-as/base/System/System#update@virtual
+    local.get $1
+    i32.const 1
+    i32.add
+    local.set $1
+    br $for-loop|0
+   end
+  end
+  local.get $0
+  local.set $3
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $3
+ )
+ (func $src-as/exports/mainFactories/update
+  (local $0 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  call $src-as/base/World/World.get:main
+  local.set $0
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  i32.store
+  local.get $0
+  call $src-as/base/World/World#update
+  drop
   global.get $~lib/memory/__stack_pointer
   i32.const 4
   i32.add
@@ -34613,7 +35688,7 @@
   i32.const 0
   i32.store
   local.get $0
-  i32.const 16928
+  i32.const 17040
   local.set $1
   global.get $~lib/memory/__stack_pointer
   local.get $1
@@ -34653,8 +35728,8 @@
   local.get $0
   i32.ne
   if
-   i32.const 16688
-   i32.const 16864
+   i32.const 16800
+   i32.const 16976
    i32.const 97
    i32.const 4
    call $~lib/builtins/abort
@@ -34751,7 +35826,7 @@
   i32.const 0
   i32.const 2
   i32.const 97
-  i32.const 17024
+  i32.const 17136
   call $~lib/rt/__newArray
   call $src-as/base/Query/TypedQuery<src-as/components/Transform/Transform>#set:components
   global.get $~lib/memory/__stack_pointer
@@ -34759,7 +35834,7 @@
   i32.const 1
   i32.const 2
   i32.const 80
-  i32.const 16992
+  i32.const 17104
   call $~lib/rt/__newArray
   local.set $3
   global.get $~lib/memory/__stack_pointer
@@ -34843,7 +35918,7 @@
      i32.const 0
      i32.const 2
      i32.const 82
-     i32.const 17056
+     i32.const 17168
      call $~lib/rt/__newArray
      local.set $7
      global.get $~lib/memory/__stack_pointer
@@ -35099,8 +36174,8 @@
   call $src-as/components/Transform/Transform#set:parent
   local.get $2
   if
-   i32.const 17200
    i32.const 17312
+   i32.const 17424
    i32.const 45
    i32.const 4
    call $~lib/builtins/abort
@@ -35474,8 +36549,8 @@
   if (result i32)
    local.get $1
   else
-   i32.const 17648
-   i32.const 16864
+   i32.const 17760
+   i32.const 16976
    i32.const 43
    i32.const 41
    call $~lib/builtins/abort
@@ -35514,7 +36589,7 @@
   i32.const 0
   i32.const 2
   i32.const 89
-  i32.const 17712
+  i32.const 17824
   call $~lib/rt/__newArray
   call $src-as/base/systems/BehaviorSystem/BehaviorSystem#set:behaviors
   global.get $~lib/memory/__stack_pointer
@@ -35563,8 +36638,8 @@
   local.get $0
   i32.ne
   if
-   i32.const 16688
-   i32.const 16864
+   i32.const 16800
+   i32.const 16976
    i32.const 97
    i32.const 4
    call $~lib/builtins/abort
@@ -35697,8 +36772,8 @@
    if (result i32)
     local.get $4
    else
-    i32.const 17648
-    i32.const 16864
+    i32.const 17760
+    i32.const 16976
     i32.const 111
     i32.const 54
     call $~lib/builtins/abort
@@ -35734,8 +36809,8 @@
   local.get $0
   i32.ne
   if
-   i32.const 17392
-   i32.const 17584
+   i32.const 17504
+   i32.const 17696
    i32.const 27
    i32.const 4
    call $~lib/builtins/abort
@@ -35843,8 +36918,8 @@
   if (result i32)
    local.get $1
   else
-   i32.const 17648
-   i32.const 17584
+   i32.const 17760
+   i32.const 17696
    i32.const 45
    i32.const 10
    call $~lib/builtins/abort
@@ -35893,7 +36968,7 @@
   i32.const 1
   i32.const 2
   i32.const 80
-  i32.const 16960
+  i32.const 17072
   call $~lib/rt/__newArray
   local.set $3
   global.get $~lib/memory/__stack_pointer
@@ -36171,7 +37246,7 @@
   i32.const 0
   i32.store
   local.get $0
-  i32.const 17776
+  i32.const 17888
   local.set $1
   global.get $~lib/memory/__stack_pointer
   local.get $1
@@ -36250,7 +37325,7 @@
      i32.const 0
      i32.const 2
      i32.const 86
-     i32.const 17744
+     i32.const 17856
      call $~lib/rt/__newArray
      local.set $7
      global.get $~lib/memory/__stack_pointer
@@ -36317,8 +37392,8 @@
   local.get $0
   i32.ne
   if
-   i32.const 16688
-   i32.const 16864
+   i32.const 16800
+   i32.const 16976
    i32.const 97
    i32.const 4
    call $~lib/builtins/abort
@@ -36424,7 +37499,7 @@
   i32.const 0
   i32.const 2
   i32.const 106
-  i32.const 17872
+  i32.const 17984
   call $~lib/rt/__newArray
   call $src-as/base/Query/TypedQuery<src-as/components/Camera/Camera>#set:components
   global.get $~lib/memory/__stack_pointer
@@ -36432,7 +37507,7 @@
   i32.const 1
   i32.const 2
   i32.const 80
-  i32.const 17840
+  i32.const 17952
   call $~lib/rt/__newArray
   local.set $3
   global.get $~lib/memory/__stack_pointer
@@ -36516,14 +37591,14 @@
   i32.const 0
   i32.const 2
   i32.const 110
-  i32.const 17904
+  i32.const 18016
   call $~lib/rt/__newArray
   call $src-as/rendering/systems/RenderSystem/RenderSystem#set:opaqueMeshes
   local.get $0
   i32.const 0
   i32.const 2
   i32.const 110
-  i32.const 17936
+  i32.const 18048
   call $~lib/rt/__newArray
   call $src-as/rendering/systems/RenderSystem/RenderSystem#set:transparentMeshes
   local.get $0
@@ -36534,7 +37609,7 @@
   i32.const 1
   i32.const 2
   i32.const 80
-  i32.const 17808
+  i32.const 17920
   call $~lib/rt/__newArray
   local.set $4
   global.get $~lib/memory/__stack_pointer
@@ -36598,8 +37673,8 @@
   local.get $0
   i32.ne
   if
-   i32.const 16688
-   i32.const 16864
+   i32.const 16800
+   i32.const 16976
    i32.const 97
    i32.const 4
    call $~lib/builtins/abort
@@ -36682,8 +37757,8 @@
   if (result i32)
    local.get $1
   else
-   i32.const 17648
-   i32.const 16864
+   i32.const 17760
+   i32.const 16976
    i32.const 43
    i32.const 41
    call $~lib/builtins/abort
@@ -36926,6 +38001,567 @@
   global.set $~lib/memory/__stack_pointer
   local.get $1
  )
+ (func $src-as/math/SharedBuffer/SharedBuffer_f32<src-as/math/Vector3/Vector3>#updateInstanceBuffers (param $0 i32)
+  (local $1 i32)
+  (local $2 i32)
+  (local $3 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  i32.const 0
+  local.set $1
+  loop $for-loop|0
+   local.get $1
+   local.get $0
+   i32.load offset=4
+   local.set $3
+   global.get $~lib/memory/__stack_pointer
+   local.get $3
+   i32.store
+   local.get $3
+   call $~lib/array/Array<src-as/math/Vector3/Vector3>#get:length
+   i32.lt_s
+   local.set $2
+   local.get $2
+   if
+    local.get $0
+    i32.load offset=4
+    local.set $3
+    global.get $~lib/memory/__stack_pointer
+    local.get $3
+    i32.store
+    local.get $3
+    local.get $1
+    call $~lib/array/Array<src-as/math/Vector3/Vector3>#__get
+    local.get $0
+    i32.load
+    i32.load
+    local.set $3
+    global.get $~lib/memory/__stack_pointer
+    local.get $3
+    i32.store
+    local.get $3
+    local.get $0
+    call $src-as/math/SharedBuffer/SharedBuffer_f32<src-as/math/Vector3/Vector3>#get:strideBytes
+    i32.const 65535
+    i32.and
+    local.get $1
+    i32.mul
+    local.get $0
+    i32.load16_u offset=8
+    call $~lib/typedarray/Float32Array.wrap
+    call $src-as/math/Vector3/Vector3#set:m
+    local.get $1
+    i32.const 1
+    i32.add
+    local.set $1
+    br $for-loop|0
+   end
+  end
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+ )
+ (func $src-as/math/SharedBuffer/SharedBuffer_f32<src-as/math/Vector3/Vector3>#resizeArray (param $0 i32)
+  (local $1 i32)
+  (local $2 i32)
+  (local $3 i32)
+  (local $4 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  local.get $0
+  i32.load offset=4
+  local.set $4
+  global.get $~lib/memory/__stack_pointer
+  local.get $4
+  i32.store
+  local.get $4
+  call $~lib/array/Array<src-as/math/Vector3/Vector3>#get:length
+  local.get $0
+  i32.load16_u offset=8
+  i32.mul
+  call $~lib/typedarray/Float32Array#constructor
+  local.tee $1
+  i32.store offset=4
+  i32.const 0
+  local.set $2
+  loop $for-loop|0
+   local.get $2
+   local.get $0
+   i32.load
+   local.set $4
+   global.get $~lib/memory/__stack_pointer
+   local.get $4
+   i32.store
+   local.get $4
+   call $~lib/typedarray/Float32Array#get:length
+   i32.lt_s
+   local.set $3
+   local.get $3
+   if
+    local.get $1
+    local.get $2
+    local.get $0
+    i32.load
+    local.set $4
+    global.get $~lib/memory/__stack_pointer
+    local.get $4
+    i32.store
+    local.get $4
+    local.get $2
+    call $~lib/typedarray/Float32Array#__get
+    call $~lib/typedarray/Float32Array#__set
+    local.get $2
+    i32.const 1
+    i32.add
+    local.set $2
+    br $for-loop|0
+   end
+  end
+  local.get $0
+  local.get $1
+  call $src-as/math/SharedBuffer/SharedBuffer_f32<src-as/math/Vector3/Vector3>#set:arr
+  local.get $0
+  call $src-as/math/SharedBuffer/SharedBuffer_f32<src-as/math/Vector3/Vector3>#updateInstanceBuffers
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+ )
+ (func $src-as/math/SharedBuffer/SharedBuffer_f32<src-as/math/Vector3/Vector3>#add (param $0 i32) (result i32)
+  (local $1 i32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  f32.const 0
+  f32.const 0
+  f32.const 0
+  call $src-as/math/Vector3/Vector3#constructor
+  local.tee $1
+  i32.store
+  local.get $0
+  i32.load offset=4
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store offset=4
+  local.get $2
+  local.get $1
+  call $~lib/array/Array<src-as/math/Vector3/Vector3>#push
+  drop
+  local.get $0
+  call $src-as/math/SharedBuffer/SharedBuffer_f32<src-as/math/Vector3/Vector3>#resizeArray
+  local.get $1
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $2
+ )
+ (func $src-as/math/SharedBuffer/SharedBuffer_f32<src-as/math/Vector1/Vector1>#updateInstanceBuffers (param $0 i32)
+  (local $1 i32)
+  (local $2 i32)
+  (local $3 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  i32.const 0
+  local.set $1
+  loop $for-loop|0
+   local.get $1
+   local.get $0
+   i32.load offset=4
+   local.set $3
+   global.get $~lib/memory/__stack_pointer
+   local.get $3
+   i32.store
+   local.get $3
+   call $~lib/array/Array<src-as/math/Vector1/Vector1>#get:length
+   i32.lt_s
+   local.set $2
+   local.get $2
+   if
+    local.get $0
+    i32.load offset=4
+    local.set $3
+    global.get $~lib/memory/__stack_pointer
+    local.get $3
+    i32.store
+    local.get $3
+    local.get $1
+    call $~lib/array/Array<src-as/math/Vector1/Vector1>#__get
+    local.get $0
+    i32.load
+    i32.load
+    local.set $3
+    global.get $~lib/memory/__stack_pointer
+    local.get $3
+    i32.store
+    local.get $3
+    local.get $0
+    call $src-as/math/SharedBuffer/SharedBuffer_f32<src-as/math/Vector1/Vector1>#get:strideBytes
+    i32.const 65535
+    i32.and
+    local.get $1
+    i32.mul
+    local.get $0
+    i32.load16_u offset=8
+    call $~lib/typedarray/Float32Array.wrap
+    call $src-as/math/Vector1/Vector1Base<~lib/typedarray/Float32Array,f32>#set:m
+    local.get $1
+    i32.const 1
+    i32.add
+    local.set $1
+    br $for-loop|0
+   end
+  end
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+ )
+ (func $src-as/math/SharedBuffer/SharedBuffer_f32<src-as/math/Vector1/Vector1>#resizeArray (param $0 i32)
+  (local $1 i32)
+  (local $2 i32)
+  (local $3 i32)
+  (local $4 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  local.get $0
+  i32.load offset=4
+  local.set $4
+  global.get $~lib/memory/__stack_pointer
+  local.get $4
+  i32.store
+  local.get $4
+  call $~lib/array/Array<src-as/math/Vector1/Vector1>#get:length
+  local.get $0
+  i32.load16_u offset=8
+  i32.mul
+  call $~lib/typedarray/Float32Array#constructor
+  local.tee $1
+  i32.store offset=4
+  i32.const 0
+  local.set $2
+  loop $for-loop|0
+   local.get $2
+   local.get $0
+   i32.load
+   local.set $4
+   global.get $~lib/memory/__stack_pointer
+   local.get $4
+   i32.store
+   local.get $4
+   call $~lib/typedarray/Float32Array#get:length
+   i32.lt_s
+   local.set $3
+   local.get $3
+   if
+    local.get $1
+    local.get $2
+    local.get $0
+    i32.load
+    local.set $4
+    global.get $~lib/memory/__stack_pointer
+    local.get $4
+    i32.store
+    local.get $4
+    local.get $2
+    call $~lib/typedarray/Float32Array#__get
+    call $~lib/typedarray/Float32Array#__set
+    local.get $2
+    i32.const 1
+    i32.add
+    local.set $2
+    br $for-loop|0
+   end
+  end
+  local.get $0
+  local.get $1
+  call $src-as/math/SharedBuffer/SharedBuffer_f32<src-as/math/Vector1/Vector1>#set:arr
+  local.get $0
+  call $src-as/math/SharedBuffer/SharedBuffer_f32<src-as/math/Vector1/Vector1>#updateInstanceBuffers
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+ )
+ (func $src-as/math/SharedBuffer/SharedBuffer_f32<src-as/math/Vector1/Vector1>#add (param $0 i32) (result i32)
+  (local $1 i32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.const 0
+  global.set $~argumentsLength
+  i32.const 0
+  call $src-as/math/Vector1/Vector1#constructor@varargs
+  local.tee $1
+  i32.store
+  local.get $0
+  i32.load offset=4
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store offset=4
+  local.get $2
+  local.get $1
+  call $~lib/array/Array<src-as/math/Vector1/Vector1>#push
+  drop
+  local.get $0
+  call $src-as/math/SharedBuffer/SharedBuffer_f32<src-as/math/Vector1/Vector1>#resizeArray
+  local.get $1
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $2
+ )
+ (func $src-as/math/Vector1/Vector1Base<~lib/typedarray/Float32Array,f32>#set:value (param $0 i32) (param $1 f32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  i32.load
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  i32.const 0
+  local.get $1
+  call $~lib/typedarray/Float32Array#__set
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+ )
+ (func $src-as/components/DirectionalLight/DirectionalLight#constructor (param $0 i32) (result i32)
+  (local $1 i32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 16
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store offset=8
+  local.get $0
+  i32.eqz
+  if
+   global.get $~lib/memory/__stack_pointer
+   i32.const 20
+   i32.const 136
+   call $~lib/rt/itcms/__new
+   local.tee $0
+   i32.store
+  end
+  local.get $0
+  i32.const 0
+  call $src-as/components/DirectionalLight/DirectionalLight#set:ambientIntensity
+  local.get $0
+  i32.const 0
+  call $src-as/components/DirectionalLight/DirectionalLight#set:direction
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  call $src-as/base/Component/SpatialComponent#constructor
+  local.tee $0
+  i32.store
+  local.get $0
+  global.get $src-as/components/DirectionalLight/DirectionalLight.directionBuffer
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store offset=8
+  local.get $2
+  call $src-as/math/SharedBuffer/SharedBuffer_f32<src-as/math/Vector3/Vector3>#add
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store offset=4
+  local.get $2
+  f32.const -1
+  f32.const -1
+  f32.const -1
+  call $src-as/math/Vector3/Vector3#set
+  call $src-as/components/DirectionalLight/DirectionalLight#set:direction
+  local.get $0
+  global.get $~lib/memory/__stack_pointer
+  global.get $src-as/components/DirectionalLight/DirectionalLight.ambientIntensityBuffer
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store offset=8
+  local.get $2
+  call $src-as/math/SharedBuffer/SharedBuffer_f32<src-as/math/Vector1/Vector1>#add
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store offset=4
+  local.get $2
+  f32.const 0.20000000298023224
+  call $src-as/math/Vector1/Vector1Base<~lib/typedarray/Float32Array,f32>#set
+  local.tee $1
+  i32.store offset=12
+  local.get $1
+  i32.const 63
+  call $~lib/rt/__instanceof
+  if (result i32)
+   local.get $1
+  else
+   i32.const 17760
+   i32.const 18080
+   i32.const 20
+   i32.const 27
+   call $~lib/builtins/abort
+   unreachable
+  end
+  call $src-as/components/DirectionalLight/DirectionalLight#set:ambientIntensity
+  local.get $0
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  i32.const 16
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $2
+ )
+ (func $src-as/components/DirectionalLight/DirectionalLight#setDirection (param $0 i32) (param $1 f32) (param $2 f32) (param $3 f32) (result i32)
+  (local $4 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  i32.load offset=16
+  local.set $4
+  global.get $~lib/memory/__stack_pointer
+  local.get $4
+  i32.store
+  local.get $4
+  local.get $1
+  local.get $2
+  local.get $3
+  call $src-as/math/Vector3/Vector3#set
+  drop
+  local.get $0
+  local.set $4
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $4
+ )
+ (func $src-as/base/Entity/Entity#attach<src-as/components/DirectionalLight/DirectionalLight> (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $1
+  i32.load
+  local.get $0
+  i32.ne
+  if
+   i32.const 17504
+   i32.const 17696
+   i32.const 27
+   i32.const 4
+   call $~lib/builtins/abort
+   unreachable
+  end
+  local.get $0
+  i32.load offset=8
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  i32.const 136
+  local.get $1
+  call $~lib/map/Map<u32,src-as/base/Component/Component>#set
+  drop
+  local.get $0
+  i32.load
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  local.get $0
+  i32.const 136
+  local.get $1
+  call $src-as/base/World/World#onAddComponent
+  drop
+  local.get $0
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $2
+ )
  (func $src-as/math/Matrix/Matrix#perspective (param $0 i32) (param $1 f32) (param $2 f32) (param $3 f32) (param $4 f32) (result i32)
   (local $5 i32)
   global.get $~lib/memory/__stack_pointer
@@ -37011,8 +38647,8 @@
   local.get $0
   i32.ne
   if
-   i32.const 17392
-   i32.const 17584
+   i32.const 17504
+   i32.const 17696
    i32.const 27
    i32.const 4
    call $~lib/builtins/abort
@@ -37110,8 +38746,8 @@
   if (result i32)
    local.get $1
   else
-   i32.const 17648
-   i32.const 17584
+   i32.const 17760
+   i32.const 17696
    i32.const 39
    i32.const 10
    call $~lib/builtins/abort
@@ -37124,7 +38760,7 @@
   global.set $~lib/memory/__stack_pointer
   local.get $2
  )
- (func $src-as/factories/cameraFactories/defaultCamera (result i32)
+ (func $src-as/exports/cameraFactories/defaultCamera (result i32)
   (local $0 i32)
   (local $1 i32)
   (local $2 i32)
@@ -37246,6 +38882,976 @@
   global.set $~lib/memory/__stack_pointer
   local.get $4
  )
+ (func $src-as/exports/mainFactories/defaultWorld (result i32)
+  (local $0 i32)
+  (local $1 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 16
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store offset=8
+  call $src-as/base/World/World.get:main
+  local.set $1
+  global.get $~lib/memory/__stack_pointer
+  local.get $1
+  i32.store offset=8
+  local.get $1
+  call $src-as/base/World/World#addSystem<src-as/base/systems/TimeSystem/TimeSystem>
+  local.set $1
+  global.get $~lib/memory/__stack_pointer
+  local.get $1
+  i32.store offset=4
+  local.get $1
+  call $src-as/base/World/World#addSystem<src-as/base/systems/TransformSystem/TransformSystem>
+  local.set $1
+  global.get $~lib/memory/__stack_pointer
+  local.get $1
+  i32.store
+  local.get $1
+  call $src-as/base/World/World#addSystem<src-as/WebGL2/systems/WebGLRenderSystem/WebGLRenderSystem>
+  drop
+  global.get $~lib/memory/__stack_pointer
+  call $src-as/base/World/World.get:main
+  local.set $1
+  global.get $~lib/memory/__stack_pointer
+  local.get $1
+  i32.store
+  local.get $1
+  call $src-as/base/World/World#get<src-as/WebGL2/systems/WebGLRenderSystem/WebGLRenderSystem>
+  local.tee $0
+  i32.store offset=12
+  local.get $0
+  i32.const 0
+  f32.const 0
+  f32.const 0
+  f32.const 0
+  f32.const 0
+  call $src-as/math/Color/Color#constructor
+  local.set $1
+  global.get $~lib/memory/__stack_pointer
+  local.get $1
+  i32.store offset=4
+  local.get $1
+  call $src-as/WebGL2/systems/WebGLRenderSystem/WebGLRenderSystem#clearColor
+  call $src-as/base/World/World.get:main
+  local.set $1
+  global.get $~lib/memory/__stack_pointer
+  local.get $1
+  i32.store offset=8
+  local.get $1
+  call $src-as/base/World/World#createEntity
+  local.set $1
+  global.get $~lib/memory/__stack_pointer
+  local.get $1
+  i32.store
+  local.get $1
+  i32.const 0
+  call $src-as/components/DirectionalLight/DirectionalLight#constructor
+  local.set $1
+  global.get $~lib/memory/__stack_pointer
+  local.get $1
+  i32.store offset=8
+  local.get $1
+  f32.const -1
+  f32.const -1
+  f32.const -1
+  call $src-as/components/DirectionalLight/DirectionalLight#setDirection
+  local.set $1
+  global.get $~lib/memory/__stack_pointer
+  local.get $1
+  i32.store offset=4
+  local.get $1
+  call $src-as/base/Entity/Entity#attach<src-as/components/DirectionalLight/DirectionalLight>
+  drop
+  call $src-as/exports/cameraFactories/defaultCamera
+  drop
+  call $src-as/base/World/World.get:main
+  local.set $1
+  global.get $~lib/memory/__stack_pointer
+  i32.const 16
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $1
+ )
+ (func $src-as/exports/mainFactories/handleResize (param $0 i32) (param $1 i32)
+  (local $2 f32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  (local $6 i32)
+  (local $7 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 12
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store offset=8
+  local.get $0
+  global.set $src-as/rendering/systems/RenderSystem/RenderSystem.canvasWidth
+  local.get $1
+  global.set $src-as/rendering/systems/RenderSystem/RenderSystem.canvasHeight
+  local.get $0
+  f32.convert_i32_u
+  local.get $1
+  f32.convert_i32_u
+  f32.div
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  call $src-as/base/World/World.get:main
+  local.set $7
+  global.get $~lib/memory/__stack_pointer
+  local.get $7
+  i32.store
+  local.get $7
+  call $src-as/base/World/World#get<src-as/WebGL2/systems/WebGLRenderSystem/WebGLRenderSystem>
+  local.tee $3
+  i32.store offset=4
+  global.get $~lib/memory/__stack_pointer
+  local.get $3
+  i32.load offset=16
+  i32.load offset=8
+  local.tee $4
+  i32.store offset=8
+  i32.const 0
+  local.set $5
+  loop $for-loop|0
+   local.get $5
+   local.get $4
+   call $~lib/array/Array<src-as/components/Camera/Camera>#get:length
+   i32.lt_s
+   local.set $6
+   local.get $6
+   if
+    local.get $4
+    local.get $5
+    call $~lib/array/Array<src-as/components/Camera/Camera>#__get
+    i32.load8_u offset=28
+    if
+     local.get $4
+     local.get $5
+     call $~lib/array/Array<src-as/components/Camera/Camera>#__get
+     local.set $7
+     global.get $~lib/memory/__stack_pointer
+     local.get $7
+     i32.store
+     local.get $7
+     i32.const 0
+     i32.const 0
+     local.get $0
+     local.get $1
+     local.get $2
+     call $src-as/components/Camera/Camera#setViewport
+     drop
+    end
+    local.get $5
+    i32.const 1
+    i32.add
+    local.set $5
+    br $for-loop|0
+   end
+  end
+  global.get $~lib/memory/__stack_pointer
+  i32.const 12
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+ )
+ (func $src-as/base/World/World#get<src-as/rendering/systems/RenderSystem/RenderSystem> (param $0 i32) (result i32)
+  (local $1 i32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  i32.load offset=20
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  i32.const 101
+  call $~lib/map/Map<u32,src-as/base/Object/ObjectBase>#get
+  local.tee $1
+  i32.store offset=4
+  local.get $1
+  i32.const 101
+  call $~lib/rt/__instanceof
+  if (result i32)
+   local.get $1
+  else
+   i32.const 17760
+   i32.const 16976
+   i32.const 43
+   i32.const 41
+   call $~lib/builtins/abort
+   unreachable
+  end
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $2
+ )
+ (func $src-as/base/World/World#get<src-as/base/systems/TransformSystem/TransformSystem> (param $0 i32) (result i32)
+  (local $1 i32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  i32.load offset=20
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  i32.const 93
+  call $~lib/map/Map<u32,src-as/base/Object/ObjectBase>#get
+  local.tee $1
+  i32.store offset=4
+  local.get $1
+  i32.const 93
+  call $~lib/rt/__instanceof
+  if (result i32)
+   local.get $1
+  else
+   i32.const 17760
+   i32.const 16976
+   i32.const 43
+   i32.const 41
+   call $~lib/builtins/abort
+   unreachable
+  end
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $2
+ )
+ (func $~lib/map/Map<u32,src-as/base/Component/Component>#values (param $0 i32) (result i32)
+  (local $1 i32)
+  (local $2 i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  (local $6 i32)
+  (local $7 i32)
+  (local $8 i32)
+  (local $9 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  local.get $0
+  i32.load offset=8
+  local.set $1
+  local.get $0
+  i32.load offset=16
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  local.get $2
+  call $~lib/array/Array<src-as/base/Component/Component>#constructor
+  local.tee $3
+  i32.store
+  i32.const 0
+  local.set $4
+  i32.const 0
+  local.set $5
+  loop $for-loop|0
+   local.get $5
+   local.get $2
+   i32.lt_s
+   local.set $6
+   local.get $6
+   if
+    local.get $1
+    local.get $5
+    i32.const 12
+    i32.mul
+    i32.add
+    local.set $7
+    local.get $7
+    i32.load offset=8
+    i32.const 1
+    i32.and
+    i32.eqz
+    if
+     local.get $3
+     local.get $4
+     local.tee $8
+     i32.const 1
+     i32.add
+     local.set $4
+     local.get $8
+     local.get $7
+     i32.load offset=4
+     local.set $9
+     global.get $~lib/memory/__stack_pointer
+     local.get $9
+     i32.store offset=4
+     local.get $9
+     call $~lib/array/Array<src-as/base/Component/Component>#__set
+    end
+    local.get $5
+    i32.const 1
+    i32.add
+    local.set $5
+    br $for-loop|0
+   end
+  end
+  local.get $3
+  local.get $4
+  call $~lib/array/Array<src-as/base/Component/Component>#set:length
+  local.get $3
+  local.set $9
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $9
+ )
+ (func $src-as/base/Query/Query#removeEntity (param $0 i32) (param $1 i32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  i32.load offset=4
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  local.get $1
+  call $~lib/set/Set<src-as/base/Entity/Entity>#delete
+  drop
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+ )
+ (func $src-as/base/QueryManager/QueryManager#onRemoveComponent (param $0 i32) (param $1 i32) (param $2 i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  (local $6 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  local.get $0
+  i32.load
+  local.set $6
+  global.get $~lib/memory/__stack_pointer
+  local.get $6
+  i32.store
+  local.get $6
+  local.get $2
+  call $~lib/map/Map<u32,~lib/array/Array<src-as/base/Query/Query>>#has
+  i32.eqz
+  if
+   global.get $~lib/memory/__stack_pointer
+   i32.const 8
+   i32.add
+   global.set $~lib/memory/__stack_pointer
+   return
+  end
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  i32.load
+  local.set $6
+  global.get $~lib/memory/__stack_pointer
+  local.get $6
+  i32.store
+  local.get $6
+  local.get $2
+  call $~lib/map/Map<u32,~lib/array/Array<src-as/base/Query/Query>>#get
+  local.tee $3
+  i32.store offset=4
+  i32.const 0
+  local.set $4
+  loop $for-loop|0
+   local.get $4
+   local.get $3
+   call $~lib/array/Array<src-as/base/Query/Query>#get:length
+   i32.lt_s
+   local.set $5
+   local.get $5
+   if
+    local.get $3
+    local.get $4
+    call $~lib/array/Array<src-as/base/Query/Query>#__get
+    i32.load offset=4
+    local.set $6
+    global.get $~lib/memory/__stack_pointer
+    local.get $6
+    i32.store
+    local.get $6
+    local.get $1
+    call $~lib/set/Set<src-as/base/Entity/Entity>#has
+    if
+     local.get $3
+     local.get $4
+     call $~lib/array/Array<src-as/base/Query/Query>#__get
+     local.set $6
+     global.get $~lib/memory/__stack_pointer
+     local.get $6
+     i32.store
+     local.get $6
+     local.get $1
+     call $src-as/base/Query/Query#removeEntity@virtual
+    end
+    local.get $4
+    i32.const 1
+    i32.add
+    local.set $4
+    br $for-loop|0
+   end
+  end
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+ )
+ (func $src-as/base/System/ListenerSystem#removeEntity (param $0 i32) (param $1 i32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  i32.load offset=8
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  local.get $1
+  call $~lib/set/Set<src-as/base/Entity/Entity>#delete
+  drop
+  local.get $0
+  local.get $1
+  call $src-as/base/System/ListenerSystem#onRemove@virtual
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+ )
+ (func $src-as/base/ListenerSystemManager/ListenerSystemManager#onRemoveEntity (param $0 i32) (param $1 i32) (param $2 i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  (local $6 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  local.get $0
+  i32.load
+  local.set $6
+  global.get $~lib/memory/__stack_pointer
+  local.get $6
+  i32.store
+  local.get $6
+  local.get $2
+  call $~lib/map/Map<u32,~lib/array/Array<src-as/base/System/ListenerSystem>>#has
+  i32.eqz
+  if
+   global.get $~lib/memory/__stack_pointer
+   i32.const 8
+   i32.add
+   global.set $~lib/memory/__stack_pointer
+   return
+  end
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  i32.load
+  local.set $6
+  global.get $~lib/memory/__stack_pointer
+  local.get $6
+  i32.store
+  local.get $6
+  local.get $2
+  call $~lib/map/Map<u32,~lib/array/Array<src-as/base/System/ListenerSystem>>#get
+  local.tee $3
+  i32.store offset=4
+  i32.const 0
+  local.set $4
+  loop $for-loop|0
+   local.get $4
+   local.get $3
+   call $~lib/array/Array<src-as/base/System/ListenerSystem>#get:length
+   i32.lt_s
+   local.set $5
+   local.get $5
+   if
+    block $for-continue|0
+     local.get $3
+     local.get $4
+     call $~lib/array/Array<src-as/base/System/ListenerSystem>#__get
+     i32.load offset=8
+     local.set $6
+     global.get $~lib/memory/__stack_pointer
+     local.get $6
+     i32.store
+     local.get $6
+     local.get $1
+     call $~lib/set/Set<src-as/base/Entity/Entity>#has
+     i32.eqz
+     if
+      br $for-continue|0
+     end
+     local.get $3
+     local.get $4
+     call $~lib/array/Array<src-as/base/System/ListenerSystem>#__get
+     local.set $6
+     global.get $~lib/memory/__stack_pointer
+     local.get $6
+     i32.store
+     local.get $6
+     local.get $1
+     call $src-as/base/System/ListenerSystem#removeEntity
+    end
+    local.get $4
+    i32.const 1
+    i32.add
+    local.set $4
+    br $for-loop|0
+   end
+  end
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+ )
+ (func $src-as/base/systems/BehaviorSystem/BehaviorSystem#removeBehavior (param $0 i32) (param $1 i32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  local.get $0
+  i32.load offset=8
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  local.get $0
+  i32.load offset=8
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store offset=4
+  local.get $2
+  local.get $1
+  i32.const 0
+  call $~lib/array/Array<src-as/base/Component/BehaviorComponent>#indexOf
+  i32.const 1
+  call $~lib/array/Array<src-as/base/Component/BehaviorComponent>#splice
+  drop
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+ )
+ (func $src-as/base/World/World#onRemoveComponent (param $0 i32) (param $1 i32) (param $2 i32) (param $3 i32) (result i32)
+  (local $4 i32)
+  (local $5 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  local.get $0
+  i32.load offset=24
+  local.set $5
+  global.get $~lib/memory/__stack_pointer
+  local.get $5
+  i32.store
+  local.get $5
+  local.get $1
+  local.get $2
+  call $src-as/base/QueryManager/QueryManager#onRemoveComponent
+  local.get $0
+  i32.load offset=28
+  local.set $5
+  global.get $~lib/memory/__stack_pointer
+  local.get $5
+  i32.store
+  local.get $5
+  local.get $1
+  local.get $2
+  call $src-as/base/ListenerSystemManager/ListenerSystemManager#onRemoveEntity
+  local.get $3
+  local.tee $4
+  i32.eqz
+  if (result i32)
+   i32.const 0
+  else
+   local.get $4
+   i32.const 88
+   call $~lib/rt/__instanceof
+  end
+  if
+   local.get $0
+   call $src-as/base/World/World#getOrAddSystem<src-as/base/systems/BehaviorSystem/BehaviorSystem>
+   local.set $5
+   global.get $~lib/memory/__stack_pointer
+   local.get $5
+   i32.store
+   local.get $5
+   local.get $3
+   local.tee $4
+   i32.const 88
+   call $~lib/rt/__instanceof
+   if (result i32)
+    local.get $4
+   else
+    i32.const 17760
+    i32.const 16976
+    i32.const 118
+    i32.const 57
+    call $~lib/builtins/abort
+    unreachable
+   end
+   local.set $5
+   global.get $~lib/memory/__stack_pointer
+   local.get $5
+   i32.store offset=4
+   local.get $5
+   call $src-as/base/systems/BehaviorSystem/BehaviorSystem#removeBehavior
+  end
+  local.get $0
+  local.set $5
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $5
+ )
+ (func $src-as/base/Entity/Entity#remove<src-as/base/Component/Component> (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 12
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store offset=8
+  local.get $0
+  i32.load
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  local.get $0
+  local.get $1
+  local.get $0
+  i32.load offset=8
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store offset=8
+  local.get $2
+  local.get $1
+  call $~lib/map/Map<u32,src-as/base/Component/Component>#get
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store offset=4
+  local.get $2
+  call $src-as/base/World/World#onRemoveComponent
+  drop
+  local.get $0
+  i32.load offset=8
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  local.get $1
+  call $~lib/map/Map<u32,src-as/base/Component/Component>#delete
+  drop
+  local.get $0
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  i32.const 12
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $2
+ )
+ (func $src-as/base/World/World#onDisposeEntity (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  i32.load offset=16
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  local.get $1
+  i32.load offset=4
+  call $~lib/map/Map<u32,src-as/base/Entity/Entity>#delete
+  drop
+  local.get $0
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $2
+ )
+ (func $src-as/base/Entity/Entity#dispose (param $0 i32)
+  (local $1 i32)
+  (local $2 i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 12
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store offset=8
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  i32.load offset=8
+  local.set $5
+  global.get $~lib/memory/__stack_pointer
+  local.get $5
+  i32.store
+  local.get $5
+  call $~lib/map/Map<u32,src-as/base/Component/Component>#keys
+  local.tee $1
+  i32.store offset=4
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  i32.load offset=8
+  local.set $5
+  global.get $~lib/memory/__stack_pointer
+  local.get $5
+  i32.store
+  local.get $5
+  call $~lib/map/Map<u32,src-as/base/Component/Component>#values
+  local.tee $2
+  i32.store offset=8
+  i32.const 0
+  local.set $3
+  loop $for-loop|0
+   local.get $3
+   local.get $2
+   call $~lib/array/Array<src-as/base/Component/Component>#get:length
+   i32.lt_s
+   local.set $4
+   local.get $4
+   if
+    local.get $0
+    local.get $1
+    local.get $3
+    call $~lib/array/Array<u32>#__get
+    call $src-as/base/Entity/Entity#remove<src-as/base/Component/Component>
+    drop
+    local.get $3
+    i32.const 1
+    i32.add
+    local.set $3
+    br $for-loop|0
+   end
+  end
+  local.get $0
+  i32.load
+  local.set $5
+  global.get $~lib/memory/__stack_pointer
+  local.get $5
+  i32.store
+  local.get $5
+  local.get $0
+  call $src-as/base/World/World#onDisposeEntity
+  drop
+  global.get $~lib/memory/__stack_pointer
+  i32.const 12
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+ )
+ (func $src-as/exports/cameraFactories/removeAllCameras
+  (local $0 i32)
+  (local $1 i32)
+  (local $2 i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  (local $6 i32)
+  (local $7 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 24
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.const 24
+  memory.fill
+  global.get $~lib/memory/__stack_pointer
+  call $src-as/base/World/World.get:main
+  local.set $7
+  global.get $~lib/memory/__stack_pointer
+  local.get $7
+  i32.store
+  local.get $7
+  call $src-as/base/World/World#get<src-as/rendering/systems/RenderSystem/RenderSystem>
+  local.tee $0
+  i32.store offset=4
+  global.get $~lib/memory/__stack_pointer
+  call $src-as/base/World/World.get:main
+  local.set $7
+  global.get $~lib/memory/__stack_pointer
+  local.get $7
+  i32.store
+  local.get $7
+  call $src-as/base/World/World#get<src-as/base/systems/TransformSystem/TransformSystem>
+  i32.load offset=20
+  local.tee $1
+  i32.store offset=8
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  i32.load offset=16
+  i32.load offset=8
+  local.tee $2
+  i32.store offset=12
+  i32.const 0
+  local.set $3
+  loop $for-loop|0
+   local.get $3
+   local.get $2
+   call $~lib/array/Array<src-as/components/Camera/Camera>#get:length
+   i32.lt_s
+   local.set $4
+   local.get $4
+   if
+    global.get $~lib/memory/__stack_pointer
+    local.get $2
+    local.get $3
+    call $~lib/array/Array<src-as/components/Camera/Camera>#__get
+    local.tee $5
+    i32.store offset=16
+    global.get $~lib/memory/__stack_pointer
+    local.get $5
+    i32.load offset=8
+    i32.load offset=36
+    local.tee $6
+    i32.store offset=20
+    local.get $6
+    i32.const 0
+    i32.ne
+    if (result i32)
+     local.get $6
+     local.get $1
+     i32.ne
+    else
+     i32.const 0
+    end
+    if
+     local.get $6
+     i32.load
+     local.set $7
+     global.get $~lib/memory/__stack_pointer
+     local.get $7
+     i32.store
+     local.get $7
+     call $src-as/base/Entity/Entity#dispose
+    end
+    local.get $5
+    i32.load
+    local.set $7
+    global.get $~lib/memory/__stack_pointer
+    local.get $7
+    i32.store
+    local.get $7
+    call $src-as/base/Entity/Entity#dispose
+    local.get $3
+    i32.const 1
+    i32.add
+    local.set $3
+    br $for-loop|0
+   end
+  end
+  global.get $~lib/memory/__stack_pointer
+  i32.const 24
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+ )
  (func $src-as/rendering/material/Material/Material#addUniformBufferObject (param $0 i32) (param $1 i32) (result i32)
   (local $2 i32)
   global.get $~lib/memory/__stack_pointer
@@ -37290,7 +39896,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 24
-   i32.const 138
+   i32.const 139
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -37387,6 +39993,31 @@
   global.set $~lib/memory/__stack_pointer
   local.get $2
  )
+ (func $src-as/math/Texture/Texture#get:length (param $0 i32) (result i32)
+  (local $1 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  i32.load offset=4
+  local.set $1
+  global.get $~lib/memory/__stack_pointer
+  local.get $1
+  i32.store
+  local.get $1
+  call $~lib/typedarray/Uint8Array#get:length
+  local.set $1
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $1
+ )
  (func $src-as/rendering/material/Material/StandardMaterial#constructor (param $0 i32) (param $1 i32) (result i32)
   (local $2 i32)
   global.get $~lib/memory/__stack_pointer
@@ -37405,7 +40036,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 32
-   i32.const 137
+   i32.const 138
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -37414,7 +40045,7 @@
   i32.const 0
   call $src-as/rendering/material/Material/StandardMaterial#set:color
   local.get $0
-  i32.const 0
+  global.get $src-as/math/Texture/Texture.white
   call $src-as/rendering/material/Material/StandardMaterial#set:texture
   global.get $~lib/memory/__stack_pointer
   local.get $0
@@ -37472,6 +40103,28 @@
   call $src-as/rendering/material/Material/Material#addUniform
   drop
   local.get $0
+  global.get $src-as/rendering/constants/_uniforms/Texture
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store offset=4
+  local.get $2
+  local.get $0
+  i32.load offset=28
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store offset=8
+  local.get $2
+  call $src-as/rendering/material/Uniform/Uniform.Texture
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store offset=4
+  local.get $2
+  call $src-as/rendering/material/Material/Material#addUniform
+  drop
+  local.get $0
   local.set $2
   global.get $~lib/memory/__stack_pointer
   i32.const 12
@@ -37494,8 +40147,8 @@
   local.get $0
   i32.ne
   if
-   i32.const 17392
-   i32.const 17584
+   i32.const 17504
+   i32.const 17696
    i32.const 27
    i32.const 4
    call $~lib/builtins/abort
@@ -37547,8 +40200,8 @@
   local.get $0
   i32.ne
   if
-   i32.const 17392
-   i32.const 17584
+   i32.const 17504
+   i32.const 17696
    i32.const 27
    i32.const 4
    call $~lib/builtins/abort
@@ -37561,7 +40214,7 @@
   local.get $2
   i32.store
   local.get $2
-  i32.const 136
+  i32.const 142
   local.get $1
   call $~lib/map/Map<u32,src-as/base/Component/Component>#set
   drop
@@ -37573,7 +40226,7 @@
   i32.store
   local.get $2
   local.get $0
-  i32.const 136
+  i32.const 142
   local.get $1
   call $src-as/base/World/World#onAddComponent
   drop
@@ -37585,694 +40238,96 @@
   global.set $~lib/memory/__stack_pointer
   local.get $2
  )
- (func $src-as/base/Entity/Entity#add<src-as/components/Rotator/Rotator> (param $0 i32) (result i32)
-  (local $1 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store
-  local.get $0
-  i32.const 0
-  call $src-as/components/Rotator/Rotator#constructor
-  local.set $1
-  global.get $~lib/memory/__stack_pointer
-  local.get $1
-  i32.store
-  local.get $1
-  call $src-as/base/Entity/Entity#attach<src-as/components/Rotator/Rotator>
-  local.set $1
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $1
- )
- (func $src-as/factories/mainFactories/unlitRotatingCube
-  (local $0 i32)
+ (func $src-as/exports/demos/rotatingCube (param $0 i32) (result i32)
   (local $1 i32)
   (local $2 i32)
-  (local $3 i32)
-  (local $4 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 44
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.const 44
-  memory.fill
-  global.get $~lib/memory/__stack_pointer
-  call $src-as/base/World/World.get:main
-  local.set $4
-  global.get $~lib/memory/__stack_pointer
-  local.get $4
-  i32.store offset=12
-  local.get $4
-  call $src-as/base/World/World#createEntity
-  local.set $4
-  global.get $~lib/memory/__stack_pointer
-  local.get $4
-  i32.store offset=4
-  local.get $4
-  i32.const 0
-  global.get $src-as/rendering/geometry/CubeGeometry/CubeGeometry.default
-  local.set $4
-  global.get $~lib/memory/__stack_pointer
-  local.get $4
-  i32.store offset=16
-  local.get $4
-  i32.const 0
-  global.get $src-as/rendering/shader/unlitVertexColors/unlitVertexColorShader
-  local.set $4
-  global.get $~lib/memory/__stack_pointer
-  local.get $4
-  i32.store offset=24
-  local.get $4
-  call $src-as/rendering/material/Material/StandardMaterial#constructor
-  local.set $4
-  global.get $~lib/memory/__stack_pointer
-  local.get $4
-  i32.store offset=20
-  local.get $4
-  call $src-as/components/Mesh/Mesh#constructor
-  local.set $4
-  global.get $~lib/memory/__stack_pointer
-  local.get $4
-  i32.store offset=8
-  local.get $4
-  call $src-as/base/Entity/Entity#attach<src-as/components/Mesh/Mesh>
-  local.set $4
-  global.get $~lib/memory/__stack_pointer
-  local.get $4
-  i32.store
-  local.get $4
-  call $src-as/base/Entity/Entity#add<src-as/components/Rotator/Rotator>
-  local.tee $0
-  i32.store offset=28
-  global.get $~lib/memory/__stack_pointer
-  call $src-as/base/World/World.get:main
-  local.set $4
-  global.get $~lib/memory/__stack_pointer
-  local.get $4
-  i32.store offset=4
-  local.get $4
-  call $src-as/base/World/World#createEntity
-  local.set $4
-  global.get $~lib/memory/__stack_pointer
-  local.get $4
-  i32.store
-  local.get $4
-  call $src-as/base/Entity/Entity#add<src-as/components/Transform/Transform>
-  local.tee $1
-  i32.store offset=32
-  global.get $~lib/memory/__stack_pointer
-  local.get $0
-  call $src-as/base/Entity/Entity#get<src-as/components/Transform/Transform>
-  local.tee $2
-  i32.store offset=36
-  global.get $~lib/memory/__stack_pointer
-  local.get $1
-  call $src-as/base/Entity/Entity#get<src-as/components/Transform/Transform>
-  local.tee $3
-  i32.store offset=40
-  local.get $3
-  i32.load offset=20
-  local.set $4
-  global.get $~lib/memory/__stack_pointer
-  local.get $4
-  i32.store
-  local.get $4
-  f32.const 1
-  call $src-as/math/Vector3/Vector3#set:y
-  local.get $2
-  local.get $3
-  i32.const 0
-  call $src-as/components/Transform/Transform#setParent
-  drop
-  global.get $~lib/memory/__stack_pointer
-  i32.const 44
-  i32.add
-  global.set $~lib/memory/__stack_pointer
- )
- (func $src-as/factories/mainFactories/defaultWorld (result i32)
-  (local $0 i32)
-  (local $1 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 16
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i64.const 0
-  i64.store
-  global.get $~lib/memory/__stack_pointer
-  i64.const 0
-  i64.store offset=8
-  call $src-as/base/World/World.get:main
-  local.set $1
-  global.get $~lib/memory/__stack_pointer
-  local.get $1
-  i32.store offset=8
-  local.get $1
-  call $src-as/base/World/World#addSystem<src-as/base/systems/TimeSystem/TimeSystem>
-  local.set $1
-  global.get $~lib/memory/__stack_pointer
-  local.get $1
-  i32.store offset=4
-  local.get $1
-  call $src-as/base/World/World#addSystem<src-as/base/systems/TransformSystem/TransformSystem>
-  local.set $1
-  global.get $~lib/memory/__stack_pointer
-  local.get $1
-  i32.store
-  local.get $1
-  call $src-as/base/World/World#addSystem<src-as/WebGL2/systems/WebGLRenderSystem/WebGLRenderSystem>
-  drop
-  global.get $~lib/memory/__stack_pointer
-  call $src-as/base/World/World.get:main
-  local.set $1
-  global.get $~lib/memory/__stack_pointer
-  local.get $1
-  i32.store
-  local.get $1
-  call $src-as/base/World/World#get<src-as/WebGL2/systems/WebGLRenderSystem/WebGLRenderSystem>
-  local.tee $0
-  i32.store offset=12
-  local.get $0
-  i32.const 0
-  f32.const 0
-  f32.const 0
-  f32.const 0
-  f32.const 0
-  call $src-as/math/Color/Color#constructor
-  local.set $1
-  global.get $~lib/memory/__stack_pointer
-  local.get $1
-  i32.store offset=4
-  local.get $1
-  call $src-as/WebGL2/systems/WebGLRenderSystem/WebGLRenderSystem#clearColor
-  call $src-as/factories/cameraFactories/defaultCamera
-  drop
-  call $src-as/factories/mainFactories/unlitRotatingCube
-  call $src-as/base/World/World.get:main
-  local.set $1
-  global.get $~lib/memory/__stack_pointer
-  i32.const 16
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $1
- )
- (func $src-as/base/World/World#update (param $0 i32) (result i32)
-  (local $1 i32)
-  (local $2 i32)
-  (local $3 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 8
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i64.const 0
-  i64.store
-  i32.const 0
-  local.set $1
-  loop $for-loop|0
-   local.get $1
-   local.get $0
-   i32.load offset=4
-   local.set $3
-   global.get $~lib/memory/__stack_pointer
-   local.get $3
-   i32.store
-   local.get $3
-   call $~lib/array/Array<src-as/base/System/System>#get:length
-   i32.lt_s
-   local.set $2
-   local.get $2
-   if
-    local.get $0
-    i32.load offset=4
-    local.set $3
-    global.get $~lib/memory/__stack_pointer
-    local.get $3
-    i32.store offset=4
-    local.get $3
-    local.get $1
-    call $~lib/array/Array<src-as/base/System/System>#__get
-    local.set $3
-    global.get $~lib/memory/__stack_pointer
-    local.get $3
-    i32.store
-    local.get $3
-    call $src-as/base/System/System#update@virtual
-    local.get $1
-    i32.const 1
-    i32.add
-    local.set $1
-    br $for-loop|0
-   end
-  end
-  local.get $0
-  local.set $3
-  global.get $~lib/memory/__stack_pointer
-  i32.const 8
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $3
- )
- (func $src-as/factories/mainFactories/update
-  (local $0 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store
-  call $src-as/base/World/World.get:main
-  local.set $0
-  global.get $~lib/memory/__stack_pointer
-  local.get $0
-  i32.store
-  local.get $0
-  call $src-as/base/World/World#update
-  drop
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.add
-  global.set $~lib/memory/__stack_pointer
- )
- (func $src-as/factories/mainFactories/handleResize (param $0 i32) (param $1 i32)
-  (local $2 f32)
   (local $3 i32)
   (local $4 i32)
   (local $5 i32)
   (local $6 i32)
-  (local $7 i32)
   global.get $~lib/memory/__stack_pointer
-  i32.const 12
+  i32.const 28
   i32.sub
   global.set $~lib/memory/__stack_pointer
   call $~stack_check
   global.get $~lib/memory/__stack_pointer
-  i64.const 0
-  i64.store
-  global.get $~lib/memory/__stack_pointer
   i32.const 0
-  i32.store offset=8
+  i32.const 28
+  memory.fill
+  global.get $~lib/memory/__stack_pointer
   local.get $0
-  global.set $src-as/rendering/systems/RenderSystem/RenderSystem.canvasWidth
-  local.get $1
-  global.set $src-as/rendering/systems/RenderSystem/RenderSystem.canvasHeight
-  local.get $0
-  f32.convert_i32_u
-  local.get $1
-  f32.convert_i32_u
-  f32.div
-  local.set $2
+  i32.const 0
+  i32.eq
+  if (result i32)
+   global.get $src-as/rendering/shader/unlit/unlitVertexColors/unlitVertexColorShader
+  else
+   local.get $0
+  end
+  local.tee $1
+  i32.store
   global.get $~lib/memory/__stack_pointer
   call $src-as/base/World/World.get:main
-  local.set $7
+  local.set $6
   global.get $~lib/memory/__stack_pointer
-  local.get $7
-  i32.store
-  local.get $7
-  call $src-as/base/World/World#get<src-as/WebGL2/systems/WebGLRenderSystem/WebGLRenderSystem>
-  local.tee $3
+  local.get $6
   i32.store offset=4
-  global.get $~lib/memory/__stack_pointer
-  local.get $3
-  i32.load offset=16
-  i32.load offset=8
-  local.tee $4
+  local.get $6
+  call $src-as/base/World/World#createEntity
+  local.tee $2
   i32.store offset=8
+  global.get $~lib/memory/__stack_pointer
   i32.const 0
-  local.set $5
-  loop $for-loop|0
-   local.get $5
-   local.get $4
-   call $~lib/array/Array<src-as/components/Camera/Camera>#get:length
-   i32.lt_s
-   local.set $6
-   local.get $6
-   if
-    local.get $4
-    local.get $5
-    call $~lib/array/Array<src-as/components/Camera/Camera>#__get
-    i32.load8_u offset=28
-    if
-     local.get $4
-     local.get $5
-     call $~lib/array/Array<src-as/components/Camera/Camera>#__get
-     local.set $7
-     global.get $~lib/memory/__stack_pointer
-     local.get $7
-     i32.store
-     local.get $7
-     i32.const 0
-     i32.const 0
-     local.get $0
-     local.get $1
-     local.get $2
-     call $src-as/components/Camera/Camera#setViewport
-     drop
-    end
-    local.get $5
-    i32.const 1
-    i32.add
-    local.set $5
-    br $for-loop|0
-   end
-  end
-  global.get $~lib/memory/__stack_pointer
-  i32.const 12
-  i32.add
-  global.set $~lib/memory/__stack_pointer
- )
- (func $src-as/base/Query/TypedQuery<src-as/components/Transform/Transform>#addEntity (param $0 i32) (param $1 i32)
-  (local $2 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 8
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i64.const 0
-  i64.store
-  local.get $0
   local.get $1
-  call $src-as/base/Query/Query#addEntity
-  local.get $0
-  i32.load offset=8
-  local.set $2
+  call $src-as/rendering/material/Material/StandardMaterial#constructor
+  local.tee $3
+  i32.store offset=12
   global.get $~lib/memory/__stack_pointer
-  local.get $2
-  i32.store
-  local.get $2
-  local.get $1
-  call $src-as/base/Entity/Entity#get<src-as/components/Transform/Transform>
-  local.set $2
+  i32.const 0
+  global.get $src-as/rendering/geometry/CubeGeometry/CubeGeometry.default
+  local.set $6
   global.get $~lib/memory/__stack_pointer
-  local.get $2
-  i32.store offset=4
-  local.get $2
-  call $~lib/array/Array<src-as/components/Transform/Transform>#push
-  drop
+  local.get $6
+  i32.store offset=16
+  local.get $6
+  local.get $3
+  call $src-as/components/Mesh/Mesh#constructor
+  local.tee $4
+  i32.store offset=20
   global.get $~lib/memory/__stack_pointer
-  i32.const 8
-  i32.add
-  global.set $~lib/memory/__stack_pointer
- )
- (func $src-as/base/Entity/Entity#get<src-as/components/Camera/Camera> (param $0 i32) (result i32)
-  (local $1 i32)
-  (local $2 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 8
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i64.const 0
-  i64.store
-  global.get $~lib/memory/__stack_pointer
-  local.get $0
-  i32.load offset=8
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  local.get $2
-  i32.store
-  local.get $2
-  i32.const 102
-  call $~lib/map/Map<u32,src-as/base/Component/Component>#get
-  local.tee $1
-  i32.store offset=4
-  local.get $1
-  i32.const 102
-  call $~lib/rt/__instanceof
-  if (result i32)
-   local.get $1
-  else
-   i32.const 17648
-   i32.const 17584
-   i32.const 39
-   i32.const 10
-   call $~lib/builtins/abort
-   unreachable
-  end
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  i32.const 8
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $2
- )
- (func $src-as/base/Query/TypedQuery<src-as/components/Camera/Camera>#addEntity (param $0 i32) (param $1 i32)
-  (local $2 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 8
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i64.const 0
-  i64.store
-  local.get $0
-  local.get $1
-  call $src-as/base/Query/Query#addEntity
-  local.get $0
-  i32.load offset=8
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  local.get $2
-  i32.store
-  local.get $2
-  local.get $1
-  call $src-as/base/Entity/Entity#get<src-as/components/Camera/Camera>
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  local.get $2
-  i32.store offset=4
-  local.get $2
-  call $~lib/array/Array<src-as/components/Camera/Camera>#push
-  drop
-  global.get $~lib/memory/__stack_pointer
-  i32.const 8
-  i32.add
-  global.set $~lib/memory/__stack_pointer
- )
- (func $src-as/base/systems/TransformSystem/TransformSystem#onAdd (param $0 i32) (param $1 i32)
-  (local $2 i32)
-  (local $3 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 8
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i64.const 0
-  i64.store
-  global.get $~lib/memory/__stack_pointer
-  local.get $1
-  call $src-as/base/Entity/Entity#get<src-as/components/Transform/Transform>
-  local.tee $2
-  i32.store
-  local.get $2
-  local.get $0
-  i32.load offset=20
-  i32.ne
-  if (result i32)
-   local.get $2
-   i32.load offset=36
-   i32.const 0
-   i32.eq
-  else
-   i32.const 0
-  end
-  if
-   local.get $2
-   local.get $0
-   i32.load offset=20
-   local.set $3
-   global.get $~lib/memory/__stack_pointer
-   local.get $3
-   i32.store offset=4
-   local.get $3
-   i32.const 0
-   call $src-as/components/Transform/Transform#setParent
-   drop
-  end
-  global.get $~lib/memory/__stack_pointer
-  i32.const 8
-  i32.add
-  global.set $~lib/memory/__stack_pointer
- )
- (func $src-as/base/Entity/Entity#get<src-as/components/Mesh/Mesh> (param $0 i32) (result i32)
-  (local $1 i32)
-  (local $2 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 8
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i64.const 0
-  i64.store
-  global.get $~lib/memory/__stack_pointer
-  local.get $0
-  i32.load offset=8
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  local.get $2
-  i32.store
-  local.get $2
-  i32.const 107
-  call $~lib/map/Map<u32,src-as/base/Component/Component>#get
-  local.tee $1
-  i32.store offset=4
-  local.get $1
-  i32.const 107
-  call $~lib/rt/__instanceof
-  if (result i32)
-   local.get $1
-  else
-   i32.const 17648
-   i32.const 17584
-   i32.const 39
-   i32.const 10
-   call $~lib/builtins/abort
-   unreachable
-  end
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  i32.const 8
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $2
- )
- (func $src-as/rendering/systems/RenderSystem/RenderSystem#onAdd (param $0 i32) (param $1 i32)
-  (local $2 i32)
-  (local $3 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 8
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i64.const 0
-  i64.store
-  global.get $~lib/memory/__stack_pointer
-  local.get $1
-  call $src-as/base/Entity/Entity#get<src-as/components/Mesh/Mesh>
-  local.tee $2
-  i32.store
-  local.get $2
+  i32.const 0
+  call $src-as/components/Rotator/Rotator#constructor
+  local.tee $5
+  i32.store offset=24
+  local.get $5
   i32.load offset=16
-  i32.load8_u offset=12
-  if
-   local.get $0
-   i32.load offset=24
-   local.set $3
-   global.get $~lib/memory/__stack_pointer
-   local.get $3
-   i32.store offset=4
-   local.get $3
-   local.get $2
-   call $~lib/array/Array<src-as/components/Mesh/Mesh>#push
-   drop
-  else
-   local.get $0
-   i32.load offset=20
-   local.set $3
-   global.get $~lib/memory/__stack_pointer
-   local.get $3
-   i32.store offset=4
-   local.get $3
-   local.get $2
-   call $~lib/array/Array<src-as/components/Mesh/Mesh>#push
-   drop
-  end
-  local.get $0
-  local.get $2
-  call $src-as/rendering/systems/RenderSystem/RenderSystem#handleCreateMesh@virtual
+  local.set $6
   global.get $~lib/memory/__stack_pointer
-  i32.const 8
-  i32.add
-  global.set $~lib/memory/__stack_pointer
- )
- (func $src-as/base/World/World#get<src-as/components/Time/Time> (param $0 i32) (result i32)
-  (local $1 i32)
-  (local $2 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 8
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i64.const 0
-  i64.store
-  global.get $~lib/memory/__stack_pointer
-  local.get $0
-  i32.load offset=20
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  local.get $2
-  i32.store
-  local.get $2
-  i32.const 99
-  call $~lib/map/Map<u32,src-as/base/Object/ObjectBase>#get
-  local.tee $1
+  local.get $6
   i32.store offset=4
-  local.get $1
-  i32.const 99
-  call $~lib/rt/__instanceof
-  if (result i32)
-   local.get $1
-  else
-   i32.const 17648
-   i32.const 16864
-   i32.const 43
-   i32.const 41
-   call $~lib/builtins/abort
-   unreachable
-  end
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  i32.const 8
-  i32.add
-  global.set $~lib/memory/__stack_pointer
+  local.get $6
+  f32.const 0
+  f32.const 1
+  f32.const 0
+  call $src-as/math/Vector3/Vector3#set
+  drop
   local.get $2
- )
- (func $src-as/components/Rotator/Rotator#start (param $0 i32)
-  (local $1 i32)
+  local.get $4
+  call $src-as/base/Entity/Entity#attach<src-as/components/Mesh/Mesh>
+  local.set $6
   global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
+  local.get $6
+  i32.store offset=4
+  local.get $6
+  local.get $5
+  call $src-as/base/Entity/Entity#attach<src-as/components/Rotator/Rotator>
+  drop
+  local.get $2
+  local.set $6
   global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store
-  local.get $0
-  local.get $0
-  i32.load offset=4
-  local.set $1
-  global.get $~lib/memory/__stack_pointer
-  local.get $1
-  i32.store
-  local.get $1
-  call $src-as/base/World/World#get<src-as/components/Time/Time>
-  f32.load offset=8
-  call $src-as/components/Rotator/Rotator#set:startTime
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
+  i32.const 28
   i32.add
   global.set $~lib/memory/__stack_pointer
+  local.get $6
  )
  (func $~lib/set/Set<src-as/base/Entity/Entity>#values (param $0 i32) (result i32)
   (local $1 i32)
@@ -39071,8 +41126,8 @@
   if (result i32)
    local.get $0
   else
-   i32.const 17648
-   i32.const 18160
+   i32.const 17760
+   i32.const 18080
    i32.const 33
    i32.const 4
    call $~lib/builtins/abort
@@ -39104,8 +41159,8 @@
   if (result i32)
    local.get $0
   else
-   i32.const 17648
-   i32.const 18160
+   i32.const 17760
+   i32.const 18080
    i32.const 34
    i32.const 4
    call $~lib/builtins/abort
@@ -39248,8 +41303,8 @@
   if (result i32)
    local.get $1
   else
-   i32.const 17648
-   i32.const 18256
+   i32.const 17760
+   i32.const 18368
    i32.const 67
    i32.const 4
    call $~lib/builtins/abort
@@ -39282,8 +41337,8 @@
   if (result i32)
    local.get $1
   else
-   i32.const 17648
-   i32.const 18256
+   i32.const 17760
+   i32.const 18368
    i32.const 68
    i32.const 4
    call $~lib/builtins/abort
@@ -39316,8 +41371,8 @@
   if (result i32)
    local.get $1
   else
-   i32.const 17648
-   i32.const 18256
+   i32.const 17760
+   i32.const 18368
    i32.const 69
    i32.const 4
    call $~lib/builtins/abort
@@ -39350,8 +41405,8 @@
   if (result i32)
    local.get $1
   else
-   i32.const 17648
-   i32.const 18256
+   i32.const 17760
+   i32.const 18368
    i32.const 70
    i32.const 4
    call $~lib/builtins/abort
@@ -39438,8 +41493,8 @@
   if (result i32)
    local.get $1
   else
-   i32.const 17648
-   i32.const 18336
+   i32.const 17760
+   i32.const 18448
    i32.const 28
    i32.const 4
    call $~lib/builtins/abort
@@ -39473,8 +41528,8 @@
   if (result i32)
    local.get $1
   else
-   i32.const 17648
-   i32.const 18336
+   i32.const 17760
+   i32.const 18448
    i32.const 29
    i32.const 4
    call $~lib/builtins/abort
@@ -39507,8 +41562,8 @@
   if (result i32)
    local.get $1
   else
-   i32.const 17648
-   i32.const 18336
+   i32.const 17760
+   i32.const 18448
    i32.const 30
    i32.const 4
    call $~lib/builtins/abort
@@ -39541,8 +41596,8 @@
   if (result i32)
    local.get $1
   else
-   i32.const 17648
-   i32.const 18336
+   i32.const 17760
+   i32.const 18448
    i32.const 31
    i32.const 4
    call $~lib/builtins/abort
@@ -39576,8 +41631,8 @@
   if (result i32)
    local.get $1
   else
-   i32.const 17648
-   i32.const 18336
+   i32.const 17760
+   i32.const 18448
    i32.const 32
    i32.const 4
    call $~lib/builtins/abort
@@ -39591,6 +41646,49 @@
   i32.const 12
   i32.add
   global.set $~lib/memory/__stack_pointer
+ )
+ (func $src-as/base/World/World#get<src-as/components/Time/Time> (param $0 i32) (result i32)
+  (local $1 i32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  i32.load offset=20
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  i32.const 99
+  call $~lib/map/Map<u32,src-as/base/Object/ObjectBase>#get
+  local.tee $1
+  i32.store offset=4
+  local.get $1
+  i32.const 99
+  call $~lib/rt/__instanceof
+  if (result i32)
+   local.get $1
+  else
+   i32.const 17760
+   i32.const 16976
+   i32.const 43
+   i32.const 41
+   call $~lib/builtins/abort
+   unreachable
+  end
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $2
  )
  (func $src-as/rendering/systems/RenderSystem/RenderSystem#renderMesh (param $0 i32) (param $1 i32) (param $2 i32)
   (local $3 i32)
@@ -39793,8 +41891,8 @@
         if (result i32)
          local.get $6
         else
-         i32.const 17648
-         i32.const 18416
+         i32.const 17760
+         i32.const 18528
          i32.const 83
          i32.const 6
          call $~lib/builtins/abort
@@ -39840,8 +41938,8 @@
          if (result i32)
           local.get $6
          else
-          i32.const 17648
-          i32.const 18416
+          i32.const 17760
+          i32.const 18528
           i32.const 85
           i32.const 6
           call $~lib/builtins/abort
@@ -39865,7 +41963,7 @@
          f32.load offset=16
          call $~lib/typedarray/Float32Array#__set
         else
-         i32.const 18528
+         i32.const 18640
          local.set $7
          global.get $~lib/memory/__stack_pointer
          local.get $7
@@ -39879,7 +41977,7 @@
          i32.store offset=4
          local.get $7
          call $~lib/string/String#concat
-         i32.const 18416
+         i32.const 18528
          i32.const 87
          i32.const 5
          call $~lib/builtins/abort
@@ -40092,6 +42190,956 @@
   i32.add
   global.set $~lib/memory/__stack_pointer
  )
+ (func $src-as/base/Query/TypedQuery<src-as/components/Transform/Transform>#addEntity (param $0 i32) (param $1 i32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  local.get $0
+  local.get $1
+  call $src-as/base/Query/Query#addEntity
+  local.get $0
+  i32.load offset=8
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  local.get $1
+  call $src-as/base/Entity/Entity#get<src-as/components/Transform/Transform>
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store offset=4
+  local.get $2
+  call $~lib/array/Array<src-as/components/Transform/Transform>#push
+  drop
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+ )
+ (func $src-as/base/Entity/Entity#get<src-as/components/Camera/Camera> (param $0 i32) (result i32)
+  (local $1 i32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  i32.load offset=8
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  i32.const 102
+  call $~lib/map/Map<u32,src-as/base/Component/Component>#get
+  local.tee $1
+  i32.store offset=4
+  local.get $1
+  i32.const 102
+  call $~lib/rt/__instanceof
+  if (result i32)
+   local.get $1
+  else
+   i32.const 17760
+   i32.const 17696
+   i32.const 39
+   i32.const 10
+   call $~lib/builtins/abort
+   unreachable
+  end
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $2
+ )
+ (func $src-as/base/Query/TypedQuery<src-as/components/Camera/Camera>#addEntity (param $0 i32) (param $1 i32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  local.get $0
+  local.get $1
+  call $src-as/base/Query/Query#addEntity
+  local.get $0
+  i32.load offset=8
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  local.get $1
+  call $src-as/base/Entity/Entity#get<src-as/components/Camera/Camera>
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store offset=4
+  local.get $2
+  call $~lib/array/Array<src-as/components/Camera/Camera>#push
+  drop
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+ )
+ (func $src-as/base/systems/TransformSystem/TransformSystem#onAdd (param $0 i32) (param $1 i32)
+  (local $2 i32)
+  (local $3 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  global.get $~lib/memory/__stack_pointer
+  local.get $1
+  call $src-as/base/Entity/Entity#get<src-as/components/Transform/Transform>
+  local.tee $2
+  i32.store
+  local.get $2
+  local.get $0
+  i32.load offset=20
+  i32.ne
+  if (result i32)
+   local.get $2
+   i32.load offset=36
+   i32.const 0
+   i32.eq
+  else
+   i32.const 0
+  end
+  if
+   local.get $2
+   local.get $0
+   i32.load offset=20
+   local.set $3
+   global.get $~lib/memory/__stack_pointer
+   local.get $3
+   i32.store offset=4
+   local.get $3
+   i32.const 0
+   call $src-as/components/Transform/Transform#setParent
+   drop
+  end
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+ )
+ (func $src-as/base/Entity/Entity#get<src-as/components/Mesh/Mesh> (param $0 i32) (result i32)
+  (local $1 i32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  i32.load offset=8
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  i32.const 107
+  call $~lib/map/Map<u32,src-as/base/Component/Component>#get
+  local.tee $1
+  i32.store offset=4
+  local.get $1
+  i32.const 107
+  call $~lib/rt/__instanceof
+  if (result i32)
+   local.get $1
+  else
+   i32.const 17760
+   i32.const 17696
+   i32.const 39
+   i32.const 10
+   call $~lib/builtins/abort
+   unreachable
+  end
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $2
+ )
+ (func $src-as/rendering/systems/RenderSystem/RenderSystem#onAdd (param $0 i32) (param $1 i32)
+  (local $2 i32)
+  (local $3 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  global.get $~lib/memory/__stack_pointer
+  local.get $1
+  call $src-as/base/Entity/Entity#get<src-as/components/Mesh/Mesh>
+  local.tee $2
+  i32.store
+  local.get $2
+  i32.load offset=16
+  i32.load8_u offset=12
+  if
+   local.get $0
+   i32.load offset=24
+   local.set $3
+   global.get $~lib/memory/__stack_pointer
+   local.get $3
+   i32.store offset=4
+   local.get $3
+   local.get $2
+   call $~lib/array/Array<src-as/components/Mesh/Mesh>#push
+   drop
+  else
+   local.get $0
+   i32.load offset=20
+   local.set $3
+   global.get $~lib/memory/__stack_pointer
+   local.get $3
+   i32.store offset=4
+   local.get $3
+   local.get $2
+   call $~lib/array/Array<src-as/components/Mesh/Mesh>#push
+   drop
+  end
+  local.get $0
+  local.get $2
+  call $src-as/rendering/systems/RenderSystem/RenderSystem#handleCreateMesh@virtual
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+ )
+ (func $src-as/components/Rotator/Rotator#start (param $0 i32)
+  (local $1 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  local.get $0
+  i32.load offset=4
+  local.set $1
+  global.get $~lib/memory/__stack_pointer
+  local.get $1
+  i32.store
+  local.get $1
+  call $src-as/base/World/World#get<src-as/components/Time/Time>
+  f32.load offset=8
+  call $src-as/components/Rotator/Rotator#set:startTime
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+ )
+ (func $src-as/base/Query/TypedQuery<src-as/components/Transform/Transform>#removeEntity (param $0 i32) (param $1 i32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 12
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store offset=8
+  local.get $0
+  local.get $1
+  call $src-as/base/Query/Query#removeEntity
+  local.get $0
+  i32.load offset=8
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  local.get $0
+  i32.load offset=8
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store offset=4
+  local.get $2
+  local.get $1
+  call $src-as/base/Entity/Entity#get<src-as/components/Transform/Transform>
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store offset=8
+  local.get $2
+  i32.const 0
+  call $~lib/array/Array<src-as/components/Transform/Transform>#indexOf
+  i32.const 1
+  call $~lib/array/Array<src-as/components/Transform/Transform>#splice
+  drop
+  global.get $~lib/memory/__stack_pointer
+  i32.const 12
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+ )
+ (func $src-as/base/Query/TypedQuery<src-as/components/Camera/Camera>#removeEntity (param $0 i32) (param $1 i32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 12
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store offset=8
+  local.get $0
+  local.get $1
+  call $src-as/base/Query/Query#removeEntity
+  local.get $0
+  i32.load offset=8
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  local.get $0
+  i32.load offset=8
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store offset=4
+  local.get $2
+  local.get $1
+  call $src-as/base/Entity/Entity#get<src-as/components/Camera/Camera>
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store offset=8
+  local.get $2
+  i32.const 0
+  call $~lib/array/Array<src-as/components/Camera/Camera>#indexOf
+  i32.const 1
+  call $~lib/array/Array<src-as/components/Camera/Camera>#splice
+  drop
+  global.get $~lib/memory/__stack_pointer
+  i32.const 12
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+ )
+ (func $src-as/math/Vector2/Vector2#constructor (param $0 i32) (param $1 f32) (param $2 f32) (result i32)
+  (local $3 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  local.get $0
+  i32.eqz
+  if
+   global.get $~lib/memory/__stack_pointer
+   i32.const 4
+   i32.const 91
+   call $~lib/rt/itcms/__new
+   local.tee $0
+   i32.store
+  end
+  local.get $0
+  i32.const 0
+  call $src-as/math/Vector2/Vector2#set:m
+  local.get $0
+  i32.const 0
+  i32.const 2
+  call $~lib/typedarray/Float32Array#constructor
+  call $src-as/math/Vector2/Vector2#set:m
+  local.get $0
+  i32.load
+  local.set $3
+  global.get $~lib/memory/__stack_pointer
+  local.get $3
+  i32.store offset=4
+  local.get $3
+  i32.const 0
+  local.get $1
+  call $~lib/typedarray/Float32Array#__set
+  local.get $0
+  i32.load
+  local.set $3
+  global.get $~lib/memory/__stack_pointer
+  local.get $3
+  i32.store offset=4
+  local.get $3
+  i32.const 1
+  local.get $2
+  call $~lib/typedarray/Float32Array#__set
+  local.get $0
+  local.set $3
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $3
+ )
+ (func $src-as/math/Vector2/Vector2#get:x (param $0 i32) (result f32)
+  (local $1 i32)
+  (local $2 f32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  i32.load
+  local.set $1
+  global.get $~lib/memory/__stack_pointer
+  local.get $1
+  i32.store
+  local.get $1
+  i32.const 0
+  call $~lib/typedarray/Float32Array#__get
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $2
+ )
+ (func $src-as/math/Vector2/Vector2#get:y (param $0 i32) (result f32)
+  (local $1 i32)
+  (local $2 f32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  i32.load
+  local.set $1
+  global.get $~lib/memory/__stack_pointer
+  local.get $1
+  i32.store
+  local.get $1
+  i32.const 1
+  call $~lib/typedarray/Float32Array#__get
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $2
+ )
+ (func $src-as/components/Rotator/Rotator#update (param $0 i32)
+  (local $1 i32)
+  (local $2 f32)
+  (local $3 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 16
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store offset=8
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  i32.load offset=4
+  local.set $3
+  global.get $~lib/memory/__stack_pointer
+  local.get $3
+  i32.store
+  local.get $3
+  call $src-as/base/World/World#get<src-as/components/Time/Time>
+  local.tee $1
+  i32.store offset=4
+  local.get $0
+  f32.load offset=12
+  local.get $1
+  f32.load offset=8
+  f32.add
+  local.set $2
+  i32.const 0
+  local.get $2
+  f32.const 0.4000000059604645
+  f32.mul
+  f32.const 1
+  call $src-as/math/PolarCoords/PolarCoords#constructor
+  local.set $3
+  global.get $~lib/memory/__stack_pointer
+  local.get $3
+  i32.store offset=12
+  local.get $3
+  i32.const 1
+  global.set $~argumentsLength
+  i32.const 0
+  call $src-as/math/Vector2/Vector2.fromPolar@varargs
+  local.set $3
+  global.get $~lib/memory/__stack_pointer
+  local.get $3
+  i32.store
+  local.get $3
+  local.get $0
+  i32.load offset=8
+  i32.load offset=20
+  local.set $3
+  global.get $~lib/memory/__stack_pointer
+  local.get $3
+  i32.store offset=8
+  local.get $3
+  call $src-as/math/Vector2/Vector2#toVector3
+  drop
+  local.get $0
+  i32.load offset=8
+  i32.load offset=20
+  local.set $3
+  global.get $~lib/memory/__stack_pointer
+  local.get $3
+  i32.store
+  local.get $3
+  local.get $0
+  i32.load offset=16
+  local.set $3
+  global.get $~lib/memory/__stack_pointer
+  local.get $3
+  i32.store offset=8
+  local.get $3
+  call $src-as/math/Vector3/Vector3#add
+  drop
+  local.get $0
+  i32.load offset=8
+  i32.load offset=28
+  local.set $3
+  global.get $~lib/memory/__stack_pointer
+  local.get $3
+  i32.store
+  local.get $3
+  i32.const 0
+  f32.const 0.30000001192092896
+  local.get $2
+  f32.mul
+  f32.const 0.5
+  local.get $2
+  f32.mul
+  f32.const 0
+  call $src-as/math/Vector3/Vector3#constructor
+  local.set $3
+  global.get $~lib/memory/__stack_pointer
+  local.get $3
+  i32.store offset=8
+  local.get $3
+  call $src-as/math/Quaternion/Quaternion#fromEulerAngles
+  drop
+  global.get $~lib/memory/__stack_pointer
+  i32.const 16
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+ )
+ (func $src-as/WebGL2/systems/WebGLUniformBufferObjectSystem/WebGLUniformBufferObjectSystem#apply (param $0 i32) (param $1 i32)
+  (local $2 i32)
+  (local $3 externref)
+  (local $4 i32)
+  (local $5 i32)
+  (local $6 i32)
+  (local $7 i32)
+  (local $8 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 12
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store offset=8
+  local.get $0
+  i32.load
+  local.set $8
+  global.get $~lib/memory/__stack_pointer
+  local.get $8
+  i32.store
+  local.get $8
+  local.get $1
+  call $~lib/map/Map<src-as/rendering/material/UniformBufferObject/UniformBufferObject,src-as/WebGL2/components/material/WebGLUniformBufferObject>#has
+  i32.eqz
+  if
+   global.get $~lib/memory/__stack_pointer
+   i32.const 12
+   i32.add
+   global.set $~lib/memory/__stack_pointer
+   return
+  end
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  i32.load
+  local.set $8
+  global.get $~lib/memory/__stack_pointer
+  local.get $8
+  i32.store
+  local.get $8
+  local.get $1
+  call $~lib/map/Map<src-as/rendering/material/UniformBufferObject/UniformBufferObject,src-as/WebGL2/components/material/WebGLUniformBufferObject>#get
+  local.tee $2
+  i32.store offset=4
+  local.get $2
+  i32.load offset=8
+  call $src-as/imports/_host/get
+  local.set $3
+  global.get $src-as/WebGL2/imports/_constants/BufferType.UNIFORM_BUFFER
+  local.get $3
+  call $src-as/WebGL2/imports/_types/bindBuffer
+  i32.const 0
+  local.set $4
+  loop $for-loop|0
+   local.get $4
+   local.get $2
+   i32.load offset=12
+   local.set $8
+   global.get $~lib/memory/__stack_pointer
+   local.get $8
+   i32.store
+   local.get $8
+   call $~lib/array/Array<src-as/rendering/material/Uniform/Uniform>#get:length
+   i32.lt_s
+   local.set $5
+   local.get $5
+   if
+    block $case5|1
+     block $case4|1
+      block $case3|1
+       block $case2|1
+        block $case1|1
+         block $case0|1
+          local.get $2
+          i32.load offset=12
+          local.set $8
+          global.get $~lib/memory/__stack_pointer
+          local.get $8
+          i32.store
+          local.get $8
+          local.get $4
+          call $~lib/array/Array<src-as/rendering/material/Uniform/Uniform>#__get
+          i32.load offset=4
+          local.set $6
+          local.get $6
+          global.get $src-as/rendering/constants/enums/UniformType.FLOAT
+          i32.eq
+          br_if $case1|1
+          local.get $6
+          global.get $src-as/rendering/constants/enums/UniformType.FLOAT_VEC2
+          i32.eq
+          br_if $case2|1
+          local.get $6
+          global.get $src-as/rendering/constants/enums/UniformType.FLOAT_VEC3
+          i32.eq
+          br_if $case3|1
+          local.get $6
+          global.get $src-as/rendering/constants/enums/UniformType.FLOAT_VEC4
+          i32.eq
+          br_if $case4|1
+          local.get $6
+          global.get $src-as/rendering/constants/enums/UniformType.FLOAT_MAT4
+          i32.eq
+          br_if $case5|1
+          br $case0|1
+         end
+        end
+       end
+      end
+     end
+    end
+    global.get $~lib/memory/__stack_pointer
+    global.get $~lib/memory/__stack_pointer
+    local.get $2
+    i32.load offset=12
+    local.set $8
+    global.get $~lib/memory/__stack_pointer
+    local.get $8
+    i32.store
+    local.get $8
+    local.get $4
+    call $~lib/array/Array<src-as/rendering/material/Uniform/Uniform>#__get
+    local.tee $6
+    i32.store offset=8
+    local.get $6
+    i32.const 34
+    call $~lib/rt/__instanceof
+    if (result i32)
+     local.get $6
+    else
+     i32.const 17760
+     i32.const 18720
+     i32.const 78
+     i32.const 18
+     call $~lib/builtins/abort
+     unreachable
+    end
+    i32.load offset=12
+    local.tee $6
+    i32.store offset=8
+    local.get $2
+    i32.load offset=16
+    local.set $8
+    global.get $~lib/memory/__stack_pointer
+    local.get $8
+    i32.store
+    local.get $8
+    local.get $4
+    call $~lib/array/Array<u32>#__get
+    local.set $7
+    global.get $src-as/WebGL2/imports/_constants/BufferType.UNIFORM_BUFFER
+    local.get $7
+    local.get $6
+    i32.const 0
+    i32.const 0
+    call $src-as/WebGL2/imports/_types/bufferSubData__2
+    local.get $4
+    i32.const 1
+    i32.add
+    local.set $4
+    br $for-loop|0
+   end
+  end
+  global.get $src-as/WebGL2/imports/_constants/BufferType.UNIFORM_BUFFER
+  ref.null extern
+  call $src-as/WebGL2/imports/_types/bindBuffer
+  global.get $~lib/memory/__stack_pointer
+  i32.const 12
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+ )
+ (func $src-as/WebGL2/systems/WebGLMaterialSystem/WebGLMaterialSystem#beforeRender (param $0 i32) (param $1 i32)
+  (local $2 i32)
+  (local $3 i32)
+  (local $4 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  local.get $1
+  i32.load offset=12
+  global.get $src-as/rendering/constants/enums/Culling.Off
+  i32.eq
+  if
+   global.get $src-as/WebGL2/imports/_constants/Culling.CULL_FACE
+   call $src-as/WebGL2/imports/_types/disable
+  else
+   local.get $1
+   i32.load offset=12
+   global.get $src-as/rendering/constants/enums/Culling.Back
+   i32.eq
+   if
+    global.get $src-as/WebGL2/imports/_constants/Culling.CULL_FACE
+    call $src-as/WebGL2/imports/_types/enable
+    global.get $src-as/WebGL2/imports/_constants/Culling.BACK
+    call $src-as/WebGL2/imports/_types/cullFace
+   else
+    local.get $1
+    i32.load offset=12
+    global.get $src-as/rendering/constants/enums/Culling.Front
+    i32.eq
+    if
+     global.get $src-as/WebGL2/imports/_constants/Culling.FRONT
+     call $src-as/WebGL2/imports/_types/cullFace
+    else
+     local.get $1
+     i32.load offset=12
+     global.get $src-as/rendering/constants/enums/Culling.Both
+     i32.eq
+     if
+      global.get $src-as/WebGL2/imports/_constants/Culling.FRONT_AND_BACK
+      call $src-as/WebGL2/imports/_types/cullFace
+     end
+    end
+   end
+  end
+  i32.const 0
+  local.set $2
+  loop $for-loop|0
+   local.get $2
+   local.get $1
+   i32.load
+   local.set $4
+   global.get $~lib/memory/__stack_pointer
+   local.get $4
+   i32.store
+   local.get $4
+   call $~lib/array/Array<src-as/WebGL2/components/material/WebGLUniform>#get:length
+   i32.lt_s
+   local.set $3
+   local.get $3
+   if
+    local.get $1
+    i32.load
+    local.set $4
+    global.get $~lib/memory/__stack_pointer
+    local.get $4
+    i32.store offset=4
+    local.get $4
+    local.get $2
+    call $~lib/array/Array<src-as/WebGL2/components/material/WebGLUniform>#__get
+    local.set $4
+    global.get $~lib/memory/__stack_pointer
+    local.get $4
+    i32.store
+    local.get $4
+    call $src-as/WebGL2/components/material/WebGLUniform#apply@virtual
+    local.get $2
+    i32.const 1
+    i32.add
+    local.set $2
+    br $for-loop|0
+   end
+  end
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+ )
+ (func $src-as/WebGL2/systems/WebGLMeshSystem/WebGLMeshSystem#render (param $0 i32) (param $1 i32)
+  (local $2 i32)
+  (local $3 externref)
+  (local $4 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 12
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store offset=8
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  i32.load offset=12
+  local.set $4
+  global.get $~lib/memory/__stack_pointer
+  local.get $4
+  i32.store
+  local.get $4
+  local.get $1
+  call $~lib/map/Map<src-as/components/Mesh/Mesh,src-as/WebGL2/components/mesh/WebGLMesh>#get
+  local.tee $2
+  i32.store offset=4
+  local.get $2
+  i32.load
+  i32.load
+  call $src-as/imports/_host/get
+  local.set $3
+  local.get $3
+  call $src-as/WebGL2/imports/_types/useProgram
+  local.get $0
+  i32.load offset=8
+  local.set $4
+  global.get $~lib/memory/__stack_pointer
+  local.get $4
+  i32.store
+  local.get $4
+  local.get $2
+  i32.load offset=8
+  local.set $4
+  global.get $~lib/memory/__stack_pointer
+  local.get $4
+  i32.store offset=8
+  local.get $4
+  call $src-as/WebGL2/systems/WebGLMaterialSystem/WebGLMaterialSystem#beforeRender
+  local.get $0
+  i32.load offset=4
+  local.set $4
+  global.get $~lib/memory/__stack_pointer
+  local.get $4
+  i32.store
+  local.get $4
+  local.get $2
+  i32.load offset=4
+  local.set $4
+  global.get $~lib/memory/__stack_pointer
+  local.get $4
+  i32.store offset=8
+  local.get $4
+  call $src-as/WebGL2/systems/WebGLGeometrySystem/WebGLGeometrySystem#render
+  ref.null extern
+  call $src-as/WebGL2/imports/_types/useProgram
+  global.get $~lib/memory/__stack_pointer
+  i32.const 12
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+ )
+ (func $src-as/WebGL2/systems/WebGLRenderSystem/WebGLRenderSystem#handleRenderMesh (param $0 i32) (param $1 i32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  i32.load offset=32
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  local.get $1
+  call $src-as/WebGL2/systems/WebGLMeshSystem/WebGLMeshSystem#render
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+ )
  (func $src-as/WebGL2/systems/WebGLShaderSystem/WebGLShaderSystem#compileShader (param $0 i32) (param $1 i32) (param $2 i32) (result externref)
   (local $3 externref)
   (local $4 i32)
@@ -40120,7 +43168,7 @@
   if
    local.get $3
    call $src-as/WebGL2/imports/_types/deleteShader
-   i32.const 18608
+   i32.const 18864
    local.set $4
    global.get $~lib/memory/__stack_pointer
    local.get $4
@@ -40159,7 +43207,7 @@
    i32.store offset=4
    local.get $4
    call $~lib/string/String.__concat
-   i32.const 18688
+   i32.const 18944
    i32.const 29
    i32.const 4
    call $~lib/builtins/abort
@@ -40255,7 +43303,7 @@
   if
    local.get $4
    call $src-as/WebGL2/imports/_types/deleteProgram
-   i32.const 18800
+   i32.const 19056
    local.set $8
    global.get $~lib/memory/__stack_pointer
    local.get $8
@@ -40275,7 +43323,7 @@
    i32.store
    local.get $8
    call $~lib/string/String.__concat
-   i32.const 18688
+   i32.const 18944
    i32.const 49
    i32.const 4
    call $~lib/builtins/abort
@@ -40293,7 +43341,7 @@
    if
     local.get $4
     call $src-as/WebGL2/imports/_types/deleteProgram
-    i32.const 18896
+    i32.const 19152
     local.set $8
     global.get $~lib/memory/__stack_pointer
     local.get $8
@@ -40313,7 +43361,7 @@
     i32.store
     local.get $8
     call $~lib/string/String.__concat
-    i32.const 18688
+    i32.const 18944
     i32.const 56
     i32.const 5
     call $~lib/builtins/abort
@@ -40459,8 +43507,8 @@
     if (result i32)
      local.get $3
     else
-     i32.const 17648
-     i32.const 18976
+     i32.const 17760
+     i32.const 19232
      i32.const 155
      i32.const 50
      call $~lib/builtins/abort
@@ -40486,8 +43534,8 @@
    if (result i32)
     local.get $3
    else
-    i32.const 17648
-    i32.const 18976
+    i32.const 17760
+    i32.const 19232
     i32.const 158
     i32.const 50
     call $~lib/builtins/abort
@@ -40850,7 +43898,7 @@
   call $src-as/WebGL2/imports/_types/bindTransformFeedback
   global.get $~lib/memory/__stack_pointer
   local.get $1
-  i32.const 19424
+  i32.const 19680
   local.set $9
   global.get $~lib/memory/__stack_pointer
   local.get $9
@@ -41031,7 +44079,7 @@
   call $src-as/WebGL2/systems/WebGLGeometrySystem/WebGLGeometrySystem#createVAO
   local.set $8
   local.get $3
-  i32.const 19088
+  i32.const 19344
   local.set $16
   global.get $~lib/memory/__stack_pointer
   local.get $16
@@ -41048,8 +44096,8 @@
    i32.const 0
   end
   if
-   i32.const 19120
-   i32.const 18976
+   i32.const 19376
+   i32.const 19232
    i32.const 39
    i32.const 4
    call $~lib/builtins/abort
@@ -41568,14 +44616,14 @@
   global.get $~lib/memory/__stack_pointer
   local.get $1
   local.tee $2
-  i32.const 143
+  i32.const 140
   call $~lib/rt/__instanceof
   if (result i32)
    local.get $2
   else
-   i32.const 17648
-   i32.const 19616
-   i32.const 103
+   i32.const 17760
+   i32.const 19872
+   i32.const 105
    i32.const 19
    call $~lib/builtins/abort
    unreachable
@@ -41604,7 +44652,7 @@
   local.get $4
   i32.store offset=8
   local.get $4
-  call $src-as/WebGL2/imports/_types/texImage2D__1
+  call $src-as/WebGL2/imports/_types/texImage2D__6
   global.get $~lib/memory/__stack_pointer
   i32.const 12
   i32.add
@@ -41667,9 +44715,9 @@
    i32.const 32
    i32.ge_u
    if
-    i32.const 19520
-    i32.const 19616
-    i32.const 56
+    i32.const 19776
+    i32.const 19872
+    i32.const 58
     i32.const 5
     call $~lib/builtins/abort
     unreachable
@@ -41766,9 +44814,9 @@
         if (result i32)
          local.get $5
         else
-         i32.const 17648
-         i32.const 19616
-         i32.const 80
+         i32.const 17760
+         i32.const 19872
+         i32.const 82
          i32.const 46
          call $~lib/builtins/abort
          unreachable
@@ -41797,9 +44845,9 @@
        if (result i32)
         local.get $5
        else
-        i32.const 17648
-        i32.const 19616
-        i32.const 82
+        i32.const 17760
+        i32.const 19872
+        i32.const 84
         i32.const 45
         call $~lib/builtins/abort
         unreachable
@@ -41828,9 +44876,9 @@
       if (result i32)
        local.get $5
       else
-       i32.const 17648
-       i32.const 19616
-       i32.const 84
+       i32.const 17760
+       i32.const 19872
+       i32.const 86
        i32.const 45
        call $~lib/builtins/abort
        unreachable
@@ -41859,9 +44907,9 @@
      if (result i32)
       local.get $5
      else
-      i32.const 17648
-      i32.const 19616
-      i32.const 86
+      i32.const 17760
+      i32.const 19872
+      i32.const 88
       i32.const 45
       call $~lib/builtins/abort
       unreachable
@@ -41890,9 +44938,9 @@
     if (result i32)
      local.get $5
     else
-     i32.const 17648
-     i32.const 19616
-     i32.const 88
+     i32.const 17760
+     i32.const 19872
+     i32.const 90
      i32.const 45
      call $~lib/builtins/abort
      unreachable
@@ -41912,7 +44960,7 @@
     local.get $7
     return
    end
-   i32.const 21504
+   i32.const 21760
    local.set $7
    global.get $~lib/memory/__stack_pointer
    local.get $7
@@ -41928,8 +44976,8 @@
    i32.store
    local.get $7
    call $~lib/string/String#concat
-   i32.const 19616
-   i32.const 90
+   i32.const 19872
+   i32.const 92
    i32.const 5
    call $~lib/builtins/abort
    unreachable
@@ -41983,7 +45031,7 @@
   i32.const 0
   i32.const 2
   i32.const 127
-  i32.const 19456
+  i32.const 19712
   call $~lib/rt/__newArray
   local.tee $4
   i32.store offset=4
@@ -42047,7 +45095,7 @@
   i32.const 0
   i32.const 2
   i32.const 125
-  i32.const 19488
+  i32.const 19744
   call $~lib/rt/__newArray
   local.tee $5
   i32.store offset=20
@@ -42271,569 +45319,6 @@
   local.get $2
   local.get $1
   call $src-as/WebGL2/systems/WebGLMeshSystem/WebGLMeshSystem#create
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.add
-  global.set $~lib/memory/__stack_pointer
- )
- (func $src-as/math/Vector2/Vector2#constructor (param $0 i32) (param $1 f32) (param $2 f32) (result i32)
-  (local $3 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 8
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i64.const 0
-  i64.store
-  local.get $0
-  i32.eqz
-  if
-   global.get $~lib/memory/__stack_pointer
-   i32.const 4
-   i32.const 91
-   call $~lib/rt/itcms/__new
-   local.tee $0
-   i32.store
-  end
-  local.get $0
-  i32.const 0
-  call $src-as/math/Vector2/Vector2#set:m
-  local.get $0
-  i32.const 0
-  i32.const 2
-  call $~lib/typedarray/Float32Array#constructor
-  call $src-as/math/Vector2/Vector2#set:m
-  local.get $0
-  i32.load
-  local.set $3
-  global.get $~lib/memory/__stack_pointer
-  local.get $3
-  i32.store offset=4
-  local.get $3
-  i32.const 0
-  local.get $1
-  call $~lib/typedarray/Float32Array#__set
-  local.get $0
-  i32.load
-  local.set $3
-  global.get $~lib/memory/__stack_pointer
-  local.get $3
-  i32.store offset=4
-  local.get $3
-  i32.const 1
-  local.get $2
-  call $~lib/typedarray/Float32Array#__set
-  local.get $0
-  local.set $3
-  global.get $~lib/memory/__stack_pointer
-  i32.const 8
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $3
- )
- (func $src-as/math/Vector2/Vector2#get:x (param $0 i32) (result f32)
-  (local $1 i32)
-  (local $2 f32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store
-  local.get $0
-  i32.load
-  local.set $1
-  global.get $~lib/memory/__stack_pointer
-  local.get $1
-  i32.store
-  local.get $1
-  i32.const 0
-  call $~lib/typedarray/Float32Array#__get
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $2
- )
- (func $src-as/math/Vector2/Vector2#get:y (param $0 i32) (result f32)
-  (local $1 i32)
-  (local $2 f32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store
-  local.get $0
-  i32.load
-  local.set $1
-  global.get $~lib/memory/__stack_pointer
-  local.get $1
-  i32.store
-  local.get $1
-  i32.const 1
-  call $~lib/typedarray/Float32Array#__get
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $2
- )
- (func $src-as/components/Rotator/Rotator#update (param $0 i32)
-  (local $1 i32)
-  (local $2 f32)
-  (local $3 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 16
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i64.const 0
-  i64.store
-  global.get $~lib/memory/__stack_pointer
-  i64.const 0
-  i64.store offset=8
-  global.get $~lib/memory/__stack_pointer
-  local.get $0
-  i32.load offset=4
-  local.set $3
-  global.get $~lib/memory/__stack_pointer
-  local.get $3
-  i32.store
-  local.get $3
-  call $src-as/base/World/World#get<src-as/components/Time/Time>
-  local.tee $1
-  i32.store offset=4
-  local.get $0
-  f32.load offset=12
-  local.get $1
-  f32.load offset=8
-  f32.add
-  local.set $2
-  i32.const 0
-  local.get $2
-  f32.const 0.4000000059604645
-  f32.mul
-  f32.const 1
-  call $src-as/math/PolarCoords/PolarCoords#constructor
-  local.set $3
-  global.get $~lib/memory/__stack_pointer
-  local.get $3
-  i32.store offset=12
-  local.get $3
-  i32.const 1
-  global.set $~argumentsLength
-  i32.const 0
-  call $src-as/math/Vector2/Vector2.fromPolar@varargs
-  local.set $3
-  global.get $~lib/memory/__stack_pointer
-  local.get $3
-  i32.store
-  local.get $3
-  local.get $0
-  i32.load offset=8
-  i32.load offset=20
-  local.set $3
-  global.get $~lib/memory/__stack_pointer
-  local.get $3
-  i32.store offset=8
-  local.get $3
-  call $src-as/math/Vector2/Vector2#toVector3
-  drop
-  local.get $0
-  i32.load offset=8
-  i32.load offset=28
-  local.set $3
-  global.get $~lib/memory/__stack_pointer
-  local.get $3
-  i32.store
-  local.get $3
-  i32.const 0
-  f32.const 0.30000001192092896
-  local.get $2
-  f32.mul
-  f32.const 0.5
-  local.get $2
-  f32.mul
-  f32.const 0
-  call $src-as/math/Vector3/Vector3#constructor
-  local.set $3
-  global.get $~lib/memory/__stack_pointer
-  local.get $3
-  i32.store offset=8
-  local.get $3
-  call $src-as/math/Quaternion/Quaternion#fromEulerAngles
-  drop
-  global.get $~lib/memory/__stack_pointer
-  i32.const 16
-  i32.add
-  global.set $~lib/memory/__stack_pointer
- )
- (func $src-as/WebGL2/systems/WebGLUniformBufferObjectSystem/WebGLUniformBufferObjectSystem#apply (param $0 i32) (param $1 i32)
-  (local $2 i32)
-  (local $3 externref)
-  (local $4 i32)
-  (local $5 i32)
-  (local $6 i32)
-  (local $7 i32)
-  (local $8 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 12
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i64.const 0
-  i64.store
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store offset=8
-  local.get $0
-  i32.load
-  local.set $8
-  global.get $~lib/memory/__stack_pointer
-  local.get $8
-  i32.store
-  local.get $8
-  local.get $1
-  call $~lib/map/Map<src-as/rendering/material/UniformBufferObject/UniformBufferObject,src-as/WebGL2/components/material/WebGLUniformBufferObject>#has
-  i32.eqz
-  if
-   global.get $~lib/memory/__stack_pointer
-   i32.const 12
-   i32.add
-   global.set $~lib/memory/__stack_pointer
-   return
-  end
-  global.get $~lib/memory/__stack_pointer
-  local.get $0
-  i32.load
-  local.set $8
-  global.get $~lib/memory/__stack_pointer
-  local.get $8
-  i32.store
-  local.get $8
-  local.get $1
-  call $~lib/map/Map<src-as/rendering/material/UniformBufferObject/UniformBufferObject,src-as/WebGL2/components/material/WebGLUniformBufferObject>#get
-  local.tee $2
-  i32.store offset=4
-  local.get $2
-  i32.load offset=8
-  call $src-as/imports/_host/get
-  local.set $3
-  global.get $src-as/WebGL2/imports/_constants/BufferType.UNIFORM_BUFFER
-  local.get $3
-  call $src-as/WebGL2/imports/_types/bindBuffer
-  i32.const 0
-  local.set $4
-  loop $for-loop|0
-   local.get $4
-   local.get $2
-   i32.load offset=12
-   local.set $8
-   global.get $~lib/memory/__stack_pointer
-   local.get $8
-   i32.store
-   local.get $8
-   call $~lib/array/Array<src-as/rendering/material/Uniform/Uniform>#get:length
-   i32.lt_s
-   local.set $5
-   local.get $5
-   if
-    block $case5|1
-     block $case4|1
-      block $case3|1
-       block $case2|1
-        block $case1|1
-         block $case0|1
-          local.get $2
-          i32.load offset=12
-          local.set $8
-          global.get $~lib/memory/__stack_pointer
-          local.get $8
-          i32.store
-          local.get $8
-          local.get $4
-          call $~lib/array/Array<src-as/rendering/material/Uniform/Uniform>#__get
-          i32.load offset=4
-          local.set $6
-          local.get $6
-          global.get $src-as/rendering/constants/enums/UniformType.FLOAT
-          i32.eq
-          br_if $case1|1
-          local.get $6
-          global.get $src-as/rendering/constants/enums/UniformType.FLOAT_VEC2
-          i32.eq
-          br_if $case2|1
-          local.get $6
-          global.get $src-as/rendering/constants/enums/UniformType.FLOAT_VEC3
-          i32.eq
-          br_if $case3|1
-          local.get $6
-          global.get $src-as/rendering/constants/enums/UniformType.FLOAT_VEC4
-          i32.eq
-          br_if $case4|1
-          local.get $6
-          global.get $src-as/rendering/constants/enums/UniformType.FLOAT_MAT4
-          i32.eq
-          br_if $case5|1
-          br $case0|1
-         end
-        end
-       end
-      end
-     end
-    end
-    global.get $~lib/memory/__stack_pointer
-    global.get $~lib/memory/__stack_pointer
-    local.get $2
-    i32.load offset=12
-    local.set $8
-    global.get $~lib/memory/__stack_pointer
-    local.get $8
-    i32.store
-    local.get $8
-    local.get $4
-    call $~lib/array/Array<src-as/rendering/material/Uniform/Uniform>#__get
-    local.tee $6
-    i32.store offset=8
-    local.get $6
-    i32.const 34
-    call $~lib/rt/__instanceof
-    if (result i32)
-     local.get $6
-    else
-     i32.const 17648
-     i32.const 21584
-     i32.const 78
-     i32.const 18
-     call $~lib/builtins/abort
-     unreachable
-    end
-    i32.load offset=12
-    local.tee $6
-    i32.store offset=8
-    local.get $2
-    i32.load offset=16
-    local.set $8
-    global.get $~lib/memory/__stack_pointer
-    local.get $8
-    i32.store
-    local.get $8
-    local.get $4
-    call $~lib/array/Array<u32>#__get
-    local.set $7
-    global.get $src-as/WebGL2/imports/_constants/BufferType.UNIFORM_BUFFER
-    local.get $7
-    local.get $6
-    i32.const 0
-    i32.const 0
-    call $src-as/WebGL2/imports/_types/bufferSubData__2
-    local.get $4
-    i32.const 1
-    i32.add
-    local.set $4
-    br $for-loop|0
-   end
-  end
-  global.get $src-as/WebGL2/imports/_constants/BufferType.UNIFORM_BUFFER
-  ref.null extern
-  call $src-as/WebGL2/imports/_types/bindBuffer
-  global.get $~lib/memory/__stack_pointer
-  i32.const 12
-  i32.add
-  global.set $~lib/memory/__stack_pointer
- )
- (func $src-as/WebGL2/systems/WebGLMaterialSystem/WebGLMaterialSystem#beforeRender (param $0 i32) (param $1 i32)
-  (local $2 i32)
-  (local $3 i32)
-  (local $4 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 8
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i64.const 0
-  i64.store
-  local.get $1
-  i32.load offset=12
-  global.get $src-as/rendering/constants/enums/Culling.Off
-  i32.eq
-  if
-   global.get $src-as/WebGL2/imports/_constants/Culling.CULL_FACE
-   call $src-as/WebGL2/imports/_types/disable
-  else
-   local.get $1
-   i32.load offset=12
-   global.get $src-as/rendering/constants/enums/Culling.Back
-   i32.eq
-   if
-    global.get $src-as/WebGL2/imports/_constants/Culling.CULL_FACE
-    call $src-as/WebGL2/imports/_types/enable
-    global.get $src-as/WebGL2/imports/_constants/Culling.BACK
-    call $src-as/WebGL2/imports/_types/cullFace
-   else
-    local.get $1
-    i32.load offset=12
-    global.get $src-as/rendering/constants/enums/Culling.Front
-    i32.eq
-    if
-     global.get $src-as/WebGL2/imports/_constants/Culling.FRONT
-     call $src-as/WebGL2/imports/_types/cullFace
-    else
-     local.get $1
-     i32.load offset=12
-     global.get $src-as/rendering/constants/enums/Culling.Both
-     i32.eq
-     if
-      global.get $src-as/WebGL2/imports/_constants/Culling.FRONT_AND_BACK
-      call $src-as/WebGL2/imports/_types/cullFace
-     end
-    end
-   end
-  end
-  i32.const 0
-  local.set $2
-  loop $for-loop|0
-   local.get $2
-   local.get $1
-   i32.load
-   local.set $4
-   global.get $~lib/memory/__stack_pointer
-   local.get $4
-   i32.store
-   local.get $4
-   call $~lib/array/Array<src-as/WebGL2/components/material/WebGLUniform>#get:length
-   i32.lt_s
-   local.set $3
-   local.get $3
-   if
-    local.get $1
-    i32.load
-    local.set $4
-    global.get $~lib/memory/__stack_pointer
-    local.get $4
-    i32.store offset=4
-    local.get $4
-    local.get $2
-    call $~lib/array/Array<src-as/WebGL2/components/material/WebGLUniform>#__get
-    local.set $4
-    global.get $~lib/memory/__stack_pointer
-    local.get $4
-    i32.store
-    local.get $4
-    call $src-as/WebGL2/components/material/WebGLUniform#apply@virtual
-    local.get $2
-    i32.const 1
-    i32.add
-    local.set $2
-    br $for-loop|0
-   end
-  end
-  global.get $~lib/memory/__stack_pointer
-  i32.const 8
-  i32.add
-  global.set $~lib/memory/__stack_pointer
- )
- (func $src-as/WebGL2/systems/WebGLMeshSystem/WebGLMeshSystem#render (param $0 i32) (param $1 i32)
-  (local $2 i32)
-  (local $3 externref)
-  (local $4 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 12
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i64.const 0
-  i64.store
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store offset=8
-  global.get $~lib/memory/__stack_pointer
-  local.get $0
-  i32.load offset=12
-  local.set $4
-  global.get $~lib/memory/__stack_pointer
-  local.get $4
-  i32.store
-  local.get $4
-  local.get $1
-  call $~lib/map/Map<src-as/components/Mesh/Mesh,src-as/WebGL2/components/mesh/WebGLMesh>#get
-  local.tee $2
-  i32.store offset=4
-  local.get $2
-  i32.load
-  i32.load
-  call $src-as/imports/_host/get
-  local.set $3
-  local.get $3
-  call $src-as/WebGL2/imports/_types/useProgram
-  local.get $0
-  i32.load offset=8
-  local.set $4
-  global.get $~lib/memory/__stack_pointer
-  local.get $4
-  i32.store
-  local.get $4
-  local.get $2
-  i32.load offset=8
-  local.set $4
-  global.get $~lib/memory/__stack_pointer
-  local.get $4
-  i32.store offset=8
-  local.get $4
-  call $src-as/WebGL2/systems/WebGLMaterialSystem/WebGLMaterialSystem#beforeRender
-  local.get $0
-  i32.load offset=4
-  local.set $4
-  global.get $~lib/memory/__stack_pointer
-  local.get $4
-  i32.store
-  local.get $4
-  local.get $2
-  i32.load offset=4
-  local.set $4
-  global.get $~lib/memory/__stack_pointer
-  local.get $4
-  i32.store offset=8
-  local.get $4
-  call $src-as/WebGL2/systems/WebGLGeometrySystem/WebGLGeometrySystem#render
-  ref.null extern
-  call $src-as/WebGL2/imports/_types/useProgram
-  global.get $~lib/memory/__stack_pointer
-  i32.const 12
-  i32.add
-  global.set $~lib/memory/__stack_pointer
- )
- (func $src-as/WebGL2/systems/WebGLRenderSystem/WebGLRenderSystem#handleRenderMesh (param $0 i32) (param $1 i32)
-  (local $2 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store
-  local.get $0
-  i32.load offset=32
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  local.get $2
-  i32.store
-  local.get $2
-  local.get $1
-  call $src-as/WebGL2/systems/WebGLMeshSystem/WebGLMeshSystem#render
   global.get $~lib/memory/__stack_pointer
   i32.const 4
   i32.add
@@ -45560,7 +48045,7 @@
   i32.const 0
   i32.const 2
   i32.const 61
-  i32.const 16064
+  i32.const 16176
   call $~lib/rt/__newArray
   call $src-as/math/SharedBuffer/SharedBuffer_f32<src-as/math/Vector3/Vector3>#set:instances
   local.get $0
@@ -45645,7 +48130,7 @@
   i32.const 0
   i32.const 2
   i32.const 66
-  i32.const 16096
+  i32.const 16208
   call $~lib/rt/__newArray
   call $src-as/math/SharedBuffer/SharedBuffer_f32<src-as/math/Vector1/Vector1>#set:instances
   local.get $0
@@ -46061,7 +48546,7 @@
   i32.const 0
   i32.const 2
   i32.const 75
-  i32.const 16656
+  i32.const 16768
   call $~lib/rt/__newArray
   call $src-as/base/World/World#set:systems
   local.get $0
@@ -46125,6 +48610,62 @@
   i32.add
   global.set $~lib/memory/__stack_pointer
   local.get $1
+ )
+ (func $~lib/array/Array<src-as/base/System/System>#__get (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  (local $3 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $1
+  local.get $0
+  i32.load offset=12
+  i32.ge_u
+  if
+   i32.const 96
+   i32.const 4208
+   i32.const 114
+   i32.const 42
+   call $~lib/builtins/abort
+   unreachable
+  end
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  i32.load offset=4
+  local.get $1
+  i32.const 2
+  i32.shl
+  i32.add
+  i32.load
+  local.tee $2
+  i32.store
+  i32.const 1
+  drop
+  i32.const 0
+  i32.eqz
+  drop
+  local.get $2
+  i32.eqz
+  if
+   i32.const 4256
+   i32.const 4208
+   i32.const 118
+   i32.const 40
+   call $~lib/builtins/abort
+   unreachable
+  end
+  local.get $2
+  local.set $3
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $3
  )
  (func $src-as/base/Object/ObjectBase#constructor (param $0 i32) (result i32)
   (local $1 i32)
@@ -48257,6 +50798,340 @@
   global.set $~lib/memory/__stack_pointer
   local.get $1
  )
+ (func $~lib/typedarray/Float32Array.wrap (param $0 i32) (param $1 i32) (param $2 i32) (result i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  (local $6 i32)
+  (local $7 i32)
+  (local $8 i32)
+  (local $9 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  local.set $5
+  local.get $1
+  local.set $4
+  local.get $2
+  local.set $3
+  local.get $5
+  call $~lib/arraybuffer/ArrayBuffer#get:byteLength
+  local.set $7
+  local.get $4
+  local.get $7
+  i32.gt_u
+  local.get $4
+  i32.const 3
+  i32.and
+  i32.or
+  if
+   i32.const 96
+   i32.const 160
+   i32.const 1870
+   i32.const 5
+   call $~lib/builtins/abort
+   unreachable
+  end
+  local.get $3
+  i32.const 0
+  i32.lt_s
+  if
+   local.get $3
+   i32.const -1
+   i32.eq
+   if
+    local.get $7
+    i32.const 3
+    i32.and
+    if
+     i32.const 768
+     i32.const 160
+     i32.const 1875
+     i32.const 9
+     call $~lib/builtins/abort
+     unreachable
+    end
+    local.get $7
+    local.get $4
+    i32.sub
+    local.set $6
+   else
+    i32.const 768
+    i32.const 160
+    i32.const 1879
+    i32.const 7
+    call $~lib/builtins/abort
+    unreachable
+   end
+  else
+   local.get $3
+   i32.const 2
+   i32.shl
+   local.set $6
+   local.get $4
+   local.get $6
+   i32.add
+   local.get $7
+   i32.gt_s
+   if
+    i32.const 768
+    i32.const 160
+    i32.const 1884
+    i32.const 7
+    call $~lib/builtins/abort
+    unreachable
+   end
+  end
+  global.get $~lib/memory/__stack_pointer
+  i32.const 12
+  i32.const 3
+  call $~lib/rt/itcms/__new
+  local.tee $8
+  i32.store
+  local.get $8
+  local.get $5
+  i32.store
+  local.get $8
+  local.get $5
+  i32.const 0
+  call $~lib/rt/itcms/__link
+  local.get $8
+  local.get $6
+  i32.store offset=8
+  local.get $8
+  local.get $5
+  local.get $4
+  i32.add
+  i32.store offset=4
+  local.get $8
+  local.set $9
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $9
+ )
+ (func $~lib/array/Array<src-as/math/Vector3/Vector3>#__get (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  (local $3 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $1
+  local.get $0
+  i32.load offset=12
+  i32.ge_u
+  if
+   i32.const 96
+   i32.const 4208
+   i32.const 114
+   i32.const 42
+   call $~lib/builtins/abort
+   unreachable
+  end
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  i32.load offset=4
+  local.get $1
+  i32.const 2
+  i32.shl
+  i32.add
+  i32.load
+  local.tee $2
+  i32.store
+  i32.const 1
+  drop
+  i32.const 0
+  i32.eqz
+  drop
+  local.get $2
+  i32.eqz
+  if
+   i32.const 4256
+   i32.const 4208
+   i32.const 118
+   i32.const 40
+   call $~lib/builtins/abort
+   unreachable
+  end
+  local.get $2
+  local.set $3
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $3
+ )
+ (func $src-as/math/Vector1/Vector1Base<~lib/typedarray/Float32Array,f32>#constructor (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  i32.eqz
+  if
+   global.get $~lib/memory/__stack_pointer
+   i32.const 4
+   i32.const 64
+   call $~lib/rt/itcms/__new
+   local.tee $0
+   i32.store
+  end
+  local.get $0
+  i32.const 0
+  call $src-as/math/Vector1/Vector1Base<~lib/typedarray/Float32Array,f32>#set:m
+  local.get $0
+  local.get $1
+  call $src-as/math/Vector1/Vector1Base<~lib/typedarray/Float32Array,f32>#set:m
+  local.get $0
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $2
+ )
+ (func $src-as/math/Vector1/Vector1#constructor (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  i32.eqz
+  if
+   global.get $~lib/memory/__stack_pointer
+   i32.const 4
+   i32.const 63
+   call $~lib/rt/itcms/__new
+   local.tee $0
+   i32.store
+  end
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  local.get $1
+  call $src-as/math/Vector1/Vector1Base<~lib/typedarray/Float32Array,f32>#constructor
+  local.tee $0
+  i32.store
+  local.get $0
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $2
+ )
+ (func $src-as/math/Vector1/Vector1#constructor@varargs (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  block $1of1
+   block $0of1
+    block $outOfRange
+     global.get $~argumentsLength
+     br_table $0of1 $1of1 $outOfRange
+    end
+    unreachable
+   end
+   global.get $~lib/memory/__stack_pointer
+   i32.const 0
+   i32.const 1
+   call $~lib/typedarray/Float32Array#constructor
+   local.tee $1
+   i32.store
+  end
+  local.get $0
+  local.get $1
+  call $src-as/math/Vector1/Vector1#constructor
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $2
+ )
+ (func $~lib/array/Array<src-as/math/Vector1/Vector1>#__get (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  (local $3 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $1
+  local.get $0
+  i32.load offset=12
+  i32.ge_u
+  if
+   i32.const 96
+   i32.const 4208
+   i32.const 114
+   i32.const 42
+   call $~lib/builtins/abort
+   unreachable
+  end
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  i32.load offset=4
+  local.get $1
+  i32.const 2
+  i32.shl
+  i32.add
+  i32.load
+  local.tee $2
+  i32.store
+  i32.const 1
+  drop
+  i32.const 0
+  i32.eqz
+  drop
+  local.get $2
+  i32.eqz
+  if
+   i32.const 4256
+   i32.const 4208
+   i32.const 118
+   i32.const 40
+   call $~lib/builtins/abort
+   unreachable
+  end
+  local.get $2
+  local.set $3
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $3
+ )
  (func $src-as/utility/Viewport/Viewport#constructor (param $0 i32) (param $1 i32) (param $2 i32) (param $3 i32) (param $4 i32) (result i32)
   (local $5 i32)
   global.get $~lib/memory/__stack_pointer
@@ -48413,6 +51288,587 @@
   global.set $~lib/memory/__stack_pointer
   local.get $5
  )
+ (func $~lib/array/Array<src-as/components/Camera/Camera>#__get (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  (local $3 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $1
+  local.get $0
+  i32.load offset=12
+  i32.ge_u
+  if
+   i32.const 96
+   i32.const 4208
+   i32.const 114
+   i32.const 42
+   call $~lib/builtins/abort
+   unreachable
+  end
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  i32.load offset=4
+  local.get $1
+  i32.const 2
+  i32.shl
+  i32.add
+  i32.load
+  local.tee $2
+  i32.store
+  i32.const 1
+  drop
+  i32.const 0
+  i32.eqz
+  drop
+  local.get $2
+  i32.eqz
+  if
+   i32.const 4256
+   i32.const 4208
+   i32.const 118
+   i32.const 40
+   call $~lib/builtins/abort
+   unreachable
+  end
+  local.get $2
+  local.set $3
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $3
+ )
+ (func $~lib/array/Array<u32>#constructor (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  (local $6 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  local.get $0
+  i32.eqz
+  if
+   global.get $~lib/memory/__stack_pointer
+   i32.const 16
+   i32.const 80
+   call $~lib/rt/itcms/__new
+   local.tee $0
+   i32.store
+  end
+  local.get $0
+  i32.const 0
+  call $~lib/array/Array<u32>#set:buffer
+  local.get $0
+  i32.const 0
+  call $~lib/array/Array<u32>#set:dataStart
+  local.get $0
+  i32.const 0
+  call $~lib/array/Array<u32>#set:byteLength
+  local.get $0
+  i32.const 0
+  call $~lib/array/Array<u32>#set:length_
+  local.get $1
+  i32.const 1073741820
+  i32.const 2
+  i32.shr_u
+  i32.gt_u
+  if
+   i32.const 768
+   i32.const 4208
+   i32.const 70
+   i32.const 60
+   call $~lib/builtins/abort
+   unreachable
+  end
+  local.get $1
+  local.tee $2
+  i32.const 8
+  local.tee $3
+  local.get $2
+  local.get $3
+  i32.gt_u
+  select
+  i32.const 2
+  i32.shl
+  local.set $4
+  global.get $~lib/memory/__stack_pointer
+  local.get $4
+  i32.const 0
+  call $~lib/rt/itcms/__new
+  local.tee $5
+  i32.store offset=4
+  i32.const 2
+  global.get $~lib/shared/runtime/Runtime.Incremental
+  i32.ne
+  drop
+  local.get $0
+  local.get $5
+  call $~lib/array/Array<u32>#set:buffer
+  local.get $0
+  local.get $5
+  call $~lib/array/Array<u32>#set:dataStart
+  local.get $0
+  local.get $4
+  call $~lib/array/Array<u32>#set:byteLength
+  local.get $0
+  local.get $1
+  call $~lib/array/Array<u32>#set:length_
+  local.get $0
+  local.set $6
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $6
+ )
+ (func $~lib/map/Map<u32,src-as/base/Component/Component>#keys (param $0 i32) (result i32)
+  (local $1 i32)
+  (local $2 i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  (local $6 i32)
+  (local $7 i32)
+  (local $8 i32)
+  (local $9 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  i32.load offset=8
+  local.set $1
+  local.get $0
+  i32.load offset=16
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  local.get $2
+  call $~lib/array/Array<u32>#constructor
+  local.tee $3
+  i32.store
+  i32.const 0
+  local.set $4
+  i32.const 0
+  local.set $5
+  loop $for-loop|0
+   local.get $5
+   local.get $2
+   i32.lt_s
+   local.set $6
+   local.get $6
+   if
+    local.get $1
+    local.get $5
+    i32.const 12
+    i32.mul
+    i32.add
+    local.set $7
+    local.get $7
+    i32.load offset=8
+    i32.const 1
+    i32.and
+    i32.eqz
+    if
+     local.get $3
+     local.get $4
+     local.tee $8
+     i32.const 1
+     i32.add
+     local.set $4
+     local.get $8
+     local.get $7
+     i32.load
+     call $~lib/array/Array<u32>#__set
+    end
+    local.get $5
+    i32.const 1
+    i32.add
+    local.set $5
+    br $for-loop|0
+   end
+  end
+  local.get $3
+  local.get $4
+  call $~lib/array/Array<u32>#set:length
+  local.get $3
+  local.set $9
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $9
+ )
+ (func $~lib/array/Array<src-as/base/Component/Component>#constructor (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  (local $6 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  local.get $0
+  i32.eqz
+  if
+   global.get $~lib/memory/__stack_pointer
+   i32.const 16
+   i32.const 137
+   call $~lib/rt/itcms/__new
+   local.tee $0
+   i32.store
+  end
+  local.get $0
+  i32.const 0
+  call $~lib/array/Array<src-as/base/Component/Component>#set:buffer
+  local.get $0
+  i32.const 0
+  call $~lib/array/Array<src-as/base/Component/Component>#set:dataStart
+  local.get $0
+  i32.const 0
+  call $~lib/array/Array<src-as/base/Component/Component>#set:byteLength
+  local.get $0
+  i32.const 0
+  call $~lib/array/Array<src-as/base/Component/Component>#set:length_
+  local.get $1
+  i32.const 1073741820
+  i32.const 2
+  i32.shr_u
+  i32.gt_u
+  if
+   i32.const 768
+   i32.const 4208
+   i32.const 70
+   i32.const 60
+   call $~lib/builtins/abort
+   unreachable
+  end
+  local.get $1
+  local.tee $2
+  i32.const 8
+  local.tee $3
+  local.get $2
+  local.get $3
+  i32.gt_u
+  select
+  i32.const 2
+  i32.shl
+  local.set $4
+  global.get $~lib/memory/__stack_pointer
+  local.get $4
+  i32.const 0
+  call $~lib/rt/itcms/__new
+  local.tee $5
+  i32.store offset=4
+  i32.const 2
+  global.get $~lib/shared/runtime/Runtime.Incremental
+  i32.ne
+  drop
+  local.get $0
+  local.get $5
+  call $~lib/array/Array<src-as/base/Component/Component>#set:buffer
+  local.get $0
+  local.get $5
+  call $~lib/array/Array<src-as/base/Component/Component>#set:dataStart
+  local.get $0
+  local.get $4
+  call $~lib/array/Array<src-as/base/Component/Component>#set:byteLength
+  local.get $0
+  local.get $1
+  call $~lib/array/Array<src-as/base/Component/Component>#set:length_
+  local.get $0
+  local.set $6
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $6
+ )
+ (func $~lib/array/Array<src-as/base/Component/BehaviorComponent>#splice (param $0 i32) (param $1 i32) (param $2 i32) (result i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  (local $6 i32)
+  (local $7 i32)
+  (local $8 i32)
+  (local $9 i32)
+  (local $10 i32)
+  (local $11 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  i32.load offset=12
+  local.set $3
+  local.get $1
+  i32.const 0
+  i32.lt_s
+  if (result i32)
+   local.get $3
+   local.get $1
+   i32.add
+   local.tee $4
+   i32.const 0
+   local.tee $5
+   local.get $4
+   local.get $5
+   i32.gt_s
+   select
+  else
+   local.get $1
+   local.tee $5
+   local.get $3
+   local.tee $4
+   local.get $5
+   local.get $4
+   i32.lt_s
+   select
+  end
+  local.set $1
+  local.get $2
+  local.tee $4
+  local.get $3
+  local.get $1
+  i32.sub
+  local.tee $5
+  local.get $4
+  local.get $5
+  i32.lt_s
+  select
+  local.tee $5
+  i32.const 0
+  local.tee $4
+  local.get $5
+  local.get $4
+  i32.gt_s
+  select
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.const 2
+  i32.const 89
+  i32.const 0
+  call $~lib/rt/__newArray
+  local.tee $6
+  i32.store
+  local.get $6
+  i32.load offset=4
+  local.set $7
+  local.get $0
+  i32.load offset=4
+  local.set $8
+  local.get $8
+  local.get $1
+  i32.const 2
+  i32.shl
+  i32.add
+  local.set $9
+  local.get $7
+  local.get $9
+  local.get $2
+  i32.const 2
+  i32.shl
+  memory.copy
+  local.get $1
+  local.get $2
+  i32.add
+  local.set $10
+  local.get $3
+  local.get $10
+  i32.ne
+  if
+   local.get $9
+   local.get $8
+   local.get $10
+   i32.const 2
+   i32.shl
+   i32.add
+   local.get $3
+   local.get $10
+   i32.sub
+   i32.const 2
+   i32.shl
+   memory.copy
+  end
+  local.get $0
+  local.get $3
+  local.get $2
+  i32.sub
+  call $~lib/array/Array<src-as/base/Component/BehaviorComponent>#set:length_
+  local.get $6
+  local.set $11
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $11
+ )
+ (func $src-as/rendering/material/Material/Material#constructor (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  (local $3 i32)
+  (local $4 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  i32.eqz
+  if
+   global.get $~lib/memory/__stack_pointer
+   i32.const 24
+   i32.const 108
+   call $~lib/rt/itcms/__new
+   local.tee $0
+   i32.store
+  end
+  local.get $0
+  i32.const 0
+  call $~lib/map/Map<~lib/string/String,src-as/rendering/material/Uniform/Uniform>#constructor
+  call $src-as/rendering/material/Material/Material#set:uniformMap
+  local.get $0
+  i32.const 0
+  i32.const 2
+  i32.const 31
+  i32.const 18176
+  call $~lib/rt/__newArray
+  call $src-as/rendering/material/Material/Material#set:uniformArr
+  local.get $0
+  i32.const 0
+  i32.const 2
+  i32.const 109
+  i32.const 18208
+  call $~lib/rt/__newArray
+  call $src-as/rendering/material/Material/Material#set:uniformBufferObjects
+  local.get $0
+  i32.const 0
+  call $src-as/rendering/material/Material/Material#set:transparent
+  local.get $0
+  global.get $src-as/rendering/constants/enums/Culling.Back
+  call $src-as/rendering/material/Material/Material#set:culling
+  local.get $0
+  i32.const 0
+  call $src-as/rendering/material/Material/Material#set:shader
+  local.get $0
+  local.get $1
+  call $src-as/rendering/material/Material/Material#set:shader
+  local.get $0
+  local.set $4
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $4
+ )
+ (func $src-as/rendering/material/Uniform/TypedUniform<src-as/math/Texture/Texture>#constructor (param $0 i32) (param $1 i32) (param $2 i32) (param $3 i32) (result i32)
+  (local $4 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  i32.eqz
+  if
+   global.get $~lib/memory/__stack_pointer
+   i32.const 16
+   i32.const 141
+   call $~lib/rt/itcms/__new
+   local.tee $0
+   i32.store
+  end
+  local.get $0
+  i32.const 0
+  call $src-as/rendering/material/Uniform/TypedUniform<src-as/math/Texture/Texture>#set:value
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  local.get $1
+  local.get $2
+  call $src-as/math/Texture/Texture#get:length
+  local.get $3
+  call $src-as/rendering/material/Uniform/Uniform#constructor
+  local.tee $0
+  i32.store
+  local.get $0
+  local.get $2
+  call $src-as/rendering/material/Uniform/TypedUniform<src-as/math/Texture/Texture>#set:value
+  local.get $0
+  local.set $4
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $4
+ )
+ (func $src-as/rendering/material/Uniform/Uniform_texture#constructor (param $0 i32) (param $1 i32) (param $2 i32) (param $3 i32) (result i32)
+  (local $4 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  i32.eqz
+  if
+   global.get $~lib/memory/__stack_pointer
+   i32.const 16
+   i32.const 140
+   call $~lib/rt/itcms/__new
+   local.tee $0
+   i32.store
+  end
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  local.get $1
+  local.get $2
+  local.get $3
+  call $src-as/rendering/material/Uniform/TypedUniform<src-as/math/Texture/Texture>#constructor
+  local.tee $0
+  i32.store
+  local.get $0
+  local.set $4
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $4
+ )
  (func $src-as/components/Mesh/Mesh#constructor (param $0 i32) (param $1 i32) (param $2 i32) (result i32)
   (local $3 i32)
   global.get $~lib/memory/__stack_pointer
@@ -48487,66 +51943,6 @@
   global.set $~lib/memory/__stack_pointer
   local.get $3
  )
- (func $src-as/rendering/material/Material/Material#constructor (param $0 i32) (param $1 i32) (result i32)
-  (local $2 i32)
-  (local $3 i32)
-  (local $4 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store
-  local.get $0
-  i32.eqz
-  if
-   global.get $~lib/memory/__stack_pointer
-   i32.const 24
-   i32.const 108
-   call $~lib/rt/itcms/__new
-   local.tee $0
-   i32.store
-  end
-  local.get $0
-  i32.const 0
-  call $~lib/map/Map<~lib/string/String,src-as/rendering/material/Uniform/Uniform>#constructor
-  call $src-as/rendering/material/Material/Material#set:uniformMap
-  local.get $0
-  i32.const 0
-  i32.const 2
-  i32.const 31
-  i32.const 17968
-  call $~lib/rt/__newArray
-  call $src-as/rendering/material/Material/Material#set:uniformArr
-  local.get $0
-  i32.const 0
-  i32.const 2
-  i32.const 109
-  i32.const 18000
-  call $~lib/rt/__newArray
-  call $src-as/rendering/material/Material/Material#set:uniformBufferObjects
-  local.get $0
-  i32.const 0
-  call $src-as/rendering/material/Material/Material#set:transparent
-  local.get $0
-  global.get $src-as/rendering/constants/enums/Culling.Back
-  call $src-as/rendering/material/Material/Material#set:culling
-  local.get $0
-  i32.const 0
-  call $src-as/rendering/material/Material/Material#set:shader
-  local.get $0
-  local.get $1
-  call $src-as/rendering/material/Material/Material#set:shader
-  local.get $0
-  local.set $4
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $4
- )
  (func $src-as/components/Rotator/Rotator#constructor (param $0 i32) (result i32)
   (local $1 i32)
   global.get $~lib/memory/__stack_pointer
@@ -48561,8 +51957,8 @@
   i32.eqz
   if
    global.get $~lib/memory/__stack_pointer
-   i32.const 16
-   i32.const 136
+   i32.const 20
+   i32.const 142
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -48576,124 +51972,19 @@
   f32.const 0
   call $src-as/components/Rotator/Rotator#set:startTime
   local.get $0
+  i32.const 0
+  f32.const 0
+  f32.const 0
+  f32.const 0
+  call $src-as/math/Vector3/Vector3#constructor
+  call $src-as/components/Rotator/Rotator#set:offset
+  local.get $0
   local.set $1
   global.get $~lib/memory/__stack_pointer
   i32.const 4
   i32.add
   global.set $~lib/memory/__stack_pointer
   local.get $1
- )
- (func $~lib/array/Array<src-as/base/System/System>#__get (param $0 i32) (param $1 i32) (result i32)
-  (local $2 i32)
-  (local $3 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store
-  local.get $1
-  local.get $0
-  i32.load offset=12
-  i32.ge_u
-  if
-   i32.const 96
-   i32.const 4208
-   i32.const 114
-   i32.const 42
-   call $~lib/builtins/abort
-   unreachable
-  end
-  global.get $~lib/memory/__stack_pointer
-  local.get $0
-  i32.load offset=4
-  local.get $1
-  i32.const 2
-  i32.shl
-  i32.add
-  i32.load
-  local.tee $2
-  i32.store
-  i32.const 1
-  drop
-  i32.const 0
-  i32.eqz
-  drop
-  local.get $2
-  i32.eqz
-  if
-   i32.const 4256
-   i32.const 4208
-   i32.const 118
-   i32.const 40
-   call $~lib/builtins/abort
-   unreachable
-  end
-  local.get $2
-  local.set $3
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $3
- )
- (func $~lib/array/Array<src-as/components/Camera/Camera>#__get (param $0 i32) (param $1 i32) (result i32)
-  (local $2 i32)
-  (local $3 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store
-  local.get $1
-  local.get $0
-  i32.load offset=12
-  i32.ge_u
-  if
-   i32.const 96
-   i32.const 4208
-   i32.const 114
-   i32.const 42
-   call $~lib/builtins/abort
-   unreachable
-  end
-  global.get $~lib/memory/__stack_pointer
-  local.get $0
-  i32.load offset=4
-  local.get $1
-  i32.const 2
-  i32.shl
-  i32.add
-  i32.load
-  local.tee $2
-  i32.store
-  i32.const 1
-  drop
-  i32.const 0
-  i32.eqz
-  drop
-  local.get $2
-  i32.eqz
-  if
-   i32.const 4256
-   i32.const 4208
-   i32.const 118
-   i32.const 40
-   call $~lib/builtins/abort
-   unreachable
-  end
-  local.get $2
-  local.set $3
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $3
  )
  (func $~lib/array/Array<src-as/base/Entity/Entity>#constructor (param $0 i32) (param $1 i32) (result i32)
   (local $2 i32)
@@ -48714,7 +52005,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 16
-   i32.const 139
+   i32.const 143
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -49044,6 +52335,388 @@
   local.get $3
  )
  (func $~lib/array/Array<src-as/components/Mesh/Mesh>#__get (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  (local $3 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $1
+  local.get $0
+  i32.load offset=12
+  i32.ge_u
+  if
+   i32.const 96
+   i32.const 4208
+   i32.const 114
+   i32.const 42
+   call $~lib/builtins/abort
+   unreachable
+  end
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  i32.load offset=4
+  local.get $1
+  i32.const 2
+  i32.shl
+  i32.add
+  i32.load
+  local.tee $2
+  i32.store
+  i32.const 1
+  drop
+  i32.const 0
+  i32.eqz
+  drop
+  local.get $2
+  i32.eqz
+  if
+   i32.const 4256
+   i32.const 4208
+   i32.const 118
+   i32.const 40
+   call $~lib/builtins/abort
+   unreachable
+  end
+  local.get $2
+  local.set $3
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $3
+ )
+ (func $~lib/array/Array<src-as/components/Transform/Transform>#splice (param $0 i32) (param $1 i32) (param $2 i32) (result i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  (local $6 i32)
+  (local $7 i32)
+  (local $8 i32)
+  (local $9 i32)
+  (local $10 i32)
+  (local $11 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  i32.load offset=12
+  local.set $3
+  local.get $1
+  i32.const 0
+  i32.lt_s
+  if (result i32)
+   local.get $3
+   local.get $1
+   i32.add
+   local.tee $4
+   i32.const 0
+   local.tee $5
+   local.get $4
+   local.get $5
+   i32.gt_s
+   select
+  else
+   local.get $1
+   local.tee $5
+   local.get $3
+   local.tee $4
+   local.get $5
+   local.get $4
+   i32.lt_s
+   select
+  end
+  local.set $1
+  local.get $2
+  local.tee $4
+  local.get $3
+  local.get $1
+  i32.sub
+  local.tee $5
+  local.get $4
+  local.get $5
+  i32.lt_s
+  select
+  local.tee $5
+  i32.const 0
+  local.tee $4
+  local.get $5
+  local.get $4
+  i32.gt_s
+  select
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.const 2
+  i32.const 97
+  i32.const 0
+  call $~lib/rt/__newArray
+  local.tee $6
+  i32.store
+  local.get $6
+  i32.load offset=4
+  local.set $7
+  local.get $0
+  i32.load offset=4
+  local.set $8
+  local.get $8
+  local.get $1
+  i32.const 2
+  i32.shl
+  i32.add
+  local.set $9
+  local.get $7
+  local.get $9
+  local.get $2
+  i32.const 2
+  i32.shl
+  memory.copy
+  local.get $1
+  local.get $2
+  i32.add
+  local.set $10
+  local.get $3
+  local.get $10
+  i32.ne
+  if
+   local.get $9
+   local.get $8
+   local.get $10
+   i32.const 2
+   i32.shl
+   i32.add
+   local.get $3
+   local.get $10
+   i32.sub
+   i32.const 2
+   i32.shl
+   memory.copy
+  end
+  local.get $0
+  local.get $3
+  local.get $2
+  i32.sub
+  call $~lib/array/Array<src-as/components/Transform/Transform>#set:length_
+  local.get $6
+  local.set $11
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $11
+ )
+ (func $~lib/array/Array<src-as/components/Camera/Camera>#splice (param $0 i32) (param $1 i32) (param $2 i32) (result i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  (local $6 i32)
+  (local $7 i32)
+  (local $8 i32)
+  (local $9 i32)
+  (local $10 i32)
+  (local $11 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  i32.load offset=12
+  local.set $3
+  local.get $1
+  i32.const 0
+  i32.lt_s
+  if (result i32)
+   local.get $3
+   local.get $1
+   i32.add
+   local.tee $4
+   i32.const 0
+   local.tee $5
+   local.get $4
+   local.get $5
+   i32.gt_s
+   select
+  else
+   local.get $1
+   local.tee $5
+   local.get $3
+   local.tee $4
+   local.get $5
+   local.get $4
+   i32.lt_s
+   select
+  end
+  local.set $1
+  local.get $2
+  local.tee $4
+  local.get $3
+  local.get $1
+  i32.sub
+  local.tee $5
+  local.get $4
+  local.get $5
+  i32.lt_s
+  select
+  local.tee $5
+  i32.const 0
+  local.tee $4
+  local.get $5
+  local.get $4
+  i32.gt_s
+  select
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.const 2
+  i32.const 106
+  i32.const 0
+  call $~lib/rt/__newArray
+  local.tee $6
+  i32.store
+  local.get $6
+  i32.load offset=4
+  local.set $7
+  local.get $0
+  i32.load offset=4
+  local.set $8
+  local.get $8
+  local.get $1
+  i32.const 2
+  i32.shl
+  i32.add
+  local.set $9
+  local.get $7
+  local.get $9
+  local.get $2
+  i32.const 2
+  i32.shl
+  memory.copy
+  local.get $1
+  local.get $2
+  i32.add
+  local.set $10
+  local.get $3
+  local.get $10
+  i32.ne
+  if
+   local.get $9
+   local.get $8
+   local.get $10
+   i32.const 2
+   i32.shl
+   i32.add
+   local.get $3
+   local.get $10
+   i32.sub
+   i32.const 2
+   i32.shl
+   memory.copy
+  end
+  local.get $0
+  local.get $3
+  local.get $2
+  i32.sub
+  call $~lib/array/Array<src-as/components/Camera/Camera>#set:length_
+  local.get $6
+  local.set $11
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $11
+ )
+ (func $src-as/math/PolarCoords/PolarCoords#constructor (param $0 i32) (param $1 f32) (param $2 f32) (result i32)
+  (local $3 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  i32.eqz
+  if
+   global.get $~lib/memory/__stack_pointer
+   i32.const 8
+   i32.const 144
+   call $~lib/rt/itcms/__new
+   local.tee $0
+   i32.store
+  end
+  local.get $0
+  f32.const 0
+  call $src-as/math/PolarCoords/PolarCoords#set:angle
+  local.get $0
+  f32.const 0
+  call $src-as/math/PolarCoords/PolarCoords#set:radius
+  local.get $0
+  local.get $2
+  call $src-as/math/PolarCoords/PolarCoords#set:radius
+  local.get $0
+  local.get $1
+  call $src-as/math/PolarCoords/PolarCoords#set:angle
+  local.get $0
+  local.set $3
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $3
+ )
+ (func $src-as/math/Vector2/Vector2.fromPolar@varargs (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  block $1of1
+   block $0of1
+    block $outOfRange
+     global.get $~argumentsLength
+     i32.const 1
+     i32.sub
+     br_table $0of1 $1of1 $outOfRange
+    end
+    unreachable
+   end
+   global.get $~lib/memory/__stack_pointer
+   i32.const 0
+   f32.const 0
+   f32.const 0
+   call $src-as/math/Vector2/Vector2#constructor
+   local.tee $1
+   i32.store
+  end
+  local.get $0
+  local.get $1
+  call $src-as/math/Vector2/Vector2.fromPolar
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $2
+ )
+ (func $~lib/array/Array<src-as/WebGL2/components/material/WebGLUniform>#__get (param $0 i32) (param $1 i32) (result i32)
   (local $2 i32)
   (local $3 i32)
   global.get $~lib/memory/__stack_pointer
@@ -49682,7 +53355,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 2
-   i32.const 141
+   i32.const 146
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -49716,7 +53389,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 12
-   i32.const 140
+   i32.const 145
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -50434,7 +54107,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 8
-   i32.const 148
+   i32.const 151
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -50474,7 +54147,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 8
-   i32.const 150
+   i32.const 153
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -50514,7 +54187,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 8
-   i32.const 149
+   i32.const 152
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -50549,7 +54222,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 8
-   i32.const 151
+   i32.const 154
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -50584,7 +54257,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 8
-   i32.const 152
+   i32.const 155
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -50619,7 +54292,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 8
-   i32.const 153
+   i32.const 156
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -50654,7 +54327,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 8
-   i32.const 154
+   i32.const 157
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -50701,8 +54374,8 @@
    i32.gt_s
   end
   if
-   i32.const 19728
-   i32.const 19856
+   i32.const 19984
+   i32.const 20112
    i32.const 373
    i32.const 5
    call $~lib/builtins/abort
@@ -50711,7 +54384,7 @@
   local.get $0
   i32.eqz
   if
-   i32.const 19920
+   i32.const 20176
    local.set $8
    global.get $~lib/memory/__stack_pointer
    i32.const 4
@@ -51180,138 +54853,23 @@
   global.set $~lib/memory/__stack_pointer
   local.get $7
  )
- (func $src-as/math/PolarCoords/PolarCoords#constructor (param $0 i32) (param $1 f32) (param $2 f32) (result i32)
-  (local $3 i32)
+ (func $export:src-as/exports/demos/rotatingCube (param $0 i32) (result i32)
+  (local $1 i32)
   global.get $~lib/memory/__stack_pointer
   i32.const 4
   i32.sub
   global.set $~lib/memory/__stack_pointer
   call $~stack_check
   global.get $~lib/memory/__stack_pointer
-  i32.const 0
+  local.get $0
   i32.store
   local.get $0
-  i32.eqz
-  if
-   global.get $~lib/memory/__stack_pointer
-   i32.const 8
-   i32.const 155
-   call $~lib/rt/itcms/__new
-   local.tee $0
-   i32.store
-  end
-  local.get $0
-  f32.const 0
-  call $src-as/math/PolarCoords/PolarCoords#set:angle
-  local.get $0
-  f32.const 0
-  call $src-as/math/PolarCoords/PolarCoords#set:radius
-  local.get $0
-  local.get $2
-  call $src-as/math/PolarCoords/PolarCoords#set:radius
-  local.get $0
-  local.get $1
-  call $src-as/math/PolarCoords/PolarCoords#set:angle
-  local.get $0
-  local.set $3
+  call $src-as/exports/demos/rotatingCube
+  local.set $1
   global.get $~lib/memory/__stack_pointer
   i32.const 4
   i32.add
   global.set $~lib/memory/__stack_pointer
-  local.get $3
- )
- (func $src-as/math/Vector2/Vector2.fromPolar@varargs (param $0 i32) (param $1 i32) (result i32)
-  (local $2 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store
-  block $1of1
-   block $0of1
-    block $outOfRange
-     global.get $~argumentsLength
-     i32.const 1
-     i32.sub
-     br_table $0of1 $1of1 $outOfRange
-    end
-    unreachable
-   end
-   global.get $~lib/memory/__stack_pointer
-   i32.const 0
-   f32.const 0
-   f32.const 0
-   call $src-as/math/Vector2/Vector2#constructor
-   local.tee $1
-   i32.store
-  end
-  local.get $0
   local.get $1
-  call $src-as/math/Vector2/Vector2.fromPolar
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $2
- )
- (func $~lib/array/Array<src-as/WebGL2/components/material/WebGLUniform>#__get (param $0 i32) (param $1 i32) (result i32)
-  (local $2 i32)
-  (local $3 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store
-  local.get $1
-  local.get $0
-  i32.load offset=12
-  i32.ge_u
-  if
-   i32.const 96
-   i32.const 4208
-   i32.const 114
-   i32.const 42
-   call $~lib/builtins/abort
-   unreachable
-  end
-  global.get $~lib/memory/__stack_pointer
-  local.get $0
-  i32.load offset=4
-  local.get $1
-  i32.const 2
-  i32.shl
-  i32.add
-  i32.load
-  local.tee $2
-  i32.store
-  i32.const 1
-  drop
-  i32.const 0
-  i32.eqz
-  drop
-  local.get $2
-  i32.eqz
-  if
-   i32.const 4256
-   i32.const 4208
-   i32.const 118
-   i32.const 40
-   call $~lib/builtins/abort
-   unreachable
-  end
-  local.get $2
-  local.set $3
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $3
  )
 )

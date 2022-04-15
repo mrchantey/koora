@@ -39,6 +39,7 @@ vec3 calculateDirectionalLightAtIndex(vec3 diffuse,vec3 normal,int index){
 vec3 calculateLighting(vec3 diffuse,vec3 normal){
 	normal = normalize(normal);
 	vec3 outputColor = vec3(0.,0.,0.);
+	//TODO only iterate instantiated lights
 	for(int i = 0; i < NUM_LIGHTS; i++){
 		outputColor += calculateDirectionalLightAtIndex(diffuse,normal,i);
 	}

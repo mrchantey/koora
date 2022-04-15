@@ -9,6 +9,7 @@ export class Texture{
 	height: u16
 	pixels: Uint8Array
 	get length(): u32{ return this.pixels.length }
+	static white: Texture = new Texture(1, 1, ArrayUtils.toTyped_u8([255, 255, 255, 255]))
 	static testTexture: Texture = new Texture(2, 2, ArrayUtils.toTyped_u8([
 		0, 0, 0, 255,
 		255, 0, 0, 255,

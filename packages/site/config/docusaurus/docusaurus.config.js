@@ -9,6 +9,7 @@ const wasmScripts = require('./wasmScripts.json').scripts
 // const root = process.cwd()
 // const path = require('path');
 
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
 	title: 'Koora',
@@ -49,6 +50,17 @@ const config = {
 	themeConfig:
 		/** @type {import('@docusaurus/preset-classic').ThemeConfig} */
 		({
+			//TODO
+			// 	<meta property="og:image" content="http://example.com/logo.jpg">
+			// <meta property="og:image:type" content="image/png">
+			// <meta property="og:image:width" content="1024">
+			// <meta property="og:image:height" content="1024"></meta>
+			metadata: [
+				{
+					property: 'HOWDY',
+					content: 'DOODY'
+				}
+			],
 			colorMode: {
 				respectPrefersColorScheme: true
 			},

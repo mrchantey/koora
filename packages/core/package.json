@@ -3,14 +3,15 @@
 	"version": "0.0.1",
 	"description": "AssemblyScript Game Framework",
 	"scripts": {
-		"asbuild": "asc src-as/index.ts --target debug --config ./config/asconfig.json --exportRuntime --enable reference-types",
-		"aswatch": "onchange -i \"src-as/**/*\" -- npm run asbuild",
-		"watch": "cross-env TS_NODE_PROJECT=\"../../config/webpack/tsconfig.webpack.json\" webpack --watch --config ../../config/webpack/webpack.config.ts",
-		"watch-html": "onchange -i -k \"dist/**/*\" -- npm run test-html",
+		"build-as": "asc src-as/index.ts --target debug --config ./config/asconfig.json --exportRuntime --enable reference-types",
+		"watch-as": "onchange -i \"src-as/**/*\" -- npm run build-as",
+		"watch-src-test": "cross-env TS_NODE_PROJECT=\"../../config/webpack/tsconfig.webpack.json\" webpack --watch --config ../../config/webpack/webpack.config.ts",
+		"watch-src": "cross-env TS_NODE_PROJECT=\"../../config/webpack/tsconfig.webpack.json\" webpack --watch --config ../../config/webpack/webpack.config.ts --env entry=./src/index.ts",
+		"DELETEME-watch-html": "onchange -i -k \"dist/**/*\" -- npm run test-html",
 		"start": "live-server ./dist --no-browser",
 		"test-html": "live-server --no-browser --watch=./dist,./test",
-		"copy-build": "shx cp -r ./dist/debug.d.ts ./src/_wasm/debug.d.ts && shx cp -r ./dist/debug.js ./src/_wasm/debug.js",
-		"post-build": "ts-node ./config/scripts/copy-to-site.ts"
+		"copy-build": "ts-node ./config/scripts/copy-build.ts",
+		"watch-build": "onchange -i \"dist/**/*.d.ts\" -- npm run copy-build"
 	},
 	"repository": {
 		"type": "git",

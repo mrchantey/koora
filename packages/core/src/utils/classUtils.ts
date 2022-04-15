@@ -22,7 +22,7 @@ export const applyGLOverloads = (gl: WebGL2RenderingContext) => {
 		['compressedTexImage2D', 2],
 		['compressedTexSubImage2D', 2],
 		['readPixels', 3],
-		['texImage2D', 5],
+		['texImage2D', 6],
 		['texSubImage2D', 5],
 		['getBufferParameter', 2],
 		['getProgramParameter', 2],

@@ -1,17 +1,8 @@
-import { KooraLoader } from './loader/KooraLoader'
-// import './style.css'
-const a: number = 2
+import { initKoora } from './loader/KooraLoader'
+import './style.css'
 
-// console.log('hello', a)
 
-async function run(canvas?: HTMLCanvasElement, wasmLocation?: string){
-	const loader = new KooraLoader(canvas)
-	await loader.load(wasmLocation)
-	loader.start()
-	return loader
-}
-//@ts-ignore
-window.startKoora = (canvas?: HTMLCanvasElement) => {
-	//@ts-ignore
-	return run(canvas, '/wasm/debug.wasm')
-}
+initKoora().then(({ wasmExports }) => {
+	const a = wasmExports.rotatingCube(wasmExports.litShader.value)
+	// console.dir(a)
+})

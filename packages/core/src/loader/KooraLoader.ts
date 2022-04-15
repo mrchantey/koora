@@ -3,8 +3,6 @@ import { GlueBase } from './GlueBase'
 import { kooraWasm } from './kooraWasm'
 import { RenderGlue } from './RenderGlue'
 
-
-
 const listen = (gl, val) => {
 	const func = gl[val]
 	gl[val] = (...args) => {
@@ -20,6 +18,7 @@ export class KooraLoader extends GlueBase{
 	externMap: Map<number, any> = new Map()
 
 	renderGlue: RenderGlue
+	animFrameId: number
 	constructor(canvas?: HTMLCanvasElement){
 		canvas ??= document.getElementById('koora-canvas') as HTMLCanvasElement
 		canvas ??= document.body.appendChild(document.createElement('canvas'))
@@ -68,30 +67,38 @@ export class KooraLoader extends GlueBase{
 		const wasmModule = await WebAssembly.compileStreaming(fetch(wasmUrl))
 		const wasmExports = await kooraWasm.instantiate(wasmModule, wasmImports)
 		for (const glue of this.glues)
-			glue.init(wasmExports)
+			glue.onLoad(wasmExports)
 		
 		return this
 	}
-	start(){
-		this.wasmExports.start()
+	start(): kooraWasm.__Internref71{
+		const world = this.wasmExports.defaultWorld()
+		// console.dir(a.toString())
 		this.renderGlue.resize()
 		this.update = this.update.bind(this)
-		requestAnimationFrame(this.update)
+		this.update()
+		return world
 	}
 	update(){
 		this.wasmExports.update()
-		requestAnimationFrame(this.update)
+		this.animFrameId = requestAnimationFrame(this.update)
 	}
 	
-	runOnce(){
-		this.wasmExports.start()
-		this.renderGlue.resize()
-		this.wasmExports.update()
+	runOnce(): KooraLoader{
+		this.start()
+		cancelAnimationFrame(this.animFrameId)
+		return this
 	}
 
 }
 
-export const initKoora = async(canvas?: HTMLCanvasElement) => {
-	//@type {HTMLCanvasElement}
-
+export const initKoora = async(canvas?: HTMLCanvasElement, wasmLocation?: string) => {	
+	const loader = new KooraLoader(canvas)
+	await loader.load(wasmLocation)
+	loader.start()
+	return loader
 }
+//@ts-ignore
+window.initKoora = initKoora
+
+
