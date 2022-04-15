@@ -1,11 +1,12 @@
 {
 	"name": "koora",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "AssemblyScript Game Framework",
 	"scripts": {
 		"build-as": "asc src-as/index.ts --target debug --config ./config/asconfig.json --exportRuntime --enable reference-types",
 		"watch-as": "onchange -i \"src-as/**/*\" -- npm run build-as",
 		"watch-src-test": "cross-env TS_NODE_PROJECT=\"../../config/webpack/tsconfig.webpack.json\" webpack --watch --config ../../config/webpack/webpack.config.ts",
+		"build-src": "tsc --project ./config/tsconfig.src.json",
 		"watch-src": "cross-env TS_NODE_PROJECT=\"../../config/webpack/tsconfig.webpack.json\" webpack --watch --config ../../config/webpack/webpack.config.ts --env entry=./src/index.ts",
 		"DELETEME-watch-html": "onchange -i -k \"dist/**/*\" -- npm run test-html",
 		"start": "live-server ./dist --no-browser",

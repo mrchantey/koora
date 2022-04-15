@@ -6,6 +6,8 @@ import { WebGLRenderSystem } from '../WebGL2'
 import { defaultCamera } from './cameraFactories'
 
 
+export function main(): void{}
+
 export function update(): void{
 	World.main.update()
 }
