@@ -3,8 +3,10 @@ import { Vector3 } from './Vector3'
 
 export class Vector2 {
 	static fromPolar(polar: PolarCoords, target: Vector2 = new Vector2()): Vector2 {
-		target.x = Mathf.cos(polar.angle) * polar.radius
-		target.y = Mathf.sin(polar.angle) * polar.radius
+		const angle = polar.angle
+		const radius = polar.radius
+		target.x = Mathf.cos(angle) * radius
+		target.y = Mathf.sin(angle) * radius
 		return target
 	}
 
@@ -29,7 +31,9 @@ export class Vector2 {
 	// @ts-ignore: decorator
 	@inline
 	lengthSquared(): f32 {
-		return this.x * this.x + this.y * this.y
+		const x = this.x
+		const y = this.y
+		return x * x + y * y
 	}
 	// @ts-ignore: decorator
 	@inline
