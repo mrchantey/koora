@@ -72,26 +72,26 @@ export class Vector2 {
 		return o
 	}
 	// @ts-ignore: decorator
-  @inline @operator('-')
+	@inline @operator('-')
 	subRef(b: Vector2, o: Vector2 = new Vector2()): Vector2 {
 		o.x = this.x - b.x
 		o.y = this.y - b.y
 		return o
 	}
 	// @ts-ignore: decorator
-  @inline @operator('*')
-  multRef(b: Vector2, o: Vector2 = new Vector2()): Vector2 {
-  	o.x = this.x * b.x
-  	o.y = this.y * b.y
-  	return o
-  }
+	@inline @operator('*')
+	multRef(b: Vector2, o: Vector2 = new Vector2()): Vector2 {
+		o.x = this.x * b.x
+		o.y = this.y * b.y
+		return o
+	}
 	// @ts-ignore: decorator
 	@inline @operator('/')
-  divRef(b: Vector2, o: Vector2 = new Vector2()): Vector2 {
-  	o.x = this.x / b.x
-  	o.y = this.y / b.y
-  	return o
-  }
+	divRef(b: Vector2, o: Vector2 = new Vector2()): Vector2 {
+		o.x = this.x / b.x
+		o.y = this.y / b.y
+		return o
+	}
 	//TODO make all sets static
 	// @ts-ignore: decorator
 	@inline
