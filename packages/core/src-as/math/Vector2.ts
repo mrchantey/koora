@@ -123,26 +123,26 @@ export class Vector2 {
 	}
 	// @ts-ignore: decorator
 	@inline
-	add(b: Vector2): Vector2 { this.x += b.x; this.y += b.y; return this }
+	add(b: Vector2): this { this.x += b.x; this.y += b.y; return this }
 	// @ts-ignore: decorator
 	@inline
-	sub(b: Vector2): Vector2 { this.x -= b.x; this.y -= b.y; return this }
+	sub(b: Vector2): this { this.x -= b.x; this.y -= b.y; return this }
 	// @ts-ignore: decorator
 	@inline
-	mult(b: Vector2): Vector2 { this.x *= b.x; this.y *= b.y; return this }
+	mult(b: Vector2): this { this.x *= b.x; this.y *= b.y; return this }
 	// @ts-ignore: decorator
 	@inline
-	div(b: Vector2): Vector2 { this.x /= b.x; this.y /= b.y; return this }
+	div(b: Vector2): this { this.x /= b.x; this.y /= b.y; return this }
 	// @ts-ignore: decorator
 	@inline
-	addValue(b: f32): Vector2 { this.x += b;	this.y += b; return this }
+	addValue(b: f32): this { this.x += b;	this.y += b; return this }
 	// @ts-ignore: decorator
 	@inline
-	subValue(b: f32): Vector2 { this.x -= b;	this.y -= b; return this }
+	subValue(b: f32): this { this.x -= b;	this.y -= b; return this }
 	// @ts-ignore: decorator
 	@inline
-	scale(b: f32): Vector2 { this.x *= b;	this.y *= b; return this }
+	scale(b: f32): this { this.x *= b;	this.y *= b; return this }
 	// @ts-ignore: decorator
 	@inline
-	scaleDiv(b: f32): Vector2 { this.x /= b; this.y /= b; return this }
+	scaleDiv(b: f32): this { this.x /= b; this.y /= b; return this }
 }
