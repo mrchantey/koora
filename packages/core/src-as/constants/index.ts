@@ -1,1 +1,1 @@
-export * from './keyboardCode'
+export * from './aliases'

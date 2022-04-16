@@ -8,39 +8,41 @@
  (type $i32_i32_i32_=>_none (func (param i32 i32 i32)))
  (type $none_=>_i32 (func (result i32)))
  (type $i32_f32_=>_none (func (param i32 f32)))
- (type $i32_i32_i32_i32_=>_i32 (func (param i32 i32 i32 i32) (result i32)))
  (type $i32_=>_f32 (func (param i32) (result f32)))
+ (type $i32_i32_i32_i32_=>_i32 (func (param i32 i32 i32 i32) (result i32)))
  (type $i32_i32_=>_f32 (func (param i32 i32) (result f32)))
- (type $i32_i32_i32_i32_i32_=>_i32 (func (param i32 i32 i32 i32 i32) (result i32)))
  (type $i32_f32_f32_f32_f32_=>_i32 (func (param i32 f32 f32 f32 f32) (result i32)))
+ (type $i32_i32_i32_i32_i32_=>_i32 (func (param i32 i32 i32 i32 i32) (result i32)))
+ (type $i32_f32_=>_i32 (func (param i32 f32) (result i32)))
+ (type $f32_=>_f32 (func (param f32) (result f32)))
  (type $externref_=>_none (func (param externref)))
  (type $i32_externref_i32_=>_i32 (func (param i32 externref i32) (result i32)))
  (type $i32_i32_i32_i32_=>_none (func (param i32 i32 i32 i32)))
- (type $f32_=>_f32 (func (param f32) (result f32)))
  (type $externref_i32_=>_i32 (func (param externref i32) (result i32)))
  (type $none_=>_externref (func (result externref)))
  (type $i32_i32_f32_=>_none (func (param i32 i32 f32)))
- (type $i32_f32_=>_i32 (func (param i32 f32) (result i32)))
+ (type $i32_f32_f32_f32_=>_i32 (func (param i32 f32 f32 f32) (result i32)))
  (type $i32_i32_i32_i32_i32_=>_none (func (param i32 i32 i32 i32 i32)))
  (type $externref_i32_i32_i32_=>_none (func (param externref i32 i32 i32)))
+ (type $f32_f32_=>_f32 (func (param f32 f32) (result f32)))
+ (type $i32_i32_f32_=>_i32 (func (param i32 i32 f32) (result i32)))
  (type $f32_f32_f32_=>_i32 (func (param f32 f32 f32) (result i32)))
- (type $i32_f32_f32_f32_=>_i32 (func (param i32 f32 f32 f32) (result i32)))
+ (type $f32_f32_=>_i32 (func (param f32 f32) (result i32)))
  (type $i32_i32_i32_i32_i32_i32_=>_none (func (param i32 i32 i32 i32 i32 i32)))
  (type $i32_f32_f32_=>_i32 (func (param i32 f32 f32) (result i32)))
- (type $i32_externref_=>_none (func (param i32 externref)))
  (type $externref_=>_i32 (func (param externref) (result i32)))
+ (type $i32_externref_=>_none (func (param i32 externref)))
  (type $none_=>_f32 (func (result f32)))
- (type $f32_f32_=>_f32 (func (param f32 f32) (result f32)))
  (type $f32_f32_f32_=>_f32 (func (param f32 f32 f32) (result f32)))
- (type $i32_i32_f32_=>_i32 (func (param i32 i32 f32) (result i32)))
  (type $i32_i32_i32_f32_=>_i32 (func (param i32 i32 i32 f32) (result i32)))
- (type $f32_f32_=>_i32 (func (param f32 f32) (result i32)))
  (type $i32_i32_i32_i32_i32_f32_=>_i32 (func (param i32 i32 i32 i32 i32 f32) (result i32)))
  (type $i32_=>_externref (func (param i32) (result externref)))
  (type $externref_i32_=>_none (func (param externref i32)))
  (type $externref_externref_=>_none (func (param externref externref)))
  (type $externref_i32_i32_=>_none (func (param externref i32 i32)))
  (type $externref_i32_i32_=>_i32 (func (param externref i32 i32) (result i32)))
+ (type $i32_f32_f32_=>_none (func (param i32 f32 f32)))
+ (type $f32_f32_=>_none (func (param f32 f32)))
  (type $i32_i32_i32_=>_externref (func (param i32 i32 i32) (result externref)))
  (type $none_=>_f64 (func (result f64)))
  (type $i64_=>_i64 (func (param i64) (result i64)))
@@ -66,24 +68,6 @@
  (import "gl" "clearColor" (func $src-as/WebGL2/imports/_types/clearColor (param f32 f32 f32 f32)))
  (import "host" "elapsed" (func $src-as/imports/_host/elapsed (result f32)))
  (import "gl" "clear" (func $src-as/WebGL2/imports/_types/clear (param i32)))
- (import "host" "get" (func $src-as/imports/_host/get (param i32) (result externref)))
- (import "gl" "bindBuffer" (func $src-as/WebGL2/imports/_types/bindBuffer (param i32 externref)))
- (import "gl" "bufferSubData__2" (func $src-as/WebGL2/imports/_types/bufferSubData__2 (param i32 i32 i32 i32 i32)))
- (import "gl" "viewport" (func $src-as/WebGL2/imports/_types/viewport (param i32 i32 i32 i32)))
- (import "gl" "enable" (func $src-as/WebGL2/imports/_types/enable (param i32)))
- (import "gl" "depthFunc" (func $src-as/WebGL2/imports/_types/depthFunc (param i32)))
- (import "gl" "disable" (func $src-as/WebGL2/imports/_types/disable (param i32)))
- (import "gl" "useProgram" (func $src-as/WebGL2/imports/_types/useProgram (param externref)))
- (import "gl" "cullFace" (func $src-as/WebGL2/imports/_types/cullFace (param i32)))
- (import "gl" "bindVertexArray" (func $src-as/WebGL2/imports/_types/bindVertexArray (param externref)))
- (import "gl" "bindTransformFeedback" (func $src-as/WebGL2/imports/_types/bindTransformFeedback (param i32 externref)))
- (import "gl" "beginTransformFeedback" (func $src-as/WebGL2/imports/_types/beginTransformFeedback (param i32)))
- (import "gl" "drawArrays" (func $src-as/WebGL2/imports/_types/drawArrays (param i32 i32 i32)))
- (import "gl" "endTransformFeedback" (func $src-as/WebGL2/imports/_types/endTransformFeedback))
- (import "gl" "drawElementsInstanced" (func $src-as/WebGL2/imports/_types/drawElementsInstanced (param i32 i32 i32 i32 i32)))
- (import "gl" "drawArraysInstanced" (func $src-as/WebGL2/imports/_types/drawArraysInstanced (param i32 i32 i32 i32)))
- (import "gl" "drawElements" (func $src-as/WebGL2/imports/_types/drawElements (param i32 i32 i32 i32)))
- (import "gl" "blendFunc" (func $src-as/WebGL2/imports/_types/blendFunc (param i32 i32)))
  (import "gl" "createShader" (func $src-as/WebGL2/imports/_types/createShader (param i32) (result externref)))
  (import "gl" "shaderSource" (func $src-as/WebGL2/imports/_types/shaderSource (param externref i32)))
  (import "gl" "compileShader" (func $src-as/WebGL2/imports/_types/compileShader (param externref)))
@@ -101,15 +85,19 @@
  (import "gl" "detachShader" (func $src-as/WebGL2/imports/_types/detachShader (param externref externref)))
  (import "host" "set" (func $src-as/imports/_host/set (param externref) (result i32)))
  (import "gl" "createBuffer" (func $src-as/WebGL2/imports/_types/createBuffer (result externref)))
+ (import "gl" "bindBuffer" (func $src-as/WebGL2/imports/_types/bindBuffer (param i32 externref)))
  (import "gl" "bufferData__3" (func $src-as/WebGL2/imports/_types/bufferData__3 (param i32 i32 i32)))
  (import "gl" "bufferData__4" (func $src-as/WebGL2/imports/_types/bufferData__4 (param i32 i32 i32)))
  (import "gl" "createVertexArray" (func $src-as/WebGL2/imports/_types/createVertexArray (result externref)))
+ (import "gl" "bindVertexArray" (func $src-as/WebGL2/imports/_types/bindVertexArray (param externref)))
+ (import "host" "get" (func $src-as/imports/_host/get (param i32) (result externref)))
  (import "gl" "getAttribLocation" (func $src-as/WebGL2/imports/_types/getAttribLocation (param externref i32) (result i32)))
  (import "gl" "enableVertexAttribArray" (func $src-as/WebGL2/imports/_types/enableVertexAttribArray (param i32)))
  (import "gl" "vertexAttribPointer" (func $src-as/WebGL2/imports/_types/vertexAttribPointer (param i32 i32 i32 i32 i32 i32)))
  (import "gl" "vertexAttribDivisor" (func $src-as/WebGL2/imports/_types/vertexAttribDivisor (param i32 i32)))
  (import "gl" "bufferData__5" (func $src-as/WebGL2/imports/_types/bufferData__5 (param i32 i32 i32)))
  (import "gl" "createTransformFeedback" (func $src-as/WebGL2/imports/_types/createTransformFeedback (result externref)))
+ (import "gl" "bindTransformFeedback" (func $src-as/WebGL2/imports/_types/bindTransformFeedback (param i32 externref)))
  (import "gl" "bindBufferBase" (func $src-as/WebGL2/imports/_types/bindBufferBase (param i32 i32 externref)))
  (import "gl" "getUniformBlockIndex" (func $src-as/WebGL2/imports/_types/getUniformBlockIndex (param externref i32) (result i32)))
  (import "gl" "getActiveUniformBlockParameter__1" (func $src-as/WebGL2/imports/_types/getActiveUniformBlockParameter__1 (param externref i32 i32) (result i32)))
@@ -124,6 +112,20 @@
  (import "gl" "texImage2D__6" (func $src-as/WebGL2/imports/_types/texImage2D__6 (param i32 i32 i32 i32 i32 i32 i32 i32 i32)))
  (import "gl" "generateMipmap" (func $src-as/WebGL2/imports/_types/generateMipmap (param i32)))
  (import "gl" "texParameteri" (func $src-as/WebGL2/imports/_types/texParameteri (param i32 i32 i32)))
+ (import "gl" "bufferSubData__2" (func $src-as/WebGL2/imports/_types/bufferSubData__2 (param i32 i32 i32 i32 i32)))
+ (import "gl" "viewport" (func $src-as/WebGL2/imports/_types/viewport (param i32 i32 i32 i32)))
+ (import "gl" "enable" (func $src-as/WebGL2/imports/_types/enable (param i32)))
+ (import "gl" "depthFunc" (func $src-as/WebGL2/imports/_types/depthFunc (param i32)))
+ (import "gl" "disable" (func $src-as/WebGL2/imports/_types/disable (param i32)))
+ (import "gl" "useProgram" (func $src-as/WebGL2/imports/_types/useProgram (param externref)))
+ (import "gl" "cullFace" (func $src-as/WebGL2/imports/_types/cullFace (param i32)))
+ (import "gl" "beginTransformFeedback" (func $src-as/WebGL2/imports/_types/beginTransformFeedback (param i32)))
+ (import "gl" "drawArrays" (func $src-as/WebGL2/imports/_types/drawArrays (param i32 i32 i32)))
+ (import "gl" "endTransformFeedback" (func $src-as/WebGL2/imports/_types/endTransformFeedback))
+ (import "gl" "drawElementsInstanced" (func $src-as/WebGL2/imports/_types/drawElementsInstanced (param i32 i32 i32 i32 i32)))
+ (import "gl" "drawArraysInstanced" (func $src-as/WebGL2/imports/_types/drawArraysInstanced (param i32 i32 i32 i32)))
+ (import "gl" "drawElements" (func $src-as/WebGL2/imports/_types/drawElements (param i32 i32 i32 i32)))
+ (import "gl" "blendFunc" (func $src-as/WebGL2/imports/_types/blendFunc (param i32 i32)))
  (import "gl" "uniform1fv" (func $src-as/WebGL2/imports/_types/uniform1fv (param externref i32 i32 i32)))
  (import "gl" "uniform2fv" (func $src-as/WebGL2/imports/_types/uniform2fv (param externref i32 i32 i32)))
  (import "gl" "uniform3fv" (func $src-as/WebGL2/imports/_types/uniform3fv (param externref i32 i32 i32)))
@@ -259,6 +261,7 @@
  (global $src-as/math/Color8/Color8._black (mut i32) (i32.const 0))
  (global $src-as/math/Color8/Color8._white (mut i32) (i32.const 0))
  (global $src-as/math/Color8/Color8._gray (mut i32) (i32.const 0))
+ (global $src-as/math/Color/Color.clear (mut i32) (i32.const 0))
  (global $src-as/rendering/constants/_uniforms/Model i32 (i32.const 2352))
  (global $src-as/rendering/constants/_uniforms/View i32 (i32.const 2400))
  (global $src-as/rendering/constants/_uniforms/Projection i32 (i32.const 2432))
@@ -886,11 +889,12 @@
  (global $src-as/rendering/geometry/CubeGeometry/CubeGeometry.default (mut i32) (i32.const 0))
  (global $src-as/rendering/geometry/QuadGeometry/QuadGeometry.default (mut i32) (i32.const 0))
  (global $src-as/rendering/geometry/QuadGeometry/quadGeometry (mut i32) (i32.const 0))
+ (global $src-as/rendering/geometry/TransformGeometry/TransformGeometry.default (mut i32) (i32.const 0))
  (global $src-as/rendering/shader/debugNormals/vert (mut i32) (i32.const 0))
- (global $src-as/rendering/shader/debugNormals/frag i32 (i32.const 7088))
+ (global $src-as/rendering/shader/debugNormals/frag i32 (i32.const 7184))
  (global $src-as/rendering/shader/debugNormals/debugNormalsShader (mut i32) (i32.const 0))
- (global $src-as/rendering/shader/glsl/utility/glslUtils i32 (i32.const 7424))
- (global $src-as/rendering/shader/glsl/utility/lightConstants i32 (i32.const 8128))
+ (global $src-as/rendering/shader/glsl/utility/glslUtils i32 (i32.const 7520))
+ (global $src-as/rendering/shader/glsl/utility/lightConstants i32 (i32.const 8224))
  (global $src-as/rendering/shader/glsl/utility/lightUtils (mut i32) (i32.const 0))
  (global $src-as/rendering/shader/lit/litShader/vert (mut i32) (i32.const 0))
  (global $src-as/rendering/shader/lit/litShader/frag (mut i32) (i32.const 0))
@@ -902,7 +906,7 @@
  (global $src-as/rendering/shader/particleShader/u_v i32 (i32.const 2400))
  (global $src-as/rendering/shader/particleShader/u_p i32 (i32.const 2432))
  (global $src-as/rendering/shader/particleShader/vert (mut i32) (i32.const 0))
- (global $src-as/rendering/shader/particleShader/frag i32 (i32.const 12224))
+ (global $src-as/rendering/shader/particleShader/frag i32 (i32.const 12320))
  (global $src-as/rendering/shader/particleShader/particleRenderShader (mut i32) (i32.const 0))
  (global $src-as/rendering/shader/transformFeedback/a_pos i32 (i32.const 3520))
  (global $src-as/rendering/shader/transformFeedback/a_vel i32 (i32.const 3584))
@@ -911,19 +915,19 @@
  (global $src-as/rendering/shader/transformFeedback/u_acc i32 (i32.const 3008))
  (global $src-as/rendering/shader/transformFeedback/u_dt i32 (i32.const 2864))
  (global $src-as/rendering/shader/transformFeedback/vert (mut i32) (i32.const 0))
- (global $src-as/rendering/shader/transformFeedback/frag i32 (i32.const 13776))
+ (global $src-as/rendering/shader/transformFeedback/frag i32 (i32.const 13872))
  (global $src-as/rendering/shader/transformFeedback/transformFeedbackShader (mut i32) (i32.const 0))
  (global $src-as/rendering/shader/transformFeedbackSimple/vert (mut i32) (i32.const 0))
- (global $src-as/rendering/shader/transformFeedbackSimple/frag i32 (i32.const 13776))
+ (global $src-as/rendering/shader/transformFeedbackSimple/frag i32 (i32.const 13872))
  (global $src-as/rendering/shader/transformFeedbackSimple/transformFeedbackSimpleShader (mut i32) (i32.const 0))
  (global $src-as/rendering/shader/unlit/unlit/vert (mut i32) (i32.const 0))
- (global $src-as/rendering/shader/unlit/unlit/frag i32 (i32.const 14560))
+ (global $src-as/rendering/shader/unlit/unlit/frag i32 (i32.const 14656))
  (global $src-as/rendering/shader/unlit/unlit/unlitShader (mut i32) (i32.const 0))
  (global $src-as/rendering/shader/unlit/unlitVertexColors/vert (mut i32) (i32.const 0))
- (global $src-as/rendering/shader/unlit/unlitVertexColors/frag i32 (i32.const 15152))
+ (global $src-as/rendering/shader/unlit/unlitVertexColors/frag i32 (i32.const 15248))
  (global $src-as/rendering/shader/unlit/unlitVertexColors/unlitVertexColorShader (mut i32) (i32.const 0))
- (global $src-as/rendering/shader/uvDebug/vert i32 (i32.const 15472))
- (global $src-as/rendering/shader/uvDebug/frag i32 (i32.const 15776))
+ (global $src-as/rendering/shader/uvDebug/vert i32 (i32.const 15568))
+ (global $src-as/rendering/shader/uvDebug/frag i32 (i32.const 15872))
  (global $src-as/rendering/shader/uvDebug/uvDebugShader (mut i32) (i32.const 0))
  (global $src-as/rendering/systems/RenderSystem/RenderSystem.canvasWidth (mut i32) (i32.const 100))
  (global $src-as/rendering/systems/RenderSystem/RenderSystem.canvasHeight (mut i32) (i32.const 100))
@@ -932,131 +936,131 @@
  (global $src-as/math/Texture/Texture.testTexture2 (mut i32) (i32.const 0))
  (global $src-as/components/DirectionalLight/DirectionalLight.directionBuffer (mut i32) (i32.const 0))
  (global $src-as/components/DirectionalLight/DirectionalLight.ambientIntensityBuffer (mut i32) (i32.const 0))
- (global $src-as/constants/keyboardCode/KeyboardCode.Backspace i32 (i32.const 0))
- (global $src-as/constants/keyboardCode/KeyboardCode.Tab i32 (i32.const 1))
- (global $src-as/constants/keyboardCode/KeyboardCode.Enter i32 (i32.const 2))
- (global $src-as/constants/keyboardCode/KeyboardCode.ShiftLeft i32 (i32.const 3))
- (global $src-as/constants/keyboardCode/KeyboardCode.ShiftRight i32 (i32.const 4))
- (global $src-as/constants/keyboardCode/KeyboardCode.ControlLeft i32 (i32.const 5))
- (global $src-as/constants/keyboardCode/KeyboardCode.ControlRight i32 (i32.const 6))
- (global $src-as/constants/keyboardCode/KeyboardCode.AltLeft i32 (i32.const 7))
- (global $src-as/constants/keyboardCode/KeyboardCode.AltRight i32 (i32.const 8))
- (global $src-as/constants/keyboardCode/KeyboardCode.Pause i32 (i32.const 9))
- (global $src-as/constants/keyboardCode/KeyboardCode.CapsLock i32 (i32.const 10))
- (global $src-as/constants/keyboardCode/KeyboardCode.Escape i32 (i32.const 11))
- (global $src-as/constants/keyboardCode/KeyboardCode.Space i32 (i32.const 12))
- (global $src-as/constants/keyboardCode/KeyboardCode.PageUp i32 (i32.const 13))
- (global $src-as/constants/keyboardCode/KeyboardCode.PageDown i32 (i32.const 14))
- (global $src-as/constants/keyboardCode/KeyboardCode.End i32 (i32.const 15))
- (global $src-as/constants/keyboardCode/KeyboardCode.Home i32 (i32.const 16))
- (global $src-as/constants/keyboardCode/KeyboardCode.ArrowLeft i32 (i32.const 17))
- (global $src-as/constants/keyboardCode/KeyboardCode.ArrowUp i32 (i32.const 18))
- (global $src-as/constants/keyboardCode/KeyboardCode.ArrowRight i32 (i32.const 19))
- (global $src-as/constants/keyboardCode/KeyboardCode.ArrowDown i32 (i32.const 20))
- (global $src-as/constants/keyboardCode/KeyboardCode.PrintScreen i32 (i32.const 21))
- (global $src-as/constants/keyboardCode/KeyboardCode.Insert i32 (i32.const 22))
- (global $src-as/constants/keyboardCode/KeyboardCode.Delete i32 (i32.const 23))
- (global $src-as/constants/keyboardCode/KeyboardCode.Digit0 i32 (i32.const 24))
- (global $src-as/constants/keyboardCode/KeyboardCode.Digit1 i32 (i32.const 25))
- (global $src-as/constants/keyboardCode/KeyboardCode.Digit2 i32 (i32.const 26))
- (global $src-as/constants/keyboardCode/KeyboardCode.Digit3 i32 (i32.const 27))
- (global $src-as/constants/keyboardCode/KeyboardCode.Digit4 i32 (i32.const 28))
- (global $src-as/constants/keyboardCode/KeyboardCode.Digit5 i32 (i32.const 29))
- (global $src-as/constants/keyboardCode/KeyboardCode.Digit6 i32 (i32.const 30))
- (global $src-as/constants/keyboardCode/KeyboardCode.Digit7 i32 (i32.const 31))
- (global $src-as/constants/keyboardCode/KeyboardCode.Digit8 i32 (i32.const 32))
- (global $src-as/constants/keyboardCode/KeyboardCode.Digit9 i32 (i32.const 33))
- (global $src-as/constants/keyboardCode/KeyboardCode.AudioVolumeMute i32 (i32.const 34))
- (global $src-as/constants/keyboardCode/KeyboardCode.AudioVolumeDown i32 (i32.const 35))
- (global $src-as/constants/keyboardCode/KeyboardCode.AudioVolumeUp i32 (i32.const 36))
- (global $src-as/constants/keyboardCode/KeyboardCode.KeyA i32 (i32.const 37))
- (global $src-as/constants/keyboardCode/KeyboardCode.KeyB i32 (i32.const 38))
- (global $src-as/constants/keyboardCode/KeyboardCode.KeyC i32 (i32.const 39))
- (global $src-as/constants/keyboardCode/KeyboardCode.KeyD i32 (i32.const 40))
- (global $src-as/constants/keyboardCode/KeyboardCode.KeyE i32 (i32.const 41))
- (global $src-as/constants/keyboardCode/KeyboardCode.KeyF i32 (i32.const 42))
- (global $src-as/constants/keyboardCode/KeyboardCode.KeyG i32 (i32.const 43))
- (global $src-as/constants/keyboardCode/KeyboardCode.KeyH i32 (i32.const 44))
- (global $src-as/constants/keyboardCode/KeyboardCode.KeyI i32 (i32.const 45))
- (global $src-as/constants/keyboardCode/KeyboardCode.KeyJ i32 (i32.const 46))
- (global $src-as/constants/keyboardCode/KeyboardCode.KeyK i32 (i32.const 47))
- (global $src-as/constants/keyboardCode/KeyboardCode.KeyL i32 (i32.const 48))
- (global $src-as/constants/keyboardCode/KeyboardCode.KeyM i32 (i32.const 49))
- (global $src-as/constants/keyboardCode/KeyboardCode.KeyN i32 (i32.const 50))
- (global $src-as/constants/keyboardCode/KeyboardCode.KeyO i32 (i32.const 51))
- (global $src-as/constants/keyboardCode/KeyboardCode.KeyP i32 (i32.const 52))
- (global $src-as/constants/keyboardCode/KeyboardCode.KeyQ i32 (i32.const 53))
- (global $src-as/constants/keyboardCode/KeyboardCode.KeyR i32 (i32.const 54))
- (global $src-as/constants/keyboardCode/KeyboardCode.KeyS i32 (i32.const 55))
- (global $src-as/constants/keyboardCode/KeyboardCode.KeyT i32 (i32.const 56))
- (global $src-as/constants/keyboardCode/KeyboardCode.KeyU i32 (i32.const 57))
- (global $src-as/constants/keyboardCode/KeyboardCode.KeyV i32 (i32.const 58))
- (global $src-as/constants/keyboardCode/KeyboardCode.KeyW i32 (i32.const 59))
- (global $src-as/constants/keyboardCode/KeyboardCode.KeyX i32 (i32.const 60))
- (global $src-as/constants/keyboardCode/KeyboardCode.KeyY i32 (i32.const 61))
- (global $src-as/constants/keyboardCode/KeyboardCode.KeyZ i32 (i32.const 62))
- (global $src-as/constants/keyboardCode/KeyboardCode.MetaLeft i32 (i32.const 63))
- (global $src-as/constants/keyboardCode/KeyboardCode.MetaRight i32 (i32.const 64))
- (global $src-as/constants/keyboardCode/KeyboardCode.ContextMenu i32 (i32.const 65))
- (global $src-as/constants/keyboardCode/KeyboardCode.Numpad0 i32 (i32.const 66))
- (global $src-as/constants/keyboardCode/KeyboardCode.Numpad1 i32 (i32.const 67))
- (global $src-as/constants/keyboardCode/KeyboardCode.Numpad2 i32 (i32.const 68))
- (global $src-as/constants/keyboardCode/KeyboardCode.Numpad3 i32 (i32.const 69))
- (global $src-as/constants/keyboardCode/KeyboardCode.Numpad4 i32 (i32.const 70))
- (global $src-as/constants/keyboardCode/KeyboardCode.Numpad5 i32 (i32.const 71))
- (global $src-as/constants/keyboardCode/KeyboardCode.Numpad6 i32 (i32.const 72))
- (global $src-as/constants/keyboardCode/KeyboardCode.Numpad7 i32 (i32.const 73))
- (global $src-as/constants/keyboardCode/KeyboardCode.Numpad8 i32 (i32.const 74))
- (global $src-as/constants/keyboardCode/KeyboardCode.Numpad9 i32 (i32.const 75))
- (global $src-as/constants/keyboardCode/KeyboardCode.NumpadMultiply i32 (i32.const 76))
- (global $src-as/constants/keyboardCode/KeyboardCode.NumpadAdd i32 (i32.const 77))
- (global $src-as/constants/keyboardCode/KeyboardCode.NumpadSubtract i32 (i32.const 78))
- (global $src-as/constants/keyboardCode/KeyboardCode.NumpadDecimal i32 (i32.const 79))
- (global $src-as/constants/keyboardCode/KeyboardCode.NumpadDivide i32 (i32.const 80))
- (global $src-as/constants/keyboardCode/KeyboardCode.F1 i32 (i32.const 81))
- (global $src-as/constants/keyboardCode/KeyboardCode.F2 i32 (i32.const 82))
- (global $src-as/constants/keyboardCode/KeyboardCode.F3 i32 (i32.const 83))
- (global $src-as/constants/keyboardCode/KeyboardCode.F4 i32 (i32.const 84))
- (global $src-as/constants/keyboardCode/KeyboardCode.F5 i32 (i32.const 85))
- (global $src-as/constants/keyboardCode/KeyboardCode.F6 i32 (i32.const 86))
- (global $src-as/constants/keyboardCode/KeyboardCode.F7 i32 (i32.const 87))
- (global $src-as/constants/keyboardCode/KeyboardCode.F8 i32 (i32.const 88))
- (global $src-as/constants/keyboardCode/KeyboardCode.F9 i32 (i32.const 89))
- (global $src-as/constants/keyboardCode/KeyboardCode.F10 i32 (i32.const 90))
- (global $src-as/constants/keyboardCode/KeyboardCode.F11 i32 (i32.const 91))
- (global $src-as/constants/keyboardCode/KeyboardCode.F12 i32 (i32.const 92))
- (global $src-as/constants/keyboardCode/KeyboardCode.NumLock i32 (i32.const 93))
- (global $src-as/constants/keyboardCode/KeyboardCode.ScrollLock i32 (i32.const 94))
- (global $src-as/constants/keyboardCode/KeyboardCode.Semicolon i32 (i32.const 95))
- (global $src-as/constants/keyboardCode/KeyboardCode.Equal i32 (i32.const 96))
- (global $src-as/constants/keyboardCode/KeyboardCode.Comma i32 (i32.const 97))
- (global $src-as/constants/keyboardCode/KeyboardCode.Minus i32 (i32.const 98))
- (global $src-as/constants/keyboardCode/KeyboardCode.Period i32 (i32.const 99))
- (global $src-as/constants/keyboardCode/KeyboardCode.Slash i32 (i32.const 100))
- (global $src-as/constants/keyboardCode/KeyboardCode.Backquote i32 (i32.const 101))
- (global $src-as/constants/keyboardCode/KeyboardCode.BracketLeft i32 (i32.const 102))
- (global $src-as/constants/keyboardCode/KeyboardCode.Backslash i32 (i32.const 103))
- (global $src-as/constants/keyboardCode/KeyboardCode.BracketRight i32 (i32.const 104))
- (global $src-as/constants/keyboardCode/KeyboardCode.Quote i32 (i32.const 105))
+ (global $src/constants/keyboardCode/KeyboardCode.Backspace i32 (i32.const 0))
+ (global $src/constants/keyboardCode/KeyboardCode.Tab i32 (i32.const 1))
+ (global $src/constants/keyboardCode/KeyboardCode.Enter i32 (i32.const 2))
+ (global $src/constants/keyboardCode/KeyboardCode.ShiftLeft i32 (i32.const 3))
+ (global $src/constants/keyboardCode/KeyboardCode.ShiftRight i32 (i32.const 4))
+ (global $src/constants/keyboardCode/KeyboardCode.ControlLeft i32 (i32.const 5))
+ (global $src/constants/keyboardCode/KeyboardCode.ControlRight i32 (i32.const 6))
+ (global $src/constants/keyboardCode/KeyboardCode.AltLeft i32 (i32.const 7))
+ (global $src/constants/keyboardCode/KeyboardCode.AltRight i32 (i32.const 8))
+ (global $src/constants/keyboardCode/KeyboardCode.Pause i32 (i32.const 9))
+ (global $src/constants/keyboardCode/KeyboardCode.CapsLock i32 (i32.const 10))
+ (global $src/constants/keyboardCode/KeyboardCode.Escape i32 (i32.const 11))
+ (global $src/constants/keyboardCode/KeyboardCode.Space i32 (i32.const 12))
+ (global $src/constants/keyboardCode/KeyboardCode.PageUp i32 (i32.const 13))
+ (global $src/constants/keyboardCode/KeyboardCode.PageDown i32 (i32.const 14))
+ (global $src/constants/keyboardCode/KeyboardCode.End i32 (i32.const 15))
+ (global $src/constants/keyboardCode/KeyboardCode.Home i32 (i32.const 16))
+ (global $src/constants/keyboardCode/KeyboardCode.ArrowLeft i32 (i32.const 17))
+ (global $src/constants/keyboardCode/KeyboardCode.ArrowUp i32 (i32.const 18))
+ (global $src/constants/keyboardCode/KeyboardCode.ArrowRight i32 (i32.const 19))
+ (global $src/constants/keyboardCode/KeyboardCode.ArrowDown i32 (i32.const 20))
+ (global $src/constants/keyboardCode/KeyboardCode.PrintScreen i32 (i32.const 21))
+ (global $src/constants/keyboardCode/KeyboardCode.Insert i32 (i32.const 22))
+ (global $src/constants/keyboardCode/KeyboardCode.Delete i32 (i32.const 23))
+ (global $src/constants/keyboardCode/KeyboardCode.Digit0 i32 (i32.const 24))
+ (global $src/constants/keyboardCode/KeyboardCode.Digit1 i32 (i32.const 25))
+ (global $src/constants/keyboardCode/KeyboardCode.Digit2 i32 (i32.const 26))
+ (global $src/constants/keyboardCode/KeyboardCode.Digit3 i32 (i32.const 27))
+ (global $src/constants/keyboardCode/KeyboardCode.Digit4 i32 (i32.const 28))
+ (global $src/constants/keyboardCode/KeyboardCode.Digit5 i32 (i32.const 29))
+ (global $src/constants/keyboardCode/KeyboardCode.Digit6 i32 (i32.const 30))
+ (global $src/constants/keyboardCode/KeyboardCode.Digit7 i32 (i32.const 31))
+ (global $src/constants/keyboardCode/KeyboardCode.Digit8 i32 (i32.const 32))
+ (global $src/constants/keyboardCode/KeyboardCode.Digit9 i32 (i32.const 33))
+ (global $src/constants/keyboardCode/KeyboardCode.AudioVolumeMute i32 (i32.const 34))
+ (global $src/constants/keyboardCode/KeyboardCode.AudioVolumeDown i32 (i32.const 35))
+ (global $src/constants/keyboardCode/KeyboardCode.AudioVolumeUp i32 (i32.const 36))
+ (global $src/constants/keyboardCode/KeyboardCode.KeyA i32 (i32.const 37))
+ (global $src/constants/keyboardCode/KeyboardCode.KeyB i32 (i32.const 38))
+ (global $src/constants/keyboardCode/KeyboardCode.KeyC i32 (i32.const 39))
+ (global $src/constants/keyboardCode/KeyboardCode.KeyD i32 (i32.const 40))
+ (global $src/constants/keyboardCode/KeyboardCode.KeyE i32 (i32.const 41))
+ (global $src/constants/keyboardCode/KeyboardCode.KeyF i32 (i32.const 42))
+ (global $src/constants/keyboardCode/KeyboardCode.KeyG i32 (i32.const 43))
+ (global $src/constants/keyboardCode/KeyboardCode.KeyH i32 (i32.const 44))
+ (global $src/constants/keyboardCode/KeyboardCode.KeyI i32 (i32.const 45))
+ (global $src/constants/keyboardCode/KeyboardCode.KeyJ i32 (i32.const 46))
+ (global $src/constants/keyboardCode/KeyboardCode.KeyK i32 (i32.const 47))
+ (global $src/constants/keyboardCode/KeyboardCode.KeyL i32 (i32.const 48))
+ (global $src/constants/keyboardCode/KeyboardCode.KeyM i32 (i32.const 49))
+ (global $src/constants/keyboardCode/KeyboardCode.KeyN i32 (i32.const 50))
+ (global $src/constants/keyboardCode/KeyboardCode.KeyO i32 (i32.const 51))
+ (global $src/constants/keyboardCode/KeyboardCode.KeyP i32 (i32.const 52))
+ (global $src/constants/keyboardCode/KeyboardCode.KeyQ i32 (i32.const 53))
+ (global $src/constants/keyboardCode/KeyboardCode.KeyR i32 (i32.const 54))
+ (global $src/constants/keyboardCode/KeyboardCode.KeyS i32 (i32.const 55))
+ (global $src/constants/keyboardCode/KeyboardCode.KeyT i32 (i32.const 56))
+ (global $src/constants/keyboardCode/KeyboardCode.KeyU i32 (i32.const 57))
+ (global $src/constants/keyboardCode/KeyboardCode.KeyV i32 (i32.const 58))
+ (global $src/constants/keyboardCode/KeyboardCode.KeyW i32 (i32.const 59))
+ (global $src/constants/keyboardCode/KeyboardCode.KeyX i32 (i32.const 60))
+ (global $src/constants/keyboardCode/KeyboardCode.KeyY i32 (i32.const 61))
+ (global $src/constants/keyboardCode/KeyboardCode.KeyZ i32 (i32.const 62))
+ (global $src/constants/keyboardCode/KeyboardCode.MetaLeft i32 (i32.const 63))
+ (global $src/constants/keyboardCode/KeyboardCode.MetaRight i32 (i32.const 64))
+ (global $src/constants/keyboardCode/KeyboardCode.ContextMenu i32 (i32.const 65))
+ (global $src/constants/keyboardCode/KeyboardCode.Numpad0 i32 (i32.const 66))
+ (global $src/constants/keyboardCode/KeyboardCode.Numpad1 i32 (i32.const 67))
+ (global $src/constants/keyboardCode/KeyboardCode.Numpad2 i32 (i32.const 68))
+ (global $src/constants/keyboardCode/KeyboardCode.Numpad3 i32 (i32.const 69))
+ (global $src/constants/keyboardCode/KeyboardCode.Numpad4 i32 (i32.const 70))
+ (global $src/constants/keyboardCode/KeyboardCode.Numpad5 i32 (i32.const 71))
+ (global $src/constants/keyboardCode/KeyboardCode.Numpad6 i32 (i32.const 72))
+ (global $src/constants/keyboardCode/KeyboardCode.Numpad7 i32 (i32.const 73))
+ (global $src/constants/keyboardCode/KeyboardCode.Numpad8 i32 (i32.const 74))
+ (global $src/constants/keyboardCode/KeyboardCode.Numpad9 i32 (i32.const 75))
+ (global $src/constants/keyboardCode/KeyboardCode.NumpadMultiply i32 (i32.const 76))
+ (global $src/constants/keyboardCode/KeyboardCode.NumpadAdd i32 (i32.const 77))
+ (global $src/constants/keyboardCode/KeyboardCode.NumpadSubtract i32 (i32.const 78))
+ (global $src/constants/keyboardCode/KeyboardCode.NumpadDecimal i32 (i32.const 79))
+ (global $src/constants/keyboardCode/KeyboardCode.NumpadDivide i32 (i32.const 80))
+ (global $src/constants/keyboardCode/KeyboardCode.F1 i32 (i32.const 81))
+ (global $src/constants/keyboardCode/KeyboardCode.F2 i32 (i32.const 82))
+ (global $src/constants/keyboardCode/KeyboardCode.F3 i32 (i32.const 83))
+ (global $src/constants/keyboardCode/KeyboardCode.F4 i32 (i32.const 84))
+ (global $src/constants/keyboardCode/KeyboardCode.F5 i32 (i32.const 85))
+ (global $src/constants/keyboardCode/KeyboardCode.F6 i32 (i32.const 86))
+ (global $src/constants/keyboardCode/KeyboardCode.F7 i32 (i32.const 87))
+ (global $src/constants/keyboardCode/KeyboardCode.F8 i32 (i32.const 88))
+ (global $src/constants/keyboardCode/KeyboardCode.F9 i32 (i32.const 89))
+ (global $src/constants/keyboardCode/KeyboardCode.F10 i32 (i32.const 90))
+ (global $src/constants/keyboardCode/KeyboardCode.F11 i32 (i32.const 91))
+ (global $src/constants/keyboardCode/KeyboardCode.F12 i32 (i32.const 92))
+ (global $src/constants/keyboardCode/KeyboardCode.NumLock i32 (i32.const 93))
+ (global $src/constants/keyboardCode/KeyboardCode.ScrollLock i32 (i32.const 94))
+ (global $src/constants/keyboardCode/KeyboardCode.Semicolon i32 (i32.const 95))
+ (global $src/constants/keyboardCode/KeyboardCode.Equal i32 (i32.const 96))
+ (global $src/constants/keyboardCode/KeyboardCode.Comma i32 (i32.const 97))
+ (global $src/constants/keyboardCode/KeyboardCode.Minus i32 (i32.const 98))
+ (global $src/constants/keyboardCode/KeyboardCode.Period i32 (i32.const 99))
+ (global $src/constants/keyboardCode/KeyboardCode.Slash i32 (i32.const 100))
+ (global $src/constants/keyboardCode/KeyboardCode.Backquote i32 (i32.const 101))
+ (global $src/constants/keyboardCode/KeyboardCode.BracketLeft i32 (i32.const 102))
+ (global $src/constants/keyboardCode/KeyboardCode.Backslash i32 (i32.const 103))
+ (global $src/constants/keyboardCode/KeyboardCode.BracketRight i32 (i32.const 104))
+ (global $src/constants/keyboardCode/KeyboardCode.Quote i32 (i32.const 105))
  (global $src-as/base/SystemPriority/rootSystemPriority (mut i32) (i32.const 0))
  (global $src-as/base/SystemPriority/renderSystemPriority (mut i32) (i32.const 0))
  (global $src-as/base/SystemPriority/transformSystemPriority (mut i32) (i32.const 0))
  (global $src-as/base/SystemPriority/timeSystemPriority (mut i32) (i32.const 0))
  (global $src-as/base/SystemPriority/behaviorSystemPriority (mut i32) (i32.const 0))
  (global $src-as/base/SystemPriority/defaultSystemPriority (mut i32) (i32.const 0))
- (global $src-as/base/systems/BehaviorSystem/BehaviorSystem.id (mut i32) (i32.const 68))
+ (global $src-as/base/systems/BehaviorSystem/BehaviorSystem.id (mut i32) (i32.const 75))
  (global $src-as/base/World/World._main (mut i32) (i32.const 0))
- (global $src-as/base/systems/InputSystem/InputSystem.id (mut i32) (i32.const 90))
- (global $src-as/base/systems/TransformSystem/TransformSystem.id (mut i32) (i32.const 93))
+ (global $src-as/base/systems/InputSystem/InputSystem.id (mut i32) (i32.const 97))
+ (global $src-as/base/systems/TransformSystem/TransformSystem.id (mut i32) (i32.const 100))
  (global $src-as/components/XRRig/XREye.Left i32 (i32.const 0))
  (global $src-as/components/XRRig/XREye.Right i32 (i32.const 1))
  (global $src-as/components/XRRig/XREye.Center i32 (i32.const 2))
  (global $~lib/builtins/u32.MAX_VALUE i32 (i32.const -1))
  (global $~lib/typedarray/Float32Array.BYTES_PER_ELEMENT i32 (i32.const 4))
- (global $~lib/rt/__rtti_base i32 (i32.const 21824))
- (global $~lib/memory/__data_end i32 (i32.const 23092))
- (global $~lib/memory/__stack_pointer (mut i32) (i32.const 39476))
- (global $~lib/memory/__heap_base i32 (i32.const 39476))
+ (global $~lib/rt/__rtti_base i32 (i32.const 21920))
+ (global $~lib/memory/__data_end i32 (i32.const 23260))
+ (global $~lib/memory/__stack_pointer (mut i32) (i32.const 39644))
+ (global $~lib/memory/__heap_base i32 (i32.const 39644))
  (memory $0 1)
  (data (i32.const 12) "\1c\00\00\00\00\00\00\00\00\00\00\00\05\00\00\00\08\00\00\00\01\00\00\00\00\00\00\00\00\00\00\00")
  (data (i32.const 44) "\1c\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\06\00\00\00z\00y\00x\00\00\00\00\00\00\00")
@@ -1157,16 +1161,16 @@
  (data (i32.const 3996) ",\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\10\00\00\00{\00\n\00\t\00m\00a\00t\004\00 \00\00\00\00\00\00\00\00\00\00\00\00\00")
  (data (i32.const 4044) ",\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\10\00\00\00;\00\n\00\t\00m\00a\00t\004\00 \00\00\00\00\00\00\00\00\00\00\00\00\00")
  (data (i32.const 4092) "\1c\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\n\00\00\00;\00\n\00}\00;\00\n\00\00\00")
- (data (i32.const 4124) "<\00\00\00\00\00\00\00\00\00\00\00\1c\00\00\00,\00\00\00`\0f\00\00\00\00\00\00\b0\0f\00\00\00\00\00\00\e0\0f\00\00\00\00\00\00\e0\0f\00\00\00\00\00\00\e0\0f\00\00\00\00\00\00\10\10\00\00")
+ (data (i32.const 4124) "<\00\00\00\00\00\00\00\00\00\00\00\1d\00\00\00,\00\00\00`\0f\00\00\00\00\00\00\b0\0f\00\00\00\00\00\00\e0\0f\00\00\00\00\00\00\e0\0f\00\00\00\00\00\00\e0\0f\00\00\00\00\00\00\10\10\00\00")
  (data (i32.const 4188) ",\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\1a\00\00\00~\00l\00i\00b\00/\00a\00r\00r\00a\00y\00.\00t\00s\00\00\00")
  (data (i32.const 4236) "|\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00^\00\00\00E\00l\00e\00m\00e\00n\00t\00 \00t\00y\00p\00e\00 \00m\00u\00s\00t\00 \00b\00e\00 \00n\00u\00l\00l\00a\00b\00l\00e\00 \00i\00f\00 \00a\00r\00r\00a\00y\00 \00i\00s\00 \00h\00o\00l\00e\00y\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
  (data (i32.const 4364) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
  (data (i32.const 4396) ",\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\12\00\00\00u\00b\00o\00_\00m\00o\00d\00e\00l\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 4444) "L\00\00\00\00\00\00\00\00\00\00\00\1c\00\00\004\00\00\00`\0f\00\00\00\00\00\00\b0\0f\00\00\00\00\00\00\e0\0f\00\00\00\00\00\00\e0\0f\00\00\00\00\00\00\e0\0f\00\00\00\00\00\00\e0\0f\00\00\00\00\00\00\10\10\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 4444) "L\00\00\00\00\00\00\00\00\00\00\00\1d\00\00\004\00\00\00`\0f\00\00\00\00\00\00\b0\0f\00\00\00\00\00\00\e0\0f\00\00\00\00\00\00\e0\0f\00\00\00\00\00\00\e0\0f\00\00\00\00\00\00\e0\0f\00\00\00\00\00\00\10\10\00\00\00\00\00\00\00\00\00\00")
  (data (i32.const 4524) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00(\00\00\00u\00b\00o\00_\00d\00i\00r\00e\00c\00t\00i\00o\00n\00a\00l\00L\00i\00g\00h\00t\00\00\00\00\00")
  (data (i32.const 4588) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00(\00\00\00{\00\n\00\t\00v\00e\00c\003\00[\00N\00U\00M\00_\00L\00I\00G\00H\00T\00S\00]\00 \00\00\00\00\00")
  (data (i32.const 4652) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00*\00\00\00;\00\n\00\t\00f\00l\00o\00a\00t\00[\00N\00U\00M\00_\00L\00I\00G\00H\00T\00S\00]\00 \00\00\00")
- (data (i32.const 4716) ",\00\00\00\00\00\00\00\00\00\00\00\1c\00\00\00\1c\00\00\00`\0f\00\00\00\00\00\00\00\12\00\00\00\00\00\00@\12\00\00\00\00\00\00\10\10\00\00")
+ (data (i32.const 4716) ",\00\00\00\00\00\00\00\00\00\00\00\1d\00\00\00\1c\00\00\00`\0f\00\00\00\00\00\00\00\12\00\00\00\00\00\00@\12\00\00\00\00\00\00\10\10\00\00")
  (data (i32.const 4764) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00&\00\00\00~\00l\00i\00b\00/\00s\00t\00a\00t\00i\00c\00a\00r\00r\00a\00y\00.\00t\00s\00\00\00\00\00\00\00")
  (data (i32.const 4828) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\08\00\00\00\00\00\80?\00\00\00\00\00\00\00\00")
  (data (i32.const 4860) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\08\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
@@ -1181,167 +1185,179 @@
  (data (i32.const 5308) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\0c\00\00\00\00\00\01\00\02\00\02\00\03\00\00\00")
  (data (i32.const 5340) ",\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\10\00\00\00\ff\ff\ff\ff\ff\ff\00\ff\e1\00\ff\ff\00\ff\ff\ff\00\00\00\00\00\00\00\00\00\00\00\00")
  (data (i32.const 5388) "<\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00 \00\00\00\00\00\00\00\00\00\00\00\00\00\80?\00\00\00\00\00\00\80?\00\00\80?\00\00\00\00\00\00\80?\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 5452) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00 \00\00\00#\00v\00e\00r\00s\00i\00o\00n\00 \003\000\000\00 \00e\00s\00\n\00\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 5516) "\1c\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\02\00\00\00\n\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 5548) ",\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\14\00\00\00\n\00\n\00i\00n\00 \00v\00e\00c\003\00 \00\00\00\00\00\00\00\00\00")
- (data (i32.const 5596) ",\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\14\00\00\00;\00\n\00i\00n\00 \00v\00e\00c\004\00 \00\00\00\00\00\00\00\00\00")
- (data (i32.const 5644) ",\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\14\00\00\00;\00\n\00i\00n\00 \00v\00e\00c\003\00 \00\00\00\00\00\00\00\00\00")
- (data (i32.const 5692) ",\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\14\00\00\00;\00\n\00i\00n\00 \00v\00e\00c\002\00 \00\00\00\00\00\00\00\00\00")
- (data (i32.const 5740) "L\01\00\00\00\00\00\00\00\00\00\00\01\00\00\002\01\00\00;\00\n\00o\00u\00t\00 \00v\00e\00c\002\00 \00v\00_\00u\00v\00;\00\n\00o\00u\00t\00 \00v\00e\00c\003\00 \00v\00_\00n\00o\00r\00m\00a\00l\00;\00\n\00\n\00v\00e\00c\003\00 \00m\00a\00t\00r\00i\00x\00P\00o\00s\00i\00t\00i\00o\00n\00(\00m\00a\00t\004\00 \00m\00a\00t\00r\00i\00x\00)\00{\00\n\00\t\00r\00e\00t\00u\00r\00n\00 \00m\00a\00t\00r\00i\00x\00[\003\00]\00.\00x\00y\00z\00;\00\n\00}\00\n\00\n\00v\00e\00c\003\00 \00m\00o\00d\00e\00l\00S\00p\00a\00c\00e\00C\00a\00m\00e\00r\00a\00D\00i\00r\00e\00c\00t\00i\00o\00n\00(\00v\00e\00c\003\00 \00p\00o\00s\00i\00t\00i\00o\00n\00)\00{\00\n\00\t\00r\00e\00t\00u\00r\00n\00 \00(\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 6076) "L\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00.\00\00\00 \00*\00 \00v\00e\00c\004\00(\00m\00a\00t\00r\00i\00x\00P\00o\00s\00i\00t\00i\00o\00n\00(\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 6156) "\8c\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00n\00\00\00)\00,\001\00)\00)\00.\00x\00y\00z\00 \00-\00 \00p\00o\00s\00i\00t\00i\00o\00n\00;\00\n\00}\00\n\00\n\00v\00o\00i\00d\00 \00m\00a\00i\00n\00(\00v\00o\00i\00d\00)\00 \00{\00\n\00\t\00v\00e\00c\004\00 \00p\00o\00s\00 \00=\00 \00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 6300) ",\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\10\00\00\00 \00+\00 \00v\00e\00c\004\00(\00\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 6348) ",\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\14\00\00\00 \00*\00 \00m\00a\00x\00(\000\00.\00,\00\00\00\00\00\00\00\00\00")
- (data (i32.const 6396) "\ac\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\94\00\00\00.\00x\00)\00 \00*\00 \008\00.\00,\000\00)\00;\00\n\00\t\00\n\00\t\00v\00e\00c\003\00 \00f\00w\00d\00 \00=\00 \00m\00o\00d\00e\00l\00S\00p\00a\00c\00e\00C\00a\00m\00e\00r\00a\00D\00i\00r\00e\00c\00t\00i\00o\00n\00(\00p\00o\00s\00.\00x\00y\00z\00)\00;\00\n\00\t\00v\00e\00c\003\00 \00u\00p\00 \00=\00 \00\00\00\00\00\00\00\00\00")
- (data (i32.const 6572) "\8c\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00v\00\00\00;\00\n\00\t\00v\00e\00c\003\00 \00r\00i\00g\00h\00t\00 \00=\00 \00n\00o\00r\00m\00a\00l\00i\00z\00e\00(\00c\00r\00o\00s\00s\00(\00f\00w\00d\00,\00u\00p\00)\00)\00;\00\n\00\t\00\n\00\t\00g\00l\00_\00P\00o\00s\00i\00t\00i\00o\00n\00 \00=\00 \00\00\00\00\00\00\00")
- (data (i32.const 6716) "L\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00.\00\00\00 \00*\00 \00(\00p\00o\00s\00 \00+\00 \00v\00e\00c\004\00(\00r\00i\00g\00h\00t\00 \00*\00 \00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 6796) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00(\00\00\00.\00y\00,\000\00)\00)\00;\00\n\00\t\00v\00_\00n\00o\00r\00m\00a\00l\00 \00=\00 \00\00\00\00\00")
- (data (i32.const 6860) ",\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\0e\00\00\00;\00\t\00\t\00\t\00\n\00}\00\n\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 6908) "\9c\00\00\00\00\00\00\00\00\00\00\00\1c\00\00\00\84\00\00\00`\15\00\00\00\00\00\00\a0\15\00\00\00\00\00\00\c0\15\00\00\00\00\00\00\f0\15\00\00\00\00\00\00 \16\00\00\00\00\00\00P\16\00\00\00\00\00\00 \16\00\00\00\00\00\00\80\16\00\00\00\00\00\00\d0\17\00\00\00\00\00\00 \18\00\00\00\00\00\00\b0\18\00\00\00\00\00\00\e0\18\00\00\00\00\00\00\10\19\00\00\00\00\00\00\c0\19\00\00\00\00\00\00P\1a\00\00\00\00\00\00\a0\1a\00\00\00\00\00\00\e0\1a\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 7068) ",\01\00\00\00\00\00\00\00\00\00\00\01\00\00\00\16\01\00\00#\00v\00e\00r\00s\00i\00o\00n\00 \003\000\000\00 \00e\00s\00\n\00p\00r\00e\00c\00i\00s\00i\00o\00n\00 \00m\00e\00d\00i\00u\00m\00p\00 \00f\00l\00o\00a\00t\00;\00\n\00o\00u\00t\00 \00v\00e\00c\004\00 \00o\00_\00c\00o\00l\00o\00r\00;\00\n\00i\00n\00 \00v\00e\00c\003\00 \00v\00_\00n\00o\00r\00m\00a\00l\00;\00\n\00\n\00v\00o\00i\00d\00 \00m\00a\00i\00n\00(\00v\00o\00i\00d\00)\00 \00{\00\n\00\t\00o\00_\00c\00o\00l\00o\00r\00 \00=\00 \00v\00e\00c\004\00(\00v\00_\00n\00o\00r\00m\00a\00l\00 \00*\00 \000\00.\005\00 \00+\00 \000\00.\005\00,\001\00)\00;\00\n\00}\00\n\00\00\00\00\00\00\00")
- (data (i32.const 7372) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 7404) "\bc\02\00\00\00\00\00\00\00\00\00\00\01\00\00\00\a6\02\00\00\n\00#\00i\00f\00n\00d\00e\00f\00 \00M\00A\00T\00H\00_\00U\00T\00I\00L\00S\00\n\00#\00d\00e\00f\00i\00n\00e\00 \00M\00A\00T\00H\00_\00U\00T\00I\00L\00S\00\n\00c\00o\00n\00s\00t\00 \00f\00l\00o\00a\00t\00 \00P\00I\00 \00=\00 \003\00.\001\004\001\005\009\002\006\005\003\005\009\00;\00\n\00c\00o\00n\00s\00t\00 \00f\00l\00o\00a\00t\00 \00T\00A\00U\00 \00=\00 \006\00.\002\008\003\001\008\005\003\000\007\001\008\00;\00\n\00h\00i\00g\00h\00p\00 \00f\00l\00o\00a\00t\00 \00r\00a\00n\00d\00(\00v\00e\00c\002\00 \00c\00o\00)\00\n\00{\00\n\00 \00 \00 \00 \00h\00i\00g\00h\00p\00 \00f\00l\00o\00a\00t\00 \00a\00 \00=\00 \001\002\00.\009\008\009\008\00;\00\n\00 \00 \00 \00 \00h\00i\00g\00h\00p\00 \00f\00l\00o\00a\00t\00 \00b\00 \00=\00 \007\008\00.\002\003\003\00;\00\n\00 \00 \00 \00 \00h\00i\00g\00h\00p\00 \00f\00l\00o\00a\00t\00 \00c\00 \00=\00 \004\003\007\005\008\00.\005\004\005\003\00;\00\n\00 \00 \00 \00 \00h\00i\00g\00h\00p\00 \00f\00l\00o\00a\00t\00 \00d\00t\00=\00 \00d\00o\00t\00(\00c\00o\00.\00x\00y\00 \00,\00v\00e\00c\002\00(\00a\00,\00b\00)\00)\00;\00\n\00 \00 \00 \00 \00h\00i\00g\00h\00p\00 \00f\00l\00o\00a\00t\00 \00s\00n\00=\00 \00m\00o\00d\00(\00d\00t\00,\003\00.\001\004\00)\00;\00\n\00 \00 \00 \00 \00r\00e\00t\00u\00r\00n\00 \00f\00r\00a\00c\00t\00(\00s\00i\00n\00(\00s\00n\00)\00 \00*\00 \00c\00)\00;\00\n\00}\00\n\00\n\00#\00e\00n\00d\00i\00f\00\n\00\00\00\00\00\00\00")
- (data (i32.const 8108) "\ac\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\9a\00\00\00\n\00#\00i\00f\00n\00d\00e\00f\00 \00L\00I\00G\00H\00T\00_\00C\00O\00N\00S\00T\00A\00N\00T\00S\00\n\00#\00d\00e\00f\00i\00n\00e\00 \00L\00I\00G\00H\00T\00_\00C\00O\00N\00S\00T\00A\00N\00T\00S\00\n\00#\00d\00e\00f\00i\00n\00e\00 \00N\00U\00M\00_\00L\00I\00G\00H\00T\00S\00 \008\00\n\00#\00e\00n\00d\00i\00f\00\n\00\00\00")
- (data (i32.const 8284) "<\01\00\00\00\00\00\00\00\00\00\00\01\00\00\00,\01\00\00\n\00#\00i\00f\00n\00d\00e\00f\00 \00L\00I\00G\00H\00T\00_\00U\00T\00I\00L\00S\00\n\00#\00d\00e\00f\00i\00n\00e\00 \00L\00I\00G\00H\00T\00_\00U\00T\00I\00L\00S\00\n\00v\00e\00c\003\00 \00c\00a\00l\00c\00u\00l\00a\00t\00e\00D\00i\00r\00e\00c\00t\00i\00o\00n\00a\00l\00L\00i\00g\00h\00t\00A\00t\00I\00n\00d\00e\00x\00(\00v\00e\00c\003\00 \00d\00i\00f\00f\00u\00s\00e\00,\00v\00e\00c\003\00 \00n\00o\00r\00m\00a\00l\00,\00i\00n\00t\00 \00i\00n\00d\00e\00x\00)\00{\00\n\00\t\00f\00l\00o\00a\00t\00 \00s\00t\00r\00e\00n\00g\00t\00h\00 \00=\00 \00m\00a\00x\00(\00d\00o\00t\00(\00n\00o\00r\00m\00a\00l\00,\00-\00")
- (data (i32.const 8604) "\8c\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00r\00\00\00[\00i\00n\00d\00e\00x\00]\00)\00,\000\00.\00)\00;\00\n\00\t\00r\00e\00t\00u\00r\00n\00 \00\n\00\t\00d\00i\00f\00f\00u\00s\00e\00 \00*\00 \00s\00t\00r\00e\00n\00g\00t\00h\00 \00+\00 \00\n\00\t\00d\00i\00f\00f\00u\00s\00e\00 \00*\00 \00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 8748) "\bc\02\00\00\00\00\00\00\00\00\00\00\01\00\00\00\a0\02\00\00[\00i\00n\00d\00e\00x\00]\00;\00\n\00\t\00/\00/\00 \00r\00e\00t\00u\00r\00n\00 \00v\00e\00c\003\00(\000\00.\00,\000\00.\00,\000\00.\00)\00;\00\n\00}\00\n\00\n\00v\00e\00c\003\00 \00c\00a\00l\00c\00u\00l\00a\00t\00e\00L\00i\00g\00h\00t\00i\00n\00g\00(\00v\00e\00c\003\00 \00d\00i\00f\00f\00u\00s\00e\00,\00v\00e\00c\003\00 \00n\00o\00r\00m\00a\00l\00)\00{\00\n\00\t\00n\00o\00r\00m\00a\00l\00 \00=\00 \00n\00o\00r\00m\00a\00l\00i\00z\00e\00(\00n\00o\00r\00m\00a\00l\00)\00;\00\n\00\t\00v\00e\00c\003\00 \00o\00u\00t\00p\00u\00t\00C\00o\00l\00o\00r\00 \00=\00 \00v\00e\00c\003\00(\000\00.\00,\000\00.\00,\000\00.\00)\00;\00\n\00\t\00/\00/\00T\00O\00D\00O\00 \00o\00n\00l\00y\00 \00i\00t\00e\00r\00a\00t\00e\00 \00i\00n\00s\00t\00a\00n\00t\00i\00a\00t\00e\00d\00 \00l\00i\00g\00h\00t\00s\00\n\00\t\00f\00o\00r\00(\00i\00n\00t\00 \00i\00 \00=\00 \000\00;\00 \00i\00 \00<\00 \00N\00U\00M\00_\00L\00I\00G\00H\00T\00S\00;\00 \00i\00+\00+\00)\00{\00\n\00\t\00\t\00o\00u\00t\00p\00u\00t\00C\00o\00l\00o\00r\00 \00+\00=\00 \00c\00a\00l\00c\00u\00l\00a\00t\00e\00D\00i\00r\00e\00c\00t\00i\00o\00n\00a\00l\00L\00i\00g\00h\00t\00A\00t\00I\00n\00d\00e\00x\00(\00d\00i\00f\00f\00u\00s\00e\00,\00n\00o\00r\00m\00a\00l\00,\00i\00)\00;\00\n\00\t\00}\00\n\00\t\00r\00e\00t\00u\00r\00n\00 \00o\00u\00t\00p\00u\00t\00C\00o\00l\00o\00r\00;\00\n\00}\00\n\00\n\00#\00e\00n\00d\00i\00f\00\n\00\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 9452) ",\00\00\00\00\00\00\00\00\00\00\00\1c\00\00\00\14\00\00\00p \00\00\00\00\00\00\b0!\00\00\00\00\00\00@\"\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 9500) ",\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\14\00\00\00\n\00\n\00i\00n\00 \00v\00e\00c\004\00 \00\00\00\00\00\00\00\00\00")
- (data (i32.const 9548) "\ac\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\9a\00\00\00;\00\n\00\n\00o\00u\00t\00 \00v\00e\00c\003\00 \00v\00_\00n\00o\00r\00m\00a\00l\00;\00\n\00o\00u\00t\00 \00v\00e\00c\002\00 \00v\00_\00t\00e\00x\00c\00o\00o\00r\00d\00;\00\n\00\n\00v\00o\00i\00d\00 \00m\00a\00i\00n\00(\00v\00o\00i\00d\00)\00 \00{\00\n\00\t\00g\00l\00_\00P\00o\00s\00i\00t\00i\00o\00n\00 \00=\00 \00\00\00")
- (data (i32.const 9724) "\1c\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\06\00\00\00 \00*\00 \00\00\00\00\00\00\00")
- (data (i32.const 9756) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00&\00\00\00;\00\n\00\t\00v\00_\00n\00o\00r\00m\00a\00l\00 \00=\00 \00m\00a\00t\003\00(\00\00\00\00\00\00\00")
- (data (i32.const 9820) "\1c\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\08\00\00\00)\00 \00*\00 \00\00\00\00\00")
- (data (i32.const 9852) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00 \00\00\00;\00\n\00\t\00v\00_\00t\00e\00x\00c\00o\00o\00r\00d\00 \00=\00 \00\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 9916) "\1c\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\08\00\00\00;\00\n\00}\00\n\00\00\00\00\00")
- (data (i32.const 9948) "l\00\00\00\00\00\00\00\00\00\00\00\1c\00\00\00T\00\00\00`\15\00\00\00\00\00\00\a0\15\00\00\00\00\00\000%\00\00\00\00\00\00 \16\00\00\00\00\00\00P\16\00\00\00\00\00\00`%\00\00\00\00\00\00\10&\00\00\00\00\00\000&\00\00\00\00\00\00p&\00\00\00\00\00\00\90&\00\00\00\00\00\00\d0&\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 10060) "l\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00R\00\00\00#\00v\00e\00r\00s\00i\00o\00n\00 \003\000\000\00 \00e\00s\00\n\00p\00r\00e\00c\00i\00s\00i\00o\00n\00 \00m\00e\00d\00i\00u\00m\00p\00 \00f\00l\00o\00a\00t\00;\00\n\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 10172) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\1e\00\00\00\n\00\n\00u\00n\00i\00f\00o\00r\00m\00 \00v\00e\00c\004\00 \00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 10236) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00(\00\00\00;\00\n\00u\00n\00i\00f\00o\00r\00m\00 \00s\00a\00m\00p\00l\00e\00r\002\00D\00 \00\00\00\00\00")
- (data (i32.const 10300) "\1c\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\06\00\00\00;\00\n\00\n\00\00\00\00\00\00\00")
- (data (i32.const 10332) "\1c\01\00\00\00\00\00\00\00\00\00\00\01\00\00\00\n\01\00\00\n\00\n\00i\00n\00 \00v\00e\00c\003\00 \00v\00_\00n\00o\00r\00m\00a\00l\00;\00\n\00i\00n\00 \00v\00e\00c\002\00 \00v\00_\00t\00e\00x\00c\00o\00o\00r\00d\00;\00\n\00o\00u\00t\00 \00v\00e\00c\004\00 \00o\00_\00c\00o\00l\00o\00r\00;\00\n\00\n\00v\00o\00i\00d\00 \00m\00a\00i\00n\00(\00v\00o\00i\00d\00)\00 \00{\00\n\00\t\00/\00/\00T\00O\00D\00O\00 \00i\00n\00p\00u\00t\00 \00c\00o\00l\00o\00r\00 \00f\00o\00r\00 \00l\00i\00g\00h\00t\00i\00n\00g\00 \00f\00i\00r\00s\00t\00\n\00\t\00v\00e\00c\004\00 \00d\00i\00f\00f\00u\00s\00e\00 \00=\00 \00(\00\00\00")
- (data (i32.const 10620) ",\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\16\00\00\00 \00*\00 \00t\00e\00x\00t\00u\00r\00e\00(\00\00\00\00\00\00\00")
- (data (i32.const 10668) "\ec\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\d4\00\00\00,\00 \00v\00_\00t\00e\00x\00c\00o\00o\00r\00d\00)\00)\00;\00\n\00\t\00v\00e\00c\003\00 \00o\00u\00t\00p\00u\00t\00C\00o\00l\00o\00r\00 \00=\00 \00c\00a\00l\00c\00u\00l\00a\00t\00e\00L\00i\00g\00h\00t\00i\00n\00g\00(\00d\00i\00f\00f\00u\00s\00e\00.\00x\00y\00z\00,\00 \00v\00_\00n\00o\00r\00m\00a\00l\00)\00;\00\n\00\t\00o\00_\00c\00o\00l\00o\00r\00 \00=\00 \00v\00e\00c\004\00(\00o\00u\00t\00p\00u\00t\00C\00o\00l\00o\00r\00,\00\00\00\00\00\00\00\00\00")
- (data (i32.const 10908) ",\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\0e\00\00\00.\00a\00)\00;\00\n\00}\00\n\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 10956) "\\\00\00\00\00\00\00\00\00\00\00\00\1c\00\00\00D\00\00\00`\'\00\00\00\00\00\00\a0\15\00\00\00\00\00\00\d0\'\00\00\00\00\00\00\10(\00\00\00\00\00\00P(\00\00\00\00\00\00p(\00\00\00\00\00\00\90)\00\00\00\00\00\00\c0)\00\00\00\00\00\00\b0*\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 11052) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\"\00\00\00#\00v\00e\00r\00s\00i\00o\00n\00 \003\000\000\00 \00e\00s\00\n\00\n\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 11116) "\ac\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\8e\00\00\00;\00\n\00o\00u\00t\00 \00v\00e\00c\002\00 \00v\00_\00u\00v\00;\00\n\00o\00u\00t\00 \00f\00l\00o\00a\00t\00 \00v\00_\00c\00o\00l\00;\00\n\00\n\00v\00o\00i\00d\00 \00m\00a\00i\00n\00(\00)\00 \00{\00\n\00\t\00v\00e\00c\004\00 \00m\00o\00d\00e\00l\00P\00o\00s\00 \00=\00 \00v\00e\00c\004\00(\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 11292) ",\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\14\00\00\00[\003\00]\00.\00x\00y\00z\00 \00+\00 \00\00\00\00\00\00\00\00\00")
- (data (i32.const 11340) "L\00\00\00\00\00\00\00\00\00\00\00\01\00\00\004\00\00\00,\001\00)\00;\00\n\00\t\00v\00e\00c\004\00 \00m\00o\00d\00e\00l\00V\00i\00e\00w\00P\00o\00s\00 \00=\00 \00\00\00\00\00\00\00\00\00")
- (data (i32.const 11420) "\\\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00D\00\00\00 \00*\00 \00m\00o\00d\00e\00l\00P\00o\00s\00;\00\n\00\t\00v\00e\00c\003\00 \00v\00e\00r\00t\00M\00o\00d\00e\00l\00P\00o\00s\00 \00=\00 \00\00\00\00\00\00\00\00\00")
- (data (i32.const 11516) "\ac\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\94\00\00\00;\00\n\00\t\00v\00e\00c\004\00 \00v\00e\00r\00t\00P\00o\00s\00 \00=\00 \00v\00e\00c\004\00(\00m\00o\00d\00e\00l\00V\00i\00e\00w\00P\00o\00s\00.\00x\00y\00z\00 \00+\00 \00v\00e\00r\00t\00M\00o\00d\00e\00l\00P\00o\00s\00,\001\00)\00;\00\n\00\t\00g\00l\00_\00P\00o\00s\00i\00t\00i\00o\00n\00 \00=\00 \00\00\00\00\00\00\00\00\00")
- (data (i32.const 11692) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00*\00\00\00 \00*\00 \00v\00e\00r\00t\00P\00o\00s\00;\00\n\00\t\00v\00_\00u\00v\00 \00=\00 \00\t\00\00\00")
- (data (i32.const 11756) "\9c\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\80\00\00\00;\00\n\00\t\00v\00_\00c\00o\00l\00 \00=\00 \00r\00a\00n\00d\00(\00v\00e\00c\002\00(\00g\00l\00_\00I\00n\00s\00t\00a\00n\00c\00e\00I\00D\00,\000\00)\00)\00;\00\n\00\t\00/\00/\00 \00v\00e\00c\004\00 \00v\00e\00r\00t\00P\00o\00s\00 \00=\00 \00v\00e\00c\004\00(\00\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 11916) "\1c\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\06\00\00\00 \00+\00 \00\00\00\00\00\00\00")
- (data (i32.const 11948) "l\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00T\00\00\00,\001\00)\00;\00\n\00\t\00/\00/\00 \00g\00l\00_\00P\00o\00s\00i\00t\00i\00o\00n\00 \00=\00 \00u\00_\00m\00v\00p\00 \00*\00 \00v\00e\00r\00t\00P\00o\00s\00;\00\n\00}\00\n\00\00\00\00\00\00\00\00\00")
- (data (i32.const 12060) "\8c\00\00\00\00\00\00\00\00\00\00\00\1c\00\00\00t\00\00\00@+\00\00\00\00\00\00\a0\15\00\00\00\00\00\00\a0\15\00\00\00\00\00\00\c0\15\00\00\00\00\00\00 \16\00\00\00\00\00\00P\16\00\00\00\00\00\00\80+\00\00\00\00\00\000,\00\00\00\00\00\00`,\00\00\00\00\00\00\b0,\00\00\00\00\00\00\10-\00\00\00\00\00\00\c0-\00\00\00\00\00\00\00.\00\00\00\00\00\00\a0.\00\00\00\00\00\00\c0.\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 12204) "\cc\01\00\00\00\00\00\00\00\00\00\00\01\00\00\00\b6\01\00\00#\00v\00e\00r\00s\00i\00o\00n\00 \003\000\000\00 \00e\00s\00\n\00p\00r\00e\00c\00i\00s\00i\00o\00n\00 \00m\00e\00d\00i\00u\00m\00p\00 \00f\00l\00o\00a\00t\00;\00\n\00\n\00\n\00i\00n\00 \00v\00e\00c\002\00 \00v\00_\00u\00v\00;\00\n\00i\00n\00 \00f\00l\00o\00a\00t\00 \00v\00_\00c\00o\00l\00;\00\n\00\n\00o\00u\00t\00 \00v\00e\00c\004\00 \00o\00_\00c\00o\00l\00o\00r\00;\00\n\00v\00o\00i\00d\00 \00m\00a\00i\00n\00(\00)\00 \00{\00\n\00\t\00v\00e\00c\002\00 \00s\00i\00g\00n\00e\00d\00U\00V\00 \00=\00 \00v\00_\00u\00v\00 \00*\00 \002\00.\00 \00-\00 \001\00.\00;\00\n\00\t\00f\00l\00o\00a\00t\00 \00l\00e\00n\00 \00=\00 \00m\00i\00n\00(\00l\00e\00n\00g\00t\00h\00(\00s\00i\00g\00n\00e\00d\00U\00V\00)\00,\001\00.\00)\00;\00\n\00\t\00o\00_\00c\00o\00l\00o\00r\00 \00=\00 \00v\00e\00c\004\00(\000\00.\00,\00v\00_\00c\00o\00l\00,\001\00.\00,\001\00.\00 \00-\00 \00l\00e\00n\00)\00;\00\n\00}\00\n\00\00\00\00\00\00\00")
- (data (i32.const 12668) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00 \00\00\00\n\00\n\00u\00n\00i\00f\00o\00r\00m\00 \00f\00l\00o\00a\00t\00 \00\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 12732) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\1e\00\00\00;\00\n\00u\00n\00i\00f\00o\00r\00m\00 \00v\00e\00c\003\00 \00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 12796) ",\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\16\00\00\00;\00\n\00\n\00i\00n\00 \00v\00e\00c\003\00 \00\00\00\00\00\00\00")
- (data (i32.const 12844) ",\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\16\00\00\00;\00\n\00o\00u\00t\00 \00v\00e\00c\003\00 \00\00\00\00\00\00\00")
- (data (i32.const 12892) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00&\00\00\00;\00\n\00\n\00\n\00v\00o\00i\00d\00 \00m\00a\00i\00n\00(\00)\00 \00{\00\n\00\t\00\00\00\00\00\00\00")
- (data (i32.const 12956) "\1c\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\06\00\00\00 \00=\00 \00\00\00\00\00\00\00")
- (data (i32.const 12988) "\1c\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\06\00\00\00;\00\n\00\t\00\00\00\00\00\00\00")
- (data (i32.const 13020) "\1c\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\0c\00\00\00;\00\n\00\t\00i\00f\00(\00")
- (data (i32.const 13052) "\dc\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\be\00\00\00.\00y\00 \00<\00 \000\00.\00)\00{\00\n\00\t\00\t\00f\00l\00o\00a\00t\00 \00r\00n\00d\00 \00=\00 \00r\00a\00n\00d\00(\00v\00e\00c\002\00(\00g\00l\00_\00V\00e\00r\00t\00e\00x\00I\00D\00,\000\00)\00)\00;\00\n\00\t\00\t\00f\00l\00o\00a\00t\00 \00r\00n\00d\002\00 \00=\00 \00r\00a\00n\00d\00(\00v\00e\00c\002\00(\000\00,\00g\00l\00_\00V\00e\00r\00t\00e\00x\00I\00D\00)\00)\00;\00\n\00\t\00\t\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 13276) "L\00\00\00\00\00\00\00\00\00\00\00\01\00\00\004\00\00\00 \00=\00 \00v\00e\00c\003\00(\000\00.\00,\00r\00n\00d\002\00,\001\00.\00)\00;\00\n\00\t\00\t\00/\00/\00 \00\00\00\00\00\00\00\00\00")
- (data (i32.const 13356) "l\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00V\00\00\00 \00=\00 \00v\00e\00c\003\00(\00(\00r\00n\00d\00 \00*\00 \002\00.\00 \00-\00 \001\00.\00)\00 \00*\00 \005\000\00.\00,\001\000\000\00.\00,\00 \000\00.\00)\00;\00\n\00\t\00\t\00\00\00\00\00\00\00")
- (data (i32.const 13468) "l\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00X\00\00\00 \00=\00 \00v\00e\00c\003\00(\00(\00r\00n\00d\00 \00*\00 \002\00.\00 \00-\00 \001\00.\00)\00 \00*\00 \005\00.\00,\001\000\00.\00,\00 \000\00.\00)\00;\00\n\00\t\00}\00\n\00}\00\n\00\00\00\00\00")
- (data (i32.const 13580) "\ac\00\00\00\00\00\00\00\00\00\00\00\1c\00\00\00\9c\00\00\00@+\00\00\00\00\00\00\901\00\00\00\00\00\00\d01\00\00\00\00\00\00\102\00\00\00\00\00\00 \16\00\00\00\00\00\00@2\00\00\00\00\00\00@2\00\00\00\00\00\00p2\00\00\00\00\00\00\b02\00\00\00\00\00\00\a0.\00\00\00\00\00\00\10&\00\00\00\00\00\00\d02\00\00\00\00\00\00\b02\00\00\00\00\00\00\a0.\00\00\00\00\00\00\10&\00\00\00\00\00\00\f02\00\00\00\00\00\00\103\00\00\00\00\00\00\f03\00\00\00\00\00\00@4\00\00\00\00\00\00\b04\00\00")
- (data (i32.const 13756) "|\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00l\00\00\00#\00v\00e\00r\00s\00i\00o\00n\00 \003\000\000\00 \00e\00s\00\n\00p\00r\00e\00c\00i\00s\00i\00o\00n\00 \00h\00i\00g\00h\00p\00 \00f\00l\00o\00a\00t\00;\00\n\00v\00o\00i\00d\00 \00m\00a\00i\00n\00(\00)\00 \00{\00}\00\n\00")
- (data (i32.const 13884) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\08\00\00\00\b0\0e\00\00\f0\0e\00\00\00\00\00\00")
- (data (i32.const 13916) "L\00\00\00\00\00\00\00\00\00\00\00\01\00\00\000\00\00\00#\00v\00e\00r\00s\00i\00o\00n\00 \003\000\000\00 \00e\00s\00\n\00i\00n\00 \00v\00e\00c\003\00 \00\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 13996) "\\\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00F\00\00\00;\00\n\00/\00/\00 \00i\00n\00 \00v\00e\00c\003\00 \00a\00_\00v\00e\00l\00o\00c\00i\00t\00y\00;\00 \00\n\00o\00u\00t\00 \00v\00e\00c\003\00 \00\00\00\00\00\00\00")
- (data (i32.const 14092) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00&\00\00\00;\00\n\00 \00\n\00v\00o\00i\00d\00 \00m\00a\00i\00n\00(\00)\00 \00{\00\n\00\t\00\00\00\00\00\00\00")
- (data (i32.const 14156) "L\00\00\00\00\00\00\00\00\00\00\00\01\00\00\006\00\00\00 \00+\00 \00v\00e\00c\003\00(\000\00.\000\001\00,\000\00.\000\001\00,\000\00.\000\001\00)\00;\00\n\00}\00\n\00\00\00\00\00\00\00")
- (data (i32.const 14236) "<\00\00\00\00\00\00\00\00\00\00\00\1c\00\00\00$\00\00\00p6\00\00\00\00\00\00\c06\00\00\00\00\00\00 7\00\00\00\00\00\00\b02\00\00\00\00\00\00`7\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 14300) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\04\00\00\00\b0\0e\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 14332) ",\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\12\00\00\00\n\00i\00n\00 \00v\00e\00c\004\00 \00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 14380) "\\\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00H\00\00\00;\00\n\00\n\00v\00o\00i\00d\00 \00m\00a\00i\00n\00(\00v\00o\00i\00d\00)\00 \00{\00\n\00\t\00g\00l\00_\00P\00o\00s\00i\00t\00i\00o\00n\00 \00=\00 \00\00\00\00\00")
- (data (i32.const 14476) "<\00\00\00\00\00\00\00\00\00\00\00\1c\00\00\00$\00\00\00`\15\00\00\00\00\00\00\108\00\00\00\00\00\00@8\00\00\00\00\00\00\10&\00\00\00\00\00\00\d0&\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 14540) "\0c\01\00\00\00\00\00\00\00\00\00\00\01\00\00\00\f6\00\00\00#\00v\00e\00r\00s\00i\00o\00n\00 \003\000\000\00 \00e\00s\00\n\00p\00r\00e\00c\00i\00s\00i\00o\00n\00 \00m\00e\00d\00i\00u\00m\00p\00 \00f\00l\00o\00a\00t\00;\00\n\00\n\00u\00n\00i\00f\00o\00r\00m\00 \00v\00e\00c\004\00 \00u\00_\00c\00o\00l\00o\00r\00;\00\n\00o\00u\00t\00 \00v\00e\00c\004\00 \00o\00_\00c\00o\00l\00o\00r\00;\00\n\00\n\00v\00o\00i\00d\00 \00m\00a\00i\00n\00(\00v\00o\00i\00d\00)\00 \00{\00\n\00\t\00o\00_\00c\00o\00l\00o\00r\00 \00=\00 \00u\00_\00c\00o\00l\00o\00r\00;\00\n\00}\00\n\00\00\00\00\00\00\00")
- (data (i32.const 14812) "\ac\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\90\00\00\00;\00\n\00i\00n\00 \00v\00e\00c\004\00 \00a\00_\00c\00o\00l\00o\00r\00;\00\n\00\n\00o\00u\00t\00 \00v\00e\00c\004\00 \00v\00_\00c\00o\00l\00o\00r\00;\00\n\00\n\00v\00o\00i\00d\00 \00m\00a\00i\00n\00(\00v\00o\00i\00d\00)\00 \00{\00\n\00\t\00g\00l\00_\00P\00o\00s\00i\00t\00i\00o\00n\00 \00=\00 \00\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 14988) "L\00\00\00\00\00\00\00\00\00\00\00\01\00\00\000\00\00\00;\00\n\00\t\00v\00_\00c\00o\00l\00o\00r\00 \00=\00 \00a\00_\00c\00o\00l\00o\00r\00;\00\n\00}\00\n\00\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 15068) "<\00\00\00\00\00\00\00\00\00\00\00\1c\00\00\00,\00\00\00`\15\00\00\00\00\00\00\a0\15\00\00\00\00\00\000%\00\00\00\00\00\00\f09\00\00\00\00\00\00\10&\00\00\00\00\00\00\a0:\00\00")
- (data (i32.const 15132) "<\01\00\00\00\00\00\00\00\00\00\00\01\00\00\00,\01\00\00#\00v\00e\00r\00s\00i\00o\00n\00 \003\000\000\00 \00e\00s\00\n\00p\00r\00e\00c\00i\00s\00i\00o\00n\00 \00m\00e\00d\00i\00u\00m\00p\00 \00f\00l\00o\00a\00t\00;\00\n\00\n\00u\00n\00i\00f\00o\00r\00m\00 \00v\00e\00c\004\00 \00u\00_\00c\00o\00l\00o\00r\00;\00\n\00i\00n\00 \00v\00e\00c\004\00 \00v\00_\00c\00o\00l\00o\00r\00;\00\n\00o\00u\00t\00 \00v\00e\00c\004\00 \00o\00_\00c\00o\00l\00o\00r\00;\00\n\00\n\00v\00o\00i\00d\00 \00m\00a\00i\00n\00(\00v\00o\00i\00d\00)\00 \00{\00\n\00\t\00o\00_\00c\00o\00l\00o\00r\00 \00=\00 \00u\00_\00c\00o\00l\00o\00r\00 \00*\00 \00v\00_\00c\00o\00l\00o\00r\00;\00\n\00}\00\n\00")
- (data (i32.const 15452) ",\01\00\00\00\00\00\00\00\00\00\00\01\00\00\00\1a\01\00\00#\00v\00e\00r\00s\00i\00o\00n\00 \003\000\000\00 \00e\00s\00\n\00\n\00i\00n\00 \00v\00e\00c\004\00 \00a\00_\00p\00o\00s\00i\00t\00i\00o\00n\00;\00\n\00i\00n\00 \00v\00e\00c\002\00 \00a\00_\00t\00e\00x\00c\00o\00o\00r\00d\00;\00\n\00\n\00o\00u\00t\00 \00v\00e\00c\002\00 \00v\00_\00u\00v\00;\00\n\00\n\00v\00o\00i\00d\00 \00m\00a\00i\00n\00(\00v\00o\00i\00d\00)\00 \00{\00\n\00\t\00g\00l\00_\00P\00o\00s\00i\00t\00i\00o\00n\00 \00=\00 \00a\00_\00p\00o\00s\00i\00t\00i\00o\00n\00;\00\n\00\t\00v\00_\00u\00v\00 \00=\00 \00a\00_\00t\00e\00x\00c\00o\00o\00r\00d\00;\00\n\00}\00\n\00\00\00")
- (data (i32.const 15756) "\0c\01\00\00\00\00\00\00\00\00\00\00\01\00\00\00\f8\00\00\00#\00v\00e\00r\00s\00i\00o\00n\00 \003\000\000\00 \00e\00s\00\n\00p\00r\00e\00c\00i\00s\00i\00o\00n\00 \00m\00e\00d\00i\00u\00m\00p\00 \00f\00l\00o\00a\00t\00;\00\n\00o\00u\00t\00 \00v\00e\00c\004\00 \00o\00_\00c\00o\00l\00o\00r\00;\00\n\00i\00n\00 \00v\00e\00c\002\00 \00v\00_\00u\00v\00;\00\n\00\n\00v\00o\00i\00d\00 \00m\00a\00i\00n\00(\00v\00o\00i\00d\00)\00 \00{\00\n\00\t\00o\00_\00c\00o\00l\00o\00r\00 \00=\00 \00v\00e\00c\004\00(\00v\00_\00u\00v\00.\00x\00y\00,\001\00,\001\00)\00;\00\n\00}\00\n\00\00\00\00\00")
- (data (i32.const 16028) "\1c\00\00\00\00\00\00\00\00\00\00\00.\00\00\00\04\00\00\00\ff\ff\ff\ff\00\00\00\00\00\00\00\00")
- (data (i32.const 16060) ",\00\00\00\00\00\00\00\00\00\00\00.\00\00\00\10\00\00\00\00\00\00\ff\ff\00\00\ff\00\ff\00\ff\ff\ff\00\ff\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 16108) ",\00\00\00\00\00\00\00\00\00\00\00.\00\00\00\10\00\00\00\00\00\ff\ff\ff\00\ff\ff\00\ff\ff\ff\ff\ff\ff\ff\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 16156) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 16188) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 16224) "\be\f3\f8y\eca\f6?\190\96[\c6\fe\de\bf=\88\afJ\edq\f5?\a4\fc\d42h\0b\db\bf\b0\10\f0\f09\95\f4?{\b7\1f\n\8bA\d7\bf\85\03\b8\b0\95\c9\f3?{\cfm\1a\e9\9d\d3\bf\a5d\88\0c\19\0d\f3?1\b6\f2\f3\9b\1d\d0\bf\a0\8e\0b{\"^\f2?\f0z;\1b\1d|\c9\bf?4\1aJJ\bb\f1?\9f<\af\93\e3\f9\c2\bf\ba\e5\8a\f0X#\f1?\\\8dx\bf\cb`\b9\bf\a7\00\99A?\95\f0?\ce_G\b6\9do\aa\bf\00\00\00\00\00\00\f0?\00\00\00\00\00\00\00\00\acG\9a\fd\8c`\ee?=\f5$\9f\ca8\b3?\a0j\02\1f\b3\a4\ec?\ba\918T\a9v\c4?\e6\fcjW6 \eb?\d2\e4\c4J\0b\84\ce?-\aa\a1c\d1\c2\e9?\1ce\c6\f0E\06\d4?\edAx\03\e6\86\e8?\f8\9f\1b,\9c\8e\d8?bHS\f5\dcg\e7?\cc{\b1N\a4\e0\dc?")
- (data (i32.const 16480) "\00\00\00\00\00\00\f0?t\85\15\d3\b0\d9\ef?\0f\89\f9lX\b5\ef?Q[\12\d0\01\93\ef?{Q}<\b8r\ef?\aa\b9h1\87T\ef?8bunz8\ef?\e1\de\1f\f5\9d\1e\ef?\15\b71\n\fe\06\ef?\cb\a9:7\a7\f1\ee?\"4\12L\a6\de\ee?-\89a`\08\ce\ee?\'*6\d5\da\bf\ee?\82O\9dV+\b4\ee?)TH\dd\07\ab\ee?\85U:\b0~\a4\ee?\cd;\7ff\9e\a0\ee?t_\ec\e8u\9f\ee?\87\01\ebs\14\a1\ee?\13\ceL\99\89\a5\ee?\db\a0*B\e5\ac\ee?\e5\c5\cd\b07\b7\ee?\90\f0\a3\82\91\c4\ee?]%>\b2\03\d5\ee?\ad\d3Z\99\9f\e8\ee?G^\fb\f2v\ff\ee?\9cR\85\dd\9b\19\ef?i\90\ef\dc 7\ef?\87\a4\fb\dc\18X\ef?_\9b{3\97|\ef?\da\90\a4\a2\af\a4\ef?@En[v\d0\ef?")
- (data (i32.const 16748) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 16780) "\ac\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\94\00\00\00s\00y\00s\00t\00e\00m\00s\00 \00w\00a\00s\00 \00c\00r\00e\00a\00t\00e\00d\00 \00w\00i\00t\00h\00 \00a\00 \00d\00i\00f\00f\00e\00r\00e\00n\00t\00 \00w\00o\00r\00l\00d\00,\00 \00p\00l\00e\00a\00s\00e\00 \00c\00a\00l\00l\00 \00w\00o\00r\00l\00d\00.\00b\00i\00n\00d\00(\00)\00 \00f\00i\00r\00s\00t\00\00\00\00\00\00\00\00\00")
- (data (i32.const 16956) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00(\00\00\00s\00r\00c\00-\00a\00s\00/\00b\00a\00s\00e\00/\00W\00o\00r\00l\00d\00.\00t\00s\00\00\00\00\00")
- (data (i32.const 17020) "\1c\00\00\00\00\00\00\00\00\00\00\00\85\00\00\00\08\00\00\004\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 17052) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\04\00\00\00^\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 17084) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\04\00\00\00^\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 17116) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 17148) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 17180) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00$\00\00\00K\00e\00y\00 \00d\00o\00e\00s\00 \00n\00o\00t\00 \00e\00x\00i\00s\00t\00\00\00\00\00\00\00\00\00")
- (data (i32.const 17244) ",\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\16\00\00\00~\00l\00i\00b\00/\00m\00a\00p\00.\00t\00s\00\00\00\00\00\00\00")
- (data (i32.const 17292) "l\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00N\00\00\00k\00e\00e\00p\00 \00w\00o\00r\00l\00d\00 \00p\00o\00s\00i\00t\00i\00o\00n\00 \00n\00o\00t\00 \00y\00e\00t\00 \00i\00m\00p\00l\00e\00m\00e\00n\00t\00e\00d\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 17404) "L\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00<\00\00\00s\00r\00c\00-\00a\00s\00/\00c\00o\00m\00p\00o\00n\00e\00n\00t\00s\00/\00T\00r\00a\00n\00s\00f\00o\00r\00m\00.\00t\00s\00")
- (data (i32.const 17484) "\bc\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\a6\00\00\00c\00o\00m\00p\00o\00n\00e\00n\00t\00 \00w\00a\00s\00 \00i\00n\00s\00t\00a\00n\00t\00i\00a\00t\00e\00d\00 \00w\00i\00t\00h\00 \00a\00 \00d\00i\00f\00f\00e\00r\00e\00n\00t\00 \00e\00n\00t\00i\00t\00y\00,\00 \00p\00l\00e\00a\00s\00e\00 \00c\00a\00l\00l\00 \00e\00n\00t\00i\00t\00y\00.\00b\00i\00n\00d\00(\00)\00 \00f\00i\00r\00s\00t\00\00\00\00\00\00\00")
- (data (i32.const 17676) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00*\00\00\00s\00r\00c\00-\00a\00s\00/\00b\00a\00s\00e\00/\00E\00n\00t\00i\00t\00y\00.\00t\00s\00\00\00")
- (data (i32.const 17740) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\"\00\00\00u\00n\00e\00x\00p\00e\00c\00t\00e\00d\00 \00u\00p\00c\00a\00s\00t\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 5452) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\04\00\00\00\ff\00\00\ff\00\00\00\00\00\00\00\00")
+ (data (i32.const 5484) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\04\00\00\00\00\ff\00\ff\00\00\00\00\00\00\00\00")
+ (data (i32.const 5516) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\04\00\00\00\00\00\ff\ff\00\00\00\00\00\00\00\00")
+ (data (i32.const 5548) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00 \00\00\00#\00v\00e\00r\00s\00i\00o\00n\00 \003\000\000\00 \00e\00s\00\n\00\00\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 5612) "\1c\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\02\00\00\00\n\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 5644) ",\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\14\00\00\00\n\00\n\00i\00n\00 \00v\00e\00c\003\00 \00\00\00\00\00\00\00\00\00")
+ (data (i32.const 5692) ",\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\14\00\00\00;\00\n\00i\00n\00 \00v\00e\00c\004\00 \00\00\00\00\00\00\00\00\00")
+ (data (i32.const 5740) ",\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\14\00\00\00;\00\n\00i\00n\00 \00v\00e\00c\003\00 \00\00\00\00\00\00\00\00\00")
+ (data (i32.const 5788) ",\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\14\00\00\00;\00\n\00i\00n\00 \00v\00e\00c\002\00 \00\00\00\00\00\00\00\00\00")
+ (data (i32.const 5836) "L\01\00\00\00\00\00\00\00\00\00\00\01\00\00\002\01\00\00;\00\n\00o\00u\00t\00 \00v\00e\00c\002\00 \00v\00_\00u\00v\00;\00\n\00o\00u\00t\00 \00v\00e\00c\003\00 \00v\00_\00n\00o\00r\00m\00a\00l\00;\00\n\00\n\00v\00e\00c\003\00 \00m\00a\00t\00r\00i\00x\00P\00o\00s\00i\00t\00i\00o\00n\00(\00m\00a\00t\004\00 \00m\00a\00t\00r\00i\00x\00)\00{\00\n\00\t\00r\00e\00t\00u\00r\00n\00 \00m\00a\00t\00r\00i\00x\00[\003\00]\00.\00x\00y\00z\00;\00\n\00}\00\n\00\n\00v\00e\00c\003\00 \00m\00o\00d\00e\00l\00S\00p\00a\00c\00e\00C\00a\00m\00e\00r\00a\00D\00i\00r\00e\00c\00t\00i\00o\00n\00(\00v\00e\00c\003\00 \00p\00o\00s\00i\00t\00i\00o\00n\00)\00{\00\n\00\t\00r\00e\00t\00u\00r\00n\00 \00(\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 6172) "L\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00.\00\00\00 \00*\00 \00v\00e\00c\004\00(\00m\00a\00t\00r\00i\00x\00P\00o\00s\00i\00t\00i\00o\00n\00(\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 6252) "\8c\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00n\00\00\00)\00,\001\00)\00)\00.\00x\00y\00z\00 \00-\00 \00p\00o\00s\00i\00t\00i\00o\00n\00;\00\n\00}\00\n\00\n\00v\00o\00i\00d\00 \00m\00a\00i\00n\00(\00v\00o\00i\00d\00)\00 \00{\00\n\00\t\00v\00e\00c\004\00 \00p\00o\00s\00 \00=\00 \00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 6396) ",\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\10\00\00\00 \00+\00 \00v\00e\00c\004\00(\00\00\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 6444) ",\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\14\00\00\00 \00*\00 \00m\00a\00x\00(\000\00.\00,\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 6492) "\ac\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\94\00\00\00.\00x\00)\00 \00*\00 \008\00.\00,\000\00)\00;\00\n\00\t\00\n\00\t\00v\00e\00c\003\00 \00f\00w\00d\00 \00=\00 \00m\00o\00d\00e\00l\00S\00p\00a\00c\00e\00C\00a\00m\00e\00r\00a\00D\00i\00r\00e\00c\00t\00i\00o\00n\00(\00p\00o\00s\00.\00x\00y\00z\00)\00;\00\n\00\t\00v\00e\00c\003\00 \00u\00p\00 \00=\00 \00\00\00\00\00\00\00\00\00")
+ (data (i32.const 6668) "\8c\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00v\00\00\00;\00\n\00\t\00v\00e\00c\003\00 \00r\00i\00g\00h\00t\00 \00=\00 \00n\00o\00r\00m\00a\00l\00i\00z\00e\00(\00c\00r\00o\00s\00s\00(\00f\00w\00d\00,\00u\00p\00)\00)\00;\00\n\00\t\00\n\00\t\00g\00l\00_\00P\00o\00s\00i\00t\00i\00o\00n\00 \00=\00 \00\00\00\00\00\00\00")
+ (data (i32.const 6812) "L\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00.\00\00\00 \00*\00 \00(\00p\00o\00s\00 \00+\00 \00v\00e\00c\004\00(\00r\00i\00g\00h\00t\00 \00*\00 \00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 6892) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00(\00\00\00.\00y\00,\000\00)\00)\00;\00\n\00\t\00v\00_\00n\00o\00r\00m\00a\00l\00 \00=\00 \00\00\00\00\00")
+ (data (i32.const 6956) ",\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\0e\00\00\00;\00\t\00\t\00\t\00\n\00}\00\n\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 7004) "\9c\00\00\00\00\00\00\00\00\00\00\00\1d\00\00\00\84\00\00\00\c0\15\00\00\00\00\00\00\00\16\00\00\00\00\00\00 \16\00\00\00\00\00\00P\16\00\00\00\00\00\00\80\16\00\00\00\00\00\00\b0\16\00\00\00\00\00\00\80\16\00\00\00\00\00\00\e0\16\00\00\00\00\00\000\18\00\00\00\00\00\00\80\18\00\00\00\00\00\00\10\19\00\00\00\00\00\00@\19\00\00\00\00\00\00p\19\00\00\00\00\00\00 \1a\00\00\00\00\00\00\b0\1a\00\00\00\00\00\00\00\1b\00\00\00\00\00\00@\1b\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 7164) ",\01\00\00\00\00\00\00\00\00\00\00\01\00\00\00\16\01\00\00#\00v\00e\00r\00s\00i\00o\00n\00 \003\000\000\00 \00e\00s\00\n\00p\00r\00e\00c\00i\00s\00i\00o\00n\00 \00m\00e\00d\00i\00u\00m\00p\00 \00f\00l\00o\00a\00t\00;\00\n\00o\00u\00t\00 \00v\00e\00c\004\00 \00o\00_\00c\00o\00l\00o\00r\00;\00\n\00i\00n\00 \00v\00e\00c\003\00 \00v\00_\00n\00o\00r\00m\00a\00l\00;\00\n\00\n\00v\00o\00i\00d\00 \00m\00a\00i\00n\00(\00v\00o\00i\00d\00)\00 \00{\00\n\00\t\00o\00_\00c\00o\00l\00o\00r\00 \00=\00 \00v\00e\00c\004\00(\00v\00_\00n\00o\00r\00m\00a\00l\00 \00*\00 \000\00.\005\00 \00+\00 \000\00.\005\00,\001\00)\00;\00\n\00}\00\n\00\00\00\00\00\00\00")
+ (data (i32.const 7468) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 7500) "\bc\02\00\00\00\00\00\00\00\00\00\00\01\00\00\00\a6\02\00\00\n\00#\00i\00f\00n\00d\00e\00f\00 \00M\00A\00T\00H\00_\00U\00T\00I\00L\00S\00\n\00#\00d\00e\00f\00i\00n\00e\00 \00M\00A\00T\00H\00_\00U\00T\00I\00L\00S\00\n\00c\00o\00n\00s\00t\00 \00f\00l\00o\00a\00t\00 \00P\00I\00 \00=\00 \003\00.\001\004\001\005\009\002\006\005\003\005\009\00;\00\n\00c\00o\00n\00s\00t\00 \00f\00l\00o\00a\00t\00 \00T\00A\00U\00 \00=\00 \006\00.\002\008\003\001\008\005\003\000\007\001\008\00;\00\n\00h\00i\00g\00h\00p\00 \00f\00l\00o\00a\00t\00 \00r\00a\00n\00d\00(\00v\00e\00c\002\00 \00c\00o\00)\00\n\00{\00\n\00 \00 \00 \00 \00h\00i\00g\00h\00p\00 \00f\00l\00o\00a\00t\00 \00a\00 \00=\00 \001\002\00.\009\008\009\008\00;\00\n\00 \00 \00 \00 \00h\00i\00g\00h\00p\00 \00f\00l\00o\00a\00t\00 \00b\00 \00=\00 \007\008\00.\002\003\003\00;\00\n\00 \00 \00 \00 \00h\00i\00g\00h\00p\00 \00f\00l\00o\00a\00t\00 \00c\00 \00=\00 \004\003\007\005\008\00.\005\004\005\003\00;\00\n\00 \00 \00 \00 \00h\00i\00g\00h\00p\00 \00f\00l\00o\00a\00t\00 \00d\00t\00=\00 \00d\00o\00t\00(\00c\00o\00.\00x\00y\00 \00,\00v\00e\00c\002\00(\00a\00,\00b\00)\00)\00;\00\n\00 \00 \00 \00 \00h\00i\00g\00h\00p\00 \00f\00l\00o\00a\00t\00 \00s\00n\00=\00 \00m\00o\00d\00(\00d\00t\00,\003\00.\001\004\00)\00;\00\n\00 \00 \00 \00 \00r\00e\00t\00u\00r\00n\00 \00f\00r\00a\00c\00t\00(\00s\00i\00n\00(\00s\00n\00)\00 \00*\00 \00c\00)\00;\00\n\00}\00\n\00\n\00#\00e\00n\00d\00i\00f\00\n\00\00\00\00\00\00\00")
+ (data (i32.const 8204) "\ac\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\9a\00\00\00\n\00#\00i\00f\00n\00d\00e\00f\00 \00L\00I\00G\00H\00T\00_\00C\00O\00N\00S\00T\00A\00N\00T\00S\00\n\00#\00d\00e\00f\00i\00n\00e\00 \00L\00I\00G\00H\00T\00_\00C\00O\00N\00S\00T\00A\00N\00T\00S\00\n\00#\00d\00e\00f\00i\00n\00e\00 \00N\00U\00M\00_\00L\00I\00G\00H\00T\00S\00 \008\00\n\00#\00e\00n\00d\00i\00f\00\n\00\00\00")
+ (data (i32.const 8380) "<\01\00\00\00\00\00\00\00\00\00\00\01\00\00\00,\01\00\00\n\00#\00i\00f\00n\00d\00e\00f\00 \00L\00I\00G\00H\00T\00_\00U\00T\00I\00L\00S\00\n\00#\00d\00e\00f\00i\00n\00e\00 \00L\00I\00G\00H\00T\00_\00U\00T\00I\00L\00S\00\n\00v\00e\00c\003\00 \00c\00a\00l\00c\00u\00l\00a\00t\00e\00D\00i\00r\00e\00c\00t\00i\00o\00n\00a\00l\00L\00i\00g\00h\00t\00A\00t\00I\00n\00d\00e\00x\00(\00v\00e\00c\003\00 \00d\00i\00f\00f\00u\00s\00e\00,\00v\00e\00c\003\00 \00n\00o\00r\00m\00a\00l\00,\00i\00n\00t\00 \00i\00n\00d\00e\00x\00)\00{\00\n\00\t\00f\00l\00o\00a\00t\00 \00s\00t\00r\00e\00n\00g\00t\00h\00 \00=\00 \00m\00a\00x\00(\00d\00o\00t\00(\00n\00o\00r\00m\00a\00l\00,\00-\00")
+ (data (i32.const 8700) "\8c\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00r\00\00\00[\00i\00n\00d\00e\00x\00]\00)\00,\000\00.\00)\00;\00\n\00\t\00r\00e\00t\00u\00r\00n\00 \00\n\00\t\00d\00i\00f\00f\00u\00s\00e\00 \00*\00 \00s\00t\00r\00e\00n\00g\00t\00h\00 \00+\00 \00\n\00\t\00d\00i\00f\00f\00u\00s\00e\00 \00*\00 \00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 8844) "\bc\02\00\00\00\00\00\00\00\00\00\00\01\00\00\00\a0\02\00\00[\00i\00n\00d\00e\00x\00]\00;\00\n\00\t\00/\00/\00 \00r\00e\00t\00u\00r\00n\00 \00v\00e\00c\003\00(\000\00.\00,\000\00.\00,\000\00.\00)\00;\00\n\00}\00\n\00\n\00v\00e\00c\003\00 \00c\00a\00l\00c\00u\00l\00a\00t\00e\00L\00i\00g\00h\00t\00i\00n\00g\00(\00v\00e\00c\003\00 \00d\00i\00f\00f\00u\00s\00e\00,\00v\00e\00c\003\00 \00n\00o\00r\00m\00a\00l\00)\00{\00\n\00\t\00n\00o\00r\00m\00a\00l\00 \00=\00 \00n\00o\00r\00m\00a\00l\00i\00z\00e\00(\00n\00o\00r\00m\00a\00l\00)\00;\00\n\00\t\00v\00e\00c\003\00 \00o\00u\00t\00p\00u\00t\00C\00o\00l\00o\00r\00 \00=\00 \00v\00e\00c\003\00(\000\00.\00,\000\00.\00,\000\00.\00)\00;\00\n\00\t\00/\00/\00T\00O\00D\00O\00 \00o\00n\00l\00y\00 \00i\00t\00e\00r\00a\00t\00e\00 \00i\00n\00s\00t\00a\00n\00t\00i\00a\00t\00e\00d\00 \00l\00i\00g\00h\00t\00s\00\n\00\t\00f\00o\00r\00(\00i\00n\00t\00 \00i\00 \00=\00 \000\00;\00 \00i\00 \00<\00 \00N\00U\00M\00_\00L\00I\00G\00H\00T\00S\00;\00 \00i\00+\00+\00)\00{\00\n\00\t\00\t\00o\00u\00t\00p\00u\00t\00C\00o\00l\00o\00r\00 \00+\00=\00 \00c\00a\00l\00c\00u\00l\00a\00t\00e\00D\00i\00r\00e\00c\00t\00i\00o\00n\00a\00l\00L\00i\00g\00h\00t\00A\00t\00I\00n\00d\00e\00x\00(\00d\00i\00f\00f\00u\00s\00e\00,\00n\00o\00r\00m\00a\00l\00,\00i\00)\00;\00\n\00\t\00}\00\n\00\t\00r\00e\00t\00u\00r\00n\00 \00o\00u\00t\00p\00u\00t\00C\00o\00l\00o\00r\00;\00\n\00}\00\n\00\n\00#\00e\00n\00d\00i\00f\00\n\00\00\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 9548) ",\00\00\00\00\00\00\00\00\00\00\00\1d\00\00\00\14\00\00\00\d0 \00\00\00\00\00\00\10\"\00\00\00\00\00\00\a0\"\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 9596) ",\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\14\00\00\00\n\00\n\00i\00n\00 \00v\00e\00c\004\00 \00\00\00\00\00\00\00\00\00")
+ (data (i32.const 9644) "\ac\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\9a\00\00\00;\00\n\00\n\00o\00u\00t\00 \00v\00e\00c\003\00 \00v\00_\00n\00o\00r\00m\00a\00l\00;\00\n\00o\00u\00t\00 \00v\00e\00c\002\00 \00v\00_\00t\00e\00x\00c\00o\00o\00r\00d\00;\00\n\00\n\00v\00o\00i\00d\00 \00m\00a\00i\00n\00(\00v\00o\00i\00d\00)\00 \00{\00\n\00\t\00g\00l\00_\00P\00o\00s\00i\00t\00i\00o\00n\00 \00=\00 \00\00\00")
+ (data (i32.const 9820) "\1c\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\06\00\00\00 \00*\00 \00\00\00\00\00\00\00")
+ (data (i32.const 9852) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00&\00\00\00;\00\n\00\t\00v\00_\00n\00o\00r\00m\00a\00l\00 \00=\00 \00m\00a\00t\003\00(\00\00\00\00\00\00\00")
+ (data (i32.const 9916) "\1c\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\08\00\00\00)\00 \00*\00 \00\00\00\00\00")
+ (data (i32.const 9948) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00 \00\00\00;\00\n\00\t\00v\00_\00t\00e\00x\00c\00o\00o\00r\00d\00 \00=\00 \00\00\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 10012) "\1c\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\08\00\00\00;\00\n\00}\00\n\00\00\00\00\00")
+ (data (i32.const 10044) "l\00\00\00\00\00\00\00\00\00\00\00\1d\00\00\00T\00\00\00\c0\15\00\00\00\00\00\00\00\16\00\00\00\00\00\00\90%\00\00\00\00\00\00\80\16\00\00\00\00\00\00\b0\16\00\00\00\00\00\00\c0%\00\00\00\00\00\00p&\00\00\00\00\00\00\90&\00\00\00\00\00\00\d0&\00\00\00\00\00\00\f0&\00\00\00\00\00\000\'\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 10156) "l\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00R\00\00\00#\00v\00e\00r\00s\00i\00o\00n\00 \003\000\000\00 \00e\00s\00\n\00p\00r\00e\00c\00i\00s\00i\00o\00n\00 \00m\00e\00d\00i\00u\00m\00p\00 \00f\00l\00o\00a\00t\00;\00\n\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 10268) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\1e\00\00\00\n\00\n\00u\00n\00i\00f\00o\00r\00m\00 \00v\00e\00c\004\00 \00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 10332) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00(\00\00\00;\00\n\00u\00n\00i\00f\00o\00r\00m\00 \00s\00a\00m\00p\00l\00e\00r\002\00D\00 \00\00\00\00\00")
+ (data (i32.const 10396) "\1c\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\06\00\00\00;\00\n\00\n\00\00\00\00\00\00\00")
+ (data (i32.const 10428) "\1c\01\00\00\00\00\00\00\00\00\00\00\01\00\00\00\n\01\00\00\n\00\n\00i\00n\00 \00v\00e\00c\003\00 \00v\00_\00n\00o\00r\00m\00a\00l\00;\00\n\00i\00n\00 \00v\00e\00c\002\00 \00v\00_\00t\00e\00x\00c\00o\00o\00r\00d\00;\00\n\00o\00u\00t\00 \00v\00e\00c\004\00 \00o\00_\00c\00o\00l\00o\00r\00;\00\n\00\n\00v\00o\00i\00d\00 \00m\00a\00i\00n\00(\00v\00o\00i\00d\00)\00 \00{\00\n\00\t\00/\00/\00T\00O\00D\00O\00 \00i\00n\00p\00u\00t\00 \00c\00o\00l\00o\00r\00 \00f\00o\00r\00 \00l\00i\00g\00h\00t\00i\00n\00g\00 \00f\00i\00r\00s\00t\00\n\00\t\00v\00e\00c\004\00 \00d\00i\00f\00f\00u\00s\00e\00 \00=\00 \00(\00\00\00")
+ (data (i32.const 10716) ",\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\16\00\00\00 \00*\00 \00t\00e\00x\00t\00u\00r\00e\00(\00\00\00\00\00\00\00")
+ (data (i32.const 10764) "\ec\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\d4\00\00\00,\00 \00v\00_\00t\00e\00x\00c\00o\00o\00r\00d\00)\00)\00;\00\n\00\t\00v\00e\00c\003\00 \00o\00u\00t\00p\00u\00t\00C\00o\00l\00o\00r\00 \00=\00 \00c\00a\00l\00c\00u\00l\00a\00t\00e\00L\00i\00g\00h\00t\00i\00n\00g\00(\00d\00i\00f\00f\00u\00s\00e\00.\00x\00y\00z\00,\00 \00v\00_\00n\00o\00r\00m\00a\00l\00)\00;\00\n\00\t\00o\00_\00c\00o\00l\00o\00r\00 \00=\00 \00v\00e\00c\004\00(\00o\00u\00t\00p\00u\00t\00C\00o\00l\00o\00r\00,\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 11004) ",\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\0e\00\00\00.\00a\00)\00;\00\n\00}\00\n\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 11052) "\\\00\00\00\00\00\00\00\00\00\00\00\1d\00\00\00D\00\00\00\c0\'\00\00\00\00\00\00\00\16\00\00\00\00\00\000(\00\00\00\00\00\00p(\00\00\00\00\00\00\b0(\00\00\00\00\00\00\d0(\00\00\00\00\00\00\f0)\00\00\00\00\00\00 *\00\00\00\00\00\00\10+\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 11148) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\"\00\00\00#\00v\00e\00r\00s\00i\00o\00n\00 \003\000\000\00 \00e\00s\00\n\00\n\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 11212) "\ac\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\8e\00\00\00;\00\n\00o\00u\00t\00 \00v\00e\00c\002\00 \00v\00_\00u\00v\00;\00\n\00o\00u\00t\00 \00f\00l\00o\00a\00t\00 \00v\00_\00c\00o\00l\00;\00\n\00\n\00v\00o\00i\00d\00 \00m\00a\00i\00n\00(\00)\00 \00{\00\n\00\t\00v\00e\00c\004\00 \00m\00o\00d\00e\00l\00P\00o\00s\00 \00=\00 \00v\00e\00c\004\00(\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 11388) ",\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\14\00\00\00[\003\00]\00.\00x\00y\00z\00 \00+\00 \00\00\00\00\00\00\00\00\00")
+ (data (i32.const 11436) "L\00\00\00\00\00\00\00\00\00\00\00\01\00\00\004\00\00\00,\001\00)\00;\00\n\00\t\00v\00e\00c\004\00 \00m\00o\00d\00e\00l\00V\00i\00e\00w\00P\00o\00s\00 \00=\00 \00\00\00\00\00\00\00\00\00")
+ (data (i32.const 11516) "\\\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00D\00\00\00 \00*\00 \00m\00o\00d\00e\00l\00P\00o\00s\00;\00\n\00\t\00v\00e\00c\003\00 \00v\00e\00r\00t\00M\00o\00d\00e\00l\00P\00o\00s\00 \00=\00 \00\00\00\00\00\00\00\00\00")
+ (data (i32.const 11612) "\ac\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\94\00\00\00;\00\n\00\t\00v\00e\00c\004\00 \00v\00e\00r\00t\00P\00o\00s\00 \00=\00 \00v\00e\00c\004\00(\00m\00o\00d\00e\00l\00V\00i\00e\00w\00P\00o\00s\00.\00x\00y\00z\00 \00+\00 \00v\00e\00r\00t\00M\00o\00d\00e\00l\00P\00o\00s\00,\001\00)\00;\00\n\00\t\00g\00l\00_\00P\00o\00s\00i\00t\00i\00o\00n\00 \00=\00 \00\00\00\00\00\00\00\00\00")
+ (data (i32.const 11788) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00*\00\00\00 \00*\00 \00v\00e\00r\00t\00P\00o\00s\00;\00\n\00\t\00v\00_\00u\00v\00 \00=\00 \00\t\00\00\00")
+ (data (i32.const 11852) "\9c\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\80\00\00\00;\00\n\00\t\00v\00_\00c\00o\00l\00 \00=\00 \00r\00a\00n\00d\00(\00v\00e\00c\002\00(\00g\00l\00_\00I\00n\00s\00t\00a\00n\00c\00e\00I\00D\00,\000\00)\00)\00;\00\n\00\t\00/\00/\00 \00v\00e\00c\004\00 \00v\00e\00r\00t\00P\00o\00s\00 \00=\00 \00v\00e\00c\004\00(\00\00\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 12012) "\1c\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\06\00\00\00 \00+\00 \00\00\00\00\00\00\00")
+ (data (i32.const 12044) "l\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00T\00\00\00,\001\00)\00;\00\n\00\t\00/\00/\00 \00g\00l\00_\00P\00o\00s\00i\00t\00i\00o\00n\00 \00=\00 \00u\00_\00m\00v\00p\00 \00*\00 \00v\00e\00r\00t\00P\00o\00s\00;\00\n\00}\00\n\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 12156) "\8c\00\00\00\00\00\00\00\00\00\00\00\1d\00\00\00t\00\00\00\a0+\00\00\00\00\00\00\00\16\00\00\00\00\00\00\00\16\00\00\00\00\00\00 \16\00\00\00\00\00\00\80\16\00\00\00\00\00\00\b0\16\00\00\00\00\00\00\e0+\00\00\00\00\00\00\90,\00\00\00\00\00\00\c0,\00\00\00\00\00\00\10-\00\00\00\00\00\00p-\00\00\00\00\00\00 .\00\00\00\00\00\00`.\00\00\00\00\00\00\00/\00\00\00\00\00\00 /\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 12300) "\cc\01\00\00\00\00\00\00\00\00\00\00\01\00\00\00\b6\01\00\00#\00v\00e\00r\00s\00i\00o\00n\00 \003\000\000\00 \00e\00s\00\n\00p\00r\00e\00c\00i\00s\00i\00o\00n\00 \00m\00e\00d\00i\00u\00m\00p\00 \00f\00l\00o\00a\00t\00;\00\n\00\n\00\n\00i\00n\00 \00v\00e\00c\002\00 \00v\00_\00u\00v\00;\00\n\00i\00n\00 \00f\00l\00o\00a\00t\00 \00v\00_\00c\00o\00l\00;\00\n\00\n\00o\00u\00t\00 \00v\00e\00c\004\00 \00o\00_\00c\00o\00l\00o\00r\00;\00\n\00v\00o\00i\00d\00 \00m\00a\00i\00n\00(\00)\00 \00{\00\n\00\t\00v\00e\00c\002\00 \00s\00i\00g\00n\00e\00d\00U\00V\00 \00=\00 \00v\00_\00u\00v\00 \00*\00 \002\00.\00 \00-\00 \001\00.\00;\00\n\00\t\00f\00l\00o\00a\00t\00 \00l\00e\00n\00 \00=\00 \00m\00i\00n\00(\00l\00e\00n\00g\00t\00h\00(\00s\00i\00g\00n\00e\00d\00U\00V\00)\00,\001\00.\00)\00;\00\n\00\t\00o\00_\00c\00o\00l\00o\00r\00 \00=\00 \00v\00e\00c\004\00(\000\00.\00,\00v\00_\00c\00o\00l\00,\001\00.\00,\001\00.\00 \00-\00 \00l\00e\00n\00)\00;\00\n\00}\00\n\00\00\00\00\00\00\00")
+ (data (i32.const 12764) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00 \00\00\00\n\00\n\00u\00n\00i\00f\00o\00r\00m\00 \00f\00l\00o\00a\00t\00 \00\00\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 12828) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\1e\00\00\00;\00\n\00u\00n\00i\00f\00o\00r\00m\00 \00v\00e\00c\003\00 \00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 12892) ",\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\16\00\00\00;\00\n\00\n\00i\00n\00 \00v\00e\00c\003\00 \00\00\00\00\00\00\00")
+ (data (i32.const 12940) ",\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\16\00\00\00;\00\n\00o\00u\00t\00 \00v\00e\00c\003\00 \00\00\00\00\00\00\00")
+ (data (i32.const 12988) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00&\00\00\00;\00\n\00\n\00\n\00v\00o\00i\00d\00 \00m\00a\00i\00n\00(\00)\00 \00{\00\n\00\t\00\00\00\00\00\00\00")
+ (data (i32.const 13052) "\1c\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\06\00\00\00 \00=\00 \00\00\00\00\00\00\00")
+ (data (i32.const 13084) "\1c\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\06\00\00\00;\00\n\00\t\00\00\00\00\00\00\00")
+ (data (i32.const 13116) "\1c\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\0c\00\00\00;\00\n\00\t\00i\00f\00(\00")
+ (data (i32.const 13148) "\dc\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\be\00\00\00.\00y\00 \00<\00 \000\00.\00)\00{\00\n\00\t\00\t\00f\00l\00o\00a\00t\00 \00r\00n\00d\00 \00=\00 \00r\00a\00n\00d\00(\00v\00e\00c\002\00(\00g\00l\00_\00V\00e\00r\00t\00e\00x\00I\00D\00,\000\00)\00)\00;\00\n\00\t\00\t\00f\00l\00o\00a\00t\00 \00r\00n\00d\002\00 \00=\00 \00r\00a\00n\00d\00(\00v\00e\00c\002\00(\000\00,\00g\00l\00_\00V\00e\00r\00t\00e\00x\00I\00D\00)\00)\00;\00\n\00\t\00\t\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 13372) "L\00\00\00\00\00\00\00\00\00\00\00\01\00\00\004\00\00\00 \00=\00 \00v\00e\00c\003\00(\000\00.\00,\00r\00n\00d\002\00,\001\00.\00)\00;\00\n\00\t\00\t\00/\00/\00 \00\00\00\00\00\00\00\00\00")
+ (data (i32.const 13452) "l\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00V\00\00\00 \00=\00 \00v\00e\00c\003\00(\00(\00r\00n\00d\00 \00*\00 \002\00.\00 \00-\00 \001\00.\00)\00 \00*\00 \005\000\00.\00,\001\000\000\00.\00,\00 \000\00.\00)\00;\00\n\00\t\00\t\00\00\00\00\00\00\00")
+ (data (i32.const 13564) "l\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00X\00\00\00 \00=\00 \00v\00e\00c\003\00(\00(\00r\00n\00d\00 \00*\00 \002\00.\00 \00-\00 \001\00.\00)\00 \00*\00 \005\00.\00,\001\000\00.\00,\00 \000\00.\00)\00;\00\n\00\t\00}\00\n\00}\00\n\00\00\00\00\00")
+ (data (i32.const 13676) "\ac\00\00\00\00\00\00\00\00\00\00\00\1d\00\00\00\9c\00\00\00\a0+\00\00\00\00\00\00\f01\00\00\00\00\00\0002\00\00\00\00\00\00p2\00\00\00\00\00\00\80\16\00\00\00\00\00\00\a02\00\00\00\00\00\00\a02\00\00\00\00\00\00\d02\00\00\00\00\00\00\103\00\00\00\00\00\00\00/\00\00\00\00\00\00p&\00\00\00\00\00\0003\00\00\00\00\00\00\103\00\00\00\00\00\00\00/\00\00\00\00\00\00p&\00\00\00\00\00\00P3\00\00\00\00\00\00p3\00\00\00\00\00\00P4\00\00\00\00\00\00\a04\00\00\00\00\00\00\105\00\00")
+ (data (i32.const 13852) "|\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00l\00\00\00#\00v\00e\00r\00s\00i\00o\00n\00 \003\000\000\00 \00e\00s\00\n\00p\00r\00e\00c\00i\00s\00i\00o\00n\00 \00h\00i\00g\00h\00p\00 \00f\00l\00o\00a\00t\00;\00\n\00v\00o\00i\00d\00 \00m\00a\00i\00n\00(\00)\00 \00{\00}\00\n\00")
+ (data (i32.const 13980) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\08\00\00\00\b0\0e\00\00\f0\0e\00\00\00\00\00\00")
+ (data (i32.const 14012) "L\00\00\00\00\00\00\00\00\00\00\00\01\00\00\000\00\00\00#\00v\00e\00r\00s\00i\00o\00n\00 \003\000\000\00 \00e\00s\00\n\00i\00n\00 \00v\00e\00c\003\00 \00\00\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 14092) "\\\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00F\00\00\00;\00\n\00/\00/\00 \00i\00n\00 \00v\00e\00c\003\00 \00a\00_\00v\00e\00l\00o\00c\00i\00t\00y\00;\00 \00\n\00o\00u\00t\00 \00v\00e\00c\003\00 \00\00\00\00\00\00\00")
+ (data (i32.const 14188) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00&\00\00\00;\00\n\00 \00\n\00v\00o\00i\00d\00 \00m\00a\00i\00n\00(\00)\00 \00{\00\n\00\t\00\00\00\00\00\00\00")
+ (data (i32.const 14252) "L\00\00\00\00\00\00\00\00\00\00\00\01\00\00\006\00\00\00 \00+\00 \00v\00e\00c\003\00(\000\00.\000\001\00,\000\00.\000\001\00,\000\00.\000\001\00)\00;\00\n\00}\00\n\00\00\00\00\00\00\00")
+ (data (i32.const 14332) "<\00\00\00\00\00\00\00\00\00\00\00\1d\00\00\00$\00\00\00\d06\00\00\00\00\00\00 7\00\00\00\00\00\00\807\00\00\00\00\00\00\103\00\00\00\00\00\00\c07\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 14396) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\04\00\00\00\b0\0e\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 14428) ",\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\12\00\00\00\n\00i\00n\00 \00v\00e\00c\004\00 \00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 14476) "\\\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00H\00\00\00;\00\n\00\n\00v\00o\00i\00d\00 \00m\00a\00i\00n\00(\00v\00o\00i\00d\00)\00 \00{\00\n\00\t\00g\00l\00_\00P\00o\00s\00i\00t\00i\00o\00n\00 \00=\00 \00\00\00\00\00")
+ (data (i32.const 14572) "<\00\00\00\00\00\00\00\00\00\00\00\1d\00\00\00$\00\00\00\c0\15\00\00\00\00\00\00p8\00\00\00\00\00\00\a08\00\00\00\00\00\00p&\00\00\00\00\00\000\'\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 14636) "\0c\01\00\00\00\00\00\00\00\00\00\00\01\00\00\00\f6\00\00\00#\00v\00e\00r\00s\00i\00o\00n\00 \003\000\000\00 \00e\00s\00\n\00p\00r\00e\00c\00i\00s\00i\00o\00n\00 \00m\00e\00d\00i\00u\00m\00p\00 \00f\00l\00o\00a\00t\00;\00\n\00\n\00u\00n\00i\00f\00o\00r\00m\00 \00v\00e\00c\004\00 \00u\00_\00c\00o\00l\00o\00r\00;\00\n\00o\00u\00t\00 \00v\00e\00c\004\00 \00o\00_\00c\00o\00l\00o\00r\00;\00\n\00\n\00v\00o\00i\00d\00 \00m\00a\00i\00n\00(\00v\00o\00i\00d\00)\00 \00{\00\n\00\t\00o\00_\00c\00o\00l\00o\00r\00 \00=\00 \00u\00_\00c\00o\00l\00o\00r\00;\00\n\00}\00\n\00\00\00\00\00\00\00")
+ (data (i32.const 14908) "\ac\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\90\00\00\00;\00\n\00i\00n\00 \00v\00e\00c\004\00 \00a\00_\00c\00o\00l\00o\00r\00;\00\n\00\n\00o\00u\00t\00 \00v\00e\00c\004\00 \00v\00_\00c\00o\00l\00o\00r\00;\00\n\00\n\00v\00o\00i\00d\00 \00m\00a\00i\00n\00(\00v\00o\00i\00d\00)\00 \00{\00\n\00\t\00g\00l\00_\00P\00o\00s\00i\00t\00i\00o\00n\00 \00=\00 \00\00\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 15084) "L\00\00\00\00\00\00\00\00\00\00\00\01\00\00\000\00\00\00;\00\n\00\t\00v\00_\00c\00o\00l\00o\00r\00 \00=\00 \00a\00_\00c\00o\00l\00o\00r\00;\00\n\00}\00\n\00\00\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 15164) "<\00\00\00\00\00\00\00\00\00\00\00\1d\00\00\00,\00\00\00\c0\15\00\00\00\00\00\00\00\16\00\00\00\00\00\00\90%\00\00\00\00\00\00P:\00\00\00\00\00\00p&\00\00\00\00\00\00\00;\00\00")
+ (data (i32.const 15228) "<\01\00\00\00\00\00\00\00\00\00\00\01\00\00\00,\01\00\00#\00v\00e\00r\00s\00i\00o\00n\00 \003\000\000\00 \00e\00s\00\n\00p\00r\00e\00c\00i\00s\00i\00o\00n\00 \00m\00e\00d\00i\00u\00m\00p\00 \00f\00l\00o\00a\00t\00;\00\n\00\n\00u\00n\00i\00f\00o\00r\00m\00 \00v\00e\00c\004\00 \00u\00_\00c\00o\00l\00o\00r\00;\00\n\00i\00n\00 \00v\00e\00c\004\00 \00v\00_\00c\00o\00l\00o\00r\00;\00\n\00o\00u\00t\00 \00v\00e\00c\004\00 \00o\00_\00c\00o\00l\00o\00r\00;\00\n\00\n\00v\00o\00i\00d\00 \00m\00a\00i\00n\00(\00v\00o\00i\00d\00)\00 \00{\00\n\00\t\00o\00_\00c\00o\00l\00o\00r\00 \00=\00 \00u\00_\00c\00o\00l\00o\00r\00 \00*\00 \00v\00_\00c\00o\00l\00o\00r\00;\00\n\00}\00\n\00")
+ (data (i32.const 15548) ",\01\00\00\00\00\00\00\00\00\00\00\01\00\00\00\1a\01\00\00#\00v\00e\00r\00s\00i\00o\00n\00 \003\000\000\00 \00e\00s\00\n\00\n\00i\00n\00 \00v\00e\00c\004\00 \00a\00_\00p\00o\00s\00i\00t\00i\00o\00n\00;\00\n\00i\00n\00 \00v\00e\00c\002\00 \00a\00_\00t\00e\00x\00c\00o\00o\00r\00d\00;\00\n\00\n\00o\00u\00t\00 \00v\00e\00c\002\00 \00v\00_\00u\00v\00;\00\n\00\n\00v\00o\00i\00d\00 \00m\00a\00i\00n\00(\00v\00o\00i\00d\00)\00 \00{\00\n\00\t\00g\00l\00_\00P\00o\00s\00i\00t\00i\00o\00n\00 \00=\00 \00a\00_\00p\00o\00s\00i\00t\00i\00o\00n\00;\00\n\00\t\00v\00_\00u\00v\00 \00=\00 \00a\00_\00t\00e\00x\00c\00o\00o\00r\00d\00;\00\n\00}\00\n\00\00\00")
+ (data (i32.const 15852) "\0c\01\00\00\00\00\00\00\00\00\00\00\01\00\00\00\f8\00\00\00#\00v\00e\00r\00s\00i\00o\00n\00 \003\000\000\00 \00e\00s\00\n\00p\00r\00e\00c\00i\00s\00i\00o\00n\00 \00m\00e\00d\00i\00u\00m\00p\00 \00f\00l\00o\00a\00t\00;\00\n\00o\00u\00t\00 \00v\00e\00c\004\00 \00o\00_\00c\00o\00l\00o\00r\00;\00\n\00i\00n\00 \00v\00e\00c\002\00 \00v\00_\00u\00v\00;\00\n\00\n\00v\00o\00i\00d\00 \00m\00a\00i\00n\00(\00v\00o\00i\00d\00)\00 \00{\00\n\00\t\00o\00_\00c\00o\00l\00o\00r\00 \00=\00 \00v\00e\00c\004\00(\00v\00_\00u\00v\00.\00x\00y\00,\001\00,\001\00)\00;\00\n\00}\00\n\00\00\00\00\00")
+ (data (i32.const 16124) "\1c\00\00\00\00\00\00\00\00\00\00\00/\00\00\00\04\00\00\00\ff\ff\ff\ff\00\00\00\00\00\00\00\00")
+ (data (i32.const 16156) ",\00\00\00\00\00\00\00\00\00\00\00/\00\00\00\10\00\00\00\00\00\00\ff\ff\00\00\ff\00\ff\00\ff\ff\ff\00\ff\00\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 16204) ",\00\00\00\00\00\00\00\00\00\00\00/\00\00\00\10\00\00\00\00\00\ff\ff\ff\00\ff\ff\00\ff\ff\ff\ff\ff\ff\ff\00\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 16252) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 16284) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 16320) "\be\f3\f8y\eca\f6?\190\96[\c6\fe\de\bf=\88\afJ\edq\f5?\a4\fc\d42h\0b\db\bf\b0\10\f0\f09\95\f4?{\b7\1f\n\8bA\d7\bf\85\03\b8\b0\95\c9\f3?{\cfm\1a\e9\9d\d3\bf\a5d\88\0c\19\0d\f3?1\b6\f2\f3\9b\1d\d0\bf\a0\8e\0b{\"^\f2?\f0z;\1b\1d|\c9\bf?4\1aJJ\bb\f1?\9f<\af\93\e3\f9\c2\bf\ba\e5\8a\f0X#\f1?\\\8dx\bf\cb`\b9\bf\a7\00\99A?\95\f0?\ce_G\b6\9do\aa\bf\00\00\00\00\00\00\f0?\00\00\00\00\00\00\00\00\acG\9a\fd\8c`\ee?=\f5$\9f\ca8\b3?\a0j\02\1f\b3\a4\ec?\ba\918T\a9v\c4?\e6\fcjW6 \eb?\d2\e4\c4J\0b\84\ce?-\aa\a1c\d1\c2\e9?\1ce\c6\f0E\06\d4?\edAx\03\e6\86\e8?\f8\9f\1b,\9c\8e\d8?bHS\f5\dcg\e7?\cc{\b1N\a4\e0\dc?")
+ (data (i32.const 16576) "\00\00\00\00\00\00\f0?t\85\15\d3\b0\d9\ef?\0f\89\f9lX\b5\ef?Q[\12\d0\01\93\ef?{Q}<\b8r\ef?\aa\b9h1\87T\ef?8bunz8\ef?\e1\de\1f\f5\9d\1e\ef?\15\b71\n\fe\06\ef?\cb\a9:7\a7\f1\ee?\"4\12L\a6\de\ee?-\89a`\08\ce\ee?\'*6\d5\da\bf\ee?\82O\9dV+\b4\ee?)TH\dd\07\ab\ee?\85U:\b0~\a4\ee?\cd;\7ff\9e\a0\ee?t_\ec\e8u\9f\ee?\87\01\ebs\14\a1\ee?\13\ceL\99\89\a5\ee?\db\a0*B\e5\ac\ee?\e5\c5\cd\b07\b7\ee?\90\f0\a3\82\91\c4\ee?]%>\b2\03\d5\ee?\ad\d3Z\99\9f\e8\ee?G^\fb\f2v\ff\ee?\9cR\85\dd\9b\19\ef?i\90\ef\dc 7\ef?\87\a4\fb\dc\18X\ef?_\9b{3\97|\ef?\da\90\a4\a2\af\a4\ef?@En[v\d0\ef?")
+ (data (i32.const 16844) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 16876) "l\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00N\00\00\00k\00e\00e\00p\00 \00w\00o\00r\00l\00d\00 \00p\00o\00s\00i\00t\00i\00o\00n\00 \00n\00o\00t\00 \00y\00e\00t\00 \00i\00m\00p\00l\00e\00m\00e\00n\00t\00e\00d\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 16988) "L\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00<\00\00\00s\00r\00c\00-\00a\00s\00/\00c\00o\00m\00p\00o\00n\00e\00n\00t\00s\00/\00T\00r\00a\00n\00s\00f\00o\00r\00m\00.\00t\00s\00")
+ (data (i32.const 17068) "\bc\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\a6\00\00\00c\00o\00m\00p\00o\00n\00e\00n\00t\00 \00w\00a\00s\00 \00i\00n\00s\00t\00a\00n\00t\00i\00a\00t\00e\00d\00 \00w\00i\00t\00h\00 \00a\00 \00d\00i\00f\00f\00e\00r\00e\00n\00t\00 \00e\00n\00t\00i\00t\00y\00,\00 \00p\00l\00e\00a\00s\00e\00 \00c\00a\00l\00l\00 \00e\00n\00t\00i\00t\00y\00.\00b\00i\00n\00d\00(\00)\00 \00f\00i\00r\00s\00t\00\00\00\00\00\00\00")
+ (data (i32.const 17260) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00*\00\00\00s\00r\00c\00-\00a\00s\00/\00b\00a\00s\00e\00/\00E\00n\00t\00i\00t\00y\00.\00t\00s\00\00\00")
+ (data (i32.const 17324) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00$\00\00\00K\00e\00y\00 \00d\00o\00e\00s\00 \00n\00o\00t\00 \00e\00x\00i\00s\00t\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 17388) ",\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\16\00\00\00~\00l\00i\00b\00/\00m\00a\00p\00.\00t\00s\00\00\00\00\00\00\00")
+ (data (i32.const 17436) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\"\00\00\00u\00n\00e\00x\00p\00e\00c\00t\00e\00d\00 \00u\00p\00c\00a\00s\00t\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 17500) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00(\00\00\00s\00r\00c\00-\00a\00s\00/\00b\00a\00s\00e\00/\00W\00o\00r\00l\00d\00.\00t\00s\00\00\00\00\00")
+ (data (i32.const 17564) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 17596) "\ac\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\94\00\00\00s\00y\00s\00t\00e\00m\00s\00 \00w\00a\00s\00 \00c\00r\00e\00a\00t\00e\00d\00 \00w\00i\00t\00h\00 \00a\00 \00d\00i\00f\00f\00e\00r\00e\00n\00t\00 \00w\00o\00r\00l\00d\00,\00 \00p\00l\00e\00a\00s\00e\00 \00c\00a\00l\00l\00 \00w\00o\00r\00l\00d\00.\00b\00i\00n\00d\00(\00)\00 \00f\00i\00r\00s\00t\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 17772) "\1c\00\00\00\00\00\00\00\00\00\00\00k\00\00\00\08\00\00\004\00\00\00\00\00\00\00\00\00\00\00")
  (data (i32.const 17804) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
  (data (i32.const 17836) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 17868) "\1c\00\00\00\00\00\00\00\00\00\00\00\86\00\00\00\08\00\00\005\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 17900) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\04\00\00\00k\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 17932) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\04\00\00\00f\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 17868) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\04\00\00\00e\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 17900) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\04\00\00\00e\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 17932) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
  (data (i32.const 17964) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
  (data (i32.const 17996) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 18028) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 18060) "\\\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00J\00\00\00s\00r\00c\00-\00a\00s\00/\00c\00o\00m\00p\00o\00n\00e\00n\00t\00s\00/\00D\00i\00r\00e\00c\00t\00i\00o\00n\00a\00l\00L\00i\00g\00h\00t\00.\00t\00s\00\00\00")
+ (data (i32.const 18028) "\1c\00\00\00\00\00\00\00\00\00\00\00\95\00\00\00\08\00\00\005\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 18060) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\04\00\00\00q\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 18092) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\04\00\00\00l\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 18124) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
  (data (i32.const 18156) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
  (data (i32.const 18188) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 18220) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00*\00\00\00O\00b\00j\00e\00c\00t\00 \00a\00l\00r\00e\00a\00d\00y\00 \00p\00i\00n\00n\00e\00d\00\00\00")
- (data (i32.const 18284) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00(\00\00\00O\00b\00j\00e\00c\00t\00 \00i\00s\00 \00n\00o\00t\00 \00p\00i\00n\00n\00e\00d\00\00\00\00\00")
- (data (i32.const 18348) "L\00\00\00\00\00\00\00\00\00\00\00\01\00\00\006\00\00\00s\00r\00c\00-\00a\00s\00/\00c\00o\00m\00p\00o\00n\00e\00n\00t\00s\00/\00C\00a\00m\00e\00r\00a\00.\00t\00s\00\00\00\00\00\00\00")
- (data (i32.const 18428) "L\00\00\00\00\00\00\00\00\00\00\00\01\00\00\002\00\00\00s\00r\00c\00-\00a\00s\00/\00c\00o\00m\00p\00o\00n\00e\00n\00t\00s\00/\00M\00e\00s\00h\00.\00t\00s\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 18508) "l\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00P\00\00\00s\00r\00c\00-\00a\00s\00/\00r\00e\00n\00d\00e\00r\00i\00n\00g\00/\00s\00y\00s\00t\00e\00m\00s\00/\00R\00e\00n\00d\00e\00r\00S\00y\00s\00t\00e\00m\00.\00t\00s\00\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 18620) "L\00\00\00\00\00\00\00\00\00\00\00\01\00\00\002\00\00\00U\00n\00i\00f\00o\00r\00m\00 \00n\00o\00t\00 \00i\00m\00p\00l\00e\00m\00e\00n\00t\00e\00d\00:\00 \00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 18700) "\8c\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00n\00\00\00s\00r\00c\00-\00a\00s\00/\00W\00e\00b\00G\00L\002\00/\00s\00y\00s\00t\00e\00m\00s\00/\00W\00e\00b\00G\00L\00U\00n\00i\00f\00o\00r\00m\00B\00u\00f\00f\00e\00r\00O\00b\00j\00e\00c\00t\00S\00y\00s\00t\00e\00m\00.\00t\00s\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 18844) "L\00\00\00\00\00\00\00\00\00\00\00\01\00\00\002\00\00\00E\00r\00r\00o\00r\00 \00c\00o\00m\00p\00i\00l\00i\00n\00g\00 \00s\00h\00a\00d\00e\00r\00 \00:\00 \00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 18924) "l\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00T\00\00\00s\00r\00c\00-\00a\00s\00/\00W\00e\00b\00G\00L\002\00/\00s\00y\00s\00t\00e\00m\00s\00/\00W\00e\00b\00G\00L\00S\00h\00a\00d\00e\00r\00S\00y\00s\00t\00e\00m\00.\00t\00s\00\00\00\00\00\00\00\00\00")
- (data (i32.const 19036) "\\\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00>\00\00\00E\00r\00r\00o\00r\00 \00c\00r\00e\00a\00t\00i\00n\00g\00 \00s\00h\00a\00d\00e\00r\00 \00p\00r\00o\00g\00r\00a\00m\00.\00\n\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 19132) "L\00\00\00\00\00\00\00\00\00\00\00\01\00\00\002\00\00\00E\00r\00r\00o\00r\00 \00v\00a\00l\00i\00d\00a\00t\00i\00n\00g\00 \00p\00r\00o\00g\00r\00a\00m\00\n\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 19212) "l\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00X\00\00\00s\00r\00c\00-\00a\00s\00/\00W\00e\00b\00G\00L\002\00/\00s\00y\00s\00t\00e\00m\00s\00/\00W\00e\00b\00G\00L\00G\00e\00o\00m\00e\00t\00r\00y\00S\00y\00s\00t\00e\00m\00.\00t\00s\00\00\00\00\00")
- (data (i32.const 19324) "\1c\00\00\00\00\00\00\00\00\00\00\00\93\00\00\00\08\00\00\006\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 19356) ",\01\00\00\00\00\00\00\00\00\00\00\01\00\00\00\10\01\00\00G\00e\00o\00m\00e\00t\00r\00y\00 \00G\00l\00u\00e\00 \00-\00 \00S\00h\00a\00d\00e\00r\00 \00u\00s\00e\00s\00 \00T\00r\00a\00n\00s\00f\00o\00r\00m\00 \00F\00e\00e\00d\00b\00a\00c\00k\00 \00b\00u\00t\00 \00n\00o\00 \00a\00t\00t\00r\00i\00b\00u\00t\00e\00s\00 \00f\00o\00u\00n\00d\00 \00m\00a\00r\00k\00e\00d\00 \00a\00s\00 \00v\00a\00r\00y\00i\00n\00g\00.\00 \00D\00i\00d\00 \00y\00o\00u\00 \00f\00o\00r\00 \00g\00e\00t\00 \00t\00o\00 \00n\00e\00w\00 \00A\00t\00t\00r\00i\00b\00u\00t\00e\00(\00)\00.\00a\00s\00V\00a\00r\00y\00i\00n\00g\00(\00)\00\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 19660) "\1c\00\00\00\00\00\00\00\00\00\00\00\93\00\00\00\08\00\00\007\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 19692) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 19724) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 19756) "\\\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00D\00\00\00M\00a\00x\00i\00m\00u\00m\00 \00t\00e\00x\00t\00u\00r\00e\00 \00c\00o\00u\00n\00t\00 \00r\00e\00a\00c\00h\00e\00d\00 \00-\00 \003\002\00\00\00\00\00\00\00\00\00")
- (data (i32.const 19852) "l\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00X\00\00\00s\00r\00c\00-\00a\00s\00/\00W\00e\00b\00G\00L\002\00/\00s\00y\00s\00t\00e\00m\00s\00/\00W\00e\00b\00G\00L\00M\00a\00t\00e\00r\00i\00a\00l\00S\00y\00s\00t\00e\00m\00.\00t\00s\00\00\00\00\00")
- (data (i32.const 19964) "|\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00d\00\00\00t\00o\00S\00t\00r\00i\00n\00g\00(\00)\00 \00r\00a\00d\00i\00x\00 \00a\00r\00g\00u\00m\00e\00n\00t\00 \00m\00u\00s\00t\00 \00b\00e\00 \00b\00e\00t\00w\00e\00e\00n\00 \002\00 \00a\00n\00d\00 \003\006\00\00\00\00\00\00\00\00\00")
- (data (i32.const 20092) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00&\00\00\00~\00l\00i\00b\00/\00u\00t\00i\00l\00/\00n\00u\00m\00b\00e\00r\00.\00t\00s\00\00\00\00\00\00\00")
- (data (i32.const 20156) "\1c\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\02\00\00\000\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 20188) "0\000\000\001\000\002\000\003\000\004\000\005\000\006\000\007\000\008\000\009\001\000\001\001\001\002\001\003\001\004\001\005\001\006\001\007\001\008\001\009\002\000\002\001\002\002\002\003\002\004\002\005\002\006\002\007\002\008\002\009\003\000\003\001\003\002\003\003\003\004\003\005\003\006\003\007\003\008\003\009\004\000\004\001\004\002\004\003\004\004\004\005\004\006\004\007\004\008\004\009\005\000\005\001\005\002\005\003\005\004\005\005\005\006\005\007\005\008\005\009\006\000\006\001\006\002\006\003\006\004\006\005\006\006\006\007\006\008\006\009\007\000\007\001\007\002\007\003\007\004\007\005\007\006\007\007\007\008\007\009\008\000\008\001\008\002\008\003\008\004\008\005\008\006\008\007\008\008\008\009\009\000\009\001\009\002\009\003\009\004\009\005\009\006\009\007\009\008\009\009\00")
- (data (i32.const 20588) "\1c\04\00\00\00\00\00\00\00\00\00\00\01\00\00\00\00\04\00\000\000\000\001\000\002\000\003\000\004\000\005\000\006\000\007\000\008\000\009\000\00a\000\00b\000\00c\000\00d\000\00e\000\00f\001\000\001\001\001\002\001\003\001\004\001\005\001\006\001\007\001\008\001\009\001\00a\001\00b\001\00c\001\00d\001\00e\001\00f\002\000\002\001\002\002\002\003\002\004\002\005\002\006\002\007\002\008\002\009\002\00a\002\00b\002\00c\002\00d\002\00e\002\00f\003\000\003\001\003\002\003\003\003\004\003\005\003\006\003\007\003\008\003\009\003\00a\003\00b\003\00c\003\00d\003\00e\003\00f\004\000\004\001\004\002\004\003\004\004\004\005\004\006\004\007\004\008\004\009\004\00a\004\00b\004\00c\004\00d\004\00e\004\00f\005\000\005\001\005\002\005\003\005\004\005\005\005\006\005\007\005\008\005\009\005\00a\005\00b\005\00c\005\00d\005\00e\005\00f\006\000\006\001\006\002\006\003\006\004\006\005\006\006\006\007\006\008\006\009\006\00a\006\00b\006\00c\006\00d\006\00e\006\00f\007\000\007\001\007\002\007\003\007\004\007\005\007\006\007\007\007\008\007\009\007\00a\007\00b\007\00c\007\00d\007\00e\007\00f\008\000\008\001\008\002\008\003\008\004\008\005\008\006\008\007\008\008\008\009\008\00a\008\00b\008\00c\008\00d\008\00e\008\00f\009\000\009\001\009\002\009\003\009\004\009\005\009\006\009\007\009\008\009\009\009\00a\009\00b\009\00c\009\00d\009\00e\009\00f\00a\000\00a\001\00a\002\00a\003\00a\004\00a\005\00a\006\00a\007\00a\008\00a\009\00a\00a\00a\00b\00a\00c\00a\00d\00a\00e\00a\00f\00b\000\00b\001\00b\002\00b\003\00b\004\00b\005\00b\006\00b\007\00b\008\00b\009\00b\00a\00b\00b\00b\00c\00b\00d\00b\00e\00b\00f\00c\000\00c\001\00c\002\00c\003\00c\004\00c\005\00c\006\00c\007\00c\008\00c\009\00c\00a\00c\00b\00c\00c\00c\00d\00c\00e\00c\00f\00d\000\00d\001\00d\002\00d\003\00d\004\00d\005\00d\006\00d\007\00d\008\00d\009\00d\00a\00d\00b\00d\00c\00d\00d\00d\00e\00d\00f\00e\000\00e\001\00e\002\00e\003\00e\004\00e\005\00e\006\00e\007\00e\008\00e\009\00e\00a\00e\00b\00e\00c\00e\00d\00e\00e\00e\00f\00f\000\00f\001\00f\002\00f\003\00f\004\00f\005\00f\006\00f\007\00f\008\00f\009\00f\00a\00f\00b\00f\00c\00f\00d\00f\00e\00f\00f\00\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 21644) "\\\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00H\00\00\000\001\002\003\004\005\006\007\008\009\00a\00b\00c\00d\00e\00f\00g\00h\00i\00j\00k\00l\00m\00n\00o\00p\00q\00r\00s\00t\00u\00v\00w\00x\00y\00z\00\00\00\00\00")
- (data (i32.const 21740) "L\00\00\00\00\00\00\00\00\00\00\00\01\00\00\008\00\00\00U\00n\00i\00m\00p\00l\00e\00m\00e\00n\00t\00e\00d\00 \00u\00n\00i\00f\00o\00r\00m\00 \00t\00y\00p\00e\00:\00 \00\00\00\00\00")
- (data (i32.const 21824) "\9e\00\00\00 \00\00\00\00\00\00\00 \00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\01\19\00\00\02\00\00\00\02\19\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00A\00\00\00\02\00\00\00\04A\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\02A\00\00\00\00\00\00\10A\82\00\00\00\00\00\02\t\00\00\00\00\00\00\00\00\00\00#\00\00\00\00\00\00\00\1e\00\00\00\00\00\00\00%\00\00\00\00\00\00\00&\00\00\00\00\00\00\00\'\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\10A\82\00\00\00\00\00\02A\00\00\00\00\00\00\81\00\00\00\02\00\00\00$\19\00\00\00\00\00\00\a4\00\00\00\00\00\00\00d\00\00\00\00\00\00\00\02A\00\00\00\00\00\00B\00\00\00\00\00\00\00\02A\00\00\00\00\00\00\00\00\00\003\00\00\00\00\00\00\00(\00\00\00\00\00\00\005\00\00\00\00\00\00\00(\00\00\00\00\00\00\00$\00\00\00\82\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\02A\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00<\00\00\00\00\00\00\00\00\00\00\00\02A\00\00\00\00\00\00\00\00\00\00A\00\00\00\00\00\00\00@\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\02A\00\00\00\00\00\00 \00\00\00\00\00\00\00\00\00\00\00E\00\00\00\00\00\00\00F\00\00\00 \00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00F\00\00\00\10A\02\00\00\00\00\00\02A\00\00\00\00\00\00\10A\02\00\00\00\00\00\10A\02\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\02\01\00\00\00\00\00\00\08A\00\00\00\00\00\00\02A\00\00\00\00\00\00\10A\02\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00E\00\00\00\02A\00\00\00\00\00\00\10A\02\00\00\00\00\00\00\00\00\00I\00\00\00\02A\00\00\00\00\00\00\00\00\00\00E\00\00\00\00\00\00\00\00\00\00\00\08\t\00\00\00\00\00\00\00\00\00\00U\00\00\00\00\00\00\00I\00\00\00\08A\00\00\00\00\00\00\00\00\00\00O\00\00\00\02A\00\00\00\00\00\00\00\00\00\00E\00\00\00 \00\00\00F\00\00\00\00\00\00\00e\00\00\00\00\00\00\00U\00\00\00\00\00\00\00g\00\00\00\00\00\00\00X\00\00\00 \00\00\00\00\00\00\00\00\00\00\00O\00\00\00\02A\00\00\00\00\00\00\00\00\00\00g\00\00\00\00\00\00\00\00\00\00\00\02A\00\00\00\00\00\00\02A\00\00\00\00\00\00 \00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00 \00\00\00\00\00\00\00\10A\82\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\02A\00\00\00\00\00\00\10A\82\00\00\00\00\00\10A\82\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00 \00\00\00\00\00\00\00\02A\00\00\00\00\00\00\00\00\00\00\00\00\00\00\02A\00\00\00\00\00\00\10A\82\00\00\00\00\00\00\00\00\00o\00\00\00\10A\82\00\00\00\00\00\00\00\00\00\00\00\00\00\10A\82\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00g\00\00\00\02A\00\00\00\00\00\00\00\00\00\00\8b\00\00\00\00\00\00\00l\00\00\00\00\00\00\00\8d\00\00\00\00\00\00\00\1e\00\00\00\00\00\00\00g\00\00\00\02A\00\00\00\00\00\00 \00\00\00\00\00\00\00\00\00\00\00\92\00\00\00 \00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\96\00\00\00 \00\00\00\00\00\00\00\00\00\00\00\1e\00\00\00 \00\00\00|\00\00\00\00\00\00\00\99\00\00\00\00\00\00\00|\00\00\00\00\00\00\00\99\00\00\00\00\00\00\00\99\00\00\00\00\00\00\00\99\00\00\00\00\00\00\00\99\00\00\00")
+ (data (i32.const 18220) "\\\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00J\00\00\00s\00r\00c\00-\00a\00s\00/\00c\00o\00m\00p\00o\00n\00e\00n\00t\00s\00/\00D\00i\00r\00e\00c\00t\00i\00o\00n\00a\00l\00L\00i\00g\00h\00t\00.\00t\00s\00\00\00")
+ (data (i32.const 18316) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00*\00\00\00O\00b\00j\00e\00c\00t\00 \00a\00l\00r\00e\00a\00d\00y\00 \00p\00i\00n\00n\00e\00d\00\00\00")
+ (data (i32.const 18380) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00(\00\00\00O\00b\00j\00e\00c\00t\00 \00i\00s\00 \00n\00o\00t\00 \00p\00i\00n\00n\00e\00d\00\00\00\00\00")
+ (data (i32.const 18444) "L\00\00\00\00\00\00\00\00\00\00\00\01\00\00\006\00\00\00s\00r\00c\00-\00a\00s\00/\00c\00o\00m\00p\00o\00n\00e\00n\00t\00s\00/\00C\00a\00m\00e\00r\00a\00.\00t\00s\00\00\00\00\00\00\00")
+ (data (i32.const 18524) "L\00\00\00\00\00\00\00\00\00\00\00\01\00\00\002\00\00\00s\00r\00c\00-\00a\00s\00/\00c\00o\00m\00p\00o\00n\00e\00n\00t\00s\00/\00M\00e\00s\00h\00.\00t\00s\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 18604) "l\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00P\00\00\00s\00r\00c\00-\00a\00s\00/\00r\00e\00n\00d\00e\00r\00i\00n\00g\00/\00s\00y\00s\00t\00e\00m\00s\00/\00R\00e\00n\00d\00e\00r\00S\00y\00s\00t\00e\00m\00.\00t\00s\00\00\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 18716) "L\00\00\00\00\00\00\00\00\00\00\00\01\00\00\002\00\00\00U\00n\00i\00f\00o\00r\00m\00 \00n\00o\00t\00 \00i\00m\00p\00l\00e\00m\00e\00n\00t\00e\00d\00:\00 \00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 18796) "L\00\00\00\00\00\00\00\00\00\00\00\01\00\00\002\00\00\00E\00r\00r\00o\00r\00 \00c\00o\00m\00p\00i\00l\00i\00n\00g\00 \00s\00h\00a\00d\00e\00r\00 \00:\00 \00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 18876) "l\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00T\00\00\00s\00r\00c\00-\00a\00s\00/\00W\00e\00b\00G\00L\002\00/\00s\00y\00s\00t\00e\00m\00s\00/\00W\00e\00b\00G\00L\00S\00h\00a\00d\00e\00r\00S\00y\00s\00t\00e\00m\00.\00t\00s\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 18988) "\\\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00>\00\00\00E\00r\00r\00o\00r\00 \00c\00r\00e\00a\00t\00i\00n\00g\00 \00s\00h\00a\00d\00e\00r\00 \00p\00r\00o\00g\00r\00a\00m\00.\00\n\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 19084) "L\00\00\00\00\00\00\00\00\00\00\00\01\00\00\002\00\00\00E\00r\00r\00o\00r\00 \00v\00a\00l\00i\00d\00a\00t\00i\00n\00g\00 \00p\00r\00o\00g\00r\00a\00m\00\n\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 19164) "l\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00X\00\00\00s\00r\00c\00-\00a\00s\00/\00W\00e\00b\00G\00L\002\00/\00s\00y\00s\00t\00e\00m\00s\00/\00W\00e\00b\00G\00L\00G\00e\00o\00m\00e\00t\00r\00y\00S\00y\00s\00t\00e\00m\00.\00t\00s\00\00\00\00\00")
+ (data (i32.const 19276) "\1c\00\00\00\00\00\00\00\00\00\00\00\9b\00\00\00\08\00\00\006\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 19308) ",\01\00\00\00\00\00\00\00\00\00\00\01\00\00\00\10\01\00\00G\00e\00o\00m\00e\00t\00r\00y\00 \00G\00l\00u\00e\00 \00-\00 \00S\00h\00a\00d\00e\00r\00 \00u\00s\00e\00s\00 \00T\00r\00a\00n\00s\00f\00o\00r\00m\00 \00F\00e\00e\00d\00b\00a\00c\00k\00 \00b\00u\00t\00 \00n\00o\00 \00a\00t\00t\00r\00i\00b\00u\00t\00e\00s\00 \00f\00o\00u\00n\00d\00 \00m\00a\00r\00k\00e\00d\00 \00a\00s\00 \00v\00a\00r\00y\00i\00n\00g\00.\00 \00D\00i\00d\00 \00y\00o\00u\00 \00f\00o\00r\00 \00g\00e\00t\00 \00t\00o\00 \00n\00e\00w\00 \00A\00t\00t\00r\00i\00b\00u\00t\00e\00(\00)\00.\00a\00s\00V\00a\00r\00y\00i\00n\00g\00(\00)\00\00\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 19612) "\1c\00\00\00\00\00\00\00\00\00\00\00\9b\00\00\00\08\00\00\007\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 19644) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 19676) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 19708) "\\\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00D\00\00\00M\00a\00x\00i\00m\00u\00m\00 \00t\00e\00x\00t\00u\00r\00e\00 \00c\00o\00u\00n\00t\00 \00r\00e\00a\00c\00h\00e\00d\00 \00-\00 \003\002\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 19804) "l\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00X\00\00\00s\00r\00c\00-\00a\00s\00/\00W\00e\00b\00G\00L\002\00/\00s\00y\00s\00t\00e\00m\00s\00/\00W\00e\00b\00G\00L\00M\00a\00t\00e\00r\00i\00a\00l\00S\00y\00s\00t\00e\00m\00.\00t\00s\00\00\00\00\00")
+ (data (i32.const 19916) "|\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00d\00\00\00t\00o\00S\00t\00r\00i\00n\00g\00(\00)\00 \00r\00a\00d\00i\00x\00 \00a\00r\00g\00u\00m\00e\00n\00t\00 \00m\00u\00s\00t\00 \00b\00e\00 \00b\00e\00t\00w\00e\00e\00n\00 \002\00 \00a\00n\00d\00 \003\006\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 20044) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00&\00\00\00~\00l\00i\00b\00/\00u\00t\00i\00l\00/\00n\00u\00m\00b\00e\00r\00.\00t\00s\00\00\00\00\00\00\00")
+ (data (i32.const 20108) "\1c\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\02\00\00\000\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 20140) "0\000\000\001\000\002\000\003\000\004\000\005\000\006\000\007\000\008\000\009\001\000\001\001\001\002\001\003\001\004\001\005\001\006\001\007\001\008\001\009\002\000\002\001\002\002\002\003\002\004\002\005\002\006\002\007\002\008\002\009\003\000\003\001\003\002\003\003\003\004\003\005\003\006\003\007\003\008\003\009\004\000\004\001\004\002\004\003\004\004\004\005\004\006\004\007\004\008\004\009\005\000\005\001\005\002\005\003\005\004\005\005\005\006\005\007\005\008\005\009\006\000\006\001\006\002\006\003\006\004\006\005\006\006\006\007\006\008\006\009\007\000\007\001\007\002\007\003\007\004\007\005\007\006\007\007\007\008\007\009\008\000\008\001\008\002\008\003\008\004\008\005\008\006\008\007\008\008\008\009\009\000\009\001\009\002\009\003\009\004\009\005\009\006\009\007\009\008\009\009\00")
+ (data (i32.const 20540) "\1c\04\00\00\00\00\00\00\00\00\00\00\01\00\00\00\00\04\00\000\000\000\001\000\002\000\003\000\004\000\005\000\006\000\007\000\008\000\009\000\00a\000\00b\000\00c\000\00d\000\00e\000\00f\001\000\001\001\001\002\001\003\001\004\001\005\001\006\001\007\001\008\001\009\001\00a\001\00b\001\00c\001\00d\001\00e\001\00f\002\000\002\001\002\002\002\003\002\004\002\005\002\006\002\007\002\008\002\009\002\00a\002\00b\002\00c\002\00d\002\00e\002\00f\003\000\003\001\003\002\003\003\003\004\003\005\003\006\003\007\003\008\003\009\003\00a\003\00b\003\00c\003\00d\003\00e\003\00f\004\000\004\001\004\002\004\003\004\004\004\005\004\006\004\007\004\008\004\009\004\00a\004\00b\004\00c\004\00d\004\00e\004\00f\005\000\005\001\005\002\005\003\005\004\005\005\005\006\005\007\005\008\005\009\005\00a\005\00b\005\00c\005\00d\005\00e\005\00f\006\000\006\001\006\002\006\003\006\004\006\005\006\006\006\007\006\008\006\009\006\00a\006\00b\006\00c\006\00d\006\00e\006\00f\007\000\007\001\007\002\007\003\007\004\007\005\007\006\007\007\007\008\007\009\007\00a\007\00b\007\00c\007\00d\007\00e\007\00f\008\000\008\001\008\002\008\003\008\004\008\005\008\006\008\007\008\008\008\009\008\00a\008\00b\008\00c\008\00d\008\00e\008\00f\009\000\009\001\009\002\009\003\009\004\009\005\009\006\009\007\009\008\009\009\009\00a\009\00b\009\00c\009\00d\009\00e\009\00f\00a\000\00a\001\00a\002\00a\003\00a\004\00a\005\00a\006\00a\007\00a\008\00a\009\00a\00a\00a\00b\00a\00c\00a\00d\00a\00e\00a\00f\00b\000\00b\001\00b\002\00b\003\00b\004\00b\005\00b\006\00b\007\00b\008\00b\009\00b\00a\00b\00b\00b\00c\00b\00d\00b\00e\00b\00f\00c\000\00c\001\00c\002\00c\003\00c\004\00c\005\00c\006\00c\007\00c\008\00c\009\00c\00a\00c\00b\00c\00c\00c\00d\00c\00e\00c\00f\00d\000\00d\001\00d\002\00d\003\00d\004\00d\005\00d\006\00d\007\00d\008\00d\009\00d\00a\00d\00b\00d\00c\00d\00d\00d\00e\00d\00f\00e\000\00e\001\00e\002\00e\003\00e\004\00e\005\00e\006\00e\007\00e\008\00e\009\00e\00a\00e\00b\00e\00c\00e\00d\00e\00e\00e\00f\00f\000\00f\001\00f\002\00f\003\00f\004\00f\005\00f\006\00f\007\00f\008\00f\009\00f\00a\00f\00b\00f\00c\00f\00d\00f\00e\00f\00f\00\00\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 21596) "\\\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00H\00\00\000\001\002\003\004\005\006\007\008\009\00a\00b\00c\00d\00e\00f\00g\00h\00i\00j\00k\00l\00m\00n\00o\00p\00q\00r\00s\00t\00u\00v\00w\00x\00y\00z\00\00\00\00\00")
+ (data (i32.const 21692) "L\00\00\00\00\00\00\00\00\00\00\00\01\00\00\008\00\00\00U\00n\00i\00m\00p\00l\00e\00m\00e\00n\00t\00e\00d\00 \00u\00n\00i\00f\00o\00r\00m\00 \00t\00y\00p\00e\00:\00 \00\00\00\00\00")
+ (data (i32.const 21772) "\8c\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00n\00\00\00s\00r\00c\00-\00a\00s\00/\00W\00e\00b\00G\00L\002\00/\00s\00y\00s\00t\00e\00m\00s\00/\00W\00e\00b\00G\00L\00U\00n\00i\00f\00o\00r\00m\00B\00u\00f\00f\00e\00r\00O\00b\00j\00e\00c\00t\00S\00y\00s\00t\00e\00m\00.\00t\00s\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 21920) "\a7\00\00\00 \00\00\00\00\00\00\00 \00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\01\19\00\00\02\00\00\00\02\19\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00A\00\00\00\02\00\00\00\00\00\00\00\00\00\00\00\04A\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\02A\00\00\00\00\00\00\10A\82\00\00\00\00\00\02\t\00\00\00\00\00\00\00\00\00\00$\00\00\00\00\00\00\00\1f\00\00\00\00\00\00\00&\00\00\00\00\00\00\00\'\00\00\00\00\00\00\00(\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\10A\82\00\00\00\00\00\02A\00\00\00\00\00\00\81\00\00\00\02\00\00\00$\19\00\00\00\00\00\00\a4\00\00\00\00\00\00\00d\00\00\00\00\00\00\00\02A\00\00\00\00\00\00B\00\00\00\00\00\00\00\02A\00\00\00\00\00\00\00\00\00\004\00\00\00\00\00\00\00)\00\00\00\00\00\00\006\00\00\00\00\00\00\00)\00\00\00\00\00\00\00%\00\00\00\82\00\00\00\00\00\00\00\02A\00\00\00\00\00\00\04A\00\00\00\00\00\00\02A\00\00\00\00\00\00\04A\00\00\00\00\00\00\02A\00\00\00\00\00\00\04A\00\00\00\00\00\00\00\00\00\00\00\00\00\00\02A\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00C\00\00\00\00\00\00\00\00\00\00\00\02A\00\00\00\00\00\00\00\00\00\00H\00\00\00\00\00\00\00G\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\02A\00\00\00\00\00\00 \00\00\00\00\00\00\00\00\00\00\00L\00\00\00\00\00\00\00M\00\00\00 \00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00M\00\00\00\10A\02\00\00\00\00\00\02A\00\00\00\00\00\00\10A\02\00\00\00\00\00\10A\02\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\02\01\00\00\00\00\00\00\08A\00\00\00\00\00\00\02A\00\00\00\00\00\00\10A\02\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00L\00\00\00\02A\00\00\00\00\00\00\10A\02\00\00\00\00\00\00\00\00\00P\00\00\00\02A\00\00\00\00\00\00\00\00\00\00L\00\00\00\00\00\00\00\00\00\00\00\08\t\00\00\00\00\00\00\00\00\00\00\\\00\00\00\00\00\00\00P\00\00\00\08A\00\00\00\00\00\00\00\00\00\00V\00\00\00\02A\00\00\00\00\00\00\00\00\00\00j\00\00\00\00\00\00\00_\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00j\00\00\00 \00\00\00\00\00\00\00\00\00\00\00\\\00\00\00\00\00\00\00V\00\00\00\02A\00\00\00\00\00\00\00\00\00\00j\00\00\00\00\00\00\00\00\00\00\00\02A\00\00\00\00\00\00\02A\00\00\00\00\00\00 \00\00\00\00\00\00\00\02A\00\00\00\00\00\00\00\00\00\00x\00\00\00\00\00\00\00r\00\00\00\00\00\00\00z\00\00\00\00\00\00\00\1f\00\00\00\00\00\00\00\'\00\00\00 \00\00\00\00\00\00\00\00\00\00\00L\00\00\00 \00\00\00M\00\00\00\00\00\00\00n\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00 \00\00\00\00\00\00\00\10A\82\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\02A\00\00\00\00\00\00\10A\82\00\00\00\00\00\10A\82\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00 \00\00\00\00\00\00\00\02A\00\00\00\00\00\00\00\00\00\00\00\00\00\00\02A\00\00\00\00\00\00\10A\82\00\00\00\00\00\00\00\00\00u\00\00\00\10A\82\00\00\00\00\00\00\00\00\00\00\00\00\00\10A\82\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00j\00\00\00\00\00\00\00j\00\00\00\02A\00\00\00\00\00\00\00\00\00\00\9a\00\00\00 \00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\9e\00\00\00 \00\00\00\00\00\00\00\00\00\00\00\1f\00\00\00 \00\00\00\8c\00\00\00\00\00\00\00\a1\00\00\00\00\00\00\00\8c\00\00\00\00\00\00\00\a1\00\00\00\00\00\00\00\a1\00\00\00\00\00\00\00\a1\00\00\00\00\00\00\00\a1\00\00\00 \00\00\00\00\00\00\00")
  (table $0 56 56 funcref)
  (elem $0 (i32.const 1) $~lib/math/NativeMathf.random $src-as/glMatrix/_mat2d/multiply $src-as/glMatrix/_mat2d/subtract $src-as/glMatrix/_vec3/subtract $src-as/glMatrix/_vec3/multiply $src-as/glMatrix/_vec3/divide $~lib/math/NativeMathf.hypot $src-as/glMatrix/_vec3/distance $src-as/glMatrix/_vec3/squaredDistance $src-as/glMatrix/_vec3/length $src-as/glMatrix/_vec3/squaredLength $src-as/glMatrix/_vec4/subtract $src-as/glMatrix/_vec4/multiply $src-as/glMatrix/_vec4/divide $src-as/glMatrix/_vec4/distance $src-as/glMatrix/_vec4/squaredDistance $src-as/glMatrix/_vec4/length $src-as/glMatrix/_vec4/squaredLength $src-as/glMatrix/_vec4/clone $src-as/glMatrix/_vec4/fromValues $src-as/glMatrix/_vec4/copy $src-as/glMatrix/_vec4/set $src-as/glMatrix/_vec4/add $src-as/glMatrix/_quat/multiply $src-as/glMatrix/_vec4/scale $src-as/glMatrix/_vec4/dot $src-as/glMatrix/_vec4/lerp $src-as/glMatrix/_vec4/normalize $src-as/glMatrix/_vec4/exactEquals $start:src-as/glMatrix/_quat~anonymous|0~anonymous|0 $start:src-as/glMatrix/_quat~anonymous|0 $start:src-as/glMatrix/_quat~anonymous|1~anonymous|0 $start:src-as/glMatrix/_quat~anonymous|1 $start:src-as/glMatrix/_quat~anonymous|2~anonymous|0 $start:src-as/glMatrix/_quat~anonymous|2 $src-as/glMatrix/_quat2/multiply $src-as/glMatrix/_mat4/perspectiveNO $src-as/glMatrix/_mat4/orthoNO $src-as/glMatrix/_mat4/multiply $src-as/glMatrix/_mat4/subtract $src-as/glMatrix/_mat3/multiply $src-as/glMatrix/_mat3/subtract $src-as/glMatrix/_vec2/length $src-as/glMatrix/_vec2/subtract $src-as/glMatrix/_vec2/multiply $src-as/glMatrix/_vec2/divide $src-as/glMatrix/_vec2/distance $src-as/glMatrix/_vec2/squaredDistance $src-as/glMatrix/_vec2/squaredLength $src-as/glMatrix/_mat2/multiply $src-as/glMatrix/_mat2/subtract $src-as/base/SystemPriority/SystemPriority.sortSystems<src-as/base/System/System>~anonymous|0 $src-as/base/SystemPriority/SystemPriority.sortSystems<src-as/base/System/ListenerSystem>~anonymous|0 $src-as/WebGL2/systems/WebGLGeometrySystem/WebGLGeometrySystem#create~anonymous|0 $src-as/WebGL2/systems/WebGLGeometrySystem/WebGLGeometrySystem#createFeedback~anonymous|0)
- (export "main" (func $src-as/exports/mainFactories/main))
- (export "update" (func $src-as/exports/mainFactories/update))
- (export "defaultWorld" (func $src-as/exports/mainFactories/defaultWorld))
- (export "handleResize" (func $src-as/exports/mainFactories/handleResize))
- (export "defaultCamera" (func $src-as/exports/cameraFactories/defaultCamera))
- (export "removeAllCameras" (func $src-as/exports/cameraFactories/removeAllCameras))
+ (export "createDefaultCamera" (func $src-as/exports/camera/createDefaultCamera@varargs))
+ (export "removeAllCameras" (func $src-as/exports/camera/removeAllCameras))
  (export "unlitVertexColorShader" (global $src-as/rendering/shader/unlit/unlitVertexColors/unlitVertexColorShader))
  (export "litShader" (global $src-as/rendering/shader/lit/litShader/litShader))
+ (export "createDebugGizmos" (func $src-as/exports/debug/createDebugGizmos))
+ (export "main" (func $src-as/exports/defaultWorld/main))
+ (export "update" (func $src-as/exports/defaultWorld/update))
+ (export "handleMouseDown" (func $src-as/exports/input/handleMouseDown))
+ (export "handleMouseUp" (func $src-as/exports/input/handleMouseUp))
+ (export "handleMouseWheel" (func $src-as/exports/input/handleMouseWheel))
+ (export "handleMouseMove" (func $src-as/exports/input/handleMouseMove))
+ (export "handleKeyDown" (func $src-as/exports/input/handleKeyDown))
+ (export "handleKeyUp" (func $src-as/exports/input/handleKeyUp))
+ (export "createDefaultLights" (func $src-as/exports/light/createDefaultLights))
+ (export "handleResize" (func $src-as/exports/render/handleResize))
  (export "__new" (func $~lib/rt/itcms/__new))
  (export "__pin" (func $~lib/rt/itcms/__pin))
  (export "__unpin" (func $~lib/rt/itcms/__unpin))
  (export "__collect" (func $~lib/rt/itcms/__collect))
  (export "__rtti_base" (global $~lib/rt/__rtti_base))
  (export "memory" (memory $0))
+ (export "__setArgumentsLength" (func $~setArgumentsLength))
+ (export "defaultWorld" (func $export:src-as/exports/defaultWorld/defaultWorld))
  (export "rotatingCube" (func $export:src-as/exports/demos/rotatingCube))
  (start $~start)
  (func $~lib/math/murmurHash3 (param $0 i64) (result i64)
@@ -9960,8 +9976,24 @@
   call $src-as/math/Color8/Color8.get:gray
   global.set $src-as/math/Color8/Color8._gray
  )
+ (func $src-as/math/Color/Color#set:m (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store
+  local.get $0
+  local.get $1
+  i32.const 0
+  call $~lib/rt/itcms/__link
+ )
  (func $start:src-as/math/Color
   call $start:src-as/math/Color8
+  i32.const 0
+  f32.const 0
+  f32.const 0
+  f32.const 0
+  f32.const 0
+  call $src-as/math/Color/Color#constructor
+  global.set $src-as/math/Color/Color.clear
  )
  (func $~lib/staticarray/StaticArray<~lib/string/String>#__uset (param $0 i32) (param $1 i32) (param $2 i32)
   local.get $0
@@ -12037,9 +12069,247 @@
  (func $start:src-as/rendering/geometry/DebugNormalGeometry
   call $start:src-as/rendering/geometry/QuadGeometry
  )
+ (func $~lib/array/Array<~lib/staticarray/StaticArray<f32>>#__uset (param $0 i32) (param $1 i32) (param $2 i32)
+  local.get $0
+  i32.load offset=4
+  local.get $1
+  i32.const 2
+  i32.shl
+  i32.add
+  local.get $2
+  i32.store
+  i32.const 1
+  drop
+  local.get $0
+  local.get $2
+  i32.const 1
+  call $~lib/rt/itcms/__link
+ )
+ (func $~lib/array/Array<~lib/staticarray/StaticArray<f32>>#get:length (param $0 i32) (result i32)
+  local.get $0
+  i32.load offset=12
+ )
+ (func $~lib/staticarray/StaticArray<~lib/staticarray/StaticArray<f32>>#get:length (param $0 i32) (result i32)
+  local.get $0
+  i32.const 20
+  i32.sub
+  i32.load offset=16
+  i32.const 2
+  i32.shr_u
+ )
+ (func $~lib/staticarray/StaticArray<~lib/staticarray/StaticArray<f32>>#__uset (param $0 i32) (param $1 i32) (param $2 i32)
+  local.get $0
+  local.get $1
+  i32.const 2
+  i32.shl
+  i32.add
+  local.get $2
+  i32.store
+  i32.const 1
+  drop
+  local.get $0
+  local.get $2
+  i32.const 1
+  call $~lib/rt/itcms/__link
+ )
+ (func $~lib/staticarray/StaticArray<~lib/staticarray/StaticArray<f32>>#__set (param $0 i32) (param $1 i32) (param $2 i32)
+  local.get $1
+  local.get $0
+  call $~lib/staticarray/StaticArray<~lib/staticarray/StaticArray<f32>>#get:length
+  i32.ge_u
+  if
+   i32.const 96
+   i32.const 4784
+   i32.const 133
+   i32.const 41
+   call $~lib/builtins/abort
+   unreachable
+  end
+  local.get $0
+  local.get $1
+  local.get $2
+  call $~lib/staticarray/StaticArray<~lib/staticarray/StaticArray<f32>>#__uset
+ )
+ (func $~lib/array/Array<~lib/staticarray/StaticArray<u16>>#__uset (param $0 i32) (param $1 i32) (param $2 i32)
+  local.get $0
+  i32.load offset=4
+  local.get $1
+  i32.const 2
+  i32.shl
+  i32.add
+  local.get $2
+  i32.store
+  i32.const 1
+  drop
+  local.get $0
+  local.get $2
+  i32.const 1
+  call $~lib/rt/itcms/__link
+ )
+ (func $~lib/array/Array<~lib/staticarray/StaticArray<u16>>#get:length (param $0 i32) (result i32)
+  local.get $0
+  i32.load offset=12
+ )
+ (func $~lib/staticarray/StaticArray<~lib/staticarray/StaticArray<u16>>#get:length (param $0 i32) (result i32)
+  local.get $0
+  i32.const 20
+  i32.sub
+  i32.load offset=16
+  i32.const 2
+  i32.shr_u
+ )
+ (func $~lib/staticarray/StaticArray<~lib/staticarray/StaticArray<u16>>#__uset (param $0 i32) (param $1 i32) (param $2 i32)
+  local.get $0
+  local.get $1
+  i32.const 2
+  i32.shl
+  i32.add
+  local.get $2
+  i32.store
+  i32.const 1
+  drop
+  local.get $0
+  local.get $2
+  i32.const 1
+  call $~lib/rt/itcms/__link
+ )
+ (func $~lib/staticarray/StaticArray<~lib/staticarray/StaticArray<u16>>#__set (param $0 i32) (param $1 i32) (param $2 i32)
+  local.get $1
+  local.get $0
+  call $~lib/staticarray/StaticArray<~lib/staticarray/StaticArray<u16>>#get:length
+  i32.ge_u
+  if
+   i32.const 96
+   i32.const 4784
+   i32.const 133
+   i32.const 41
+   call $~lib/builtins/abort
+   unreachable
+  end
+  local.get $0
+  local.get $1
+  local.get $2
+  call $~lib/staticarray/StaticArray<~lib/staticarray/StaticArray<u16>>#__uset
+ )
+ (func $src-as/utility/_ArrayUtils/fill<u8> (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  i32.const 0
+  local.set $2
+  loop $for-loop|0
+   local.get $2
+   local.get $0
+   call $~lib/staticarray/StaticArray<u8>#get:length
+   i32.lt_s
+   local.set $3
+   local.get $3
+   if
+    i32.const 0
+    local.set $4
+    loop $for-loop|1
+     local.get $4
+     local.get $1
+     call $~lib/array/Array<u8>#get:length
+     i32.lt_s
+     local.set $5
+     local.get $5
+     if
+      local.get $0
+      local.get $2
+      local.get $4
+      i32.add
+      local.get $1
+      local.get $4
+      call $~lib/array/Array<u8>#__get
+      call $~lib/staticarray/StaticArray<u8>#__set
+      local.get $4
+      i32.const 1
+      i32.add
+      local.set $4
+      br $for-loop|1
+     end
+    end
+    local.get $2
+    local.get $1
+    call $~lib/array/Array<u8>#get:length
+    i32.add
+    local.set $2
+    br $for-loop|0
+   end
+  end
+  local.get $0
+ )
+ (func $~lib/array/Array<~lib/staticarray/StaticArray<u8>>#__uset (param $0 i32) (param $1 i32) (param $2 i32)
+  local.get $0
+  i32.load offset=4
+  local.get $1
+  i32.const 2
+  i32.shl
+  i32.add
+  local.get $2
+  i32.store
+  i32.const 1
+  drop
+  local.get $0
+  local.get $2
+  i32.const 1
+  call $~lib/rt/itcms/__link
+ )
+ (func $~lib/array/Array<~lib/staticarray/StaticArray<u8>>#get:length (param $0 i32) (result i32)
+  local.get $0
+  i32.load offset=12
+ )
+ (func $~lib/staticarray/StaticArray<~lib/staticarray/StaticArray<u8>>#get:length (param $0 i32) (result i32)
+  local.get $0
+  i32.const 20
+  i32.sub
+  i32.load offset=16
+  i32.const 2
+  i32.shr_u
+ )
+ (func $~lib/staticarray/StaticArray<~lib/staticarray/StaticArray<u8>>#__uset (param $0 i32) (param $1 i32) (param $2 i32)
+  local.get $0
+  local.get $1
+  i32.const 2
+  i32.shl
+  i32.add
+  local.get $2
+  i32.store
+  i32.const 1
+  drop
+  local.get $0
+  local.get $2
+  i32.const 1
+  call $~lib/rt/itcms/__link
+ )
+ (func $~lib/staticarray/StaticArray<~lib/staticarray/StaticArray<u8>>#__set (param $0 i32) (param $1 i32) (param $2 i32)
+  local.get $1
+  local.get $0
+  call $~lib/staticarray/StaticArray<~lib/staticarray/StaticArray<u8>>#get:length
+  i32.ge_u
+  if
+   i32.const 96
+   i32.const 4784
+   i32.const 133
+   i32.const 41
+   call $~lib/builtins/abort
+   unreachable
+  end
+  local.get $0
+  local.get $1
+  local.get $2
+  call $~lib/staticarray/StaticArray<~lib/staticarray/StaticArray<u8>>#__uset
+ )
+ (func $start:src-as/rendering/geometry/TransformGeometry
+  call $src-as/rendering/geometry/TransformGeometry/TransformGeometry.new
+  global.set $src-as/rendering/geometry/TransformGeometry/TransformGeometry.default
+ )
  (func $start:src-as/rendering/geometry/index
   call $start:src-as/rendering/geometry/CubeGeometry
   call $start:src-as/rendering/geometry/DebugNormalGeometry
+  call $start:src-as/rendering/geometry/TransformGeometry
  )
  (func $src-as/rendering/shader/Shader/Shader#set:vert (param $0 i32) (param $1 i32)
   local.get $0
@@ -12614,7 +12884,7 @@
    i32.const 23
    i32.shr_s
    local.set $14
-   i32.const 16224
+   i32.const 16320
    local.get $11
    i32.const 1
    i32.const 3
@@ -12623,7 +12893,7 @@
    i32.add
    f64.load
    local.set $15
-   i32.const 16224
+   i32.const 16320
    local.get $11
    i32.const 1
    i32.const 3
@@ -12757,7 +13027,7 @@
    f64.sub
    f64.sub
    local.set $19
-   i32.const 16480
+   i32.const 16576
    local.get $23
    i32.wrap_i64
    i32.const 31
@@ -12889,17 +13159,14 @@
  (func $start:src-as/base/index
   call $start:src-as/base/Component
  )
- (func $start:src-as/exports/mainFactories
+ (func $start:src-as/exports/camera
   call $start:src-as/base/index
  )
  (func $start:src-as/exports/index
-  call $start:src-as/exports/mainFactories
+  call $start:src-as/exports/camera
  )
  (func $start:src-as/index
   call $start:src-as/exports/index
- )
- (func $src-as/exports/mainFactories/main
-  nop
  )
  (func $src-as/base/World/World.set:main (param $0 i32)
   local.get $0
@@ -13149,12 +13416,71 @@
   local.get $1
   i32.store offset=20
  )
- (func $~lib/array/Array<src-as/base/System/System>#get:length (param $0 i32) (result i32)
+ (func $src-as/base/Entity/Entity#set:world (param $0 i32) (param $1 i32)
   local.get $0
-  i32.load offset=12
+  local.get $1
+  i32.store
+  local.get $0
+  local.get $1
+  i32.const 0
+  call $~lib/rt/itcms/__link
  )
- (func $src-as/base/System/System#update (param $0 i32)
-  nop
+ (func $src-as/base/Entity/Entity#set:id (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=4
+ )
+ (func $src-as/base/World/World#set:entity (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  call $src-as/base/World/World#set:_entity
+ )
+ (func $src-as/base/Entity/Entity#set:components (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=8
+  local.get $0
+  local.get $1
+  i32.const 0
+  call $~lib/rt/itcms/__link
+ )
+ (func $~lib/map/Map<u32,src-as/base/Component/Component>#set:buckets (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store
+  local.get $0
+  local.get $1
+  i32.const 0
+  call $~lib/rt/itcms/__link
+ )
+ (func $~lib/map/Map<u32,src-as/base/Component/Component>#set:bucketsMask (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=4
+ )
+ (func $~lib/map/Map<u32,src-as/base/Component/Component>#set:entries (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=8
+  local.get $0
+  local.get $1
+  i32.const 0
+  call $~lib/rt/itcms/__link
+ )
+ (func $~lib/map/Map<u32,src-as/base/Component/Component>#set:entriesCapacity (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=12
+ )
+ (func $~lib/map/Map<u32,src-as/base/Component/Component>#set:entriesOffset (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=16
+ )
+ (func $~lib/map/Map<u32,src-as/base/Component/Component>#set:entriesCount (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=20
  )
  (func $~lib/util/hash/HASH<u32> (param $0 i32) (result i32)
   (local $1 i32)
@@ -13221,6 +13547,1607 @@
   local.get $3
   return
  )
+ (func $~lib/map/Map<u32,src-as/base/Entity/Entity>#find (param $0 i32) (param $1 i32) (param $2 i32) (result i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  local.get $0
+  i32.load
+  local.get $2
+  local.get $0
+  i32.load offset=4
+  i32.and
+  i32.const 4
+  i32.mul
+  i32.add
+  i32.load
+  local.set $3
+  loop $while-continue|0
+   local.get $3
+   local.set $4
+   local.get $4
+   if
+    local.get $3
+    i32.load offset=8
+    local.set $5
+    local.get $5
+    i32.const 1
+    i32.and
+    i32.eqz
+    if (result i32)
+     local.get $3
+     i32.load
+     local.get $1
+     i32.eq
+    else
+     i32.const 0
+    end
+    if
+     local.get $3
+     return
+    end
+    local.get $5
+    i32.const 1
+    i32.const -1
+    i32.xor
+    i32.and
+    local.set $3
+    br $while-continue|0
+   end
+  end
+  i32.const 0
+ )
+ (func $~lib/map/MapEntry<u32,src-as/base/Entity/Entity>#set:value (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=4
+ )
+ (func $~lib/map/MapEntry<u32,src-as/base/Entity/Entity>#set:key (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store
+ )
+ (func $~lib/map/MapEntry<u32,src-as/base/Entity/Entity>#set:taggedNext (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=8
+ )
+ (func $~lib/map/Map<u32,src-as/base/Entity/Entity>#rehash (param $0 i32) (param $1 i32)
+  (local $2 i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  (local $6 i32)
+  (local $7 i32)
+  (local $8 i32)
+  (local $9 i32)
+  (local $10 i32)
+  (local $11 i32)
+  (local $12 i32)
+  (local $13 i32)
+  (local $14 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  local.get $1
+  i32.const 1
+  i32.add
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  local.get $2
+  i32.const 4
+  i32.mul
+  call $~lib/arraybuffer/ArrayBuffer#constructor
+  local.tee $3
+  i32.store
+  local.get $2
+  i32.const 8
+  i32.mul
+  i32.const 3
+  i32.div_s
+  local.set $4
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  local.get $4
+  i32.const 12
+  i32.mul
+  call $~lib/arraybuffer/ArrayBuffer#constructor
+  local.tee $5
+  i32.store offset=4
+  local.get $0
+  i32.load offset=8
+  local.set $6
+  local.get $6
+  local.get $0
+  i32.load offset=16
+  i32.const 12
+  i32.mul
+  i32.add
+  local.set $7
+  local.get $5
+  local.set $8
+  loop $while-continue|0
+   local.get $6
+   local.get $7
+   i32.ne
+   local.set $9
+   local.get $9
+   if
+    local.get $6
+    local.set $10
+    local.get $10
+    i32.load offset=8
+    i32.const 1
+    i32.and
+    i32.eqz
+    if
+     local.get $8
+     local.set $11
+     local.get $10
+     i32.load
+     local.set $12
+     local.get $11
+     local.get $12
+     call $~lib/map/MapEntry<u32,src-as/base/Entity/Entity>#set:key
+     local.get $11
+     local.get $10
+     i32.load offset=4
+     call $~lib/map/MapEntry<u32,src-as/base/Entity/Entity>#set:value
+     local.get $12
+     call $~lib/util/hash/HASH<u32>
+     local.get $1
+     i32.and
+     local.set $13
+     local.get $3
+     local.get $13
+     i32.const 4
+     i32.mul
+     i32.add
+     local.set $14
+     local.get $11
+     local.get $14
+     i32.load
+     call $~lib/map/MapEntry<u32,src-as/base/Entity/Entity>#set:taggedNext
+     local.get $14
+     local.get $8
+     i32.store
+     local.get $8
+     i32.const 12
+     i32.add
+     local.set $8
+    end
+    local.get $6
+    i32.const 12
+    i32.add
+    local.set $6
+    br $while-continue|0
+   end
+  end
+  local.get $0
+  local.get $3
+  call $~lib/map/Map<u32,src-as/base/Entity/Entity>#set:buckets
+  local.get $0
+  local.get $1
+  call $~lib/map/Map<u32,src-as/base/Entity/Entity>#set:bucketsMask
+  local.get $0
+  local.get $5
+  call $~lib/map/Map<u32,src-as/base/Entity/Entity>#set:entries
+  local.get $0
+  local.get $4
+  call $~lib/map/Map<u32,src-as/base/Entity/Entity>#set:entriesCapacity
+  local.get $0
+  local.get $0
+  i32.load offset=20
+  call $~lib/map/Map<u32,src-as/base/Entity/Entity>#set:entriesOffset
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+ )
+ (func $src-as/base/Component/Component#set:entity (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store
+  local.get $0
+  local.get $1
+  i32.const 0
+  call $~lib/rt/itcms/__link
+ )
+ (func $src-as/base/Component/Component#set:world (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=4
+  local.get $0
+  local.get $1
+  i32.const 0
+  call $~lib/rt/itcms/__link
+ )
+ (func $src-as/components/Transform/Transform#set:matrix (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=8
+  local.get $0
+  local.get $1
+  i32.const 0
+  call $~lib/rt/itcms/__link
+ )
+ (func $src-as/components/Transform/Transform#set:worldMatrix (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=12
+  local.get $0
+  local.get $1
+  i32.const 0
+  call $~lib/rt/itcms/__link
+ )
+ (func $src-as/components/Transform/Transform#set:inverseWorldMatrix (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=16
+  local.get $0
+  local.get $1
+  i32.const 0
+  call $~lib/rt/itcms/__link
+ )
+ (func $src-as/components/Transform/Transform#set:position (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=20
+  local.get $0
+  local.get $1
+  i32.const 0
+  call $~lib/rt/itcms/__link
+ )
+ (func $src-as/components/Transform/Transform#set:scale (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=24
+  local.get $0
+  local.get $1
+  i32.const 0
+  call $~lib/rt/itcms/__link
+ )
+ (func $src-as/components/Transform/Transform#set:rotation (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=28
+  local.get $0
+  local.get $1
+  i32.const 0
+  call $~lib/rt/itcms/__link
+ )
+ (func $~lib/set/Set<src-as/components/Transform/Transform>#set:buckets (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store
+  local.get $0
+  local.get $1
+  i32.const 0
+  call $~lib/rt/itcms/__link
+ )
+ (func $~lib/set/Set<src-as/components/Transform/Transform>#set:bucketsMask (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=4
+ )
+ (func $~lib/set/Set<src-as/components/Transform/Transform>#set:entries (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=8
+  local.get $0
+  local.get $1
+  i32.const 0
+  call $~lib/rt/itcms/__link
+ )
+ (func $~lib/set/Set<src-as/components/Transform/Transform>#set:entriesCapacity (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=12
+ )
+ (func $~lib/set/Set<src-as/components/Transform/Transform>#set:entriesOffset (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=16
+ )
+ (func $~lib/set/Set<src-as/components/Transform/Transform>#set:entriesCount (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=20
+ )
+ (func $src-as/components/Transform/Transform#set:children (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=32
+  local.get $0
+  local.get $1
+  i32.const 0
+  call $~lib/rt/itcms/__link
+ )
+ (func $~lib/util/hash/HASH<src-as/components/Transform/Transform> (param $0 i32) (result i32)
+  (local $1 i32)
+  (local $2 i32)
+  (local $3 i32)
+  i32.const 0
+  drop
+  i32.const 1
+  drop
+  i32.const 4
+  i32.const 4
+  i32.eq
+  drop
+  local.get $0
+  local.set $1
+  i32.const 4
+  local.set $2
+  i32.const 0
+  i32.const 374761393
+  i32.add
+  local.get $2
+  i32.add
+  local.set $3
+  local.get $3
+  local.get $1
+  i32.const -1028477379
+  i32.mul
+  i32.add
+  local.set $3
+  local.get $3
+  i32.const 17
+  i32.rotl
+  i32.const 668265263
+  i32.mul
+  local.set $3
+  local.get $3
+  local.get $3
+  i32.const 15
+  i32.shr_u
+  i32.xor
+  local.set $3
+  local.get $3
+  i32.const -2048144777
+  i32.mul
+  local.set $3
+  local.get $3
+  local.get $3
+  i32.const 13
+  i32.shr_u
+  i32.xor
+  local.set $3
+  local.get $3
+  i32.const -1028477379
+  i32.mul
+  local.set $3
+  local.get $3
+  local.get $3
+  i32.const 16
+  i32.shr_u
+  i32.xor
+  local.set $3
+  local.get $3
+  return
+ )
+ (func $~lib/set/Set<src-as/components/Transform/Transform>#find (param $0 i32) (param $1 i32) (param $2 i32) (result i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  local.get $0
+  i32.load
+  local.get $2
+  local.get $0
+  i32.load offset=4
+  i32.and
+  i32.const 4
+  i32.mul
+  i32.add
+  i32.load
+  local.set $3
+  loop $while-continue|0
+   local.get $3
+   local.set $4
+   local.get $4
+   if
+    local.get $3
+    i32.load offset=4
+    local.set $5
+    local.get $5
+    i32.const 1
+    i32.and
+    i32.eqz
+    if (result i32)
+     local.get $3
+     i32.load
+     local.get $1
+     i32.eq
+    else
+     i32.const 0
+    end
+    if
+     local.get $3
+     return
+    end
+    local.get $5
+    i32.const 1
+    i32.const -1
+    i32.xor
+    i32.and
+    local.set $3
+    br $while-continue|0
+   end
+  end
+  i32.const 0
+ )
+ (func $~lib/set/SetEntry<src-as/components/Transform/Transform>#set:taggedNext (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=4
+ )
+ (func $~lib/set/SetEntry<src-as/components/Transform/Transform>#set:key (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store
+ )
+ (func $~lib/set/Set<src-as/components/Transform/Transform>#rehash (param $0 i32) (param $1 i32)
+  (local $2 i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  (local $6 i32)
+  (local $7 i32)
+  (local $8 i32)
+  (local $9 i32)
+  (local $10 i32)
+  (local $11 i32)
+  (local $12 i32)
+  (local $13 i32)
+  (local $14 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 12
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store offset=8
+  local.get $1
+  i32.const 1
+  i32.add
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  local.get $2
+  i32.const 4
+  i32.mul
+  call $~lib/arraybuffer/ArrayBuffer#constructor
+  local.tee $3
+  i32.store
+  local.get $2
+  i32.const 8
+  i32.mul
+  i32.const 3
+  i32.div_s
+  local.set $4
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  local.get $4
+  i32.const 8
+  i32.mul
+  call $~lib/arraybuffer/ArrayBuffer#constructor
+  local.tee $5
+  i32.store offset=4
+  local.get $0
+  i32.load offset=8
+  local.set $6
+  local.get $6
+  local.get $0
+  i32.load offset=16
+  i32.const 8
+  i32.mul
+  i32.add
+  local.set $7
+  local.get $5
+  local.set $8
+  loop $while-continue|0
+   local.get $6
+   local.get $7
+   i32.ne
+   local.set $9
+   local.get $9
+   if
+    local.get $6
+    local.set $10
+    local.get $10
+    i32.load offset=4
+    i32.const 1
+    i32.and
+    i32.eqz
+    if
+     local.get $8
+     local.set $11
+     global.get $~lib/memory/__stack_pointer
+     local.get $10
+     i32.load
+     local.tee $12
+     i32.store offset=8
+     local.get $11
+     local.get $12
+     call $~lib/set/SetEntry<src-as/components/Transform/Transform>#set:key
+     local.get $12
+     call $~lib/util/hash/HASH<src-as/components/Transform/Transform>
+     local.get $1
+     i32.and
+     local.set $13
+     local.get $3
+     local.get $13
+     i32.const 4
+     i32.mul
+     i32.add
+     local.set $14
+     local.get $11
+     local.get $14
+     i32.load
+     call $~lib/set/SetEntry<src-as/components/Transform/Transform>#set:taggedNext
+     local.get $14
+     local.get $8
+     i32.store
+     local.get $8
+     i32.const 8
+     i32.add
+     local.set $8
+    end
+    local.get $6
+    i32.const 8
+    i32.add
+    local.set $6
+    br $while-continue|0
+   end
+  end
+  local.get $0
+  local.get $3
+  call $~lib/set/Set<src-as/components/Transform/Transform>#set:buckets
+  local.get $0
+  local.get $1
+  call $~lib/set/Set<src-as/components/Transform/Transform>#set:bucketsMask
+  local.get $0
+  local.get $5
+  call $~lib/set/Set<src-as/components/Transform/Transform>#set:entries
+  local.get $0
+  local.get $4
+  call $~lib/set/Set<src-as/components/Transform/Transform>#set:entriesCapacity
+  local.get $0
+  local.get $0
+  i32.load offset=20
+  call $~lib/set/Set<src-as/components/Transform/Transform>#set:entriesOffset
+  global.get $~lib/memory/__stack_pointer
+  i32.const 12
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+ )
+ (func $~lib/set/Set<src-as/components/Transform/Transform>#delete (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  local.get $0
+  local.get $1
+  local.get $1
+  call $~lib/util/hash/HASH<src-as/components/Transform/Transform>
+  call $~lib/set/Set<src-as/components/Transform/Transform>#find
+  local.set $2
+  local.get $2
+  i32.eqz
+  if
+   i32.const 0
+   return
+  end
+  local.get $2
+  local.get $2
+  i32.load offset=4
+  i32.const 1
+  i32.or
+  call $~lib/set/SetEntry<src-as/components/Transform/Transform>#set:taggedNext
+  local.get $0
+  local.get $0
+  i32.load offset=20
+  i32.const 1
+  i32.sub
+  call $~lib/set/Set<src-as/components/Transform/Transform>#set:entriesCount
+  local.get $0
+  i32.load offset=4
+  i32.const 1
+  i32.shr_u
+  local.set $3
+  local.get $3
+  i32.const 1
+  i32.add
+  i32.const 4
+  local.tee $4
+  local.get $0
+  i32.load offset=20
+  local.tee $5
+  local.get $4
+  local.get $5
+  i32.gt_u
+  select
+  i32.ge_u
+  if (result i32)
+   local.get $0
+   i32.load offset=20
+   local.get $0
+   i32.load offset=12
+   i32.const 3
+   i32.mul
+   i32.const 4
+   i32.div_s
+   i32.lt_s
+  else
+   i32.const 0
+  end
+  if
+   local.get $0
+   local.get $3
+   call $~lib/set/Set<src-as/components/Transform/Transform>#rehash
+  end
+  i32.const 1
+ )
+ (func $~lib/set/Set<src-as/components/Transform/Transform>#add (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  (local $3 i32)
+  (local $4 i32)
+  local.get $1
+  call $~lib/util/hash/HASH<src-as/components/Transform/Transform>
+  local.set $2
+  local.get $0
+  local.get $1
+  local.get $2
+  call $~lib/set/Set<src-as/components/Transform/Transform>#find
+  local.set $3
+  local.get $3
+  i32.eqz
+  if
+   local.get $0
+   i32.load offset=16
+   local.get $0
+   i32.load offset=12
+   i32.eq
+   if
+    local.get $0
+    local.get $0
+    i32.load offset=20
+    local.get $0
+    i32.load offset=12
+    i32.const 3
+    i32.mul
+    i32.const 4
+    i32.div_s
+    i32.lt_s
+    if (result i32)
+     local.get $0
+     i32.load offset=4
+    else
+     local.get $0
+     i32.load offset=4
+     i32.const 1
+     i32.shl
+     i32.const 1
+     i32.or
+    end
+    call $~lib/set/Set<src-as/components/Transform/Transform>#rehash
+   end
+   local.get $0
+   i32.load offset=8
+   local.get $0
+   local.get $0
+   i32.load offset=16
+   local.tee $4
+   i32.const 1
+   i32.add
+   call $~lib/set/Set<src-as/components/Transform/Transform>#set:entriesOffset
+   local.get $4
+   i32.const 8
+   i32.mul
+   i32.add
+   local.set $3
+   local.get $3
+   local.get $1
+   call $~lib/set/SetEntry<src-as/components/Transform/Transform>#set:key
+   i32.const 1
+   drop
+   local.get $0
+   local.get $1
+   i32.const 1
+   call $~lib/rt/itcms/__link
+   local.get $0
+   local.get $0
+   i32.load offset=20
+   i32.const 1
+   i32.add
+   call $~lib/set/Set<src-as/components/Transform/Transform>#set:entriesCount
+   local.get $0
+   i32.load
+   local.get $2
+   local.get $0
+   i32.load offset=4
+   i32.and
+   i32.const 4
+   i32.mul
+   i32.add
+   local.set $4
+   local.get $3
+   local.get $4
+   i32.load
+   call $~lib/set/SetEntry<src-as/components/Transform/Transform>#set:taggedNext
+   local.get $4
+   local.get $3
+   i32.store
+  end
+  local.get $0
+ )
+ (func $src-as/components/Transform/Transform#set:parent (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=36
+  local.get $0
+  local.get $1
+  i32.const 0
+  call $~lib/rt/itcms/__link
+ )
+ (func $src-as/components/Transform/Transform#set:matrixAutoUpdate (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store8 offset=40
+ )
+ (func $~lib/map/Map<u32,src-as/base/Component/Component>#find (param $0 i32) (param $1 i32) (param $2 i32) (result i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  local.get $0
+  i32.load
+  local.get $2
+  local.get $0
+  i32.load offset=4
+  i32.and
+  i32.const 4
+  i32.mul
+  i32.add
+  i32.load
+  local.set $3
+  loop $while-continue|0
+   local.get $3
+   local.set $4
+   local.get $4
+   if
+    local.get $3
+    i32.load offset=8
+    local.set $5
+    local.get $5
+    i32.const 1
+    i32.and
+    i32.eqz
+    if (result i32)
+     local.get $3
+     i32.load
+     local.get $1
+     i32.eq
+    else
+     i32.const 0
+    end
+    if
+     local.get $3
+     return
+    end
+    local.get $5
+    i32.const 1
+    i32.const -1
+    i32.xor
+    i32.and
+    local.set $3
+    br $while-continue|0
+   end
+  end
+  i32.const 0
+ )
+ (func $~lib/map/MapEntry<u32,src-as/base/Component/Component>#set:value (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=4
+ )
+ (func $~lib/map/MapEntry<u32,src-as/base/Component/Component>#set:key (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store
+ )
+ (func $~lib/map/MapEntry<u32,src-as/base/Component/Component>#set:taggedNext (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=8
+ )
+ (func $~lib/map/Map<u32,src-as/base/Component/Component>#rehash (param $0 i32) (param $1 i32)
+  (local $2 i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  (local $6 i32)
+  (local $7 i32)
+  (local $8 i32)
+  (local $9 i32)
+  (local $10 i32)
+  (local $11 i32)
+  (local $12 i32)
+  (local $13 i32)
+  (local $14 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  local.get $1
+  i32.const 1
+  i32.add
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  local.get $2
+  i32.const 4
+  i32.mul
+  call $~lib/arraybuffer/ArrayBuffer#constructor
+  local.tee $3
+  i32.store
+  local.get $2
+  i32.const 8
+  i32.mul
+  i32.const 3
+  i32.div_s
+  local.set $4
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  local.get $4
+  i32.const 12
+  i32.mul
+  call $~lib/arraybuffer/ArrayBuffer#constructor
+  local.tee $5
+  i32.store offset=4
+  local.get $0
+  i32.load offset=8
+  local.set $6
+  local.get $6
+  local.get $0
+  i32.load offset=16
+  i32.const 12
+  i32.mul
+  i32.add
+  local.set $7
+  local.get $5
+  local.set $8
+  loop $while-continue|0
+   local.get $6
+   local.get $7
+   i32.ne
+   local.set $9
+   local.get $9
+   if
+    local.get $6
+    local.set $10
+    local.get $10
+    i32.load offset=8
+    i32.const 1
+    i32.and
+    i32.eqz
+    if
+     local.get $8
+     local.set $11
+     local.get $10
+     i32.load
+     local.set $12
+     local.get $11
+     local.get $12
+     call $~lib/map/MapEntry<u32,src-as/base/Component/Component>#set:key
+     local.get $11
+     local.get $10
+     i32.load offset=4
+     call $~lib/map/MapEntry<u32,src-as/base/Component/Component>#set:value
+     local.get $12
+     call $~lib/util/hash/HASH<u32>
+     local.get $1
+     i32.and
+     local.set $13
+     local.get $3
+     local.get $13
+     i32.const 4
+     i32.mul
+     i32.add
+     local.set $14
+     local.get $11
+     local.get $14
+     i32.load
+     call $~lib/map/MapEntry<u32,src-as/base/Component/Component>#set:taggedNext
+     local.get $14
+     local.get $8
+     i32.store
+     local.get $8
+     i32.const 12
+     i32.add
+     local.set $8
+    end
+    local.get $6
+    i32.const 12
+    i32.add
+    local.set $6
+    br $while-continue|0
+   end
+  end
+  local.get $0
+  local.get $3
+  call $~lib/map/Map<u32,src-as/base/Component/Component>#set:buckets
+  local.get $0
+  local.get $1
+  call $~lib/map/Map<u32,src-as/base/Component/Component>#set:bucketsMask
+  local.get $0
+  local.get $5
+  call $~lib/map/Map<u32,src-as/base/Component/Component>#set:entries
+  local.get $0
+  local.get $4
+  call $~lib/map/Map<u32,src-as/base/Component/Component>#set:entriesCapacity
+  local.get $0
+  local.get $0
+  i32.load offset=20
+  call $~lib/map/Map<u32,src-as/base/Component/Component>#set:entriesOffset
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+ )
+ (func $~lib/map/Map<u32,~lib/array/Array<src-as/base/Query/Query>>#find (param $0 i32) (param $1 i32) (param $2 i32) (result i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  local.get $0
+  i32.load
+  local.get $2
+  local.get $0
+  i32.load offset=4
+  i32.and
+  i32.const 4
+  i32.mul
+  i32.add
+  i32.load
+  local.set $3
+  loop $while-continue|0
+   local.get $3
+   local.set $4
+   local.get $4
+   if
+    local.get $3
+    i32.load offset=8
+    local.set $5
+    local.get $5
+    i32.const 1
+    i32.and
+    i32.eqz
+    if (result i32)
+     local.get $3
+     i32.load
+     local.get $1
+     i32.eq
+    else
+     i32.const 0
+    end
+    if
+     local.get $3
+     return
+    end
+    local.get $5
+    i32.const 1
+    i32.const -1
+    i32.xor
+    i32.and
+    local.set $3
+    br $while-continue|0
+   end
+  end
+  i32.const 0
+ )
+ (func $~lib/map/Map<u32,~lib/array/Array<src-as/base/Query/Query>>#has (param $0 i32) (param $1 i32) (result i32)
+  local.get $0
+  local.get $1
+  local.get $1
+  call $~lib/util/hash/HASH<u32>
+  call $~lib/map/Map<u32,~lib/array/Array<src-as/base/Query/Query>>#find
+  i32.const 0
+  i32.ne
+ )
+ (func $~lib/map/Map<u32,~lib/array/Array<src-as/base/Query/Query>>#get (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  local.get $0
+  local.get $1
+  local.get $1
+  call $~lib/util/hash/HASH<u32>
+  call $~lib/map/Map<u32,~lib/array/Array<src-as/base/Query/Query>>#find
+  local.set $2
+  local.get $2
+  i32.eqz
+  if
+   i32.const 17344
+   i32.const 17408
+   i32.const 105
+   i32.const 17
+   call $~lib/builtins/abort
+   unreachable
+  end
+  local.get $2
+  i32.load offset=4
+ )
+ (func $~lib/array/Array<src-as/base/Query/Query>#get:length (param $0 i32) (result i32)
+  local.get $0
+  i32.load offset=12
+ )
+ (func $~lib/array/Array<u32>#get:length (param $0 i32) (result i32)
+  local.get $0
+  i32.load offset=12
+ )
+ (func $~lib/array/Array<u32>#__get (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  local.get $1
+  local.get $0
+  i32.load offset=12
+  i32.ge_u
+  if
+   i32.const 96
+   i32.const 4208
+   i32.const 114
+   i32.const 42
+   call $~lib/builtins/abort
+   unreachable
+  end
+  local.get $0
+  i32.load offset=4
+  local.get $1
+  i32.const 2
+  i32.shl
+  i32.add
+  i32.load
+  local.set $2
+  i32.const 0
+  drop
+  local.get $2
+ )
+ (func $~lib/map/Map<u32,src-as/base/Component/Component>#has (param $0 i32) (param $1 i32) (result i32)
+  local.get $0
+  local.get $1
+  local.get $1
+  call $~lib/util/hash/HASH<u32>
+  call $~lib/map/Map<u32,src-as/base/Component/Component>#find
+  i32.const 0
+  i32.ne
+ )
+ (func $~lib/util/hash/HASH<src-as/base/Entity/Entity> (param $0 i32) (result i32)
+  (local $1 i32)
+  (local $2 i32)
+  (local $3 i32)
+  i32.const 0
+  drop
+  i32.const 1
+  drop
+  i32.const 4
+  i32.const 4
+  i32.eq
+  drop
+  local.get $0
+  local.set $1
+  i32.const 4
+  local.set $2
+  i32.const 0
+  i32.const 374761393
+  i32.add
+  local.get $2
+  i32.add
+  local.set $3
+  local.get $3
+  local.get $1
+  i32.const -1028477379
+  i32.mul
+  i32.add
+  local.set $3
+  local.get $3
+  i32.const 17
+  i32.rotl
+  i32.const 668265263
+  i32.mul
+  local.set $3
+  local.get $3
+  local.get $3
+  i32.const 15
+  i32.shr_u
+  i32.xor
+  local.set $3
+  local.get $3
+  i32.const -2048144777
+  i32.mul
+  local.set $3
+  local.get $3
+  local.get $3
+  i32.const 13
+  i32.shr_u
+  i32.xor
+  local.set $3
+  local.get $3
+  i32.const -1028477379
+  i32.mul
+  local.set $3
+  local.get $3
+  local.get $3
+  i32.const 16
+  i32.shr_u
+  i32.xor
+  local.set $3
+  local.get $3
+  return
+ )
+ (func $~lib/set/Set<src-as/base/Entity/Entity>#find (param $0 i32) (param $1 i32) (param $2 i32) (result i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  local.get $0
+  i32.load
+  local.get $2
+  local.get $0
+  i32.load offset=4
+  i32.and
+  i32.const 4
+  i32.mul
+  i32.add
+  i32.load
+  local.set $3
+  loop $while-continue|0
+   local.get $3
+   local.set $4
+   local.get $4
+   if
+    local.get $3
+    i32.load offset=4
+    local.set $5
+    local.get $5
+    i32.const 1
+    i32.and
+    i32.eqz
+    if (result i32)
+     local.get $3
+     i32.load
+     local.get $1
+     i32.eq
+    else
+     i32.const 0
+    end
+    if
+     local.get $3
+     return
+    end
+    local.get $5
+    i32.const 1
+    i32.const -1
+    i32.xor
+    i32.and
+    local.set $3
+    br $while-continue|0
+   end
+  end
+  i32.const 0
+ )
+ (func $~lib/set/SetEntry<src-as/base/Entity/Entity>#set:key (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store
+ )
+ (func $~lib/set/SetEntry<src-as/base/Entity/Entity>#set:taggedNext (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=4
+ )
+ (func $~lib/set/Set<src-as/base/Entity/Entity>#set:buckets (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store
+  local.get $0
+  local.get $1
+  i32.const 0
+  call $~lib/rt/itcms/__link
+ )
+ (func $~lib/set/Set<src-as/base/Entity/Entity>#set:bucketsMask (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=4
+ )
+ (func $~lib/set/Set<src-as/base/Entity/Entity>#set:entries (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=8
+  local.get $0
+  local.get $1
+  i32.const 0
+  call $~lib/rt/itcms/__link
+ )
+ (func $~lib/set/Set<src-as/base/Entity/Entity>#set:entriesCapacity (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=12
+ )
+ (func $~lib/set/Set<src-as/base/Entity/Entity>#set:entriesOffset (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=16
+ )
+ (func $~lib/set/Set<src-as/base/Entity/Entity>#rehash (param $0 i32) (param $1 i32)
+  (local $2 i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  (local $6 i32)
+  (local $7 i32)
+  (local $8 i32)
+  (local $9 i32)
+  (local $10 i32)
+  (local $11 i32)
+  (local $12 i32)
+  (local $13 i32)
+  (local $14 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 12
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store offset=8
+  local.get $1
+  i32.const 1
+  i32.add
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  local.get $2
+  i32.const 4
+  i32.mul
+  call $~lib/arraybuffer/ArrayBuffer#constructor
+  local.tee $3
+  i32.store
+  local.get $2
+  i32.const 8
+  i32.mul
+  i32.const 3
+  i32.div_s
+  local.set $4
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  local.get $4
+  i32.const 8
+  i32.mul
+  call $~lib/arraybuffer/ArrayBuffer#constructor
+  local.tee $5
+  i32.store offset=4
+  local.get $0
+  i32.load offset=8
+  local.set $6
+  local.get $6
+  local.get $0
+  i32.load offset=16
+  i32.const 8
+  i32.mul
+  i32.add
+  local.set $7
+  local.get $5
+  local.set $8
+  loop $while-continue|0
+   local.get $6
+   local.get $7
+   i32.ne
+   local.set $9
+   local.get $9
+   if
+    local.get $6
+    local.set $10
+    local.get $10
+    i32.load offset=4
+    i32.const 1
+    i32.and
+    i32.eqz
+    if
+     local.get $8
+     local.set $11
+     global.get $~lib/memory/__stack_pointer
+     local.get $10
+     i32.load
+     local.tee $12
+     i32.store offset=8
+     local.get $11
+     local.get $12
+     call $~lib/set/SetEntry<src-as/base/Entity/Entity>#set:key
+     local.get $12
+     call $~lib/util/hash/HASH<src-as/base/Entity/Entity>
+     local.get $1
+     i32.and
+     local.set $13
+     local.get $3
+     local.get $13
+     i32.const 4
+     i32.mul
+     i32.add
+     local.set $14
+     local.get $11
+     local.get $14
+     i32.load
+     call $~lib/set/SetEntry<src-as/base/Entity/Entity>#set:taggedNext
+     local.get $14
+     local.get $8
+     i32.store
+     local.get $8
+     i32.const 8
+     i32.add
+     local.set $8
+    end
+    local.get $6
+    i32.const 8
+    i32.add
+    local.set $6
+    br $while-continue|0
+   end
+  end
+  local.get $0
+  local.get $3
+  call $~lib/set/Set<src-as/base/Entity/Entity>#set:buckets
+  local.get $0
+  local.get $1
+  call $~lib/set/Set<src-as/base/Entity/Entity>#set:bucketsMask
+  local.get $0
+  local.get $5
+  call $~lib/set/Set<src-as/base/Entity/Entity>#set:entries
+  local.get $0
+  local.get $4
+  call $~lib/set/Set<src-as/base/Entity/Entity>#set:entriesCapacity
+  local.get $0
+  local.get $0
+  i32.load offset=20
+  call $~lib/set/Set<src-as/base/Entity/Entity>#set:entriesOffset
+  global.get $~lib/memory/__stack_pointer
+  i32.const 12
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+ )
+ (func $~lib/set/Set<src-as/base/Entity/Entity>#set:entriesCount (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=20
+ )
+ (func $~lib/set/Set<src-as/base/Entity/Entity>#add (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  (local $3 i32)
+  (local $4 i32)
+  local.get $1
+  call $~lib/util/hash/HASH<src-as/base/Entity/Entity>
+  local.set $2
+  local.get $0
+  local.get $1
+  local.get $2
+  call $~lib/set/Set<src-as/base/Entity/Entity>#find
+  local.set $3
+  local.get $3
+  i32.eqz
+  if
+   local.get $0
+   i32.load offset=16
+   local.get $0
+   i32.load offset=12
+   i32.eq
+   if
+    local.get $0
+    local.get $0
+    i32.load offset=20
+    local.get $0
+    i32.load offset=12
+    i32.const 3
+    i32.mul
+    i32.const 4
+    i32.div_s
+    i32.lt_s
+    if (result i32)
+     local.get $0
+     i32.load offset=4
+    else
+     local.get $0
+     i32.load offset=4
+     i32.const 1
+     i32.shl
+     i32.const 1
+     i32.or
+    end
+    call $~lib/set/Set<src-as/base/Entity/Entity>#rehash
+   end
+   local.get $0
+   i32.load offset=8
+   local.get $0
+   local.get $0
+   i32.load offset=16
+   local.tee $4
+   i32.const 1
+   i32.add
+   call $~lib/set/Set<src-as/base/Entity/Entity>#set:entriesOffset
+   local.get $4
+   i32.const 8
+   i32.mul
+   i32.add
+   local.set $3
+   local.get $3
+   local.get $1
+   call $~lib/set/SetEntry<src-as/base/Entity/Entity>#set:key
+   i32.const 1
+   drop
+   local.get $0
+   local.get $1
+   i32.const 1
+   call $~lib/rt/itcms/__link
+   local.get $0
+   local.get $0
+   i32.load offset=20
+   i32.const 1
+   i32.add
+   call $~lib/set/Set<src-as/base/Entity/Entity>#set:entriesCount
+   local.get $0
+   i32.load
+   local.get $2
+   local.get $0
+   i32.load offset=4
+   i32.and
+   i32.const 4
+   i32.mul
+   i32.add
+   local.set $4
+   local.get $3
+   local.get $4
+   i32.load
+   call $~lib/set/SetEntry<src-as/base/Entity/Entity>#set:taggedNext
+   local.get $4
+   local.get $3
+   i32.store
+  end
+  local.get $0
+ )
+ (func $~lib/map/Map<u32,~lib/array/Array<src-as/base/System/ListenerSystem>>#find (param $0 i32) (param $1 i32) (param $2 i32) (result i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  local.get $0
+  i32.load
+  local.get $2
+  local.get $0
+  i32.load offset=4
+  i32.and
+  i32.const 4
+  i32.mul
+  i32.add
+  i32.load
+  local.set $3
+  loop $while-continue|0
+   local.get $3
+   local.set $4
+   local.get $4
+   if
+    local.get $3
+    i32.load offset=8
+    local.set $5
+    local.get $5
+    i32.const 1
+    i32.and
+    i32.eqz
+    if (result i32)
+     local.get $3
+     i32.load
+     local.get $1
+     i32.eq
+    else
+     i32.const 0
+    end
+    if
+     local.get $3
+     return
+    end
+    local.get $5
+    i32.const 1
+    i32.const -1
+    i32.xor
+    i32.and
+    local.set $3
+    br $while-continue|0
+   end
+  end
+  i32.const 0
+ )
+ (func $~lib/map/Map<u32,~lib/array/Array<src-as/base/System/ListenerSystem>>#has (param $0 i32) (param $1 i32) (result i32)
+  local.get $0
+  local.get $1
+  local.get $1
+  call $~lib/util/hash/HASH<u32>
+  call $~lib/map/Map<u32,~lib/array/Array<src-as/base/System/ListenerSystem>>#find
+  i32.const 0
+  i32.ne
+ )
+ (func $~lib/map/Map<u32,~lib/array/Array<src-as/base/System/ListenerSystem>>#get (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  local.get $0
+  local.get $1
+  local.get $1
+  call $~lib/util/hash/HASH<u32>
+  call $~lib/map/Map<u32,~lib/array/Array<src-as/base/System/ListenerSystem>>#find
+  local.set $2
+  local.get $2
+  i32.eqz
+  if
+   i32.const 17344
+   i32.const 17408
+   i32.const 105
+   i32.const 17
+   call $~lib/builtins/abort
+   unreachable
+  end
+  local.get $2
+  i32.load offset=4
+ )
+ (func $~lib/array/Array<src-as/base/System/ListenerSystem>#get:length (param $0 i32) (result i32)
+  local.get $0
+  i32.load offset=12
+ )
+ (func $src-as/base/System/ListenerSystem#onAdd (param $0 i32) (param $1 i32)
+  nop
+ )
+ (func $~lib/rt/__instanceof (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  (local $3 i32)
+  local.get $0
+  i32.const 20
+  i32.sub
+  i32.load offset=12
+  local.set $2
+  global.get $~lib/rt/__rtti_base
+  local.set $3
+  local.get $2
+  local.get $3
+  i32.load
+  i32.le_u
+  if
+   loop $do-loop|0
+    local.get $2
+    local.get $1
+    i32.eq
+    if
+     i32.const 1
+     return
+    end
+    local.get $3
+    i32.const 4
+    i32.add
+    local.get $2
+    i32.const 8
+    i32.mul
+    i32.add
+    i32.load offset=4
+    local.tee $2
+    br_if $do-loop|0
+   end
+  end
+  i32.const 0
+ )
  (func $~lib/map/Map<u32,src-as/base/Object/ObjectBase>#find (param $0 i32) (param $1 i32) (param $2 i32) (result i32)
   (local $3 i32)
   (local $4 i32)
@@ -13280,6 +15207,27 @@
   i32.const 0
   i32.ne
  )
+ (func $~lib/map/Map<u32,src-as/base/Object/ObjectBase>#get (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  local.get $0
+  local.get $1
+  local.get $1
+  call $~lib/util/hash/HASH<u32>
+  call $~lib/map/Map<u32,src-as/base/Object/ObjectBase>#find
+  local.set $2
+  local.get $2
+  i32.eqz
+  if
+   i32.const 17344
+   i32.const 17408
+   i32.const 105
+   i32.const 17
+   call $~lib/builtins/abort
+   unreachable
+  end
+  local.get $2
+  i32.load offset=4
+ )
  (func $src-as/base/System/System#set:world (param $0 i32) (param $1 i32)
   local.get $0
   local.get $1
@@ -13298,37 +15246,7 @@
   i32.const 0
   call $~lib/rt/itcms/__link
  )
- (func $src-as/components/Time/Time#set:start (param $0 i32) (param $1 f32)
-  local.get $0
-  local.get $1
-  f32.store
- )
- (func $src-as/components/Time/Time#set:last (param $0 i32) (param $1 f32)
-  local.get $0
-  local.get $1
-  f32.store offset=4
- )
- (func $src-as/components/Time/Time#set:elapsed (param $0 i32) (param $1 f32)
-  local.get $0
-  local.get $1
-  f32.store offset=8
- )
- (func $src-as/components/Time/Time#set:now (param $0 i32) (param $1 f32)
-  local.get $0
-  local.get $1
-  f32.store offset=12
- )
- (func $src-as/components/Time/Time#set:delta (param $0 i32) (param $1 f32)
-  local.get $0
-  local.get $1
-  f32.store offset=16
- )
- (func $src-as/components/Time/Time#set:frame (param $0 i32) (param $1 i64)
-  local.get $0
-  local.get $1
-  i64.store offset=24
- )
- (func $src-as/base/systems/TimeSystem/TimeSystem#set:time (param $0 i32) (param $1 i32)
+ (func $src-as/base/systems/BehaviorSystem/BehaviorSystem#set:behaviors (param $0 i32) (param $1 i32)
   local.get $0
   local.get $1
   i32.store offset=8
@@ -13336,6 +15254,45 @@
   local.get $1
   i32.const 0
   call $~lib/rt/itcms/__link
+ )
+ (func $~lib/array/Array<src-as/base/System/System>#set:length_ (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=12
+ )
+ (func $~lib/array/Array<src-as/base/System/System>#push (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  (local $3 i32)
+  local.get $0
+  i32.load offset=12
+  local.set $2
+  local.get $2
+  i32.const 1
+  i32.add
+  local.set $3
+  local.get $0
+  local.get $3
+  i32.const 2
+  i32.const 1
+  call $~lib/array/ensureCapacity
+  i32.const 1
+  drop
+  local.get $0
+  i32.load offset=4
+  local.get $2
+  i32.const 2
+  i32.shl
+  i32.add
+  local.get $1
+  i32.store
+  local.get $0
+  local.get $1
+  i32.const 1
+  call $~lib/rt/itcms/__link
+  local.get $0
+  local.get $3
+  call $~lib/array/Array<src-as/base/System/System>#set:length_
+  local.get $3
  )
  (func $~lib/map/MapEntry<u32,src-as/base/Object/ObjectBase>#set:value (param $0 i32) (param $1 i32)
   local.get $0
@@ -13489,45 +15446,6 @@
   i32.const 8
   i32.add
   global.set $~lib/memory/__stack_pointer
- )
- (func $~lib/array/Array<src-as/base/System/System>#set:length_ (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=12
- )
- (func $~lib/array/Array<src-as/base/System/System>#push (param $0 i32) (param $1 i32) (result i32)
-  (local $2 i32)
-  (local $3 i32)
-  local.get $0
-  i32.load offset=12
-  local.set $2
-  local.get $2
-  i32.const 1
-  i32.add
-  local.set $3
-  local.get $0
-  local.get $3
-  i32.const 2
-  i32.const 1
-  call $~lib/array/ensureCapacity
-  i32.const 1
-  drop
-  local.get $0
-  i32.load offset=4
-  local.get $2
-  i32.const 2
-  i32.shl
-  i32.add
-  local.get $1
-  i32.store
-  local.get $0
-  local.get $1
-  i32.const 1
-  call $~lib/rt/itcms/__link
-  local.get $0
-  local.get $3
-  call $~lib/array/Array<src-as/base/System/System>#set:length_
-  local.get $3
  )
  (func $src-as/base/SystemPriority/SystemPriority.sortSystems<src-as/base/System/System>~anonymous|0 (param $0 i32) (param $1 i32) (result i32)
   local.get $0
@@ -14429,6 +16347,1204 @@
   call $~lib/util/sort/SORT<src-as/base/System/System>
   local.get $0
  )
+ (func $~lib/array/Array<src-as/base/Component/BehaviorComponent>#set:length_ (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=12
+ )
+ (func $~lib/array/Array<src-as/base/Component/BehaviorComponent>#push (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  (local $3 i32)
+  local.get $0
+  i32.load offset=12
+  local.set $2
+  local.get $2
+  i32.const 1
+  i32.add
+  local.set $3
+  local.get $0
+  local.get $3
+  i32.const 2
+  i32.const 1
+  call $~lib/array/ensureCapacity
+  i32.const 1
+  drop
+  local.get $0
+  i32.load offset=4
+  local.get $2
+  i32.const 2
+  i32.shl
+  i32.add
+  local.get $1
+  i32.store
+  local.get $0
+  local.get $1
+  i32.const 1
+  call $~lib/rt/itcms/__link
+  local.get $0
+  local.get $3
+  call $~lib/array/Array<src-as/base/Component/BehaviorComponent>#set:length_
+  local.get $3
+ )
+ (func $src-as/base/Component/BehaviorComponent#start (param $0 i32)
+  nop
+ )
+ (func $~lib/map/Map<u32,src-as/base/Component/Component>#get (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  local.get $0
+  local.get $1
+  local.get $1
+  call $~lib/util/hash/HASH<u32>
+  call $~lib/map/Map<u32,src-as/base/Component/Component>#find
+  local.set $2
+  local.get $2
+  i32.eqz
+  if
+   i32.const 17344
+   i32.const 17408
+   i32.const 105
+   i32.const 17
+   call $~lib/builtins/abort
+   unreachable
+  end
+  local.get $2
+  i32.load offset=4
+ )
+ (func $src-as/base/Component/SpatialComponent#set:transform (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=8
+  local.get $0
+  local.get $1
+  i32.const 0
+  call $~lib/rt/itcms/__link
+ )
+ (func $src-as/base/systems/InputSystem/InputSystem#set:mousePos (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=8
+  local.get $0
+  local.get $1
+  i32.const 0
+  call $~lib/rt/itcms/__link
+ )
+ (func $src-as/math/Vector2/Vector2#set:m (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store
+  local.get $0
+  local.get $1
+  i32.const 0
+  call $~lib/rt/itcms/__link
+ )
+ (func $src-as/base/systems/InputSystem/InputSystem#set:mouseDeltaPos (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=12
+  local.get $0
+  local.get $1
+  i32.const 0
+  call $~lib/rt/itcms/__link
+ )
+ (func $src-as/base/systems/InputSystem/InputSystem#set:mouseWheelDeltaPos (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=16
+  local.get $0
+  local.get $1
+  i32.const 0
+  call $~lib/rt/itcms/__link
+ )
+ (func $src-as/base/systems/InputSystem/InputSystem#set:mouseDown (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store8 offset=20
+ )
+ (func $src-as/base/systems/InputSystem/InputSystem#set:mouseUp (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store8 offset=21
+ )
+ (func $src-as/base/systems/InputSystem/InputSystem#set:mouseIsDown (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store8 offset=22
+ )
+ (func $src-as/base/systems/InputSystem/InputSystem#set:keysDown (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=24
+  local.get $0
+  local.get $1
+  i32.const 0
+  call $~lib/rt/itcms/__link
+ )
+ (func $~lib/set/Set<i32>#set:buckets (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store
+  local.get $0
+  local.get $1
+  i32.const 0
+  call $~lib/rt/itcms/__link
+ )
+ (func $~lib/set/Set<i32>#set:bucketsMask (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=4
+ )
+ (func $~lib/set/Set<i32>#set:entries (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=8
+  local.get $0
+  local.get $1
+  i32.const 0
+  call $~lib/rt/itcms/__link
+ )
+ (func $~lib/set/Set<i32>#set:entriesCapacity (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=12
+ )
+ (func $~lib/set/Set<i32>#set:entriesOffset (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=16
+ )
+ (func $~lib/set/Set<i32>#set:entriesCount (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=20
+ )
+ (func $src-as/base/systems/InputSystem/InputSystem#set:keysIsDown (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=28
+  local.get $0
+  local.get $1
+  i32.const 0
+  call $~lib/rt/itcms/__link
+ )
+ (func $src-as/base/systems/InputSystem/InputSystem#set:keysUp (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=32
+  local.get $0
+  local.get $1
+  i32.const 0
+  call $~lib/rt/itcms/__link
+ )
+ (func $src-as/components/MouseKeyboardController/MouseKeyboardController#set:inputSystem (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=12
+  local.get $0
+  local.get $1
+  i32.const 0
+  call $~lib/rt/itcms/__link
+ )
+ (func $src-as/components/MouseKeyboardController/MouseKeyboardController#set:mouseRotationScalar (param $0 i32) (param $1 f32)
+  local.get $0
+  local.get $1
+  f32.store offset=16
+ )
+ (func $src-as/components/MouseKeyboardController/MouseKeyboardController#set:keyRotationScalar (param $0 i32) (param $1 f32)
+  local.get $0
+  local.get $1
+  f32.store offset=20
+ )
+ (func $src-as/components/MouseKeyboardController/MouseKeyboardController#set:keyTranslationScalar (param $0 i32) (param $1 f32)
+  local.get $0
+  local.get $1
+  f32.store offset=24
+ )
+ (func $src-as/components/MouseKeyboardController/MouseKeyboardController#set:wheelTranslationScalar (param $0 i32) (param $1 f32)
+  local.get $0
+  local.get $1
+  f32.store offset=28
+ )
+ (func $src-as/math/Quaternion/Quaternion#fromEulerAngles (param $0 i32) (param $1 i32) (result i32)
+  (local $2 f32)
+  (local $3 f32)
+  (local $4 f32)
+  (local $5 f32)
+  (local $6 f32)
+  (local $7 f32)
+  (local $8 f32)
+  (local $9 f32)
+  (local $10 f32)
+  (local $11 f32)
+  (local $12 f32)
+  (local $13 f32)
+  local.get $1
+  call $src-as/math/Vector3/Vector3#get:y
+  local.set $2
+  local.get $1
+  call $src-as/math/Vector3/Vector3#get:x
+  local.set $3
+  local.get $1
+  call $src-as/math/Vector3/Vector3#get:z
+  local.set $4
+  local.get $4
+  f32.const 0.5
+  f32.mul
+  local.set $5
+  local.get $3
+  f32.const 0.5
+  f32.mul
+  local.set $6
+  local.get $2
+  f32.const 0.5
+  f32.mul
+  local.set $7
+  local.get $5
+  call $~lib/math/NativeMathf.sin
+  local.set $8
+  local.get $5
+  call $~lib/math/NativeMathf.cos
+  local.set $9
+  local.get $6
+  call $~lib/math/NativeMathf.sin
+  local.set $10
+  local.get $6
+  call $~lib/math/NativeMathf.cos
+  local.set $11
+  local.get $7
+  call $~lib/math/NativeMathf.sin
+  local.set $12
+  local.get $7
+  call $~lib/math/NativeMathf.cos
+  local.set $13
+  local.get $0
+  local.get $13
+  local.get $10
+  f32.mul
+  local.get $9
+  f32.mul
+  local.get $12
+  local.get $11
+  f32.mul
+  local.get $8
+  f32.mul
+  f32.add
+  call $src-as/math/Quaternion/Quaternion#set:x
+  local.get $0
+  local.get $12
+  local.get $11
+  f32.mul
+  local.get $9
+  f32.mul
+  local.get $13
+  local.get $10
+  f32.mul
+  local.get $8
+  f32.mul
+  f32.sub
+  call $src-as/math/Quaternion/Quaternion#set:y
+  local.get $0
+  local.get $13
+  local.get $11
+  f32.mul
+  local.get $8
+  f32.mul
+  local.get $12
+  local.get $10
+  f32.mul
+  local.get $9
+  f32.mul
+  f32.sub
+  call $src-as/math/Quaternion/Quaternion#set:z
+  local.get $0
+  local.get $13
+  local.get $11
+  f32.mul
+  local.get $9
+  f32.mul
+  local.get $12
+  local.get $10
+  f32.mul
+  local.get $8
+  f32.mul
+  f32.add
+  call $src-as/math/Quaternion/Quaternion#set:w
+  local.get $0
+ )
+ (func $src-as/components/Camera/Camera#set:_fov (param $0 i32) (param $1 f32)
+  local.get $0
+  local.get $1
+  f32.store offset=32
+ )
+ (func $src-as/components/Camera/Camera#set:_aspect (param $0 i32) (param $1 f32)
+  local.get $0
+  local.get $1
+  f32.store offset=36
+ )
+ (func $src-as/components/Camera/Camera#set:_near (param $0 i32) (param $1 f32)
+  local.get $0
+  local.get $1
+  f32.store offset=40
+ )
+ (func $src-as/components/Camera/Camera#set:_far (param $0 i32) (param $1 f32)
+  local.get $0
+  local.get $1
+  f32.store offset=44
+ )
+ (func $src-as/components/Camera/Camera#set:view (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=16
+  local.get $0
+  local.get $1
+  i32.const 0
+  call $~lib/rt/itcms/__link
+ )
+ (func $src-as/utility/Viewport/Viewport#set:x (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store
+ )
+ (func $src-as/utility/Viewport/Viewport#set:y (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=4
+ )
+ (func $src-as/utility/Viewport/Viewport#set:width (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=8
+ )
+ (func $src-as/utility/Viewport/Viewport#set:height (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=12
+ )
+ (func $src-as/components/Camera/Camera#set:viewport (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=12
+  local.get $0
+  local.get $1
+  i32.const 0
+  call $~lib/rt/itcms/__link
+ )
+ (func $src-as/components/Camera/Camera#set:projection (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=20
+  local.get $0
+  local.get $1
+  i32.const 0
+  call $~lib/rt/itcms/__link
+ )
+ (func $src-as/components/Camera/Camera#set:viewProjection (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=24
+  local.get $0
+  local.get $1
+  i32.const 0
+  call $~lib/rt/itcms/__link
+ )
+ (func $src-as/components/Camera/Camera#set:fillCanvas (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store8 offset=28
+ )
+ (func $src-as/components/Camera/Camera#constructor@varargs (param $0 i32) (param $1 f32) (param $2 f32) (param $3 f32) (param $4 f32) (result i32)
+  block $4of4
+   block $3of4
+    block $2of4
+     block $1of4
+      block $0of4
+       block $outOfRange
+        global.get $~argumentsLength
+        br_table $0of4 $1of4 $2of4 $3of4 $4of4 $outOfRange
+       end
+       unreachable
+      end
+      global.get $src-as/math/constants/TAU
+      f32.const 4
+      f32.div
+      local.set $1
+     end
+     f32.const 16
+     f32.const 9
+     f32.div
+     local.set $2
+    end
+    f32.const 0.009999999776482582
+    local.set $3
+   end
+   f32.const 1e3
+   local.set $4
+  end
+  local.get $0
+  local.get $1
+  local.get $2
+  local.get $3
+  local.get $4
+  call $src-as/components/Camera/Camera#constructor
+ )
+ (func $src-as/exports/camera/createDefaultCamera@varargs (param $0 i32) (param $1 i32) (result i32)
+  block $2of2
+   block $1of2
+    block $0of2
+     block $outOfRange
+      global.get $~argumentsLength
+      br_table $0of2 $1of2 $2of2 $outOfRange
+     end
+     unreachable
+    end
+    i32.const 1
+    local.set $0
+   end
+   i32.const 1
+   local.set $1
+  end
+  local.get $0
+  local.get $1
+  call $src-as/exports/camera/createDefaultCamera
+ )
+ (func $~lib/array/Array<src-as/components/Camera/Camera>#get:length (param $0 i32) (result i32)
+  local.get $0
+  i32.load offset=12
+ )
+ (func $~lib/array/Array<u32>#set:buffer (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store
+  local.get $0
+  local.get $1
+  i32.const 0
+  call $~lib/rt/itcms/__link
+ )
+ (func $~lib/array/Array<u32>#set:dataStart (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=4
+ )
+ (func $~lib/array/Array<u32>#set:byteLength (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=8
+ )
+ (func $~lib/array/Array<u32>#set:length_ (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=12
+ )
+ (func $~lib/array/Array<u32>#__uset (param $0 i32) (param $1 i32) (param $2 i32)
+  local.get $0
+  i32.load offset=4
+  local.get $1
+  i32.const 2
+  i32.shl
+  i32.add
+  local.get $2
+  i32.store
+  i32.const 0
+  drop
+ )
+ (func $~lib/array/Array<u32>#__set (param $0 i32) (param $1 i32) (param $2 i32)
+  local.get $1
+  local.get $0
+  i32.load offset=12
+  i32.ge_u
+  if
+   local.get $1
+   i32.const 0
+   i32.lt_s
+   if
+    i32.const 96
+    i32.const 4208
+    i32.const 130
+    i32.const 22
+    call $~lib/builtins/abort
+    unreachable
+   end
+   local.get $0
+   local.get $1
+   i32.const 1
+   i32.add
+   i32.const 2
+   i32.const 1
+   call $~lib/array/ensureCapacity
+   local.get $0
+   local.get $1
+   i32.const 1
+   i32.add
+   call $~lib/array/Array<u32>#set:length_
+  end
+  local.get $0
+  local.get $1
+  local.get $2
+  call $~lib/array/Array<u32>#__uset
+ )
+ (func $~lib/array/Array<u32>#set:length (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.const 2
+  i32.const 0
+  call $~lib/array/ensureCapacity
+  local.get $0
+  local.get $1
+  call $~lib/array/Array<u32>#set:length_
+ )
+ (func $~lib/array/Array<src-as/base/Component/Component>#set:buffer (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store
+  local.get $0
+  local.get $1
+  i32.const 0
+  call $~lib/rt/itcms/__link
+ )
+ (func $~lib/array/Array<src-as/base/Component/Component>#set:dataStart (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=4
+ )
+ (func $~lib/array/Array<src-as/base/Component/Component>#set:byteLength (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=8
+ )
+ (func $~lib/array/Array<src-as/base/Component/Component>#set:length_ (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=12
+ )
+ (func $~lib/array/Array<src-as/base/Component/Component>#__uset (param $0 i32) (param $1 i32) (param $2 i32)
+  local.get $0
+  i32.load offset=4
+  local.get $1
+  i32.const 2
+  i32.shl
+  i32.add
+  local.get $2
+  i32.store
+  i32.const 1
+  drop
+  local.get $0
+  local.get $2
+  i32.const 1
+  call $~lib/rt/itcms/__link
+ )
+ (func $~lib/array/Array<src-as/base/Component/Component>#__set (param $0 i32) (param $1 i32) (param $2 i32)
+  local.get $1
+  local.get $0
+  i32.load offset=12
+  i32.ge_u
+  if
+   local.get $1
+   i32.const 0
+   i32.lt_s
+   if
+    i32.const 96
+    i32.const 4208
+    i32.const 130
+    i32.const 22
+    call $~lib/builtins/abort
+    unreachable
+   end
+   local.get $0
+   local.get $1
+   i32.const 1
+   i32.add
+   i32.const 2
+   i32.const 1
+   call $~lib/array/ensureCapacity
+   local.get $0
+   local.get $1
+   i32.const 1
+   i32.add
+   call $~lib/array/Array<src-as/base/Component/Component>#set:length_
+  end
+  local.get $0
+  local.get $1
+  local.get $2
+  call $~lib/array/Array<src-as/base/Component/Component>#__uset
+ )
+ (func $~lib/array/Array<src-as/base/Component/Component>#set:length (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.const 2
+  i32.const 0
+  call $~lib/array/ensureCapacity
+  local.get $0
+  local.get $1
+  call $~lib/array/Array<src-as/base/Component/Component>#set:length_
+ )
+ (func $~lib/array/Array<src-as/base/Component/Component>#get:length (param $0 i32) (result i32)
+  local.get $0
+  i32.load offset=12
+ )
+ (func $~lib/set/Set<src-as/base/Entity/Entity>#has (param $0 i32) (param $1 i32) (result i32)
+  local.get $0
+  local.get $1
+  local.get $1
+  call $~lib/util/hash/HASH<src-as/base/Entity/Entity>
+  call $~lib/set/Set<src-as/base/Entity/Entity>#find
+  i32.const 0
+  i32.ne
+ )
+ (func $~lib/set/Set<src-as/base/Entity/Entity>#delete (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  local.get $0
+  local.get $1
+  local.get $1
+  call $~lib/util/hash/HASH<src-as/base/Entity/Entity>
+  call $~lib/set/Set<src-as/base/Entity/Entity>#find
+  local.set $2
+  local.get $2
+  i32.eqz
+  if
+   i32.const 0
+   return
+  end
+  local.get $2
+  local.get $2
+  i32.load offset=4
+  i32.const 1
+  i32.or
+  call $~lib/set/SetEntry<src-as/base/Entity/Entity>#set:taggedNext
+  local.get $0
+  local.get $0
+  i32.load offset=20
+  i32.const 1
+  i32.sub
+  call $~lib/set/Set<src-as/base/Entity/Entity>#set:entriesCount
+  local.get $0
+  i32.load offset=4
+  i32.const 1
+  i32.shr_u
+  local.set $3
+  local.get $3
+  i32.const 1
+  i32.add
+  i32.const 4
+  local.tee $4
+  local.get $0
+  i32.load offset=20
+  local.tee $5
+  local.get $4
+  local.get $5
+  i32.gt_u
+  select
+  i32.ge_u
+  if (result i32)
+   local.get $0
+   i32.load offset=20
+   local.get $0
+   i32.load offset=12
+   i32.const 3
+   i32.mul
+   i32.const 4
+   i32.div_s
+   i32.lt_s
+  else
+   i32.const 0
+  end
+  if
+   local.get $0
+   local.get $3
+   call $~lib/set/Set<src-as/base/Entity/Entity>#rehash
+  end
+  i32.const 1
+ )
+ (func $src-as/base/System/ListenerSystem#onRemove (param $0 i32) (param $1 i32)
+  nop
+ )
+ (func $~lib/array/Array<src-as/base/Component/BehaviorComponent>#indexOf (param $0 i32) (param $1 i32) (param $2 i32) (result i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  (local $6 i32)
+  local.get $0
+  i32.load offset=12
+  local.set $3
+  local.get $3
+  i32.const 0
+  i32.eq
+  if (result i32)
+   i32.const 1
+  else
+   local.get $2
+   local.get $3
+   i32.ge_s
+  end
+  if
+   i32.const -1
+   return
+  end
+  local.get $2
+  i32.const 0
+  i32.lt_s
+  if
+   local.get $3
+   local.get $2
+   i32.add
+   local.tee $4
+   i32.const 0
+   local.tee $5
+   local.get $4
+   local.get $5
+   i32.gt_s
+   select
+   local.set $2
+  end
+  local.get $0
+  i32.load offset=4
+  local.set $6
+  loop $while-continue|0
+   local.get $2
+   local.get $3
+   i32.lt_s
+   local.set $4
+   local.get $4
+   if
+    local.get $6
+    local.get $2
+    i32.const 2
+    i32.shl
+    i32.add
+    i32.load
+    local.get $1
+    i32.eq
+    if
+     local.get $2
+     return
+    end
+    local.get $2
+    i32.const 1
+    i32.add
+    local.set $2
+    br $while-continue|0
+   end
+  end
+  i32.const -1
+ )
+ (func $~lib/map/Map<u32,src-as/base/Component/Component>#delete (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  local.get $0
+  local.get $1
+  local.get $1
+  call $~lib/util/hash/HASH<u32>
+  call $~lib/map/Map<u32,src-as/base/Component/Component>#find
+  local.set $2
+  local.get $2
+  i32.eqz
+  if
+   i32.const 0
+   return
+  end
+  local.get $2
+  local.get $2
+  i32.load offset=8
+  i32.const 1
+  i32.or
+  call $~lib/map/MapEntry<u32,src-as/base/Component/Component>#set:taggedNext
+  local.get $0
+  local.get $0
+  i32.load offset=20
+  i32.const 1
+  i32.sub
+  call $~lib/map/Map<u32,src-as/base/Component/Component>#set:entriesCount
+  local.get $0
+  i32.load offset=4
+  i32.const 1
+  i32.shr_u
+  local.set $3
+  local.get $3
+  i32.const 1
+  i32.add
+  i32.const 4
+  local.tee $4
+  local.get $0
+  i32.load offset=20
+  local.tee $5
+  local.get $4
+  local.get $5
+  i32.gt_u
+  select
+  i32.ge_u
+  if (result i32)
+   local.get $0
+   i32.load offset=20
+   local.get $0
+   i32.load offset=12
+   i32.const 3
+   i32.mul
+   i32.const 4
+   i32.div_s
+   i32.lt_s
+  else
+   i32.const 0
+  end
+  if
+   local.get $0
+   local.get $3
+   call $~lib/map/Map<u32,src-as/base/Component/Component>#rehash
+  end
+  i32.const 1
+ )
+ (func $~lib/map/Map<u32,src-as/base/Entity/Entity>#delete (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  local.get $0
+  local.get $1
+  local.get $1
+  call $~lib/util/hash/HASH<u32>
+  call $~lib/map/Map<u32,src-as/base/Entity/Entity>#find
+  local.set $2
+  local.get $2
+  i32.eqz
+  if
+   i32.const 0
+   return
+  end
+  local.get $2
+  local.get $2
+  i32.load offset=8
+  i32.const 1
+  i32.or
+  call $~lib/map/MapEntry<u32,src-as/base/Entity/Entity>#set:taggedNext
+  local.get $0
+  local.get $0
+  i32.load offset=20
+  i32.const 1
+  i32.sub
+  call $~lib/map/Map<u32,src-as/base/Entity/Entity>#set:entriesCount
+  local.get $0
+  i32.load offset=4
+  i32.const 1
+  i32.shr_u
+  local.set $3
+  local.get $3
+  i32.const 1
+  i32.add
+  i32.const 4
+  local.tee $4
+  local.get $0
+  i32.load offset=20
+  local.tee $5
+  local.get $4
+  local.get $5
+  i32.gt_u
+  select
+  i32.ge_u
+  if (result i32)
+   local.get $0
+   i32.load offset=20
+   local.get $0
+   i32.load offset=12
+   i32.const 3
+   i32.mul
+   i32.const 4
+   i32.div_s
+   i32.lt_s
+  else
+   i32.const 0
+  end
+  if
+   local.get $0
+   local.get $3
+   call $~lib/map/Map<u32,src-as/base/Entity/Entity>#rehash
+  end
+  i32.const 1
+ )
+ (func $src-as/rendering/material/Material/Material#set:shader (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=20
+  local.get $0
+  local.get $1
+  i32.const 0
+  call $~lib/rt/itcms/__link
+ )
+ (func $src-as/rendering/material/Material/Material#set:uniformMap (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store
+  local.get $0
+  local.get $1
+  i32.const 0
+  call $~lib/rt/itcms/__link
+ )
+ (func $src-as/rendering/material/Material/Material#set:uniformArr (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=4
+  local.get $0
+  local.get $1
+  i32.const 0
+  call $~lib/rt/itcms/__link
+ )
+ (func $src-as/rendering/material/Material/Material#set:uniformBufferObjects (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=8
+  local.get $0
+  local.get $1
+  i32.const 0
+  call $~lib/rt/itcms/__link
+ )
+ (func $src-as/rendering/material/Material/Material#set:transparent (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store8 offset=12
+ )
+ (func $src-as/rendering/material/Material/Material#set:culling (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=16
+ )
+ (func $~lib/array/Array<src-as/rendering/material/UniformBufferObject/UniformBufferObject>#set:length_ (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=12
+ )
+ (func $~lib/array/Array<src-as/rendering/material/UniformBufferObject/UniformBufferObject>#push (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  (local $3 i32)
+  local.get $0
+  i32.load offset=12
+  local.set $2
+  local.get $2
+  i32.const 1
+  i32.add
+  local.set $3
+  local.get $0
+  local.get $3
+  i32.const 2
+  i32.const 1
+  call $~lib/array/ensureCapacity
+  i32.const 1
+  drop
+  local.get $0
+  i32.load offset=4
+  local.get $2
+  i32.const 2
+  i32.shl
+  i32.add
+  local.get $1
+  i32.store
+  local.get $0
+  local.get $1
+  i32.const 1
+  call $~lib/rt/itcms/__link
+  local.get $0
+  local.get $3
+  call $~lib/array/Array<src-as/rendering/material/UniformBufferObject/UniformBufferObject>#set:length_
+  local.get $3
+ )
+ (func $src-as/rendering/material/Material/StandardMaterial#set:color (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=24
+  local.get $0
+  local.get $1
+  i32.const 0
+  call $~lib/rt/itcms/__link
+ )
+ (func $~lib/array/Array<src-as/rendering/material/Uniform/Uniform>#set:length_ (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=12
+ )
+ (func $~lib/array/Array<src-as/rendering/material/Uniform/Uniform>#push (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  (local $3 i32)
+  local.get $0
+  i32.load offset=12
+  local.set $2
+  local.get $2
+  i32.const 1
+  i32.add
+  local.set $3
+  local.get $0
+  local.get $3
+  i32.const 2
+  i32.const 1
+  call $~lib/array/ensureCapacity
+  i32.const 1
+  drop
+  local.get $0
+  i32.load offset=4
+  local.get $2
+  i32.const 2
+  i32.shl
+  i32.add
+  local.get $1
+  i32.store
+  local.get $0
+  local.get $1
+  i32.const 1
+  call $~lib/rt/itcms/__link
+  local.get $0
+  local.get $3
+  call $~lib/array/Array<src-as/rendering/material/Uniform/Uniform>#set:length_
+  local.get $3
+ )
+ (func $src-as/rendering/material/Uniform/Uniform.Vec4 (param $0 i32) (param $1 i32) (result i32)
+  i32.const 0
+  local.get $0
+  local.get $1
+  global.get $src-as/rendering/constants/enums/UniformType.FLOAT_VEC4
+  call $src-as/rendering/material/Uniform/Uniform_f32#constructor
+ )
+ (func $src-as/rendering/material/Uniform/TypedUniform<src-as/math/Texture/Texture>#set:value (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=12
+  local.get $0
+  local.get $1
+  i32.const 0
+  call $~lib/rt/itcms/__link
+ )
+ (func $src-as/rendering/material/Uniform/Uniform.Texture (param $0 i32) (param $1 i32) (result i32)
+  i32.const 0
+  local.get $0
+  local.get $1
+  global.get $src-as/rendering/constants/enums/UniformType.TEXTURE
+  call $src-as/rendering/material/Uniform/Uniform_texture#constructor
+ )
+ (func $src-as/rendering/material/Material/StandardMaterial#set:texture (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=28
+  local.get $0
+  local.get $1
+  i32.const 0
+  call $~lib/rt/itcms/__link
+ )
+ (func $src-as/math/Color/Color#set (param $0 i32) (param $1 f32) (param $2 f32) (param $3 f32) (param $4 f32) (result i32)
+  local.get $0
+  local.get $1
+  call $src-as/math/Color/Color#set:r
+  local.get $0
+  local.get $2
+  call $src-as/math/Color/Color#set:g
+  local.get $0
+  local.get $3
+  call $src-as/math/Color/Color#set:b
+  local.get $0
+  local.get $4
+  call $src-as/math/Color/Color#set:a
+  local.get $0
+ )
+ (func $src-as/components/Mesh/Mesh#set:geometry (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=12
+  local.get $0
+  local.get $1
+  i32.const 0
+  call $~lib/rt/itcms/__link
+ )
+ (func $src-as/components/Mesh/Mesh#set:material (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=16
+  local.get $0
+  local.get $1
+  i32.const 0
+  call $~lib/rt/itcms/__link
+ )
+ (func $src-as/components/Mesh/Mesh#set:shader (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=20
+  local.get $0
+  local.get $1
+  i32.const 0
+  call $~lib/rt/itcms/__link
+ )
+ (func $src-as/components/Mesh/Mesh#set:modelView (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=24
+  local.get $0
+  local.get $1
+  i32.const 0
+  call $~lib/rt/itcms/__link
+ )
+ (func $src-as/components/Mesh/Mesh#set:modelViewProjection (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=28
+  local.get $0
+  local.get $1
+  i32.const 0
+  call $~lib/rt/itcms/__link
+ )
+ (func $src-as/components/Mesh/Mesh#set:inverseTransposeModel (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=32
+  local.get $0
+  local.get $1
+  i32.const 0
+  call $~lib/rt/itcms/__link
+ )
+ (func $src-as/exports/defaultWorld/main
+  nop
+ )
+ (func $~lib/array/Array<src-as/base/System/System>#get:length (param $0 i32) (result i32)
+  local.get $0
+  i32.load offset=12
+ )
+ (func $src-as/base/System/System#update (param $0 i32)
+  nop
+ )
+ (func $src-as/components/Time/Time#set:start (param $0 i32) (param $1 f32)
+  local.get $0
+  local.get $1
+  f32.store
+ )
+ (func $src-as/components/Time/Time#set:last (param $0 i32) (param $1 f32)
+  local.get $0
+  local.get $1
+  f32.store offset=4
+ )
+ (func $src-as/components/Time/Time#set:elapsed (param $0 i32) (param $1 f32)
+  local.get $0
+  local.get $1
+  f32.store offset=8
+ )
+ (func $src-as/components/Time/Time#set:now (param $0 i32) (param $1 f32)
+  local.get $0
+  local.get $1
+  f32.store offset=12
+ )
+ (func $src-as/components/Time/Time#set:delta (param $0 i32) (param $1 f32)
+  local.get $0
+  local.get $1
+  f32.store offset=16
+ )
+ (func $src-as/components/Time/Time#set:frame (param $0 i32) (param $1 i64)
+  local.get $0
+  local.get $1
+  i64.store offset=24
+ )
+ (func $src-as/base/systems/TimeSystem/TimeSystem#set:time (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=8
+  local.get $0
+  local.get $1
+  i32.const 0
+  call $~lib/rt/itcms/__link
+ )
  (func $src-as/base/System/ListenerSystem#set:components (param $0 i32) (param $1 i32)
   local.get $0
   local.get $1
@@ -14446,44 +17562,6 @@
   local.get $1
   i32.const 0
   call $~lib/rt/itcms/__link
- )
- (func $~lib/set/Set<src-as/base/Entity/Entity>#set:buckets (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store
-  local.get $0
-  local.get $1
-  i32.const 0
-  call $~lib/rt/itcms/__link
- )
- (func $~lib/set/Set<src-as/base/Entity/Entity>#set:bucketsMask (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=4
- )
- (func $~lib/set/Set<src-as/base/Entity/Entity>#set:entries (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=8
-  local.get $0
-  local.get $1
-  i32.const 0
-  call $~lib/rt/itcms/__link
- )
- (func $~lib/set/Set<src-as/base/Entity/Entity>#set:entriesCapacity (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=12
- )
- (func $~lib/set/Set<src-as/base/Entity/Entity>#set:entriesOffset (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=16
- )
- (func $~lib/set/Set<src-as/base/Entity/Entity>#set:entriesCount (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=20
  )
  (func $src-as/base/Query/Query#set:componentIds (param $0 i32) (param $1 i32)
   local.get $0
@@ -14511,95 +17589,6 @@
   local.get $1
   i32.const 0
   call $~lib/rt/itcms/__link
- )
- (func $~lib/array/Array<u32>#get:length (param $0 i32) (result i32)
-  local.get $0
-  i32.load offset=12
- )
- (func $~lib/array/Array<u32>#__get (param $0 i32) (param $1 i32) (result i32)
-  (local $2 i32)
-  local.get $1
-  local.get $0
-  i32.load offset=12
-  i32.ge_u
-  if
-   i32.const 96
-   i32.const 4208
-   i32.const 114
-   i32.const 42
-   call $~lib/builtins/abort
-   unreachable
-  end
-  local.get $0
-  i32.load offset=4
-  local.get $1
-  i32.const 2
-  i32.shl
-  i32.add
-  i32.load
-  local.set $2
-  i32.const 0
-  drop
-  local.get $2
- )
- (func $~lib/map/Map<u32,~lib/array/Array<src-as/base/Query/Query>>#find (param $0 i32) (param $1 i32) (param $2 i32) (result i32)
-  (local $3 i32)
-  (local $4 i32)
-  (local $5 i32)
-  local.get $0
-  i32.load
-  local.get $2
-  local.get $0
-  i32.load offset=4
-  i32.and
-  i32.const 4
-  i32.mul
-  i32.add
-  i32.load
-  local.set $3
-  loop $while-continue|0
-   local.get $3
-   local.set $4
-   local.get $4
-   if
-    local.get $3
-    i32.load offset=8
-    local.set $5
-    local.get $5
-    i32.const 1
-    i32.and
-    i32.eqz
-    if (result i32)
-     local.get $3
-     i32.load
-     local.get $1
-     i32.eq
-    else
-     i32.const 0
-    end
-    if
-     local.get $3
-     return
-    end
-    local.get $5
-    i32.const 1
-    i32.const -1
-    i32.xor
-    i32.and
-    local.set $3
-    br $while-continue|0
-   end
-  end
-  i32.const 0
- )
- (func $~lib/map/Map<u32,~lib/array/Array<src-as/base/Query/Query>>#has (param $0 i32) (param $1 i32) (result i32)
-  local.get $0
-  local.get $1
-  local.get $1
-  call $~lib/util/hash/HASH<u32>
-  call $~lib/map/Map<u32,~lib/array/Array<src-as/base/Query/Query>>#find
-  i32.const 0
-  i32.ne
  )
  (func $~lib/map/MapEntry<u32,~lib/array/Array<src-as/base/Query/Query>>#set:value (param $0 i32) (param $1 i32)
   local.get $0
@@ -14754,27 +17743,6 @@
   i32.add
   global.set $~lib/memory/__stack_pointer
  )
- (func $~lib/map/Map<u32,~lib/array/Array<src-as/base/Query/Query>>#get (param $0 i32) (param $1 i32) (result i32)
-  (local $2 i32)
-  local.get $0
-  local.get $1
-  local.get $1
-  call $~lib/util/hash/HASH<u32>
-  call $~lib/map/Map<u32,~lib/array/Array<src-as/base/Query/Query>>#find
-  local.set $2
-  local.get $2
-  i32.eqz
-  if
-   i32.const 17200
-   i32.const 17264
-   i32.const 105
-   i32.const 17
-   call $~lib/builtins/abort
-   unreachable
-  end
-  local.get $2
-  i32.load offset=4
- )
  (func $~lib/array/Array<src-as/base/Query/Query>#set:length_ (param $0 i32) (param $1 i32)
   local.get $0
   local.get $1
@@ -14822,1618 +17790,6 @@
   local.get $1
   i32.const 0
   call $~lib/rt/itcms/__link
- )
- (func $src-as/base/Entity/Entity#set:world (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store
-  local.get $0
-  local.get $1
-  i32.const 0
-  call $~lib/rt/itcms/__link
- )
- (func $src-as/base/Entity/Entity#set:id (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=4
- )
- (func $src-as/base/World/World#set:entity (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  call $src-as/base/World/World#set:_entity
- )
- (func $src-as/base/Entity/Entity#set:components (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=8
-  local.get $0
-  local.get $1
-  i32.const 0
-  call $~lib/rt/itcms/__link
- )
- (func $~lib/map/Map<u32,src-as/base/Component/Component>#set:buckets (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store
-  local.get $0
-  local.get $1
-  i32.const 0
-  call $~lib/rt/itcms/__link
- )
- (func $~lib/map/Map<u32,src-as/base/Component/Component>#set:bucketsMask (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=4
- )
- (func $~lib/map/Map<u32,src-as/base/Component/Component>#set:entries (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=8
-  local.get $0
-  local.get $1
-  i32.const 0
-  call $~lib/rt/itcms/__link
- )
- (func $~lib/map/Map<u32,src-as/base/Component/Component>#set:entriesCapacity (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=12
- )
- (func $~lib/map/Map<u32,src-as/base/Component/Component>#set:entriesOffset (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=16
- )
- (func $~lib/map/Map<u32,src-as/base/Component/Component>#set:entriesCount (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=20
- )
- (func $~lib/map/Map<u32,src-as/base/Entity/Entity>#find (param $0 i32) (param $1 i32) (param $2 i32) (result i32)
-  (local $3 i32)
-  (local $4 i32)
-  (local $5 i32)
-  local.get $0
-  i32.load
-  local.get $2
-  local.get $0
-  i32.load offset=4
-  i32.and
-  i32.const 4
-  i32.mul
-  i32.add
-  i32.load
-  local.set $3
-  loop $while-continue|0
-   local.get $3
-   local.set $4
-   local.get $4
-   if
-    local.get $3
-    i32.load offset=8
-    local.set $5
-    local.get $5
-    i32.const 1
-    i32.and
-    i32.eqz
-    if (result i32)
-     local.get $3
-     i32.load
-     local.get $1
-     i32.eq
-    else
-     i32.const 0
-    end
-    if
-     local.get $3
-     return
-    end
-    local.get $5
-    i32.const 1
-    i32.const -1
-    i32.xor
-    i32.and
-    local.set $3
-    br $while-continue|0
-   end
-  end
-  i32.const 0
- )
- (func $~lib/map/MapEntry<u32,src-as/base/Entity/Entity>#set:value (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=4
- )
- (func $~lib/map/MapEntry<u32,src-as/base/Entity/Entity>#set:key (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store
- )
- (func $~lib/map/MapEntry<u32,src-as/base/Entity/Entity>#set:taggedNext (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=8
- )
- (func $~lib/map/Map<u32,src-as/base/Entity/Entity>#rehash (param $0 i32) (param $1 i32)
-  (local $2 i32)
-  (local $3 i32)
-  (local $4 i32)
-  (local $5 i32)
-  (local $6 i32)
-  (local $7 i32)
-  (local $8 i32)
-  (local $9 i32)
-  (local $10 i32)
-  (local $11 i32)
-  (local $12 i32)
-  (local $13 i32)
-  (local $14 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 8
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i64.const 0
-  i64.store
-  local.get $1
-  i32.const 1
-  i32.add
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  local.get $2
-  i32.const 4
-  i32.mul
-  call $~lib/arraybuffer/ArrayBuffer#constructor
-  local.tee $3
-  i32.store
-  local.get $2
-  i32.const 8
-  i32.mul
-  i32.const 3
-  i32.div_s
-  local.set $4
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  local.get $4
-  i32.const 12
-  i32.mul
-  call $~lib/arraybuffer/ArrayBuffer#constructor
-  local.tee $5
-  i32.store offset=4
-  local.get $0
-  i32.load offset=8
-  local.set $6
-  local.get $6
-  local.get $0
-  i32.load offset=16
-  i32.const 12
-  i32.mul
-  i32.add
-  local.set $7
-  local.get $5
-  local.set $8
-  loop $while-continue|0
-   local.get $6
-   local.get $7
-   i32.ne
-   local.set $9
-   local.get $9
-   if
-    local.get $6
-    local.set $10
-    local.get $10
-    i32.load offset=8
-    i32.const 1
-    i32.and
-    i32.eqz
-    if
-     local.get $8
-     local.set $11
-     local.get $10
-     i32.load
-     local.set $12
-     local.get $11
-     local.get $12
-     call $~lib/map/MapEntry<u32,src-as/base/Entity/Entity>#set:key
-     local.get $11
-     local.get $10
-     i32.load offset=4
-     call $~lib/map/MapEntry<u32,src-as/base/Entity/Entity>#set:value
-     local.get $12
-     call $~lib/util/hash/HASH<u32>
-     local.get $1
-     i32.and
-     local.set $13
-     local.get $3
-     local.get $13
-     i32.const 4
-     i32.mul
-     i32.add
-     local.set $14
-     local.get $11
-     local.get $14
-     i32.load
-     call $~lib/map/MapEntry<u32,src-as/base/Entity/Entity>#set:taggedNext
-     local.get $14
-     local.get $8
-     i32.store
-     local.get $8
-     i32.const 12
-     i32.add
-     local.set $8
-    end
-    local.get $6
-    i32.const 12
-    i32.add
-    local.set $6
-    br $while-continue|0
-   end
-  end
-  local.get $0
-  local.get $3
-  call $~lib/map/Map<u32,src-as/base/Entity/Entity>#set:buckets
-  local.get $0
-  local.get $1
-  call $~lib/map/Map<u32,src-as/base/Entity/Entity>#set:bucketsMask
-  local.get $0
-  local.get $5
-  call $~lib/map/Map<u32,src-as/base/Entity/Entity>#set:entries
-  local.get $0
-  local.get $4
-  call $~lib/map/Map<u32,src-as/base/Entity/Entity>#set:entriesCapacity
-  local.get $0
-  local.get $0
-  i32.load offset=20
-  call $~lib/map/Map<u32,src-as/base/Entity/Entity>#set:entriesOffset
-  global.get $~lib/memory/__stack_pointer
-  i32.const 8
-  i32.add
-  global.set $~lib/memory/__stack_pointer
- )
- (func $~lib/map/Map<u32,src-as/base/Component/Component>#find (param $0 i32) (param $1 i32) (param $2 i32) (result i32)
-  (local $3 i32)
-  (local $4 i32)
-  (local $5 i32)
-  local.get $0
-  i32.load
-  local.get $2
-  local.get $0
-  i32.load offset=4
-  i32.and
-  i32.const 4
-  i32.mul
-  i32.add
-  i32.load
-  local.set $3
-  loop $while-continue|0
-   local.get $3
-   local.set $4
-   local.get $4
-   if
-    local.get $3
-    i32.load offset=8
-    local.set $5
-    local.get $5
-    i32.const 1
-    i32.and
-    i32.eqz
-    if (result i32)
-     local.get $3
-     i32.load
-     local.get $1
-     i32.eq
-    else
-     i32.const 0
-    end
-    if
-     local.get $3
-     return
-    end
-    local.get $5
-    i32.const 1
-    i32.const -1
-    i32.xor
-    i32.and
-    local.set $3
-    br $while-continue|0
-   end
-  end
-  i32.const 0
- )
- (func $~lib/map/Map<u32,src-as/base/Component/Component>#has (param $0 i32) (param $1 i32) (result i32)
-  local.get $0
-  local.get $1
-  local.get $1
-  call $~lib/util/hash/HASH<u32>
-  call $~lib/map/Map<u32,src-as/base/Component/Component>#find
-  i32.const 0
-  i32.ne
- )
- (func $src-as/base/Component/Component#set:entity (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store
-  local.get $0
-  local.get $1
-  i32.const 0
-  call $~lib/rt/itcms/__link
- )
- (func $src-as/base/Component/Component#set:world (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=4
-  local.get $0
-  local.get $1
-  i32.const 0
-  call $~lib/rt/itcms/__link
- )
- (func $src-as/components/Transform/Transform#set:matrix (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=8
-  local.get $0
-  local.get $1
-  i32.const 0
-  call $~lib/rt/itcms/__link
- )
- (func $src-as/components/Transform/Transform#set:worldMatrix (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=12
-  local.get $0
-  local.get $1
-  i32.const 0
-  call $~lib/rt/itcms/__link
- )
- (func $src-as/components/Transform/Transform#set:inverseWorldMatrix (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=16
-  local.get $0
-  local.get $1
-  i32.const 0
-  call $~lib/rt/itcms/__link
- )
- (func $src-as/components/Transform/Transform#set:position (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=20
-  local.get $0
-  local.get $1
-  i32.const 0
-  call $~lib/rt/itcms/__link
- )
- (func $src-as/components/Transform/Transform#set:scale (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=24
-  local.get $0
-  local.get $1
-  i32.const 0
-  call $~lib/rt/itcms/__link
- )
- (func $src-as/components/Transform/Transform#set:rotation (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=28
-  local.get $0
-  local.get $1
-  i32.const 0
-  call $~lib/rt/itcms/__link
- )
- (func $~lib/set/Set<src-as/components/Transform/Transform>#set:buckets (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store
-  local.get $0
-  local.get $1
-  i32.const 0
-  call $~lib/rt/itcms/__link
- )
- (func $~lib/set/Set<src-as/components/Transform/Transform>#set:bucketsMask (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=4
- )
- (func $~lib/set/Set<src-as/components/Transform/Transform>#set:entries (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=8
-  local.get $0
-  local.get $1
-  i32.const 0
-  call $~lib/rt/itcms/__link
- )
- (func $~lib/set/Set<src-as/components/Transform/Transform>#set:entriesCapacity (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=12
- )
- (func $~lib/set/Set<src-as/components/Transform/Transform>#set:entriesOffset (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=16
- )
- (func $~lib/set/Set<src-as/components/Transform/Transform>#set:entriesCount (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=20
- )
- (func $src-as/components/Transform/Transform#set:children (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=32
-  local.get $0
-  local.get $1
-  i32.const 0
-  call $~lib/rt/itcms/__link
- )
- (func $~lib/util/hash/HASH<src-as/components/Transform/Transform> (param $0 i32) (result i32)
-  (local $1 i32)
-  (local $2 i32)
-  (local $3 i32)
-  i32.const 0
-  drop
-  i32.const 1
-  drop
-  i32.const 4
-  i32.const 4
-  i32.eq
-  drop
-  local.get $0
-  local.set $1
-  i32.const 4
-  local.set $2
-  i32.const 0
-  i32.const 374761393
-  i32.add
-  local.get $2
-  i32.add
-  local.set $3
-  local.get $3
-  local.get $1
-  i32.const -1028477379
-  i32.mul
-  i32.add
-  local.set $3
-  local.get $3
-  i32.const 17
-  i32.rotl
-  i32.const 668265263
-  i32.mul
-  local.set $3
-  local.get $3
-  local.get $3
-  i32.const 15
-  i32.shr_u
-  i32.xor
-  local.set $3
-  local.get $3
-  i32.const -2048144777
-  i32.mul
-  local.set $3
-  local.get $3
-  local.get $3
-  i32.const 13
-  i32.shr_u
-  i32.xor
-  local.set $3
-  local.get $3
-  i32.const -1028477379
-  i32.mul
-  local.set $3
-  local.get $3
-  local.get $3
-  i32.const 16
-  i32.shr_u
-  i32.xor
-  local.set $3
-  local.get $3
-  return
- )
- (func $~lib/set/Set<src-as/components/Transform/Transform>#find (param $0 i32) (param $1 i32) (param $2 i32) (result i32)
-  (local $3 i32)
-  (local $4 i32)
-  (local $5 i32)
-  local.get $0
-  i32.load
-  local.get $2
-  local.get $0
-  i32.load offset=4
-  i32.and
-  i32.const 4
-  i32.mul
-  i32.add
-  i32.load
-  local.set $3
-  loop $while-continue|0
-   local.get $3
-   local.set $4
-   local.get $4
-   if
-    local.get $3
-    i32.load offset=4
-    local.set $5
-    local.get $5
-    i32.const 1
-    i32.and
-    i32.eqz
-    if (result i32)
-     local.get $3
-     i32.load
-     local.get $1
-     i32.eq
-    else
-     i32.const 0
-    end
-    if
-     local.get $3
-     return
-    end
-    local.get $5
-    i32.const 1
-    i32.const -1
-    i32.xor
-    i32.and
-    local.set $3
-    br $while-continue|0
-   end
-  end
-  i32.const 0
- )
- (func $~lib/set/SetEntry<src-as/components/Transform/Transform>#set:taggedNext (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=4
- )
- (func $~lib/set/SetEntry<src-as/components/Transform/Transform>#set:key (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store
- )
- (func $~lib/set/Set<src-as/components/Transform/Transform>#rehash (param $0 i32) (param $1 i32)
-  (local $2 i32)
-  (local $3 i32)
-  (local $4 i32)
-  (local $5 i32)
-  (local $6 i32)
-  (local $7 i32)
-  (local $8 i32)
-  (local $9 i32)
-  (local $10 i32)
-  (local $11 i32)
-  (local $12 i32)
-  (local $13 i32)
-  (local $14 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 12
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i64.const 0
-  i64.store
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store offset=8
-  local.get $1
-  i32.const 1
-  i32.add
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  local.get $2
-  i32.const 4
-  i32.mul
-  call $~lib/arraybuffer/ArrayBuffer#constructor
-  local.tee $3
-  i32.store
-  local.get $2
-  i32.const 8
-  i32.mul
-  i32.const 3
-  i32.div_s
-  local.set $4
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  local.get $4
-  i32.const 8
-  i32.mul
-  call $~lib/arraybuffer/ArrayBuffer#constructor
-  local.tee $5
-  i32.store offset=4
-  local.get $0
-  i32.load offset=8
-  local.set $6
-  local.get $6
-  local.get $0
-  i32.load offset=16
-  i32.const 8
-  i32.mul
-  i32.add
-  local.set $7
-  local.get $5
-  local.set $8
-  loop $while-continue|0
-   local.get $6
-   local.get $7
-   i32.ne
-   local.set $9
-   local.get $9
-   if
-    local.get $6
-    local.set $10
-    local.get $10
-    i32.load offset=4
-    i32.const 1
-    i32.and
-    i32.eqz
-    if
-     local.get $8
-     local.set $11
-     global.get $~lib/memory/__stack_pointer
-     local.get $10
-     i32.load
-     local.tee $12
-     i32.store offset=8
-     local.get $11
-     local.get $12
-     call $~lib/set/SetEntry<src-as/components/Transform/Transform>#set:key
-     local.get $12
-     call $~lib/util/hash/HASH<src-as/components/Transform/Transform>
-     local.get $1
-     i32.and
-     local.set $13
-     local.get $3
-     local.get $13
-     i32.const 4
-     i32.mul
-     i32.add
-     local.set $14
-     local.get $11
-     local.get $14
-     i32.load
-     call $~lib/set/SetEntry<src-as/components/Transform/Transform>#set:taggedNext
-     local.get $14
-     local.get $8
-     i32.store
-     local.get $8
-     i32.const 8
-     i32.add
-     local.set $8
-    end
-    local.get $6
-    i32.const 8
-    i32.add
-    local.set $6
-    br $while-continue|0
-   end
-  end
-  local.get $0
-  local.get $3
-  call $~lib/set/Set<src-as/components/Transform/Transform>#set:buckets
-  local.get $0
-  local.get $1
-  call $~lib/set/Set<src-as/components/Transform/Transform>#set:bucketsMask
-  local.get $0
-  local.get $5
-  call $~lib/set/Set<src-as/components/Transform/Transform>#set:entries
-  local.get $0
-  local.get $4
-  call $~lib/set/Set<src-as/components/Transform/Transform>#set:entriesCapacity
-  local.get $0
-  local.get $0
-  i32.load offset=20
-  call $~lib/set/Set<src-as/components/Transform/Transform>#set:entriesOffset
-  global.get $~lib/memory/__stack_pointer
-  i32.const 12
-  i32.add
-  global.set $~lib/memory/__stack_pointer
- )
- (func $~lib/set/Set<src-as/components/Transform/Transform>#delete (param $0 i32) (param $1 i32) (result i32)
-  (local $2 i32)
-  (local $3 i32)
-  (local $4 i32)
-  (local $5 i32)
-  local.get $0
-  local.get $1
-  local.get $1
-  call $~lib/util/hash/HASH<src-as/components/Transform/Transform>
-  call $~lib/set/Set<src-as/components/Transform/Transform>#find
-  local.set $2
-  local.get $2
-  i32.eqz
-  if
-   i32.const 0
-   return
-  end
-  local.get $2
-  local.get $2
-  i32.load offset=4
-  i32.const 1
-  i32.or
-  call $~lib/set/SetEntry<src-as/components/Transform/Transform>#set:taggedNext
-  local.get $0
-  local.get $0
-  i32.load offset=20
-  i32.const 1
-  i32.sub
-  call $~lib/set/Set<src-as/components/Transform/Transform>#set:entriesCount
-  local.get $0
-  i32.load offset=4
-  i32.const 1
-  i32.shr_u
-  local.set $3
-  local.get $3
-  i32.const 1
-  i32.add
-  i32.const 4
-  local.tee $4
-  local.get $0
-  i32.load offset=20
-  local.tee $5
-  local.get $4
-  local.get $5
-  i32.gt_u
-  select
-  i32.ge_u
-  if (result i32)
-   local.get $0
-   i32.load offset=20
-   local.get $0
-   i32.load offset=12
-   i32.const 3
-   i32.mul
-   i32.const 4
-   i32.div_s
-   i32.lt_s
-  else
-   i32.const 0
-  end
-  if
-   local.get $0
-   local.get $3
-   call $~lib/set/Set<src-as/components/Transform/Transform>#rehash
-  end
-  i32.const 1
- )
- (func $~lib/set/Set<src-as/components/Transform/Transform>#add (param $0 i32) (param $1 i32) (result i32)
-  (local $2 i32)
-  (local $3 i32)
-  (local $4 i32)
-  local.get $1
-  call $~lib/util/hash/HASH<src-as/components/Transform/Transform>
-  local.set $2
-  local.get $0
-  local.get $1
-  local.get $2
-  call $~lib/set/Set<src-as/components/Transform/Transform>#find
-  local.set $3
-  local.get $3
-  i32.eqz
-  if
-   local.get $0
-   i32.load offset=16
-   local.get $0
-   i32.load offset=12
-   i32.eq
-   if
-    local.get $0
-    local.get $0
-    i32.load offset=20
-    local.get $0
-    i32.load offset=12
-    i32.const 3
-    i32.mul
-    i32.const 4
-    i32.div_s
-    i32.lt_s
-    if (result i32)
-     local.get $0
-     i32.load offset=4
-    else
-     local.get $0
-     i32.load offset=4
-     i32.const 1
-     i32.shl
-     i32.const 1
-     i32.or
-    end
-    call $~lib/set/Set<src-as/components/Transform/Transform>#rehash
-   end
-   local.get $0
-   i32.load offset=8
-   local.get $0
-   local.get $0
-   i32.load offset=16
-   local.tee $4
-   i32.const 1
-   i32.add
-   call $~lib/set/Set<src-as/components/Transform/Transform>#set:entriesOffset
-   local.get $4
-   i32.const 8
-   i32.mul
-   i32.add
-   local.set $3
-   local.get $3
-   local.get $1
-   call $~lib/set/SetEntry<src-as/components/Transform/Transform>#set:key
-   i32.const 1
-   drop
-   local.get $0
-   local.get $1
-   i32.const 1
-   call $~lib/rt/itcms/__link
-   local.get $0
-   local.get $0
-   i32.load offset=20
-   i32.const 1
-   i32.add
-   call $~lib/set/Set<src-as/components/Transform/Transform>#set:entriesCount
-   local.get $0
-   i32.load
-   local.get $2
-   local.get $0
-   i32.load offset=4
-   i32.and
-   i32.const 4
-   i32.mul
-   i32.add
-   local.set $4
-   local.get $3
-   local.get $4
-   i32.load
-   call $~lib/set/SetEntry<src-as/components/Transform/Transform>#set:taggedNext
-   local.get $4
-   local.get $3
-   i32.store
-  end
-  local.get $0
- )
- (func $src-as/components/Transform/Transform#set:parent (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=36
-  local.get $0
-  local.get $1
-  i32.const 0
-  call $~lib/rt/itcms/__link
- )
- (func $src-as/components/Transform/Transform#set:matrixAutoUpdate (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store8 offset=40
- )
- (func $~lib/map/MapEntry<u32,src-as/base/Component/Component>#set:value (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=4
- )
- (func $~lib/map/MapEntry<u32,src-as/base/Component/Component>#set:key (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store
- )
- (func $~lib/map/MapEntry<u32,src-as/base/Component/Component>#set:taggedNext (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=8
- )
- (func $~lib/map/Map<u32,src-as/base/Component/Component>#rehash (param $0 i32) (param $1 i32)
-  (local $2 i32)
-  (local $3 i32)
-  (local $4 i32)
-  (local $5 i32)
-  (local $6 i32)
-  (local $7 i32)
-  (local $8 i32)
-  (local $9 i32)
-  (local $10 i32)
-  (local $11 i32)
-  (local $12 i32)
-  (local $13 i32)
-  (local $14 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 8
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i64.const 0
-  i64.store
-  local.get $1
-  i32.const 1
-  i32.add
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  local.get $2
-  i32.const 4
-  i32.mul
-  call $~lib/arraybuffer/ArrayBuffer#constructor
-  local.tee $3
-  i32.store
-  local.get $2
-  i32.const 8
-  i32.mul
-  i32.const 3
-  i32.div_s
-  local.set $4
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  local.get $4
-  i32.const 12
-  i32.mul
-  call $~lib/arraybuffer/ArrayBuffer#constructor
-  local.tee $5
-  i32.store offset=4
-  local.get $0
-  i32.load offset=8
-  local.set $6
-  local.get $6
-  local.get $0
-  i32.load offset=16
-  i32.const 12
-  i32.mul
-  i32.add
-  local.set $7
-  local.get $5
-  local.set $8
-  loop $while-continue|0
-   local.get $6
-   local.get $7
-   i32.ne
-   local.set $9
-   local.get $9
-   if
-    local.get $6
-    local.set $10
-    local.get $10
-    i32.load offset=8
-    i32.const 1
-    i32.and
-    i32.eqz
-    if
-     local.get $8
-     local.set $11
-     local.get $10
-     i32.load
-     local.set $12
-     local.get $11
-     local.get $12
-     call $~lib/map/MapEntry<u32,src-as/base/Component/Component>#set:key
-     local.get $11
-     local.get $10
-     i32.load offset=4
-     call $~lib/map/MapEntry<u32,src-as/base/Component/Component>#set:value
-     local.get $12
-     call $~lib/util/hash/HASH<u32>
-     local.get $1
-     i32.and
-     local.set $13
-     local.get $3
-     local.get $13
-     i32.const 4
-     i32.mul
-     i32.add
-     local.set $14
-     local.get $11
-     local.get $14
-     i32.load
-     call $~lib/map/MapEntry<u32,src-as/base/Component/Component>#set:taggedNext
-     local.get $14
-     local.get $8
-     i32.store
-     local.get $8
-     i32.const 12
-     i32.add
-     local.set $8
-    end
-    local.get $6
-    i32.const 12
-    i32.add
-    local.set $6
-    br $while-continue|0
-   end
-  end
-  local.get $0
-  local.get $3
-  call $~lib/map/Map<u32,src-as/base/Component/Component>#set:buckets
-  local.get $0
-  local.get $1
-  call $~lib/map/Map<u32,src-as/base/Component/Component>#set:bucketsMask
-  local.get $0
-  local.get $5
-  call $~lib/map/Map<u32,src-as/base/Component/Component>#set:entries
-  local.get $0
-  local.get $4
-  call $~lib/map/Map<u32,src-as/base/Component/Component>#set:entriesCapacity
-  local.get $0
-  local.get $0
-  i32.load offset=20
-  call $~lib/map/Map<u32,src-as/base/Component/Component>#set:entriesOffset
-  global.get $~lib/memory/__stack_pointer
-  i32.const 8
-  i32.add
-  global.set $~lib/memory/__stack_pointer
- )
- (func $~lib/array/Array<src-as/base/Query/Query>#get:length (param $0 i32) (result i32)
-  local.get $0
-  i32.load offset=12
- )
- (func $~lib/util/hash/HASH<src-as/base/Entity/Entity> (param $0 i32) (result i32)
-  (local $1 i32)
-  (local $2 i32)
-  (local $3 i32)
-  i32.const 0
-  drop
-  i32.const 1
-  drop
-  i32.const 4
-  i32.const 4
-  i32.eq
-  drop
-  local.get $0
-  local.set $1
-  i32.const 4
-  local.set $2
-  i32.const 0
-  i32.const 374761393
-  i32.add
-  local.get $2
-  i32.add
-  local.set $3
-  local.get $3
-  local.get $1
-  i32.const -1028477379
-  i32.mul
-  i32.add
-  local.set $3
-  local.get $3
-  i32.const 17
-  i32.rotl
-  i32.const 668265263
-  i32.mul
-  local.set $3
-  local.get $3
-  local.get $3
-  i32.const 15
-  i32.shr_u
-  i32.xor
-  local.set $3
-  local.get $3
-  i32.const -2048144777
-  i32.mul
-  local.set $3
-  local.get $3
-  local.get $3
-  i32.const 13
-  i32.shr_u
-  i32.xor
-  local.set $3
-  local.get $3
-  i32.const -1028477379
-  i32.mul
-  local.set $3
-  local.get $3
-  local.get $3
-  i32.const 16
-  i32.shr_u
-  i32.xor
-  local.set $3
-  local.get $3
-  return
- )
- (func $~lib/set/Set<src-as/base/Entity/Entity>#find (param $0 i32) (param $1 i32) (param $2 i32) (result i32)
-  (local $3 i32)
-  (local $4 i32)
-  (local $5 i32)
-  local.get $0
-  i32.load
-  local.get $2
-  local.get $0
-  i32.load offset=4
-  i32.and
-  i32.const 4
-  i32.mul
-  i32.add
-  i32.load
-  local.set $3
-  loop $while-continue|0
-   local.get $3
-   local.set $4
-   local.get $4
-   if
-    local.get $3
-    i32.load offset=4
-    local.set $5
-    local.get $5
-    i32.const 1
-    i32.and
-    i32.eqz
-    if (result i32)
-     local.get $3
-     i32.load
-     local.get $1
-     i32.eq
-    else
-     i32.const 0
-    end
-    if
-     local.get $3
-     return
-    end
-    local.get $5
-    i32.const 1
-    i32.const -1
-    i32.xor
-    i32.and
-    local.set $3
-    br $while-continue|0
-   end
-  end
-  i32.const 0
- )
- (func $~lib/set/SetEntry<src-as/base/Entity/Entity>#set:key (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store
- )
- (func $~lib/set/SetEntry<src-as/base/Entity/Entity>#set:taggedNext (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=4
- )
- (func $~lib/set/Set<src-as/base/Entity/Entity>#rehash (param $0 i32) (param $1 i32)
-  (local $2 i32)
-  (local $3 i32)
-  (local $4 i32)
-  (local $5 i32)
-  (local $6 i32)
-  (local $7 i32)
-  (local $8 i32)
-  (local $9 i32)
-  (local $10 i32)
-  (local $11 i32)
-  (local $12 i32)
-  (local $13 i32)
-  (local $14 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 12
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i64.const 0
-  i64.store
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store offset=8
-  local.get $1
-  i32.const 1
-  i32.add
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  local.get $2
-  i32.const 4
-  i32.mul
-  call $~lib/arraybuffer/ArrayBuffer#constructor
-  local.tee $3
-  i32.store
-  local.get $2
-  i32.const 8
-  i32.mul
-  i32.const 3
-  i32.div_s
-  local.set $4
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  local.get $4
-  i32.const 8
-  i32.mul
-  call $~lib/arraybuffer/ArrayBuffer#constructor
-  local.tee $5
-  i32.store offset=4
-  local.get $0
-  i32.load offset=8
-  local.set $6
-  local.get $6
-  local.get $0
-  i32.load offset=16
-  i32.const 8
-  i32.mul
-  i32.add
-  local.set $7
-  local.get $5
-  local.set $8
-  loop $while-continue|0
-   local.get $6
-   local.get $7
-   i32.ne
-   local.set $9
-   local.get $9
-   if
-    local.get $6
-    local.set $10
-    local.get $10
-    i32.load offset=4
-    i32.const 1
-    i32.and
-    i32.eqz
-    if
-     local.get $8
-     local.set $11
-     global.get $~lib/memory/__stack_pointer
-     local.get $10
-     i32.load
-     local.tee $12
-     i32.store offset=8
-     local.get $11
-     local.get $12
-     call $~lib/set/SetEntry<src-as/base/Entity/Entity>#set:key
-     local.get $12
-     call $~lib/util/hash/HASH<src-as/base/Entity/Entity>
-     local.get $1
-     i32.and
-     local.set $13
-     local.get $3
-     local.get $13
-     i32.const 4
-     i32.mul
-     i32.add
-     local.set $14
-     local.get $11
-     local.get $14
-     i32.load
-     call $~lib/set/SetEntry<src-as/base/Entity/Entity>#set:taggedNext
-     local.get $14
-     local.get $8
-     i32.store
-     local.get $8
-     i32.const 8
-     i32.add
-     local.set $8
-    end
-    local.get $6
-    i32.const 8
-    i32.add
-    local.set $6
-    br $while-continue|0
-   end
-  end
-  local.get $0
-  local.get $3
-  call $~lib/set/Set<src-as/base/Entity/Entity>#set:buckets
-  local.get $0
-  local.get $1
-  call $~lib/set/Set<src-as/base/Entity/Entity>#set:bucketsMask
-  local.get $0
-  local.get $5
-  call $~lib/set/Set<src-as/base/Entity/Entity>#set:entries
-  local.get $0
-  local.get $4
-  call $~lib/set/Set<src-as/base/Entity/Entity>#set:entriesCapacity
-  local.get $0
-  local.get $0
-  i32.load offset=20
-  call $~lib/set/Set<src-as/base/Entity/Entity>#set:entriesOffset
-  global.get $~lib/memory/__stack_pointer
-  i32.const 12
-  i32.add
-  global.set $~lib/memory/__stack_pointer
- )
- (func $~lib/set/Set<src-as/base/Entity/Entity>#add (param $0 i32) (param $1 i32) (result i32)
-  (local $2 i32)
-  (local $3 i32)
-  (local $4 i32)
-  local.get $1
-  call $~lib/util/hash/HASH<src-as/base/Entity/Entity>
-  local.set $2
-  local.get $0
-  local.get $1
-  local.get $2
-  call $~lib/set/Set<src-as/base/Entity/Entity>#find
-  local.set $3
-  local.get $3
-  i32.eqz
-  if
-   local.get $0
-   i32.load offset=16
-   local.get $0
-   i32.load offset=12
-   i32.eq
-   if
-    local.get $0
-    local.get $0
-    i32.load offset=20
-    local.get $0
-    i32.load offset=12
-    i32.const 3
-    i32.mul
-    i32.const 4
-    i32.div_s
-    i32.lt_s
-    if (result i32)
-     local.get $0
-     i32.load offset=4
-    else
-     local.get $0
-     i32.load offset=4
-     i32.const 1
-     i32.shl
-     i32.const 1
-     i32.or
-    end
-    call $~lib/set/Set<src-as/base/Entity/Entity>#rehash
-   end
-   local.get $0
-   i32.load offset=8
-   local.get $0
-   local.get $0
-   i32.load offset=16
-   local.tee $4
-   i32.const 1
-   i32.add
-   call $~lib/set/Set<src-as/base/Entity/Entity>#set:entriesOffset
-   local.get $4
-   i32.const 8
-   i32.mul
-   i32.add
-   local.set $3
-   local.get $3
-   local.get $1
-   call $~lib/set/SetEntry<src-as/base/Entity/Entity>#set:key
-   i32.const 1
-   drop
-   local.get $0
-   local.get $1
-   i32.const 1
-   call $~lib/rt/itcms/__link
-   local.get $0
-   local.get $0
-   i32.load offset=20
-   i32.const 1
-   i32.add
-   call $~lib/set/Set<src-as/base/Entity/Entity>#set:entriesCount
-   local.get $0
-   i32.load
-   local.get $2
-   local.get $0
-   i32.load offset=4
-   i32.and
-   i32.const 4
-   i32.mul
-   i32.add
-   local.set $4
-   local.get $3
-   local.get $4
-   i32.load
-   call $~lib/set/SetEntry<src-as/base/Entity/Entity>#set:taggedNext
-   local.get $4
-   local.get $3
-   i32.store
-  end
-  local.get $0
- )
- (func $~lib/map/Map<u32,~lib/array/Array<src-as/base/System/ListenerSystem>>#find (param $0 i32) (param $1 i32) (param $2 i32) (result i32)
-  (local $3 i32)
-  (local $4 i32)
-  (local $5 i32)
-  local.get $0
-  i32.load
-  local.get $2
-  local.get $0
-  i32.load offset=4
-  i32.and
-  i32.const 4
-  i32.mul
-  i32.add
-  i32.load
-  local.set $3
-  loop $while-continue|0
-   local.get $3
-   local.set $4
-   local.get $4
-   if
-    local.get $3
-    i32.load offset=8
-    local.set $5
-    local.get $5
-    i32.const 1
-    i32.and
-    i32.eqz
-    if (result i32)
-     local.get $3
-     i32.load
-     local.get $1
-     i32.eq
-    else
-     i32.const 0
-    end
-    if
-     local.get $3
-     return
-    end
-    local.get $5
-    i32.const 1
-    i32.const -1
-    i32.xor
-    i32.and
-    local.set $3
-    br $while-continue|0
-   end
-  end
-  i32.const 0
- )
- (func $~lib/map/Map<u32,~lib/array/Array<src-as/base/System/ListenerSystem>>#has (param $0 i32) (param $1 i32) (result i32)
-  local.get $0
-  local.get $1
-  local.get $1
-  call $~lib/util/hash/HASH<u32>
-  call $~lib/map/Map<u32,~lib/array/Array<src-as/base/System/ListenerSystem>>#find
-  i32.const 0
-  i32.ne
- )
- (func $~lib/map/Map<u32,~lib/array/Array<src-as/base/System/ListenerSystem>>#get (param $0 i32) (param $1 i32) (result i32)
-  (local $2 i32)
-  local.get $0
-  local.get $1
-  local.get $1
-  call $~lib/util/hash/HASH<u32>
-  call $~lib/map/Map<u32,~lib/array/Array<src-as/base/System/ListenerSystem>>#find
-  local.set $2
-  local.get $2
-  i32.eqz
-  if
-   i32.const 17200
-   i32.const 17264
-   i32.const 105
-   i32.const 17
-   call $~lib/builtins/abort
-   unreachable
-  end
-  local.get $2
-  i32.load offset=4
- )
- (func $~lib/array/Array<src-as/base/System/ListenerSystem>#get:length (param $0 i32) (result i32)
-  local.get $0
-  i32.load offset=12
- )
- (func $src-as/base/System/ListenerSystem#onAdd (param $0 i32) (param $1 i32)
-  nop
- )
- (func $~lib/rt/__instanceof (param $0 i32) (param $1 i32) (result i32)
-  (local $2 i32)
-  (local $3 i32)
-  local.get $0
-  i32.const 20
-  i32.sub
-  i32.load offset=12
-  local.set $2
-  global.get $~lib/rt/__rtti_base
-  local.set $3
-  local.get $2
-  local.get $3
-  i32.load
-  i32.le_u
-  if
-   loop $do-loop|0
-    local.get $2
-    local.get $1
-    i32.eq
-    if
-     i32.const 1
-     return
-    end
-    local.get $3
-    i32.const 4
-    i32.add
-    local.get $2
-    i32.const 8
-    i32.mul
-    i32.add
-    i32.load offset=4
-    local.tee $2
-    br_if $do-loop|0
-   end
-  end
-  i32.const 0
- )
- (func $~lib/map/Map<u32,src-as/base/Object/ObjectBase>#get (param $0 i32) (param $1 i32) (result i32)
-  (local $2 i32)
-  local.get $0
-  local.get $1
-  local.get $1
-  call $~lib/util/hash/HASH<u32>
-  call $~lib/map/Map<u32,src-as/base/Object/ObjectBase>#find
-  local.set $2
-  local.get $2
-  i32.eqz
-  if
-   i32.const 17200
-   i32.const 17264
-   i32.const 105
-   i32.const 17
-   call $~lib/builtins/abort
-   unreachable
-  end
-  local.get $2
-  i32.load offset=4
- )
- (func $src-as/base/systems/BehaviorSystem/BehaviorSystem#set:behaviors (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=8
-  local.get $0
-  local.get $1
-  i32.const 0
-  call $~lib/rt/itcms/__link
- )
- (func $~lib/array/Array<src-as/base/Component/BehaviorComponent>#set:length_ (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=12
- )
- (func $~lib/array/Array<src-as/base/Component/BehaviorComponent>#push (param $0 i32) (param $1 i32) (result i32)
-  (local $2 i32)
-  (local $3 i32)
-  local.get $0
-  i32.load offset=12
-  local.set $2
-  local.get $2
-  i32.const 1
-  i32.add
-  local.set $3
-  local.get $0
-  local.get $3
-  i32.const 2
-  i32.const 1
-  call $~lib/array/ensureCapacity
-  i32.const 1
-  drop
-  local.get $0
-  i32.load offset=4
-  local.get $2
-  i32.const 2
-  i32.shl
-  i32.add
-  local.get $1
-  i32.store
-  local.get $0
-  local.get $1
-  i32.const 1
-  call $~lib/rt/itcms/__link
-  local.get $0
-  local.get $3
-  call $~lib/array/Array<src-as/base/Component/BehaviorComponent>#set:length_
-  local.get $3
- )
- (func $src-as/base/Component/BehaviorComponent#start (param $0 i32)
-  nop
- )
- (func $~lib/map/Map<u32,src-as/base/Component/Component>#get (param $0 i32) (param $1 i32) (result i32)
-  (local $2 i32)
-  local.get $0
-  local.get $1
-  local.get $1
-  call $~lib/util/hash/HASH<u32>
-  call $~lib/map/Map<u32,src-as/base/Component/Component>#find
-  local.set $2
-  local.get $2
-  i32.eqz
-  if
-   i32.const 17200
-   i32.const 17264
-   i32.const 105
-   i32.const 17
-   call $~lib/builtins/abort
-   unreachable
-  end
-  local.get $2
-  i32.load offset=4
  )
  (func $src-as/base/systems/TransformSystem/TransformSystem#set:root (param $0 i32) (param $1 i32)
   local.get $0
@@ -17873,15 +19229,6 @@
   i32.const 0
   call $~lib/rt/itcms/__link
  )
- (func $src-as/math/Color/Color#set:m (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store
-  local.get $0
-  local.get $1
-  i32.const 0
-  call $~lib/rt/itcms/__link
- )
  (func $src-as/WebGL2/systems/WebGLRenderSystem/WebGLRenderSystem#clearColor (param $0 i32) (param $1 i32)
   local.get $1
   call $src-as/math/Color/Color#get:r
@@ -17892,15 +19239,6 @@
   local.get $1
   call $src-as/math/Color/Color#get:a
   call $src-as/WebGL2/imports/_types/clearColor
- )
- (func $src-as/base/Component/SpatialComponent#set:transform (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=8
-  local.get $0
-  local.get $1
-  i32.const 0
-  call $~lib/rt/itcms/__link
  )
  (func $~lib/array/Array<src-as/math/Vector3/Vector3>#set:length_ (param $0 i32) (param $1 i32)
   local.get $0
@@ -18039,133 +19377,12 @@
   i32.const 0
   call $~lib/rt/itcms/__link
  )
- (func $src-as/math/Quaternion/Quaternion#fromEulerAngles (param $0 i32) (param $1 i32) (result i32)
-  (local $2 f32)
-  (local $3 f32)
-  (local $4 f32)
-  (local $5 f32)
-  (local $6 f32)
-  (local $7 f32)
-  (local $8 f32)
-  (local $9 f32)
-  (local $10 f32)
-  (local $11 f32)
-  (local $12 f32)
-  (local $13 f32)
+ (func $src-as/components/Rotator/Rotator#set:startTime (param $0 i32) (param $1 f32)
+  local.get $0
   local.get $1
-  call $src-as/math/Vector3/Vector3#get:y
-  local.set $2
-  local.get $1
-  call $src-as/math/Vector3/Vector3#get:x
-  local.set $3
-  local.get $1
-  call $src-as/math/Vector3/Vector3#get:z
-  local.set $4
-  local.get $4
-  f32.const 0.5
-  f32.mul
-  local.set $5
-  local.get $3
-  f32.const 0.5
-  f32.mul
-  local.set $6
-  local.get $2
-  f32.const 0.5
-  f32.mul
-  local.set $7
-  local.get $5
-  call $~lib/math/NativeMathf.sin
-  local.set $8
-  local.get $5
-  call $~lib/math/NativeMathf.cos
-  local.set $9
-  local.get $6
-  call $~lib/math/NativeMathf.sin
-  local.set $10
-  local.get $6
-  call $~lib/math/NativeMathf.cos
-  local.set $11
-  local.get $7
-  call $~lib/math/NativeMathf.sin
-  local.set $12
-  local.get $7
-  call $~lib/math/NativeMathf.cos
-  local.set $13
-  local.get $0
-  local.get $13
-  local.get $10
-  f32.mul
-  local.get $9
-  f32.mul
-  local.get $12
-  local.get $11
-  f32.mul
-  local.get $8
-  f32.mul
-  f32.add
-  call $src-as/math/Quaternion/Quaternion#set:x
-  local.get $0
-  local.get $12
-  local.get $11
-  f32.mul
-  local.get $9
-  f32.mul
-  local.get $13
-  local.get $10
-  f32.mul
-  local.get $8
-  f32.mul
-  f32.sub
-  call $src-as/math/Quaternion/Quaternion#set:y
-  local.get $0
-  local.get $13
-  local.get $11
-  f32.mul
-  local.get $8
-  f32.mul
-  local.get $12
-  local.get $10
-  f32.mul
-  local.get $9
-  f32.mul
-  f32.sub
-  call $src-as/math/Quaternion/Quaternion#set:z
-  local.get $0
-  local.get $13
-  local.get $11
-  f32.mul
-  local.get $9
-  f32.mul
-  local.get $12
-  local.get $10
-  f32.mul
-  local.get $8
-  f32.mul
-  f32.add
-  call $src-as/math/Quaternion/Quaternion#set:w
-  local.get $0
+  f32.store offset=12
  )
- (func $src-as/components/Camera/Camera#set:_fov (param $0 i32) (param $1 f32)
-  local.get $0
-  local.get $1
-  f32.store offset=32
- )
- (func $src-as/components/Camera/Camera#set:_aspect (param $0 i32) (param $1 f32)
-  local.get $0
-  local.get $1
-  f32.store offset=36
- )
- (func $src-as/components/Camera/Camera#set:_near (param $0 i32) (param $1 f32)
-  local.get $0
-  local.get $1
-  f32.store offset=40
- )
- (func $src-as/components/Camera/Camera#set:_far (param $0 i32) (param $1 f32)
-  local.get $0
-  local.get $1
-  f32.store offset=44
- )
- (func $src-as/components/Camera/Camera#set:view (param $0 i32) (param $1 i32)
+ (func $src-as/components/Rotator/Rotator#set:offset (param $0 i32) (param $1 i32)
   local.get $0
   local.get $1
   i32.store offset=16
@@ -18174,96 +19391,445 @@
   i32.const 0
   call $~lib/rt/itcms/__link
  )
- (func $src-as/utility/Viewport/Viewport#set:x (param $0 i32) (param $1 i32)
+ (func $src-as/base/systems/InputSystem/InputSystem#handleMouseDown (param $0 i32)
+  local.get $0
+  i32.const 1
+  call $src-as/base/systems/InputSystem/InputSystem#set:mouseIsDown
+  local.get $0
+  i32.const 1
+  call $src-as/base/systems/InputSystem/InputSystem#set:mouseDown
+ )
+ (func $src-as/base/systems/InputSystem/InputSystem#handleMouseUp (param $0 i32)
+  local.get $0
+  i32.const 1
+  call $src-as/base/systems/InputSystem/InputSystem#set:mouseUp
+  local.get $0
+  i32.const 0
+  call $src-as/base/systems/InputSystem/InputSystem#set:mouseIsDown
+ )
+ (func $src-as/math/Vector2/Vector2#set (param $0 i32) (param $1 f32) (param $2 f32) (result i32)
+  local.get $0
+  local.get $1
+  call $src-as/math/Vector2/Vector2#set:x
+  local.get $0
+  local.get $2
+  call $src-as/math/Vector2/Vector2#set:y
+  local.get $0
+ )
+ (func $~lib/util/hash/HASH<i32> (param $0 i32) (result i32)
+  (local $1 i32)
+  (local $2 i32)
+  (local $3 i32)
+  i32.const 0
+  drop
+  i32.const 0
+  drop
+  i32.const 0
+  drop
+  i32.const 4
+  i32.const 4
+  i32.le_u
+  drop
+  local.get $0
+  local.set $2
+  i32.const 4
+  local.set $1
+  i32.const 0
+  i32.const 374761393
+  i32.add
+  local.get $1
+  i32.add
+  local.set $3
+  local.get $3
+  local.get $2
+  i32.const -1028477379
+  i32.mul
+  i32.add
+  local.set $3
+  local.get $3
+  i32.const 17
+  i32.rotl
+  i32.const 668265263
+  i32.mul
+  local.set $3
+  local.get $3
+  local.get $3
+  i32.const 15
+  i32.shr_u
+  i32.xor
+  local.set $3
+  local.get $3
+  i32.const -2048144777
+  i32.mul
+  local.set $3
+  local.get $3
+  local.get $3
+  i32.const 13
+  i32.shr_u
+  i32.xor
+  local.set $3
+  local.get $3
+  i32.const -1028477379
+  i32.mul
+  local.set $3
+  local.get $3
+  local.get $3
+  i32.const 16
+  i32.shr_u
+  i32.xor
+  local.set $3
+  local.get $3
+  return
+ )
+ (func $~lib/set/Set<i32>#find (param $0 i32) (param $1 i32) (param $2 i32) (result i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  local.get $0
+  i32.load
+  local.get $2
+  local.get $0
+  i32.load offset=4
+  i32.and
+  i32.const 4
+  i32.mul
+  i32.add
+  i32.load
+  local.set $3
+  loop $while-continue|0
+   local.get $3
+   local.set $4
+   local.get $4
+   if
+    local.get $3
+    i32.load offset=4
+    local.set $5
+    local.get $5
+    i32.const 1
+    i32.and
+    i32.eqz
+    if (result i32)
+     local.get $3
+     i32.load
+     local.get $1
+     i32.eq
+    else
+     i32.const 0
+    end
+    if
+     local.get $3
+     return
+    end
+    local.get $5
+    i32.const 1
+    i32.const -1
+    i32.xor
+    i32.and
+    local.set $3
+    br $while-continue|0
+   end
+  end
+  i32.const 0
+ )
+ (func $~lib/set/SetEntry<i32>#set:key (param $0 i32) (param $1 i32)
   local.get $0
   local.get $1
   i32.store
  )
- (func $src-as/utility/Viewport/Viewport#set:y (param $0 i32) (param $1 i32)
+ (func $~lib/set/SetEntry<i32>#set:taggedNext (param $0 i32) (param $1 i32)
   local.get $0
   local.get $1
   i32.store offset=4
  )
- (func $src-as/utility/Viewport/Viewport#set:width (param $0 i32) (param $1 i32)
-  local.get $0
+ (func $~lib/set/Set<i32>#rehash (param $0 i32) (param $1 i32)
+  (local $2 i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  (local $6 i32)
+  (local $7 i32)
+  (local $8 i32)
+  (local $9 i32)
+  (local $10 i32)
+  (local $11 i32)
+  (local $12 i32)
+  (local $13 i32)
+  (local $14 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
   local.get $1
-  i32.store offset=8
- )
- (func $src-as/utility/Viewport/Viewport#set:height (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=12
- )
- (func $src-as/components/Camera/Camera#set:viewport (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=12
-  local.get $0
-  local.get $1
+  i32.const 1
+  i32.add
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
   i32.const 0
-  call $~lib/rt/itcms/__link
- )
- (func $src-as/components/Camera/Camera#set:projection (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=20
-  local.get $0
-  local.get $1
+  local.get $2
+  i32.const 4
+  i32.mul
+  call $~lib/arraybuffer/ArrayBuffer#constructor
+  local.tee $3
+  i32.store
+  local.get $2
+  i32.const 8
+  i32.mul
+  i32.const 3
+  i32.div_s
+  local.set $4
+  global.get $~lib/memory/__stack_pointer
   i32.const 0
-  call $~lib/rt/itcms/__link
- )
- (func $src-as/components/Camera/Camera#set:viewProjection (param $0 i32) (param $1 i32)
+  local.get $4
+  i32.const 8
+  i32.mul
+  call $~lib/arraybuffer/ArrayBuffer#constructor
+  local.tee $5
+  i32.store offset=4
   local.get $0
-  local.get $1
-  i32.store offset=24
+  i32.load offset=8
+  local.set $6
+  local.get $6
   local.get $0
-  local.get $1
-  i32.const 0
-  call $~lib/rt/itcms/__link
- )
- (func $src-as/components/Camera/Camera#set:fillCanvas (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store8 offset=28
- )
- (func $src-as/components/Camera/Camera#constructor@varargs (param $0 i32) (param $1 f32) (param $2 f32) (param $3 f32) (param $4 f32) (result i32)
-  block $4of4
-   block $3of4
-    block $2of4
-     block $1of4
-      block $0of4
-       block $outOfRange
-        global.get $~argumentsLength
-        br_table $0of4 $1of4 $2of4 $3of4 $4of4 $outOfRange
-       end
-       unreachable
-      end
-      global.get $src-as/math/constants/TAU
-      f32.const 4
-      f32.div
-      local.set $1
-     end
-     f32.const 16
-     f32.const 9
-     f32.div
-     local.set $2
+  i32.load offset=16
+  i32.const 8
+  i32.mul
+  i32.add
+  local.set $7
+  local.get $5
+  local.set $8
+  loop $while-continue|0
+   local.get $6
+   local.get $7
+   i32.ne
+   local.set $9
+   local.get $9
+   if
+    local.get $6
+    local.set $10
+    local.get $10
+    i32.load offset=4
+    i32.const 1
+    i32.and
+    i32.eqz
+    if
+     local.get $8
+     local.set $11
+     local.get $10
+     i32.load
+     local.set $12
+     local.get $11
+     local.get $12
+     call $~lib/set/SetEntry<i32>#set:key
+     local.get $12
+     call $~lib/util/hash/HASH<i32>
+     local.get $1
+     i32.and
+     local.set $13
+     local.get $3
+     local.get $13
+     i32.const 4
+     i32.mul
+     i32.add
+     local.set $14
+     local.get $11
+     local.get $14
+     i32.load
+     call $~lib/set/SetEntry<i32>#set:taggedNext
+     local.get $14
+     local.get $8
+     i32.store
+     local.get $8
+     i32.const 8
+     i32.add
+     local.set $8
     end
-    f32.const 0.009999999776482582
-    local.set $3
+    local.get $6
+    i32.const 8
+    i32.add
+    local.set $6
+    br $while-continue|0
    end
-   f32.const 1e3
-   local.set $4
   end
+  local.get $0
+  local.get $3
+  call $~lib/set/Set<i32>#set:buckets
+  local.get $0
+  local.get $1
+  call $~lib/set/Set<i32>#set:bucketsMask
+  local.get $0
+  local.get $5
+  call $~lib/set/Set<i32>#set:entries
+  local.get $0
+  local.get $4
+  call $~lib/set/Set<i32>#set:entriesCapacity
+  local.get $0
+  local.get $0
+  i32.load offset=20
+  call $~lib/set/Set<i32>#set:entriesOffset
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+ )
+ (func $~lib/set/Set<i32>#add (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  (local $3 i32)
+  (local $4 i32)
+  local.get $1
+  call $~lib/util/hash/HASH<i32>
+  local.set $2
   local.get $0
   local.get $1
   local.get $2
+  call $~lib/set/Set<i32>#find
+  local.set $3
   local.get $3
-  local.get $4
-  call $src-as/components/Camera/Camera#constructor
- )
- (func $~lib/array/Array<src-as/components/Camera/Camera>#get:length (param $0 i32) (result i32)
+  i32.eqz
+  if
+   local.get $0
+   i32.load offset=16
+   local.get $0
+   i32.load offset=12
+   i32.eq
+   if
+    local.get $0
+    local.get $0
+    i32.load offset=20
+    local.get $0
+    i32.load offset=12
+    i32.const 3
+    i32.mul
+    i32.const 4
+    i32.div_s
+    i32.lt_s
+    if (result i32)
+     local.get $0
+     i32.load offset=4
+    else
+     local.get $0
+     i32.load offset=4
+     i32.const 1
+     i32.shl
+     i32.const 1
+     i32.or
+    end
+    call $~lib/set/Set<i32>#rehash
+   end
+   local.get $0
+   i32.load offset=8
+   local.get $0
+   local.get $0
+   i32.load offset=16
+   local.tee $4
+   i32.const 1
+   i32.add
+   call $~lib/set/Set<i32>#set:entriesOffset
+   local.get $4
+   i32.const 8
+   i32.mul
+   i32.add
+   local.set $3
+   local.get $3
+   local.get $1
+   call $~lib/set/SetEntry<i32>#set:key
+   i32.const 0
+   drop
+   local.get $0
+   local.get $0
+   i32.load offset=20
+   i32.const 1
+   i32.add
+   call $~lib/set/Set<i32>#set:entriesCount
+   local.get $0
+   i32.load
+   local.get $2
+   local.get $0
+   i32.load offset=4
+   i32.and
+   i32.const 4
+   i32.mul
+   i32.add
+   local.set $4
+   local.get $3
+   local.get $4
+   i32.load
+   call $~lib/set/SetEntry<i32>#set:taggedNext
+   local.get $4
+   local.get $3
+   i32.store
+  end
   local.get $0
-  i32.load offset=12
+ )
+ (func $~lib/set/Set<i32>#delete (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  local.get $0
+  local.get $1
+  local.get $1
+  call $~lib/util/hash/HASH<i32>
+  call $~lib/set/Set<i32>#find
+  local.set $2
+  local.get $2
+  i32.eqz
+  if
+   i32.const 0
+   return
+  end
+  local.get $2
+  local.get $2
+  i32.load offset=4
+  i32.const 1
+  i32.or
+  call $~lib/set/SetEntry<i32>#set:taggedNext
+  local.get $0
+  local.get $0
+  i32.load offset=20
+  i32.const 1
+  i32.sub
+  call $~lib/set/Set<i32>#set:entriesCount
+  local.get $0
+  i32.load offset=4
+  i32.const 1
+  i32.shr_u
+  local.set $3
+  local.get $3
+  i32.const 1
+  i32.add
+  i32.const 4
+  local.tee $4
+  local.get $0
+  i32.load offset=20
+  local.tee $5
+  local.get $4
+  local.get $5
+  i32.gt_u
+  select
+  i32.ge_u
+  if (result i32)
+   local.get $0
+   i32.load offset=20
+   local.get $0
+   i32.load offset=12
+   i32.const 3
+   i32.mul
+   i32.const 4
+   i32.div_s
+   i32.lt_s
+  else
+   i32.const 0
+  end
+  if
+   local.get $0
+   local.get $3
+   call $~lib/set/Set<i32>#rehash
+  end
+  i32.const 1
  )
  (func $src-as/components/Camera/Camera#set:aspect (param $0 i32) (param $1 f32)
   local.get $0
@@ -18295,691 +19861,6 @@
   call $src-as/components/Camera/Camera#set:aspect
   local.get $0
  )
- (func $~lib/array/Array<u32>#set:buffer (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store
-  local.get $0
-  local.get $1
-  i32.const 0
-  call $~lib/rt/itcms/__link
- )
- (func $~lib/array/Array<u32>#set:dataStart (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=4
- )
- (func $~lib/array/Array<u32>#set:byteLength (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=8
- )
- (func $~lib/array/Array<u32>#set:length_ (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=12
- )
- (func $~lib/array/Array<u32>#__uset (param $0 i32) (param $1 i32) (param $2 i32)
-  local.get $0
-  i32.load offset=4
-  local.get $1
-  i32.const 2
-  i32.shl
-  i32.add
-  local.get $2
-  i32.store
-  i32.const 0
-  drop
- )
- (func $~lib/array/Array<u32>#__set (param $0 i32) (param $1 i32) (param $2 i32)
-  local.get $1
-  local.get $0
-  i32.load offset=12
-  i32.ge_u
-  if
-   local.get $1
-   i32.const 0
-   i32.lt_s
-   if
-    i32.const 96
-    i32.const 4208
-    i32.const 130
-    i32.const 22
-    call $~lib/builtins/abort
-    unreachable
-   end
-   local.get $0
-   local.get $1
-   i32.const 1
-   i32.add
-   i32.const 2
-   i32.const 1
-   call $~lib/array/ensureCapacity
-   local.get $0
-   local.get $1
-   i32.const 1
-   i32.add
-   call $~lib/array/Array<u32>#set:length_
-  end
-  local.get $0
-  local.get $1
-  local.get $2
-  call $~lib/array/Array<u32>#__uset
- )
- (func $~lib/array/Array<u32>#set:length (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.const 2
-  i32.const 0
-  call $~lib/array/ensureCapacity
-  local.get $0
-  local.get $1
-  call $~lib/array/Array<u32>#set:length_
- )
- (func $~lib/array/Array<src-as/base/Component/Component>#set:buffer (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store
-  local.get $0
-  local.get $1
-  i32.const 0
-  call $~lib/rt/itcms/__link
- )
- (func $~lib/array/Array<src-as/base/Component/Component>#set:dataStart (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=4
- )
- (func $~lib/array/Array<src-as/base/Component/Component>#set:byteLength (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=8
- )
- (func $~lib/array/Array<src-as/base/Component/Component>#set:length_ (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=12
- )
- (func $~lib/array/Array<src-as/base/Component/Component>#__uset (param $0 i32) (param $1 i32) (param $2 i32)
-  local.get $0
-  i32.load offset=4
-  local.get $1
-  i32.const 2
-  i32.shl
-  i32.add
-  local.get $2
-  i32.store
-  i32.const 1
-  drop
-  local.get $0
-  local.get $2
-  i32.const 1
-  call $~lib/rt/itcms/__link
- )
- (func $~lib/array/Array<src-as/base/Component/Component>#__set (param $0 i32) (param $1 i32) (param $2 i32)
-  local.get $1
-  local.get $0
-  i32.load offset=12
-  i32.ge_u
-  if
-   local.get $1
-   i32.const 0
-   i32.lt_s
-   if
-    i32.const 96
-    i32.const 4208
-    i32.const 130
-    i32.const 22
-    call $~lib/builtins/abort
-    unreachable
-   end
-   local.get $0
-   local.get $1
-   i32.const 1
-   i32.add
-   i32.const 2
-   i32.const 1
-   call $~lib/array/ensureCapacity
-   local.get $0
-   local.get $1
-   i32.const 1
-   i32.add
-   call $~lib/array/Array<src-as/base/Component/Component>#set:length_
-  end
-  local.get $0
-  local.get $1
-  local.get $2
-  call $~lib/array/Array<src-as/base/Component/Component>#__uset
- )
- (func $~lib/array/Array<src-as/base/Component/Component>#set:length (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.const 2
-  i32.const 0
-  call $~lib/array/ensureCapacity
-  local.get $0
-  local.get $1
-  call $~lib/array/Array<src-as/base/Component/Component>#set:length_
- )
- (func $~lib/array/Array<src-as/base/Component/Component>#get:length (param $0 i32) (result i32)
-  local.get $0
-  i32.load offset=12
- )
- (func $~lib/set/Set<src-as/base/Entity/Entity>#has (param $0 i32) (param $1 i32) (result i32)
-  local.get $0
-  local.get $1
-  local.get $1
-  call $~lib/util/hash/HASH<src-as/base/Entity/Entity>
-  call $~lib/set/Set<src-as/base/Entity/Entity>#find
-  i32.const 0
-  i32.ne
- )
- (func $~lib/set/Set<src-as/base/Entity/Entity>#delete (param $0 i32) (param $1 i32) (result i32)
-  (local $2 i32)
-  (local $3 i32)
-  (local $4 i32)
-  (local $5 i32)
-  local.get $0
-  local.get $1
-  local.get $1
-  call $~lib/util/hash/HASH<src-as/base/Entity/Entity>
-  call $~lib/set/Set<src-as/base/Entity/Entity>#find
-  local.set $2
-  local.get $2
-  i32.eqz
-  if
-   i32.const 0
-   return
-  end
-  local.get $2
-  local.get $2
-  i32.load offset=4
-  i32.const 1
-  i32.or
-  call $~lib/set/SetEntry<src-as/base/Entity/Entity>#set:taggedNext
-  local.get $0
-  local.get $0
-  i32.load offset=20
-  i32.const 1
-  i32.sub
-  call $~lib/set/Set<src-as/base/Entity/Entity>#set:entriesCount
-  local.get $0
-  i32.load offset=4
-  i32.const 1
-  i32.shr_u
-  local.set $3
-  local.get $3
-  i32.const 1
-  i32.add
-  i32.const 4
-  local.tee $4
-  local.get $0
-  i32.load offset=20
-  local.tee $5
-  local.get $4
-  local.get $5
-  i32.gt_u
-  select
-  i32.ge_u
-  if (result i32)
-   local.get $0
-   i32.load offset=20
-   local.get $0
-   i32.load offset=12
-   i32.const 3
-   i32.mul
-   i32.const 4
-   i32.div_s
-   i32.lt_s
-  else
-   i32.const 0
-  end
-  if
-   local.get $0
-   local.get $3
-   call $~lib/set/Set<src-as/base/Entity/Entity>#rehash
-  end
-  i32.const 1
- )
- (func $src-as/base/System/ListenerSystem#onRemove (param $0 i32) (param $1 i32)
-  nop
- )
- (func $~lib/array/Array<src-as/base/Component/BehaviorComponent>#indexOf (param $0 i32) (param $1 i32) (param $2 i32) (result i32)
-  (local $3 i32)
-  (local $4 i32)
-  (local $5 i32)
-  (local $6 i32)
-  local.get $0
-  i32.load offset=12
-  local.set $3
-  local.get $3
-  i32.const 0
-  i32.eq
-  if (result i32)
-   i32.const 1
-  else
-   local.get $2
-   local.get $3
-   i32.ge_s
-  end
-  if
-   i32.const -1
-   return
-  end
-  local.get $2
-  i32.const 0
-  i32.lt_s
-  if
-   local.get $3
-   local.get $2
-   i32.add
-   local.tee $4
-   i32.const 0
-   local.tee $5
-   local.get $4
-   local.get $5
-   i32.gt_s
-   select
-   local.set $2
-  end
-  local.get $0
-  i32.load offset=4
-  local.set $6
-  loop $while-continue|0
-   local.get $2
-   local.get $3
-   i32.lt_s
-   local.set $4
-   local.get $4
-   if
-    local.get $6
-    local.get $2
-    i32.const 2
-    i32.shl
-    i32.add
-    i32.load
-    local.get $1
-    i32.eq
-    if
-     local.get $2
-     return
-    end
-    local.get $2
-    i32.const 1
-    i32.add
-    local.set $2
-    br $while-continue|0
-   end
-  end
-  i32.const -1
- )
- (func $~lib/map/Map<u32,src-as/base/Component/Component>#delete (param $0 i32) (param $1 i32) (result i32)
-  (local $2 i32)
-  (local $3 i32)
-  (local $4 i32)
-  (local $5 i32)
-  local.get $0
-  local.get $1
-  local.get $1
-  call $~lib/util/hash/HASH<u32>
-  call $~lib/map/Map<u32,src-as/base/Component/Component>#find
-  local.set $2
-  local.get $2
-  i32.eqz
-  if
-   i32.const 0
-   return
-  end
-  local.get $2
-  local.get $2
-  i32.load offset=8
-  i32.const 1
-  i32.or
-  call $~lib/map/MapEntry<u32,src-as/base/Component/Component>#set:taggedNext
-  local.get $0
-  local.get $0
-  i32.load offset=20
-  i32.const 1
-  i32.sub
-  call $~lib/map/Map<u32,src-as/base/Component/Component>#set:entriesCount
-  local.get $0
-  i32.load offset=4
-  i32.const 1
-  i32.shr_u
-  local.set $3
-  local.get $3
-  i32.const 1
-  i32.add
-  i32.const 4
-  local.tee $4
-  local.get $0
-  i32.load offset=20
-  local.tee $5
-  local.get $4
-  local.get $5
-  i32.gt_u
-  select
-  i32.ge_u
-  if (result i32)
-   local.get $0
-   i32.load offset=20
-   local.get $0
-   i32.load offset=12
-   i32.const 3
-   i32.mul
-   i32.const 4
-   i32.div_s
-   i32.lt_s
-  else
-   i32.const 0
-  end
-  if
-   local.get $0
-   local.get $3
-   call $~lib/map/Map<u32,src-as/base/Component/Component>#rehash
-  end
-  i32.const 1
- )
- (func $~lib/map/Map<u32,src-as/base/Entity/Entity>#delete (param $0 i32) (param $1 i32) (result i32)
-  (local $2 i32)
-  (local $3 i32)
-  (local $4 i32)
-  (local $5 i32)
-  local.get $0
-  local.get $1
-  local.get $1
-  call $~lib/util/hash/HASH<u32>
-  call $~lib/map/Map<u32,src-as/base/Entity/Entity>#find
-  local.set $2
-  local.get $2
-  i32.eqz
-  if
-   i32.const 0
-   return
-  end
-  local.get $2
-  local.get $2
-  i32.load offset=8
-  i32.const 1
-  i32.or
-  call $~lib/map/MapEntry<u32,src-as/base/Entity/Entity>#set:taggedNext
-  local.get $0
-  local.get $0
-  i32.load offset=20
-  i32.const 1
-  i32.sub
-  call $~lib/map/Map<u32,src-as/base/Entity/Entity>#set:entriesCount
-  local.get $0
-  i32.load offset=4
-  i32.const 1
-  i32.shr_u
-  local.set $3
-  local.get $3
-  i32.const 1
-  i32.add
-  i32.const 4
-  local.tee $4
-  local.get $0
-  i32.load offset=20
-  local.tee $5
-  local.get $4
-  local.get $5
-  i32.gt_u
-  select
-  i32.ge_u
-  if (result i32)
-   local.get $0
-   i32.load offset=20
-   local.get $0
-   i32.load offset=12
-   i32.const 3
-   i32.mul
-   i32.const 4
-   i32.div_s
-   i32.lt_s
-  else
-   i32.const 0
-  end
-  if
-   local.get $0
-   local.get $3
-   call $~lib/map/Map<u32,src-as/base/Entity/Entity>#rehash
-  end
-  i32.const 1
- )
- (func $src-as/rendering/material/Material/Material#set:shader (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=20
-  local.get $0
-  local.get $1
-  i32.const 0
-  call $~lib/rt/itcms/__link
- )
- (func $src-as/rendering/material/Material/Material#set:uniformMap (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store
-  local.get $0
-  local.get $1
-  i32.const 0
-  call $~lib/rt/itcms/__link
- )
- (func $src-as/rendering/material/Material/Material#set:uniformArr (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=4
-  local.get $0
-  local.get $1
-  i32.const 0
-  call $~lib/rt/itcms/__link
- )
- (func $src-as/rendering/material/Material/Material#set:uniformBufferObjects (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=8
-  local.get $0
-  local.get $1
-  i32.const 0
-  call $~lib/rt/itcms/__link
- )
- (func $src-as/rendering/material/Material/Material#set:transparent (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store8 offset=12
- )
- (func $src-as/rendering/material/Material/Material#set:culling (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=16
- )
- (func $~lib/array/Array<src-as/rendering/material/UniformBufferObject/UniformBufferObject>#set:length_ (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=12
- )
- (func $~lib/array/Array<src-as/rendering/material/UniformBufferObject/UniformBufferObject>#push (param $0 i32) (param $1 i32) (result i32)
-  (local $2 i32)
-  (local $3 i32)
-  local.get $0
-  i32.load offset=12
-  local.set $2
-  local.get $2
-  i32.const 1
-  i32.add
-  local.set $3
-  local.get $0
-  local.get $3
-  i32.const 2
-  i32.const 1
-  call $~lib/array/ensureCapacity
-  i32.const 1
-  drop
-  local.get $0
-  i32.load offset=4
-  local.get $2
-  i32.const 2
-  i32.shl
-  i32.add
-  local.get $1
-  i32.store
-  local.get $0
-  local.get $1
-  i32.const 1
-  call $~lib/rt/itcms/__link
-  local.get $0
-  local.get $3
-  call $~lib/array/Array<src-as/rendering/material/UniformBufferObject/UniformBufferObject>#set:length_
-  local.get $3
- )
- (func $src-as/rendering/material/Material/StandardMaterial#set:color (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=24
-  local.get $0
-  local.get $1
-  i32.const 0
-  call $~lib/rt/itcms/__link
- )
- (func $~lib/array/Array<src-as/rendering/material/Uniform/Uniform>#set:length_ (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=12
- )
- (func $~lib/array/Array<src-as/rendering/material/Uniform/Uniform>#push (param $0 i32) (param $1 i32) (result i32)
-  (local $2 i32)
-  (local $3 i32)
-  local.get $0
-  i32.load offset=12
-  local.set $2
-  local.get $2
-  i32.const 1
-  i32.add
-  local.set $3
-  local.get $0
-  local.get $3
-  i32.const 2
-  i32.const 1
-  call $~lib/array/ensureCapacity
-  i32.const 1
-  drop
-  local.get $0
-  i32.load offset=4
-  local.get $2
-  i32.const 2
-  i32.shl
-  i32.add
-  local.get $1
-  i32.store
-  local.get $0
-  local.get $1
-  i32.const 1
-  call $~lib/rt/itcms/__link
-  local.get $0
-  local.get $3
-  call $~lib/array/Array<src-as/rendering/material/Uniform/Uniform>#set:length_
-  local.get $3
- )
- (func $src-as/rendering/material/Uniform/Uniform.Vec4 (param $0 i32) (param $1 i32) (result i32)
-  i32.const 0
-  local.get $0
-  local.get $1
-  global.get $src-as/rendering/constants/enums/UniformType.FLOAT_VEC4
-  call $src-as/rendering/material/Uniform/Uniform_f32#constructor
- )
- (func $src-as/rendering/material/Uniform/TypedUniform<src-as/math/Texture/Texture>#set:value (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=12
-  local.get $0
-  local.get $1
-  i32.const 0
-  call $~lib/rt/itcms/__link
- )
- (func $src-as/rendering/material/Uniform/Uniform.Texture (param $0 i32) (param $1 i32) (result i32)
-  i32.const 0
-  local.get $0
-  local.get $1
-  global.get $src-as/rendering/constants/enums/UniformType.TEXTURE
-  call $src-as/rendering/material/Uniform/Uniform_texture#constructor
- )
- (func $src-as/rendering/material/Material/StandardMaterial#set:texture (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=28
-  local.get $0
-  local.get $1
-  i32.const 0
-  call $~lib/rt/itcms/__link
- )
- (func $src-as/components/Mesh/Mesh#set:geometry (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=12
-  local.get $0
-  local.get $1
-  i32.const 0
-  call $~lib/rt/itcms/__link
- )
- (func $src-as/components/Mesh/Mesh#set:material (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=16
-  local.get $0
-  local.get $1
-  i32.const 0
-  call $~lib/rt/itcms/__link
- )
- (func $src-as/components/Mesh/Mesh#set:shader (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=20
-  local.get $0
-  local.get $1
-  i32.const 0
-  call $~lib/rt/itcms/__link
- )
- (func $src-as/components/Mesh/Mesh#set:modelView (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=24
-  local.get $0
-  local.get $1
-  i32.const 0
-  call $~lib/rt/itcms/__link
- )
- (func $src-as/components/Mesh/Mesh#set:modelViewProjection (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=28
-  local.get $0
-  local.get $1
-  i32.const 0
-  call $~lib/rt/itcms/__link
- )
- (func $src-as/components/Mesh/Mesh#set:inverseTransposeModel (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=32
-  local.get $0
-  local.get $1
-  i32.const 0
-  call $~lib/rt/itcms/__link
- )
- (func $src-as/components/Rotator/Rotator#set:startTime (param $0 i32) (param $1 f32)
-  local.get $0
-  local.get $1
-  f32.store offset=12
- )
- (func $src-as/components/Rotator/Rotator#set:offset (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=16
-  local.get $0
-  local.get $1
-  i32.const 0
-  call $~lib/rt/itcms/__link
- )
  (func $~lib/rt/itcms/__pin (param $0 i32) (result i32)
   (local $1 i32)
   local.get $0
@@ -18993,7 +19874,7 @@
    i32.const 3
    i32.eq
    if
-    i32.const 18240
+    i32.const 18336
     i32.const 944
     i32.const 337
     i32.const 7
@@ -19025,7 +19906,7 @@
   i32.const 3
   i32.ne
   if
-   i32.const 18304
+   i32.const 18400
    i32.const 944
    i32.const 351
    i32.const 5
@@ -19097,6 +19978,296 @@
   drop
   i32.const 0
   drop
+ )
+ (func $~lib/array/Array<src-as/components/Transform/Transform>#set:length_ (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=12
+ )
+ (func $~lib/array/Array<src-as/components/Transform/Transform>#push (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  (local $3 i32)
+  local.get $0
+  i32.load offset=12
+  local.set $2
+  local.get $2
+  i32.const 1
+  i32.add
+  local.set $3
+  local.get $0
+  local.get $3
+  i32.const 2
+  i32.const 1
+  call $~lib/array/ensureCapacity
+  i32.const 1
+  drop
+  local.get $0
+  i32.load offset=4
+  local.get $2
+  i32.const 2
+  i32.shl
+  i32.add
+  local.get $1
+  i32.store
+  local.get $0
+  local.get $1
+  i32.const 1
+  call $~lib/rt/itcms/__link
+  local.get $0
+  local.get $3
+  call $~lib/array/Array<src-as/components/Transform/Transform>#set:length_
+  local.get $3
+ )
+ (func $~lib/array/Array<src-as/components/Camera/Camera>#set:length_ (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=12
+ )
+ (func $~lib/array/Array<src-as/components/Camera/Camera>#push (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  (local $3 i32)
+  local.get $0
+  i32.load offset=12
+  local.set $2
+  local.get $2
+  i32.const 1
+  i32.add
+  local.set $3
+  local.get $0
+  local.get $3
+  i32.const 2
+  i32.const 1
+  call $~lib/array/ensureCapacity
+  i32.const 1
+  drop
+  local.get $0
+  i32.load offset=4
+  local.get $2
+  i32.const 2
+  i32.shl
+  i32.add
+  local.get $1
+  i32.store
+  local.get $0
+  local.get $1
+  i32.const 1
+  call $~lib/rt/itcms/__link
+  local.get $0
+  local.get $3
+  call $~lib/array/Array<src-as/components/Camera/Camera>#set:length_
+  local.get $3
+ )
+ (func $~lib/array/Array<src-as/components/Mesh/Mesh>#set:length_ (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=12
+ )
+ (func $~lib/array/Array<src-as/components/Mesh/Mesh>#push (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  (local $3 i32)
+  local.get $0
+  i32.load offset=12
+  local.set $2
+  local.get $2
+  i32.const 1
+  i32.add
+  local.set $3
+  local.get $0
+  local.get $3
+  i32.const 2
+  i32.const 1
+  call $~lib/array/ensureCapacity
+  i32.const 1
+  drop
+  local.get $0
+  i32.load offset=4
+  local.get $2
+  i32.const 2
+  i32.shl
+  i32.add
+  local.get $1
+  i32.store
+  local.get $0
+  local.get $1
+  i32.const 1
+  call $~lib/rt/itcms/__link
+  local.get $0
+  local.get $3
+  call $~lib/array/Array<src-as/components/Mesh/Mesh>#set:length_
+  local.get $3
+ )
+ (func $src-as/rendering/systems/RenderSystem/RenderSystem#handleCreateMesh (param $0 i32) (param $1 i32)
+  nop
+ )
+ (func $~lib/array/Array<src-as/components/Transform/Transform>#indexOf (param $0 i32) (param $1 i32) (param $2 i32) (result i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  (local $6 i32)
+  local.get $0
+  i32.load offset=12
+  local.set $3
+  local.get $3
+  i32.const 0
+  i32.eq
+  if (result i32)
+   i32.const 1
+  else
+   local.get $2
+   local.get $3
+   i32.ge_s
+  end
+  if
+   i32.const -1
+   return
+  end
+  local.get $2
+  i32.const 0
+  i32.lt_s
+  if
+   local.get $3
+   local.get $2
+   i32.add
+   local.tee $4
+   i32.const 0
+   local.tee $5
+   local.get $4
+   local.get $5
+   i32.gt_s
+   select
+   local.set $2
+  end
+  local.get $0
+  i32.load offset=4
+  local.set $6
+  loop $while-continue|0
+   local.get $2
+   local.get $3
+   i32.lt_s
+   local.set $4
+   local.get $4
+   if
+    local.get $6
+    local.get $2
+    i32.const 2
+    i32.shl
+    i32.add
+    i32.load
+    local.get $1
+    i32.eq
+    if
+     local.get $2
+     return
+    end
+    local.get $2
+    i32.const 1
+    i32.add
+    local.set $2
+    br $while-continue|0
+   end
+  end
+  i32.const -1
+ )
+ (func $~lib/array/Array<src-as/components/Camera/Camera>#indexOf (param $0 i32) (param $1 i32) (param $2 i32) (result i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  (local $6 i32)
+  local.get $0
+  i32.load offset=12
+  local.set $3
+  local.get $3
+  i32.const 0
+  i32.eq
+  if (result i32)
+   i32.const 1
+  else
+   local.get $2
+   local.get $3
+   i32.ge_s
+  end
+  if
+   i32.const -1
+   return
+  end
+  local.get $2
+  i32.const 0
+  i32.lt_s
+  if
+   local.get $3
+   local.get $2
+   i32.add
+   local.tee $4
+   i32.const 0
+   local.tee $5
+   local.get $4
+   local.get $5
+   i32.gt_s
+   select
+   local.set $2
+  end
+  local.get $0
+  i32.load offset=4
+  local.set $6
+  loop $while-continue|0
+   local.get $2
+   local.get $3
+   i32.lt_s
+   local.set $4
+   local.get $4
+   if
+    local.get $6
+    local.get $2
+    i32.const 2
+    i32.shl
+    i32.add
+    i32.load
+    local.get $1
+    i32.eq
+    if
+     local.get $2
+     return
+    end
+    local.get $2
+    i32.const 1
+    i32.add
+    local.set $2
+    br $while-continue|0
+   end
+  end
+  i32.const -1
+ )
+ (func $src-as/base/systems/TransformSystem/TransformSystem#onRemove (param $0 i32) (param $1 i32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  global.get $~lib/memory/__stack_pointer
+  local.get $1
+  call $src-as/base/Entity/Entity#get<src-as/components/Transform/Transform>
+  local.tee $2
+  i32.store
+  local.get $2
+  i32.load offset=36
+  local.get $0
+  i32.load offset=20
+  i32.eq
+  if
+   local.get $2
+   i32.const 0
+   i32.const 0
+   call $src-as/components/Transform/Transform#setParent
+   drop
+  end
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
  )
  (func $~lib/array/Array<src-as/base/Entity/Entity>#set:buffer (param $0 i32) (param $1 i32)
   local.get $0
@@ -19196,63 +20367,6 @@
  )
  (func $src-as/base/Component/BehaviorComponent#update (param $0 i32)
   nop
- )
- (func $src-as/base/systems/InputSystem/InputSystem#set:mouseDown (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store8 offset=20
- )
- (func $src-as/base/systems/InputSystem/InputSystem#set:mouseUp (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store8 offset=21
- )
- (func $src-as/math/Vector2/Vector2#set (param $0 i32) (param $1 f32) (param $2 f32) (result i32)
-  local.get $0
-  local.get $1
-  call $src-as/math/Vector2/Vector2#set:x
-  local.get $0
-  local.get $2
-  call $src-as/math/Vector2/Vector2#set:y
-  local.get $0
- )
- (func $~lib/set/Set<i32>#set:buckets (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store
-  local.get $0
-  local.get $1
-  i32.const 0
-  call $~lib/rt/itcms/__link
- )
- (func $~lib/set/Set<i32>#set:bucketsMask (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=4
- )
- (func $~lib/set/Set<i32>#set:entries (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=8
-  local.get $0
-  local.get $1
-  i32.const 0
-  call $~lib/rt/itcms/__link
- )
- (func $~lib/set/Set<i32>#set:entriesCapacity (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=12
- )
- (func $~lib/set/Set<i32>#set:entriesOffset (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=16
- )
- (func $~lib/set/Set<i32>#set:entriesCount (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=20
  )
  (func $~lib/set/Set<i32>#clear (param $0 i32)
   local.get $0
@@ -20101,11 +21215,6 @@
   local.get $1
   i32.store offset=8
  )
- (func $~lib/array/Array<src-as/components/Transform/Transform>#set:length_ (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=12
- )
  (func $~lib/array/Array<src-as/components/Transform/Transform>#__uset (param $0 i32) (param $1 i32) (param $2 i32)
   local.get $0
   i32.load offset=4
@@ -20231,8 +21340,8 @@
   local.get $2
   i32.eqz
   if
-   i32.const 17200
-   i32.const 17264
+   i32.const 17344
+   i32.const 17408
    i32.const 105
    i32.const 17
    call $~lib/builtins/abort
@@ -20467,819 +21576,6 @@
   local.get $0
   call $src-as/rendering/systems/RenderSystem/RenderSystem#update
  )
- (func $~lib/array/Array<src-as/components/Transform/Transform>#push (param $0 i32) (param $1 i32) (result i32)
-  (local $2 i32)
-  (local $3 i32)
-  local.get $0
-  i32.load offset=12
-  local.set $2
-  local.get $2
-  i32.const 1
-  i32.add
-  local.set $3
-  local.get $0
-  local.get $3
-  i32.const 2
-  i32.const 1
-  call $~lib/array/ensureCapacity
-  i32.const 1
-  drop
-  local.get $0
-  i32.load offset=4
-  local.get $2
-  i32.const 2
-  i32.shl
-  i32.add
-  local.get $1
-  i32.store
-  local.get $0
-  local.get $1
-  i32.const 1
-  call $~lib/rt/itcms/__link
-  local.get $0
-  local.get $3
-  call $~lib/array/Array<src-as/components/Transform/Transform>#set:length_
-  local.get $3
- )
- (func $~lib/array/Array<src-as/components/Camera/Camera>#set:length_ (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=12
- )
- (func $~lib/array/Array<src-as/components/Camera/Camera>#push (param $0 i32) (param $1 i32) (result i32)
-  (local $2 i32)
-  (local $3 i32)
-  local.get $0
-  i32.load offset=12
-  local.set $2
-  local.get $2
-  i32.const 1
-  i32.add
-  local.set $3
-  local.get $0
-  local.get $3
-  i32.const 2
-  i32.const 1
-  call $~lib/array/ensureCapacity
-  i32.const 1
-  drop
-  local.get $0
-  i32.load offset=4
-  local.get $2
-  i32.const 2
-  i32.shl
-  i32.add
-  local.get $1
-  i32.store
-  local.get $0
-  local.get $1
-  i32.const 1
-  call $~lib/rt/itcms/__link
-  local.get $0
-  local.get $3
-  call $~lib/array/Array<src-as/components/Camera/Camera>#set:length_
-  local.get $3
- )
- (func $~lib/array/Array<src-as/components/Mesh/Mesh>#set:length_ (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=12
- )
- (func $~lib/array/Array<src-as/components/Mesh/Mesh>#push (param $0 i32) (param $1 i32) (result i32)
-  (local $2 i32)
-  (local $3 i32)
-  local.get $0
-  i32.load offset=12
-  local.set $2
-  local.get $2
-  i32.const 1
-  i32.add
-  local.set $3
-  local.get $0
-  local.get $3
-  i32.const 2
-  i32.const 1
-  call $~lib/array/ensureCapacity
-  i32.const 1
-  drop
-  local.get $0
-  i32.load offset=4
-  local.get $2
-  i32.const 2
-  i32.shl
-  i32.add
-  local.get $1
-  i32.store
-  local.get $0
-  local.get $1
-  i32.const 1
-  call $~lib/rt/itcms/__link
-  local.get $0
-  local.get $3
-  call $~lib/array/Array<src-as/components/Mesh/Mesh>#set:length_
-  local.get $3
- )
- (func $src-as/rendering/systems/RenderSystem/RenderSystem#handleCreateMesh (param $0 i32) (param $1 i32)
-  nop
- )
- (func $~lib/array/Array<src-as/components/Transform/Transform>#indexOf (param $0 i32) (param $1 i32) (param $2 i32) (result i32)
-  (local $3 i32)
-  (local $4 i32)
-  (local $5 i32)
-  (local $6 i32)
-  local.get $0
-  i32.load offset=12
-  local.set $3
-  local.get $3
-  i32.const 0
-  i32.eq
-  if (result i32)
-   i32.const 1
-  else
-   local.get $2
-   local.get $3
-   i32.ge_s
-  end
-  if
-   i32.const -1
-   return
-  end
-  local.get $2
-  i32.const 0
-  i32.lt_s
-  if
-   local.get $3
-   local.get $2
-   i32.add
-   local.tee $4
-   i32.const 0
-   local.tee $5
-   local.get $4
-   local.get $5
-   i32.gt_s
-   select
-   local.set $2
-  end
-  local.get $0
-  i32.load offset=4
-  local.set $6
-  loop $while-continue|0
-   local.get $2
-   local.get $3
-   i32.lt_s
-   local.set $4
-   local.get $4
-   if
-    local.get $6
-    local.get $2
-    i32.const 2
-    i32.shl
-    i32.add
-    i32.load
-    local.get $1
-    i32.eq
-    if
-     local.get $2
-     return
-    end
-    local.get $2
-    i32.const 1
-    i32.add
-    local.set $2
-    br $while-continue|0
-   end
-  end
-  i32.const -1
- )
- (func $~lib/array/Array<src-as/components/Camera/Camera>#indexOf (param $0 i32) (param $1 i32) (param $2 i32) (result i32)
-  (local $3 i32)
-  (local $4 i32)
-  (local $5 i32)
-  (local $6 i32)
-  local.get $0
-  i32.load offset=12
-  local.set $3
-  local.get $3
-  i32.const 0
-  i32.eq
-  if (result i32)
-   i32.const 1
-  else
-   local.get $2
-   local.get $3
-   i32.ge_s
-  end
-  if
-   i32.const -1
-   return
-  end
-  local.get $2
-  i32.const 0
-  i32.lt_s
-  if
-   local.get $3
-   local.get $2
-   i32.add
-   local.tee $4
-   i32.const 0
-   local.tee $5
-   local.get $4
-   local.get $5
-   i32.gt_s
-   select
-   local.set $2
-  end
-  local.get $0
-  i32.load offset=4
-  local.set $6
-  loop $while-continue|0
-   local.get $2
-   local.get $3
-   i32.lt_s
-   local.set $4
-   local.get $4
-   if
-    local.get $6
-    local.get $2
-    i32.const 2
-    i32.shl
-    i32.add
-    i32.load
-    local.get $1
-    i32.eq
-    if
-     local.get $2
-     return
-    end
-    local.get $2
-    i32.const 1
-    i32.add
-    local.set $2
-    br $while-continue|0
-   end
-  end
-  i32.const -1
- )
- (func $src-as/base/systems/TransformSystem/TransformSystem#onRemove (param $0 i32) (param $1 i32)
-  (local $2 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store
-  global.get $~lib/memory/__stack_pointer
-  local.get $1
-  call $src-as/base/Entity/Entity#get<src-as/components/Transform/Transform>
-  local.tee $2
-  i32.store
-  local.get $2
-  i32.load offset=36
-  local.get $0
-  i32.load offset=20
-  i32.eq
-  if
-   local.get $2
-   i32.const 0
-   i32.const 0
-   call $src-as/components/Transform/Transform#setParent
-   drop
-  end
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.add
-  global.set $~lib/memory/__stack_pointer
- )
- (func $src-as/math/PolarCoords/PolarCoords#set:radius (param $0 i32) (param $1 f32)
-  local.get $0
-  local.get $1
-  f32.store offset=4
- )
- (func $src-as/math/PolarCoords/PolarCoords#set:angle (param $0 i32) (param $1 f32)
-  local.get $0
-  local.get $1
-  f32.store
- )
- (func $src-as/math/Vector2/Vector2.fromPolar (param $0 i32) (param $1 i32) (result i32)
-  local.get $1
-  local.get $0
-  f32.load
-  call $~lib/math/NativeMathf.cos
-  local.get $0
-  f32.load offset=4
-  f32.mul
-  call $src-as/math/Vector2/Vector2#set:x
-  local.get $1
-  local.get $0
-  f32.load
-  call $~lib/math/NativeMathf.sin
-  local.get $0
-  f32.load offset=4
-  f32.mul
-  call $src-as/math/Vector2/Vector2#set:y
-  local.get $1
- )
- (func $src-as/math/Vector2/Vector2#set:m (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store
-  local.get $0
-  local.get $1
-  i32.const 0
-  call $~lib/rt/itcms/__link
- )
- (func $src-as/math/Vector2/Vector2#toVector3 (param $0 i32) (param $1 i32) (result i32)
-  local.get $1
-  local.get $0
-  call $src-as/math/Vector2/Vector2#get:x
-  call $src-as/math/Vector3/Vector3#set:x
-  local.get $1
-  local.get $0
-  call $src-as/math/Vector2/Vector2#get:y
-  call $src-as/math/Vector3/Vector3#set:y
-  local.get $1
-  f32.const 0
-  call $src-as/math/Vector3/Vector3#set:z
-  local.get $1
- )
- (func $src-as/math/Vector3/Vector3#add (param $0 i32) (param $1 i32) (result i32)
-  local.get $0
-  local.get $0
-  call $src-as/math/Vector3/Vector3#get:x
-  local.get $1
-  call $src-as/math/Vector3/Vector3#get:x
-  f32.add
-  call $src-as/math/Vector3/Vector3#set:x
-  local.get $0
-  local.get $0
-  call $src-as/math/Vector3/Vector3#get:y
-  local.get $1
-  call $src-as/math/Vector3/Vector3#get:y
-  f32.add
-  call $src-as/math/Vector3/Vector3#set:y
-  local.get $0
-  local.get $0
-  call $src-as/math/Vector3/Vector3#get:z
-  local.get $1
-  call $src-as/math/Vector3/Vector3#get:z
-  f32.add
-  call $src-as/math/Vector3/Vector3#set:z
-  local.get $0
- )
- (func $~lib/util/hash/HASH<src-as/rendering/material/UniformBufferObject/UniformBufferObject> (param $0 i32) (result i32)
-  (local $1 i32)
-  (local $2 i32)
-  (local $3 i32)
-  i32.const 0
-  drop
-  i32.const 1
-  drop
-  i32.const 4
-  i32.const 4
-  i32.eq
-  drop
-  local.get $0
-  local.set $1
-  i32.const 4
-  local.set $2
-  i32.const 0
-  i32.const 374761393
-  i32.add
-  local.get $2
-  i32.add
-  local.set $3
-  local.get $3
-  local.get $1
-  i32.const -1028477379
-  i32.mul
-  i32.add
-  local.set $3
-  local.get $3
-  i32.const 17
-  i32.rotl
-  i32.const 668265263
-  i32.mul
-  local.set $3
-  local.get $3
-  local.get $3
-  i32.const 15
-  i32.shr_u
-  i32.xor
-  local.set $3
-  local.get $3
-  i32.const -2048144777
-  i32.mul
-  local.set $3
-  local.get $3
-  local.get $3
-  i32.const 13
-  i32.shr_u
-  i32.xor
-  local.set $3
-  local.get $3
-  i32.const -1028477379
-  i32.mul
-  local.set $3
-  local.get $3
-  local.get $3
-  i32.const 16
-  i32.shr_u
-  i32.xor
-  local.set $3
-  local.get $3
-  return
- )
- (func $~lib/map/Map<src-as/rendering/material/UniformBufferObject/UniformBufferObject,src-as/WebGL2/components/material/WebGLUniformBufferObject>#find (param $0 i32) (param $1 i32) (param $2 i32) (result i32)
-  (local $3 i32)
-  (local $4 i32)
-  (local $5 i32)
-  local.get $0
-  i32.load
-  local.get $2
-  local.get $0
-  i32.load offset=4
-  i32.and
-  i32.const 4
-  i32.mul
-  i32.add
-  i32.load
-  local.set $3
-  loop $while-continue|0
-   local.get $3
-   local.set $4
-   local.get $4
-   if
-    local.get $3
-    i32.load offset=8
-    local.set $5
-    local.get $5
-    i32.const 1
-    i32.and
-    i32.eqz
-    if (result i32)
-     local.get $3
-     i32.load
-     local.get $1
-     i32.eq
-    else
-     i32.const 0
-    end
-    if
-     local.get $3
-     return
-    end
-    local.get $5
-    i32.const 1
-    i32.const -1
-    i32.xor
-    i32.and
-    local.set $3
-    br $while-continue|0
-   end
-  end
-  i32.const 0
- )
- (func $~lib/map/Map<src-as/rendering/material/UniformBufferObject/UniformBufferObject,src-as/WebGL2/components/material/WebGLUniformBufferObject>#has (param $0 i32) (param $1 i32) (result i32)
-  local.get $0
-  local.get $1
-  local.get $1
-  call $~lib/util/hash/HASH<src-as/rendering/material/UniformBufferObject/UniformBufferObject>
-  call $~lib/map/Map<src-as/rendering/material/UniformBufferObject/UniformBufferObject,src-as/WebGL2/components/material/WebGLUniformBufferObject>#find
-  i32.const 0
-  i32.ne
- )
- (func $~lib/map/Map<src-as/rendering/material/UniformBufferObject/UniformBufferObject,src-as/WebGL2/components/material/WebGLUniformBufferObject>#get (param $0 i32) (param $1 i32) (result i32)
-  (local $2 i32)
-  local.get $0
-  local.get $1
-  local.get $1
-  call $~lib/util/hash/HASH<src-as/rendering/material/UniformBufferObject/UniformBufferObject>
-  call $~lib/map/Map<src-as/rendering/material/UniformBufferObject/UniformBufferObject,src-as/WebGL2/components/material/WebGLUniformBufferObject>#find
-  local.set $2
-  local.get $2
-  i32.eqz
-  if
-   i32.const 17200
-   i32.const 17264
-   i32.const 105
-   i32.const 17
-   call $~lib/builtins/abort
-   unreachable
-  end
-  local.get $2
-  i32.load offset=4
- )
- (func $src-as/WebGL2/systems/WebGLRenderSystem/WebGLRenderSystem#handleViewport (param $0 i32) (param $1 i32)
-  local.get $1
-  i32.load
-  local.get $1
-  i32.load offset=4
-  local.get $1
-  i32.load offset=8
-  local.get $1
-  i32.load offset=12
-  call $src-as/WebGL2/imports/_types/viewport
- )
- (func $src-as/WebGL2/systems/WebGLRenderSystem/WebGLRenderSystem#handlePrepareOpaque (param $0 i32)
-  global.get $src-as/WebGL2/imports/_constants/Toggle.DEPTH_TEST
-  call $src-as/WebGL2/imports/_types/enable
-  global.get $src-as/WebGL2/imports/_constants/Test.LEQUAL
-  call $src-as/WebGL2/imports/_types/depthFunc
-  global.get $src-as/WebGL2/imports/_constants/Toggle.BLEND
-  call $src-as/WebGL2/imports/_types/disable
- )
- (func $~lib/util/hash/HASH<src-as/components/Mesh/Mesh> (param $0 i32) (result i32)
-  (local $1 i32)
-  (local $2 i32)
-  (local $3 i32)
-  i32.const 0
-  drop
-  i32.const 1
-  drop
-  i32.const 4
-  i32.const 4
-  i32.eq
-  drop
-  local.get $0
-  local.set $1
-  i32.const 4
-  local.set $2
-  i32.const 0
-  i32.const 374761393
-  i32.add
-  local.get $2
-  i32.add
-  local.set $3
-  local.get $3
-  local.get $1
-  i32.const -1028477379
-  i32.mul
-  i32.add
-  local.set $3
-  local.get $3
-  i32.const 17
-  i32.rotl
-  i32.const 668265263
-  i32.mul
-  local.set $3
-  local.get $3
-  local.get $3
-  i32.const 15
-  i32.shr_u
-  i32.xor
-  local.set $3
-  local.get $3
-  i32.const -2048144777
-  i32.mul
-  local.set $3
-  local.get $3
-  local.get $3
-  i32.const 13
-  i32.shr_u
-  i32.xor
-  local.set $3
-  local.get $3
-  i32.const -1028477379
-  i32.mul
-  local.set $3
-  local.get $3
-  local.get $3
-  i32.const 16
-  i32.shr_u
-  i32.xor
-  local.set $3
-  local.get $3
-  return
- )
- (func $~lib/map/Map<src-as/components/Mesh/Mesh,src-as/WebGL2/components/mesh/WebGLMesh>#find (param $0 i32) (param $1 i32) (param $2 i32) (result i32)
-  (local $3 i32)
-  (local $4 i32)
-  (local $5 i32)
-  local.get $0
-  i32.load
-  local.get $2
-  local.get $0
-  i32.load offset=4
-  i32.and
-  i32.const 4
-  i32.mul
-  i32.add
-  i32.load
-  local.set $3
-  loop $while-continue|0
-   local.get $3
-   local.set $4
-   local.get $4
-   if
-    local.get $3
-    i32.load offset=8
-    local.set $5
-    local.get $5
-    i32.const 1
-    i32.and
-    i32.eqz
-    if (result i32)
-     local.get $3
-     i32.load
-     local.get $1
-     i32.eq
-    else
-     i32.const 0
-    end
-    if
-     local.get $3
-     return
-    end
-    local.get $5
-    i32.const 1
-    i32.const -1
-    i32.xor
-    i32.and
-    local.set $3
-    br $while-continue|0
-   end
-  end
-  i32.const 0
- )
- (func $~lib/map/Map<src-as/components/Mesh/Mesh,src-as/WebGL2/components/mesh/WebGLMesh>#get (param $0 i32) (param $1 i32) (result i32)
-  (local $2 i32)
-  local.get $0
-  local.get $1
-  local.get $1
-  call $~lib/util/hash/HASH<src-as/components/Mesh/Mesh>
-  call $~lib/map/Map<src-as/components/Mesh/Mesh,src-as/WebGL2/components/mesh/WebGLMesh>#find
-  local.set $2
-  local.get $2
-  i32.eqz
-  if
-   i32.const 17200
-   i32.const 17264
-   i32.const 105
-   i32.const 17
-   call $~lib/builtins/abort
-   unreachable
-  end
-  local.get $2
-  i32.load offset=4
- )
- (func $~lib/array/Array<src-as/WebGL2/components/material/WebGLUniform>#get:length (param $0 i32) (result i32)
-  local.get $0
-  i32.load offset=12
- )
- (func $src-as/WebGL2/components/material/WebGLUniform#apply (param $0 i32)
-  nop
- )
- (func $src-as/WebGL2/components/geometry/WebGLGeometry#set:vao (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=20
- )
- (func $src-as/WebGL2/components/geometry/WebGLGeometry#set:vaoSwap (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=24
- )
- (func $src-as/WebGL2/components/geometry/WebGLGeometry#set:feedback (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=28
- )
- (func $src-as/WebGL2/components/geometry/WebGLGeometry#set:feedbackSwap (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=32
- )
- (func $src-as/WebGL2/systems/WebGLGeometrySystem/WebGLGeometrySystem#render (param $0 i32) (param $1 i32)
-  (local $2 externref)
-  (local $3 i32)
-  local.get $1
-  i32.load offset=20
-  call $src-as/imports/_host/get
-  local.set $2
-  local.get $2
-  call $src-as/WebGL2/imports/_types/bindVertexArray
-  local.get $1
-  i32.load offset=28
-  if
-   global.get $src-as/WebGL2/imports/_constants/Parameter.RASTERIZER_DISCARD
-   call $src-as/WebGL2/imports/_types/enable
-   global.get $src-as/WebGL2/imports/_constants/TransformFeedback.TRANSFORM_FEEDBACK
-   local.get $1
-   i32.load offset=28
-   call $src-as/imports/_host/get
-   call $src-as/WebGL2/imports/_types/bindTransformFeedback
-   global.get $src-as/WebGL2/imports/_constants/Primitive.POINTS
-   call $src-as/WebGL2/imports/_types/beginTransformFeedback
-   global.get $src-as/WebGL2/imports/_constants/Primitive.POINTS
-   i32.const 0
-   local.get $1
-   i32.load offset=8
-   call $src-as/WebGL2/imports/_types/drawArrays
-   global.get $src-as/WebGL2/imports/_constants/Parameter.RASTERIZER_DISCARD
-   call $src-as/WebGL2/imports/_types/disable
-   call $src-as/WebGL2/imports/_types/endTransformFeedback
-   global.get $src-as/WebGL2/imports/_constants/TransformFeedback.TRANSFORM_FEEDBACK
-   ref.null extern
-   call $src-as/WebGL2/imports/_types/bindTransformFeedback
-  else
-   local.get $1
-   i32.load offset=12
-   i32.const 0
-   i32.gt_u
-   if (result i32)
-    local.get $1
-    i32.load8_u offset=16
-   else
-    i32.const 0
-   end
-   if
-    local.get $1
-    i32.load
-    local.get $1
-    i32.load offset=8
-    global.get $src-as/WebGL2/imports/_constants/DataType.UNSIGNED_SHORT
-    i32.const 0
-    local.get $1
-    i32.load offset=12
-    call $src-as/WebGL2/imports/_types/drawElementsInstanced
-   else
-    local.get $1
-    i32.load offset=12
-    i32.const 0
-    i32.gt_u
-    if
-     local.get $1
-     i32.load
-     i32.const 0
-     local.get $1
-     i32.load offset=8
-     local.get $1
-     i32.load offset=12
-     call $src-as/WebGL2/imports/_types/drawArraysInstanced
-    else
-     local.get $1
-     i32.load8_u offset=16
-     if
-      local.get $1
-      i32.load
-      local.get $1
-      i32.load offset=8
-      global.get $src-as/WebGL2/imports/_constants/DataType.UNSIGNED_SHORT
-      i32.const 0
-      call $src-as/WebGL2/imports/_types/drawElements
-     else
-      local.get $1
-      i32.load
-      i32.const 0
-      local.get $1
-      i32.load offset=8
-      call $src-as/WebGL2/imports/_types/drawArrays
-     end
-    end
-   end
-  end
-  ref.null extern
-  call $src-as/WebGL2/imports/_types/bindVertexArray
-  local.get $1
-  i32.load offset=24
-  if
-   local.get $1
-   i32.load offset=20
-   local.set $3
-   local.get $1
-   local.get $1
-   i32.load offset=24
-   call $src-as/WebGL2/components/geometry/WebGLGeometry#set:vao
-   local.get $1
-   local.get $3
-   call $src-as/WebGL2/components/geometry/WebGLGeometry#set:vaoSwap
-  end
-  local.get $1
-  i32.load offset=32
-  if
-   local.get $1
-   i32.load offset=28
-   local.set $3
-   local.get $1
-   local.get $1
-   i32.load offset=32
-   call $src-as/WebGL2/components/geometry/WebGLGeometry#set:feedback
-   local.get $1
-   local.get $3
-   call $src-as/WebGL2/components/geometry/WebGLGeometry#set:feedbackSwap
-  end
- )
- (func $src-as/WebGL2/systems/WebGLRenderSystem/WebGLRenderSystem#handlePrepareTransparent (param $0 i32)
-  global.get $src-as/WebGL2/imports/_constants/Toggle.BLEND
-  call $src-as/WebGL2/imports/_types/enable
-  global.get $src-as/WebGL2/imports/_constants/Blend.SRC_ALPHA
-  global.get $src-as/WebGL2/imports/_constants/Blend.ONE_MINUS_SRC_ALPHA
-  call $src-as/WebGL2/imports/_types/blendFunc
-  global.get $src-as/WebGL2/imports/_constants/Toggle.DEPTH_TEST
-  call $src-as/WebGL2/imports/_types/disable
- )
  (func $~lib/util/hash/HASH<src-as/rendering/shader/Shader/Shader> (param $0 i32) (result i32)
   (local $1 i32)
   (local $2 i32)
@@ -21413,8 +21709,8 @@
   local.get $2
   i32.eqz
   if
-   i32.const 17200
-   i32.const 17264
+   i32.const 17344
+   i32.const 17408
    i32.const 105
    i32.const 17
    call $~lib/builtins/abort
@@ -21743,8 +22039,8 @@
   local.get $2
   i32.eqz
   if
-   i32.const 17200
-   i32.const 17264
+   i32.const 17344
+   i32.const 17408
    i32.const 105
    i32.const 17
    call $~lib/builtins/abort
@@ -21918,8 +22214,8 @@
   local.get $2
   i32.eqz
   if
-   i32.const 17200
-   i32.const 17264
+   i32.const 17344
+   i32.const 17408
    i32.const 105
    i32.const 17
    call $~lib/builtins/abort
@@ -22254,6 +22550,26 @@
   call $~lib/array/Array<src-as/WebGL2/components/geometry/WebGLAttribute>#set:length_
   local.get $3
  )
+ (func $src-as/WebGL2/components/geometry/WebGLGeometry#set:vao (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=20
+ )
+ (func $src-as/WebGL2/components/geometry/WebGLGeometry#set:vaoSwap (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=24
+ )
+ (func $src-as/WebGL2/components/geometry/WebGLGeometry#set:feedback (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=28
+ )
+ (func $src-as/WebGL2/components/geometry/WebGLGeometry#set:feedbackSwap (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=32
+ )
  (func $src-as/WebGL2/components/geometry/WebGLGeometry#set:attributes (param $0 i32) (param $1 i32)
   local.get $0
   local.get $1
@@ -22574,8 +22890,8 @@
   local.get $2
   i32.eqz
   if
-   i32.const 17200
-   i32.const 17264
+   i32.const 17344
+   i32.const 17408
    i32.const 105
    i32.const 17
    call $~lib/builtins/abort
@@ -22587,6 +22903,149 @@
  (func $~lib/array/Array<src-as/rendering/material/UniformBufferObject/UniformBufferObject>#get:length (param $0 i32) (result i32)
   local.get $0
   i32.load offset=12
+ )
+ (func $~lib/util/hash/HASH<src-as/rendering/material/UniformBufferObject/UniformBufferObject> (param $0 i32) (result i32)
+  (local $1 i32)
+  (local $2 i32)
+  (local $3 i32)
+  i32.const 0
+  drop
+  i32.const 1
+  drop
+  i32.const 4
+  i32.const 4
+  i32.eq
+  drop
+  local.get $0
+  local.set $1
+  i32.const 4
+  local.set $2
+  i32.const 0
+  i32.const 374761393
+  i32.add
+  local.get $2
+  i32.add
+  local.set $3
+  local.get $3
+  local.get $1
+  i32.const -1028477379
+  i32.mul
+  i32.add
+  local.set $3
+  local.get $3
+  i32.const 17
+  i32.rotl
+  i32.const 668265263
+  i32.mul
+  local.set $3
+  local.get $3
+  local.get $3
+  i32.const 15
+  i32.shr_u
+  i32.xor
+  local.set $3
+  local.get $3
+  i32.const -2048144777
+  i32.mul
+  local.set $3
+  local.get $3
+  local.get $3
+  i32.const 13
+  i32.shr_u
+  i32.xor
+  local.set $3
+  local.get $3
+  i32.const -1028477379
+  i32.mul
+  local.set $3
+  local.get $3
+  local.get $3
+  i32.const 16
+  i32.shr_u
+  i32.xor
+  local.set $3
+  local.get $3
+  return
+ )
+ (func $~lib/map/Map<src-as/rendering/material/UniformBufferObject/UniformBufferObject,src-as/WebGL2/components/material/WebGLUniformBufferObject>#find (param $0 i32) (param $1 i32) (param $2 i32) (result i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  local.get $0
+  i32.load
+  local.get $2
+  local.get $0
+  i32.load offset=4
+  i32.and
+  i32.const 4
+  i32.mul
+  i32.add
+  i32.load
+  local.set $3
+  loop $while-continue|0
+   local.get $3
+   local.set $4
+   local.get $4
+   if
+    local.get $3
+    i32.load offset=8
+    local.set $5
+    local.get $5
+    i32.const 1
+    i32.and
+    i32.eqz
+    if (result i32)
+     local.get $3
+     i32.load
+     local.get $1
+     i32.eq
+    else
+     i32.const 0
+    end
+    if
+     local.get $3
+     return
+    end
+    local.get $5
+    i32.const 1
+    i32.const -1
+    i32.xor
+    i32.and
+    local.set $3
+    br $while-continue|0
+   end
+  end
+  i32.const 0
+ )
+ (func $~lib/map/Map<src-as/rendering/material/UniformBufferObject/UniformBufferObject,src-as/WebGL2/components/material/WebGLUniformBufferObject>#has (param $0 i32) (param $1 i32) (result i32)
+  local.get $0
+  local.get $1
+  local.get $1
+  call $~lib/util/hash/HASH<src-as/rendering/material/UniformBufferObject/UniformBufferObject>
+  call $~lib/map/Map<src-as/rendering/material/UniformBufferObject/UniformBufferObject,src-as/WebGL2/components/material/WebGLUniformBufferObject>#find
+  i32.const 0
+  i32.ne
+ )
+ (func $~lib/map/Map<src-as/rendering/material/UniformBufferObject/UniformBufferObject,src-as/WebGL2/components/material/WebGLUniformBufferObject>#get (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  local.get $0
+  local.get $1
+  local.get $1
+  call $~lib/util/hash/HASH<src-as/rendering/material/UniformBufferObject/UniformBufferObject>
+  call $~lib/map/Map<src-as/rendering/material/UniformBufferObject/UniformBufferObject,src-as/WebGL2/components/material/WebGLUniformBufferObject>#find
+  local.set $2
+  local.get $2
+  i32.eqz
+  if
+   i32.const 17344
+   i32.const 17408
+   i32.const 105
+   i32.const 17
+   call $~lib/builtins/abort
+   unreachable
+  end
+  local.get $2
+  i32.load offset=4
  )
  (func $~lib/array/Array<~lib/string/String>#set:buffer (param $0 i32) (param $1 i32)
   local.get $0
@@ -22910,13 +23369,13 @@
   global.get $~lib/memory/__stack_pointer
   local.get $1
   local.tee $2
-  i32.const 148
+  i32.const 156
   call $~lib/rt/__instanceof
   if (result i32)
    local.get $2
   else
-   i32.const 17760
-   i32.const 19872
+   i32.const 17456
+   i32.const 19824
    i32.const 98
    i32.const 19
    call $~lib/builtins/abort
@@ -23038,14 +23497,14 @@
     i32.const 100
     i32.rem_u
     local.set $7
-    i32.const 20188
+    i32.const 20140
     local.get $6
     i32.const 2
     i32.shl
     i32.add
     i64.load32_u
     local.set $8
-    i32.const 20188
+    i32.const 20140
     local.get $7
     i32.const 2
     i32.shl
@@ -23088,7 +23547,7 @@
    i32.const 2
    i32.sub
    local.set $2
-   i32.const 20188
+   i32.const 20140
    local.get $10
    i32.const 2
    i32.shl
@@ -23111,7 +23570,7 @@
    i32.const 2
    i32.sub
    local.set $2
-   i32.const 20188
+   i32.const 20140
    local.get $1
    i32.const 2
    i32.shl
@@ -23161,7 +23620,7 @@
     i32.const 1
     i32.shl
     i32.add
-    i32.const 20608
+    i32.const 20560
     local.get $1
     i32.wrap_i64
     i32.const 255
@@ -23183,7 +23642,7 @@
   i32.and
   if
    local.get $0
-   i32.const 20608
+   i32.const 20560
    local.get $1
    i32.wrap_i64
    i32.const 6
@@ -23305,7 +23764,7 @@
     i32.const 1
     i32.shl
     i32.add
-    i32.const 21664
+    i32.const 21616
     local.get $1
     local.get $6
     i64.and
@@ -23339,7 +23798,7 @@
     i32.const 1
     i32.shl
     i32.add
-    i32.const 21664
+    i32.const 21616
     local.get $1
     local.get $6
     local.get $4
@@ -23617,6 +24076,119 @@
   i32.const 0
   call $~lib/rt/itcms/__link
  )
+ (func $~lib/util/hash/HASH<src-as/components/Mesh/Mesh> (param $0 i32) (result i32)
+  (local $1 i32)
+  (local $2 i32)
+  (local $3 i32)
+  i32.const 0
+  drop
+  i32.const 1
+  drop
+  i32.const 4
+  i32.const 4
+  i32.eq
+  drop
+  local.get $0
+  local.set $1
+  i32.const 4
+  local.set $2
+  i32.const 0
+  i32.const 374761393
+  i32.add
+  local.get $2
+  i32.add
+  local.set $3
+  local.get $3
+  local.get $1
+  i32.const -1028477379
+  i32.mul
+  i32.add
+  local.set $3
+  local.get $3
+  i32.const 17
+  i32.rotl
+  i32.const 668265263
+  i32.mul
+  local.set $3
+  local.get $3
+  local.get $3
+  i32.const 15
+  i32.shr_u
+  i32.xor
+  local.set $3
+  local.get $3
+  i32.const -2048144777
+  i32.mul
+  local.set $3
+  local.get $3
+  local.get $3
+  i32.const 13
+  i32.shr_u
+  i32.xor
+  local.set $3
+  local.get $3
+  i32.const -1028477379
+  i32.mul
+  local.set $3
+  local.get $3
+  local.get $3
+  i32.const 16
+  i32.shr_u
+  i32.xor
+  local.set $3
+  local.get $3
+  return
+ )
+ (func $~lib/map/Map<src-as/components/Mesh/Mesh,src-as/WebGL2/components/mesh/WebGLMesh>#find (param $0 i32) (param $1 i32) (param $2 i32) (result i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  local.get $0
+  i32.load
+  local.get $2
+  local.get $0
+  i32.load offset=4
+  i32.and
+  i32.const 4
+  i32.mul
+  i32.add
+  i32.load
+  local.set $3
+  loop $while-continue|0
+   local.get $3
+   local.set $4
+   local.get $4
+   if
+    local.get $3
+    i32.load offset=8
+    local.set $5
+    local.get $5
+    i32.const 1
+    i32.and
+    i32.eqz
+    if (result i32)
+     local.get $3
+     i32.load
+     local.get $1
+     i32.eq
+    else
+     i32.const 0
+    end
+    if
+     local.get $3
+     return
+    end
+    local.get $5
+    i32.const 1
+    i32.const -1
+    i32.xor
+    i32.and
+    local.set $3
+    br $while-continue|0
+   end
+  end
+  i32.const 0
+ )
  (func $~lib/map/MapEntry<src-as/components/Mesh/Mesh,src-as/WebGL2/components/mesh/WebGLMesh>#set:value (param $0 i32) (param $1 i32)
   local.get $0
   local.get $1
@@ -23775,6 +24347,1167 @@
   i32.add
   global.set $~lib/memory/__stack_pointer
  )
+ (func $~lib/math/NativeMathf.atan (param $0 f32) (result f32)
+  (local $1 i32)
+  (local $2 f32)
+  (local $3 f32)
+  (local $4 i32)
+  (local $5 f32)
+  (local $6 f32)
+  (local $7 f32)
+  (local $8 f32)
+  (local $9 i32)
+  local.get $0
+  i32.reinterpret_f32
+  local.set $1
+  local.get $0
+  local.set $2
+  local.get $1
+  i32.const 2147483647
+  i32.and
+  local.set $1
+  local.get $1
+  i32.const 1283457024
+  i32.ge_u
+  if
+   local.get $0
+   local.get $0
+   f32.ne
+   if
+    local.get $0
+    return
+   end
+   f32.const 1.570796251296997
+   f32.const 7.52316384526264e-37
+   f32.add
+   local.set $3
+   local.get $3
+   local.get $2
+   f32.copysign
+   return
+  end
+  local.get $1
+  i32.const 1054867456
+  i32.lt_u
+  if
+   local.get $1
+   i32.const 964689920
+   i32.lt_u
+   if
+    local.get $0
+    return
+   end
+   i32.const -1
+   local.set $4
+  else
+   local.get $0
+   f32.abs
+   local.set $0
+   local.get $1
+   i32.const 1066926080
+   i32.lt_u
+   if
+    local.get $1
+    i32.const 1060110336
+    i32.lt_u
+    if
+     i32.const 0
+     local.set $4
+     f32.const 2
+     local.get $0
+     f32.mul
+     f32.const 1
+     f32.sub
+     f32.const 2
+     local.get $0
+     f32.add
+     f32.div
+     local.set $0
+    else
+     i32.const 1
+     local.set $4
+     local.get $0
+     f32.const 1
+     f32.sub
+     local.get $0
+     f32.const 1
+     f32.add
+     f32.div
+     local.set $0
+    end
+   else
+    local.get $1
+    i32.const 1075576832
+    i32.lt_u
+    if
+     i32.const 2
+     local.set $4
+     local.get $0
+     f32.const 1.5
+     f32.sub
+     f32.const 1
+     f32.const 1.5
+     local.get $0
+     f32.mul
+     f32.add
+     f32.div
+     local.set $0
+    else
+     i32.const 3
+     local.set $4
+     f32.const -1
+     local.get $0
+     f32.div
+     local.set $0
+    end
+   end
+  end
+  local.get $0
+  local.get $0
+  f32.mul
+  local.set $3
+  local.get $3
+  local.get $3
+  f32.mul
+  local.set $5
+  local.get $3
+  f32.const 0.333333283662796
+  local.get $5
+  f32.const 0.14253635704517365
+  local.get $5
+  f32.const 0.06168760731816292
+  f32.mul
+  f32.add
+  f32.mul
+  f32.add
+  f32.mul
+  local.set $6
+  local.get $5
+  f32.const -0.19999158382415771
+  local.get $5
+  f32.const -0.106480173766613
+  f32.mul
+  f32.add
+  f32.mul
+  local.set $7
+  local.get $0
+  local.get $6
+  local.get $7
+  f32.add
+  f32.mul
+  local.set $8
+  local.get $4
+  i32.const 0
+  i32.lt_s
+  if
+   local.get $0
+   local.get $8
+   f32.sub
+   return
+  end
+  block $break|0
+   block $case4|0
+    block $case3|0
+     block $case2|0
+      block $case1|0
+       block $case0|0
+        local.get $4
+        local.set $9
+        local.get $9
+        i32.const 0
+        i32.eq
+        br_if $case0|0
+        local.get $9
+        i32.const 1
+        i32.eq
+        br_if $case1|0
+        local.get $9
+        i32.const 2
+        i32.eq
+        br_if $case2|0
+        local.get $9
+        i32.const 3
+        i32.eq
+        br_if $case3|0
+        br $case4|0
+       end
+       f32.const 0.46364760398864746
+       local.get $8
+       f32.const 5.01215824399992e-09
+       f32.sub
+       local.get $0
+       f32.sub
+       f32.sub
+       local.set $3
+       br $break|0
+      end
+      f32.const 0.7853981256484985
+      local.get $8
+      f32.const 3.774894707930798e-08
+      f32.sub
+      local.get $0
+      f32.sub
+      f32.sub
+      local.set $3
+      br $break|0
+     end
+     f32.const 0.9827936887741089
+     local.get $8
+     f32.const 3.447321716976148e-08
+     f32.sub
+     local.get $0
+     f32.sub
+     f32.sub
+     local.set $3
+     br $break|0
+    end
+    f32.const 1.570796251296997
+    local.get $8
+    f32.const 7.549789415861596e-08
+    f32.sub
+    local.get $0
+    f32.sub
+    f32.sub
+    local.set $3
+    br $break|0
+   end
+   unreachable
+  end
+  local.get $3
+  local.get $2
+  f32.copysign
+ )
+ (func $~lib/math/NativeMathf.atan2 (param $0 f32) (param $1 f32) (result f32)
+  (local $2 i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  (local $6 f32)
+  (local $7 f32)
+  local.get $1
+  local.get $1
+  f32.ne
+  if (result i32)
+   i32.const 1
+  else
+   local.get $0
+   local.get $0
+   f32.ne
+  end
+  if
+   local.get $1
+   local.get $0
+   f32.add
+   return
+  end
+  local.get $1
+  i32.reinterpret_f32
+  local.set $2
+  local.get $0
+  i32.reinterpret_f32
+  local.set $3
+  local.get $2
+  i32.const 1065353216
+  i32.eq
+  if
+   local.get $0
+   call $~lib/math/NativeMathf.atan
+   return
+  end
+  local.get $3
+  i32.const 31
+  i32.shr_u
+  i32.const 1
+  i32.and
+  local.get $2
+  i32.const 30
+  i32.shr_u
+  i32.const 2
+  i32.and
+  i32.or
+  local.set $4
+  local.get $2
+  i32.const 2147483647
+  i32.and
+  local.set $2
+  local.get $3
+  i32.const 2147483647
+  i32.and
+  local.set $3
+  local.get $3
+  i32.const 0
+  i32.eq
+  if
+   block $break|0
+    block $case3|0
+     block $case2|0
+      block $case1|0
+       block $case0|0
+        local.get $4
+        local.set $5
+        local.get $5
+        i32.const 0
+        i32.eq
+        br_if $case0|0
+        local.get $5
+        i32.const 1
+        i32.eq
+        br_if $case1|0
+        local.get $5
+        i32.const 2
+        i32.eq
+        br_if $case2|0
+        local.get $5
+        i32.const 3
+        i32.eq
+        br_if $case3|0
+        br $break|0
+       end
+      end
+      local.get $0
+      return
+     end
+     f32.const 3.1415927410125732
+     return
+    end
+    f32.const 3.1415927410125732
+    f32.neg
+    return
+   end
+  end
+  local.get $2
+  i32.const 0
+  i32.eq
+  if
+   local.get $4
+   i32.const 1
+   i32.and
+   if (result f32)
+    f32.const 3.1415927410125732
+    f32.neg
+    f32.const 2
+    f32.div
+   else
+    f32.const 3.1415927410125732
+    f32.const 2
+    f32.div
+   end
+   return
+  end
+  local.get $2
+  i32.const 2139095040
+  i32.eq
+  if
+   local.get $3
+   i32.const 2139095040
+   i32.eq
+   if
+    local.get $4
+    i32.const 2
+    i32.and
+    if (result f32)
+     f32.const 3
+     f32.const 3.1415927410125732
+     f32.mul
+     f32.const 4
+     f32.div
+    else
+     f32.const 3.1415927410125732
+     f32.const 4
+     f32.div
+    end
+    local.set $6
+    local.get $4
+    i32.const 1
+    i32.and
+    if (result f32)
+     local.get $6
+     f32.neg
+    else
+     local.get $6
+    end
+    return
+   else
+    local.get $4
+    i32.const 2
+    i32.and
+    if (result f32)
+     f32.const 3.1415927410125732
+    else
+     f32.const 0
+    end
+    local.set $6
+    local.get $4
+    i32.const 1
+    i32.and
+    if (result f32)
+     local.get $6
+     f32.neg
+    else
+     local.get $6
+    end
+    return
+   end
+   unreachable
+  end
+  local.get $2
+  i32.const 26
+  i32.const 23
+  i32.shl
+  i32.add
+  local.get $3
+  i32.lt_u
+  if (result i32)
+   i32.const 1
+  else
+   local.get $3
+   i32.const 2139095040
+   i32.eq
+  end
+  if
+   local.get $4
+   i32.const 1
+   i32.and
+   if (result f32)
+    f32.const 3.1415927410125732
+    f32.neg
+    f32.const 2
+    f32.div
+   else
+    f32.const 3.1415927410125732
+    f32.const 2
+    f32.div
+   end
+   return
+  end
+  local.get $4
+  i32.const 2
+  i32.and
+  if (result i32)
+   local.get $3
+   i32.const 26
+   i32.const 23
+   i32.shl
+   i32.add
+   local.get $2
+   i32.lt_u
+  else
+   i32.const 0
+  end
+  if
+   f32.const 0
+   local.set $7
+  else
+   local.get $0
+   local.get $1
+   f32.div
+   f32.abs
+   call $~lib/math/NativeMathf.atan
+   local.set $7
+  end
+  block $break|1
+   block $case3|1
+    block $case2|1
+     block $case1|1
+      block $case0|1
+       local.get $4
+       local.set $5
+       local.get $5
+       i32.const 0
+       i32.eq
+       br_if $case0|1
+       local.get $5
+       i32.const 1
+       i32.eq
+       br_if $case1|1
+       local.get $5
+       i32.const 2
+       i32.eq
+       br_if $case2|1
+       local.get $5
+       i32.const 3
+       i32.eq
+       br_if $case3|1
+       br $break|1
+      end
+      local.get $7
+      return
+     end
+     local.get $7
+     f32.neg
+     return
+    end
+    f32.const 3.1415927410125732
+    local.get $7
+    f32.const -8.742277657347586e-08
+    f32.sub
+    f32.sub
+    return
+   end
+   local.get $7
+   f32.const -8.742277657347586e-08
+   f32.sub
+   f32.const 3.1415927410125732
+   f32.sub
+   return
+  end
+  unreachable
+ )
+ (func $~lib/math/NativeMathf.asin (param $0 f32) (result f32)
+  (local $1 f32)
+  (local $2 i32)
+  (local $3 f32)
+  (local $4 f64)
+  local.get $0
+  local.set $1
+  local.get $0
+  i32.reinterpret_f32
+  i32.const 2147483647
+  i32.and
+  local.set $2
+  local.get $2
+  i32.const 1065353216
+  i32.ge_u
+  if
+   local.get $2
+   i32.const 1065353216
+   i32.eq
+   if
+    local.get $0
+    f32.const 1.5707963705062866
+    f32.mul
+    f32.const 7.52316384526264e-37
+    f32.add
+    return
+   end
+   f32.const 0
+   local.get $0
+   local.get $0
+   f32.sub
+   f32.div
+   return
+  end
+  local.get $2
+  i32.const 1056964608
+  i32.lt_u
+  if
+   local.get $2
+   i32.const 964689920
+   i32.lt_u
+   if (result i32)
+    local.get $2
+    i32.const 8388608
+    i32.ge_u
+   else
+    i32.const 0
+   end
+   if
+    local.get $0
+    return
+   end
+   local.get $0
+   local.get $0
+   local.get $0
+   local.get $0
+   f32.mul
+   call $~lib/math/Rf
+   f32.mul
+   f32.add
+   return
+  end
+  f32.const 0.5
+  local.get $0
+  f32.abs
+  f32.const 0.5
+  f32.mul
+  f32.sub
+  local.set $3
+  local.get $3
+  f64.promote_f32
+  f64.sqrt
+  local.set $4
+  f32.const 1.5707963705062866
+  f64.promote_f32
+  f32.const 2
+  f64.promote_f32
+  local.get $4
+  local.get $4
+  local.get $3
+  call $~lib/math/Rf
+  f64.promote_f32
+  f64.mul
+  f64.add
+  f64.mul
+  f64.sub
+  f32.demote_f64
+  local.set $0
+  local.get $0
+  local.get $1
+  f32.copysign
+ )
+ (func $src-as/math/Quaternion/Quaternion#toEulerAngles (param $0 i32) (param $1 i32) (result i32)
+  (local $2 f32)
+  (local $3 f32)
+  (local $4 f32)
+  (local $5 f32)
+  (local $6 f32)
+  (local $7 f32)
+  (local $8 f32)
+  (local $9 f32)
+  (local $10 f32)
+  local.get $0
+  call $src-as/math/Quaternion/Quaternion#get:x
+  local.set $2
+  local.get $0
+  call $src-as/math/Quaternion/Quaternion#get:y
+  local.set $3
+  local.get $0
+  call $src-as/math/Quaternion/Quaternion#get:z
+  local.set $4
+  local.get $0
+  call $src-as/math/Quaternion/Quaternion#get:w
+  local.set $5
+  local.get $2
+  local.get $2
+  f32.mul
+  local.set $6
+  local.get $3
+  local.get $3
+  f32.mul
+  local.set $7
+  local.get $4
+  local.get $4
+  f32.mul
+  local.set $8
+  local.get $5
+  local.get $5
+  f32.mul
+  local.set $9
+  local.get $3
+  local.get $4
+  f32.mul
+  local.get $2
+  local.get $5
+  f32.mul
+  f32.sub
+  local.set $10
+  local.get $10
+  f32.const 0.49999991059303284
+  f32.neg
+  f32.lt
+  if
+   local.get $1
+   f32.const 2
+   local.get $3
+   local.get $5
+   call $~lib/math/NativeMathf.atan2
+   f32.mul
+   call $src-as/math/Vector3/Vector3#set:y
+   local.get $1
+   global.get $~lib/math/NativeMathf.PI
+   f32.const 2
+   f32.div
+   call $src-as/math/Vector3/Vector3#set:x
+   local.get $1
+   f32.const 0
+   call $src-as/math/Vector3/Vector3#set:z
+  else
+   local.get $10
+   f32.const 0.49999991059303284
+   f32.gt
+   if
+    local.get $1
+    f32.const 2
+    local.get $3
+    local.get $5
+    call $~lib/math/NativeMathf.atan2
+    f32.mul
+    call $src-as/math/Vector3/Vector3#set:y
+    local.get $1
+    global.get $~lib/math/NativeMathf.PI
+    f32.neg
+    f32.const 2
+    f32.div
+    call $src-as/math/Vector3/Vector3#set:x
+    local.get $1
+    f32.const 0
+    call $src-as/math/Vector3/Vector3#set:z
+   else
+    local.get $1
+    f32.const 2
+    local.get $2
+    local.get $3
+    f32.mul
+    local.get $4
+    local.get $5
+    f32.mul
+    f32.add
+    f32.mul
+    local.get $8
+    f32.neg
+    local.get $6
+    f32.sub
+    local.get $7
+    f32.add
+    local.get $9
+    f32.add
+    call $~lib/math/NativeMathf.atan2
+    call $src-as/math/Vector3/Vector3#set:z
+    local.get $1
+    f32.const -2
+    local.get $4
+    local.get $3
+    f32.mul
+    local.get $2
+    local.get $5
+    f32.mul
+    f32.sub
+    f32.mul
+    call $~lib/math/NativeMathf.asin
+    call $src-as/math/Vector3/Vector3#set:x
+    local.get $1
+    f32.const 2
+    local.get $4
+    local.get $2
+    f32.mul
+    local.get $3
+    local.get $5
+    f32.mul
+    f32.add
+    f32.mul
+    local.get $8
+    local.get $6
+    f32.sub
+    local.get $7
+    f32.sub
+    local.get $9
+    f32.add
+    call $~lib/math/NativeMathf.atan2
+    call $src-as/math/Vector3/Vector3#set:y
+   end
+  end
+  local.get $1
+ )
+ (func $src-as/math/Quaternion/Quaternion#multiplyDirection (param $0 i32) (param $1 i32) (param $2 i32) (result i32)
+  (local $3 f32)
+  (local $4 f32)
+  (local $5 f32)
+  (local $6 f32)
+  (local $7 f32)
+  (local $8 f32)
+  (local $9 f32)
+  (local $10 f32)
+  (local $11 f32)
+  (local $12 f32)
+  (local $13 f32)
+  (local $14 f32)
+  local.get $0
+  call $src-as/math/Quaternion/Quaternion#get:x
+  f32.const 2
+  f32.mul
+  local.set $3
+  local.get $0
+  call $src-as/math/Quaternion/Quaternion#get:y
+  f32.const 2
+  f32.mul
+  local.set $4
+  local.get $0
+  call $src-as/math/Quaternion/Quaternion#get:z
+  f32.const 2
+  f32.mul
+  local.set $5
+  local.get $0
+  call $src-as/math/Quaternion/Quaternion#get:x
+  local.get $3
+  f32.mul
+  local.set $6
+  local.get $0
+  call $src-as/math/Quaternion/Quaternion#get:y
+  local.get $4
+  f32.mul
+  local.set $7
+  local.get $0
+  call $src-as/math/Quaternion/Quaternion#get:z
+  local.get $5
+  f32.mul
+  local.set $8
+  local.get $0
+  call $src-as/math/Quaternion/Quaternion#get:x
+  local.get $4
+  f32.mul
+  local.set $9
+  local.get $0
+  call $src-as/math/Quaternion/Quaternion#get:x
+  local.get $5
+  f32.mul
+  local.set $10
+  local.get $0
+  call $src-as/math/Quaternion/Quaternion#get:y
+  local.get $5
+  f32.mul
+  local.set $11
+  local.get $0
+  call $src-as/math/Quaternion/Quaternion#get:w
+  local.get $3
+  f32.mul
+  local.set $12
+  local.get $0
+  call $src-as/math/Quaternion/Quaternion#get:w
+  local.get $4
+  f32.mul
+  local.set $13
+  local.get $0
+  call $src-as/math/Quaternion/Quaternion#get:w
+  local.get $5
+  f32.mul
+  local.set $14
+  local.get $2
+  f32.const 1
+  local.get $7
+  local.get $8
+  f32.add
+  f32.sub
+  local.get $1
+  call $src-as/math/Vector3/Vector3#get:x
+  f32.mul
+  local.get $9
+  local.get $14
+  f32.sub
+  local.get $1
+  call $src-as/math/Vector3/Vector3#get:y
+  f32.mul
+  f32.add
+  local.get $10
+  local.get $13
+  f32.add
+  local.get $1
+  call $src-as/math/Vector3/Vector3#get:z
+  f32.mul
+  f32.add
+  call $src-as/math/Vector3/Vector3#set:x
+  local.get $2
+  local.get $9
+  local.get $14
+  f32.add
+  local.get $1
+  call $src-as/math/Vector3/Vector3#get:x
+  f32.mul
+  f32.const 1
+  local.get $6
+  local.get $8
+  f32.add
+  f32.sub
+  local.get $1
+  call $src-as/math/Vector3/Vector3#get:y
+  f32.mul
+  f32.add
+  local.get $11
+  local.get $12
+  f32.sub
+  local.get $1
+  call $src-as/math/Vector3/Vector3#get:z
+  f32.mul
+  f32.add
+  call $src-as/math/Vector3/Vector3#set:y
+  local.get $2
+  local.get $10
+  local.get $13
+  f32.sub
+  local.get $1
+  call $src-as/math/Vector3/Vector3#get:x
+  f32.mul
+  local.get $11
+  local.get $12
+  f32.add
+  local.get $1
+  call $src-as/math/Vector3/Vector3#get:y
+  f32.mul
+  f32.add
+  f32.const 1
+  local.get $6
+  local.get $7
+  f32.add
+  f32.sub
+  local.get $1
+  call $src-as/math/Vector3/Vector3#get:z
+  f32.mul
+  f32.add
+  call $src-as/math/Vector3/Vector3#set:z
+  local.get $2
+ )
+ (func $src-as/math/Vector3/Vector3#scale (param $0 i32) (param $1 f32) (result i32)
+  local.get $0
+  local.get $0
+  call $src-as/math/Vector3/Vector3#get:x
+  local.get $1
+  f32.mul
+  call $src-as/math/Vector3/Vector3#set:x
+  local.get $0
+  local.get $0
+  call $src-as/math/Vector3/Vector3#get:y
+  local.get $1
+  f32.mul
+  call $src-as/math/Vector3/Vector3#set:y
+  local.get $0
+  local.get $0
+  call $src-as/math/Vector3/Vector3#get:z
+  local.get $1
+  f32.mul
+  call $src-as/math/Vector3/Vector3#set:z
+  local.get $0
+ )
+ (func $src-as/math/Vector3/Vector3#add (param $0 i32) (param $1 i32) (result i32)
+  local.get $0
+  local.get $0
+  call $src-as/math/Vector3/Vector3#get:x
+  local.get $1
+  call $src-as/math/Vector3/Vector3#get:x
+  f32.add
+  call $src-as/math/Vector3/Vector3#set:x
+  local.get $0
+  local.get $0
+  call $src-as/math/Vector3/Vector3#get:y
+  local.get $1
+  call $src-as/math/Vector3/Vector3#get:y
+  f32.add
+  call $src-as/math/Vector3/Vector3#set:y
+  local.get $0
+  local.get $0
+  call $src-as/math/Vector3/Vector3#get:z
+  local.get $1
+  call $src-as/math/Vector3/Vector3#get:z
+  f32.add
+  call $src-as/math/Vector3/Vector3#set:z
+  local.get $0
+ )
+ (func $~lib/set/Set<i32>#has (param $0 i32) (param $1 i32) (result i32)
+  local.get $0
+  local.get $1
+  local.get $1
+  call $~lib/util/hash/HASH<i32>
+  call $~lib/set/Set<i32>#find
+  i32.const 0
+  i32.ne
+ )
+ (func $src-as/math/PolarCoords/PolarCoords#set:radius (param $0 i32) (param $1 f32)
+  local.get $0
+  local.get $1
+  f32.store offset=4
+ )
+ (func $src-as/math/PolarCoords/PolarCoords#set:angle (param $0 i32) (param $1 f32)
+  local.get $0
+  local.get $1
+  f32.store
+ )
+ (func $src-as/math/Vector2/Vector2.fromPolar (param $0 i32) (param $1 i32) (result i32)
+  local.get $1
+  local.get $0
+  f32.load
+  call $~lib/math/NativeMathf.cos
+  local.get $0
+  f32.load offset=4
+  f32.mul
+  call $src-as/math/Vector2/Vector2#set:x
+  local.get $1
+  local.get $0
+  f32.load
+  call $~lib/math/NativeMathf.sin
+  local.get $0
+  f32.load offset=4
+  f32.mul
+  call $src-as/math/Vector2/Vector2#set:y
+  local.get $1
+ )
+ (func $src-as/math/Vector2/Vector2#toVector3 (param $0 i32) (param $1 i32) (result i32)
+  local.get $1
+  local.get $0
+  call $src-as/math/Vector2/Vector2#get:x
+  call $src-as/math/Vector3/Vector3#set:x
+  local.get $1
+  local.get $0
+  call $src-as/math/Vector2/Vector2#get:y
+  call $src-as/math/Vector3/Vector3#set:y
+  local.get $1
+  f32.const 0
+  call $src-as/math/Vector3/Vector3#set:z
+  local.get $1
+ )
+ (func $src-as/WebGL2/systems/WebGLRenderSystem/WebGLRenderSystem#handleViewport (param $0 i32) (param $1 i32)
+  local.get $1
+  i32.load
+  local.get $1
+  i32.load offset=4
+  local.get $1
+  i32.load offset=8
+  local.get $1
+  i32.load offset=12
+  call $src-as/WebGL2/imports/_types/viewport
+ )
+ (func $src-as/WebGL2/systems/WebGLRenderSystem/WebGLRenderSystem#handlePrepareOpaque (param $0 i32)
+  global.get $src-as/WebGL2/imports/_constants/Toggle.DEPTH_TEST
+  call $src-as/WebGL2/imports/_types/enable
+  global.get $src-as/WebGL2/imports/_constants/Test.LEQUAL
+  call $src-as/WebGL2/imports/_types/depthFunc
+  global.get $src-as/WebGL2/imports/_constants/Toggle.BLEND
+  call $src-as/WebGL2/imports/_types/disable
+ )
+ (func $~lib/map/Map<src-as/components/Mesh/Mesh,src-as/WebGL2/components/mesh/WebGLMesh>#get (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  local.get $0
+  local.get $1
+  local.get $1
+  call $~lib/util/hash/HASH<src-as/components/Mesh/Mesh>
+  call $~lib/map/Map<src-as/components/Mesh/Mesh,src-as/WebGL2/components/mesh/WebGLMesh>#find
+  local.set $2
+  local.get $2
+  i32.eqz
+  if
+   i32.const 17344
+   i32.const 17408
+   i32.const 105
+   i32.const 17
+   call $~lib/builtins/abort
+   unreachable
+  end
+  local.get $2
+  i32.load offset=4
+ )
+ (func $~lib/array/Array<src-as/WebGL2/components/material/WebGLUniform>#get:length (param $0 i32) (result i32)
+  local.get $0
+  i32.load offset=12
+ )
+ (func $src-as/WebGL2/components/material/WebGLUniform#apply (param $0 i32)
+  nop
+ )
+ (func $src-as/WebGL2/systems/WebGLGeometrySystem/WebGLGeometrySystem#render (param $0 i32) (param $1 i32)
+  (local $2 externref)
+  (local $3 i32)
+  local.get $1
+  i32.load offset=20
+  call $src-as/imports/_host/get
+  local.set $2
+  local.get $2
+  call $src-as/WebGL2/imports/_types/bindVertexArray
+  local.get $1
+  i32.load offset=28
+  if
+   global.get $src-as/WebGL2/imports/_constants/Parameter.RASTERIZER_DISCARD
+   call $src-as/WebGL2/imports/_types/enable
+   global.get $src-as/WebGL2/imports/_constants/TransformFeedback.TRANSFORM_FEEDBACK
+   local.get $1
+   i32.load offset=28
+   call $src-as/imports/_host/get
+   call $src-as/WebGL2/imports/_types/bindTransformFeedback
+   global.get $src-as/WebGL2/imports/_constants/Primitive.POINTS
+   call $src-as/WebGL2/imports/_types/beginTransformFeedback
+   global.get $src-as/WebGL2/imports/_constants/Primitive.POINTS
+   i32.const 0
+   local.get $1
+   i32.load offset=8
+   call $src-as/WebGL2/imports/_types/drawArrays
+   global.get $src-as/WebGL2/imports/_constants/Parameter.RASTERIZER_DISCARD
+   call $src-as/WebGL2/imports/_types/disable
+   call $src-as/WebGL2/imports/_types/endTransformFeedback
+   global.get $src-as/WebGL2/imports/_constants/TransformFeedback.TRANSFORM_FEEDBACK
+   ref.null extern
+   call $src-as/WebGL2/imports/_types/bindTransformFeedback
+  else
+   local.get $1
+   i32.load offset=12
+   i32.const 0
+   i32.gt_u
+   if (result i32)
+    local.get $1
+    i32.load8_u offset=16
+   else
+    i32.const 0
+   end
+   if
+    local.get $1
+    i32.load
+    local.get $1
+    i32.load offset=8
+    global.get $src-as/WebGL2/imports/_constants/DataType.UNSIGNED_SHORT
+    i32.const 0
+    local.get $1
+    i32.load offset=12
+    call $src-as/WebGL2/imports/_types/drawElementsInstanced
+   else
+    local.get $1
+    i32.load offset=12
+    i32.const 0
+    i32.gt_u
+    if
+     local.get $1
+     i32.load
+     i32.const 0
+     local.get $1
+     i32.load offset=8
+     local.get $1
+     i32.load offset=12
+     call $src-as/WebGL2/imports/_types/drawArraysInstanced
+    else
+     local.get $1
+     i32.load8_u offset=16
+     if
+      local.get $1
+      i32.load
+      local.get $1
+      i32.load offset=8
+      global.get $src-as/WebGL2/imports/_constants/DataType.UNSIGNED_SHORT
+      i32.const 0
+      call $src-as/WebGL2/imports/_types/drawElements
+     else
+      local.get $1
+      i32.load
+      i32.const 0
+      local.get $1
+      i32.load offset=8
+      call $src-as/WebGL2/imports/_types/drawArrays
+     end
+    end
+   end
+  end
+  ref.null extern
+  call $src-as/WebGL2/imports/_types/bindVertexArray
+  local.get $1
+  i32.load offset=24
+  if
+   local.get $1
+   i32.load offset=20
+   local.set $3
+   local.get $1
+   local.get $1
+   i32.load offset=24
+   call $src-as/WebGL2/components/geometry/WebGLGeometry#set:vao
+   local.get $1
+   local.get $3
+   call $src-as/WebGL2/components/geometry/WebGLGeometry#set:vaoSwap
+  end
+  local.get $1
+  i32.load offset=32
+  if
+   local.get $1
+   i32.load offset=28
+   local.set $3
+   local.get $1
+   local.get $1
+   i32.load offset=32
+   call $src-as/WebGL2/components/geometry/WebGLGeometry#set:feedback
+   local.get $1
+   local.get $3
+   call $src-as/WebGL2/components/geometry/WebGLGeometry#set:feedbackSwap
+  end
+ )
+ (func $src-as/WebGL2/systems/WebGLRenderSystem/WebGLRenderSystem#handlePrepareTransparent (param $0 i32)
+  global.get $src-as/WebGL2/imports/_constants/Toggle.BLEND
+  call $src-as/WebGL2/imports/_types/enable
+  global.get $src-as/WebGL2/imports/_constants/Blend.SRC_ALPHA
+  global.get $src-as/WebGL2/imports/_constants/Blend.ONE_MINUS_SRC_ALPHA
+  call $src-as/WebGL2/imports/_types/blendFunc
+  global.get $src-as/WebGL2/imports/_constants/Toggle.DEPTH_TEST
+  call $src-as/WebGL2/imports/_types/disable
+ )
  (func $src-as/WebGL2/components/material/WebGLTextureUniform#apply (param $0 i32)
   local.get $0
   i32.load
@@ -23782,6 +25515,158 @@
   local.get $0
   i32.load offset=4
   call $src-as/WebGL2/imports/_types/uniform1i
+ )
+ (func $src-as/base/Query/Query#addEntity@virtual (param $0 i32) (param $1 i32)
+  (local $2 i32)
+  block $default
+   block $case1
+    block $case0
+     local.get $0
+     i32.const 8
+     i32.sub
+     i32.load
+     local.set $2
+     local.get $2
+     i32.const 103
+     i32.eq
+     br_if $case0
+     local.get $2
+     i32.const 111
+     i32.eq
+     br_if $case1
+     br $default
+    end
+    local.get $0
+    local.get $1
+    call $src-as/base/Query/TypedQuery<src-as/components/Transform/Transform>#addEntity
+    return
+   end
+   local.get $0
+   local.get $1
+   call $src-as/base/Query/TypedQuery<src-as/components/Camera/Camera>#addEntity
+   return
+  end
+  local.get $0
+  local.get $1
+  call $src-as/base/Query/Query#addEntity
+ )
+ (func $src-as/base/System/ListenerSystem#onAdd@virtual (param $0 i32) (param $1 i32)
+  (local $2 i32)
+  block $default
+   block $case1
+    block $case0
+     local.get $0
+     i32.const 8
+     i32.sub
+     i32.load
+     local.set $2
+     local.get $2
+     i32.const 100
+     i32.eq
+     br_if $case0
+     local.get $2
+     i32.const 110
+     i32.eq
+     br_if $case1
+     local.get $2
+     i32.const 127
+     i32.eq
+     br_if $case1
+     br $default
+    end
+    local.get $0
+    local.get $1
+    call $src-as/base/systems/TransformSystem/TransformSystem#onAdd
+    return
+   end
+   local.get $0
+   local.get $1
+   call $src-as/rendering/systems/RenderSystem/RenderSystem#onAdd
+   return
+  end
+  local.get $0
+  local.get $1
+  call $src-as/base/System/ListenerSystem#onAdd
+ )
+ (func $src-as/base/Component/BehaviorComponent#start@virtual (param $0 i32)
+  (local $1 i32)
+  block $default
+   block $case0
+    local.get $0
+    i32.const 8
+    i32.sub
+    i32.load
+    local.set $1
+    local.get $1
+    i32.const 151
+    i32.eq
+    br_if $case0
+    br $default
+   end
+   local.get $0
+   call $src-as/components/Rotator/Rotator#start
+   return
+  end
+  local.get $0
+  call $src-as/base/Component/BehaviorComponent#start
+ )
+ (func $src-as/base/Query/Query#removeEntity@virtual (param $0 i32) (param $1 i32)
+  (local $2 i32)
+  block $default
+   block $case1
+    block $case0
+     local.get $0
+     i32.const 8
+     i32.sub
+     i32.load
+     local.set $2
+     local.get $2
+     i32.const 103
+     i32.eq
+     br_if $case0
+     local.get $2
+     i32.const 111
+     i32.eq
+     br_if $case1
+     br $default
+    end
+    local.get $0
+    local.get $1
+    call $src-as/base/Query/TypedQuery<src-as/components/Transform/Transform>#removeEntity
+    return
+   end
+   local.get $0
+   local.get $1
+   call $src-as/base/Query/TypedQuery<src-as/components/Camera/Camera>#removeEntity
+   return
+  end
+  local.get $0
+  local.get $1
+  call $src-as/base/Query/Query#removeEntity
+ )
+ (func $src-as/base/System/ListenerSystem#onRemove@virtual (param $0 i32) (param $1 i32)
+  (local $2 i32)
+  block $default
+   block $case0
+    local.get $0
+    i32.const 8
+    i32.sub
+    i32.load
+    local.set $2
+    local.get $2
+    i32.const 100
+    i32.eq
+    br_if $case0
+    br $default
+   end
+   local.get $0
+   local.get $1
+   call $src-as/base/systems/TransformSystem/TransformSystem#onRemove
+   return
+  end
+  local.get $0
+  local.get $1
+  call $src-as/base/System/ListenerSystem#onRemove
  )
  (func $src-as/base/System/System#update@virtual (param $0 i32)
   (local $1 i32)
@@ -23799,31 +25684,31 @@
           i32.load
           local.set $1
           local.get $1
-          i32.const 85
+          i32.const 92
           i32.eq
           br_if $case0
           local.get $1
-          i32.const 68
+          i32.const 75
           i32.eq
           br_if $case1
           local.get $1
-          i32.const 90
+          i32.const 97
           i32.eq
           br_if $case2
           local.get $1
-          i32.const 93
+          i32.const 100
           i32.eq
           br_if $case3
           local.get $1
-          i32.const 98
+          i32.const 125
           i32.eq
           br_if $case4
           local.get $1
-          i32.const 101
+          i32.const 110
           i32.eq
           br_if $case5
           local.get $1
-          i32.const 100
+          i32.const 127
           i32.eq
           br_if $case6
           br $default
@@ -23859,135 +25744,7 @@
   local.get $0
   call $src-as/base/System/System#update
  )
- (func $src-as/base/Query/Query#addEntity@virtual (param $0 i32) (param $1 i32)
-  (local $2 i32)
-  block $default
-   block $case1
-    block $case0
-     local.get $0
-     i32.const 8
-     i32.sub
-     i32.load
-     local.set $2
-     local.get $2
-     i32.const 96
-     i32.eq
-     br_if $case0
-     local.get $2
-     i32.const 105
-     i32.eq
-     br_if $case1
-     br $default
-    end
-    local.get $0
-    local.get $1
-    call $src-as/base/Query/TypedQuery<src-as/components/Transform/Transform>#addEntity
-    return
-   end
-   local.get $0
-   local.get $1
-   call $src-as/base/Query/TypedQuery<src-as/components/Camera/Camera>#addEntity
-   return
-  end
-  local.get $0
-  local.get $1
-  call $src-as/base/Query/Query#addEntity
- )
- (func $src-as/base/System/ListenerSystem#onAdd@virtual (param $0 i32) (param $1 i32)
-  (local $2 i32)
-  block $default
-   block $case1
-    block $case0
-     local.get $0
-     i32.const 8
-     i32.sub
-     i32.load
-     local.set $2
-     local.get $2
-     i32.const 93
-     i32.eq
-     br_if $case0
-     local.get $2
-     i32.const 101
-     i32.eq
-     br_if $case1
-     local.get $2
-     i32.const 100
-     i32.eq
-     br_if $case1
-     br $default
-    end
-    local.get $0
-    local.get $1
-    call $src-as/base/systems/TransformSystem/TransformSystem#onAdd
-    return
-   end
-   local.get $0
-   local.get $1
-   call $src-as/rendering/systems/RenderSystem/RenderSystem#onAdd
-   return
-  end
-  local.get $0
-  local.get $1
-  call $src-as/base/System/ListenerSystem#onAdd
- )
- (func $src-as/base/Component/BehaviorComponent#start@virtual (param $0 i32)
-  (local $1 i32)
-  block $default
-   block $case0
-    local.get $0
-    i32.const 8
-    i32.sub
-    i32.load
-    local.set $1
-    local.get $1
-    i32.const 142
-    i32.eq
-    br_if $case0
-    br $default
-   end
-   local.get $0
-   call $src-as/components/Rotator/Rotator#start
-   return
-  end
-  local.get $0
-  call $src-as/base/Component/BehaviorComponent#start
- )
- (func $src-as/base/Query/Query#removeEntity@virtual (param $0 i32) (param $1 i32)
-  (local $2 i32)
-  block $default
-   block $case1
-    block $case0
-     local.get $0
-     i32.const 8
-     i32.sub
-     i32.load
-     local.set $2
-     local.get $2
-     i32.const 96
-     i32.eq
-     br_if $case0
-     local.get $2
-     i32.const 105
-     i32.eq
-     br_if $case1
-     br $default
-    end
-    local.get $0
-    local.get $1
-    call $src-as/base/Query/TypedQuery<src-as/components/Transform/Transform>#removeEntity
-    return
-   end
-   local.get $0
-   local.get $1
-   call $src-as/base/Query/TypedQuery<src-as/components/Camera/Camera>#removeEntity
-   return
-  end
-  local.get $0
-  local.get $1
-  call $src-as/base/Query/Query#removeEntity
- )
- (func $src-as/base/System/ListenerSystem#onRemove@virtual (param $0 i32) (param $1 i32)
+ (func $src-as/rendering/systems/RenderSystem/RenderSystem#handleCreateMesh@virtual (param $0 i32) (param $1 i32)
   (local $2 i32)
   block $default
    block $case0
@@ -23997,42 +25754,51 @@
     i32.load
     local.set $2
     local.get $2
-    i32.const 93
+    i32.const 127
     i32.eq
     br_if $case0
     br $default
    end
    local.get $0
    local.get $1
-   call $src-as/base/systems/TransformSystem/TransformSystem#onRemove
+   call $src-as/WebGL2/systems/WebGLRenderSystem/WebGLRenderSystem#handleCreateMesh
    return
   end
   local.get $0
   local.get $1
-  call $src-as/base/System/ListenerSystem#onRemove
+  call $src-as/rendering/systems/RenderSystem/RenderSystem#handleCreateMesh
  )
  (func $src-as/base/Component/BehaviorComponent#update@virtual (param $0 i32)
   (local $1 i32)
   block $default
-   block $case1
-    block $case0
+   block $case2
+    block $case1
+     block $case0
+      local.get $0
+      i32.const 8
+      i32.sub
+      i32.load
+      local.set $1
+      local.get $1
+      i32.const 108
+      i32.eq
+      br_if $case0
+      local.get $1
+      i32.const 105
+      i32.eq
+      br_if $case1
+      local.get $1
+      i32.const 151
+      i32.eq
+      br_if $case2
+      br $default
+     end
      local.get $0
-     i32.const 8
-     i32.sub
-     i32.load
-     local.set $1
-     local.get $1
-     i32.const 102
-     i32.eq
-     br_if $case0
-     local.get $1
-     i32.const 142
-     i32.eq
-     br_if $case1
-     br $default
+     call $src-as/components/Camera/Camera#update
+     return
     end
     local.get $0
-    call $src-as/components/Camera/Camera#update
+    call $src-as/components/MouseKeyboardController/MouseKeyboardController#update
     return
    end
    local.get $0
@@ -24052,7 +25818,7 @@
     i32.load
     local.set $2
     local.get $2
-    i32.const 129
+    i32.const 145
     i32.eq
     br_if $case0
     br $default
@@ -24076,7 +25842,7 @@
     i32.load
     local.set $2
     local.get $2
-    i32.const 100
+    i32.const 127
     i32.eq
     br_if $case0
     br $default
@@ -24100,7 +25866,7 @@
     i32.load
     local.set $1
     local.get $1
-    i32.const 100
+    i32.const 127
     i32.eq
     br_if $case0
     br $default
@@ -24122,7 +25888,7 @@
     i32.load
     local.set $2
     local.get $2
-    i32.const 100
+    i32.const 127
     i32.eq
     br_if $case0
     br $default
@@ -24146,7 +25912,7 @@
     i32.load
     local.set $1
     local.get $1
-    i32.const 100
+    i32.const 127
     i32.eq
     br_if $case0
     br $default
@@ -24157,30 +25923,6 @@
   end
   local.get $0
   call $src-as/rendering/systems/RenderSystem/RenderSystem#handlePrepareTransparent
- )
- (func $src-as/rendering/systems/RenderSystem/RenderSystem#handleCreateMesh@virtual (param $0 i32) (param $1 i32)
-  (local $2 i32)
-  block $default
-   block $case0
-    local.get $0
-    i32.const 8
-    i32.sub
-    i32.load
-    local.set $2
-    local.get $2
-    i32.const 100
-    i32.eq
-    br_if $case0
-    br $default
-   end
-   local.get $0
-   local.get $1
-   call $src-as/WebGL2/systems/WebGLRenderSystem/WebGLRenderSystem#handleCreateMesh
-   return
-  end
-  local.get $0
-  local.get $1
-  call $src-as/rendering/systems/RenderSystem/RenderSystem#handleCreateMesh
  )
  (func $src-as/WebGL2/components/material/WebGLUniform#apply@virtual (param $0 i32)
   (local $1 i32)
@@ -24197,27 +25939,27 @@
          i32.load
          local.set $1
          local.get $1
-         i32.const 152
+         i32.const 160
          i32.eq
          br_if $case0
          local.get $1
-         i32.const 154
+         i32.const 162
          i32.eq
          br_if $case1
          local.get $1
-         i32.const 155
+         i32.const 163
          i32.eq
          br_if $case2
          local.get $1
-         i32.const 156
+         i32.const 164
          i32.eq
          br_if $case3
          local.get $1
-         i32.const 157
+         i32.const 165
          i32.eq
          br_if $case4
          local.get $1
-         i32.const 151
+         i32.const 159
          i32.eq
          br_if $case5
          br $default
@@ -24260,22 +26002,22 @@
   i32.const 4256
   local.get $0
   call $~lib/rt/itcms/__visit
-  i32.const 17200
+  i32.const 17344
   local.get $0
   call $~lib/rt/itcms/__visit
   i32.const 880
   local.get $0
   call $~lib/rt/itcms/__visit
-  i32.const 18240
+  i32.const 18336
   local.get $0
   call $~lib/rt/itcms/__visit
-  i32.const 18304
+  i32.const 18400
   local.get $0
   call $~lib/rt/itcms/__visit
-  i32.const 20608
+  i32.const 20560
   local.get $0
   call $~lib/rt/itcms/__visit
-  i32.const 21664
+  i32.const 21616
   local.get $0
   call $~lib/rt/itcms/__visit
   global.get $src-as/base/SystemPriority/rootSystemPriority
@@ -24335,6 +26077,13 @@
    call $~lib/rt/itcms/__visit
   end
   global.get $src-as/components/DirectionalLight/DirectionalLight.ambientIntensityBuffer
+  local.tee $1
+  if
+   local.get $1
+   local.get $0
+   call $~lib/rt/itcms/__visit
+  end
+  global.get $src-as/math/Color/Color.clear
   local.tee $1
   if
    local.get $1
@@ -24545,6 +26294,13 @@
    call $~lib/rt/itcms/__visit
   end
   global.get $src-as/rendering/geometry/QuadGeometry/quadGeometry
+  local.tee $1
+  if
+   local.get $1
+   local.get $0
+   call $~lib/rt/itcms/__visit
+  end
+  global.get $src-as/rendering/geometry/TransformGeometry/TransformGeometry.default
   local.tee $1
   if
    local.get $1
@@ -25409,6 +27165,17 @@
   local.get $1
   call $~lib/arraybuffer/ArrayBufferView~visit
  )
+ (func $src-as/math/Color/Color~visit (param $0 i32) (param $1 i32)
+  (local $2 i32)
+  local.get $0
+  i32.load
+  local.tee $2
+  if
+   local.get $2
+   local.get $1
+   call $~lib/rt/itcms/__visit
+  end
+ )
  (func $~lib/staticarray/StaticArray<~lib/string/String>#__visit (param $0 i32) (param $1 i32)
   (local $2 i32)
   (local $3 i32)
@@ -26055,6 +27822,291 @@
   local.get $0
   local.get $1
   call $~lib/array/Array<u16>#__visit
+ )
+ (func $~lib/array/Array<~lib/staticarray/StaticArray<f32>>#__visit (param $0 i32) (param $1 i32)
+  (local $2 i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  i32.const 1
+  drop
+  local.get $0
+  i32.load offset=4
+  local.set $2
+  local.get $2
+  local.get $0
+  i32.load offset=12
+  i32.const 2
+  i32.shl
+  i32.add
+  local.set $3
+  loop $while-continue|0
+   local.get $2
+   local.get $3
+   i32.lt_u
+   local.set $4
+   local.get $4
+   if
+    local.get $2
+    i32.load
+    local.set $5
+    local.get $5
+    if
+     local.get $5
+     local.get $1
+     call $~lib/rt/itcms/__visit
+    end
+    local.get $2
+    i32.const 4
+    i32.add
+    local.set $2
+    br $while-continue|0
+   end
+  end
+  local.get $0
+  i32.load
+  local.get $1
+  call $~lib/rt/itcms/__visit
+ )
+ (func $~lib/array/Array<~lib/staticarray/StaticArray<f32>>~visit (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  call $~lib/array/Array<~lib/staticarray/StaticArray<f32>>#__visit
+ )
+ (func $~lib/staticarray/StaticArray<~lib/staticarray/StaticArray<f32>>#__visit (param $0 i32) (param $1 i32)
+  (local $2 i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  i32.const 1
+  drop
+  local.get $0
+  local.set $2
+  local.get $2
+  local.get $0
+  i32.const 20
+  i32.sub
+  i32.load offset=16
+  i32.add
+  local.set $3
+  loop $while-continue|0
+   local.get $2
+   local.get $3
+   i32.lt_u
+   local.set $4
+   local.get $4
+   if
+    local.get $2
+    i32.load
+    local.set $5
+    local.get $5
+    if
+     local.get $5
+     local.get $1
+     call $~lib/rt/itcms/__visit
+    end
+    local.get $2
+    i32.const 4
+    i32.add
+    local.set $2
+    br $while-continue|0
+   end
+  end
+ )
+ (func $~lib/staticarray/StaticArray<~lib/staticarray/StaticArray<f32>>~visit (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  call $~lib/staticarray/StaticArray<~lib/staticarray/StaticArray<f32>>#__visit
+ )
+ (func $~lib/array/Array<~lib/staticarray/StaticArray<u16>>#__visit (param $0 i32) (param $1 i32)
+  (local $2 i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  i32.const 1
+  drop
+  local.get $0
+  i32.load offset=4
+  local.set $2
+  local.get $2
+  local.get $0
+  i32.load offset=12
+  i32.const 2
+  i32.shl
+  i32.add
+  local.set $3
+  loop $while-continue|0
+   local.get $2
+   local.get $3
+   i32.lt_u
+   local.set $4
+   local.get $4
+   if
+    local.get $2
+    i32.load
+    local.set $5
+    local.get $5
+    if
+     local.get $5
+     local.get $1
+     call $~lib/rt/itcms/__visit
+    end
+    local.get $2
+    i32.const 4
+    i32.add
+    local.set $2
+    br $while-continue|0
+   end
+  end
+  local.get $0
+  i32.load
+  local.get $1
+  call $~lib/rt/itcms/__visit
+ )
+ (func $~lib/array/Array<~lib/staticarray/StaticArray<u16>>~visit (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  call $~lib/array/Array<~lib/staticarray/StaticArray<u16>>#__visit
+ )
+ (func $~lib/staticarray/StaticArray<~lib/staticarray/StaticArray<u16>>#__visit (param $0 i32) (param $1 i32)
+  (local $2 i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  i32.const 1
+  drop
+  local.get $0
+  local.set $2
+  local.get $2
+  local.get $0
+  i32.const 20
+  i32.sub
+  i32.load offset=16
+  i32.add
+  local.set $3
+  loop $while-continue|0
+   local.get $2
+   local.get $3
+   i32.lt_u
+   local.set $4
+   local.get $4
+   if
+    local.get $2
+    i32.load
+    local.set $5
+    local.get $5
+    if
+     local.get $5
+     local.get $1
+     call $~lib/rt/itcms/__visit
+    end
+    local.get $2
+    i32.const 4
+    i32.add
+    local.set $2
+    br $while-continue|0
+   end
+  end
+ )
+ (func $~lib/staticarray/StaticArray<~lib/staticarray/StaticArray<u16>>~visit (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  call $~lib/staticarray/StaticArray<~lib/staticarray/StaticArray<u16>>#__visit
+ )
+ (func $~lib/array/Array<~lib/staticarray/StaticArray<u8>>#__visit (param $0 i32) (param $1 i32)
+  (local $2 i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  i32.const 1
+  drop
+  local.get $0
+  i32.load offset=4
+  local.set $2
+  local.get $2
+  local.get $0
+  i32.load offset=12
+  i32.const 2
+  i32.shl
+  i32.add
+  local.set $3
+  loop $while-continue|0
+   local.get $2
+   local.get $3
+   i32.lt_u
+   local.set $4
+   local.get $4
+   if
+    local.get $2
+    i32.load
+    local.set $5
+    local.get $5
+    if
+     local.get $5
+     local.get $1
+     call $~lib/rt/itcms/__visit
+    end
+    local.get $2
+    i32.const 4
+    i32.add
+    local.set $2
+    br $while-continue|0
+   end
+  end
+  local.get $0
+  i32.load
+  local.get $1
+  call $~lib/rt/itcms/__visit
+ )
+ (func $~lib/array/Array<~lib/staticarray/StaticArray<u8>>~visit (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  call $~lib/array/Array<~lib/staticarray/StaticArray<u8>>#__visit
+ )
+ (func $~lib/staticarray/StaticArray<~lib/staticarray/StaticArray<u8>>#__visit (param $0 i32) (param $1 i32)
+  (local $2 i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  i32.const 1
+  drop
+  local.get $0
+  local.set $2
+  local.get $2
+  local.get $0
+  i32.const 20
+  i32.sub
+  i32.load offset=16
+  i32.add
+  local.set $3
+  loop $while-continue|0
+   local.get $2
+   local.get $3
+   i32.lt_u
+   local.set $4
+   local.get $4
+   if
+    local.get $2
+    i32.load
+    local.set $5
+    local.get $5
+    if
+     local.get $5
+     local.get $1
+     call $~lib/rt/itcms/__visit
+    end
+    local.get $2
+    i32.const 4
+    i32.add
+    local.set $2
+    br $while-continue|0
+   end
+  end
+ )
+ (func $~lib/staticarray/StaticArray<~lib/staticarray/StaticArray<u8>>~visit (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  call $~lib/staticarray/StaticArray<~lib/staticarray/StaticArray<u8>>#__visit
  )
  (func $src-as/rendering/shader/Shader/Shader~visit (param $0 i32) (param $1 i32)
   (local $2 i32)
@@ -27436,11 +29488,25 @@
   local.get $1
   call $~lib/array/Array<src-as/components/Transform/Transform>#__visit
  )
- (func $src-as/base/systems/TimeSystem/TimeSystem~visit (param $0 i32) (param $1 i32)
+ (func $src-as/components/MouseKeyboardController/MouseKeyboardController~visit (param $0 i32) (param $1 i32)
   (local $2 i32)
   local.get $0
   local.get $1
-  call $src-as/base/System/System~visit
+  call $src-as/base/Component/SpatialComponent~visit
+  local.get $0
+  i32.load offset=12
+  local.tee $2
+  if
+   local.get $2
+   local.get $1
+   call $~lib/rt/itcms/__visit
+  end
+ )
+ (func $src-as/base/Component/SpatialComponent~visit (param $0 i32) (param $1 i32)
+  (local $2 i32)
+  local.get $0
+  local.get $1
+  call $src-as/base/Component/BehaviorComponent~visit
   local.get $0
   i32.load offset=8
   local.tee $2
@@ -27450,57 +29516,16 @@
    call $~lib/rt/itcms/__visit
   end
  )
- (func $src-as/WebGL2/systems/WebGLRenderSystem/WebGLRenderSystem~visit (param $0 i32) (param $1 i32)
-  (local $2 i32)
+ (func $~lib/function/Function<%28src-as/base/System/System%2Csrc-as/base/System/System%29=>i32>#__visit (param $0 i32) (param $1 i32)
   local.get $0
+  i32.load offset=4
   local.get $1
-  call $src-as/rendering/systems/RenderSystem/RenderSystem~visit
-  local.get $0
-  i32.load offset=32
-  local.tee $2
-  if
-   local.get $2
-   local.get $1
-   call $~lib/rt/itcms/__visit
-  end
+  call $~lib/rt/itcms/__visit
  )
- (func $src-as/rendering/systems/RenderSystem/RenderSystem~visit (param $0 i32) (param $1 i32)
-  (local $2 i32)
+ (func $~lib/function/Function<%28src-as/base/System/System%2Csrc-as/base/System/System%29=>i32>~visit (param $0 i32) (param $1 i32)
   local.get $0
   local.get $1
-  call $src-as/base/System/ListenerSystem~visit
-  local.get $0
-  i32.load offset=16
-  local.tee $2
-  if
-   local.get $2
-   local.get $1
-   call $~lib/rt/itcms/__visit
-  end
-  local.get $0
-  i32.load offset=20
-  local.tee $2
-  if
-   local.get $2
-   local.get $1
-   call $~lib/rt/itcms/__visit
-  end
-  local.get $0
-  i32.load offset=24
-  local.tee $2
-  if
-   local.get $2
-   local.get $1
-   call $~lib/rt/itcms/__visit
-  end
-  local.get $0
-  i32.load offset=28
-  local.tee $2
-  if
-   local.get $2
-   local.get $1
-   call $~lib/rt/itcms/__visit
-  end
+  call $~lib/function/Function<%28src-as/base/System/System%2Csrc-as/base/System/System%29=>i32>#__visit
  )
  (func $src-as/components/Camera/Camera~visit (param $0 i32) (param $1 i32)
   (local $2 i32)
@@ -27540,13 +29565,37 @@
    call $~lib/rt/itcms/__visit
   end
  )
- (func $src-as/base/Component/SpatialComponent~visit (param $0 i32) (param $1 i32)
+ (func $src-as/rendering/systems/RenderSystem/RenderSystem~visit (param $0 i32) (param $1 i32)
   (local $2 i32)
   local.get $0
   local.get $1
-  call $src-as/base/Component/BehaviorComponent~visit
+  call $src-as/base/System/ListenerSystem~visit
   local.get $0
-  i32.load offset=8
+  i32.load offset=16
+  local.tee $2
+  if
+   local.get $2
+   local.get $1
+   call $~lib/rt/itcms/__visit
+  end
+  local.get $0
+  i32.load offset=20
+  local.tee $2
+  if
+   local.get $2
+   local.get $1
+   call $~lib/rt/itcms/__visit
+  end
+  local.get $0
+  i32.load offset=24
+  local.tee $2
+  if
+   local.get $2
+   local.get $1
+   call $~lib/rt/itcms/__visit
+  end
+  local.get $0
+  i32.load offset=28
   local.tee $2
   if
    local.get $2
@@ -27806,6 +29855,135 @@
   local.get $0
   local.get $1
   call $~lib/array/Array<src-as/components/Mesh/Mesh>#__visit
+ )
+ (func $~lib/array/Array<src-as/base/Component/Component>#__visit (param $0 i32) (param $1 i32)
+  (local $2 i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  i32.const 1
+  drop
+  local.get $0
+  i32.load offset=4
+  local.set $2
+  local.get $2
+  local.get $0
+  i32.load offset=12
+  i32.const 2
+  i32.shl
+  i32.add
+  local.set $3
+  loop $while-continue|0
+   local.get $2
+   local.get $3
+   i32.lt_u
+   local.set $4
+   local.get $4
+   if
+    local.get $2
+    i32.load
+    local.set $5
+    local.get $5
+    if
+     local.get $5
+     local.get $1
+     call $~lib/rt/itcms/__visit
+    end
+    local.get $2
+    i32.const 4
+    i32.add
+    local.set $2
+    br $while-continue|0
+   end
+  end
+  local.get $0
+  i32.load
+  local.get $1
+  call $~lib/rt/itcms/__visit
+ )
+ (func $~lib/array/Array<src-as/base/Component/Component>~visit (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  call $~lib/array/Array<src-as/base/Component/Component>#__visit
+ )
+ (func $src-as/rendering/material/Material/StandardMaterial~visit (param $0 i32) (param $1 i32)
+  (local $2 i32)
+  local.get $0
+  local.get $1
+  call $src-as/rendering/material/Material/SpatialMaterial~visit
+  local.get $0
+  i32.load offset=24
+  local.tee $2
+  if
+   local.get $2
+   local.get $1
+   call $~lib/rt/itcms/__visit
+  end
+  local.get $0
+  i32.load offset=28
+  local.tee $2
+  if
+   local.get $2
+   local.get $1
+   call $~lib/rt/itcms/__visit
+  end
+ )
+ (func $src-as/rendering/material/Material/SpatialMaterial~visit (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  call $src-as/rendering/material/Material/Material~visit
+ )
+ (func $src-as/rendering/material/Uniform/Uniform_texture~visit (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  call $src-as/rendering/material/Uniform/TypedUniform<src-as/math/Texture/Texture>~visit
+ )
+ (func $src-as/rendering/material/Uniform/TypedUniform<src-as/math/Texture/Texture>~visit (param $0 i32) (param $1 i32)
+  (local $2 i32)
+  local.get $0
+  local.get $1
+  call $src-as/rendering/material/Uniform/Uniform~visit
+  local.get $0
+  i32.load offset=12
+  local.tee $2
+  if
+   local.get $2
+   local.get $1
+   call $~lib/rt/itcms/__visit
+  end
+ )
+ (func $src-as/rendering/geometry/GridGeometry/GridGeometry~visit (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  call $src-as/rendering/geometry/Geometry/PositionGeometry~visit
+ )
+ (func $src-as/base/systems/TimeSystem/TimeSystem~visit (param $0 i32) (param $1 i32)
+  (local $2 i32)
+  local.get $0
+  local.get $1
+  call $src-as/base/System/System~visit
+  local.get $0
+  i32.load offset=8
+  local.tee $2
+  if
+   local.get $2
+   local.get $1
+   call $~lib/rt/itcms/__visit
+  end
+ )
+ (func $src-as/WebGL2/systems/WebGLRenderSystem/WebGLRenderSystem~visit (param $0 i32) (param $1 i32)
+  (local $2 i32)
+  local.get $0
+  local.get $1
+  call $src-as/rendering/systems/RenderSystem/RenderSystem~visit
+  local.get $0
+  i32.load offset=32
+  local.tee $2
+  if
+   local.get $2
+   local.get $1
+   call $~lib/rt/itcms/__visit
+  end
  )
  (func $src-as/WebGL2/systems/WebGLMeshSystem/WebGLMeshSystem~visit (param $0 i32) (param $1 i32)
   (local $2 i32)
@@ -28615,17 +30793,6 @@
   local.get $1
   call $~lib/map/Map<src-as/components/Mesh/Mesh,src-as/WebGL2/components/mesh/WebGLMesh>#__visit
  )
- (func $~lib/function/Function<%28src-as/base/System/System%2Csrc-as/base/System/System%29=>i32>#__visit (param $0 i32) (param $1 i32)
-  local.get $0
-  i32.load offset=4
-  local.get $1
-  call $~lib/rt/itcms/__visit
- )
- (func $~lib/function/Function<%28src-as/base/System/System%2Csrc-as/base/System/System%29=>i32>~visit (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  call $~lib/function/Function<%28src-as/base/System/System%2Csrc-as/base/System/System%29=>i32>#__visit
- )
  (func $~lib/function/Function<%28src-as/base/System/ListenerSystem%2Csrc-as/base/System/ListenerSystem%29=>i32>#__visit (param $0 i32) (param $1 i32)
   local.get $0
   i32.load offset=4
@@ -28636,17 +30803,6 @@
   local.get $0
   local.get $1
   call $~lib/function/Function<%28src-as/base/System/ListenerSystem%2Csrc-as/base/System/ListenerSystem%29=>i32>#__visit
- )
- (func $src-as/math/Color/Color~visit (param $0 i32) (param $1 i32)
-  (local $2 i32)
-  local.get $0
-  i32.load
-  local.tee $2
-  if
-   local.get $2
-   local.get $1
-   call $~lib/rt/itcms/__visit
-  end
  )
  (func $src-as/components/DirectionalLight/DirectionalLight~visit (param $0 i32) (param $1 i32)
   (local $2 i32)
@@ -28663,102 +30819,6 @@
   end
   local.get $0
   i32.load offset=16
-  local.tee $2
-  if
-   local.get $2
-   local.get $1
-   call $~lib/rt/itcms/__visit
-  end
- )
- (func $~lib/array/Array<src-as/base/Component/Component>#__visit (param $0 i32) (param $1 i32)
-  (local $2 i32)
-  (local $3 i32)
-  (local $4 i32)
-  (local $5 i32)
-  i32.const 1
-  drop
-  local.get $0
-  i32.load offset=4
-  local.set $2
-  local.get $2
-  local.get $0
-  i32.load offset=12
-  i32.const 2
-  i32.shl
-  i32.add
-  local.set $3
-  loop $while-continue|0
-   local.get $2
-   local.get $3
-   i32.lt_u
-   local.set $4
-   local.get $4
-   if
-    local.get $2
-    i32.load
-    local.set $5
-    local.get $5
-    if
-     local.get $5
-     local.get $1
-     call $~lib/rt/itcms/__visit
-    end
-    local.get $2
-    i32.const 4
-    i32.add
-    local.set $2
-    br $while-continue|0
-   end
-  end
-  local.get $0
-  i32.load
-  local.get $1
-  call $~lib/rt/itcms/__visit
- )
- (func $~lib/array/Array<src-as/base/Component/Component>~visit (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  call $~lib/array/Array<src-as/base/Component/Component>#__visit
- )
- (func $src-as/rendering/material/Material/StandardMaterial~visit (param $0 i32) (param $1 i32)
-  (local $2 i32)
-  local.get $0
-  local.get $1
-  call $src-as/rendering/material/Material/SpatialMaterial~visit
-  local.get $0
-  i32.load offset=24
-  local.tee $2
-  if
-   local.get $2
-   local.get $1
-   call $~lib/rt/itcms/__visit
-  end
-  local.get $0
-  i32.load offset=28
-  local.tee $2
-  if
-   local.get $2
-   local.get $1
-   call $~lib/rt/itcms/__visit
-  end
- )
- (func $src-as/rendering/material/Material/SpatialMaterial~visit (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  call $src-as/rendering/material/Material/Material~visit
- )
- (func $src-as/rendering/material/Uniform/Uniform_texture~visit (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  call $src-as/rendering/material/Uniform/TypedUniform<src-as/math/Texture/Texture>~visit
- )
- (func $src-as/rendering/material/Uniform/TypedUniform<src-as/math/Texture/Texture>~visit (param $0 i32) (param $1 i32)
-  (local $2 i32)
-  local.get $0
-  local.get $1
-  call $src-as/rendering/material/Uniform/Uniform~visit
-  local.get $0
-  i32.load offset=12
   local.tee $2
   if
    local.get $2
@@ -28921,649 +30981,703 @@
  )
  (func $~lib/rt/__visit_members (param $0 i32) (param $1 i32)
   block $invalid
-   block $src-as/WebGL2/components/material/WebGLUniform_mat4
-    block $src-as/WebGL2/components/material/WebGLUniform_vec4
-     block $src-as/WebGL2/components/material/WebGLUniform_vec3
-      block $src-as/WebGL2/components/material/WebGLUniform_vec2
-       block $src-as/WebGL2/components/material/WebGLUniform_typed<~lib/typedarray/Float32Array>
-        block $src-as/WebGL2/components/material/WebGLUniform_float
-         block $src-as/WebGL2/components/material/WebGLTextureUniform
-          block $src-as/rendering/material/Uniform/TypedUniform<src-as/math/Bitmap/Bitmap>
-           block $src-as/math/Bitmap/Bitmap
-            block $src-as/rendering/material/Uniform/Uniform_bitmap
-             block $~lib/function/Function<%28src-as/WebGL2/components/geometry/WebGLAttribute%2Ci32%2C~lib/array/Array<src-as/WebGL2/components/geometry/WebGLAttribute>%29=>bool>
-              block $src-as/WebGL2/components/geometry/WebGLBindAttributeOptions
-               block $src-as/WebGL2/components/geometry/WebGLVAOOptions
-                block $src-as/math/PolarCoords/PolarCoords
+   block $src-as/math/PolarCoords/PolarCoords
+    block $src-as/WebGL2/components/material/WebGLUniform_mat4
+     block $src-as/WebGL2/components/material/WebGLUniform_vec4
+      block $src-as/WebGL2/components/material/WebGLUniform_vec3
+       block $src-as/WebGL2/components/material/WebGLUniform_vec2
+        block $src-as/WebGL2/components/material/WebGLUniform_typed<~lib/typedarray/Float32Array>
+         block $src-as/WebGL2/components/material/WebGLUniform_float
+          block $src-as/WebGL2/components/material/WebGLTextureUniform
+           block $src-as/rendering/material/Uniform/TypedUniform<src-as/math/Bitmap/Bitmap>
+            block $src-as/math/Bitmap/Bitmap
+             block $src-as/rendering/material/Uniform/Uniform_bitmap
+              block $~lib/function/Function<%28src-as/WebGL2/components/geometry/WebGLAttribute%2Ci32%2C~lib/array/Array<src-as/WebGL2/components/geometry/WebGLAttribute>%29=>bool>
+               block $src-as/WebGL2/components/geometry/WebGLBindAttributeOptions
+                block $src-as/WebGL2/components/geometry/WebGLVAOOptions
                  block $~lib/array/Array<src-as/base/Entity/Entity>
                   block $src-as/components/Rotator/Rotator
-                   block $src-as/rendering/material/Uniform/TypedUniform<src-as/math/Texture/Texture>
-                    block $src-as/rendering/material/Uniform/Uniform_texture
-                     block $src-as/rendering/material/Material/SpatialMaterial
-                      block $src-as/rendering/material/Material/StandardMaterial
-                       block $~lib/array/Array<src-as/base/Component/Component>
-                        block $src-as/components/DirectionalLight/DirectionalLight
-                         block $src-as/math/Color/Color
-                          block $~lib/function/Function<%28src-as/base/System/ListenerSystem%2Csrc-as/base/System/ListenerSystem%29=>i32>
-                           block $~lib/function/Function<%28src-as/base/System/System%2Csrc-as/base/System/System%29=>i32>
-                            block $~lib/map/Map<src-as/components/Mesh/Mesh,src-as/WebGL2/components/mesh/WebGLMesh>
-                             block $src-as/WebGL2/components/mesh/WebGLMesh
-                              block $~lib/map/Map<src-as/rendering/material/UniformBufferObject/UniformBufferObject,src-as/WebGL2/components/material/WebGLUniformBufferObject>
-                               block $src-as/WebGL2/systems/WebGLUniformBufferObjectSystem/WebGLUniformBufferObjectSystem
-                                block $~lib/map/Map<src-as/rendering/material/Material/Material,src-as/WebGL2/components/material/WebGLMaterial>
-                                 block $~lib/array/Array<src-as/WebGL2/components/material/WebGLUniformBufferObject>
-                                  block $src-as/WebGL2/components/material/WebGLUniformBufferObject
-                                   block $~lib/array/Array<src-as/WebGL2/components/material/WebGLUniform>
-                                    block $src-as/WebGL2/components/material/WebGLUniform
-                                     block $src-as/WebGL2/components/material/WebGLMaterial
-                                      block $src-as/WebGL2/systems/WebGLMaterialSystem/WebGLMaterialSystem
-                                       block $~lib/map/Map<src-as/rendering/geometry/Attribute/Attribute,src-as/WebGL2/components/geometry/WebGLAttribute>
-                                        block $~lib/map/Map<src-as/rendering/geometry/Geometry/Geometry,src-as/WebGL2/components/geometry/WebGLGeometry>
-                                         block $~lib/array/Array<src-as/WebGL2/components/geometry/WebGLAttribute>
-                                          block $src-as/WebGL2/components/geometry/WebGLAttribute
-                                           block $src-as/WebGL2/components/geometry/WebGLGeometry
-                                            block $src-as/WebGL2/systems/WebGLGeometrySystem/WebGLGeometrySystem
-                                             block $~lib/map/Map<src-as/rendering/shader/Shader/Shader,src-as/WebGL2/components/shader/WebGLShader>
-                                              block $src-as/WebGL2/components/shader/WebGLShader
-                                               block $src-as/WebGL2/systems/WebGLShaderSystem/WebGLShaderSystem
-                                                block $src-as/WebGL2/systems/WebGLMeshSystem/WebGLMeshSystem
-                                                 block $src-as/rendering/systems/UniformBufferObjectSystem/UniformBufferObjectSystem
-                                                  block $~lib/array/Array<src-as/components/Mesh/Mesh>
-                                                   block $~lib/array/Array<src-as/rendering/material/UniformBufferObject/UniformBufferObject>
-                                                    block $src-as/rendering/material/Material/Material
-                                                     block $src-as/components/Mesh/Mesh
-                                                      block $~lib/array/Array<src-as/components/Camera/Camera>
-                                                       block $src-as/base/Query/TypedQuery<src-as/components/Camera/Camera>
-                                                        block $src-as/utility/Viewport/Viewport
-                                                         block $src-as/base/Component/SpatialComponent
-                                                          block $src-as/components/Camera/Camera
+                   block $src-as/components/DirectionalLight/DirectionalLight
+                    block $~lib/function/Function<%28src-as/base/System/ListenerSystem%2Csrc-as/base/System/ListenerSystem%29=>i32>
+                     block $~lib/map/Map<src-as/components/Mesh/Mesh,src-as/WebGL2/components/mesh/WebGLMesh>
+                      block $src-as/WebGL2/components/mesh/WebGLMesh
+                       block $~lib/map/Map<src-as/rendering/material/UniformBufferObject/UniformBufferObject,src-as/WebGL2/components/material/WebGLUniformBufferObject>
+                        block $src-as/WebGL2/systems/WebGLUniformBufferObjectSystem/WebGLUniformBufferObjectSystem
+                         block $~lib/map/Map<src-as/rendering/material/Material/Material,src-as/WebGL2/components/material/WebGLMaterial>
+                          block $~lib/array/Array<src-as/WebGL2/components/material/WebGLUniformBufferObject>
+                           block $src-as/WebGL2/components/material/WebGLUniformBufferObject
+                            block $~lib/array/Array<src-as/WebGL2/components/material/WebGLUniform>
+                             block $src-as/WebGL2/components/material/WebGLUniform
+                              block $src-as/WebGL2/components/material/WebGLMaterial
+                               block $src-as/WebGL2/systems/WebGLMaterialSystem/WebGLMaterialSystem
+                                block $~lib/map/Map<src-as/rendering/geometry/Attribute/Attribute,src-as/WebGL2/components/geometry/WebGLAttribute>
+                                 block $~lib/map/Map<src-as/rendering/geometry/Geometry/Geometry,src-as/WebGL2/components/geometry/WebGLGeometry>
+                                  block $~lib/array/Array<src-as/WebGL2/components/geometry/WebGLAttribute>
+                                   block $src-as/WebGL2/components/geometry/WebGLAttribute
+                                    block $src-as/WebGL2/components/geometry/WebGLGeometry
+                                     block $src-as/WebGL2/systems/WebGLGeometrySystem/WebGLGeometrySystem
+                                      block $~lib/map/Map<src-as/rendering/shader/Shader/Shader,src-as/WebGL2/components/shader/WebGLShader>
+                                       block $src-as/WebGL2/components/shader/WebGLShader
+                                        block $src-as/WebGL2/systems/WebGLShaderSystem/WebGLShaderSystem
+                                         block $src-as/WebGL2/systems/WebGLMeshSystem/WebGLMeshSystem
+                                          block $src-as/WebGL2/systems/WebGLRenderSystem/WebGLRenderSystem
+                                           block $src-as/components/Time/Time
+                                            block $src-as/base/systems/TimeSystem/TimeSystem
+                                             block $src-as/exports/defaultWorld/DefaultWorldOptions
+                                              block $src-as/rendering/geometry/GridGeometry/GridGeometry
+                                               block $src-as/rendering/material/Uniform/TypedUniform<src-as/math/Texture/Texture>
+                                                block $src-as/rendering/material/Uniform/Uniform_texture
+                                                 block $src-as/rendering/material/Material/SpatialMaterial
+                                                  block $src-as/rendering/material/Material/StandardMaterial
+                                                   block $~lib/array/Array<src-as/base/Component/Component>
+                                                    block $src-as/rendering/systems/UniformBufferObjectSystem/UniformBufferObjectSystem
+                                                     block $~lib/array/Array<src-as/components/Mesh/Mesh>
+                                                      block $~lib/array/Array<src-as/rendering/material/UniformBufferObject/UniformBufferObject>
+                                                       block $src-as/rendering/material/Material/Material
+                                                        block $src-as/components/Mesh/Mesh
+                                                         block $~lib/array/Array<src-as/components/Camera/Camera>
+                                                          block $src-as/base/Query/TypedQuery<src-as/components/Camera/Camera>
                                                            block $src-as/rendering/systems/RenderSystem/RenderSystem
-                                                            block $src-as/WebGL2/systems/WebGLRenderSystem/WebGLRenderSystem
-                                                             block $src-as/components/Time/Time
-                                                              block $src-as/base/systems/TimeSystem/TimeSystem
-                                                               block $~lib/array/Array<src-as/components/Transform/Transform>
-                                                                block $src-as/base/Query/TypedQuery<src-as/components/Transform/Transform>
-                                                                 block $~lib/set/Set<src-as/components/Transform/Transform>
-                                                                  block $src-as/components/Transform/Transform
-                                                                   block $src-as/base/systems/TransformSystem/TransformSystem
-                                                                    block $~lib/set/Set<i32>
-                                                                     block $src-as/math/Vector2/Vector2
-                                                                      block $src-as/base/systems/InputSystem/InputSystem
-                                                                       block $~lib/array/Array<src-as/base/Component/BehaviorComponent>
-                                                                        block $src-as/base/Component/BehaviorComponent
-                                                                         block $~lib/map/Map<u32,~lib/array/Array<src-as/base/System/ListenerSystem>>
-                                                                          block $~lib/array/Array<src-as/base/System/ListenerSystem>
-                                                                           block $src-as/base/System/ListenerSystem
-                                                                            block $src-as/base/ListenerSystemManager/ListenerSystemManager
-                                                                             block $~lib/map/Map<u32,~lib/array/Array<src-as/base/Query/Query>>
-                                                                              block $~lib/array/Array<src-as/base/Query/Query>
-                                                                               block $~lib/set/Set<src-as/base/Entity/Entity>
-                                                                                block $~lib/array/Array<u32>
-                                                                                 block $src-as/base/Query/Query
-                                                                                  block $src-as/base/QueryManager/QueryManager
-                                                                                   block $~lib/map/Map<u32,src-as/base/Object/ObjectBase>
-                                                                                    block $~lib/map/Map<u32,src-as/base/Entity/Entity>
-                                                                                     block $~lib/array/Array<src-as/base/System/System>
-                                                                                      block $~lib/map/Map<u32,src-as/base/Component/Component>
-                                                                                       block $src-as/base/Component/Component
-                                                                                        block $src-as/base/Entity/Entity
-                                                                                         block $src-as/base/World/World
-                                                                                          block $src-as/base/Object/ObjectBase
-                                                                                           block $src-as/base/System/System
-                                                                                            block $src-as/base/systems/BehaviorSystem/BehaviorSystem
-                                                                                             block $src-as/base/SystemPriority/SystemPriority
-                                                                                              block $~lib/array/Array<src-as/math/Vector1/Vector1>
-                                                                                               block $src-as/math/SharedBuffer/SharedBuffer_f32<src-as/math/Vector1/Vector1>
-                                                                                                block $src-as/math/Vector1/Vector1Base<~lib/typedarray/Float32Array,f32>
-                                                                                                 block $src-as/math/Vector1/Vector1
-                                                                                                  block $src-as/math/SharedBuffer/SharedBufferVector1
-                                                                                                   block $~lib/array/Array<src-as/math/Vector3/Vector3>
-                                                                                                    block $src-as/math/SharedBuffer/SharedBuffer_f32<src-as/math/Vector3/Vector3>
-                                                                                                     block $src-as/math/SharedBuffer/SharedBufferVector3
-                                                                                                      block $src-as/math/Texture/Texture
-                                                                                                       block $~lib/array/Array<~lib/string/String>
-                                                                                                        block $src-as/rendering/shader/Shader/Shader
-                                                                                                         block $~lib/array/Array<u16>
-                                                                                                          block $src-as/rendering/geometry/QuadGeometry/QuadGeometry
-                                                                                                           block $src-as/rendering/geometry/Attribute/TypedAttribute<~lib/typedarray/Uint8Array>
-                                                                                                            block $src-as/rendering/geometry/Attribute/Attribute_u8
-                                                                                                             block $src-as/rendering/geometry/Attribute/TypedAttribute<~lib/typedarray/Float32Array>
-                                                                                                              block $src-as/rendering/geometry/Attribute/Attribute_f32
-                                                                                                               block $~lib/array/Array<~lib/array/Array<u8>>
-                                                                                                                block $~lib/array/Array<u8>
-                                                                                                                 block $~lib/array/Array<~lib/array/Array<f32>>
-                                                                                                                  block $~lib/staticarray/StaticArray<u8>
-                                                                                                                   block $~lib/staticarray/StaticArray<u16>
-                                                                                                                    block $~lib/staticarray/StaticArray<f32>
-                                                                                                                     block $~lib/typedarray/Uint16Array
-                                                                                                                      block $~lib/array/Array<src-as/rendering/geometry/Attribute/Attribute>
-                                                                                                                       block $~lib/map/Map<~lib/string/String,src-as/rendering/geometry/Attribute/Attribute>
-                                                                                                                        block $src-as/rendering/geometry/Attribute/Attribute
-                                                                                                                         block $src-as/rendering/geometry/Geometry/Geometry
-                                                                                                                          block $src-as/rendering/geometry/Geometry/PositionGeometry
-                                                                                                                           block $src-as/rendering/geometry/Geometry/IndexGeometry
-                                                                                                                            block $src-as/rendering/geometry/Geometry/StandardGeometry
-                                                                                                                             block $src-as/rendering/material/Uniform/TypedUniform<~lib/typedarray/Float32Array>
-                                                                                                                              block $src-as/rendering/material/Uniform/Uniform_f32
-                                                                                                                               block $~lib/array/Array<i32>
-                                                                                                                                block $~lib/map/Map<~lib/string/String,src-as/rendering/material/Uniform/Uniform>
-                                                                                                                                 block $~lib/array/Array<src-as/rendering/material/Uniform/Uniform>
-                                                                                                                                  block $src-as/rendering/material/Uniform/Uniform
-                                                                                                                                   block $src-as/rendering/material/UniformBufferObject/UniformBufferObject
-                                                                                                                                    block $~lib/staticarray/StaticArray<~lib/string/String>
-                                                                                                                                     block $~lib/typedarray/Uint8Array
-                                                                                                                                      block $src-as/math/Color8/Color8
-                                                                                                                                       block $src-as/math/Vector3/Vector3
-                                                                                                                                        block $src-as/math/Matrix/Matrix
-                                                                                                                                         block $src-as/math/Quaternion/Quaternion
-                                                                                                                                          block $~lib/function/Function<%28~lib/typedarray/Float32Array%2Cf32%2Cf32%2Cf32%2Cf32%2Cf32%2Cf32%29=>~lib/typedarray/Float32Array>
-                                                                                                                                           block $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>~lib/typedarray/Float32Array>
-                                                                                                                                            block $~lib/function/Function<%28%29=>%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>~lib/typedarray/Float32Array>
-                                                                                                                                             block $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2Cf32%29=>~lib/typedarray/Float32Array>
-                                                                                                                                              block $~lib/function/Function<%28%29=>%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2Cf32%29=>~lib/typedarray/Float32Array>
-                                                                                                                                               block $~lib/function/Function<%28%29=>%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>~lib/typedarray/Float32Array>
-                                                                                                                                                block $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>bool>
-                                                                                                                                                 block $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2Cf32%29=>~lib/typedarray/Float32Array>
-                                                                                                                                                  block $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2Cf32%29=>~lib/typedarray/Float32Array>
-                                                                                                                                                   block $~lib/function/Function<%28~lib/typedarray/Float32Array%2Cf32%2Cf32%2Cf32%2Cf32%29=>~lib/typedarray/Float32Array>
-                                                                                                                                                    block $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>~lib/typedarray/Float32Array>
-                                                                                                                                                     block $~lib/function/Function<%28f32%2Cf32%2Cf32%2Cf32%29=>~lib/typedarray/Float32Array>
-                                                                                                                                                      block $~lib/function/Function<%28~lib/typedarray/Float32Array%29=>~lib/typedarray/Float32Array>
-                                                                                                                                                       block $~lib/function/Function<%28~lib/typedarray/Float32Array%29=>f32>
-                                                                                                                                                        block $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>f32>
-                                                                                                                                                         block $~lib/function/Function<%28f32%2Cf32%29=>f32>
-                                                                                                                                                          block $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>~lib/typedarray/Float32Array>
-                                                                                                                                                           block $~lib/function/Function<%28%29=>f32>
-                                                                                                                                                            block $~lib/array/Array<f32>
-                                                                                                                                                             block $~lib/typedarray/Float32Array
-                                                                                                                                                              block $~lib/arraybuffer/ArrayBufferView
-                                                                                                                                                               block $~lib/string/String
-                                                                                                                                                                block $~lib/arraybuffer/ArrayBuffer
+                                                            block $src-as/utility/Viewport/Viewport
+                                                             block $src-as/components/Camera/Camera
+                                                              block $~lib/function/Function<%28src-as/base/System/System%2Csrc-as/base/System/System%29=>i32>
+                                                               block $src-as/base/Component/SpatialComponent
+                                                                block $src-as/components/MouseKeyboardController/MouseKeyboardController
+                                                                 block $~lib/array/Array<src-as/components/Transform/Transform>
+                                                                  block $src-as/base/Query/TypedQuery<src-as/components/Transform/Transform>
+                                                                   block $~lib/set/Set<src-as/components/Transform/Transform>
+                                                                    block $src-as/components/Transform/Transform
+                                                                     block $src-as/base/systems/TransformSystem/TransformSystem
+                                                                      block $~lib/set/Set<i32>
+                                                                       block $src-as/math/Vector2/Vector2
+                                                                        block $src-as/base/systems/InputSystem/InputSystem
+                                                                         block $~lib/array/Array<src-as/base/Component/BehaviorComponent>
+                                                                          block $src-as/base/Component/BehaviorComponent
+                                                                           block $~lib/map/Map<u32,~lib/array/Array<src-as/base/System/ListenerSystem>>
+                                                                            block $~lib/array/Array<src-as/base/System/ListenerSystem>
+                                                                             block $src-as/base/System/ListenerSystem
+                                                                              block $src-as/base/ListenerSystemManager/ListenerSystemManager
+                                                                               block $~lib/map/Map<u32,~lib/array/Array<src-as/base/Query/Query>>
+                                                                                block $~lib/array/Array<src-as/base/Query/Query>
+                                                                                 block $~lib/set/Set<src-as/base/Entity/Entity>
+                                                                                  block $~lib/array/Array<u32>
+                                                                                   block $src-as/base/Query/Query
+                                                                                    block $src-as/base/QueryManager/QueryManager
+                                                                                     block $~lib/map/Map<u32,src-as/base/Object/ObjectBase>
+                                                                                      block $~lib/map/Map<u32,src-as/base/Entity/Entity>
+                                                                                       block $~lib/array/Array<src-as/base/System/System>
+                                                                                        block $~lib/map/Map<u32,src-as/base/Component/Component>
+                                                                                         block $src-as/base/Component/Component
+                                                                                          block $src-as/base/Entity/Entity
+                                                                                           block $src-as/base/World/World
+                                                                                            block $src-as/base/Object/ObjectBase
+                                                                                             block $src-as/base/System/System
+                                                                                              block $src-as/base/systems/BehaviorSystem/BehaviorSystem
+                                                                                               block $src-as/base/SystemPriority/SystemPriority
+                                                                                                block $~lib/array/Array<src-as/math/Vector1/Vector1>
+                                                                                                 block $src-as/math/SharedBuffer/SharedBuffer_f32<src-as/math/Vector1/Vector1>
+                                                                                                  block $src-as/math/Vector1/Vector1Base<~lib/typedarray/Float32Array,f32>
+                                                                                                   block $src-as/math/Vector1/Vector1
+                                                                                                    block $src-as/math/SharedBuffer/SharedBufferVector1
+                                                                                                     block $~lib/array/Array<src-as/math/Vector3/Vector3>
+                                                                                                      block $src-as/math/SharedBuffer/SharedBuffer_f32<src-as/math/Vector3/Vector3>
+                                                                                                       block $src-as/math/SharedBuffer/SharedBufferVector3
+                                                                                                        block $src-as/math/Texture/Texture
+                                                                                                         block $~lib/array/Array<~lib/string/String>
+                                                                                                          block $src-as/rendering/shader/Shader/Shader
+                                                                                                           block $~lib/staticarray/StaticArray<~lib/staticarray/StaticArray<u8>>
+                                                                                                            block $~lib/array/Array<~lib/staticarray/StaticArray<u8>>
+                                                                                                             block $~lib/staticarray/StaticArray<~lib/staticarray/StaticArray<u16>>
+                                                                                                              block $~lib/array/Array<~lib/staticarray/StaticArray<u16>>
+                                                                                                               block $~lib/staticarray/StaticArray<~lib/staticarray/StaticArray<f32>>
+                                                                                                                block $~lib/array/Array<~lib/staticarray/StaticArray<f32>>
+                                                                                                                 block $~lib/array/Array<u16>
+                                                                                                                  block $src-as/rendering/geometry/QuadGeometry/QuadGeometry
+                                                                                                                   block $src-as/rendering/geometry/Attribute/TypedAttribute<~lib/typedarray/Uint8Array>
+                                                                                                                    block $src-as/rendering/geometry/Attribute/Attribute_u8
+                                                                                                                     block $src-as/rendering/geometry/Attribute/TypedAttribute<~lib/typedarray/Float32Array>
+                                                                                                                      block $src-as/rendering/geometry/Attribute/Attribute_f32
+                                                                                                                       block $~lib/array/Array<~lib/array/Array<u8>>
+                                                                                                                        block $~lib/array/Array<u8>
+                                                                                                                         block $~lib/array/Array<~lib/array/Array<f32>>
+                                                                                                                          block $~lib/staticarray/StaticArray<u8>
+                                                                                                                           block $~lib/staticarray/StaticArray<u16>
+                                                                                                                            block $~lib/staticarray/StaticArray<f32>
+                                                                                                                             block $~lib/typedarray/Uint16Array
+                                                                                                                              block $~lib/array/Array<src-as/rendering/geometry/Attribute/Attribute>
+                                                                                                                               block $~lib/map/Map<~lib/string/String,src-as/rendering/geometry/Attribute/Attribute>
+                                                                                                                                block $src-as/rendering/geometry/Attribute/Attribute
+                                                                                                                                 block $src-as/rendering/geometry/Geometry/Geometry
+                                                                                                                                  block $src-as/rendering/geometry/Geometry/PositionGeometry
+                                                                                                                                   block $src-as/rendering/geometry/Geometry/IndexGeometry
+                                                                                                                                    block $src-as/rendering/geometry/Geometry/StandardGeometry
+                                                                                                                                     block $src-as/rendering/material/Uniform/TypedUniform<~lib/typedarray/Float32Array>
+                                                                                                                                      block $src-as/rendering/material/Uniform/Uniform_f32
+                                                                                                                                       block $~lib/array/Array<i32>
+                                                                                                                                        block $~lib/map/Map<~lib/string/String,src-as/rendering/material/Uniform/Uniform>
+                                                                                                                                         block $~lib/array/Array<src-as/rendering/material/Uniform/Uniform>
+                                                                                                                                          block $src-as/rendering/material/Uniform/Uniform
+                                                                                                                                           block $src-as/rendering/material/UniformBufferObject/UniformBufferObject
+                                                                                                                                            block $~lib/staticarray/StaticArray<~lib/string/String>
+                                                                                                                                             block $src-as/math/Color/Color
+                                                                                                                                              block $~lib/typedarray/Uint8Array
+                                                                                                                                               block $src-as/math/Color8/Color8
+                                                                                                                                                block $src-as/math/Vector3/Vector3
+                                                                                                                                                 block $src-as/math/Matrix/Matrix
+                                                                                                                                                  block $src-as/math/Quaternion/Quaternion
+                                                                                                                                                   block $~lib/function/Function<%28~lib/typedarray/Float32Array%2Cf32%2Cf32%2Cf32%2Cf32%2Cf32%2Cf32%29=>~lib/typedarray/Float32Array>
+                                                                                                                                                    block $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>~lib/typedarray/Float32Array>
+                                                                                                                                                     block $~lib/function/Function<%28%29=>%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>~lib/typedarray/Float32Array>
+                                                                                                                                                      block $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2Cf32%29=>~lib/typedarray/Float32Array>
+                                                                                                                                                       block $~lib/function/Function<%28%29=>%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2Cf32%29=>~lib/typedarray/Float32Array>
+                                                                                                                                                        block $~lib/function/Function<%28%29=>%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>~lib/typedarray/Float32Array>
+                                                                                                                                                         block $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>bool>
+                                                                                                                                                          block $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2Cf32%29=>~lib/typedarray/Float32Array>
+                                                                                                                                                           block $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2Cf32%29=>~lib/typedarray/Float32Array>
+                                                                                                                                                            block $~lib/function/Function<%28~lib/typedarray/Float32Array%2Cf32%2Cf32%2Cf32%2Cf32%29=>~lib/typedarray/Float32Array>
+                                                                                                                                                             block $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>~lib/typedarray/Float32Array>
+                                                                                                                                                              block $~lib/function/Function<%28f32%2Cf32%2Cf32%2Cf32%29=>~lib/typedarray/Float32Array>
+                                                                                                                                                               block $~lib/function/Function<%28~lib/typedarray/Float32Array%29=>~lib/typedarray/Float32Array>
+                                                                                                                                                                block $~lib/function/Function<%28~lib/typedarray/Float32Array%29=>f32>
+                                                                                                                                                                 block $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>f32>
+                                                                                                                                                                  block $~lib/function/Function<%28f32%2Cf32%29=>f32>
+                                                                                                                                                                   block $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>~lib/typedarray/Float32Array>
+                                                                                                                                                                    block $~lib/function/Function<%28%29=>f32>
+                                                                                                                                                                     block $~lib/array/Array<f32>
+                                                                                                                                                                      block $~lib/typedarray/Float32Array
+                                                                                                                                                                       block $~lib/arraybuffer/ArrayBufferView
+                                                                                                                                                                        block $~lib/string/String
+                                                                                                                                                                         block $~lib/arraybuffer/ArrayBuffer
+                                                                                                                                                                          local.get $0
+                                                                                                                                                                          i32.const 8
+                                                                                                                                                                          i32.sub
+                                                                                                                                                                          i32.load
+                                                                                                                                                                          br_table $~lib/arraybuffer/ArrayBuffer $~lib/string/String $~lib/arraybuffer/ArrayBufferView $~lib/typedarray/Float32Array $~lib/array/Array<f32> $~lib/function/Function<%28%29=>f32> $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>~lib/typedarray/Float32Array> $~lib/function/Function<%28f32%2Cf32%29=>f32> $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>f32> $~lib/function/Function<%28~lib/typedarray/Float32Array%29=>f32> $~lib/function/Function<%28~lib/typedarray/Float32Array%29=>~lib/typedarray/Float32Array> $~lib/function/Function<%28f32%2Cf32%2Cf32%2Cf32%29=>~lib/typedarray/Float32Array> $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>~lib/typedarray/Float32Array> $~lib/function/Function<%28~lib/typedarray/Float32Array%2Cf32%2Cf32%2Cf32%2Cf32%29=>~lib/typedarray/Float32Array> $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2Cf32%29=>~lib/typedarray/Float32Array> $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2Cf32%29=>~lib/typedarray/Float32Array> $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>bool> $~lib/function/Function<%28%29=>%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>~lib/typedarray/Float32Array> $~lib/function/Function<%28%29=>%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2Cf32%29=>~lib/typedarray/Float32Array> $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2Cf32%29=>~lib/typedarray/Float32Array> $~lib/function/Function<%28%29=>%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>~lib/typedarray/Float32Array> $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>~lib/typedarray/Float32Array> $~lib/function/Function<%28~lib/typedarray/Float32Array%2Cf32%2Cf32%2Cf32%2Cf32%2Cf32%2Cf32%29=>~lib/typedarray/Float32Array> $src-as/math/Quaternion/Quaternion $src-as/math/Matrix/Matrix $src-as/math/Vector3/Vector3 $src-as/math/Color8/Color8 $~lib/typedarray/Uint8Array $src-as/math/Color/Color $~lib/staticarray/StaticArray<~lib/string/String> $src-as/rendering/material/UniformBufferObject/UniformBufferObject $src-as/rendering/material/Uniform/Uniform $~lib/array/Array<src-as/rendering/material/Uniform/Uniform> $~lib/map/Map<~lib/string/String,src-as/rendering/material/Uniform/Uniform> $~lib/array/Array<i32> $src-as/rendering/material/Uniform/Uniform_f32 $src-as/rendering/material/Uniform/TypedUniform<~lib/typedarray/Float32Array> $src-as/rendering/geometry/Geometry/StandardGeometry $src-as/rendering/geometry/Geometry/IndexGeometry $src-as/rendering/geometry/Geometry/PositionGeometry $src-as/rendering/geometry/Geometry/Geometry $src-as/rendering/geometry/Attribute/Attribute $~lib/map/Map<~lib/string/String,src-as/rendering/geometry/Attribute/Attribute> $~lib/array/Array<src-as/rendering/geometry/Attribute/Attribute> $~lib/typedarray/Uint16Array $~lib/staticarray/StaticArray<f32> $~lib/staticarray/StaticArray<u16> $~lib/staticarray/StaticArray<u8> $~lib/array/Array<~lib/array/Array<f32>> $~lib/array/Array<u8> $~lib/array/Array<~lib/array/Array<u8>> $src-as/rendering/geometry/Attribute/Attribute_f32 $src-as/rendering/geometry/Attribute/TypedAttribute<~lib/typedarray/Float32Array> $src-as/rendering/geometry/Attribute/Attribute_u8 $src-as/rendering/geometry/Attribute/TypedAttribute<~lib/typedarray/Uint8Array> $src-as/rendering/geometry/QuadGeometry/QuadGeometry $~lib/array/Array<u16> $~lib/array/Array<~lib/staticarray/StaticArray<f32>> $~lib/staticarray/StaticArray<~lib/staticarray/StaticArray<f32>> $~lib/array/Array<~lib/staticarray/StaticArray<u16>> $~lib/staticarray/StaticArray<~lib/staticarray/StaticArray<u16>> $~lib/array/Array<~lib/staticarray/StaticArray<u8>> $~lib/staticarray/StaticArray<~lib/staticarray/StaticArray<u8>> $src-as/rendering/shader/Shader/Shader $~lib/array/Array<~lib/string/String> $src-as/math/Texture/Texture $src-as/math/SharedBuffer/SharedBufferVector3 $src-as/math/SharedBuffer/SharedBuffer_f32<src-as/math/Vector3/Vector3> $~lib/array/Array<src-as/math/Vector3/Vector3> $src-as/math/SharedBuffer/SharedBufferVector1 $src-as/math/Vector1/Vector1 $src-as/math/Vector1/Vector1Base<~lib/typedarray/Float32Array,f32> $src-as/math/SharedBuffer/SharedBuffer_f32<src-as/math/Vector1/Vector1> $~lib/array/Array<src-as/math/Vector1/Vector1> $src-as/base/SystemPriority/SystemPriority $src-as/base/systems/BehaviorSystem/BehaviorSystem $src-as/base/System/System $src-as/base/Object/ObjectBase $src-as/base/World/World $src-as/base/Entity/Entity $src-as/base/Component/Component $~lib/map/Map<u32,src-as/base/Component/Component> $~lib/array/Array<src-as/base/System/System> $~lib/map/Map<u32,src-as/base/Entity/Entity> $~lib/map/Map<u32,src-as/base/Object/ObjectBase> $src-as/base/QueryManager/QueryManager $src-as/base/Query/Query $~lib/array/Array<u32> $~lib/set/Set<src-as/base/Entity/Entity> $~lib/array/Array<src-as/base/Query/Query> $~lib/map/Map<u32,~lib/array/Array<src-as/base/Query/Query>> $src-as/base/ListenerSystemManager/ListenerSystemManager $src-as/base/System/ListenerSystem $~lib/array/Array<src-as/base/System/ListenerSystem> $~lib/map/Map<u32,~lib/array/Array<src-as/base/System/ListenerSystem>> $src-as/base/Component/BehaviorComponent $~lib/array/Array<src-as/base/Component/BehaviorComponent> $src-as/base/systems/InputSystem/InputSystem $src-as/math/Vector2/Vector2 $~lib/set/Set<i32> $src-as/base/systems/TransformSystem/TransformSystem $src-as/components/Transform/Transform $~lib/set/Set<src-as/components/Transform/Transform> $src-as/base/Query/TypedQuery<src-as/components/Transform/Transform> $~lib/array/Array<src-as/components/Transform/Transform> $src-as/components/MouseKeyboardController/MouseKeyboardController $src-as/base/Component/SpatialComponent $~lib/function/Function<%28src-as/base/System/System%2Csrc-as/base/System/System%29=>i32> $src-as/components/Camera/Camera $src-as/utility/Viewport/Viewport $src-as/rendering/systems/RenderSystem/RenderSystem $src-as/base/Query/TypedQuery<src-as/components/Camera/Camera> $~lib/array/Array<src-as/components/Camera/Camera> $src-as/components/Mesh/Mesh $src-as/rendering/material/Material/Material $~lib/array/Array<src-as/rendering/material/UniformBufferObject/UniformBufferObject> $~lib/array/Array<src-as/components/Mesh/Mesh> $src-as/rendering/systems/UniformBufferObjectSystem/UniformBufferObjectSystem $~lib/array/Array<src-as/base/Component/Component> $src-as/rendering/material/Material/StandardMaterial $src-as/rendering/material/Material/SpatialMaterial $src-as/rendering/material/Uniform/Uniform_texture $src-as/rendering/material/Uniform/TypedUniform<src-as/math/Texture/Texture> $src-as/rendering/geometry/GridGeometry/GridGeometry $src-as/exports/defaultWorld/DefaultWorldOptions $src-as/base/systems/TimeSystem/TimeSystem $src-as/components/Time/Time $src-as/WebGL2/systems/WebGLRenderSystem/WebGLRenderSystem $src-as/WebGL2/systems/WebGLMeshSystem/WebGLMeshSystem $src-as/WebGL2/systems/WebGLShaderSystem/WebGLShaderSystem $src-as/WebGL2/components/shader/WebGLShader $~lib/map/Map<src-as/rendering/shader/Shader/Shader,src-as/WebGL2/components/shader/WebGLShader> $src-as/WebGL2/systems/WebGLGeometrySystem/WebGLGeometrySystem $src-as/WebGL2/components/geometry/WebGLGeometry $src-as/WebGL2/components/geometry/WebGLAttribute $~lib/array/Array<src-as/WebGL2/components/geometry/WebGLAttribute> $~lib/map/Map<src-as/rendering/geometry/Geometry/Geometry,src-as/WebGL2/components/geometry/WebGLGeometry> $~lib/map/Map<src-as/rendering/geometry/Attribute/Attribute,src-as/WebGL2/components/geometry/WebGLAttribute> $src-as/WebGL2/systems/WebGLMaterialSystem/WebGLMaterialSystem $src-as/WebGL2/components/material/WebGLMaterial $src-as/WebGL2/components/material/WebGLUniform $~lib/array/Array<src-as/WebGL2/components/material/WebGLUniform> $src-as/WebGL2/components/material/WebGLUniformBufferObject $~lib/array/Array<src-as/WebGL2/components/material/WebGLUniformBufferObject> $~lib/map/Map<src-as/rendering/material/Material/Material,src-as/WebGL2/components/material/WebGLMaterial> $src-as/WebGL2/systems/WebGLUniformBufferObjectSystem/WebGLUniformBufferObjectSystem $~lib/map/Map<src-as/rendering/material/UniformBufferObject/UniformBufferObject,src-as/WebGL2/components/material/WebGLUniformBufferObject> $src-as/WebGL2/components/mesh/WebGLMesh $~lib/map/Map<src-as/components/Mesh/Mesh,src-as/WebGL2/components/mesh/WebGLMesh> $~lib/function/Function<%28src-as/base/System/ListenerSystem%2Csrc-as/base/System/ListenerSystem%29=>i32> $src-as/components/DirectionalLight/DirectionalLight $src-as/components/Rotator/Rotator $~lib/array/Array<src-as/base/Entity/Entity> $src-as/WebGL2/components/geometry/WebGLVAOOptions $src-as/WebGL2/components/geometry/WebGLBindAttributeOptions $~lib/function/Function<%28src-as/WebGL2/components/geometry/WebGLAttribute%2Ci32%2C~lib/array/Array<src-as/WebGL2/components/geometry/WebGLAttribute>%29=>bool> $src-as/rendering/material/Uniform/Uniform_bitmap $src-as/math/Bitmap/Bitmap $src-as/rendering/material/Uniform/TypedUniform<src-as/math/Bitmap/Bitmap> $src-as/WebGL2/components/material/WebGLTextureUniform $src-as/WebGL2/components/material/WebGLUniform_float $src-as/WebGL2/components/material/WebGLUniform_typed<~lib/typedarray/Float32Array> $src-as/WebGL2/components/material/WebGLUniform_vec2 $src-as/WebGL2/components/material/WebGLUniform_vec3 $src-as/WebGL2/components/material/WebGLUniform_vec4 $src-as/WebGL2/components/material/WebGLUniform_mat4 $src-as/math/PolarCoords/PolarCoords $invalid
+                                                                                                                                                                         end
+                                                                                                                                                                         return
+                                                                                                                                                                        end
+                                                                                                                                                                        return
+                                                                                                                                                                       end
+                                                                                                                                                                       local.get $0
+                                                                                                                                                                       local.get $1
+                                                                                                                                                                       call $~lib/arraybuffer/ArrayBufferView~visit
+                                                                                                                                                                       return
+                                                                                                                                                                      end
+                                                                                                                                                                      local.get $0
+                                                                                                                                                                      local.get $1
+                                                                                                                                                                      call $~lib/typedarray/Float32Array~visit
+                                                                                                                                                                      return
+                                                                                                                                                                     end
+                                                                                                                                                                     local.get $0
+                                                                                                                                                                     local.get $1
+                                                                                                                                                                     call $~lib/array/Array<f32>~visit
+                                                                                                                                                                     return
+                                                                                                                                                                    end
+                                                                                                                                                                    local.get $0
+                                                                                                                                                                    local.get $1
+                                                                                                                                                                    call $~lib/function/Function<%28%29=>f32>~visit
+                                                                                                                                                                    return
+                                                                                                                                                                   end
+                                                                                                                                                                   local.get $0
+                                                                                                                                                                   local.get $1
+                                                                                                                                                                   call $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>~lib/typedarray/Float32Array>~visit
+                                                                                                                                                                   return
+                                                                                                                                                                  end
+                                                                                                                                                                  local.get $0
+                                                                                                                                                                  local.get $1
+                                                                                                                                                                  call $~lib/function/Function<%28f32%2Cf32%29=>f32>~visit
+                                                                                                                                                                  return
+                                                                                                                                                                 end
                                                                                                                                                                  local.get $0
-                                                                                                                                                                 i32.const 8
-                                                                                                                                                                 i32.sub
-                                                                                                                                                                 i32.load
-                                                                                                                                                                 br_table $~lib/arraybuffer/ArrayBuffer $~lib/string/String $~lib/arraybuffer/ArrayBufferView $~lib/typedarray/Float32Array $~lib/array/Array<f32> $~lib/function/Function<%28%29=>f32> $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>~lib/typedarray/Float32Array> $~lib/function/Function<%28f32%2Cf32%29=>f32> $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>f32> $~lib/function/Function<%28~lib/typedarray/Float32Array%29=>f32> $~lib/function/Function<%28~lib/typedarray/Float32Array%29=>~lib/typedarray/Float32Array> $~lib/function/Function<%28f32%2Cf32%2Cf32%2Cf32%29=>~lib/typedarray/Float32Array> $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>~lib/typedarray/Float32Array> $~lib/function/Function<%28~lib/typedarray/Float32Array%2Cf32%2Cf32%2Cf32%2Cf32%29=>~lib/typedarray/Float32Array> $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2Cf32%29=>~lib/typedarray/Float32Array> $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2Cf32%29=>~lib/typedarray/Float32Array> $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>bool> $~lib/function/Function<%28%29=>%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>~lib/typedarray/Float32Array> $~lib/function/Function<%28%29=>%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2Cf32%29=>~lib/typedarray/Float32Array> $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2Cf32%29=>~lib/typedarray/Float32Array> $~lib/function/Function<%28%29=>%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>~lib/typedarray/Float32Array> $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>~lib/typedarray/Float32Array> $~lib/function/Function<%28~lib/typedarray/Float32Array%2Cf32%2Cf32%2Cf32%2Cf32%2Cf32%2Cf32%29=>~lib/typedarray/Float32Array> $src-as/math/Quaternion/Quaternion $src-as/math/Matrix/Matrix $src-as/math/Vector3/Vector3 $src-as/math/Color8/Color8 $~lib/typedarray/Uint8Array $~lib/staticarray/StaticArray<~lib/string/String> $src-as/rendering/material/UniformBufferObject/UniformBufferObject $src-as/rendering/material/Uniform/Uniform $~lib/array/Array<src-as/rendering/material/Uniform/Uniform> $~lib/map/Map<~lib/string/String,src-as/rendering/material/Uniform/Uniform> $~lib/array/Array<i32> $src-as/rendering/material/Uniform/Uniform_f32 $src-as/rendering/material/Uniform/TypedUniform<~lib/typedarray/Float32Array> $src-as/rendering/geometry/Geometry/StandardGeometry $src-as/rendering/geometry/Geometry/IndexGeometry $src-as/rendering/geometry/Geometry/PositionGeometry $src-as/rendering/geometry/Geometry/Geometry $src-as/rendering/geometry/Attribute/Attribute $~lib/map/Map<~lib/string/String,src-as/rendering/geometry/Attribute/Attribute> $~lib/array/Array<src-as/rendering/geometry/Attribute/Attribute> $~lib/typedarray/Uint16Array $~lib/staticarray/StaticArray<f32> $~lib/staticarray/StaticArray<u16> $~lib/staticarray/StaticArray<u8> $~lib/array/Array<~lib/array/Array<f32>> $~lib/array/Array<u8> $~lib/array/Array<~lib/array/Array<u8>> $src-as/rendering/geometry/Attribute/Attribute_f32 $src-as/rendering/geometry/Attribute/TypedAttribute<~lib/typedarray/Float32Array> $src-as/rendering/geometry/Attribute/Attribute_u8 $src-as/rendering/geometry/Attribute/TypedAttribute<~lib/typedarray/Uint8Array> $src-as/rendering/geometry/QuadGeometry/QuadGeometry $~lib/array/Array<u16> $src-as/rendering/shader/Shader/Shader $~lib/array/Array<~lib/string/String> $src-as/math/Texture/Texture $src-as/math/SharedBuffer/SharedBufferVector3 $src-as/math/SharedBuffer/SharedBuffer_f32<src-as/math/Vector3/Vector3> $~lib/array/Array<src-as/math/Vector3/Vector3> $src-as/math/SharedBuffer/SharedBufferVector1 $src-as/math/Vector1/Vector1 $src-as/math/Vector1/Vector1Base<~lib/typedarray/Float32Array,f32> $src-as/math/SharedBuffer/SharedBuffer_f32<src-as/math/Vector1/Vector1> $~lib/array/Array<src-as/math/Vector1/Vector1> $src-as/base/SystemPriority/SystemPriority $src-as/base/systems/BehaviorSystem/BehaviorSystem $src-as/base/System/System $src-as/base/Object/ObjectBase $src-as/base/World/World $src-as/base/Entity/Entity $src-as/base/Component/Component $~lib/map/Map<u32,src-as/base/Component/Component> $~lib/array/Array<src-as/base/System/System> $~lib/map/Map<u32,src-as/base/Entity/Entity> $~lib/map/Map<u32,src-as/base/Object/ObjectBase> $src-as/base/QueryManager/QueryManager $src-as/base/Query/Query $~lib/array/Array<u32> $~lib/set/Set<src-as/base/Entity/Entity> $~lib/array/Array<src-as/base/Query/Query> $~lib/map/Map<u32,~lib/array/Array<src-as/base/Query/Query>> $src-as/base/ListenerSystemManager/ListenerSystemManager $src-as/base/System/ListenerSystem $~lib/array/Array<src-as/base/System/ListenerSystem> $~lib/map/Map<u32,~lib/array/Array<src-as/base/System/ListenerSystem>> $src-as/base/Component/BehaviorComponent $~lib/array/Array<src-as/base/Component/BehaviorComponent> $src-as/base/systems/InputSystem/InputSystem $src-as/math/Vector2/Vector2 $~lib/set/Set<i32> $src-as/base/systems/TransformSystem/TransformSystem $src-as/components/Transform/Transform $~lib/set/Set<src-as/components/Transform/Transform> $src-as/base/Query/TypedQuery<src-as/components/Transform/Transform> $~lib/array/Array<src-as/components/Transform/Transform> $src-as/base/systems/TimeSystem/TimeSystem $src-as/components/Time/Time $src-as/WebGL2/systems/WebGLRenderSystem/WebGLRenderSystem $src-as/rendering/systems/RenderSystem/RenderSystem $src-as/components/Camera/Camera $src-as/base/Component/SpatialComponent $src-as/utility/Viewport/Viewport $src-as/base/Query/TypedQuery<src-as/components/Camera/Camera> $~lib/array/Array<src-as/components/Camera/Camera> $src-as/components/Mesh/Mesh $src-as/rendering/material/Material/Material $~lib/array/Array<src-as/rendering/material/UniformBufferObject/UniformBufferObject> $~lib/array/Array<src-as/components/Mesh/Mesh> $src-as/rendering/systems/UniformBufferObjectSystem/UniformBufferObjectSystem $src-as/WebGL2/systems/WebGLMeshSystem/WebGLMeshSystem $src-as/WebGL2/systems/WebGLShaderSystem/WebGLShaderSystem $src-as/WebGL2/components/shader/WebGLShader $~lib/map/Map<src-as/rendering/shader/Shader/Shader,src-as/WebGL2/components/shader/WebGLShader> $src-as/WebGL2/systems/WebGLGeometrySystem/WebGLGeometrySystem $src-as/WebGL2/components/geometry/WebGLGeometry $src-as/WebGL2/components/geometry/WebGLAttribute $~lib/array/Array<src-as/WebGL2/components/geometry/WebGLAttribute> $~lib/map/Map<src-as/rendering/geometry/Geometry/Geometry,src-as/WebGL2/components/geometry/WebGLGeometry> $~lib/map/Map<src-as/rendering/geometry/Attribute/Attribute,src-as/WebGL2/components/geometry/WebGLAttribute> $src-as/WebGL2/systems/WebGLMaterialSystem/WebGLMaterialSystem $src-as/WebGL2/components/material/WebGLMaterial $src-as/WebGL2/components/material/WebGLUniform $~lib/array/Array<src-as/WebGL2/components/material/WebGLUniform> $src-as/WebGL2/components/material/WebGLUniformBufferObject $~lib/array/Array<src-as/WebGL2/components/material/WebGLUniformBufferObject> $~lib/map/Map<src-as/rendering/material/Material/Material,src-as/WebGL2/components/material/WebGLMaterial> $src-as/WebGL2/systems/WebGLUniformBufferObjectSystem/WebGLUniformBufferObjectSystem $~lib/map/Map<src-as/rendering/material/UniformBufferObject/UniformBufferObject,src-as/WebGL2/components/material/WebGLUniformBufferObject> $src-as/WebGL2/components/mesh/WebGLMesh $~lib/map/Map<src-as/components/Mesh/Mesh,src-as/WebGL2/components/mesh/WebGLMesh> $~lib/function/Function<%28src-as/base/System/System%2Csrc-as/base/System/System%29=>i32> $~lib/function/Function<%28src-as/base/System/ListenerSystem%2Csrc-as/base/System/ListenerSystem%29=>i32> $src-as/math/Color/Color $src-as/components/DirectionalLight/DirectionalLight $~lib/array/Array<src-as/base/Component/Component> $src-as/rendering/material/Material/StandardMaterial $src-as/rendering/material/Material/SpatialMaterial $src-as/rendering/material/Uniform/Uniform_texture $src-as/rendering/material/Uniform/TypedUniform<src-as/math/Texture/Texture> $src-as/components/Rotator/Rotator $~lib/array/Array<src-as/base/Entity/Entity> $src-as/math/PolarCoords/PolarCoords $src-as/WebGL2/components/geometry/WebGLVAOOptions $src-as/WebGL2/components/geometry/WebGLBindAttributeOptions $~lib/function/Function<%28src-as/WebGL2/components/geometry/WebGLAttribute%2Ci32%2C~lib/array/Array<src-as/WebGL2/components/geometry/WebGLAttribute>%29=>bool> $src-as/rendering/material/Uniform/Uniform_bitmap $src-as/math/Bitmap/Bitmap $src-as/rendering/material/Uniform/TypedUniform<src-as/math/Bitmap/Bitmap> $src-as/WebGL2/components/material/WebGLTextureUniform $src-as/WebGL2/components/material/WebGLUniform_float $src-as/WebGL2/components/material/WebGLUniform_typed<~lib/typedarray/Float32Array> $src-as/WebGL2/components/material/WebGLUniform_vec2 $src-as/WebGL2/components/material/WebGLUniform_vec3 $src-as/WebGL2/components/material/WebGLUniform_vec4 $src-as/WebGL2/components/material/WebGLUniform_mat4 $invalid
+                                                                                                                                                                 local.get $1
+                                                                                                                                                                 call $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>f32>~visit
+                                                                                                                                                                 return
                                                                                                                                                                 end
+                                                                                                                                                                local.get $0
+                                                                                                                                                                local.get $1
+                                                                                                                                                                call $~lib/function/Function<%28~lib/typedarray/Float32Array%29=>f32>~visit
                                                                                                                                                                 return
                                                                                                                                                                end
+                                                                                                                                                               local.get $0
+                                                                                                                                                               local.get $1
+                                                                                                                                                               call $~lib/function/Function<%28~lib/typedarray/Float32Array%29=>~lib/typedarray/Float32Array>~visit
                                                                                                                                                                return
                                                                                                                                                               end
                                                                                                                                                               local.get $0
                                                                                                                                                               local.get $1
-                                                                                                                                                              call $~lib/arraybuffer/ArrayBufferView~visit
+                                                                                                                                                              call $~lib/function/Function<%28f32%2Cf32%2Cf32%2Cf32%29=>~lib/typedarray/Float32Array>~visit
                                                                                                                                                               return
                                                                                                                                                              end
                                                                                                                                                              local.get $0
                                                                                                                                                              local.get $1
-                                                                                                                                                             call $~lib/typedarray/Float32Array~visit
+                                                                                                                                                             call $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>~lib/typedarray/Float32Array>~visit
                                                                                                                                                              return
                                                                                                                                                             end
                                                                                                                                                             local.get $0
                                                                                                                                                             local.get $1
-                                                                                                                                                            call $~lib/array/Array<f32>~visit
+                                                                                                                                                            call $~lib/function/Function<%28~lib/typedarray/Float32Array%2Cf32%2Cf32%2Cf32%2Cf32%29=>~lib/typedarray/Float32Array>~visit
                                                                                                                                                             return
                                                                                                                                                            end
                                                                                                                                                            local.get $0
                                                                                                                                                            local.get $1
-                                                                                                                                                           call $~lib/function/Function<%28%29=>f32>~visit
+                                                                                                                                                           call $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2Cf32%29=>~lib/typedarray/Float32Array>~visit
                                                                                                                                                            return
                                                                                                                                                           end
                                                                                                                                                           local.get $0
                                                                                                                                                           local.get $1
-                                                                                                                                                          call $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>~lib/typedarray/Float32Array>~visit
+                                                                                                                                                          call $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2Cf32%29=>~lib/typedarray/Float32Array>~visit
                                                                                                                                                           return
                                                                                                                                                          end
                                                                                                                                                          local.get $0
                                                                                                                                                          local.get $1
-                                                                                                                                                         call $~lib/function/Function<%28f32%2Cf32%29=>f32>~visit
+                                                                                                                                                         call $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>bool>~visit
                                                                                                                                                          return
                                                                                                                                                         end
                                                                                                                                                         local.get $0
                                                                                                                                                         local.get $1
-                                                                                                                                                        call $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>f32>~visit
+                                                                                                                                                        call $~lib/function/Function<%28%29=>%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>~lib/typedarray/Float32Array>~visit
                                                                                                                                                         return
                                                                                                                                                        end
                                                                                                                                                        local.get $0
                                                                                                                                                        local.get $1
-                                                                                                                                                       call $~lib/function/Function<%28~lib/typedarray/Float32Array%29=>f32>~visit
+                                                                                                                                                       call $~lib/function/Function<%28%29=>%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2Cf32%29=>~lib/typedarray/Float32Array>~visit
                                                                                                                                                        return
                                                                                                                                                       end
                                                                                                                                                       local.get $0
                                                                                                                                                       local.get $1
-                                                                                                                                                      call $~lib/function/Function<%28~lib/typedarray/Float32Array%29=>~lib/typedarray/Float32Array>~visit
+                                                                                                                                                      call $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2Cf32%29=>~lib/typedarray/Float32Array>~visit
                                                                                                                                                       return
                                                                                                                                                      end
                                                                                                                                                      local.get $0
                                                                                                                                                      local.get $1
-                                                                                                                                                     call $~lib/function/Function<%28f32%2Cf32%2Cf32%2Cf32%29=>~lib/typedarray/Float32Array>~visit
+                                                                                                                                                     call $~lib/function/Function<%28%29=>%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>~lib/typedarray/Float32Array>~visit
                                                                                                                                                      return
                                                                                                                                                     end
                                                                                                                                                     local.get $0
                                                                                                                                                     local.get $1
-                                                                                                                                                    call $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>~lib/typedarray/Float32Array>~visit
+                                                                                                                                                    call $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>~lib/typedarray/Float32Array>~visit
                                                                                                                                                     return
                                                                                                                                                    end
                                                                                                                                                    local.get $0
                                                                                                                                                    local.get $1
-                                                                                                                                                   call $~lib/function/Function<%28~lib/typedarray/Float32Array%2Cf32%2Cf32%2Cf32%2Cf32%29=>~lib/typedarray/Float32Array>~visit
+                                                                                                                                                   call $~lib/function/Function<%28~lib/typedarray/Float32Array%2Cf32%2Cf32%2Cf32%2Cf32%2Cf32%2Cf32%29=>~lib/typedarray/Float32Array>~visit
                                                                                                                                                    return
                                                                                                                                                   end
                                                                                                                                                   local.get $0
                                                                                                                                                   local.get $1
-                                                                                                                                                  call $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2Cf32%29=>~lib/typedarray/Float32Array>~visit
+                                                                                                                                                  call $src-as/math/Quaternion/Quaternion~visit
                                                                                                                                                   return
                                                                                                                                                  end
                                                                                                                                                  local.get $0
                                                                                                                                                  local.get $1
-                                                                                                                                                 call $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2Cf32%29=>~lib/typedarray/Float32Array>~visit
+                                                                                                                                                 call $src-as/math/Matrix/Matrix~visit
                                                                                                                                                  return
                                                                                                                                                 end
                                                                                                                                                 local.get $0
                                                                                                                                                 local.get $1
-                                                                                                                                                call $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>bool>~visit
+                                                                                                                                                call $src-as/math/Vector3/Vector3~visit
                                                                                                                                                 return
                                                                                                                                                end
                                                                                                                                                local.get $0
                                                                                                                                                local.get $1
-                                                                                                                                               call $~lib/function/Function<%28%29=>%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>~lib/typedarray/Float32Array>~visit
+                                                                                                                                               call $src-as/math/Color8/Color8~visit
                                                                                                                                                return
                                                                                                                                               end
                                                                                                                                               local.get $0
                                                                                                                                               local.get $1
-                                                                                                                                              call $~lib/function/Function<%28%29=>%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2Cf32%29=>~lib/typedarray/Float32Array>~visit
+                                                                                                                                              call $~lib/typedarray/Uint8Array~visit
                                                                                                                                               return
                                                                                                                                              end
                                                                                                                                              local.get $0
                                                                                                                                              local.get $1
-                                                                                                                                             call $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2Cf32%29=>~lib/typedarray/Float32Array>~visit
+                                                                                                                                             call $src-as/math/Color/Color~visit
                                                                                                                                              return
                                                                                                                                             end
                                                                                                                                             local.get $0
                                                                                                                                             local.get $1
-                                                                                                                                            call $~lib/function/Function<%28%29=>%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>~lib/typedarray/Float32Array>~visit
+                                                                                                                                            call $~lib/staticarray/StaticArray<~lib/string/String>~visit
                                                                                                                                             return
                                                                                                                                            end
                                                                                                                                            local.get $0
                                                                                                                                            local.get $1
-                                                                                                                                           call $~lib/function/Function<%28~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%2C~lib/typedarray/Float32Array%29=>~lib/typedarray/Float32Array>~visit
+                                                                                                                                           call $src-as/rendering/material/UniformBufferObject/UniformBufferObject~visit
                                                                                                                                            return
                                                                                                                                           end
                                                                                                                                           local.get $0
                                                                                                                                           local.get $1
-                                                                                                                                          call $~lib/function/Function<%28~lib/typedarray/Float32Array%2Cf32%2Cf32%2Cf32%2Cf32%2Cf32%2Cf32%29=>~lib/typedarray/Float32Array>~visit
+                                                                                                                                          call $src-as/rendering/material/Uniform/Uniform~visit
                                                                                                                                           return
                                                                                                                                          end
                                                                                                                                          local.get $0
                                                                                                                                          local.get $1
-                                                                                                                                         call $src-as/math/Quaternion/Quaternion~visit
+                                                                                                                                         call $~lib/array/Array<src-as/rendering/material/Uniform/Uniform>~visit
                                                                                                                                          return
                                                                                                                                         end
                                                                                                                                         local.get $0
                                                                                                                                         local.get $1
-                                                                                                                                        call $src-as/math/Matrix/Matrix~visit
+                                                                                                                                        call $~lib/map/Map<~lib/string/String,src-as/rendering/material/Uniform/Uniform>~visit
                                                                                                                                         return
                                                                                                                                        end
                                                                                                                                        local.get $0
                                                                                                                                        local.get $1
-                                                                                                                                       call $src-as/math/Vector3/Vector3~visit
+                                                                                                                                       call $~lib/array/Array<i32>~visit
                                                                                                                                        return
                                                                                                                                       end
                                                                                                                                       local.get $0
                                                                                                                                       local.get $1
-                                                                                                                                      call $src-as/math/Color8/Color8~visit
+                                                                                                                                      call $src-as/rendering/material/Uniform/Uniform_f32~visit
                                                                                                                                       return
                                                                                                                                      end
                                                                                                                                      local.get $0
                                                                                                                                      local.get $1
-                                                                                                                                     call $~lib/typedarray/Uint8Array~visit
+                                                                                                                                     call $src-as/rendering/material/Uniform/TypedUniform<~lib/typedarray/Float32Array>~visit
                                                                                                                                      return
                                                                                                                                     end
                                                                                                                                     local.get $0
                                                                                                                                     local.get $1
-                                                                                                                                    call $~lib/staticarray/StaticArray<~lib/string/String>~visit
+                                                                                                                                    call $src-as/rendering/geometry/Geometry/StandardGeometry~visit
                                                                                                                                     return
                                                                                                                                    end
                                                                                                                                    local.get $0
                                                                                                                                    local.get $1
-                                                                                                                                   call $src-as/rendering/material/UniformBufferObject/UniformBufferObject~visit
+                                                                                                                                   call $src-as/rendering/geometry/Geometry/IndexGeometry~visit
                                                                                                                                    return
                                                                                                                                   end
                                                                                                                                   local.get $0
                                                                                                                                   local.get $1
-                                                                                                                                  call $src-as/rendering/material/Uniform/Uniform~visit
+                                                                                                                                  call $src-as/rendering/geometry/Geometry/PositionGeometry~visit
                                                                                                                                   return
                                                                                                                                  end
                                                                                                                                  local.get $0
                                                                                                                                  local.get $1
-                                                                                                                                 call $~lib/array/Array<src-as/rendering/material/Uniform/Uniform>~visit
+                                                                                                                                 call $src-as/rendering/geometry/Geometry/Geometry~visit
                                                                                                                                  return
                                                                                                                                 end
                                                                                                                                 local.get $0
                                                                                                                                 local.get $1
-                                                                                                                                call $~lib/map/Map<~lib/string/String,src-as/rendering/material/Uniform/Uniform>~visit
+                                                                                                                                call $src-as/rendering/geometry/Attribute/Attribute~visit
                                                                                                                                 return
                                                                                                                                end
                                                                                                                                local.get $0
                                                                                                                                local.get $1
-                                                                                                                               call $~lib/array/Array<i32>~visit
+                                                                                                                               call $~lib/map/Map<~lib/string/String,src-as/rendering/geometry/Attribute/Attribute>~visit
                                                                                                                                return
                                                                                                                               end
                                                                                                                               local.get $0
                                                                                                                               local.get $1
-                                                                                                                              call $src-as/rendering/material/Uniform/Uniform_f32~visit
+                                                                                                                              call $~lib/array/Array<src-as/rendering/geometry/Attribute/Attribute>~visit
                                                                                                                               return
                                                                                                                              end
                                                                                                                              local.get $0
                                                                                                                              local.get $1
-                                                                                                                             call $src-as/rendering/material/Uniform/TypedUniform<~lib/typedarray/Float32Array>~visit
+                                                                                                                             call $~lib/typedarray/Uint16Array~visit
                                                                                                                              return
                                                                                                                             end
-                                                                                                                            local.get $0
-                                                                                                                            local.get $1
-                                                                                                                            call $src-as/rendering/geometry/Geometry/StandardGeometry~visit
                                                                                                                             return
                                                                                                                            end
-                                                                                                                           local.get $0
-                                                                                                                           local.get $1
-                                                                                                                           call $src-as/rendering/geometry/Geometry/IndexGeometry~visit
                                                                                                                            return
                                                                                                                           end
-                                                                                                                          local.get $0
-                                                                                                                          local.get $1
-                                                                                                                          call $src-as/rendering/geometry/Geometry/PositionGeometry~visit
                                                                                                                           return
                                                                                                                          end
                                                                                                                          local.get $0
                                                                                                                          local.get $1
-                                                                                                                         call $src-as/rendering/geometry/Geometry/Geometry~visit
+                                                                                                                         call $~lib/array/Array<~lib/array/Array<f32>>~visit
                                                                                                                          return
                                                                                                                         end
                                                                                                                         local.get $0
                                                                                                                         local.get $1
-                                                                                                                        call $src-as/rendering/geometry/Attribute/Attribute~visit
+                                                                                                                        call $~lib/array/Array<u8>~visit
                                                                                                                         return
                                                                                                                        end
                                                                                                                        local.get $0
                                                                                                                        local.get $1
-                                                                                                                       call $~lib/map/Map<~lib/string/String,src-as/rendering/geometry/Attribute/Attribute>~visit
+                                                                                                                       call $~lib/array/Array<~lib/array/Array<u8>>~visit
                                                                                                                        return
                                                                                                                       end
                                                                                                                       local.get $0
                                                                                                                       local.get $1
-                                                                                                                      call $~lib/array/Array<src-as/rendering/geometry/Attribute/Attribute>~visit
+                                                                                                                      call $src-as/rendering/geometry/Attribute/Attribute_f32~visit
                                                                                                                       return
                                                                                                                      end
                                                                                                                      local.get $0
                                                                                                                      local.get $1
-                                                                                                                     call $~lib/typedarray/Uint16Array~visit
+                                                                                                                     call $src-as/rendering/geometry/Attribute/TypedAttribute<~lib/typedarray/Float32Array>~visit
                                                                                                                      return
                                                                                                                     end
+                                                                                                                    local.get $0
+                                                                                                                    local.get $1
+                                                                                                                    call $src-as/rendering/geometry/Attribute/Attribute_u8~visit
                                                                                                                     return
                                                                                                                    end
+                                                                                                                   local.get $0
+                                                                                                                   local.get $1
+                                                                                                                   call $src-as/rendering/geometry/Attribute/TypedAttribute<~lib/typedarray/Uint8Array>~visit
                                                                                                                    return
                                                                                                                   end
+                                                                                                                  local.get $0
+                                                                                                                  local.get $1
+                                                                                                                  call $src-as/rendering/geometry/QuadGeometry/QuadGeometry~visit
                                                                                                                   return
                                                                                                                  end
                                                                                                                  local.get $0
                                                                                                                  local.get $1
-                                                                                                                 call $~lib/array/Array<~lib/array/Array<f32>>~visit
+                                                                                                                 call $~lib/array/Array<u16>~visit
                                                                                                                  return
                                                                                                                 end
                                                                                                                 local.get $0
                                                                                                                 local.get $1
-                                                                                                                call $~lib/array/Array<u8>~visit
+                                                                                                                call $~lib/array/Array<~lib/staticarray/StaticArray<f32>>~visit
                                                                                                                 return
                                                                                                                end
                                                                                                                local.get $0
                                                                                                                local.get $1
-                                                                                                               call $~lib/array/Array<~lib/array/Array<u8>>~visit
+                                                                                                               call $~lib/staticarray/StaticArray<~lib/staticarray/StaticArray<f32>>~visit
                                                                                                                return
                                                                                                               end
                                                                                                               local.get $0
                                                                                                               local.get $1
-                                                                                                              call $src-as/rendering/geometry/Attribute/Attribute_f32~visit
+                                                                                                              call $~lib/array/Array<~lib/staticarray/StaticArray<u16>>~visit
                                                                                                               return
                                                                                                              end
                                                                                                              local.get $0
                                                                                                              local.get $1
-                                                                                                             call $src-as/rendering/geometry/Attribute/TypedAttribute<~lib/typedarray/Float32Array>~visit
+                                                                                                             call $~lib/staticarray/StaticArray<~lib/staticarray/StaticArray<u16>>~visit
                                                                                                              return
                                                                                                             end
                                                                                                             local.get $0
                                                                                                             local.get $1
-                                                                                                            call $src-as/rendering/geometry/Attribute/Attribute_u8~visit
+                                                                                                            call $~lib/array/Array<~lib/staticarray/StaticArray<u8>>~visit
                                                                                                             return
                                                                                                            end
                                                                                                            local.get $0
                                                                                                            local.get $1
-                                                                                                           call $src-as/rendering/geometry/Attribute/TypedAttribute<~lib/typedarray/Uint8Array>~visit
+                                                                                                           call $~lib/staticarray/StaticArray<~lib/staticarray/StaticArray<u8>>~visit
                                                                                                            return
                                                                                                           end
                                                                                                           local.get $0
                                                                                                           local.get $1
-                                                                                                          call $src-as/rendering/geometry/QuadGeometry/QuadGeometry~visit
+                                                                                                          call $src-as/rendering/shader/Shader/Shader~visit
                                                                                                           return
                                                                                                          end
                                                                                                          local.get $0
                                                                                                          local.get $1
-                                                                                                         call $~lib/array/Array<u16>~visit
+                                                                                                         call $~lib/array/Array<~lib/string/String>~visit
                                                                                                          return
                                                                                                         end
                                                                                                         local.get $0
                                                                                                         local.get $1
-                                                                                                        call $src-as/rendering/shader/Shader/Shader~visit
+                                                                                                        call $src-as/math/Texture/Texture~visit
                                                                                                         return
                                                                                                        end
                                                                                                        local.get $0
                                                                                                        local.get $1
-                                                                                                       call $~lib/array/Array<~lib/string/String>~visit
+                                                                                                       call $src-as/math/SharedBuffer/SharedBufferVector3~visit
                                                                                                        return
                                                                                                       end
                                                                                                       local.get $0
                                                                                                       local.get $1
-                                                                                                      call $src-as/math/Texture/Texture~visit
+                                                                                                      call $src-as/math/SharedBuffer/SharedBuffer_f32<src-as/math/Vector3/Vector3>~visit
                                                                                                       return
                                                                                                      end
                                                                                                      local.get $0
                                                                                                      local.get $1
-                                                                                                     call $src-as/math/SharedBuffer/SharedBufferVector3~visit
+                                                                                                     call $~lib/array/Array<src-as/math/Vector3/Vector3>~visit
                                                                                                      return
                                                                                                     end
                                                                                                     local.get $0
                                                                                                     local.get $1
-                                                                                                    call $src-as/math/SharedBuffer/SharedBuffer_f32<src-as/math/Vector3/Vector3>~visit
+                                                                                                    call $src-as/math/SharedBuffer/SharedBufferVector1~visit
                                                                                                     return
                                                                                                    end
                                                                                                    local.get $0
                                                                                                    local.get $1
-                                                                                                   call $~lib/array/Array<src-as/math/Vector3/Vector3>~visit
+                                                                                                   call $src-as/math/Vector1/Vector1~visit
                                                                                                    return
                                                                                                   end
                                                                                                   local.get $0
                                                                                                   local.get $1
-                                                                                                  call $src-as/math/SharedBuffer/SharedBufferVector1~visit
+                                                                                                  call $src-as/math/Vector1/Vector1Base<~lib/typedarray/Float32Array,f32>~visit
                                                                                                   return
                                                                                                  end
                                                                                                  local.get $0
                                                                                                  local.get $1
-                                                                                                 call $src-as/math/Vector1/Vector1~visit
+                                                                                                 call $src-as/math/SharedBuffer/SharedBuffer_f32<src-as/math/Vector1/Vector1>~visit
                                                                                                  return
                                                                                                 end
                                                                                                 local.get $0
                                                                                                 local.get $1
-                                                                                                call $src-as/math/Vector1/Vector1Base<~lib/typedarray/Float32Array,f32>~visit
+                                                                                                call $~lib/array/Array<src-as/math/Vector1/Vector1>~visit
                                                                                                 return
                                                                                                end
-                                                                                               local.get $0
-                                                                                               local.get $1
-                                                                                               call $src-as/math/SharedBuffer/SharedBuffer_f32<src-as/math/Vector1/Vector1>~visit
                                                                                                return
                                                                                               end
                                                                                               local.get $0
                                                                                               local.get $1
-                                                                                              call $~lib/array/Array<src-as/math/Vector1/Vector1>~visit
+                                                                                              call $src-as/base/systems/BehaviorSystem/BehaviorSystem~visit
                                                                                               return
                                                                                              end
+                                                                                             local.get $0
+                                                                                             local.get $1
+                                                                                             call $src-as/base/System/System~visit
                                                                                              return
                                                                                             end
-                                                                                            local.get $0
-                                                                                            local.get $1
-                                                                                            call $src-as/base/systems/BehaviorSystem/BehaviorSystem~visit
                                                                                             return
                                                                                            end
                                                                                            local.get $0
                                                                                            local.get $1
-                                                                                           call $src-as/base/System/System~visit
+                                                                                           call $src-as/base/World/World~visit
                                                                                            return
                                                                                           end
+                                                                                          local.get $0
+                                                                                          local.get $1
+                                                                                          call $src-as/base/Entity/Entity~visit
                                                                                           return
                                                                                          end
                                                                                          local.get $0
                                                                                          local.get $1
-                                                                                         call $src-as/base/World/World~visit
+                                                                                         call $src-as/base/Component/Component~visit
                                                                                          return
                                                                                         end
                                                                                         local.get $0
                                                                                         local.get $1
-                                                                                        call $src-as/base/Entity/Entity~visit
+                                                                                        call $~lib/map/Map<u32,src-as/base/Component/Component>~visit
                                                                                         return
                                                                                        end
                                                                                        local.get $0
                                                                                        local.get $1
-                                                                                       call $src-as/base/Component/Component~visit
+                                                                                       call $~lib/array/Array<src-as/base/System/System>~visit
                                                                                        return
                                                                                       end
                                                                                       local.get $0
                                                                                       local.get $1
-                                                                                      call $~lib/map/Map<u32,src-as/base/Component/Component>~visit
+                                                                                      call $~lib/map/Map<u32,src-as/base/Entity/Entity>~visit
                                                                                       return
                                                                                      end
                                                                                      local.get $0
                                                                                      local.get $1
-                                                                                     call $~lib/array/Array<src-as/base/System/System>~visit
+                                                                                     call $~lib/map/Map<u32,src-as/base/Object/ObjectBase>~visit
                                                                                      return
                                                                                     end
                                                                                     local.get $0
                                                                                     local.get $1
-                                                                                    call $~lib/map/Map<u32,src-as/base/Entity/Entity>~visit
+                                                                                    call $src-as/base/QueryManager/QueryManager~visit
                                                                                     return
                                                                                    end
                                                                                    local.get $0
                                                                                    local.get $1
-                                                                                   call $~lib/map/Map<u32,src-as/base/Object/ObjectBase>~visit
+                                                                                   call $src-as/base/Query/Query~visit
                                                                                    return
                                                                                   end
                                                                                   local.get $0
                                                                                   local.get $1
-                                                                                  call $src-as/base/QueryManager/QueryManager~visit
+                                                                                  call $~lib/array/Array<u32>~visit
                                                                                   return
                                                                                  end
                                                                                  local.get $0
                                                                                  local.get $1
-                                                                                 call $src-as/base/Query/Query~visit
+                                                                                 call $~lib/set/Set<src-as/base/Entity/Entity>~visit
                                                                                  return
                                                                                 end
                                                                                 local.get $0
                                                                                 local.get $1
-                                                                                call $~lib/array/Array<u32>~visit
+                                                                                call $~lib/array/Array<src-as/base/Query/Query>~visit
                                                                                 return
                                                                                end
                                                                                local.get $0
                                                                                local.get $1
-                                                                               call $~lib/set/Set<src-as/base/Entity/Entity>~visit
+                                                                               call $~lib/map/Map<u32,~lib/array/Array<src-as/base/Query/Query>>~visit
                                                                                return
                                                                               end
                                                                               local.get $0
                                                                               local.get $1
-                                                                              call $~lib/array/Array<src-as/base/Query/Query>~visit
+                                                                              call $src-as/base/ListenerSystemManager/ListenerSystemManager~visit
                                                                               return
                                                                              end
                                                                              local.get $0
                                                                              local.get $1
-                                                                             call $~lib/map/Map<u32,~lib/array/Array<src-as/base/Query/Query>>~visit
+                                                                             call $src-as/base/System/ListenerSystem~visit
                                                                              return
                                                                             end
                                                                             local.get $0
                                                                             local.get $1
-                                                                            call $src-as/base/ListenerSystemManager/ListenerSystemManager~visit
+                                                                            call $~lib/array/Array<src-as/base/System/ListenerSystem>~visit
                                                                             return
                                                                            end
                                                                            local.get $0
                                                                            local.get $1
-                                                                           call $src-as/base/System/ListenerSystem~visit
+                                                                           call $~lib/map/Map<u32,~lib/array/Array<src-as/base/System/ListenerSystem>>~visit
                                                                            return
                                                                           end
                                                                           local.get $0
                                                                           local.get $1
-                                                                          call $~lib/array/Array<src-as/base/System/ListenerSystem>~visit
+                                                                          call $src-as/base/Component/BehaviorComponent~visit
                                                                           return
                                                                          end
                                                                          local.get $0
                                                                          local.get $1
-                                                                         call $~lib/map/Map<u32,~lib/array/Array<src-as/base/System/ListenerSystem>>~visit
+                                                                         call $~lib/array/Array<src-as/base/Component/BehaviorComponent>~visit
                                                                          return
                                                                         end
                                                                         local.get $0
                                                                         local.get $1
-                                                                        call $src-as/base/Component/BehaviorComponent~visit
+                                                                        call $src-as/base/systems/InputSystem/InputSystem~visit
                                                                         return
                                                                        end
                                                                        local.get $0
                                                                        local.get $1
-                                                                       call $~lib/array/Array<src-as/base/Component/BehaviorComponent>~visit
+                                                                       call $src-as/math/Vector2/Vector2~visit
                                                                        return
                                                                       end
                                                                       local.get $0
                                                                       local.get $1
-                                                                      call $src-as/base/systems/InputSystem/InputSystem~visit
+                                                                      call $~lib/set/Set<i32>~visit
                                                                       return
                                                                      end
                                                                      local.get $0
                                                                      local.get $1
-                                                                     call $src-as/math/Vector2/Vector2~visit
+                                                                     call $src-as/base/systems/TransformSystem/TransformSystem~visit
                                                                      return
                                                                     end
                                                                     local.get $0
                                                                     local.get $1
-                                                                    call $~lib/set/Set<i32>~visit
+                                                                    call $src-as/components/Transform/Transform~visit
                                                                     return
                                                                    end
                                                                    local.get $0
                                                                    local.get $1
-                                                                   call $src-as/base/systems/TransformSystem/TransformSystem~visit
+                                                                   call $~lib/set/Set<src-as/components/Transform/Transform>~visit
                                                                    return
                                                                   end
                                                                   local.get $0
                                                                   local.get $1
-                                                                  call $src-as/components/Transform/Transform~visit
+                                                                  call $src-as/base/Query/TypedQuery<src-as/components/Transform/Transform>~visit
                                                                   return
                                                                  end
                                                                  local.get $0
                                                                  local.get $1
-                                                                 call $~lib/set/Set<src-as/components/Transform/Transform>~visit
+                                                                 call $~lib/array/Array<src-as/components/Transform/Transform>~visit
                                                                  return
                                                                 end
                                                                 local.get $0
                                                                 local.get $1
-                                                                call $src-as/base/Query/TypedQuery<src-as/components/Transform/Transform>~visit
+                                                                call $src-as/components/MouseKeyboardController/MouseKeyboardController~visit
                                                                 return
                                                                end
                                                                local.get $0
                                                                local.get $1
-                                                               call $~lib/array/Array<src-as/components/Transform/Transform>~visit
+                                                               call $src-as/base/Component/SpatialComponent~visit
                                                                return
                                                               end
                                                               local.get $0
                                                               local.get $1
-                                                              call $src-as/base/systems/TimeSystem/TimeSystem~visit
+                                                              call $~lib/function/Function<%28src-as/base/System/System%2Csrc-as/base/System/System%29=>i32>~visit
                                                               return
                                                              end
+                                                             local.get $0
+                                                             local.get $1
+                                                             call $src-as/components/Camera/Camera~visit
                                                              return
                                                             end
-                                                            local.get $0
-                                                            local.get $1
-                                                            call $src-as/WebGL2/systems/WebGLRenderSystem/WebGLRenderSystem~visit
                                                             return
                                                            end
                                                            local.get $0
@@ -29573,190 +31687,187 @@
                                                           end
                                                           local.get $0
                                                           local.get $1
-                                                          call $src-as/components/Camera/Camera~visit
+                                                          call $src-as/base/Query/TypedQuery<src-as/components/Camera/Camera>~visit
                                                           return
                                                          end
                                                          local.get $0
                                                          local.get $1
-                                                         call $src-as/base/Component/SpatialComponent~visit
+                                                         call $~lib/array/Array<src-as/components/Camera/Camera>~visit
                                                          return
                                                         end
+                                                        local.get $0
+                                                        local.get $1
+                                                        call $src-as/components/Mesh/Mesh~visit
                                                         return
                                                        end
                                                        local.get $0
                                                        local.get $1
-                                                       call $src-as/base/Query/TypedQuery<src-as/components/Camera/Camera>~visit
+                                                       call $src-as/rendering/material/Material/Material~visit
                                                        return
                                                       end
                                                       local.get $0
                                                       local.get $1
-                                                      call $~lib/array/Array<src-as/components/Camera/Camera>~visit
+                                                      call $~lib/array/Array<src-as/rendering/material/UniformBufferObject/UniformBufferObject>~visit
                                                       return
                                                      end
                                                      local.get $0
                                                      local.get $1
-                                                     call $src-as/components/Mesh/Mesh~visit
+                                                     call $~lib/array/Array<src-as/components/Mesh/Mesh>~visit
                                                      return
                                                     end
-                                                    local.get $0
-                                                    local.get $1
-                                                    call $src-as/rendering/material/Material/Material~visit
                                                     return
                                                    end
                                                    local.get $0
                                                    local.get $1
-                                                   call $~lib/array/Array<src-as/rendering/material/UniformBufferObject/UniformBufferObject>~visit
+                                                   call $~lib/array/Array<src-as/base/Component/Component>~visit
                                                    return
                                                   end
                                                   local.get $0
                                                   local.get $1
-                                                  call $~lib/array/Array<src-as/components/Mesh/Mesh>~visit
+                                                  call $src-as/rendering/material/Material/StandardMaterial~visit
                                                   return
                                                  end
+                                                 local.get $0
+                                                 local.get $1
+                                                 call $src-as/rendering/material/Material/SpatialMaterial~visit
                                                  return
                                                 end
                                                 local.get $0
                                                 local.get $1
-                                                call $src-as/WebGL2/systems/WebGLMeshSystem/WebGLMeshSystem~visit
+                                                call $src-as/rendering/material/Uniform/Uniform_texture~visit
                                                 return
                                                end
                                                local.get $0
                                                local.get $1
-                                               call $src-as/WebGL2/systems/WebGLShaderSystem/WebGLShaderSystem~visit
+                                               call $src-as/rendering/material/Uniform/TypedUniform<src-as/math/Texture/Texture>~visit
                                                return
                                               end
+                                              local.get $0
+                                              local.get $1
+                                              call $src-as/rendering/geometry/GridGeometry/GridGeometry~visit
                                               return
                                              end
-                                             local.get $0
-                                             local.get $1
-                                             call $~lib/map/Map<src-as/rendering/shader/Shader/Shader,src-as/WebGL2/components/shader/WebGLShader>~visit
                                              return
                                             end
                                             local.get $0
                                             local.get $1
-                                            call $src-as/WebGL2/systems/WebGLGeometrySystem/WebGLGeometrySystem~visit
+                                            call $src-as/base/systems/TimeSystem/TimeSystem~visit
                                             return
                                            end
-                                           local.get $0
-                                           local.get $1
-                                           call $src-as/WebGL2/components/geometry/WebGLGeometry~visit
                                            return
                                           end
                                           local.get $0
                                           local.get $1
-                                          call $src-as/WebGL2/components/geometry/WebGLAttribute~visit
+                                          call $src-as/WebGL2/systems/WebGLRenderSystem/WebGLRenderSystem~visit
                                           return
                                          end
                                          local.get $0
                                          local.get $1
-                                         call $~lib/array/Array<src-as/WebGL2/components/geometry/WebGLAttribute>~visit
+                                         call $src-as/WebGL2/systems/WebGLMeshSystem/WebGLMeshSystem~visit
                                          return
                                         end
                                         local.get $0
                                         local.get $1
-                                        call $~lib/map/Map<src-as/rendering/geometry/Geometry/Geometry,src-as/WebGL2/components/geometry/WebGLGeometry>~visit
+                                        call $src-as/WebGL2/systems/WebGLShaderSystem/WebGLShaderSystem~visit
                                         return
                                        end
-                                       local.get $0
-                                       local.get $1
-                                       call $~lib/map/Map<src-as/rendering/geometry/Attribute/Attribute,src-as/WebGL2/components/geometry/WebGLAttribute>~visit
                                        return
                                       end
                                       local.get $0
                                       local.get $1
-                                      call $src-as/WebGL2/systems/WebGLMaterialSystem/WebGLMaterialSystem~visit
+                                      call $~lib/map/Map<src-as/rendering/shader/Shader/Shader,src-as/WebGL2/components/shader/WebGLShader>~visit
                                       return
                                      end
                                      local.get $0
                                      local.get $1
-                                     call $src-as/WebGL2/components/material/WebGLMaterial~visit
+                                     call $src-as/WebGL2/systems/WebGLGeometrySystem/WebGLGeometrySystem~visit
                                      return
                                     end
+                                    local.get $0
+                                    local.get $1
+                                    call $src-as/WebGL2/components/geometry/WebGLGeometry~visit
                                     return
                                    end
                                    local.get $0
                                    local.get $1
-                                   call $~lib/array/Array<src-as/WebGL2/components/material/WebGLUniform>~visit
+                                   call $src-as/WebGL2/components/geometry/WebGLAttribute~visit
                                    return
                                   end
                                   local.get $0
                                   local.get $1
-                                  call $src-as/WebGL2/components/material/WebGLUniformBufferObject~visit
+                                  call $~lib/array/Array<src-as/WebGL2/components/geometry/WebGLAttribute>~visit
                                   return
                                  end
                                  local.get $0
                                  local.get $1
-                                 call $~lib/array/Array<src-as/WebGL2/components/material/WebGLUniformBufferObject>~visit
+                                 call $~lib/map/Map<src-as/rendering/geometry/Geometry/Geometry,src-as/WebGL2/components/geometry/WebGLGeometry>~visit
                                  return
                                 end
                                 local.get $0
                                 local.get $1
-                                call $~lib/map/Map<src-as/rendering/material/Material/Material,src-as/WebGL2/components/material/WebGLMaterial>~visit
+                                call $~lib/map/Map<src-as/rendering/geometry/Attribute/Attribute,src-as/WebGL2/components/geometry/WebGLAttribute>~visit
                                 return
                                end
                                local.get $0
                                local.get $1
-                               call $src-as/WebGL2/systems/WebGLUniformBufferObjectSystem/WebGLUniformBufferObjectSystem~visit
+                               call $src-as/WebGL2/systems/WebGLMaterialSystem/WebGLMaterialSystem~visit
                                return
                               end
                               local.get $0
                               local.get $1
-                              call $~lib/map/Map<src-as/rendering/material/UniformBufferObject/UniformBufferObject,src-as/WebGL2/components/material/WebGLUniformBufferObject>~visit
+                              call $src-as/WebGL2/components/material/WebGLMaterial~visit
                               return
                              end
-                             local.get $0
-                             local.get $1
-                             call $src-as/WebGL2/components/mesh/WebGLMesh~visit
                              return
                             end
                             local.get $0
                             local.get $1
-                            call $~lib/map/Map<src-as/components/Mesh/Mesh,src-as/WebGL2/components/mesh/WebGLMesh>~visit
+                            call $~lib/array/Array<src-as/WebGL2/components/material/WebGLUniform>~visit
                             return
                            end
                            local.get $0
                            local.get $1
-                           call $~lib/function/Function<%28src-as/base/System/System%2Csrc-as/base/System/System%29=>i32>~visit
+                           call $src-as/WebGL2/components/material/WebGLUniformBufferObject~visit
                            return
                           end
                           local.get $0
                           local.get $1
-                          call $~lib/function/Function<%28src-as/base/System/ListenerSystem%2Csrc-as/base/System/ListenerSystem%29=>i32>~visit
+                          call $~lib/array/Array<src-as/WebGL2/components/material/WebGLUniformBufferObject>~visit
                           return
                          end
                          local.get $0
                          local.get $1
-                         call $src-as/math/Color/Color~visit
+                         call $~lib/map/Map<src-as/rendering/material/Material/Material,src-as/WebGL2/components/material/WebGLMaterial>~visit
                          return
                         end
                         local.get $0
                         local.get $1
-                        call $src-as/components/DirectionalLight/DirectionalLight~visit
+                        call $src-as/WebGL2/systems/WebGLUniformBufferObjectSystem/WebGLUniformBufferObjectSystem~visit
                         return
                        end
                        local.get $0
                        local.get $1
-                       call $~lib/array/Array<src-as/base/Component/Component>~visit
+                       call $~lib/map/Map<src-as/rendering/material/UniformBufferObject/UniformBufferObject,src-as/WebGL2/components/material/WebGLUniformBufferObject>~visit
                        return
                       end
                       local.get $0
                       local.get $1
-                      call $src-as/rendering/material/Material/StandardMaterial~visit
+                      call $src-as/WebGL2/components/mesh/WebGLMesh~visit
                       return
                      end
                      local.get $0
                      local.get $1
-                     call $src-as/rendering/material/Material/SpatialMaterial~visit
+                     call $~lib/map/Map<src-as/components/Mesh/Mesh,src-as/WebGL2/components/mesh/WebGLMesh>~visit
                      return
                     end
                     local.get $0
                     local.get $1
-                    call $src-as/rendering/material/Uniform/Uniform_texture~visit
+                    call $~lib/function/Function<%28src-as/base/System/ListenerSystem%2Csrc-as/base/System/ListenerSystem%29=>i32>~visit
                     return
                    end
                    local.get $0
                    local.get $1
-                   call $src-as/rendering/material/Uniform/TypedUniform<src-as/math/Texture/Texture>~visit
+                   call $src-as/components/DirectionalLight/DirectionalLight~visit
                    return
                   end
                   local.get $0
@@ -29769,65 +31880,69 @@
                  call $~lib/array/Array<src-as/base/Entity/Entity>~visit
                  return
                 end
+                local.get $0
+                local.get $1
+                call $src-as/WebGL2/components/geometry/WebGLVAOOptions~visit
                 return
                end
-               local.get $0
-               local.get $1
-               call $src-as/WebGL2/components/geometry/WebGLVAOOptions~visit
                return
               end
+              local.get $0
+              local.get $1
+              call $~lib/function/Function<%28src-as/WebGL2/components/geometry/WebGLAttribute%2Ci32%2C~lib/array/Array<src-as/WebGL2/components/geometry/WebGLAttribute>%29=>bool>~visit
               return
              end
              local.get $0
              local.get $1
-             call $~lib/function/Function<%28src-as/WebGL2/components/geometry/WebGLAttribute%2Ci32%2C~lib/array/Array<src-as/WebGL2/components/geometry/WebGLAttribute>%29=>bool>~visit
+             call $src-as/rendering/material/Uniform/Uniform_bitmap~visit
              return
             end
-            local.get $0
-            local.get $1
-            call $src-as/rendering/material/Uniform/Uniform_bitmap~visit
             return
            end
+           local.get $0
+           local.get $1
+           call $src-as/rendering/material/Uniform/TypedUniform<src-as/math/Bitmap/Bitmap>~visit
            return
           end
-          local.get $0
-          local.get $1
-          call $src-as/rendering/material/Uniform/TypedUniform<src-as/math/Bitmap/Bitmap>~visit
           return
          end
+         local.get $0
+         local.get $1
+         call $src-as/WebGL2/components/material/WebGLUniform_float~visit
          return
         end
         local.get $0
         local.get $1
-        call $src-as/WebGL2/components/material/WebGLUniform_float~visit
+        call $src-as/WebGL2/components/material/WebGLUniform_typed<~lib/typedarray/Float32Array>~visit
         return
        end
        local.get $0
        local.get $1
-       call $src-as/WebGL2/components/material/WebGLUniform_typed<~lib/typedarray/Float32Array>~visit
+       call $src-as/WebGL2/components/material/WebGLUniform_vec2~visit
        return
       end
       local.get $0
       local.get $1
-      call $src-as/WebGL2/components/material/WebGLUniform_vec2~visit
+      call $src-as/WebGL2/components/material/WebGLUniform_vec3~visit
       return
      end
      local.get $0
      local.get $1
-     call $src-as/WebGL2/components/material/WebGLUniform_vec3~visit
+     call $src-as/WebGL2/components/material/WebGLUniform_vec4~visit
      return
     end
     local.get $0
     local.get $1
-    call $src-as/WebGL2/components/material/WebGLUniform_vec4~visit
+    call $src-as/WebGL2/components/material/WebGLUniform_mat4~visit
     return
    end
-   local.get $0
-   local.get $1
-   call $src-as/WebGL2/components/material/WebGLUniform_mat4~visit
    return
   end
   unreachable
+ )
+ (func $~setArgumentsLength (param $0 i32)
+  local.get $0
+  global.set $~argumentsLength
  )
  (func $~start
   call $start:src-as/index
@@ -29837,8 +31952,8 @@
   global.get $~lib/memory/__data_end
   i32.lt_s
   if
-   i32.const 39504
-   i32.const 39552
+   i32.const 39664
+   i32.const 39712
    i32.const 1
    i32.const 1
    call $~lib/builtins/abort
@@ -30682,6 +32797,82 @@
   global.set $~lib/memory/__stack_pointer
   local.get $5
  )
+ (func $src-as/math/Color/Color#constructor (param $0 i32) (param $1 f32) (param $2 f32) (param $3 f32) (param $4 f32) (result i32)
+  (local $5 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  local.get $0
+  i32.eqz
+  if
+   global.get $~lib/memory/__stack_pointer
+   i32.const 4
+   i32.const 28
+   call $~lib/rt/itcms/__new
+   local.tee $0
+   i32.store
+  end
+  local.get $0
+  i32.const 0
+  call $src-as/math/Color/Color#set:m
+  local.get $0
+  i32.const 0
+  i32.const 4
+  call $~lib/typedarray/Float32Array#constructor
+  call $src-as/math/Color/Color#set:m
+  local.get $0
+  i32.load
+  local.set $5
+  global.get $~lib/memory/__stack_pointer
+  local.get $5
+  i32.store offset=4
+  local.get $5
+  i32.const 0
+  local.get $1
+  call $~lib/typedarray/Float32Array#__set
+  local.get $0
+  i32.load
+  local.set $5
+  global.get $~lib/memory/__stack_pointer
+  local.get $5
+  i32.store offset=4
+  local.get $5
+  i32.const 1
+  local.get $2
+  call $~lib/typedarray/Float32Array#__set
+  local.get $0
+  i32.load
+  local.set $5
+  global.get $~lib/memory/__stack_pointer
+  local.get $5
+  i32.store offset=4
+  local.get $5
+  i32.const 2
+  local.get $3
+  call $~lib/typedarray/Float32Array#__set
+  local.get $0
+  i32.load
+  local.set $5
+  global.get $~lib/memory/__stack_pointer
+  local.get $5
+  i32.store offset=4
+  local.get $5
+  i32.const 3
+  local.get $4
+  call $~lib/typedarray/Float32Array#__set
+  local.get $0
+  local.set $5
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $5
+ )
  (func $start:src-as/rendering/constants/_uniforms
   (local $0 i32)
   global.get $~lib/memory/__stack_pointer
@@ -30819,7 +33010,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 20
-   i32.const 29
+   i32.const 30
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -30836,7 +33027,7 @@
   local.get $0
   i32.const 0
   i32.const 2
-  i32.const 31
+  i32.const 32
   i32.const 4384
   call $~lib/rt/__newArray
   call $src-as/rendering/material/UniformBufferObject/UniformBufferObject#set:uniformArr
@@ -31033,7 +33224,7 @@
   global.get $~lib/memory/__stack_pointer
   i32.const 4
   i32.const 2
-  i32.const 31
+  i32.const 32
   i32.const 0
   call $~lib/rt/__newArray
   local.tee $4
@@ -31233,7 +33424,7 @@
   global.get $~lib/memory/__stack_pointer
   i32.const 5
   i32.const 2
-  i32.const 31
+  i32.const 32
   i32.const 0
   call $~lib/rt/__newArray
   local.tee $5
@@ -31404,7 +33595,7 @@
   global.get $~lib/memory/__stack_pointer
   i32.const 2
   i32.const 2
-  i32.const 31
+  i32.const 32
   i32.const 0
   call $~lib/rt/__newArray
   local.tee $2
@@ -31853,7 +34044,7 @@
   global.get $~lib/memory/__stack_pointer
   i32.const 24
   i32.const 2
-  i32.const 47
+  i32.const 48
   i32.const 0
   call $~lib/rt/__newArray
   local.tee $6
@@ -32025,7 +34216,7 @@
   global.get $~lib/memory/__stack_pointer
   i32.const 24
   i32.const 2
-  i32.const 47
+  i32.const 48
   i32.const 0
   call $~lib/rt/__newArray
   local.tee $0
@@ -32279,7 +34470,7 @@
   global.get $~lib/memory/__stack_pointer
   i32.const 4
   i32.const 0
-  i32.const 48
+  i32.const 49
   i32.const 4976
   call $~lib/rt/__newArray
   local.tee $2
@@ -32288,7 +34479,7 @@
   global.get $~lib/memory/__stack_pointer
   i32.const 4
   i32.const 0
-  i32.const 48
+  i32.const 49
   i32.const 0
   call $~lib/rt/__newArray
   local.tee $1
@@ -32320,7 +34511,7 @@
   global.get $~lib/memory/__stack_pointer
   i32.const 4
   i32.const 0
-  i32.const 48
+  i32.const 49
   i32.const 5008
   call $~lib/rt/__newArray
   local.tee $4
@@ -32329,7 +34520,7 @@
   global.get $~lib/memory/__stack_pointer
   i32.const 4
   i32.const 0
-  i32.const 48
+  i32.const 49
   i32.const 0
   call $~lib/rt/__newArray
   local.tee $1
@@ -32361,7 +34552,7 @@
   global.get $~lib/memory/__stack_pointer
   i32.const 4
   i32.const 0
-  i32.const 48
+  i32.const 49
   i32.const 5040
   call $~lib/rt/__newArray
   local.tee $6
@@ -32370,7 +34561,7 @@
   global.get $~lib/memory/__stack_pointer
   i32.const 4
   i32.const 0
-  i32.const 48
+  i32.const 49
   i32.const 0
   call $~lib/rt/__newArray
   local.tee $1
@@ -32402,7 +34593,7 @@
   global.get $~lib/memory/__stack_pointer
   i32.const 24
   i32.const 2
-  i32.const 49
+  i32.const 50
   i32.const 0
   call $~lib/rt/__newArray
   local.tee $1
@@ -32537,7 +34728,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 32
-   i32.const 51
+   i32.const 52
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -32716,7 +34907,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 32
-   i32.const 38
+   i32.const 39
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -32993,7 +35184,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 36
-   i32.const 37
+   i32.const 38
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -33078,7 +35269,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 32
-   i32.const 53
+   i32.const 54
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -33139,7 +35330,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 44
-   i32.const 36
+   i32.const 37
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -33429,7 +35620,7 @@
   i32.store
   i32.const 6
   i32.const 1
-  i32.const 55
+  i32.const 56
   i32.const 5328
   call $~lib/rt/__newArray
   local.set $2
@@ -33495,7 +35686,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 44
-   i32.const 54
+   i32.const 55
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -33515,7 +35706,7 @@
   global.get $~lib/memory/__stack_pointer
   i32.const 16
   i32.const 0
-  i32.const 48
+  i32.const 49
   i32.const 5360
   call $~lib/rt/__newArray
   local.set $6
@@ -33546,6 +35737,1009 @@
   i32.add
   global.set $~lib/memory/__stack_pointer
   local.get $6
+ )
+ (func $src-as/utility/_ArrayUtils/arrayToStatic<~lib/staticarray/StaticArray<f32>> (param $0 i32) (result i32)
+  (local $1 i32)
+  (local $2 i32)
+  (local $3 i32)
+  (local $4 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  local.get $0
+  call $~lib/array/Array<~lib/staticarray/StaticArray<f32>>#get:length
+  call $~lib/staticarray/StaticArray<~lib/staticarray/StaticArray<f32>>#constructor
+  local.tee $1
+  i32.store
+  i32.const 0
+  local.set $2
+  loop $for-loop|0
+   local.get $2
+   local.get $0
+   call $~lib/array/Array<~lib/staticarray/StaticArray<f32>>#get:length
+   i32.lt_s
+   local.set $3
+   local.get $3
+   if
+    local.get $1
+    local.get $2
+    local.get $0
+    local.get $2
+    call $~lib/array/Array<~lib/staticarray/StaticArray<f32>>#__get
+    local.set $4
+    global.get $~lib/memory/__stack_pointer
+    local.get $4
+    i32.store offset=4
+    local.get $4
+    call $~lib/staticarray/StaticArray<~lib/staticarray/StaticArray<f32>>#__set
+    local.get $2
+    i32.const 1
+    i32.add
+    local.set $2
+    br $for-loop|0
+   end
+  end
+  local.get $1
+  local.set $4
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $4
+ )
+ (func $src-as/utility/_ArrayUtils/flatMapStatic<f32> (param $0 i32) (result i32)
+  (local $1 i32)
+  (local $2 i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  (local $6 i32)
+  (local $7 i32)
+  (local $8 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  local.get $0
+  call $~lib/staticarray/StaticArray<~lib/staticarray/StaticArray<f32>>#get:length
+  i32.const 0
+  i32.eq
+  if
+   i32.const 0
+   i32.const 0
+   call $~lib/staticarray/StaticArray<f32>#constructor
+   local.set $8
+   global.get $~lib/memory/__stack_pointer
+   i32.const 8
+   i32.add
+   global.set $~lib/memory/__stack_pointer
+   local.get $8
+   return
+  end
+  local.get $0
+  i32.const 0
+  call $~lib/staticarray/StaticArray<~lib/staticarray/StaticArray<f32>>#__get
+  local.set $8
+  global.get $~lib/memory/__stack_pointer
+  local.get $8
+  i32.store
+  local.get $8
+  call $~lib/staticarray/StaticArray<f32>#get:length
+  local.set $1
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  local.get $0
+  call $~lib/staticarray/StaticArray<~lib/staticarray/StaticArray<f32>>#get:length
+  local.get $1
+  i32.mul
+  call $~lib/staticarray/StaticArray<f32>#constructor
+  local.tee $2
+  i32.store offset=4
+  i32.const 0
+  local.set $3
+  loop $for-loop|0
+   local.get $3
+   local.get $0
+   call $~lib/staticarray/StaticArray<~lib/staticarray/StaticArray<f32>>#get:length
+   i32.lt_s
+   local.set $4
+   local.get $4
+   if
+    i32.const 0
+    local.set $5
+    loop $for-loop|1
+     local.get $5
+     local.get $1
+     i32.lt_s
+     local.set $6
+     local.get $6
+     if
+      local.get $3
+      local.get $1
+      i32.mul
+      local.get $5
+      i32.add
+      local.set $7
+      local.get $2
+      local.get $7
+      local.get $0
+      local.get $3
+      call $~lib/staticarray/StaticArray<~lib/staticarray/StaticArray<f32>>#__get
+      local.set $8
+      global.get $~lib/memory/__stack_pointer
+      local.get $8
+      i32.store
+      local.get $8
+      local.get $5
+      call $~lib/staticarray/StaticArray<f32>#__get
+      call $~lib/staticarray/StaticArray<f32>#__set
+      local.get $5
+      i32.const 1
+      i32.add
+      local.set $5
+      br $for-loop|1
+     end
+    end
+    local.get $3
+    i32.const 1
+    i32.add
+    local.set $3
+    br $for-loop|0
+   end
+  end
+  local.get $2
+  local.set $8
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $8
+ )
+ (func $src-as/rendering/geometry/TransformGeometry/TransformGeometry.positions (param $0 f32) (param $1 f32) (result i32)
+  (local $2 i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 f32)
+  (local $6 f32)
+  (local $7 i32)
+  (local $8 i32)
+  (local $9 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 28
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.const 28
+  memory.fill
+  global.get $~lib/memory/__stack_pointer
+  local.get $1
+  local.get $0
+  local.get $0
+  call $src-as/rendering/geometry/CubeGeometry/CubeGeometry.positions
+  local.tee $2
+  i32.store
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  local.get $1
+  local.get $0
+  call $src-as/rendering/geometry/CubeGeometry/CubeGeometry.positions
+  local.tee $3
+  i32.store offset=4
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  local.get $0
+  local.get $1
+  call $src-as/rendering/geometry/CubeGeometry/CubeGeometry.positions
+  local.tee $4
+  i32.store offset=8
+  local.get $1
+  f32.const 2
+  f32.div
+  local.set $5
+  local.get $0
+  f32.const 2
+  f32.div
+  local.set $6
+  i32.const 0
+  local.set $7
+  loop $for-loop|0
+   local.get $7
+   local.get $2
+   call $~lib/staticarray/StaticArray<f32>#get:length
+   i32.lt_s
+   local.set $8
+   local.get $8
+   if
+    local.get $2
+    local.get $7
+    local.get $2
+    local.get $7
+    call $~lib/staticarray/StaticArray<f32>#__get
+    local.get $5
+    local.get $6
+    f32.add
+    f32.add
+    call $~lib/staticarray/StaticArray<f32>#__set
+    local.get $3
+    local.get $7
+    i32.const 1
+    i32.add
+    local.get $3
+    local.get $7
+    i32.const 1
+    i32.add
+    call $~lib/staticarray/StaticArray<f32>#__get
+    local.get $5
+    local.get $6
+    f32.add
+    f32.add
+    call $~lib/staticarray/StaticArray<f32>#__set
+    local.get $4
+    local.get $7
+    i32.const 2
+    i32.add
+    local.get $4
+    local.get $7
+    i32.const 2
+    i32.add
+    call $~lib/staticarray/StaticArray<f32>#__get
+    local.get $5
+    local.get $6
+    f32.add
+    f32.add
+    call $~lib/staticarray/StaticArray<f32>#__set
+    local.get $7
+    i32.const 3
+    i32.add
+    local.set $7
+    br $for-loop|0
+   end
+  end
+  global.get $~lib/memory/__stack_pointer
+  i32.const 3
+  i32.const 2
+  i32.const 57
+  i32.const 0
+  call $~lib/rt/__newArray
+  local.tee $7
+  i32.store offset=20
+  global.get $~lib/memory/__stack_pointer
+  local.get $7
+  i32.load offset=4
+  local.tee $8
+  i32.store offset=24
+  local.get $7
+  i32.const 0
+  local.get $2
+  call $~lib/array/Array<~lib/staticarray/StaticArray<f32>>#__uset
+  local.get $7
+  i32.const 1
+  local.get $3
+  call $~lib/array/Array<~lib/staticarray/StaticArray<f32>>#__uset
+  local.get $7
+  i32.const 2
+  local.get $4
+  call $~lib/array/Array<~lib/staticarray/StaticArray<f32>>#__uset
+  local.get $7
+  local.set $9
+  global.get $~lib/memory/__stack_pointer
+  local.get $9
+  i32.store offset=16
+  local.get $9
+  call $src-as/utility/_ArrayUtils/arrayToStatic<~lib/staticarray/StaticArray<f32>>
+  local.set $9
+  global.get $~lib/memory/__stack_pointer
+  local.get $9
+  i32.store offset=12
+  local.get $9
+  call $src-as/utility/_ArrayUtils/flatMapStatic<f32>
+  local.set $9
+  global.get $~lib/memory/__stack_pointer
+  i32.const 28
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $9
+ )
+ (func $src-as/utility/_ArrayUtils/arrayToStatic<~lib/staticarray/StaticArray<u16>> (param $0 i32) (result i32)
+  (local $1 i32)
+  (local $2 i32)
+  (local $3 i32)
+  (local $4 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  local.get $0
+  call $~lib/array/Array<~lib/staticarray/StaticArray<u16>>#get:length
+  call $~lib/staticarray/StaticArray<~lib/staticarray/StaticArray<u16>>#constructor
+  local.tee $1
+  i32.store
+  i32.const 0
+  local.set $2
+  loop $for-loop|0
+   local.get $2
+   local.get $0
+   call $~lib/array/Array<~lib/staticarray/StaticArray<u16>>#get:length
+   i32.lt_s
+   local.set $3
+   local.get $3
+   if
+    local.get $1
+    local.get $2
+    local.get $0
+    local.get $2
+    call $~lib/array/Array<~lib/staticarray/StaticArray<u16>>#__get
+    local.set $4
+    global.get $~lib/memory/__stack_pointer
+    local.get $4
+    i32.store offset=4
+    local.get $4
+    call $~lib/staticarray/StaticArray<~lib/staticarray/StaticArray<u16>>#__set
+    local.get $2
+    i32.const 1
+    i32.add
+    local.set $2
+    br $for-loop|0
+   end
+  end
+  local.get $1
+  local.set $4
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $4
+ )
+ (func $src-as/utility/_ArrayUtils/flatMapStatic<u16> (param $0 i32) (result i32)
+  (local $1 i32)
+  (local $2 i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  (local $6 i32)
+  (local $7 i32)
+  (local $8 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  local.get $0
+  call $~lib/staticarray/StaticArray<~lib/staticarray/StaticArray<u16>>#get:length
+  i32.const 0
+  i32.eq
+  if
+   i32.const 0
+   i32.const 0
+   call $~lib/staticarray/StaticArray<u16>#constructor
+   local.set $8
+   global.get $~lib/memory/__stack_pointer
+   i32.const 8
+   i32.add
+   global.set $~lib/memory/__stack_pointer
+   local.get $8
+   return
+  end
+  local.get $0
+  i32.const 0
+  call $~lib/staticarray/StaticArray<~lib/staticarray/StaticArray<u16>>#__get
+  local.set $8
+  global.get $~lib/memory/__stack_pointer
+  local.get $8
+  i32.store
+  local.get $8
+  call $~lib/staticarray/StaticArray<u16>#get:length
+  local.set $1
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  local.get $0
+  call $~lib/staticarray/StaticArray<~lib/staticarray/StaticArray<u16>>#get:length
+  local.get $1
+  i32.mul
+  call $~lib/staticarray/StaticArray<u16>#constructor
+  local.tee $2
+  i32.store offset=4
+  i32.const 0
+  local.set $3
+  loop $for-loop|0
+   local.get $3
+   local.get $0
+   call $~lib/staticarray/StaticArray<~lib/staticarray/StaticArray<u16>>#get:length
+   i32.lt_s
+   local.set $4
+   local.get $4
+   if
+    i32.const 0
+    local.set $5
+    loop $for-loop|1
+     local.get $5
+     local.get $1
+     i32.lt_s
+     local.set $6
+     local.get $6
+     if
+      local.get $3
+      local.get $1
+      i32.mul
+      local.get $5
+      i32.add
+      local.set $7
+      local.get $2
+      local.get $7
+      local.get $0
+      local.get $3
+      call $~lib/staticarray/StaticArray<~lib/staticarray/StaticArray<u16>>#__get
+      local.set $8
+      global.get $~lib/memory/__stack_pointer
+      local.get $8
+      i32.store
+      local.get $8
+      local.get $5
+      call $~lib/staticarray/StaticArray<u16>#__get
+      call $~lib/staticarray/StaticArray<u16>#__set
+      local.get $5
+      i32.const 1
+      i32.add
+      local.set $5
+      br $for-loop|1
+     end
+    end
+    local.get $3
+    i32.const 1
+    i32.add
+    local.set $3
+    br $for-loop|0
+   end
+  end
+  local.get $2
+  local.set $8
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $8
+ )
+ (func $src-as/rendering/geometry/TransformGeometry/TransformGeometry.indices (result i32)
+  (local $0 i32)
+  (local $1 i32)
+  (local $2 i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 28
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.const 28
+  memory.fill
+  global.get $~lib/memory/__stack_pointer
+  call $src-as/rendering/geometry/CubeGeometry/CubeGeometry.indices
+  local.tee $0
+  i32.store
+  global.get $~lib/memory/__stack_pointer
+  call $src-as/rendering/geometry/CubeGeometry/CubeGeometry.indices
+  local.tee $1
+  i32.store offset=4
+  global.get $~lib/memory/__stack_pointer
+  call $src-as/rendering/geometry/CubeGeometry/CubeGeometry.indices
+  local.tee $2
+  i32.store offset=8
+  i32.const 0
+  local.set $3
+  loop $for-loop|0
+   local.get $3
+   local.get $1
+   call $~lib/staticarray/StaticArray<u16>#get:length
+   i32.lt_s
+   local.set $4
+   local.get $4
+   if
+    local.get $1
+    local.get $3
+    local.get $1
+    local.get $3
+    call $~lib/staticarray/StaticArray<u16>#__get
+    i32.const 24
+    i32.add
+    call $~lib/staticarray/StaticArray<u16>#__set
+    local.get $2
+    local.get $3
+    local.get $2
+    local.get $3
+    call $~lib/staticarray/StaticArray<u16>#__get
+    i32.const 24
+    i32.const 2
+    i32.mul
+    i32.add
+    call $~lib/staticarray/StaticArray<u16>#__set
+    local.get $3
+    i32.const 1
+    i32.add
+    local.set $3
+    br $for-loop|0
+   end
+  end
+  global.get $~lib/memory/__stack_pointer
+  i32.const 3
+  i32.const 2
+  i32.const 59
+  i32.const 0
+  call $~lib/rt/__newArray
+  local.tee $3
+  i32.store offset=20
+  global.get $~lib/memory/__stack_pointer
+  local.get $3
+  i32.load offset=4
+  local.tee $4
+  i32.store offset=24
+  local.get $3
+  i32.const 0
+  local.get $0
+  call $~lib/array/Array<~lib/staticarray/StaticArray<u16>>#__uset
+  local.get $3
+  i32.const 1
+  local.get $1
+  call $~lib/array/Array<~lib/staticarray/StaticArray<u16>>#__uset
+  local.get $3
+  i32.const 2
+  local.get $2
+  call $~lib/array/Array<~lib/staticarray/StaticArray<u16>>#__uset
+  local.get $3
+  local.set $5
+  global.get $~lib/memory/__stack_pointer
+  local.get $5
+  i32.store offset=16
+  local.get $5
+  call $src-as/utility/_ArrayUtils/arrayToStatic<~lib/staticarray/StaticArray<u16>>
+  local.set $5
+  global.get $~lib/memory/__stack_pointer
+  local.get $5
+  i32.store offset=12
+  local.get $5
+  call $src-as/utility/_ArrayUtils/flatMapStatic<u16>
+  local.set $5
+  global.get $~lib/memory/__stack_pointer
+  i32.const 28
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $5
+ )
+ (func $src-as/rendering/geometry/TransformGeometry/TransformGeometry.uvs (result i32)
+  (local $0 i32)
+  (local $1 i32)
+  (local $2 i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 28
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.const 28
+  memory.fill
+  global.get $~lib/memory/__stack_pointer
+  call $src-as/rendering/geometry/CubeGeometry/CubeGeometry.uvs
+  local.tee $0
+  i32.store
+  global.get $~lib/memory/__stack_pointer
+  call $src-as/rendering/geometry/CubeGeometry/CubeGeometry.uvs
+  local.tee $1
+  i32.store offset=4
+  global.get $~lib/memory/__stack_pointer
+  call $src-as/rendering/geometry/CubeGeometry/CubeGeometry.uvs
+  local.tee $2
+  i32.store offset=8
+  global.get $~lib/memory/__stack_pointer
+  i32.const 3
+  i32.const 2
+  i32.const 57
+  i32.const 0
+  call $~lib/rt/__newArray
+  local.tee $3
+  i32.store offset=20
+  global.get $~lib/memory/__stack_pointer
+  local.get $3
+  i32.load offset=4
+  local.tee $4
+  i32.store offset=24
+  local.get $3
+  i32.const 0
+  local.get $0
+  call $~lib/array/Array<~lib/staticarray/StaticArray<f32>>#__uset
+  local.get $3
+  i32.const 1
+  local.get $1
+  call $~lib/array/Array<~lib/staticarray/StaticArray<f32>>#__uset
+  local.get $3
+  i32.const 2
+  local.get $2
+  call $~lib/array/Array<~lib/staticarray/StaticArray<f32>>#__uset
+  local.get $3
+  local.set $5
+  global.get $~lib/memory/__stack_pointer
+  local.get $5
+  i32.store offset=16
+  local.get $5
+  call $src-as/utility/_ArrayUtils/arrayToStatic<~lib/staticarray/StaticArray<f32>>
+  local.set $5
+  global.get $~lib/memory/__stack_pointer
+  local.get $5
+  i32.store offset=12
+  local.get $5
+  call $src-as/utility/_ArrayUtils/flatMapStatic<f32>
+  local.set $5
+  global.get $~lib/memory/__stack_pointer
+  i32.const 28
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $5
+ )
+ (func $src-as/utility/_ArrayUtils/arrayToStatic<~lib/staticarray/StaticArray<u8>> (param $0 i32) (result i32)
+  (local $1 i32)
+  (local $2 i32)
+  (local $3 i32)
+  (local $4 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  local.get $0
+  call $~lib/array/Array<~lib/staticarray/StaticArray<u8>>#get:length
+  call $~lib/staticarray/StaticArray<~lib/staticarray/StaticArray<u8>>#constructor
+  local.tee $1
+  i32.store
+  i32.const 0
+  local.set $2
+  loop $for-loop|0
+   local.get $2
+   local.get $0
+   call $~lib/array/Array<~lib/staticarray/StaticArray<u8>>#get:length
+   i32.lt_s
+   local.set $3
+   local.get $3
+   if
+    local.get $1
+    local.get $2
+    local.get $0
+    local.get $2
+    call $~lib/array/Array<~lib/staticarray/StaticArray<u8>>#__get
+    local.set $4
+    global.get $~lib/memory/__stack_pointer
+    local.get $4
+    i32.store offset=4
+    local.get $4
+    call $~lib/staticarray/StaticArray<~lib/staticarray/StaticArray<u8>>#__set
+    local.get $2
+    i32.const 1
+    i32.add
+    local.set $2
+    br $for-loop|0
+   end
+  end
+  local.get $1
+  local.set $4
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $4
+ )
+ (func $src-as/utility/_ArrayUtils/flatMapStatic<u8> (param $0 i32) (result i32)
+  (local $1 i32)
+  (local $2 i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  (local $6 i32)
+  (local $7 i32)
+  (local $8 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  local.get $0
+  call $~lib/staticarray/StaticArray<~lib/staticarray/StaticArray<u8>>#get:length
+  i32.const 0
+  i32.eq
+  if
+   i32.const 0
+   i32.const 0
+   call $~lib/staticarray/StaticArray<u8>#constructor
+   local.set $8
+   global.get $~lib/memory/__stack_pointer
+   i32.const 8
+   i32.add
+   global.set $~lib/memory/__stack_pointer
+   local.get $8
+   return
+  end
+  local.get $0
+  i32.const 0
+  call $~lib/staticarray/StaticArray<~lib/staticarray/StaticArray<u8>>#__get
+  local.set $8
+  global.get $~lib/memory/__stack_pointer
+  local.get $8
+  i32.store
+  local.get $8
+  call $~lib/staticarray/StaticArray<u8>#get:length
+  local.set $1
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  local.get $0
+  call $~lib/staticarray/StaticArray<~lib/staticarray/StaticArray<u8>>#get:length
+  local.get $1
+  i32.mul
+  call $~lib/staticarray/StaticArray<u8>#constructor
+  local.tee $2
+  i32.store offset=4
+  i32.const 0
+  local.set $3
+  loop $for-loop|0
+   local.get $3
+   local.get $0
+   call $~lib/staticarray/StaticArray<~lib/staticarray/StaticArray<u8>>#get:length
+   i32.lt_s
+   local.set $4
+   local.get $4
+   if
+    i32.const 0
+    local.set $5
+    loop $for-loop|1
+     local.get $5
+     local.get $1
+     i32.lt_s
+     local.set $6
+     local.get $6
+     if
+      local.get $3
+      local.get $1
+      i32.mul
+      local.get $5
+      i32.add
+      local.set $7
+      local.get $2
+      local.get $7
+      local.get $0
+      local.get $3
+      call $~lib/staticarray/StaticArray<~lib/staticarray/StaticArray<u8>>#__get
+      local.set $8
+      global.get $~lib/memory/__stack_pointer
+      local.get $8
+      i32.store
+      local.get $8
+      local.get $5
+      call $~lib/staticarray/StaticArray<u8>#__get
+      call $~lib/staticarray/StaticArray<u8>#__set
+      local.get $5
+      i32.const 1
+      i32.add
+      local.set $5
+      br $for-loop|1
+     end
+    end
+    local.get $3
+    i32.const 1
+    i32.add
+    local.set $3
+    br $for-loop|0
+   end
+  end
+  local.get $2
+  local.set $8
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $8
+ )
+ (func $src-as/rendering/geometry/TransformGeometry/TransformGeometry.colors (result i32)
+  (local $0 i32)
+  (local $1 i32)
+  (local $2 i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 28
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.const 28
+  memory.fill
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.const 24
+  i32.const 4
+  i32.mul
+  call $~lib/staticarray/StaticArray<u8>#constructor
+  local.tee $0
+  i32.store
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.const 24
+  i32.const 4
+  i32.mul
+  call $~lib/staticarray/StaticArray<u8>#constructor
+  local.tee $1
+  i32.store offset=4
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.const 24
+  i32.const 4
+  i32.mul
+  call $~lib/staticarray/StaticArray<u8>#constructor
+  local.tee $2
+  i32.store offset=8
+  local.get $0
+  i32.const 4
+  i32.const 0
+  i32.const 49
+  i32.const 5472
+  call $~lib/rt/__newArray
+  local.set $5
+  global.get $~lib/memory/__stack_pointer
+  local.get $5
+  i32.store offset=12
+  local.get $5
+  call $src-as/utility/_ArrayUtils/fill<u8>
+  drop
+  local.get $1
+  i32.const 4
+  i32.const 0
+  i32.const 49
+  i32.const 5504
+  call $~lib/rt/__newArray
+  local.set $5
+  global.get $~lib/memory/__stack_pointer
+  local.get $5
+  i32.store offset=12
+  local.get $5
+  call $src-as/utility/_ArrayUtils/fill<u8>
+  drop
+  local.get $2
+  i32.const 4
+  i32.const 0
+  i32.const 49
+  i32.const 5536
+  call $~lib/rt/__newArray
+  local.set $5
+  global.get $~lib/memory/__stack_pointer
+  local.get $5
+  i32.store offset=12
+  local.get $5
+  call $src-as/utility/_ArrayUtils/fill<u8>
+  drop
+  global.get $~lib/memory/__stack_pointer
+  i32.const 3
+  i32.const 2
+  i32.const 61
+  i32.const 0
+  call $~lib/rt/__newArray
+  local.tee $4
+  i32.store offset=20
+  global.get $~lib/memory/__stack_pointer
+  local.get $4
+  i32.load offset=4
+  local.tee $3
+  i32.store offset=24
+  local.get $4
+  i32.const 0
+  local.get $0
+  call $~lib/array/Array<~lib/staticarray/StaticArray<u8>>#__uset
+  local.get $4
+  i32.const 1
+  local.get $1
+  call $~lib/array/Array<~lib/staticarray/StaticArray<u8>>#__uset
+  local.get $4
+  i32.const 2
+  local.get $2
+  call $~lib/array/Array<~lib/staticarray/StaticArray<u8>>#__uset
+  local.get $4
+  local.set $5
+  global.get $~lib/memory/__stack_pointer
+  local.get $5
+  i32.store offset=12
+  local.get $5
+  call $src-as/utility/_ArrayUtils/arrayToStatic<~lib/staticarray/StaticArray<u8>>
+  local.set $5
+  global.get $~lib/memory/__stack_pointer
+  local.get $5
+  i32.store offset=16
+  local.get $5
+  call $src-as/utility/_ArrayUtils/flatMapStatic<u8>
+  local.set $5
+  global.get $~lib/memory/__stack_pointer
+  i32.const 28
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $5
+ )
+ (func $src-as/rendering/geometry/TransformGeometry/TransformGeometry.new (result i32)
+  (local $0 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 16
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store offset=8
+  f32.const 0.019999999552965164
+  f32.const 1
+  call $src-as/rendering/geometry/TransformGeometry/TransformGeometry.positions
+  local.set $0
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  i32.store
+  local.get $0
+  call $src-as/rendering/geometry/TransformGeometry/TransformGeometry.indices
+  local.set $0
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  i32.store offset=4
+  local.get $0
+  call $src-as/rendering/geometry/TransformGeometry/TransformGeometry.uvs
+  local.set $0
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  i32.store offset=8
+  local.get $0
+  call $src-as/rendering/geometry/TransformGeometry/TransformGeometry.colors
+  local.set $0
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  i32.store offset=12
+  local.get $0
+  call $src-as/rendering/geometry/Geometry/StandardGeometry.fromStatic
+  local.set $0
+  global.get $~lib/memory/__stack_pointer
+  i32.const 16
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $0
  )
  (func $start:src-as/rendering/shader/debugNormals
   (local $0 i32)
@@ -33640,7 +36834,7 @@
   global.get $src-as/rendering/constants/_attributes/InstanceTangent
   local.tee $15
   i32.store offset=60
-  i32.const 6928
+  i32.const 7024
   local.set $16
   global.get $~lib/memory/__stack_pointer
   local.get $16
@@ -33649,7 +36843,7 @@
   i32.const 1
   local.get $0
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 6928
+  i32.const 7024
   local.set $16
   global.get $~lib/memory/__stack_pointer
   local.get $16
@@ -33658,7 +36852,7 @@
   i32.const 3
   local.get $1
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 6928
+  i32.const 7024
   local.set $16
   global.get $~lib/memory/__stack_pointer
   local.get $16
@@ -33667,7 +36861,7 @@
   i32.const 5
   local.get $2
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 6928
+  i32.const 7024
   local.set $16
   global.get $~lib/memory/__stack_pointer
   local.get $16
@@ -33676,7 +36870,7 @@
   i32.const 7
   local.get $3
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 6928
+  i32.const 7024
   local.set $16
   global.get $~lib/memory/__stack_pointer
   local.get $16
@@ -33685,7 +36879,7 @@
   i32.const 9
   local.get $4
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 6928
+  i32.const 7024
   local.set $16
   global.get $~lib/memory/__stack_pointer
   local.get $16
@@ -33694,7 +36888,7 @@
   i32.const 11
   local.get $5
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 6928
+  i32.const 7024
   local.set $16
   global.get $~lib/memory/__stack_pointer
   local.get $16
@@ -33703,7 +36897,7 @@
   i32.const 13
   local.get $6
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 6928
+  i32.const 7024
   local.set $16
   global.get $~lib/memory/__stack_pointer
   local.get $16
@@ -33712,7 +36906,7 @@
   i32.const 15
   local.get $7
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 6928
+  i32.const 7024
   local.set $16
   global.get $~lib/memory/__stack_pointer
   local.get $16
@@ -33721,7 +36915,7 @@
   i32.const 17
   local.get $8
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 6928
+  i32.const 7024
   local.set $16
   global.get $~lib/memory/__stack_pointer
   local.get $16
@@ -33730,7 +36924,7 @@
   i32.const 19
   local.get $9
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 6928
+  i32.const 7024
   local.set $16
   global.get $~lib/memory/__stack_pointer
   local.get $16
@@ -33739,7 +36933,7 @@
   i32.const 21
   local.get $10
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 6928
+  i32.const 7024
   local.set $16
   global.get $~lib/memory/__stack_pointer
   local.get $16
@@ -33748,7 +36942,7 @@
   i32.const 23
   local.get $11
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 6928
+  i32.const 7024
   local.set $16
   global.get $~lib/memory/__stack_pointer
   local.get $16
@@ -33757,7 +36951,7 @@
   i32.const 25
   local.get $12
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 6928
+  i32.const 7024
   local.set $16
   global.get $~lib/memory/__stack_pointer
   local.get $16
@@ -33766,7 +36960,7 @@
   i32.const 27
   local.get $13
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 6928
+  i32.const 7024
   local.set $16
   global.get $~lib/memory/__stack_pointer
   local.get $16
@@ -33775,7 +36969,7 @@
   i32.const 29
   local.get $14
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 6928
+  i32.const 7024
   local.set $16
   global.get $~lib/memory/__stack_pointer
   local.get $16
@@ -33784,7 +36978,7 @@
   i32.const 31
   local.get $15
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 6928
+  i32.const 7024
   local.set $16
   global.get $~lib/memory/__stack_pointer
   local.get $16
@@ -33844,7 +37038,7 @@
   global.get $src-as/rendering/constants/_uniforms/DirectionalLights_ambientIntensity
   local.tee $1
   i32.store offset=4
-  i32.const 9472
+  i32.const 9568
   local.set $2
   global.get $~lib/memory/__stack_pointer
   local.get $2
@@ -33853,7 +37047,7 @@
   i32.const 1
   local.get $0
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 9472
+  i32.const 9568
   local.set $2
   global.get $~lib/memory/__stack_pointer
   local.get $2
@@ -33862,7 +37056,7 @@
   i32.const 3
   local.get $1
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 9472
+  i32.const 9568
   local.set $2
   global.get $~lib/memory/__stack_pointer
   local.get $2
@@ -33944,7 +37138,7 @@
   global.get $src-as/rendering/constants/_attributes/Texcoord
   local.tee $9
   i32.store offset=36
-  i32.const 9968
+  i32.const 10064
   local.set $10
   global.get $~lib/memory/__stack_pointer
   local.get $10
@@ -33953,7 +37147,7 @@
   i32.const 1
   local.get $0
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 9968
+  i32.const 10064
   local.set $10
   global.get $~lib/memory/__stack_pointer
   local.get $10
@@ -33962,7 +37156,7 @@
   i32.const 3
   local.get $1
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 9968
+  i32.const 10064
   local.set $10
   global.get $~lib/memory/__stack_pointer
   local.get $10
@@ -33971,7 +37165,7 @@
   i32.const 5
   local.get $2
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 9968
+  i32.const 10064
   local.set $10
   global.get $~lib/memory/__stack_pointer
   local.get $10
@@ -33980,7 +37174,7 @@
   i32.const 7
   local.get $3
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 9968
+  i32.const 10064
   local.set $10
   global.get $~lib/memory/__stack_pointer
   local.get $10
@@ -33989,7 +37183,7 @@
   i32.const 9
   local.get $4
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 9968
+  i32.const 10064
   local.set $10
   global.get $~lib/memory/__stack_pointer
   local.get $10
@@ -33998,7 +37192,7 @@
   i32.const 11
   local.get $5
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 9968
+  i32.const 10064
   local.set $10
   global.get $~lib/memory/__stack_pointer
   local.get $10
@@ -34007,7 +37201,7 @@
   i32.const 13
   local.get $6
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 9968
+  i32.const 10064
   local.set $10
   global.get $~lib/memory/__stack_pointer
   local.get $10
@@ -34016,7 +37210,7 @@
   i32.const 15
   local.get $7
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 9968
+  i32.const 10064
   local.set $10
   global.get $~lib/memory/__stack_pointer
   local.get $10
@@ -34025,7 +37219,7 @@
   i32.const 17
   local.get $8
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 9968
+  i32.const 10064
   local.set $10
   global.get $~lib/memory/__stack_pointer
   local.get $10
@@ -34034,7 +37228,7 @@
   i32.const 19
   local.get $9
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 9968
+  i32.const 10064
   local.set $10
   global.get $~lib/memory/__stack_pointer
   local.get $10
@@ -34081,7 +37275,7 @@
   global.get $src-as/rendering/constants/_uniforms/Color
   local.tee $2
   i32.store offset=8
-  i32.const 10976
+  i32.const 11072
   local.set $10
   global.get $~lib/memory/__stack_pointer
   local.get $10
@@ -34090,7 +37284,7 @@
   i32.const 1
   local.get $9
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 10976
+  i32.const 11072
   local.set $10
   global.get $~lib/memory/__stack_pointer
   local.get $10
@@ -34099,7 +37293,7 @@
   i32.const 3
   local.get $8
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 10976
+  i32.const 11072
   local.set $10
   global.get $~lib/memory/__stack_pointer
   local.get $10
@@ -34108,7 +37302,7 @@
   i32.const 5
   local.get $7
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 10976
+  i32.const 11072
   local.set $10
   global.get $~lib/memory/__stack_pointer
   local.get $10
@@ -34117,7 +37311,7 @@
   i32.const 7
   local.get $6
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 10976
+  i32.const 11072
   local.set $10
   global.get $~lib/memory/__stack_pointer
   local.get $10
@@ -34126,7 +37320,7 @@
   i32.const 9
   local.get $5
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 10976
+  i32.const 11072
   local.set $10
   global.get $~lib/memory/__stack_pointer
   local.get $10
@@ -34135,7 +37329,7 @@
   i32.const 11
   local.get $4
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 10976
+  i32.const 11072
   local.set $10
   global.get $~lib/memory/__stack_pointer
   local.get $10
@@ -34144,7 +37338,7 @@
   i32.const 13
   local.get $3
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 10976
+  i32.const 11072
   local.set $10
   global.get $~lib/memory/__stack_pointer
   local.get $10
@@ -34153,7 +37347,7 @@
   i32.const 15
   local.get $2
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 10976
+  i32.const 11072
   local.set $10
   global.get $~lib/memory/__stack_pointer
   local.get $10
@@ -34273,7 +37467,7 @@
   global.get $src-as/rendering/shader/particleShader/a_pos
   local.tee $13
   i32.store offset=52
-  i32.const 12080
+  i32.const 12176
   local.set $14
   global.get $~lib/memory/__stack_pointer
   local.get $14
@@ -34282,7 +37476,7 @@
   i32.const 1
   local.get $0
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 12080
+  i32.const 12176
   local.set $14
   global.get $~lib/memory/__stack_pointer
   local.get $14
@@ -34291,7 +37485,7 @@
   i32.const 3
   local.get $1
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 12080
+  i32.const 12176
   local.set $14
   global.get $~lib/memory/__stack_pointer
   local.get $14
@@ -34300,7 +37494,7 @@
   i32.const 5
   local.get $2
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 12080
+  i32.const 12176
   local.set $14
   global.get $~lib/memory/__stack_pointer
   local.get $14
@@ -34309,7 +37503,7 @@
   i32.const 7
   local.get $3
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 12080
+  i32.const 12176
   local.set $14
   global.get $~lib/memory/__stack_pointer
   local.get $14
@@ -34318,7 +37512,7 @@
   i32.const 9
   local.get $4
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 12080
+  i32.const 12176
   local.set $14
   global.get $~lib/memory/__stack_pointer
   local.get $14
@@ -34327,7 +37521,7 @@
   i32.const 11
   local.get $5
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 12080
+  i32.const 12176
   local.set $14
   global.get $~lib/memory/__stack_pointer
   local.get $14
@@ -34336,7 +37530,7 @@
   i32.const 13
   local.get $6
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 12080
+  i32.const 12176
   local.set $14
   global.get $~lib/memory/__stack_pointer
   local.get $14
@@ -34345,7 +37539,7 @@
   i32.const 15
   local.get $7
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 12080
+  i32.const 12176
   local.set $14
   global.get $~lib/memory/__stack_pointer
   local.get $14
@@ -34354,7 +37548,7 @@
   i32.const 17
   local.get $8
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 12080
+  i32.const 12176
   local.set $14
   global.get $~lib/memory/__stack_pointer
   local.get $14
@@ -34363,7 +37557,7 @@
   i32.const 19
   local.get $9
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 12080
+  i32.const 12176
   local.set $14
   global.get $~lib/memory/__stack_pointer
   local.get $14
@@ -34372,7 +37566,7 @@
   i32.const 21
   local.get $10
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 12080
+  i32.const 12176
   local.set $14
   global.get $~lib/memory/__stack_pointer
   local.get $14
@@ -34381,7 +37575,7 @@
   i32.const 23
   local.get $11
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 12080
+  i32.const 12176
   local.set $14
   global.get $~lib/memory/__stack_pointer
   local.get $14
@@ -34390,7 +37584,7 @@
   i32.const 25
   local.get $12
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 12080
+  i32.const 12176
   local.set $14
   global.get $~lib/memory/__stack_pointer
   local.get $14
@@ -34399,7 +37593,7 @@
   i32.const 27
   local.get $13
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 12080
+  i32.const 12176
   local.set $14
   global.get $~lib/memory/__stack_pointer
   local.get $14
@@ -34542,7 +37736,7 @@
   global.get $src-as/rendering/shader/transformFeedback/v_pos
   local.tee $18
   i32.store offset=72
-  i32.const 13600
+  i32.const 13696
   local.set $19
   global.get $~lib/memory/__stack_pointer
   local.get $19
@@ -34551,7 +37745,7 @@
   i32.const 1
   local.get $0
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 13600
+  i32.const 13696
   local.set $19
   global.get $~lib/memory/__stack_pointer
   local.get $19
@@ -34560,7 +37754,7 @@
   i32.const 3
   local.get $1
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 13600
+  i32.const 13696
   local.set $19
   global.get $~lib/memory/__stack_pointer
   local.get $19
@@ -34569,7 +37763,7 @@
   i32.const 5
   local.get $2
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 13600
+  i32.const 13696
   local.set $19
   global.get $~lib/memory/__stack_pointer
   local.get $19
@@ -34578,7 +37772,7 @@
   i32.const 7
   local.get $3
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 13600
+  i32.const 13696
   local.set $19
   global.get $~lib/memory/__stack_pointer
   local.get $19
@@ -34587,7 +37781,7 @@
   i32.const 9
   local.get $4
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 13600
+  i32.const 13696
   local.set $19
   global.get $~lib/memory/__stack_pointer
   local.get $19
@@ -34596,7 +37790,7 @@
   i32.const 11
   local.get $5
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 13600
+  i32.const 13696
   local.set $19
   global.get $~lib/memory/__stack_pointer
   local.get $19
@@ -34605,7 +37799,7 @@
   i32.const 13
   local.get $6
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 13600
+  i32.const 13696
   local.set $19
   global.get $~lib/memory/__stack_pointer
   local.get $19
@@ -34614,7 +37808,7 @@
   i32.const 15
   local.get $7
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 13600
+  i32.const 13696
   local.set $19
   global.get $~lib/memory/__stack_pointer
   local.get $19
@@ -34623,7 +37817,7 @@
   i32.const 17
   local.get $8
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 13600
+  i32.const 13696
   local.set $19
   global.get $~lib/memory/__stack_pointer
   local.get $19
@@ -34632,7 +37826,7 @@
   i32.const 19
   local.get $9
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 13600
+  i32.const 13696
   local.set $19
   global.get $~lib/memory/__stack_pointer
   local.get $19
@@ -34641,7 +37835,7 @@
   i32.const 21
   local.get $10
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 13600
+  i32.const 13696
   local.set $19
   global.get $~lib/memory/__stack_pointer
   local.get $19
@@ -34650,7 +37844,7 @@
   i32.const 23
   local.get $11
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 13600
+  i32.const 13696
   local.set $19
   global.get $~lib/memory/__stack_pointer
   local.get $19
@@ -34659,7 +37853,7 @@
   i32.const 25
   local.get $12
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 13600
+  i32.const 13696
   local.set $19
   global.get $~lib/memory/__stack_pointer
   local.get $19
@@ -34668,7 +37862,7 @@
   i32.const 27
   local.get $13
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 13600
+  i32.const 13696
   local.set $19
   global.get $~lib/memory/__stack_pointer
   local.get $19
@@ -34677,7 +37871,7 @@
   i32.const 29
   local.get $14
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 13600
+  i32.const 13696
   local.set $19
   global.get $~lib/memory/__stack_pointer
   local.get $19
@@ -34686,7 +37880,7 @@
   i32.const 31
   local.get $15
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 13600
+  i32.const 13696
   local.set $19
   global.get $~lib/memory/__stack_pointer
   local.get $19
@@ -34695,7 +37889,7 @@
   i32.const 33
   local.get $16
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 13600
+  i32.const 13696
   local.set $19
   global.get $~lib/memory/__stack_pointer
   local.get $19
@@ -34704,7 +37898,7 @@
   i32.const 35
   local.get $17
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 13600
+  i32.const 13696
   local.set $19
   global.get $~lib/memory/__stack_pointer
   local.get $19
@@ -34713,7 +37907,7 @@
   i32.const 37
   local.get $18
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 13600
+  i32.const 13696
   local.set $19
   global.get $~lib/memory/__stack_pointer
   local.get $19
@@ -34742,8 +37936,8 @@
   local.get $19
   i32.const 2
   i32.const 2
-  i32.const 57
-  i32.const 13904
+  i32.const 64
+  i32.const 14000
   call $~lib/rt/__newArray
   local.set $19
   global.get $~lib/memory/__stack_pointer
@@ -34788,7 +37982,7 @@
   global.get $src-as/rendering/constants/_attributes/InstancePosition
   local.tee $3
   i32.store offset=12
-  i32.const 14256
+  i32.const 14352
   local.set $4
   global.get $~lib/memory/__stack_pointer
   local.get $4
@@ -34797,7 +37991,7 @@
   i32.const 1
   local.get $0
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 14256
+  i32.const 14352
   local.set $4
   global.get $~lib/memory/__stack_pointer
   local.get $4
@@ -34806,7 +38000,7 @@
   i32.const 3
   local.get $1
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 14256
+  i32.const 14352
   local.set $4
   global.get $~lib/memory/__stack_pointer
   local.get $4
@@ -34815,7 +38009,7 @@
   i32.const 5
   local.get $2
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 14256
+  i32.const 14352
   local.set $4
   global.get $~lib/memory/__stack_pointer
   local.get $4
@@ -34824,7 +38018,7 @@
   i32.const 7
   local.get $3
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 14256
+  i32.const 14352
   local.set $4
   global.get $~lib/memory/__stack_pointer
   local.get $4
@@ -34853,8 +38047,8 @@
   local.get $4
   i32.const 1
   i32.const 2
-  i32.const 57
-  i32.const 14320
+  i32.const 64
+  i32.const 14416
   call $~lib/rt/__newArray
   local.set $4
   global.get $~lib/memory/__stack_pointer
@@ -34900,7 +38094,7 @@
   global.get $src-as/rendering/constants/_attributes/Position
   local.tee $3
   i32.store offset=12
-  i32.const 14496
+  i32.const 14592
   local.set $4
   global.get $~lib/memory/__stack_pointer
   local.get $4
@@ -34909,7 +38103,7 @@
   i32.const 1
   local.get $0
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 14496
+  i32.const 14592
   local.set $4
   global.get $~lib/memory/__stack_pointer
   local.get $4
@@ -34918,7 +38112,7 @@
   i32.const 3
   local.get $1
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 14496
+  i32.const 14592
   local.set $4
   global.get $~lib/memory/__stack_pointer
   local.get $4
@@ -34927,7 +38121,7 @@
   i32.const 5
   local.get $2
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 14496
+  i32.const 14592
   local.set $4
   global.get $~lib/memory/__stack_pointer
   local.get $4
@@ -34936,7 +38130,7 @@
   i32.const 7
   local.get $3
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 14496
+  i32.const 14592
   local.set $4
   global.get $~lib/memory/__stack_pointer
   local.get $4
@@ -35011,7 +38205,7 @@
   global.get $src-as/rendering/constants/_attributes/Position
   local.tee $4
   i32.store offset=16
-  i32.const 15088
+  i32.const 15184
   local.set $5
   global.get $~lib/memory/__stack_pointer
   local.get $5
@@ -35020,7 +38214,7 @@
   i32.const 1
   local.get $0
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 15088
+  i32.const 15184
   local.set $5
   global.get $~lib/memory/__stack_pointer
   local.get $5
@@ -35029,7 +38223,7 @@
   i32.const 3
   local.get $1
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 15088
+  i32.const 15184
   local.set $5
   global.get $~lib/memory/__stack_pointer
   local.get $5
@@ -35038,7 +38232,7 @@
   i32.const 5
   local.get $2
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 15088
+  i32.const 15184
   local.set $5
   global.get $~lib/memory/__stack_pointer
   local.get $5
@@ -35047,7 +38241,7 @@
   i32.const 7
   local.get $3
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 15088
+  i32.const 15184
   local.set $5
   global.get $~lib/memory/__stack_pointer
   local.get $5
@@ -35056,7 +38250,7 @@
   i32.const 9
   local.get $4
   call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-  i32.const 15088
+  i32.const 15184
   local.set $5
   global.get $~lib/memory/__stack_pointer
   local.get $5
@@ -35142,8 +38336,8 @@
   i32.const 1
   i32.const 1
   i32.const 4
-  i32.const 46
-  i32.const 16048
+  i32.const 47
+  i32.const 16144
   call $~lib/rt/__newBuffer
   local.set $1
   global.get $~lib/memory/__stack_pointer
@@ -35162,8 +38356,8 @@
   i32.const 2
   i32.const 2
   i32.const 16
-  i32.const 46
-  i32.const 16080
+  i32.const 47
+  i32.const 16176
   call $~lib/rt/__newBuffer
   local.set $1
   global.get $~lib/memory/__stack_pointer
@@ -35182,8 +38376,8 @@
   i32.const 2
   i32.const 2
   i32.const 16
-  i32.const 46
-  i32.const 16128
+  i32.const 47
+  i32.const 16224
   call $~lib/rt/__newBuffer
   local.set $1
   global.get $~lib/memory/__stack_pointer
@@ -35262,740 +38456,6 @@
   i32.const 4
   i32.add
   global.set $~lib/memory/__stack_pointer
- )
- (func $src-as/base/World/World#update (param $0 i32) (result i32)
-  (local $1 i32)
-  (local $2 i32)
-  (local $3 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 8
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i64.const 0
-  i64.store
-  i32.const 0
-  local.set $1
-  loop $for-loop|0
-   local.get $1
-   local.get $0
-   i32.load offset=4
-   local.set $3
-   global.get $~lib/memory/__stack_pointer
-   local.get $3
-   i32.store
-   local.get $3
-   call $~lib/array/Array<src-as/base/System/System>#get:length
-   i32.lt_s
-   local.set $2
-   local.get $2
-   if
-    local.get $0
-    i32.load offset=4
-    local.set $3
-    global.get $~lib/memory/__stack_pointer
-    local.get $3
-    i32.store offset=4
-    local.get $3
-    local.get $1
-    call $~lib/array/Array<src-as/base/System/System>#__get
-    local.set $3
-    global.get $~lib/memory/__stack_pointer
-    local.get $3
-    i32.store
-    local.get $3
-    call $src-as/base/System/System#update@virtual
-    local.get $1
-    i32.const 1
-    i32.add
-    local.set $1
-    br $for-loop|0
-   end
-  end
-  local.get $0
-  local.set $3
-  global.get $~lib/memory/__stack_pointer
-  i32.const 8
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $3
- )
- (func $src-as/exports/mainFactories/update
-  (local $0 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store
-  call $src-as/base/World/World.get:main
-  local.set $0
-  global.get $~lib/memory/__stack_pointer
-  local.get $0
-  i32.store
-  local.get $0
-  call $src-as/base/World/World#update
-  drop
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.add
-  global.set $~lib/memory/__stack_pointer
- )
- (func $src-as/base/World/World#has<src-as/base/systems/TimeSystem/TimeSystem> (param $0 i32) (result i32)
-  (local $1 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store
-  local.get $0
-  i32.load offset=20
-  local.set $1
-  global.get $~lib/memory/__stack_pointer
-  local.get $1
-  i32.store
-  local.get $1
-  i32.const 98
-  call $~lib/map/Map<u32,src-as/base/Object/ObjectBase>#has
-  local.set $1
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $1
- )
- (func $src-as/base/World/World#set<src-as/components/Time/Time> (param $0 i32) (param $1 i32) (result i32)
-  (local $2 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store
-  local.get $0
-  i32.load offset=20
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  local.get $2
-  i32.store
-  local.get $2
-  i32.const 99
-  local.get $1
-  call $~lib/map/Map<u32,src-as/base/Object/ObjectBase>#set
-  drop
-  local.get $0
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $2
- )
- (func $src-as/base/systems/TimeSystem/TimeSystem#constructor (param $0 i32) (result i32)
-  (local $1 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 12
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i64.const 0
-  i64.store
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store offset=8
-  local.get $0
-  i32.eqz
-  if
-   global.get $~lib/memory/__stack_pointer
-   i32.const 12
-   i32.const 98
-   call $~lib/rt/itcms/__new
-   local.tee $0
-   i32.store
-  end
-  local.get $0
-  i32.const 0
-  call $src-as/base/systems/TimeSystem/TimeSystem#set:time
-  global.get $~lib/memory/__stack_pointer
-  local.get $0
-  global.get $src-as/base/SystemPriority/timeSystemPriority
-  local.set $1
-  global.get $~lib/memory/__stack_pointer
-  local.get $1
-  i32.store offset=4
-  local.get $1
-  call $src-as/base/System/System#constructor
-  local.tee $0
-  i32.store
-  local.get $0
-  i32.const 0
-  call $src-as/components/Time/Time#constructor
-  call $src-as/base/systems/TimeSystem/TimeSystem#set:time
-  local.get $0
-  i32.load offset=4
-  local.set $1
-  global.get $~lib/memory/__stack_pointer
-  local.get $1
-  i32.store offset=8
-  local.get $1
-  local.get $0
-  i32.load offset=8
-  local.set $1
-  global.get $~lib/memory/__stack_pointer
-  local.get $1
-  i32.store offset=4
-  local.get $1
-  call $src-as/base/World/World#set<src-as/components/Time/Time>
-  drop
-  local.get $0
-  local.set $1
-  global.get $~lib/memory/__stack_pointer
-  i32.const 12
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $1
- )
- (func $~lib/util/sort/extendRunRight<src-as/base/System/System> (param $0 i32) (param $1 i32) (param $2 i32) (param $3 i32) (result i32)
-  (local $4 i32)
-  (local $5 i32)
-  (local $6 i32)
-  (local $7 i32)
-  (local $8 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 12
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i64.const 0
-  i64.store
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store offset=8
-  local.get $1
-  local.get $2
-  i32.eq
-  if
-   local.get $1
-   local.set $8
-   global.get $~lib/memory/__stack_pointer
-   i32.const 12
-   i32.add
-   global.set $~lib/memory/__stack_pointer
-   local.get $8
-   return
-  end
-  local.get $1
-  local.set $4
-  local.get $0
-  local.get $4
-  i32.const 2
-  i32.shl
-  i32.add
-  i32.load
-  local.set $8
-  global.get $~lib/memory/__stack_pointer
-  local.get $8
-  i32.store
-  local.get $8
-  local.get $0
-  local.get $4
-  i32.const 1
-  i32.add
-  local.tee $4
-  i32.const 2
-  i32.shl
-  i32.add
-  i32.load
-  local.set $8
-  global.get $~lib/memory/__stack_pointer
-  local.get $8
-  i32.store offset=4
-  local.get $8
-  i32.const 2
-  global.set $~argumentsLength
-  local.get $3
-  i32.load
-  call_indirect $0 (type $i32_i32_=>_i32)
-  i32.const 0
-  i32.gt_s
-  if
-   loop $while-continue|0
-    local.get $4
-    local.get $2
-    i32.lt_s
-    if (result i32)
-     local.get $0
-     local.get $4
-     i32.const 2
-     i32.shl
-     i32.add
-     i32.load offset=4
-     local.set $8
-     global.get $~lib/memory/__stack_pointer
-     local.get $8
-     i32.store
-     local.get $8
-     local.get $0
-     local.get $4
-     i32.const 2
-     i32.shl
-     i32.add
-     i32.load
-     local.set $8
-     global.get $~lib/memory/__stack_pointer
-     local.get $8
-     i32.store offset=4
-     local.get $8
-     i32.const 2
-     global.set $~argumentsLength
-     local.get $3
-     i32.load
-     call_indirect $0 (type $i32_i32_=>_i32)
-     i32.const 31
-     i32.shr_u
-    else
-     i32.const 0
-    end
-    local.set $5
-    local.get $5
-    if
-     local.get $4
-     i32.const 1
-     i32.add
-     local.set $4
-     br $while-continue|0
-    end
-   end
-   local.get $4
-   local.set $5
-   loop $while-continue|1
-    local.get $1
-    local.get $5
-    i32.lt_s
-    local.set $6
-    local.get $6
-    if
-     global.get $~lib/memory/__stack_pointer
-     local.get $0
-     local.get $1
-     i32.const 2
-     i32.shl
-     i32.add
-     i32.load
-     local.tee $7
-     i32.store offset=8
-     local.get $0
-     local.get $1
-     i32.const 2
-     i32.shl
-     i32.add
-     local.get $0
-     local.get $5
-     i32.const 2
-     i32.shl
-     i32.add
-     i32.load
-     i32.store
-     local.get $1
-     i32.const 1
-     i32.add
-     local.set $1
-     local.get $0
-     local.get $5
-     i32.const 2
-     i32.shl
-     i32.add
-     local.get $7
-     i32.store
-     local.get $5
-     i32.const 1
-     i32.sub
-     local.set $5
-     br $while-continue|1
-    end
-   end
-  else
-   loop $while-continue|2
-    local.get $4
-    local.get $2
-    i32.lt_s
-    if (result i32)
-     local.get $0
-     local.get $4
-     i32.const 2
-     i32.shl
-     i32.add
-     i32.load offset=4
-     local.set $8
-     global.get $~lib/memory/__stack_pointer
-     local.get $8
-     i32.store
-     local.get $8
-     local.get $0
-     local.get $4
-     i32.const 2
-     i32.shl
-     i32.add
-     i32.load
-     local.set $8
-     global.get $~lib/memory/__stack_pointer
-     local.get $8
-     i32.store offset=4
-     local.get $8
-     i32.const 2
-     global.set $~argumentsLength
-     local.get $3
-     i32.load
-     call_indirect $0 (type $i32_i32_=>_i32)
-     i32.const 0
-     i32.ge_s
-    else
-     i32.const 0
-    end
-    local.set $5
-    local.get $5
-    if
-     local.get $4
-     i32.const 1
-     i32.add
-     local.set $4
-     br $while-continue|2
-    end
-   end
-  end
-  local.get $4
-  local.set $8
-  global.get $~lib/memory/__stack_pointer
-  i32.const 12
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $8
- )
- (func $src-as/base/SystemPriority/SystemPriority.sortSystems<src-as/base/System/System> (param $0 i32)
-  (local $1 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store
-  local.get $0
-  i32.const 17040
-  local.set $1
-  global.get $~lib/memory/__stack_pointer
-  local.get $1
-  i32.store
-  local.get $1
-  call $~lib/array/Array<src-as/base/System/System>#sort
-  drop
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.add
-  global.set $~lib/memory/__stack_pointer
- )
- (func $src-as/base/World/World#attachSystem<src-as/base/systems/TimeSystem/TimeSystem> (param $0 i32) (param $1 i32) (result i32)
-  (local $2 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store
-  local.get $0
-  call $src-as/base/World/World#has<src-as/base/systems/TimeSystem/TimeSystem>
-  if
-   local.get $0
-   local.set $2
-   global.get $~lib/memory/__stack_pointer
-   i32.const 4
-   i32.add
-   global.set $~lib/memory/__stack_pointer
-   local.get $2
-   return
-  end
-  local.get $1
-  i32.load offset=4
-  local.get $0
-  i32.ne
-  if
-   i32.const 16800
-   i32.const 16976
-   i32.const 97
-   i32.const 4
-   call $~lib/builtins/abort
-   unreachable
-  end
-  i32.const 0
-  drop
-  local.get $0
-  i32.load offset=4
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  local.get $2
-  i32.store
-  local.get $2
-  local.get $1
-  call $~lib/array/Array<src-as/base/System/System>#push
-  drop
-  local.get $0
-  i32.load offset=20
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  local.get $2
-  i32.store
-  local.get $2
-  i32.const 98
-  local.get $1
-  call $~lib/map/Map<u32,src-as/base/Object/ObjectBase>#set
-  drop
-  local.get $0
-  i32.load offset=4
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  local.get $2
-  i32.store
-  local.get $2
-  call $src-as/base/SystemPriority/SystemPriority.sortSystems<src-as/base/System/System>
-  local.get $0
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $2
- )
- (func $src-as/base/World/World#has<src-as/base/systems/TransformSystem/TransformSystem> (param $0 i32) (result i32)
-  (local $1 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store
-  local.get $0
-  i32.load offset=20
-  local.set $1
-  global.get $~lib/memory/__stack_pointer
-  local.get $1
-  i32.store
-  local.get $1
-  i32.const 93
-  call $~lib/map/Map<u32,src-as/base/Object/ObjectBase>#has
-  local.set $1
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $1
- )
- (func $src-as/base/Query/TypedQuery<src-as/components/Transform/Transform>#constructor (param $0 i32) (result i32)
-  (local $1 i32)
-  (local $2 i32)
-  (local $3 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 8
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i64.const 0
-  i64.store
-  local.get $0
-  i32.eqz
-  if
-   global.get $~lib/memory/__stack_pointer
-   i32.const 12
-   i32.const 96
-   call $~lib/rt/itcms/__new
-   local.tee $0
-   i32.store
-  end
-  local.get $0
-  i32.const 0
-  i32.const 2
-  i32.const 97
-  i32.const 17136
-  call $~lib/rt/__newArray
-  call $src-as/base/Query/TypedQuery<src-as/components/Transform/Transform>#set:components
-  global.get $~lib/memory/__stack_pointer
-  local.get $0
-  i32.const 1
-  i32.const 2
-  i32.const 80
-  i32.const 17104
-  call $~lib/rt/__newArray
-  local.set $3
-  global.get $~lib/memory/__stack_pointer
-  local.get $3
-  i32.store offset=4
-  local.get $3
-  call $src-as/base/Query/Query#constructor
-  local.tee $0
-  i32.store
-  local.get $0
-  local.set $3
-  global.get $~lib/memory/__stack_pointer
-  i32.const 8
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $3
- )
- (func $src-as/base/QueryManager/QueryManager#addQuery (param $0 i32) (param $1 i32) (result i32)
-  (local $2 i32)
-  (local $3 i32)
-  (local $4 i32)
-  (local $5 i32)
-  (local $6 i32)
-  (local $7 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 12
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i64.const 0
-  i64.store
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store offset=8
-  i32.const 0
-  local.set $2
-  loop $for-loop|0
-   local.get $2
-   local.get $1
-   i32.load
-   local.set $7
-   global.get $~lib/memory/__stack_pointer
-   local.get $7
-   i32.store
-   local.get $7
-   call $~lib/array/Array<u32>#get:length
-   i32.lt_s
-   local.set $3
-   local.get $3
-   if
-    local.get $1
-    i32.load
-    local.set $7
-    global.get $~lib/memory/__stack_pointer
-    local.get $7
-    i32.store
-    local.get $7
-    local.get $2
-    call $~lib/array/Array<u32>#__get
-    local.set $4
-    local.get $0
-    i32.load
-    local.set $7
-    global.get $~lib/memory/__stack_pointer
-    local.get $7
-    i32.store
-    local.get $7
-    local.get $4
-    call $~lib/map/Map<u32,~lib/array/Array<src-as/base/Query/Query>>#has
-    i32.eqz
-    if
-     local.get $0
-     i32.load
-     local.set $7
-     global.get $~lib/memory/__stack_pointer
-     local.get $7
-     i32.store
-     local.get $7
-     local.get $4
-     i32.const 0
-     i32.const 2
-     i32.const 82
-     i32.const 17168
-     call $~lib/rt/__newArray
-     local.set $7
-     global.get $~lib/memory/__stack_pointer
-     local.get $7
-     i32.store offset=4
-     local.get $7
-     call $~lib/map/Map<u32,~lib/array/Array<src-as/base/Query/Query>>#set
-     drop
-    end
-    global.get $~lib/memory/__stack_pointer
-    local.get $0
-    i32.load
-    local.set $7
-    global.get $~lib/memory/__stack_pointer
-    local.get $7
-    i32.store
-    local.get $7
-    local.get $4
-    call $~lib/map/Map<u32,~lib/array/Array<src-as/base/Query/Query>>#get
-    local.tee $6
-    i32.store offset=8
-    local.get $6
-    local.get $1
-    call $~lib/array/Array<src-as/base/Query/Query>#push
-    drop
-    local.get $2
-    i32.const 1
-    i32.add
-    local.set $2
-    br $for-loop|0
-   end
-  end
-  local.get $0
-  local.set $7
-  global.get $~lib/memory/__stack_pointer
-  i32.const 12
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $7
- )
- (func $src-as/base/World/World#createQuery<src-as/components/Transform/Transform> (param $0 i32) (result i32)
-  (local $1 i32)
-  (local $2 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 8
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i64.const 0
-  i64.store
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  call $src-as/base/Query/TypedQuery<src-as/components/Transform/Transform>#constructor
-  local.tee $1
-  i32.store
-  local.get $0
-  i32.load offset=24
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  local.get $2
-  i32.store offset=4
-  local.get $2
-  local.get $1
-  call $src-as/base/QueryManager/QueryManager#addQuery
-  drop
-  local.get $1
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  i32.const 8
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $2
  )
  (func $src-as/base/Entity/Entity#bind (param $0 i32) (result i32)
   (local $1 i32)
@@ -36089,7 +38549,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 8
-   i32.const 73
+   i32.const 80
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -36178,8 +38638,8 @@
   call $src-as/components/Transform/Transform#set:parent
   local.get $2
   if
-   i32.const 17312
-   i32.const 17424
+   i32.const 16896
+   i32.const 17008
    i32.const 45
    i32.const 4
    call $~lib/builtins/abort
@@ -36515,7 +38975,7 @@
   local.get $1
   i32.store
   local.get $1
-  i32.const 68
+  i32.const 75
   call $~lib/map/Map<u32,src-as/base/Object/ObjectBase>#has
   local.set $1
   global.get $~lib/memory/__stack_pointer
@@ -36543,18 +39003,18 @@
   local.get $2
   i32.store
   local.get $2
-  i32.const 68
+  i32.const 75
   call $~lib/map/Map<u32,src-as/base/Object/ObjectBase>#get
   local.tee $1
   i32.store offset=4
   local.get $1
-  i32.const 68
+  i32.const 75
   call $~lib/rt/__instanceof
   if (result i32)
    local.get $1
   else
-   i32.const 17760
-   i32.const 16976
+   i32.const 17456
+   i32.const 17520
    i32.const 43
    i32.const 41
    call $~lib/builtins/abort
@@ -36584,7 +39044,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 12
-   i32.const 68
+   i32.const 75
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -36592,8 +39052,8 @@
   local.get $0
   i32.const 0
   i32.const 2
-  i32.const 89
-  i32.const 17824
+  i32.const 96
+  i32.const 17584
   call $~lib/rt/__newArray
   call $src-as/base/systems/BehaviorSystem/BehaviorSystem#set:behaviors
   global.get $~lib/memory/__stack_pointer
@@ -36614,6 +39074,247 @@
   i32.add
   global.set $~lib/memory/__stack_pointer
   local.get $3
+ )
+ (func $~lib/util/sort/extendRunRight<src-as/base/System/System> (param $0 i32) (param $1 i32) (param $2 i32) (param $3 i32) (result i32)
+  (local $4 i32)
+  (local $5 i32)
+  (local $6 i32)
+  (local $7 i32)
+  (local $8 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 12
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store offset=8
+  local.get $1
+  local.get $2
+  i32.eq
+  if
+   local.get $1
+   local.set $8
+   global.get $~lib/memory/__stack_pointer
+   i32.const 12
+   i32.add
+   global.set $~lib/memory/__stack_pointer
+   local.get $8
+   return
+  end
+  local.get $1
+  local.set $4
+  local.get $0
+  local.get $4
+  i32.const 2
+  i32.shl
+  i32.add
+  i32.load
+  local.set $8
+  global.get $~lib/memory/__stack_pointer
+  local.get $8
+  i32.store
+  local.get $8
+  local.get $0
+  local.get $4
+  i32.const 1
+  i32.add
+  local.tee $4
+  i32.const 2
+  i32.shl
+  i32.add
+  i32.load
+  local.set $8
+  global.get $~lib/memory/__stack_pointer
+  local.get $8
+  i32.store offset=4
+  local.get $8
+  i32.const 2
+  global.set $~argumentsLength
+  local.get $3
+  i32.load
+  call_indirect $0 (type $i32_i32_=>_i32)
+  i32.const 0
+  i32.gt_s
+  if
+   loop $while-continue|0
+    local.get $4
+    local.get $2
+    i32.lt_s
+    if (result i32)
+     local.get $0
+     local.get $4
+     i32.const 2
+     i32.shl
+     i32.add
+     i32.load offset=4
+     local.set $8
+     global.get $~lib/memory/__stack_pointer
+     local.get $8
+     i32.store
+     local.get $8
+     local.get $0
+     local.get $4
+     i32.const 2
+     i32.shl
+     i32.add
+     i32.load
+     local.set $8
+     global.get $~lib/memory/__stack_pointer
+     local.get $8
+     i32.store offset=4
+     local.get $8
+     i32.const 2
+     global.set $~argumentsLength
+     local.get $3
+     i32.load
+     call_indirect $0 (type $i32_i32_=>_i32)
+     i32.const 31
+     i32.shr_u
+    else
+     i32.const 0
+    end
+    local.set $5
+    local.get $5
+    if
+     local.get $4
+     i32.const 1
+     i32.add
+     local.set $4
+     br $while-continue|0
+    end
+   end
+   local.get $4
+   local.set $5
+   loop $while-continue|1
+    local.get $1
+    local.get $5
+    i32.lt_s
+    local.set $6
+    local.get $6
+    if
+     global.get $~lib/memory/__stack_pointer
+     local.get $0
+     local.get $1
+     i32.const 2
+     i32.shl
+     i32.add
+     i32.load
+     local.tee $7
+     i32.store offset=8
+     local.get $0
+     local.get $1
+     i32.const 2
+     i32.shl
+     i32.add
+     local.get $0
+     local.get $5
+     i32.const 2
+     i32.shl
+     i32.add
+     i32.load
+     i32.store
+     local.get $1
+     i32.const 1
+     i32.add
+     local.set $1
+     local.get $0
+     local.get $5
+     i32.const 2
+     i32.shl
+     i32.add
+     local.get $7
+     i32.store
+     local.get $5
+     i32.const 1
+     i32.sub
+     local.set $5
+     br $while-continue|1
+    end
+   end
+  else
+   loop $while-continue|2
+    local.get $4
+    local.get $2
+    i32.lt_s
+    if (result i32)
+     local.get $0
+     local.get $4
+     i32.const 2
+     i32.shl
+     i32.add
+     i32.load offset=4
+     local.set $8
+     global.get $~lib/memory/__stack_pointer
+     local.get $8
+     i32.store
+     local.get $8
+     local.get $0
+     local.get $4
+     i32.const 2
+     i32.shl
+     i32.add
+     i32.load
+     local.set $8
+     global.get $~lib/memory/__stack_pointer
+     local.get $8
+     i32.store offset=4
+     local.get $8
+     i32.const 2
+     global.set $~argumentsLength
+     local.get $3
+     i32.load
+     call_indirect $0 (type $i32_i32_=>_i32)
+     i32.const 0
+     i32.ge_s
+    else
+     i32.const 0
+    end
+    local.set $5
+    local.get $5
+    if
+     local.get $4
+     i32.const 1
+     i32.add
+     local.set $4
+     br $while-continue|2
+    end
+   end
+  end
+  local.get $4
+  local.set $8
+  global.get $~lib/memory/__stack_pointer
+  i32.const 12
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $8
+ )
+ (func $src-as/base/SystemPriority/SystemPriority.sortSystems<src-as/base/System/System> (param $0 i32)
+  (local $1 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  i32.const 17792
+  local.set $1
+  global.get $~lib/memory/__stack_pointer
+  local.get $1
+  i32.store
+  local.get $1
+  call $~lib/array/Array<src-as/base/System/System>#sort
+  drop
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
  )
  (func $src-as/base/World/World#attachSystem<src-as/base/systems/BehaviorSystem/BehaviorSystem> (param $0 i32) (param $1 i32) (result i32)
   (local $2 i32)
@@ -36642,8 +39343,8 @@
   local.get $0
   i32.ne
   if
-   i32.const 16800
-   i32.const 16976
+   i32.const 17616
+   i32.const 17520
    i32.const 97
    i32.const 4
    call $~lib/builtins/abort
@@ -36668,7 +39369,7 @@
   local.get $2
   i32.store
   local.get $2
-  i32.const 68
+  i32.const 75
   local.get $1
   call $~lib/map/Map<u32,src-as/base/Object/ObjectBase>#set
   drop
@@ -36758,7 +39459,7 @@
    i32.const 0
   else
    local.get $4
-   i32.const 88
+   i32.const 95
    call $~lib/rt/__instanceof
   end
   if
@@ -36771,13 +39472,13 @@
    local.get $5
    local.get $3
    local.tee $4
-   i32.const 88
+   i32.const 95
    call $~lib/rt/__instanceof
    if (result i32)
     local.get $4
    else
-    i32.const 17760
-    i32.const 16976
+    i32.const 17456
+    i32.const 17520
     i32.const 111
     i32.const 54
     call $~lib/builtins/abort
@@ -36813,8 +39514,8 @@
   local.get $0
   i32.ne
   if
-   i32.const 17504
-   i32.const 17696
+   i32.const 17088
+   i32.const 17280
    i32.const 27
    i32.const 4
    call $~lib/builtins/abort
@@ -36827,7 +39528,7 @@
   local.get $2
   i32.store
   local.get $2
-  i32.const 94
+  i32.const 101
   local.get $1
   call $~lib/map/Map<u32,src-as/base/Component/Component>#set
   drop
@@ -36839,7 +39540,7 @@
   i32.store
   local.get $2
   local.get $0
-  i32.const 94
+  i32.const 101
   local.get $1
   call $src-as/base/World/World#onAddComponent
   drop
@@ -36896,7 +39597,7 @@
   local.get $2
   i32.store
   local.get $2
-  i32.const 94
+  i32.const 101
   call $~lib/map/Map<u32,src-as/base/Component/Component>#has
   i32.eqz
   if
@@ -36912,23 +39613,2938 @@
   local.get $2
   i32.store
   local.get $2
-  i32.const 94
+  i32.const 101
   call $~lib/map/Map<u32,src-as/base/Component/Component>#get
   local.tee $1
   i32.store offset=4
   local.get $1
-  i32.const 94
+  i32.const 101
   call $~lib/rt/__instanceof
   if (result i32)
    local.get $1
   else
-   i32.const 17760
-   i32.const 17696
+   i32.const 17456
+   i32.const 17280
    i32.const 45
    i32.const 10
    call $~lib/builtins/abort
    unreachable
   end
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $2
+ )
+ (func $src-as/base/Component/SpatialComponent#constructor (param $0 i32) (result i32)
+  (local $1 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  local.get $0
+  i32.eqz
+  if
+   global.get $~lib/memory/__stack_pointer
+   i32.const 12
+   i32.const 106
+   call $~lib/rt/itcms/__new
+   local.tee $0
+   i32.store
+  end
+  local.get $0
+  i32.const 0
+  call $src-as/base/Component/SpatialComponent#set:transform
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  call $src-as/base/Component/BehaviorComponent#constructor
+  local.tee $0
+  i32.store
+  local.get $0
+  local.get $0
+  i32.load
+  local.set $1
+  global.get $~lib/memory/__stack_pointer
+  local.get $1
+  i32.store offset=4
+  local.get $1
+  call $src-as/base/Entity/Entity#getOrAdd<src-as/components/Transform/Transform>
+  call $src-as/base/Component/SpatialComponent#set:transform
+  local.get $0
+  local.set $1
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $1
+ )
+ (func $src-as/base/World/World#has<src-as/base/systems/InputSystem/InputSystem> (param $0 i32) (result i32)
+  (local $1 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  i32.load offset=20
+  local.set $1
+  global.get $~lib/memory/__stack_pointer
+  local.get $1
+  i32.store
+  local.get $1
+  i32.const 97
+  call $~lib/map/Map<u32,src-as/base/Object/ObjectBase>#has
+  local.set $1
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $1
+ )
+ (func $src-as/base/World/World#get<src-as/base/systems/InputSystem/InputSystem> (param $0 i32) (result i32)
+  (local $1 i32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  i32.load offset=20
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  i32.const 97
+  call $~lib/map/Map<u32,src-as/base/Object/ObjectBase>#get
+  local.tee $1
+  i32.store offset=4
+  local.get $1
+  i32.const 97
+  call $~lib/rt/__instanceof
+  if (result i32)
+   local.get $1
+  else
+   i32.const 17456
+   i32.const 17520
+   i32.const 43
+   i32.const 41
+   call $~lib/builtins/abort
+   unreachable
+  end
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $2
+ )
+ (func $src-as/math/Vector2/Vector2#constructor (param $0 i32) (param $1 f32) (param $2 f32) (result i32)
+  (local $3 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  local.get $0
+  i32.eqz
+  if
+   global.get $~lib/memory/__stack_pointer
+   i32.const 4
+   i32.const 98
+   call $~lib/rt/itcms/__new
+   local.tee $0
+   i32.store
+  end
+  local.get $0
+  i32.const 0
+  call $src-as/math/Vector2/Vector2#set:m
+  local.get $0
+  i32.const 0
+  i32.const 2
+  call $~lib/typedarray/Float32Array#constructor
+  call $src-as/math/Vector2/Vector2#set:m
+  local.get $0
+  i32.load
+  local.set $3
+  global.get $~lib/memory/__stack_pointer
+  local.get $3
+  i32.store offset=4
+  local.get $3
+  i32.const 0
+  local.get $1
+  call $~lib/typedarray/Float32Array#__set
+  local.get $0
+  i32.load
+  local.set $3
+  global.get $~lib/memory/__stack_pointer
+  local.get $3
+  i32.store offset=4
+  local.get $3
+  i32.const 1
+  local.get $2
+  call $~lib/typedarray/Float32Array#__set
+  local.get $0
+  local.set $3
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $3
+ )
+ (func $src-as/base/systems/InputSystem/InputSystem#constructor (param $0 i32) (result i32)
+  (local $1 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  local.get $0
+  i32.eqz
+  if
+   global.get $~lib/memory/__stack_pointer
+   i32.const 36
+   i32.const 97
+   call $~lib/rt/itcms/__new
+   local.tee $0
+   i32.store
+  end
+  local.get $0
+  i32.const 0
+  f32.const 0
+  f32.const 0
+  call $src-as/math/Vector2/Vector2#constructor
+  call $src-as/base/systems/InputSystem/InputSystem#set:mousePos
+  local.get $0
+  i32.const 0
+  f32.const 0
+  f32.const 0
+  call $src-as/math/Vector2/Vector2#constructor
+  call $src-as/base/systems/InputSystem/InputSystem#set:mouseDeltaPos
+  local.get $0
+  i32.const 0
+  f32.const 0
+  f32.const 0
+  call $src-as/math/Vector2/Vector2#constructor
+  call $src-as/base/systems/InputSystem/InputSystem#set:mouseWheelDeltaPos
+  local.get $0
+  i32.const 0
+  call $src-as/base/systems/InputSystem/InputSystem#set:mouseDown
+  local.get $0
+  i32.const 0
+  call $src-as/base/systems/InputSystem/InputSystem#set:mouseUp
+  local.get $0
+  i32.const 0
+  call $src-as/base/systems/InputSystem/InputSystem#set:mouseIsDown
+  local.get $0
+  i32.const 0
+  call $~lib/set/Set<i32>#constructor
+  call $src-as/base/systems/InputSystem/InputSystem#set:keysDown
+  local.get $0
+  i32.const 0
+  call $~lib/set/Set<i32>#constructor
+  call $src-as/base/systems/InputSystem/InputSystem#set:keysIsDown
+  local.get $0
+  i32.const 0
+  call $~lib/set/Set<i32>#constructor
+  call $src-as/base/systems/InputSystem/InputSystem#set:keysUp
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  global.get $src-as/base/SystemPriority/renderSystemPriority
+  local.set $1
+  global.get $~lib/memory/__stack_pointer
+  local.get $1
+  i32.store offset=4
+  local.get $1
+  call $src-as/base/SystemPriority/SystemPriority.after
+  local.set $1
+  global.get $~lib/memory/__stack_pointer
+  local.get $1
+  i32.store offset=4
+  local.get $1
+  call $src-as/base/System/System#constructor
+  local.tee $0
+  i32.store
+  local.get $0
+  local.set $1
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $1
+ )
+ (func $src-as/base/World/World#set<src-as/base/systems/InputSystem/InputSystem> (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  i32.load offset=20
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  i32.const 97
+  local.get $1
+  call $~lib/map/Map<u32,src-as/base/Object/ObjectBase>#set
+  drop
+  local.get $0
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $2
+ )
+ (func $src-as/components/MouseKeyboardController/MouseKeyboardController#constructor (param $0 i32) (result i32)
+  (local $1 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  local.get $0
+  i32.eqz
+  if
+   global.get $~lib/memory/__stack_pointer
+   i32.const 32
+   i32.const 105
+   call $~lib/rt/itcms/__new
+   local.tee $0
+   i32.store
+  end
+  local.get $0
+  i32.const 0
+  call $src-as/components/MouseKeyboardController/MouseKeyboardController#set:inputSystem
+  local.get $0
+  f32.const 1
+  call $src-as/components/MouseKeyboardController/MouseKeyboardController#set:mouseRotationScalar
+  local.get $0
+  f32.const 0.029999999329447746
+  call $src-as/components/MouseKeyboardController/MouseKeyboardController#set:keyRotationScalar
+  local.get $0
+  f32.const 0.10000000149011612
+  call $src-as/components/MouseKeyboardController/MouseKeyboardController#set:keyTranslationScalar
+  local.get $0
+  f32.const 0.009999999776482582
+  call $src-as/components/MouseKeyboardController/MouseKeyboardController#set:wheelTranslationScalar
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  call $src-as/base/Component/SpatialComponent#constructor
+  local.tee $0
+  i32.store
+  local.get $0
+  local.get $0
+  i32.load offset=4
+  local.set $1
+  global.get $~lib/memory/__stack_pointer
+  local.get $1
+  i32.store offset=4
+  local.get $1
+  call $src-as/base/World/World#getOrAdd<src-as/base/systems/InputSystem/InputSystem>
+  call $src-as/components/MouseKeyboardController/MouseKeyboardController#set:inputSystem
+  local.get $0
+  local.set $1
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $1
+ )
+ (func $src-as/base/Entity/Entity#attach<src-as/components/MouseKeyboardController/MouseKeyboardController> (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $1
+  i32.load
+  local.get $0
+  i32.ne
+  if
+   i32.const 17088
+   i32.const 17280
+   i32.const 27
+   i32.const 4
+   call $~lib/builtins/abort
+   unreachable
+  end
+  local.get $0
+  i32.load offset=8
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  i32.const 105
+  local.get $1
+  call $~lib/map/Map<u32,src-as/base/Component/Component>#set
+  drop
+  local.get $0
+  i32.load
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  local.get $0
+  i32.const 105
+  local.get $1
+  call $src-as/base/World/World#onAddComponent
+  drop
+  local.get $0
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $2
+ )
+ (func $src-as/base/Entity/Entity#add<src-as/components/MouseKeyboardController/MouseKeyboardController> (param $0 i32) (result i32)
+  (local $1 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  i32.const 0
+  call $src-as/components/MouseKeyboardController/MouseKeyboardController#constructor
+  local.set $1
+  global.get $~lib/memory/__stack_pointer
+  local.get $1
+  i32.store
+  local.get $1
+  call $src-as/base/Entity/Entity#attach<src-as/components/MouseKeyboardController/MouseKeyboardController>
+  local.set $1
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $1
+ )
+ (func $src-as/base/Entity/Entity#get<src-as/components/MouseKeyboardController/MouseKeyboardController> (param $0 i32) (result i32)
+  (local $1 i32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  i32.load offset=8
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  i32.const 105
+  call $~lib/map/Map<u32,src-as/base/Component/Component>#get
+  local.tee $1
+  i32.store offset=4
+  local.get $1
+  i32.const 105
+  call $~lib/rt/__instanceof
+  if (result i32)
+   local.get $1
+  else
+   i32.const 17456
+   i32.const 17280
+   i32.const 39
+   i32.const 10
+   call $~lib/builtins/abort
+   unreachable
+  end
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $2
+ )
+ (func $src-as/base/Entity/Entity#get<src-as/components/Transform/Transform> (param $0 i32) (result i32)
+  (local $1 i32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  i32.load offset=8
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  i32.const 101
+  call $~lib/map/Map<u32,src-as/base/Component/Component>#get
+  local.tee $1
+  i32.store offset=4
+  local.get $1
+  i32.const 101
+  call $~lib/rt/__instanceof
+  if (result i32)
+   local.get $1
+  else
+   i32.const 17456
+   i32.const 17280
+   i32.const 39
+   i32.const 10
+   call $~lib/builtins/abort
+   unreachable
+  end
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $2
+ )
+ (func $src-as/math/Matrix/Matrix#perspective (param $0 i32) (param $1 f32) (param $2 f32) (param $3 f32) (param $4 f32) (result i32)
+  (local $5 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  i32.load
+  local.set $5
+  global.get $~lib/memory/__stack_pointer
+  local.get $5
+  i32.store
+  local.get $5
+  local.get $1
+  local.get $2
+  local.get $3
+  local.get $4
+  i32.const 5
+  global.set $~argumentsLength
+  global.get $src-as/glMatrix/_mat4/perspective
+  i32.load
+  call_indirect $0 (type $i32_f32_f32_f32_f32_=>_i32)
+  drop
+  local.get $0
+  local.set $5
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $5
+ )
+ (func $src-as/components/Camera/Camera#_updatePerspective (param $0 i32) (result i32)
+  (local $1 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  i32.load offset=20
+  local.set $1
+  global.get $~lib/memory/__stack_pointer
+  local.get $1
+  i32.store
+  local.get $1
+  local.get $0
+  f32.load offset=32
+  local.get $0
+  f32.load offset=36
+  local.get $0
+  f32.load offset=40
+  local.get $0
+  f32.load offset=44
+  call $src-as/math/Matrix/Matrix#perspective
+  drop
+  local.get $0
+  local.set $1
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $1
+ )
+ (func $src-as/base/Entity/Entity#attach<src-as/components/Camera/Camera> (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $1
+  i32.load
+  local.get $0
+  i32.ne
+  if
+   i32.const 17088
+   i32.const 17280
+   i32.const 27
+   i32.const 4
+   call $~lib/builtins/abort
+   unreachable
+  end
+  local.get $0
+  i32.load offset=8
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  i32.const 108
+  local.get $1
+  call $~lib/map/Map<u32,src-as/base/Component/Component>#set
+  drop
+  local.get $0
+  i32.load
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  local.get $0
+  i32.const 108
+  local.get $1
+  call $src-as/base/World/World#onAddComponent
+  drop
+  local.get $0
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $2
+ )
+ (func $src-as/base/Entity/Entity#add<src-as/components/Camera/Camera> (param $0 i32) (result i32)
+  (local $1 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  i32.const 0
+  f32.const 0
+  f32.const 0
+  f32.const 0.009999999776482582
+  i32.const 0
+  global.set $~argumentsLength
+  f32.const 1e3
+  call $src-as/components/Camera/Camera#constructor@varargs
+  local.set $1
+  global.get $~lib/memory/__stack_pointer
+  local.get $1
+  i32.store
+  local.get $1
+  call $src-as/base/Entity/Entity#attach<src-as/components/Camera/Camera>
+  local.set $1
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $1
+ )
+ (func $src-as/exports/camera/createDefaultCamera (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  (local $6 i32)
+  (local $7 i32)
+  (local $8 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 40
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.const 40
+  memory.fill
+  global.get $~lib/memory/__stack_pointer
+  call $src-as/base/World/World.get:main
+  local.set $8
+  global.get $~lib/memory/__stack_pointer
+  local.get $8
+  i32.store offset=8
+  local.get $8
+  call $src-as/base/World/World#createEntity
+  local.set $8
+  global.get $~lib/memory/__stack_pointer
+  local.get $8
+  i32.store offset=4
+  local.get $8
+  call $src-as/base/Entity/Entity#add<src-as/components/Transform/Transform>
+  local.set $8
+  global.get $~lib/memory/__stack_pointer
+  local.get $8
+  i32.store
+  local.get $8
+  call $src-as/base/Entity/Entity#add<src-as/components/MouseKeyboardController/MouseKeyboardController>
+  local.tee $2
+  i32.store offset=12
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  call $src-as/base/Entity/Entity#get<src-as/components/MouseKeyboardController/MouseKeyboardController>
+  local.tee $3
+  i32.store offset=16
+  local.get $0
+  i32.eqz
+  if
+   local.get $3
+   f32.const 0
+   call $src-as/components/MouseKeyboardController/MouseKeyboardController#set:keyRotationScalar
+   local.get $3
+   f32.const 0
+   call $src-as/components/MouseKeyboardController/MouseKeyboardController#set:keyTranslationScalar
+  end
+  local.get $1
+  i32.eqz
+  if
+   local.get $3
+   f32.const 0
+   call $src-as/components/MouseKeyboardController/MouseKeyboardController#set:wheelTranslationScalar
+   local.get $3
+   f32.const 0
+   call $src-as/components/MouseKeyboardController/MouseKeyboardController#set:mouseRotationScalar
+  end
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  call $src-as/base/Entity/Entity#get<src-as/components/Transform/Transform>
+  local.tee $4
+  i32.store offset=20
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  f32.const 0
+  global.get $src-as/math/constants/TAU
+  f32.const 0.5
+  f32.mul
+  f32.const 0
+  call $src-as/math/Vector3/Vector3#constructor
+  local.tee $5
+  i32.store offset=24
+  local.get $4
+  i32.load offset=28
+  local.set $8
+  global.get $~lib/memory/__stack_pointer
+  local.get $8
+  i32.store
+  local.get $8
+  local.get $5
+  call $src-as/math/Quaternion/Quaternion#fromEulerAngles
+  drop
+  local.get $4
+  i32.load offset=20
+  local.set $8
+  global.get $~lib/memory/__stack_pointer
+  local.get $8
+  i32.store
+  local.get $8
+  f32.const 3
+  call $src-as/math/Vector3/Vector3#set:z
+  local.get $4
+  i32.load offset=20
+  local.set $8
+  global.get $~lib/memory/__stack_pointer
+  local.get $8
+  i32.store
+  local.get $8
+  f32.const 1
+  call $src-as/math/Vector3/Vector3#set:y
+  global.get $~lib/memory/__stack_pointer
+  call $src-as/base/World/World.get:main
+  local.set $8
+  global.get $~lib/memory/__stack_pointer
+  local.get $8
+  i32.store offset=28
+  local.get $8
+  call $src-as/base/World/World#createEntity
+  local.set $8
+  global.get $~lib/memory/__stack_pointer
+  local.get $8
+  i32.store offset=4
+  local.get $8
+  i32.const 0
+  local.get $4
+  call $src-as/components/Transform/Transform#constructor
+  local.set $8
+  global.get $~lib/memory/__stack_pointer
+  local.get $8
+  i32.store offset=8
+  local.get $8
+  call $src-as/base/Entity/Entity#attach<src-as/components/Transform/Transform>
+  local.set $8
+  global.get $~lib/memory/__stack_pointer
+  local.get $8
+  i32.store
+  local.get $8
+  call $src-as/base/Entity/Entity#add<src-as/components/Camera/Camera>
+  local.tee $6
+  i32.store offset=32
+  global.get $~lib/memory/__stack_pointer
+  local.get $6
+  call $src-as/base/Entity/Entity#get<src-as/components/Transform/Transform>
+  local.tee $7
+  i32.store offset=36
+  local.get $7
+  i32.load offset=28
+  local.set $8
+  global.get $~lib/memory/__stack_pointer
+  local.get $8
+  i32.store
+  local.get $8
+  local.get $5
+  call $src-as/math/Quaternion/Quaternion#fromEulerAngles
+  drop
+  local.get $6
+  local.set $8
+  global.get $~lib/memory/__stack_pointer
+  i32.const 40
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $8
+ )
+ (func $src-as/base/World/World#get<src-as/rendering/systems/RenderSystem/RenderSystem> (param $0 i32) (result i32)
+  (local $1 i32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  i32.load offset=20
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  i32.const 110
+  call $~lib/map/Map<u32,src-as/base/Object/ObjectBase>#get
+  local.tee $1
+  i32.store offset=4
+  local.get $1
+  i32.const 110
+  call $~lib/rt/__instanceof
+  if (result i32)
+   local.get $1
+  else
+   i32.const 17456
+   i32.const 17520
+   i32.const 43
+   i32.const 41
+   call $~lib/builtins/abort
+   unreachable
+  end
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $2
+ )
+ (func $src-as/base/World/World#get<src-as/base/systems/TransformSystem/TransformSystem> (param $0 i32) (result i32)
+  (local $1 i32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  i32.load offset=20
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  i32.const 100
+  call $~lib/map/Map<u32,src-as/base/Object/ObjectBase>#get
+  local.tee $1
+  i32.store offset=4
+  local.get $1
+  i32.const 100
+  call $~lib/rt/__instanceof
+  if (result i32)
+   local.get $1
+  else
+   i32.const 17456
+   i32.const 17520
+   i32.const 43
+   i32.const 41
+   call $~lib/builtins/abort
+   unreachable
+  end
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $2
+ )
+ (func $~lib/map/Map<u32,src-as/base/Component/Component>#values (param $0 i32) (result i32)
+  (local $1 i32)
+  (local $2 i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  (local $6 i32)
+  (local $7 i32)
+  (local $8 i32)
+  (local $9 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  local.get $0
+  i32.load offset=8
+  local.set $1
+  local.get $0
+  i32.load offset=16
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  local.get $2
+  call $~lib/array/Array<src-as/base/Component/Component>#constructor
+  local.tee $3
+  i32.store
+  i32.const 0
+  local.set $4
+  i32.const 0
+  local.set $5
+  loop $for-loop|0
+   local.get $5
+   local.get $2
+   i32.lt_s
+   local.set $6
+   local.get $6
+   if
+    local.get $1
+    local.get $5
+    i32.const 12
+    i32.mul
+    i32.add
+    local.set $7
+    local.get $7
+    i32.load offset=8
+    i32.const 1
+    i32.and
+    i32.eqz
+    if
+     local.get $3
+     local.get $4
+     local.tee $8
+     i32.const 1
+     i32.add
+     local.set $4
+     local.get $8
+     local.get $7
+     i32.load offset=4
+     local.set $9
+     global.get $~lib/memory/__stack_pointer
+     local.get $9
+     i32.store offset=4
+     local.get $9
+     call $~lib/array/Array<src-as/base/Component/Component>#__set
+    end
+    local.get $5
+    i32.const 1
+    i32.add
+    local.set $5
+    br $for-loop|0
+   end
+  end
+  local.get $3
+  local.get $4
+  call $~lib/array/Array<src-as/base/Component/Component>#set:length
+  local.get $3
+  local.set $9
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $9
+ )
+ (func $src-as/base/Query/Query#removeEntity (param $0 i32) (param $1 i32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  i32.load offset=4
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  local.get $1
+  call $~lib/set/Set<src-as/base/Entity/Entity>#delete
+  drop
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+ )
+ (func $src-as/base/QueryManager/QueryManager#onRemoveComponent (param $0 i32) (param $1 i32) (param $2 i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  (local $6 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  local.get $0
+  i32.load
+  local.set $6
+  global.get $~lib/memory/__stack_pointer
+  local.get $6
+  i32.store
+  local.get $6
+  local.get $2
+  call $~lib/map/Map<u32,~lib/array/Array<src-as/base/Query/Query>>#has
+  i32.eqz
+  if
+   global.get $~lib/memory/__stack_pointer
+   i32.const 8
+   i32.add
+   global.set $~lib/memory/__stack_pointer
+   return
+  end
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  i32.load
+  local.set $6
+  global.get $~lib/memory/__stack_pointer
+  local.get $6
+  i32.store
+  local.get $6
+  local.get $2
+  call $~lib/map/Map<u32,~lib/array/Array<src-as/base/Query/Query>>#get
+  local.tee $3
+  i32.store offset=4
+  i32.const 0
+  local.set $4
+  loop $for-loop|0
+   local.get $4
+   local.get $3
+   call $~lib/array/Array<src-as/base/Query/Query>#get:length
+   i32.lt_s
+   local.set $5
+   local.get $5
+   if
+    local.get $3
+    local.get $4
+    call $~lib/array/Array<src-as/base/Query/Query>#__get
+    i32.load offset=4
+    local.set $6
+    global.get $~lib/memory/__stack_pointer
+    local.get $6
+    i32.store
+    local.get $6
+    local.get $1
+    call $~lib/set/Set<src-as/base/Entity/Entity>#has
+    if
+     local.get $3
+     local.get $4
+     call $~lib/array/Array<src-as/base/Query/Query>#__get
+     local.set $6
+     global.get $~lib/memory/__stack_pointer
+     local.get $6
+     i32.store
+     local.get $6
+     local.get $1
+     call $src-as/base/Query/Query#removeEntity@virtual
+    end
+    local.get $4
+    i32.const 1
+    i32.add
+    local.set $4
+    br $for-loop|0
+   end
+  end
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+ )
+ (func $src-as/base/System/ListenerSystem#removeEntity (param $0 i32) (param $1 i32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  i32.load offset=8
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  local.get $1
+  call $~lib/set/Set<src-as/base/Entity/Entity>#delete
+  drop
+  local.get $0
+  local.get $1
+  call $src-as/base/System/ListenerSystem#onRemove@virtual
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+ )
+ (func $src-as/base/ListenerSystemManager/ListenerSystemManager#onRemoveEntity (param $0 i32) (param $1 i32) (param $2 i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  (local $6 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  local.get $0
+  i32.load
+  local.set $6
+  global.get $~lib/memory/__stack_pointer
+  local.get $6
+  i32.store
+  local.get $6
+  local.get $2
+  call $~lib/map/Map<u32,~lib/array/Array<src-as/base/System/ListenerSystem>>#has
+  i32.eqz
+  if
+   global.get $~lib/memory/__stack_pointer
+   i32.const 8
+   i32.add
+   global.set $~lib/memory/__stack_pointer
+   return
+  end
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  i32.load
+  local.set $6
+  global.get $~lib/memory/__stack_pointer
+  local.get $6
+  i32.store
+  local.get $6
+  local.get $2
+  call $~lib/map/Map<u32,~lib/array/Array<src-as/base/System/ListenerSystem>>#get
+  local.tee $3
+  i32.store offset=4
+  i32.const 0
+  local.set $4
+  loop $for-loop|0
+   local.get $4
+   local.get $3
+   call $~lib/array/Array<src-as/base/System/ListenerSystem>#get:length
+   i32.lt_s
+   local.set $5
+   local.get $5
+   if
+    block $for-continue|0
+     local.get $3
+     local.get $4
+     call $~lib/array/Array<src-as/base/System/ListenerSystem>#__get
+     i32.load offset=8
+     local.set $6
+     global.get $~lib/memory/__stack_pointer
+     local.get $6
+     i32.store
+     local.get $6
+     local.get $1
+     call $~lib/set/Set<src-as/base/Entity/Entity>#has
+     i32.eqz
+     if
+      br $for-continue|0
+     end
+     local.get $3
+     local.get $4
+     call $~lib/array/Array<src-as/base/System/ListenerSystem>#__get
+     local.set $6
+     global.get $~lib/memory/__stack_pointer
+     local.get $6
+     i32.store
+     local.get $6
+     local.get $1
+     call $src-as/base/System/ListenerSystem#removeEntity
+    end
+    local.get $4
+    i32.const 1
+    i32.add
+    local.set $4
+    br $for-loop|0
+   end
+  end
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+ )
+ (func $src-as/base/systems/BehaviorSystem/BehaviorSystem#removeBehavior (param $0 i32) (param $1 i32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  local.get $0
+  i32.load offset=8
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  local.get $0
+  i32.load offset=8
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store offset=4
+  local.get $2
+  local.get $1
+  i32.const 0
+  call $~lib/array/Array<src-as/base/Component/BehaviorComponent>#indexOf
+  i32.const 1
+  call $~lib/array/Array<src-as/base/Component/BehaviorComponent>#splice
+  drop
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+ )
+ (func $src-as/base/World/World#onRemoveComponent (param $0 i32) (param $1 i32) (param $2 i32) (param $3 i32) (result i32)
+  (local $4 i32)
+  (local $5 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  local.get $0
+  i32.load offset=24
+  local.set $5
+  global.get $~lib/memory/__stack_pointer
+  local.get $5
+  i32.store
+  local.get $5
+  local.get $1
+  local.get $2
+  call $src-as/base/QueryManager/QueryManager#onRemoveComponent
+  local.get $0
+  i32.load offset=28
+  local.set $5
+  global.get $~lib/memory/__stack_pointer
+  local.get $5
+  i32.store
+  local.get $5
+  local.get $1
+  local.get $2
+  call $src-as/base/ListenerSystemManager/ListenerSystemManager#onRemoveEntity
+  local.get $3
+  local.tee $4
+  i32.eqz
+  if (result i32)
+   i32.const 0
+  else
+   local.get $4
+   i32.const 95
+   call $~lib/rt/__instanceof
+  end
+  if
+   local.get $0
+   call $src-as/base/World/World#getOrAddSystem<src-as/base/systems/BehaviorSystem/BehaviorSystem>
+   local.set $5
+   global.get $~lib/memory/__stack_pointer
+   local.get $5
+   i32.store
+   local.get $5
+   local.get $3
+   local.tee $4
+   i32.const 95
+   call $~lib/rt/__instanceof
+   if (result i32)
+    local.get $4
+   else
+    i32.const 17456
+    i32.const 17520
+    i32.const 118
+    i32.const 57
+    call $~lib/builtins/abort
+    unreachable
+   end
+   local.set $5
+   global.get $~lib/memory/__stack_pointer
+   local.get $5
+   i32.store offset=4
+   local.get $5
+   call $src-as/base/systems/BehaviorSystem/BehaviorSystem#removeBehavior
+  end
+  local.get $0
+  local.set $5
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $5
+ )
+ (func $src-as/base/Entity/Entity#remove<src-as/base/Component/Component> (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 12
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store offset=8
+  local.get $0
+  i32.load
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  local.get $0
+  local.get $1
+  local.get $0
+  i32.load offset=8
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store offset=8
+  local.get $2
+  local.get $1
+  call $~lib/map/Map<u32,src-as/base/Component/Component>#get
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store offset=4
+  local.get $2
+  call $src-as/base/World/World#onRemoveComponent
+  drop
+  local.get $0
+  i32.load offset=8
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  local.get $1
+  call $~lib/map/Map<u32,src-as/base/Component/Component>#delete
+  drop
+  local.get $0
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  i32.const 12
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $2
+ )
+ (func $src-as/base/World/World#onDisposeEntity (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  i32.load offset=16
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  local.get $1
+  i32.load offset=4
+  call $~lib/map/Map<u32,src-as/base/Entity/Entity>#delete
+  drop
+  local.get $0
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $2
+ )
+ (func $src-as/base/Entity/Entity#dispose (param $0 i32)
+  (local $1 i32)
+  (local $2 i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 12
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store offset=8
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  i32.load offset=8
+  local.set $5
+  global.get $~lib/memory/__stack_pointer
+  local.get $5
+  i32.store
+  local.get $5
+  call $~lib/map/Map<u32,src-as/base/Component/Component>#keys
+  local.tee $1
+  i32.store offset=4
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  i32.load offset=8
+  local.set $5
+  global.get $~lib/memory/__stack_pointer
+  local.get $5
+  i32.store
+  local.get $5
+  call $~lib/map/Map<u32,src-as/base/Component/Component>#values
+  local.tee $2
+  i32.store offset=8
+  i32.const 0
+  local.set $3
+  loop $for-loop|0
+   local.get $3
+   local.get $2
+   call $~lib/array/Array<src-as/base/Component/Component>#get:length
+   i32.lt_s
+   local.set $4
+   local.get $4
+   if
+    local.get $0
+    local.get $1
+    local.get $3
+    call $~lib/array/Array<u32>#__get
+    call $src-as/base/Entity/Entity#remove<src-as/base/Component/Component>
+    drop
+    local.get $3
+    i32.const 1
+    i32.add
+    local.set $3
+    br $for-loop|0
+   end
+  end
+  local.get $0
+  i32.load
+  local.set $5
+  global.get $~lib/memory/__stack_pointer
+  local.get $5
+  i32.store
+  local.get $5
+  local.get $0
+  call $src-as/base/World/World#onDisposeEntity
+  drop
+  global.get $~lib/memory/__stack_pointer
+  i32.const 12
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+ )
+ (func $src-as/exports/camera/removeAllCameras
+  (local $0 i32)
+  (local $1 i32)
+  (local $2 i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  (local $6 i32)
+  (local $7 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 24
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.const 24
+  memory.fill
+  global.get $~lib/memory/__stack_pointer
+  call $src-as/base/World/World.get:main
+  local.set $7
+  global.get $~lib/memory/__stack_pointer
+  local.get $7
+  i32.store
+  local.get $7
+  call $src-as/base/World/World#get<src-as/rendering/systems/RenderSystem/RenderSystem>
+  local.tee $0
+  i32.store offset=4
+  global.get $~lib/memory/__stack_pointer
+  call $src-as/base/World/World.get:main
+  local.set $7
+  global.get $~lib/memory/__stack_pointer
+  local.get $7
+  i32.store
+  local.get $7
+  call $src-as/base/World/World#get<src-as/base/systems/TransformSystem/TransformSystem>
+  i32.load offset=20
+  local.tee $1
+  i32.store offset=8
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  i32.load offset=16
+  i32.load offset=8
+  local.tee $2
+  i32.store offset=12
+  i32.const 0
+  local.set $3
+  loop $for-loop|0
+   local.get $3
+   local.get $2
+   call $~lib/array/Array<src-as/components/Camera/Camera>#get:length
+   i32.lt_s
+   local.set $4
+   local.get $4
+   if
+    global.get $~lib/memory/__stack_pointer
+    local.get $2
+    local.get $3
+    call $~lib/array/Array<src-as/components/Camera/Camera>#__get
+    local.tee $5
+    i32.store offset=16
+    global.get $~lib/memory/__stack_pointer
+    local.get $5
+    i32.load offset=8
+    i32.load offset=36
+    local.tee $6
+    i32.store offset=20
+    local.get $6
+    i32.const 0
+    i32.ne
+    if (result i32)
+     local.get $6
+     local.get $1
+     i32.ne
+    else
+     i32.const 0
+    end
+    if
+     local.get $6
+     i32.load
+     local.set $7
+     global.get $~lib/memory/__stack_pointer
+     local.get $7
+     i32.store
+     local.get $7
+     call $src-as/base/Entity/Entity#dispose
+    end
+    local.get $5
+    i32.load
+    local.set $7
+    global.get $~lib/memory/__stack_pointer
+    local.get $7
+    i32.store
+    local.get $7
+    call $src-as/base/Entity/Entity#dispose
+    local.get $3
+    i32.const 1
+    i32.add
+    local.set $3
+    br $for-loop|0
+   end
+  end
+  global.get $~lib/memory/__stack_pointer
+  i32.const 24
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+ )
+ (func $src-as/rendering/material/Material/Material#addUniformBufferObject (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  i32.load offset=8
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  local.get $1
+  call $~lib/array/Array<src-as/rendering/material/UniformBufferObject/UniformBufferObject>#push
+  drop
+  local.get $0
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $2
+ )
+ (func $src-as/rendering/material/Material/SpatialMaterial#constructor (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 24
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.const 24
+  memory.fill
+  local.get $0
+  i32.eqz
+  if
+   global.get $~lib/memory/__stack_pointer
+   i32.const 24
+   i32.const 120
+   call $~lib/rt/itcms/__new
+   local.tee $0
+   i32.store
+  end
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  local.get $1
+  call $src-as/rendering/material/Material/Material#constructor
+  local.tee $0
+  i32.store
+  local.get $0
+  global.get $src-as/rendering/constants/_ubos/camera/camera
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store offset=20
+  local.get $2
+  call $src-as/rendering/material/Material/Material#addUniformBufferObject
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store offset=12
+  local.get $2
+  global.get $src-as/rendering/constants/_ubos/mesh/mesh
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store offset=16
+  local.get $2
+  call $src-as/rendering/material/Material/Material#addUniformBufferObject
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store offset=4
+  local.get $2
+  global.get $src-as/rendering/constants/_ubos/directionalLight/directionalLight
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store offset=8
+  local.get $2
+  call $src-as/rendering/material/Material/Material#addUniformBufferObject
+  drop
+  local.get $0
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  i32.const 24
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $2
+ )
+ (func $src-as/rendering/material/Material/Material#addUniform (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  local.get $0
+  i32.load
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  local.get $1
+  i32.load
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store offset=4
+  local.get $2
+  local.get $1
+  call $~lib/map/Map<~lib/string/String,src-as/rendering/material/Uniform/Uniform>#set
+  drop
+  local.get $0
+  i32.load offset=4
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  local.get $1
+  call $~lib/array/Array<src-as/rendering/material/Uniform/Uniform>#push
+  drop
+  local.get $0
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $2
+ )
+ (func $src-as/math/Texture/Texture#get:length (param $0 i32) (result i32)
+  (local $1 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  i32.load offset=4
+  local.set $1
+  global.get $~lib/memory/__stack_pointer
+  local.get $1
+  i32.store
+  local.get $1
+  call $~lib/typedarray/Uint8Array#get:length
+  local.set $1
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $1
+ )
+ (func $src-as/rendering/material/Material/StandardMaterial#constructor (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 12
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store offset=8
+  local.get $0
+  i32.eqz
+  if
+   global.get $~lib/memory/__stack_pointer
+   i32.const 32
+   i32.const 119
+   call $~lib/rt/itcms/__new
+   local.tee $0
+   i32.store
+  end
+  local.get $0
+  i32.const 0
+  call $src-as/rendering/material/Material/StandardMaterial#set:color
+  local.get $0
+  global.get $src-as/math/Texture/Texture.white
+  call $src-as/rendering/material/Material/StandardMaterial#set:texture
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  local.get $1
+  call $src-as/rendering/material/Material/SpatialMaterial#constructor
+  local.tee $0
+  i32.store
+  local.get $0
+  i32.const 0
+  f32.const 1
+  f32.const 1
+  f32.const 1
+  f32.const 1
+  call $src-as/math/Color/Color#constructor
+  call $src-as/rendering/material/Material/StandardMaterial#set:color
+  local.get $0
+  global.get $src-as/rendering/constants/_uniforms/Time
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store offset=4
+  local.get $2
+  i32.const 1
+  global.set $~argumentsLength
+  i32.const 0
+  call $src-as/rendering/material/Uniform/Uniform.Float@varargs
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store offset=4
+  local.get $2
+  call $src-as/rendering/material/Material/Material#addUniform
+  drop
+  local.get $0
+  global.get $src-as/rendering/constants/_uniforms/Color
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store offset=4
+  local.get $2
+  local.get $0
+  i32.load offset=24
+  i32.load
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store offset=8
+  local.get $2
+  call $src-as/rendering/material/Uniform/Uniform.Vec4
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store offset=4
+  local.get $2
+  call $src-as/rendering/material/Material/Material#addUniform
+  drop
+  local.get $0
+  global.get $src-as/rendering/constants/_uniforms/Texture
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store offset=4
+  local.get $2
+  local.get $0
+  i32.load offset=28
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store offset=8
+  local.get $2
+  call $src-as/rendering/material/Uniform/Uniform.Texture
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store offset=4
+  local.get $2
+  call $src-as/rendering/material/Material/Material#addUniform
+  drop
+  local.get $0
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  i32.const 12
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $2
+ )
+ (func $src-as/math/Color/Color#set:r (param $0 i32) (param $1 f32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  i32.load
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  i32.const 0
+  local.get $1
+  call $~lib/typedarray/Float32Array#__set
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+ )
+ (func $src-as/math/Color/Color#set:g (param $0 i32) (param $1 f32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  i32.load
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  i32.const 1
+  local.get $1
+  call $~lib/typedarray/Float32Array#__set
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+ )
+ (func $src-as/math/Color/Color#set:b (param $0 i32) (param $1 f32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  i32.load
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  i32.const 2
+  local.get $1
+  call $~lib/typedarray/Float32Array#__set
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+ )
+ (func $src-as/math/Color/Color#set:a (param $0 i32) (param $1 f32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  i32.load
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  i32.const 3
+  local.get $1
+  call $~lib/typedarray/Float32Array#__set
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+ )
+ (func $src-as/rendering/geometry/GridGeometry/GridGeometry#constructor (param $0 i32) (param $1 i32) (param $2 f32) (result i32)
+  (local $3 f32)
+  (local $4 i32)
+  (local $5 i32)
+  (local $6 f32)
+  (local $7 i32)
+  (local $8 i32)
+  (local $9 f32)
+  (local $10 i32)
+  (local $11 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 20
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.const 20
+  memory.fill
+  local.get $0
+  i32.eqz
+  if
+   global.get $~lib/memory/__stack_pointer
+   i32.const 32
+   i32.const 123
+   call $~lib/rt/itcms/__new
+   local.tee $0
+   i32.store
+  end
+  local.get $1
+  i32.const 1
+  i32.le_u
+  if
+   i32.const 2
+   local.set $1
+  end
+  local.get $2
+  f32.const 2
+  f32.div
+  local.set $3
+  local.get $1
+  i32.const 4
+  i32.mul
+  local.set $4
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  local.get $4
+  i32.const 3
+  i32.mul
+  call $~lib/typedarray/Float32Array#constructor
+  local.tee $5
+  i32.store offset=4
+  local.get $2
+  local.get $1
+  f32.convert_i32_u
+  f32.const 1
+  f32.sub
+  f32.div
+  local.set $6
+  i32.const 0
+  local.set $7
+  loop $for-loop|0
+   local.get $7
+   local.get $1
+   i32.lt_u
+   local.set $8
+   local.get $8
+   if
+    local.get $7
+    f32.convert_i32_u
+    local.set $9
+    local.get $7
+    i32.const 12
+    i32.mul
+    local.set $10
+    local.get $5
+    local.get $10
+    i32.const 0
+    i32.add
+    local.get $3
+    f32.neg
+    local.get $9
+    local.get $6
+    f32.mul
+    f32.add
+    call $~lib/typedarray/Float32Array#__set
+    local.get $5
+    local.get $10
+    i32.const 1
+    i32.add
+    local.get $3
+    f32.neg
+    call $~lib/typedarray/Float32Array#__set
+    local.get $5
+    local.get $10
+    i32.const 2
+    i32.add
+    f32.const 0
+    call $~lib/typedarray/Float32Array#__set
+    local.get $5
+    local.get $10
+    i32.const 3
+    i32.add
+    local.get $3
+    f32.neg
+    local.get $9
+    local.get $6
+    f32.mul
+    f32.add
+    call $~lib/typedarray/Float32Array#__set
+    local.get $5
+    local.get $10
+    i32.const 4
+    i32.add
+    local.get $3
+    call $~lib/typedarray/Float32Array#__set
+    local.get $5
+    local.get $10
+    i32.const 5
+    i32.add
+    f32.const 0
+    call $~lib/typedarray/Float32Array#__set
+    local.get $5
+    local.get $10
+    i32.const 6
+    i32.add
+    local.get $3
+    f32.neg
+    call $~lib/typedarray/Float32Array#__set
+    local.get $5
+    local.get $10
+    i32.const 7
+    i32.add
+    local.get $3
+    f32.neg
+    local.get $9
+    local.get $6
+    f32.mul
+    f32.add
+    call $~lib/typedarray/Float32Array#__set
+    local.get $5
+    local.get $10
+    i32.const 8
+    i32.add
+    f32.const 0
+    call $~lib/typedarray/Float32Array#__set
+    local.get $5
+    local.get $10
+    i32.const 9
+    i32.add
+    local.get $3
+    call $~lib/typedarray/Float32Array#__set
+    local.get $5
+    local.get $10
+    i32.const 10
+    i32.add
+    local.get $3
+    f32.neg
+    local.get $9
+    local.get $6
+    f32.mul
+    f32.add
+    call $~lib/typedarray/Float32Array#__set
+    local.get $5
+    local.get $10
+    i32.const 11
+    i32.add
+    f32.const 0
+    call $~lib/typedarray/Float32Array#__set
+    local.get $7
+    i32.const 1
+    i32.add
+    local.set $7
+    br $for-loop|0
+   end
+  end
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  local.get $5
+  call $src-as/rendering/geometry/Geometry/PositionGeometry#constructor
+  local.tee $0
+  i32.store
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  local.get $4
+  i32.const 4
+  i32.mul
+  call $~lib/typedarray/Uint8Array#constructor
+  local.tee $7
+  i32.store offset=8
+  i32.const 0
+  local.set $8
+  loop $for-loop|1
+   local.get $8
+   local.get $7
+   call $~lib/typedarray/Uint8Array#get:length
+   i32.lt_s
+   local.set $10
+   local.get $10
+   if
+    local.get $7
+    local.get $8
+    i32.const 127
+    call $~lib/typedarray/Uint8Array#__set
+    local.get $8
+    i32.const 1
+    i32.add
+    local.set $8
+    br $for-loop|1
+   end
+  end
+  local.get $0
+  i32.const 0
+  global.get $src-as/rendering/constants/_attributes/Color
+  local.set $11
+  global.get $~lib/memory/__stack_pointer
+  local.get $11
+  i32.store offset=16
+  local.get $11
+  i32.const 4
+  local.get $7
+  i32.const 0
+  call $src-as/rendering/geometry/Attribute/Attribute_u8#constructor
+  local.set $11
+  global.get $~lib/memory/__stack_pointer
+  local.get $11
+  i32.store offset=12
+  local.get $11
+  call $src-as/rendering/geometry/Geometry/Geometry#addAttribute
+  drop
+  local.get $0
+  global.get $src-as/WebGL2/imports/_constants/Primitive.LINES
+  call $src-as/rendering/geometry/Geometry/Geometry#set:primitiveType
+  local.get $0
+  local.set $11
+  global.get $~lib/memory/__stack_pointer
+  i32.const 20
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $11
+ )
+ (func $src-as/base/Entity/Entity#attach<src-as/components/Mesh/Mesh> (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $1
+  i32.load
+  local.get $0
+  i32.ne
+  if
+   i32.const 17088
+   i32.const 17280
+   i32.const 27
+   i32.const 4
+   call $~lib/builtins/abort
+   unreachable
+  end
+  local.get $0
+  i32.load offset=8
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  i32.const 113
+  local.get $1
+  call $~lib/map/Map<u32,src-as/base/Component/Component>#set
+  drop
+  local.get $0
+  i32.load
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  local.get $0
+  i32.const 113
+  local.get $1
+  call $src-as/base/World/World#onAddComponent
+  drop
+  local.get $0
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $2
+ )
+ (func $src-as/exports/debug/createDebugGizmos
+  (local $0 i32)
+  (local $1 i32)
+  (local $2 i32)
+  (local $3 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 36
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.const 36
+  memory.fill
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  global.get $src-as/rendering/shader/unlit/unlitVertexColors/unlitVertexColorShader
+  local.set $3
+  global.get $~lib/memory/__stack_pointer
+  local.get $3
+  i32.store
+  local.get $3
+  call $src-as/rendering/material/Material/StandardMaterial#constructor
+  local.tee $0
+  i32.store offset=4
+  local.get $0
+  i32.load offset=24
+  local.set $3
+  global.get $~lib/memory/__stack_pointer
+  local.get $3
+  i32.store offset=8
+  local.get $3
+  f32.const 0.5
+  f32.const 0.5
+  f32.const 0.5
+  f32.const 1
+  call $src-as/math/Color/Color#set
+  drop
+  global.get $~lib/memory/__stack_pointer
+  call $src-as/base/World/World.get:main
+  local.set $3
+  global.get $~lib/memory/__stack_pointer
+  local.get $3
+  i32.store offset=12
+  local.get $3
+  call $src-as/base/World/World#createEntity
+  local.set $3
+  global.get $~lib/memory/__stack_pointer
+  local.get $3
+  i32.store offset=8
+  local.get $3
+  i32.const 0
+  i32.const 0
+  i32.const 21
+  f32.const 20
+  call $src-as/rendering/geometry/GridGeometry/GridGeometry#constructor
+  local.set $3
+  global.get $~lib/memory/__stack_pointer
+  local.get $3
+  i32.store offset=16
+  local.get $3
+  local.get $0
+  call $src-as/components/Mesh/Mesh#constructor
+  local.set $3
+  global.get $~lib/memory/__stack_pointer
+  local.get $3
+  i32.store
+  local.get $3
+  call $src-as/base/Entity/Entity#attach<src-as/components/Mesh/Mesh>
+  local.tee $1
+  i32.store offset=20
+  local.get $1
+  call $src-as/base/Entity/Entity#get<src-as/components/Transform/Transform>
+  i32.load offset=28
+  local.set $3
+  global.get $~lib/memory/__stack_pointer
+  local.get $3
+  i32.store offset=8
+  local.get $3
+  i32.const 0
+  global.get $src-as/math/constants/TAU
+  f32.const 4
+  f32.div
+  f32.const 0
+  f32.const 0
+  call $src-as/math/Vector3/Vector3#constructor
+  local.set $3
+  global.get $~lib/memory/__stack_pointer
+  local.get $3
+  i32.store
+  local.get $3
+  call $src-as/math/Quaternion/Quaternion#fromEulerAngles
+  drop
+  global.get $~lib/memory/__stack_pointer
+  call $src-as/base/World/World.get:main
+  local.set $3
+  global.get $~lib/memory/__stack_pointer
+  local.get $3
+  i32.store offset=12
+  local.get $3
+  call $src-as/base/World/World#createEntity
+  local.set $3
+  global.get $~lib/memory/__stack_pointer
+  local.get $3
+  i32.store offset=8
+  local.get $3
+  i32.const 0
+  global.get $src-as/rendering/geometry/TransformGeometry/TransformGeometry.default
+  local.set $3
+  global.get $~lib/memory/__stack_pointer
+  local.get $3
+  i32.store offset=16
+  local.get $3
+  i32.const 0
+  global.get $src-as/rendering/shader/unlit/unlitVertexColors/unlitVertexColorShader
+  local.set $3
+  global.get $~lib/memory/__stack_pointer
+  local.get $3
+  i32.store offset=28
+  local.get $3
+  call $src-as/rendering/material/Material/StandardMaterial#constructor
+  local.set $3
+  global.get $~lib/memory/__stack_pointer
+  local.get $3
+  i32.store offset=24
+  local.get $3
+  call $src-as/components/Mesh/Mesh#constructor
+  local.set $3
+  global.get $~lib/memory/__stack_pointer
+  local.get $3
+  i32.store
+  local.get $3
+  call $src-as/base/Entity/Entity#attach<src-as/components/Mesh/Mesh>
+  local.tee $2
+  i32.store offset=32
+  global.get $~lib/memory/__stack_pointer
+  i32.const 36
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+ )
+ (func $src-as/base/World/World#update (param $0 i32) (result i32)
+  (local $1 i32)
+  (local $2 i32)
+  (local $3 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  i32.const 0
+  local.set $1
+  loop $for-loop|0
+   local.get $1
+   local.get $0
+   i32.load offset=4
+   local.set $3
+   global.get $~lib/memory/__stack_pointer
+   local.get $3
+   i32.store
+   local.get $3
+   call $~lib/array/Array<src-as/base/System/System>#get:length
+   i32.lt_s
+   local.set $2
+   local.get $2
+   if
+    local.get $0
+    i32.load offset=4
+    local.set $3
+    global.get $~lib/memory/__stack_pointer
+    local.get $3
+    i32.store offset=4
+    local.get $3
+    local.get $1
+    call $~lib/array/Array<src-as/base/System/System>#__get
+    local.set $3
+    global.get $~lib/memory/__stack_pointer
+    local.get $3
+    i32.store
+    local.get $3
+    call $src-as/base/System/System#update@virtual
+    local.get $1
+    i32.const 1
+    i32.add
+    local.set $1
+    br $for-loop|0
+   end
+  end
+  local.get $0
+  local.set $3
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $3
+ )
+ (func $src-as/exports/defaultWorld/update
+  (local $0 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  call $src-as/base/World/World.get:main
+  local.set $0
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  i32.store
+  local.get $0
+  call $src-as/base/World/World#update
+  drop
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+ )
+ (func $src-as/base/World/World#has<src-as/base/systems/TimeSystem/TimeSystem> (param $0 i32) (result i32)
+  (local $1 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  i32.load offset=20
+  local.set $1
+  global.get $~lib/memory/__stack_pointer
+  local.get $1
+  i32.store
+  local.get $1
+  i32.const 125
+  call $~lib/map/Map<u32,src-as/base/Object/ObjectBase>#has
+  local.set $1
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $1
+ )
+ (func $src-as/base/World/World#set<src-as/components/Time/Time> (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  i32.load offset=20
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  i32.const 126
+  local.get $1
+  call $~lib/map/Map<u32,src-as/base/Object/ObjectBase>#set
+  drop
+  local.get $0
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $2
+ )
+ (func $src-as/base/systems/TimeSystem/TimeSystem#constructor (param $0 i32) (result i32)
+  (local $1 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 12
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store offset=8
+  local.get $0
+  i32.eqz
+  if
+   global.get $~lib/memory/__stack_pointer
+   i32.const 12
+   i32.const 125
+   call $~lib/rt/itcms/__new
+   local.tee $0
+   i32.store
+  end
+  local.get $0
+  i32.const 0
+  call $src-as/base/systems/TimeSystem/TimeSystem#set:time
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  global.get $src-as/base/SystemPriority/timeSystemPriority
+  local.set $1
+  global.get $~lib/memory/__stack_pointer
+  local.get $1
+  i32.store offset=4
+  local.get $1
+  call $src-as/base/System/System#constructor
+  local.tee $0
+  i32.store
+  local.get $0
+  i32.const 0
+  call $src-as/components/Time/Time#constructor
+  call $src-as/base/systems/TimeSystem/TimeSystem#set:time
+  local.get $0
+  i32.load offset=4
+  local.set $1
+  global.get $~lib/memory/__stack_pointer
+  local.get $1
+  i32.store offset=8
+  local.get $1
+  local.get $0
+  i32.load offset=8
+  local.set $1
+  global.get $~lib/memory/__stack_pointer
+  local.get $1
+  i32.store offset=4
+  local.get $1
+  call $src-as/base/World/World#set<src-as/components/Time/Time>
+  drop
+  local.get $0
+  local.set $1
+  global.get $~lib/memory/__stack_pointer
+  i32.const 12
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $1
+ )
+ (func $src-as/base/World/World#attachSystem<src-as/base/systems/TimeSystem/TimeSystem> (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  call $src-as/base/World/World#has<src-as/base/systems/TimeSystem/TimeSystem>
+  if
+   local.get $0
+   local.set $2
+   global.get $~lib/memory/__stack_pointer
+   i32.const 4
+   i32.add
+   global.set $~lib/memory/__stack_pointer
+   local.get $2
+   return
+  end
+  local.get $1
+  i32.load offset=4
+  local.get $0
+  i32.ne
+  if
+   i32.const 17616
+   i32.const 17520
+   i32.const 97
+   i32.const 4
+   call $~lib/builtins/abort
+   unreachable
+  end
+  i32.const 0
+  drop
+  local.get $0
+  i32.load offset=4
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  local.get $1
+  call $~lib/array/Array<src-as/base/System/System>#push
+  drop
+  local.get $0
+  i32.load offset=20
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  i32.const 125
+  local.get $1
+  call $~lib/map/Map<u32,src-as/base/Object/ObjectBase>#set
+  drop
+  local.get $0
+  i32.load offset=4
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  call $src-as/base/SystemPriority/SystemPriority.sortSystems<src-as/base/System/System>
+  local.get $0
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $2
+ )
+ (func $src-as/base/World/World#has<src-as/base/systems/TransformSystem/TransformSystem> (param $0 i32) (result i32)
+  (local $1 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  i32.load offset=20
+  local.set $1
+  global.get $~lib/memory/__stack_pointer
+  local.get $1
+  i32.store
+  local.get $1
+  i32.const 100
+  call $~lib/map/Map<u32,src-as/base/Object/ObjectBase>#has
+  local.set $1
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $1
+ )
+ (func $src-as/base/Query/TypedQuery<src-as/components/Transform/Transform>#constructor (param $0 i32) (result i32)
+  (local $1 i32)
+  (local $2 i32)
+  (local $3 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  local.get $0
+  i32.eqz
+  if
+   global.get $~lib/memory/__stack_pointer
+   i32.const 12
+   i32.const 103
+   call $~lib/rt/itcms/__new
+   local.tee $0
+   i32.store
+  end
+  local.get $0
+  i32.const 0
+  i32.const 2
+  i32.const 104
+  i32.const 17952
+  call $~lib/rt/__newArray
+  call $src-as/base/Query/TypedQuery<src-as/components/Transform/Transform>#set:components
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  i32.const 1
+  i32.const 2
+  i32.const 87
+  i32.const 17920
+  call $~lib/rt/__newArray
+  local.set $3
+  global.get $~lib/memory/__stack_pointer
+  local.get $3
+  i32.store offset=4
+  local.get $3
+  call $src-as/base/Query/Query#constructor
+  local.tee $0
+  i32.store
+  local.get $0
+  local.set $3
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $3
+ )
+ (func $src-as/base/QueryManager/QueryManager#addQuery (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  (local $6 i32)
+  (local $7 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 12
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store offset=8
+  i32.const 0
+  local.set $2
+  loop $for-loop|0
+   local.get $2
+   local.get $1
+   i32.load
+   local.set $7
+   global.get $~lib/memory/__stack_pointer
+   local.get $7
+   i32.store
+   local.get $7
+   call $~lib/array/Array<u32>#get:length
+   i32.lt_s
+   local.set $3
+   local.get $3
+   if
+    local.get $1
+    i32.load
+    local.set $7
+    global.get $~lib/memory/__stack_pointer
+    local.get $7
+    i32.store
+    local.get $7
+    local.get $2
+    call $~lib/array/Array<u32>#__get
+    local.set $4
+    local.get $0
+    i32.load
+    local.set $7
+    global.get $~lib/memory/__stack_pointer
+    local.get $7
+    i32.store
+    local.get $7
+    local.get $4
+    call $~lib/map/Map<u32,~lib/array/Array<src-as/base/Query/Query>>#has
+    i32.eqz
+    if
+     local.get $0
+     i32.load
+     local.set $7
+     global.get $~lib/memory/__stack_pointer
+     local.get $7
+     i32.store
+     local.get $7
+     local.get $4
+     i32.const 0
+     i32.const 2
+     i32.const 89
+     i32.const 17984
+     call $~lib/rt/__newArray
+     local.set $7
+     global.get $~lib/memory/__stack_pointer
+     local.get $7
+     i32.store offset=4
+     local.get $7
+     call $~lib/map/Map<u32,~lib/array/Array<src-as/base/Query/Query>>#set
+     drop
+    end
+    global.get $~lib/memory/__stack_pointer
+    local.get $0
+    i32.load
+    local.set $7
+    global.get $~lib/memory/__stack_pointer
+    local.get $7
+    i32.store
+    local.get $7
+    local.get $4
+    call $~lib/map/Map<u32,~lib/array/Array<src-as/base/Query/Query>>#get
+    local.tee $6
+    i32.store offset=8
+    local.get $6
+    local.get $1
+    call $~lib/array/Array<src-as/base/Query/Query>#push
+    drop
+    local.get $2
+    i32.const 1
+    i32.add
+    local.set $2
+    br $for-loop|0
+   end
+  end
+  local.get $0
+  local.set $7
+  global.get $~lib/memory/__stack_pointer
+  i32.const 12
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $7
+ )
+ (func $src-as/base/World/World#createQuery<src-as/components/Transform/Transform> (param $0 i32) (result i32)
+  (local $1 i32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  call $src-as/base/Query/TypedQuery<src-as/components/Transform/Transform>#constructor
+  local.tee $1
+  i32.store
+  local.get $0
+  i32.load offset=24
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store offset=4
+  local.get $2
+  local.get $1
+  call $src-as/base/QueryManager/QueryManager#addQuery
+  drop
+  local.get $1
   local.set $2
   global.get $~lib/memory/__stack_pointer
   i32.const 8
@@ -36956,7 +42572,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 24
-   i32.const 93
+   i32.const 100
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -36971,8 +42587,8 @@
   local.get $0
   i32.const 1
   i32.const 2
-  i32.const 80
-  i32.const 17072
+  i32.const 87
+  i32.const 17888
   call $~lib/rt/__newArray
   local.set $3
   global.get $~lib/memory/__stack_pointer
@@ -37250,7 +42866,7 @@
   i32.const 0
   i32.store
   local.get $0
-  i32.const 17888
+  i32.const 18048
   local.set $1
   global.get $~lib/memory/__stack_pointer
   local.get $1
@@ -37328,8 +42944,8 @@
      local.get $4
      i32.const 0
      i32.const 2
-     i32.const 86
-     i32.const 17856
+     i32.const 93
+     i32.const 18016
      call $~lib/rt/__newArray
      local.set $7
      global.get $~lib/memory/__stack_pointer
@@ -37396,8 +43012,8 @@
   local.get $0
   i32.ne
   if
-   i32.const 16800
-   i32.const 16976
+   i32.const 17616
+   i32.const 17520
    i32.const 97
    i32.const 4
    call $~lib/builtins/abort
@@ -37431,7 +43047,80 @@
   local.get $2
   i32.store
   local.get $2
-  i32.const 93
+  i32.const 100
+  local.get $1
+  call $~lib/map/Map<u32,src-as/base/Object/ObjectBase>#set
+  drop
+  local.get $0
+  i32.load offset=4
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  call $src-as/base/SystemPriority/SystemPriority.sortSystems<src-as/base/System/System>
+  local.get $0
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $2
+ )
+ (func $src-as/base/World/World#attachSystem<src-as/base/systems/InputSystem/InputSystem> (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  call $src-as/base/World/World#has<src-as/base/systems/InputSystem/InputSystem>
+  if
+   local.get $0
+   local.set $2
+   global.get $~lib/memory/__stack_pointer
+   i32.const 4
+   i32.add
+   global.set $~lib/memory/__stack_pointer
+   local.get $2
+   return
+  end
+  local.get $1
+  i32.load offset=4
+  local.get $0
+  i32.ne
+  if
+   i32.const 17616
+   i32.const 17520
+   i32.const 97
+   i32.const 4
+   call $~lib/builtins/abort
+   unreachable
+  end
+  i32.const 0
+  drop
+  local.get $0
+  i32.load offset=4
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  local.get $1
+  call $~lib/array/Array<src-as/base/System/System>#push
+  drop
+  local.get $0
+  i32.load offset=20
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  i32.const 97
   local.get $1
   call $~lib/map/Map<u32,src-as/base/Object/ObjectBase>#set
   drop
@@ -37468,7 +43157,7 @@
   local.get $1
   i32.store
   local.get $1
-  i32.const 100
+  i32.const 127
   call $~lib/map/Map<u32,src-as/base/Object/ObjectBase>#has
   local.set $1
   global.get $~lib/memory/__stack_pointer
@@ -37494,7 +43183,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 12
-   i32.const 105
+   i32.const 111
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -37502,16 +43191,16 @@
   local.get $0
   i32.const 0
   i32.const 2
-  i32.const 106
-  i32.const 17984
+  i32.const 112
+  i32.const 18144
   call $~lib/rt/__newArray
   call $src-as/base/Query/TypedQuery<src-as/components/Camera/Camera>#set:components
   global.get $~lib/memory/__stack_pointer
   local.get $0
   i32.const 1
   i32.const 2
-  i32.const 80
-  i32.const 17952
+  i32.const 87
+  i32.const 18112
   call $~lib/rt/__newArray
   local.set $3
   global.get $~lib/memory/__stack_pointer
@@ -37583,7 +43272,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 32
-   i32.const 101
+   i32.const 110
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -37594,15 +43283,15 @@
   local.get $0
   i32.const 0
   i32.const 2
-  i32.const 110
-  i32.const 18016
+  i32.const 116
+  i32.const 18176
   call $~lib/rt/__newArray
   call $src-as/rendering/systems/RenderSystem/RenderSystem#set:opaqueMeshes
   local.get $0
   i32.const 0
   i32.const 2
-  i32.const 110
-  i32.const 18048
+  i32.const 116
+  i32.const 18208
   call $~lib/rt/__newArray
   call $src-as/rendering/systems/RenderSystem/RenderSystem#set:transparentMeshes
   local.get $0
@@ -37612,8 +43301,8 @@
   local.get $0
   i32.const 1
   i32.const 2
-  i32.const 80
-  i32.const 17920
+  i32.const 87
+  i32.const 18080
   call $~lib/rt/__newArray
   local.set $4
   global.get $~lib/memory/__stack_pointer
@@ -37649,207 +43338,6 @@
   i32.add
   global.set $~lib/memory/__stack_pointer
   local.get $4
- )
- (func $src-as/base/World/World#attachSystem<src-as/WebGL2/systems/WebGLRenderSystem/WebGLRenderSystem> (param $0 i32) (param $1 i32) (result i32)
-  (local $2 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store
-  local.get $0
-  call $src-as/base/World/World#has<src-as/WebGL2/systems/WebGLRenderSystem/WebGLRenderSystem>
-  if
-   local.get $0
-   local.set $2
-   global.get $~lib/memory/__stack_pointer
-   i32.const 4
-   i32.add
-   global.set $~lib/memory/__stack_pointer
-   local.get $2
-   return
-  end
-  local.get $1
-  i32.load offset=4
-  local.get $0
-  i32.ne
-  if
-   i32.const 16800
-   i32.const 16976
-   i32.const 97
-   i32.const 4
-   call $~lib/builtins/abort
-   unreachable
-  end
-  i32.const 1
-  drop
-  local.get $0
-  i32.load offset=28
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  local.get $2
-  i32.store
-  local.get $2
-  local.get $1
-  call $src-as/base/ListenerSystemManager/ListenerSystemManager#addListenerSystem
-  local.get $0
-  i32.load offset=4
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  local.get $2
-  i32.store
-  local.get $2
-  local.get $1
-  call $~lib/array/Array<src-as/base/System/System>#push
-  drop
-  local.get $0
-  i32.load offset=20
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  local.get $2
-  i32.store
-  local.get $2
-  i32.const 100
-  local.get $1
-  call $~lib/map/Map<u32,src-as/base/Object/ObjectBase>#set
-  drop
-  local.get $0
-  i32.load offset=4
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  local.get $2
-  i32.store
-  local.get $2
-  call $src-as/base/SystemPriority/SystemPriority.sortSystems<src-as/base/System/System>
-  local.get $0
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $2
- )
- (func $src-as/base/World/World#get<src-as/WebGL2/systems/WebGLRenderSystem/WebGLRenderSystem> (param $0 i32) (result i32)
-  (local $1 i32)
-  (local $2 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 8
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i64.const 0
-  i64.store
-  global.get $~lib/memory/__stack_pointer
-  local.get $0
-  i32.load offset=20
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  local.get $2
-  i32.store
-  local.get $2
-  i32.const 100
-  call $~lib/map/Map<u32,src-as/base/Object/ObjectBase>#get
-  local.tee $1
-  i32.store offset=4
-  local.get $1
-  i32.const 100
-  call $~lib/rt/__instanceof
-  if (result i32)
-   local.get $1
-  else
-   i32.const 17760
-   i32.const 16976
-   i32.const 43
-   i32.const 41
-   call $~lib/builtins/abort
-   unreachable
-  end
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  i32.const 8
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $2
- )
- (func $src-as/math/Color/Color#constructor (param $0 i32) (param $1 f32) (param $2 f32) (param $3 f32) (param $4 f32) (result i32)
-  (local $5 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 8
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i64.const 0
-  i64.store
-  local.get $0
-  i32.eqz
-  if
-   global.get $~lib/memory/__stack_pointer
-   i32.const 4
-   i32.const 135
-   call $~lib/rt/itcms/__new
-   local.tee $0
-   i32.store
-  end
-  local.get $0
-  i32.const 0
-  call $src-as/math/Color/Color#set:m
-  local.get $0
-  i32.const 0
-  i32.const 4
-  call $~lib/typedarray/Float32Array#constructor
-  call $src-as/math/Color/Color#set:m
-  local.get $0
-  i32.load
-  local.set $5
-  global.get $~lib/memory/__stack_pointer
-  local.get $5
-  i32.store offset=4
-  local.get $5
-  i32.const 0
-  local.get $1
-  call $~lib/typedarray/Float32Array#__set
-  local.get $0
-  i32.load
-  local.set $5
-  global.get $~lib/memory/__stack_pointer
-  local.get $5
-  i32.store offset=4
-  local.get $5
-  i32.const 1
-  local.get $2
-  call $~lib/typedarray/Float32Array#__set
-  local.get $0
-  i32.load
-  local.set $5
-  global.get $~lib/memory/__stack_pointer
-  local.get $5
-  i32.store offset=4
-  local.get $5
-  i32.const 2
-  local.get $3
-  call $~lib/typedarray/Float32Array#__set
-  local.get $0
-  i32.load
-  local.set $5
-  global.get $~lib/memory/__stack_pointer
-  local.get $5
-  i32.store offset=4
-  local.get $5
-  i32.const 3
-  local.get $4
-  call $~lib/typedarray/Float32Array#__set
-  local.get $0
-  local.set $5
-  global.get $~lib/memory/__stack_pointer
-  i32.const 8
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $5
  )
  (func $src-as/math/Color/Color#get:r (param $0 i32) (result f32)
   (local $1 i32)
@@ -37959,51 +43447,146 @@
   global.set $~lib/memory/__stack_pointer
   local.get $2
  )
- (func $src-as/base/Component/SpatialComponent#constructor (param $0 i32) (result i32)
+ (func $src-as/WebGL2/systems/WebGLRenderSystem/WebGLRenderSystem#constructor (param $0 i32) (result i32)
   (local $1 i32)
+  (local $2 i32)
   global.get $~lib/memory/__stack_pointer
-  i32.const 8
+  i32.const 12
   i32.sub
   global.set $~lib/memory/__stack_pointer
   call $~stack_check
   global.get $~lib/memory/__stack_pointer
   i64.const 0
   i64.store
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store offset=8
   local.get $0
   i32.eqz
   if
    global.get $~lib/memory/__stack_pointer
-   i32.const 12
-   i32.const 103
+   i32.const 36
+   i32.const 127
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
   end
   local.get $0
   i32.const 0
-  call $src-as/base/Component/SpatialComponent#set:transform
+  call $src-as/WebGL2/systems/WebGLRenderSystem/WebGLRenderSystem#set:meshSystem
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  call $src-as/WebGL2/systems/WebGLUniformBufferObjectSystem/WebGLUniformBufferObjectSystem#constructor
+  local.tee $1
+  i32.store offset=4
   global.get $~lib/memory/__stack_pointer
   local.get $0
-  call $src-as/base/Component/BehaviorComponent#constructor
+  local.get $1
+  call $src-as/rendering/systems/RenderSystem/RenderSystem#constructor
   local.tee $0
   i32.store
   local.get $0
-  local.get $0
-  i32.load
-  local.set $1
-  global.get $~lib/memory/__stack_pointer
+  i32.const 0
   local.get $1
-  i32.store offset=4
-  local.get $1
-  call $src-as/base/Entity/Entity#getOrAdd<src-as/components/Transform/Transform>
-  call $src-as/base/Component/SpatialComponent#set:transform
+  call $src-as/WebGL2/systems/WebGLMeshSystem/WebGLMeshSystem#constructor
+  call $src-as/WebGL2/systems/WebGLRenderSystem/WebGLRenderSystem#set:meshSystem
   local.get $0
-  local.set $1
+  global.get $src-as/math/Color/Color.clear
+  local.set $2
   global.get $~lib/memory/__stack_pointer
-  i32.const 8
+  local.get $2
+  i32.store offset=8
+  local.get $2
+  call $src-as/WebGL2/systems/WebGLRenderSystem/WebGLRenderSystem#clearColor
+  local.get $0
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  i32.const 12
   i32.add
   global.set $~lib/memory/__stack_pointer
+  local.get $2
+ )
+ (func $src-as/base/World/World#attachSystem<src-as/WebGL2/systems/WebGLRenderSystem/WebGLRenderSystem> (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  call $src-as/base/World/World#has<src-as/WebGL2/systems/WebGLRenderSystem/WebGLRenderSystem>
+  if
+   local.get $0
+   local.set $2
+   global.get $~lib/memory/__stack_pointer
+   i32.const 4
+   i32.add
+   global.set $~lib/memory/__stack_pointer
+   local.get $2
+   return
+  end
   local.get $1
+  i32.load offset=4
+  local.get $0
+  i32.ne
+  if
+   i32.const 17616
+   i32.const 17520
+   i32.const 97
+   i32.const 4
+   call $~lib/builtins/abort
+   unreachable
+  end
+  i32.const 1
+  drop
+  local.get $0
+  i32.load offset=28
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  local.get $1
+  call $src-as/base/ListenerSystemManager/ListenerSystemManager#addListenerSystem
+  local.get $0
+  i32.load offset=4
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  local.get $1
+  call $~lib/array/Array<src-as/base/System/System>#push
+  drop
+  local.get $0
+  i32.load offset=20
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  i32.const 127
+  local.get $1
+  call $~lib/map/Map<u32,src-as/base/Object/ObjectBase>#set
+  drop
+  local.get $0
+  i32.load offset=4
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  call $src-as/base/SystemPriority/SystemPriority.sortSystems<src-as/base/System/System>
+  local.get $0
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $2
  )
  (func $src-as/math/SharedBuffer/SharedBuffer_f32<src-as/math/Vector3/Vector3>#updateInstanceBuffers (param $0 i32)
   (local $1 i32)
@@ -38409,7 +43992,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 20
-   i32.const 136
+   i32.const 150
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -38462,13 +44045,13 @@
   local.tee $1
   i32.store offset=12
   local.get $1
-  i32.const 63
+  i32.const 70
   call $~lib/rt/__instanceof
   if (result i32)
    local.get $1
   else
-   i32.const 17760
-   i32.const 18080
+   i32.const 17456
+   i32.const 18240
    i32.const 20
    i32.const 27
    call $~lib/builtins/abort
@@ -38528,8 +44111,8 @@
   local.get $0
   i32.ne
   if
-   i32.const 17504
-   i32.const 17696
+   i32.const 17088
+   i32.const 17280
    i32.const 27
    i32.const 4
    call $~lib/builtins/abort
@@ -38542,7 +44125,7 @@
   local.get $2
   i32.store
   local.get $2
-  i32.const 136
+  i32.const 150
   local.get $1
   call $~lib/map/Map<u32,src-as/base/Component/Component>#set
   drop
@@ -38554,7 +44137,7 @@
   i32.store
   local.get $2
   local.get $0
-  i32.const 136
+  i32.const 150
   local.get $1
   call $src-as/base/World/World#onAddComponent
   drop
@@ -38566,166 +44149,10 @@
   global.set $~lib/memory/__stack_pointer
   local.get $2
  )
- (func $src-as/math/Matrix/Matrix#perspective (param $0 i32) (param $1 f32) (param $2 f32) (param $3 f32) (param $4 f32) (result i32)
-  (local $5 i32)
+ (func $src-as/exports/light/createDefaultLights
+  (local $0 i32)
   global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store
-  local.get $0
-  i32.load
-  local.set $5
-  global.get $~lib/memory/__stack_pointer
-  local.get $5
-  i32.store
-  local.get $5
-  local.get $1
-  local.get $2
-  local.get $3
-  local.get $4
-  i32.const 5
-  global.set $~argumentsLength
-  global.get $src-as/glMatrix/_mat4/perspective
-  i32.load
-  call_indirect $0 (type $i32_f32_f32_f32_f32_=>_i32)
-  drop
-  local.get $0
-  local.set $5
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $5
- )
- (func $src-as/components/Camera/Camera#_updatePerspective (param $0 i32) (result i32)
-  (local $1 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store
-  local.get $0
-  i32.load offset=20
-  local.set $1
-  global.get $~lib/memory/__stack_pointer
-  local.get $1
-  i32.store
-  local.get $1
-  local.get $0
-  f32.load offset=32
-  local.get $0
-  f32.load offset=36
-  local.get $0
-  f32.load offset=40
-  local.get $0
-  f32.load offset=44
-  call $src-as/math/Matrix/Matrix#perspective
-  drop
-  local.get $0
-  local.set $1
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $1
- )
- (func $src-as/base/Entity/Entity#attach<src-as/components/Camera/Camera> (param $0 i32) (param $1 i32) (result i32)
-  (local $2 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store
-  local.get $1
-  i32.load
-  local.get $0
-  i32.ne
-  if
-   i32.const 17504
-   i32.const 17696
-   i32.const 27
-   i32.const 4
-   call $~lib/builtins/abort
-   unreachable
-  end
-  local.get $0
-  i32.load offset=8
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  local.get $2
-  i32.store
-  local.get $2
-  i32.const 102
-  local.get $1
-  call $~lib/map/Map<u32,src-as/base/Component/Component>#set
-  drop
-  local.get $0
-  i32.load
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  local.get $2
-  i32.store
-  local.get $2
-  local.get $0
-  i32.const 102
-  local.get $1
-  call $src-as/base/World/World#onAddComponent
-  drop
-  local.get $0
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $2
- )
- (func $src-as/base/Entity/Entity#add<src-as/components/Camera/Camera> (param $0 i32) (result i32)
-  (local $1 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store
-  local.get $0
-  i32.const 0
-  f32.const 0
-  f32.const 0
-  f32.const 0.009999999776482582
-  i32.const 0
-  global.set $~argumentsLength
-  f32.const 1e3
-  call $src-as/components/Camera/Camera#constructor@varargs
-  local.set $1
-  global.get $~lib/memory/__stack_pointer
-  local.get $1
-  i32.store
-  local.get $1
-  call $src-as/base/Entity/Entity#attach<src-as/components/Camera/Camera>
-  local.set $1
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $1
- )
- (func $src-as/base/Entity/Entity#get<src-as/components/Transform/Transform> (param $0 i32) (result i32)
-  (local $1 i32)
-  (local $2 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 8
+  i32.const 12
   i32.sub
   global.set $~lib/memory/__stack_pointer
   call $~stack_check
@@ -38733,1461 +44160,42 @@
   i64.const 0
   i64.store
   global.get $~lib/memory/__stack_pointer
-  local.get $0
-  i32.load offset=8
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  local.get $2
-  i32.store
-  local.get $2
-  i32.const 94
-  call $~lib/map/Map<u32,src-as/base/Component/Component>#get
-  local.tee $1
-  i32.store offset=4
-  local.get $1
-  i32.const 94
-  call $~lib/rt/__instanceof
-  if (result i32)
-   local.get $1
-  else
-   i32.const 17760
-   i32.const 17696
-   i32.const 39
-   i32.const 10
-   call $~lib/builtins/abort
-   unreachable
-  end
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  i32.const 8
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $2
- )
- (func $src-as/exports/cameraFactories/defaultCamera (result i32)
-  (local $0 i32)
-  (local $1 i32)
-  (local $2 i32)
-  (local $3 i32)
-  (local $4 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 32
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
   i32.const 0
-  i32.const 32
-  memory.fill
-  global.get $~lib/memory/__stack_pointer
-  call $src-as/base/World/World.get:main
-  local.set $4
-  global.get $~lib/memory/__stack_pointer
-  local.get $4
-  i32.store offset=4
-  local.get $4
-  call $src-as/base/World/World#createEntity
-  local.set $4
-  global.get $~lib/memory/__stack_pointer
-  local.get $4
-  i32.store
-  local.get $4
-  call $src-as/base/Entity/Entity#getOrAdd<src-as/components/Transform/Transform>
-  local.tee $0
   i32.store offset=8
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  f32.const 0
-  global.get $src-as/math/constants/TAU
-  f32.const 0.5
-  f32.mul
-  f32.const 0
-  call $src-as/math/Vector3/Vector3#constructor
-  local.tee $1
-  i32.store offset=12
-  local.get $0
-  i32.load offset=28
-  local.set $4
-  global.get $~lib/memory/__stack_pointer
-  local.get $4
-  i32.store
-  local.get $4
-  local.get $1
-  call $src-as/math/Quaternion/Quaternion#fromEulerAngles
-  drop
-  local.get $0
-  i32.load offset=20
-  local.set $4
-  global.get $~lib/memory/__stack_pointer
-  local.get $4
-  i32.store
-  local.get $4
-  f32.const 3
-  call $src-as/math/Vector3/Vector3#set:z
-  local.get $0
-  i32.load offset=20
-  local.set $4
-  global.get $~lib/memory/__stack_pointer
-  local.get $4
-  i32.store
-  local.get $4
-  f32.const 1
-  call $src-as/math/Vector3/Vector3#set:y
-  global.get $~lib/memory/__stack_pointer
   call $src-as/base/World/World.get:main
-  local.set $4
+  local.set $0
   global.get $~lib/memory/__stack_pointer
-  local.get $4
-  i32.store offset=20
-  local.get $4
-  call $src-as/base/World/World#createEntity
-  local.set $4
-  global.get $~lib/memory/__stack_pointer
-  local.get $4
-  i32.store offset=4
-  local.get $4
-  i32.const 0
   local.get $0
-  call $src-as/components/Transform/Transform#constructor
-  local.set $4
-  global.get $~lib/memory/__stack_pointer
-  local.get $4
-  i32.store offset=16
-  local.get $4
-  call $src-as/base/Entity/Entity#attach<src-as/components/Transform/Transform>
-  local.set $4
-  global.get $~lib/memory/__stack_pointer
-  local.get $4
-  i32.store
-  local.get $4
-  call $src-as/base/Entity/Entity#add<src-as/components/Camera/Camera>
-  local.tee $2
-  i32.store offset=24
-  global.get $~lib/memory/__stack_pointer
-  local.get $2
-  call $src-as/base/Entity/Entity#get<src-as/components/Transform/Transform>
-  local.tee $3
-  i32.store offset=28
-  local.get $3
-  i32.load offset=28
-  local.set $4
-  global.get $~lib/memory/__stack_pointer
-  local.get $4
-  i32.store
-  local.get $4
-  local.get $1
-  call $src-as/math/Quaternion/Quaternion#fromEulerAngles
-  drop
-  local.get $2
-  local.set $4
-  global.get $~lib/memory/__stack_pointer
-  i32.const 32
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $4
- )
- (func $src-as/exports/mainFactories/defaultWorld (result i32)
-  (local $0 i32)
-  (local $1 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 16
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i64.const 0
-  i64.store
-  global.get $~lib/memory/__stack_pointer
-  i64.const 0
-  i64.store offset=8
-  call $src-as/base/World/World.get:main
-  local.set $1
-  global.get $~lib/memory/__stack_pointer
-  local.get $1
   i32.store offset=8
-  local.get $1
-  call $src-as/base/World/World#addSystem<src-as/base/systems/TimeSystem/TimeSystem>
-  local.set $1
-  global.get $~lib/memory/__stack_pointer
-  local.get $1
-  i32.store offset=4
-  local.get $1
-  call $src-as/base/World/World#addSystem<src-as/base/systems/TransformSystem/TransformSystem>
-  local.set $1
-  global.get $~lib/memory/__stack_pointer
-  local.get $1
-  i32.store
-  local.get $1
-  call $src-as/base/World/World#addSystem<src-as/WebGL2/systems/WebGLRenderSystem/WebGLRenderSystem>
-  drop
-  global.get $~lib/memory/__stack_pointer
-  call $src-as/base/World/World.get:main
-  local.set $1
-  global.get $~lib/memory/__stack_pointer
-  local.get $1
-  i32.store
-  local.get $1
-  call $src-as/base/World/World#get<src-as/WebGL2/systems/WebGLRenderSystem/WebGLRenderSystem>
-  local.tee $0
-  i32.store offset=12
   local.get $0
-  i32.const 0
-  f32.const 0
-  f32.const 0
-  f32.const 0
-  f32.const 0
-  call $src-as/math/Color/Color#constructor
-  local.set $1
-  global.get $~lib/memory/__stack_pointer
-  local.get $1
-  i32.store offset=4
-  local.get $1
-  call $src-as/WebGL2/systems/WebGLRenderSystem/WebGLRenderSystem#clearColor
-  call $src-as/base/World/World.get:main
-  local.set $1
-  global.get $~lib/memory/__stack_pointer
-  local.get $1
-  i32.store offset=8
-  local.get $1
   call $src-as/base/World/World#createEntity
-  local.set $1
+  local.set $0
   global.get $~lib/memory/__stack_pointer
-  local.get $1
+  local.get $0
   i32.store
-  local.get $1
+  local.get $0
   i32.const 0
   call $src-as/components/DirectionalLight/DirectionalLight#constructor
-  local.set $1
+  local.set $0
   global.get $~lib/memory/__stack_pointer
-  local.get $1
+  local.get $0
   i32.store offset=8
-  local.get $1
+  local.get $0
   f32.const -1
   f32.const -1
   f32.const -1
   call $src-as/components/DirectionalLight/DirectionalLight#setDirection
-  local.set $1
+  local.set $0
   global.get $~lib/memory/__stack_pointer
-  local.get $1
+  local.get $0
   i32.store offset=4
-  local.get $1
+  local.get $0
   call $src-as/base/Entity/Entity#attach<src-as/components/DirectionalLight/DirectionalLight>
   drop
-  call $src-as/exports/cameraFactories/defaultCamera
-  drop
-  call $src-as/base/World/World.get:main
-  local.set $1
-  global.get $~lib/memory/__stack_pointer
-  i32.const 16
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $1
- )
- (func $src-as/exports/mainFactories/handleResize (param $0 i32) (param $1 i32)
-  (local $2 f32)
-  (local $3 i32)
-  (local $4 i32)
-  (local $5 i32)
-  (local $6 i32)
-  (local $7 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 12
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i64.const 0
-  i64.store
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store offset=8
-  local.get $0
-  global.set $src-as/rendering/systems/RenderSystem/RenderSystem.canvasWidth
-  local.get $1
-  global.set $src-as/rendering/systems/RenderSystem/RenderSystem.canvasHeight
-  local.get $0
-  f32.convert_i32_u
-  local.get $1
-  f32.convert_i32_u
-  f32.div
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  call $src-as/base/World/World.get:main
-  local.set $7
-  global.get $~lib/memory/__stack_pointer
-  local.get $7
-  i32.store
-  local.get $7
-  call $src-as/base/World/World#get<src-as/WebGL2/systems/WebGLRenderSystem/WebGLRenderSystem>
-  local.tee $3
-  i32.store offset=4
-  global.get $~lib/memory/__stack_pointer
-  local.get $3
-  i32.load offset=16
-  i32.load offset=8
-  local.tee $4
-  i32.store offset=8
-  i32.const 0
-  local.set $5
-  loop $for-loop|0
-   local.get $5
-   local.get $4
-   call $~lib/array/Array<src-as/components/Camera/Camera>#get:length
-   i32.lt_s
-   local.set $6
-   local.get $6
-   if
-    local.get $4
-    local.get $5
-    call $~lib/array/Array<src-as/components/Camera/Camera>#__get
-    i32.load8_u offset=28
-    if
-     local.get $4
-     local.get $5
-     call $~lib/array/Array<src-as/components/Camera/Camera>#__get
-     local.set $7
-     global.get $~lib/memory/__stack_pointer
-     local.get $7
-     i32.store
-     local.get $7
-     i32.const 0
-     i32.const 0
-     local.get $0
-     local.get $1
-     local.get $2
-     call $src-as/components/Camera/Camera#setViewport
-     drop
-    end
-    local.get $5
-    i32.const 1
-    i32.add
-    local.set $5
-    br $for-loop|0
-   end
-  end
   global.get $~lib/memory/__stack_pointer
   i32.const 12
   i32.add
   global.set $~lib/memory/__stack_pointer
- )
- (func $src-as/base/World/World#get<src-as/rendering/systems/RenderSystem/RenderSystem> (param $0 i32) (result i32)
-  (local $1 i32)
-  (local $2 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 8
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i64.const 0
-  i64.store
-  global.get $~lib/memory/__stack_pointer
-  local.get $0
-  i32.load offset=20
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  local.get $2
-  i32.store
-  local.get $2
-  i32.const 101
-  call $~lib/map/Map<u32,src-as/base/Object/ObjectBase>#get
-  local.tee $1
-  i32.store offset=4
-  local.get $1
-  i32.const 101
-  call $~lib/rt/__instanceof
-  if (result i32)
-   local.get $1
-  else
-   i32.const 17760
-   i32.const 16976
-   i32.const 43
-   i32.const 41
-   call $~lib/builtins/abort
-   unreachable
-  end
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  i32.const 8
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $2
- )
- (func $src-as/base/World/World#get<src-as/base/systems/TransformSystem/TransformSystem> (param $0 i32) (result i32)
-  (local $1 i32)
-  (local $2 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 8
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i64.const 0
-  i64.store
-  global.get $~lib/memory/__stack_pointer
-  local.get $0
-  i32.load offset=20
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  local.get $2
-  i32.store
-  local.get $2
-  i32.const 93
-  call $~lib/map/Map<u32,src-as/base/Object/ObjectBase>#get
-  local.tee $1
-  i32.store offset=4
-  local.get $1
-  i32.const 93
-  call $~lib/rt/__instanceof
-  if (result i32)
-   local.get $1
-  else
-   i32.const 17760
-   i32.const 16976
-   i32.const 43
-   i32.const 41
-   call $~lib/builtins/abort
-   unreachable
-  end
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  i32.const 8
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $2
- )
- (func $~lib/map/Map<u32,src-as/base/Component/Component>#values (param $0 i32) (result i32)
-  (local $1 i32)
-  (local $2 i32)
-  (local $3 i32)
-  (local $4 i32)
-  (local $5 i32)
-  (local $6 i32)
-  (local $7 i32)
-  (local $8 i32)
-  (local $9 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 8
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i64.const 0
-  i64.store
-  local.get $0
-  i32.load offset=8
-  local.set $1
-  local.get $0
-  i32.load offset=16
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  local.get $2
-  call $~lib/array/Array<src-as/base/Component/Component>#constructor
-  local.tee $3
-  i32.store
-  i32.const 0
-  local.set $4
-  i32.const 0
-  local.set $5
-  loop $for-loop|0
-   local.get $5
-   local.get $2
-   i32.lt_s
-   local.set $6
-   local.get $6
-   if
-    local.get $1
-    local.get $5
-    i32.const 12
-    i32.mul
-    i32.add
-    local.set $7
-    local.get $7
-    i32.load offset=8
-    i32.const 1
-    i32.and
-    i32.eqz
-    if
-     local.get $3
-     local.get $4
-     local.tee $8
-     i32.const 1
-     i32.add
-     local.set $4
-     local.get $8
-     local.get $7
-     i32.load offset=4
-     local.set $9
-     global.get $~lib/memory/__stack_pointer
-     local.get $9
-     i32.store offset=4
-     local.get $9
-     call $~lib/array/Array<src-as/base/Component/Component>#__set
-    end
-    local.get $5
-    i32.const 1
-    i32.add
-    local.set $5
-    br $for-loop|0
-   end
-  end
-  local.get $3
-  local.get $4
-  call $~lib/array/Array<src-as/base/Component/Component>#set:length
-  local.get $3
-  local.set $9
-  global.get $~lib/memory/__stack_pointer
-  i32.const 8
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $9
- )
- (func $src-as/base/Query/Query#removeEntity (param $0 i32) (param $1 i32)
-  (local $2 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store
-  local.get $0
-  i32.load offset=4
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  local.get $2
-  i32.store
-  local.get $2
-  local.get $1
-  call $~lib/set/Set<src-as/base/Entity/Entity>#delete
-  drop
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.add
-  global.set $~lib/memory/__stack_pointer
- )
- (func $src-as/base/QueryManager/QueryManager#onRemoveComponent (param $0 i32) (param $1 i32) (param $2 i32)
-  (local $3 i32)
-  (local $4 i32)
-  (local $5 i32)
-  (local $6 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 8
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i64.const 0
-  i64.store
-  local.get $0
-  i32.load
-  local.set $6
-  global.get $~lib/memory/__stack_pointer
-  local.get $6
-  i32.store
-  local.get $6
-  local.get $2
-  call $~lib/map/Map<u32,~lib/array/Array<src-as/base/Query/Query>>#has
-  i32.eqz
-  if
-   global.get $~lib/memory/__stack_pointer
-   i32.const 8
-   i32.add
-   global.set $~lib/memory/__stack_pointer
-   return
-  end
-  global.get $~lib/memory/__stack_pointer
-  local.get $0
-  i32.load
-  local.set $6
-  global.get $~lib/memory/__stack_pointer
-  local.get $6
-  i32.store
-  local.get $6
-  local.get $2
-  call $~lib/map/Map<u32,~lib/array/Array<src-as/base/Query/Query>>#get
-  local.tee $3
-  i32.store offset=4
-  i32.const 0
-  local.set $4
-  loop $for-loop|0
-   local.get $4
-   local.get $3
-   call $~lib/array/Array<src-as/base/Query/Query>#get:length
-   i32.lt_s
-   local.set $5
-   local.get $5
-   if
-    local.get $3
-    local.get $4
-    call $~lib/array/Array<src-as/base/Query/Query>#__get
-    i32.load offset=4
-    local.set $6
-    global.get $~lib/memory/__stack_pointer
-    local.get $6
-    i32.store
-    local.get $6
-    local.get $1
-    call $~lib/set/Set<src-as/base/Entity/Entity>#has
-    if
-     local.get $3
-     local.get $4
-     call $~lib/array/Array<src-as/base/Query/Query>#__get
-     local.set $6
-     global.get $~lib/memory/__stack_pointer
-     local.get $6
-     i32.store
-     local.get $6
-     local.get $1
-     call $src-as/base/Query/Query#removeEntity@virtual
-    end
-    local.get $4
-    i32.const 1
-    i32.add
-    local.set $4
-    br $for-loop|0
-   end
-  end
-  global.get $~lib/memory/__stack_pointer
-  i32.const 8
-  i32.add
-  global.set $~lib/memory/__stack_pointer
- )
- (func $src-as/base/System/ListenerSystem#removeEntity (param $0 i32) (param $1 i32)
-  (local $2 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store
-  local.get $0
-  i32.load offset=8
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  local.get $2
-  i32.store
-  local.get $2
-  local.get $1
-  call $~lib/set/Set<src-as/base/Entity/Entity>#delete
-  drop
-  local.get $0
-  local.get $1
-  call $src-as/base/System/ListenerSystem#onRemove@virtual
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.add
-  global.set $~lib/memory/__stack_pointer
- )
- (func $src-as/base/ListenerSystemManager/ListenerSystemManager#onRemoveEntity (param $0 i32) (param $1 i32) (param $2 i32)
-  (local $3 i32)
-  (local $4 i32)
-  (local $5 i32)
-  (local $6 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 8
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i64.const 0
-  i64.store
-  local.get $0
-  i32.load
-  local.set $6
-  global.get $~lib/memory/__stack_pointer
-  local.get $6
-  i32.store
-  local.get $6
-  local.get $2
-  call $~lib/map/Map<u32,~lib/array/Array<src-as/base/System/ListenerSystem>>#has
-  i32.eqz
-  if
-   global.get $~lib/memory/__stack_pointer
-   i32.const 8
-   i32.add
-   global.set $~lib/memory/__stack_pointer
-   return
-  end
-  global.get $~lib/memory/__stack_pointer
-  local.get $0
-  i32.load
-  local.set $6
-  global.get $~lib/memory/__stack_pointer
-  local.get $6
-  i32.store
-  local.get $6
-  local.get $2
-  call $~lib/map/Map<u32,~lib/array/Array<src-as/base/System/ListenerSystem>>#get
-  local.tee $3
-  i32.store offset=4
-  i32.const 0
-  local.set $4
-  loop $for-loop|0
-   local.get $4
-   local.get $3
-   call $~lib/array/Array<src-as/base/System/ListenerSystem>#get:length
-   i32.lt_s
-   local.set $5
-   local.get $5
-   if
-    block $for-continue|0
-     local.get $3
-     local.get $4
-     call $~lib/array/Array<src-as/base/System/ListenerSystem>#__get
-     i32.load offset=8
-     local.set $6
-     global.get $~lib/memory/__stack_pointer
-     local.get $6
-     i32.store
-     local.get $6
-     local.get $1
-     call $~lib/set/Set<src-as/base/Entity/Entity>#has
-     i32.eqz
-     if
-      br $for-continue|0
-     end
-     local.get $3
-     local.get $4
-     call $~lib/array/Array<src-as/base/System/ListenerSystem>#__get
-     local.set $6
-     global.get $~lib/memory/__stack_pointer
-     local.get $6
-     i32.store
-     local.get $6
-     local.get $1
-     call $src-as/base/System/ListenerSystem#removeEntity
-    end
-    local.get $4
-    i32.const 1
-    i32.add
-    local.set $4
-    br $for-loop|0
-   end
-  end
-  global.get $~lib/memory/__stack_pointer
-  i32.const 8
-  i32.add
-  global.set $~lib/memory/__stack_pointer
- )
- (func $src-as/base/systems/BehaviorSystem/BehaviorSystem#removeBehavior (param $0 i32) (param $1 i32)
-  (local $2 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 8
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i64.const 0
-  i64.store
-  local.get $0
-  i32.load offset=8
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  local.get $2
-  i32.store
-  local.get $2
-  local.get $0
-  i32.load offset=8
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  local.get $2
-  i32.store offset=4
-  local.get $2
-  local.get $1
-  i32.const 0
-  call $~lib/array/Array<src-as/base/Component/BehaviorComponent>#indexOf
-  i32.const 1
-  call $~lib/array/Array<src-as/base/Component/BehaviorComponent>#splice
-  drop
-  global.get $~lib/memory/__stack_pointer
-  i32.const 8
-  i32.add
-  global.set $~lib/memory/__stack_pointer
- )
- (func $src-as/base/World/World#onRemoveComponent (param $0 i32) (param $1 i32) (param $2 i32) (param $3 i32) (result i32)
-  (local $4 i32)
-  (local $5 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 8
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i64.const 0
-  i64.store
-  local.get $0
-  i32.load offset=24
-  local.set $5
-  global.get $~lib/memory/__stack_pointer
-  local.get $5
-  i32.store
-  local.get $5
-  local.get $1
-  local.get $2
-  call $src-as/base/QueryManager/QueryManager#onRemoveComponent
-  local.get $0
-  i32.load offset=28
-  local.set $5
-  global.get $~lib/memory/__stack_pointer
-  local.get $5
-  i32.store
-  local.get $5
-  local.get $1
-  local.get $2
-  call $src-as/base/ListenerSystemManager/ListenerSystemManager#onRemoveEntity
-  local.get $3
-  local.tee $4
-  i32.eqz
-  if (result i32)
-   i32.const 0
-  else
-   local.get $4
-   i32.const 88
-   call $~lib/rt/__instanceof
-  end
-  if
-   local.get $0
-   call $src-as/base/World/World#getOrAddSystem<src-as/base/systems/BehaviorSystem/BehaviorSystem>
-   local.set $5
-   global.get $~lib/memory/__stack_pointer
-   local.get $5
-   i32.store
-   local.get $5
-   local.get $3
-   local.tee $4
-   i32.const 88
-   call $~lib/rt/__instanceof
-   if (result i32)
-    local.get $4
-   else
-    i32.const 17760
-    i32.const 16976
-    i32.const 118
-    i32.const 57
-    call $~lib/builtins/abort
-    unreachable
-   end
-   local.set $5
-   global.get $~lib/memory/__stack_pointer
-   local.get $5
-   i32.store offset=4
-   local.get $5
-   call $src-as/base/systems/BehaviorSystem/BehaviorSystem#removeBehavior
-  end
-  local.get $0
-  local.set $5
-  global.get $~lib/memory/__stack_pointer
-  i32.const 8
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $5
- )
- (func $src-as/base/Entity/Entity#remove<src-as/base/Component/Component> (param $0 i32) (param $1 i32) (result i32)
-  (local $2 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 12
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i64.const 0
-  i64.store
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store offset=8
-  local.get $0
-  i32.load
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  local.get $2
-  i32.store
-  local.get $2
-  local.get $0
-  local.get $1
-  local.get $0
-  i32.load offset=8
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  local.get $2
-  i32.store offset=8
-  local.get $2
-  local.get $1
-  call $~lib/map/Map<u32,src-as/base/Component/Component>#get
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  local.get $2
-  i32.store offset=4
-  local.get $2
-  call $src-as/base/World/World#onRemoveComponent
-  drop
-  local.get $0
-  i32.load offset=8
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  local.get $2
-  i32.store
-  local.get $2
-  local.get $1
-  call $~lib/map/Map<u32,src-as/base/Component/Component>#delete
-  drop
-  local.get $0
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  i32.const 12
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $2
- )
- (func $src-as/base/World/World#onDisposeEntity (param $0 i32) (param $1 i32) (result i32)
-  (local $2 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store
-  local.get $0
-  i32.load offset=16
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  local.get $2
-  i32.store
-  local.get $2
-  local.get $1
-  i32.load offset=4
-  call $~lib/map/Map<u32,src-as/base/Entity/Entity>#delete
-  drop
-  local.get $0
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $2
- )
- (func $src-as/base/Entity/Entity#dispose (param $0 i32)
-  (local $1 i32)
-  (local $2 i32)
-  (local $3 i32)
-  (local $4 i32)
-  (local $5 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 12
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i64.const 0
-  i64.store
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store offset=8
-  global.get $~lib/memory/__stack_pointer
-  local.get $0
-  i32.load offset=8
-  local.set $5
-  global.get $~lib/memory/__stack_pointer
-  local.get $5
-  i32.store
-  local.get $5
-  call $~lib/map/Map<u32,src-as/base/Component/Component>#keys
-  local.tee $1
-  i32.store offset=4
-  global.get $~lib/memory/__stack_pointer
-  local.get $0
-  i32.load offset=8
-  local.set $5
-  global.get $~lib/memory/__stack_pointer
-  local.get $5
-  i32.store
-  local.get $5
-  call $~lib/map/Map<u32,src-as/base/Component/Component>#values
-  local.tee $2
-  i32.store offset=8
-  i32.const 0
-  local.set $3
-  loop $for-loop|0
-   local.get $3
-   local.get $2
-   call $~lib/array/Array<src-as/base/Component/Component>#get:length
-   i32.lt_s
-   local.set $4
-   local.get $4
-   if
-    local.get $0
-    local.get $1
-    local.get $3
-    call $~lib/array/Array<u32>#__get
-    call $src-as/base/Entity/Entity#remove<src-as/base/Component/Component>
-    drop
-    local.get $3
-    i32.const 1
-    i32.add
-    local.set $3
-    br $for-loop|0
-   end
-  end
-  local.get $0
-  i32.load
-  local.set $5
-  global.get $~lib/memory/__stack_pointer
-  local.get $5
-  i32.store
-  local.get $5
-  local.get $0
-  call $src-as/base/World/World#onDisposeEntity
-  drop
-  global.get $~lib/memory/__stack_pointer
-  i32.const 12
-  i32.add
-  global.set $~lib/memory/__stack_pointer
- )
- (func $src-as/exports/cameraFactories/removeAllCameras
-  (local $0 i32)
-  (local $1 i32)
-  (local $2 i32)
-  (local $3 i32)
-  (local $4 i32)
-  (local $5 i32)
-  (local $6 i32)
-  (local $7 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 24
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.const 24
-  memory.fill
-  global.get $~lib/memory/__stack_pointer
-  call $src-as/base/World/World.get:main
-  local.set $7
-  global.get $~lib/memory/__stack_pointer
-  local.get $7
-  i32.store
-  local.get $7
-  call $src-as/base/World/World#get<src-as/rendering/systems/RenderSystem/RenderSystem>
-  local.tee $0
-  i32.store offset=4
-  global.get $~lib/memory/__stack_pointer
-  call $src-as/base/World/World.get:main
-  local.set $7
-  global.get $~lib/memory/__stack_pointer
-  local.get $7
-  i32.store
-  local.get $7
-  call $src-as/base/World/World#get<src-as/base/systems/TransformSystem/TransformSystem>
-  i32.load offset=20
-  local.tee $1
-  i32.store offset=8
-  global.get $~lib/memory/__stack_pointer
-  local.get $0
-  i32.load offset=16
-  i32.load offset=8
-  local.tee $2
-  i32.store offset=12
-  i32.const 0
-  local.set $3
-  loop $for-loop|0
-   local.get $3
-   local.get $2
-   call $~lib/array/Array<src-as/components/Camera/Camera>#get:length
-   i32.lt_s
-   local.set $4
-   local.get $4
-   if
-    global.get $~lib/memory/__stack_pointer
-    local.get $2
-    local.get $3
-    call $~lib/array/Array<src-as/components/Camera/Camera>#__get
-    local.tee $5
-    i32.store offset=16
-    global.get $~lib/memory/__stack_pointer
-    local.get $5
-    i32.load offset=8
-    i32.load offset=36
-    local.tee $6
-    i32.store offset=20
-    local.get $6
-    i32.const 0
-    i32.ne
-    if (result i32)
-     local.get $6
-     local.get $1
-     i32.ne
-    else
-     i32.const 0
-    end
-    if
-     local.get $6
-     i32.load
-     local.set $7
-     global.get $~lib/memory/__stack_pointer
-     local.get $7
-     i32.store
-     local.get $7
-     call $src-as/base/Entity/Entity#dispose
-    end
-    local.get $5
-    i32.load
-    local.set $7
-    global.get $~lib/memory/__stack_pointer
-    local.get $7
-    i32.store
-    local.get $7
-    call $src-as/base/Entity/Entity#dispose
-    local.get $3
-    i32.const 1
-    i32.add
-    local.set $3
-    br $for-loop|0
-   end
-  end
-  global.get $~lib/memory/__stack_pointer
-  i32.const 24
-  i32.add
-  global.set $~lib/memory/__stack_pointer
- )
- (func $src-as/rendering/material/Material/Material#addUniformBufferObject (param $0 i32) (param $1 i32) (result i32)
-  (local $2 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store
-  local.get $0
-  i32.load offset=8
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  local.get $2
-  i32.store
-  local.get $2
-  local.get $1
-  call $~lib/array/Array<src-as/rendering/material/UniformBufferObject/UniformBufferObject>#push
-  drop
-  local.get $0
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $2
- )
- (func $src-as/rendering/material/Material/SpatialMaterial#constructor (param $0 i32) (param $1 i32) (result i32)
-  (local $2 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 24
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.const 24
-  memory.fill
-  local.get $0
-  i32.eqz
-  if
-   global.get $~lib/memory/__stack_pointer
-   i32.const 24
-   i32.const 139
-   call $~lib/rt/itcms/__new
-   local.tee $0
-   i32.store
-  end
-  global.get $~lib/memory/__stack_pointer
-  local.get $0
-  local.get $1
-  call $src-as/rendering/material/Material/Material#constructor
-  local.tee $0
-  i32.store
-  local.get $0
-  global.get $src-as/rendering/constants/_ubos/camera/camera
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  local.get $2
-  i32.store offset=20
-  local.get $2
-  call $src-as/rendering/material/Material/Material#addUniformBufferObject
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  local.get $2
-  i32.store offset=12
-  local.get $2
-  global.get $src-as/rendering/constants/_ubos/mesh/mesh
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  local.get $2
-  i32.store offset=16
-  local.get $2
-  call $src-as/rendering/material/Material/Material#addUniformBufferObject
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  local.get $2
-  i32.store offset=4
-  local.get $2
-  global.get $src-as/rendering/constants/_ubos/directionalLight/directionalLight
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  local.get $2
-  i32.store offset=8
-  local.get $2
-  call $src-as/rendering/material/Material/Material#addUniformBufferObject
-  drop
-  local.get $0
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  i32.const 24
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $2
- )
- (func $src-as/rendering/material/Material/Material#addUniform (param $0 i32) (param $1 i32) (result i32)
-  (local $2 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 8
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i64.const 0
-  i64.store
-  local.get $0
-  i32.load
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  local.get $2
-  i32.store
-  local.get $2
-  local.get $1
-  i32.load
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  local.get $2
-  i32.store offset=4
-  local.get $2
-  local.get $1
-  call $~lib/map/Map<~lib/string/String,src-as/rendering/material/Uniform/Uniform>#set
-  drop
-  local.get $0
-  i32.load offset=4
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  local.get $2
-  i32.store
-  local.get $2
-  local.get $1
-  call $~lib/array/Array<src-as/rendering/material/Uniform/Uniform>#push
-  drop
-  local.get $0
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  i32.const 8
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $2
- )
- (func $src-as/math/Texture/Texture#get:length (param $0 i32) (result i32)
-  (local $1 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store
-  local.get $0
-  i32.load offset=4
-  local.set $1
-  global.get $~lib/memory/__stack_pointer
-  local.get $1
-  i32.store
-  local.get $1
-  call $~lib/typedarray/Uint8Array#get:length
-  local.set $1
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $1
- )
- (func $src-as/rendering/material/Material/StandardMaterial#constructor (param $0 i32) (param $1 i32) (result i32)
-  (local $2 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 12
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i64.const 0
-  i64.store
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store offset=8
-  local.get $0
-  i32.eqz
-  if
-   global.get $~lib/memory/__stack_pointer
-   i32.const 32
-   i32.const 138
-   call $~lib/rt/itcms/__new
-   local.tee $0
-   i32.store
-  end
-  local.get $0
-  i32.const 0
-  call $src-as/rendering/material/Material/StandardMaterial#set:color
-  local.get $0
-  global.get $src-as/math/Texture/Texture.white
-  call $src-as/rendering/material/Material/StandardMaterial#set:texture
-  global.get $~lib/memory/__stack_pointer
-  local.get $0
-  local.get $1
-  call $src-as/rendering/material/Material/SpatialMaterial#constructor
-  local.tee $0
-  i32.store
-  local.get $0
-  i32.const 0
-  f32.const 1
-  f32.const 1
-  f32.const 1
-  f32.const 1
-  call $src-as/math/Color/Color#constructor
-  call $src-as/rendering/material/Material/StandardMaterial#set:color
-  local.get $0
-  global.get $src-as/rendering/constants/_uniforms/Time
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  local.get $2
-  i32.store offset=4
-  local.get $2
-  i32.const 1
-  global.set $~argumentsLength
-  i32.const 0
-  call $src-as/rendering/material/Uniform/Uniform.Float@varargs
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  local.get $2
-  i32.store offset=4
-  local.get $2
-  call $src-as/rendering/material/Material/Material#addUniform
-  drop
-  local.get $0
-  global.get $src-as/rendering/constants/_uniforms/Color
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  local.get $2
-  i32.store offset=4
-  local.get $2
-  local.get $0
-  i32.load offset=24
-  i32.load
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  local.get $2
-  i32.store offset=8
-  local.get $2
-  call $src-as/rendering/material/Uniform/Uniform.Vec4
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  local.get $2
-  i32.store offset=4
-  local.get $2
-  call $src-as/rendering/material/Material/Material#addUniform
-  drop
-  local.get $0
-  global.get $src-as/rendering/constants/_uniforms/Texture
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  local.get $2
-  i32.store offset=4
-  local.get $2
-  local.get $0
-  i32.load offset=28
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  local.get $2
-  i32.store offset=8
-  local.get $2
-  call $src-as/rendering/material/Uniform/Uniform.Texture
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  local.get $2
-  i32.store offset=4
-  local.get $2
-  call $src-as/rendering/material/Material/Material#addUniform
-  drop
-  local.get $0
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  i32.const 12
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $2
- )
- (func $src-as/base/Entity/Entity#attach<src-as/components/Mesh/Mesh> (param $0 i32) (param $1 i32) (result i32)
-  (local $2 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store
-  local.get $1
-  i32.load
-  local.get $0
-  i32.ne
-  if
-   i32.const 17504
-   i32.const 17696
-   i32.const 27
-   i32.const 4
-   call $~lib/builtins/abort
-   unreachable
-  end
-  local.get $0
-  i32.load offset=8
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  local.get $2
-  i32.store
-  local.get $2
-  i32.const 107
-  local.get $1
-  call $~lib/map/Map<u32,src-as/base/Component/Component>#set
-  drop
-  local.get $0
-  i32.load
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  local.get $2
-  i32.store
-  local.get $2
-  local.get $0
-  i32.const 107
-  local.get $1
-  call $src-as/base/World/World#onAddComponent
-  drop
-  local.get $0
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $2
  )
  (func $src-as/base/Entity/Entity#attach<src-as/components/Rotator/Rotator> (param $0 i32) (param $1 i32) (result i32)
   (local $2 i32)
@@ -40204,8 +44212,8 @@
   local.get $0
   i32.ne
   if
-   i32.const 17504
-   i32.const 17696
+   i32.const 17088
+   i32.const 17280
    i32.const 27
    i32.const 4
    call $~lib/builtins/abort
@@ -40218,7 +44226,7 @@
   local.get $2
   i32.store
   local.get $2
-  i32.const 142
+  i32.const 151
   local.get $1
   call $~lib/map/Map<u32,src-as/base/Component/Component>#set
   drop
@@ -40230,7 +44238,7 @@
   i32.store
   local.get $2
   local.get $0
-  i32.const 142
+  i32.const 151
   local.get $1
   call $src-as/base/World/World#onAddComponent
   drop
@@ -40332,6 +44340,1057 @@
   i32.add
   global.set $~lib/memory/__stack_pointer
   local.get $6
+ )
+ (func $src-as/exports/defaultWorld/defaultWorld (param $0 i32) (result i32)
+  (local $1 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 16
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store offset=8
+  call $src-as/base/World/World.get:main
+  local.set $1
+  global.get $~lib/memory/__stack_pointer
+  local.get $1
+  i32.store offset=12
+  local.get $1
+  call $src-as/base/World/World#addSystem<src-as/base/systems/TimeSystem/TimeSystem>
+  local.set $1
+  global.get $~lib/memory/__stack_pointer
+  local.get $1
+  i32.store offset=8
+  local.get $1
+  call $src-as/base/World/World#addSystem<src-as/base/systems/TransformSystem/TransformSystem>
+  local.set $1
+  global.get $~lib/memory/__stack_pointer
+  local.get $1
+  i32.store offset=4
+  local.get $1
+  call $src-as/base/World/World#addSystem<src-as/base/systems/InputSystem/InputSystem>
+  local.set $1
+  global.get $~lib/memory/__stack_pointer
+  local.get $1
+  i32.store
+  local.get $1
+  call $src-as/base/World/World#addSystem<src-as/WebGL2/systems/WebGLRenderSystem/WebGLRenderSystem>
+  drop
+  local.get $0
+  i32.load8_u offset=3
+  if
+   call $src-as/exports/light/createDefaultLights
+  end
+  local.get $0
+  i32.load8_u
+  if
+   local.get $0
+   i32.load8_u offset=1
+   local.get $0
+   i32.load8_u offset=2
+   call $src-as/exports/camera/createDefaultCamera
+   drop
+  end
+  local.get $0
+  i32.load8_u offset=4
+  if
+   call $src-as/exports/debug/createDebugGizmos
+  end
+  local.get $0
+  i32.load8_u offset=5
+  if
+   global.get $src-as/rendering/shader/lit/litShader/litShader
+   local.set $1
+   global.get $~lib/memory/__stack_pointer
+   local.get $1
+   i32.store
+   local.get $1
+   call $src-as/exports/demos/rotatingCube
+   drop
+  end
+  call $src-as/base/World/World.get:main
+  local.set $1
+  global.get $~lib/memory/__stack_pointer
+  i32.const 16
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $1
+ )
+ (func $src-as/exports/input/handleMouseDown
+  (local $0 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  call $src-as/base/World/World.get:main
+  local.set $0
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  i32.store offset=4
+  local.get $0
+  call $src-as/base/World/World#get<src-as/base/systems/InputSystem/InputSystem>
+  local.set $0
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  i32.store
+  local.get $0
+  call $src-as/base/systems/InputSystem/InputSystem#handleMouseDown
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+ )
+ (func $src-as/exports/input/handleMouseUp
+  (local $0 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  call $src-as/base/World/World.get:main
+  local.set $0
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  i32.store offset=4
+  local.get $0
+  call $src-as/base/World/World#get<src-as/base/systems/InputSystem/InputSystem>
+  local.set $0
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  i32.store
+  local.get $0
+  call $src-as/base/systems/InputSystem/InputSystem#handleMouseUp
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+ )
+ (func $src-as/math/Vector2/Vector2#set:x (param $0 i32) (param $1 f32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  i32.load
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  i32.const 0
+  local.get $1
+  call $~lib/typedarray/Float32Array#__set
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+ )
+ (func $src-as/math/Vector2/Vector2#set:y (param $0 i32) (param $1 f32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  i32.load
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  i32.const 1
+  local.get $1
+  call $~lib/typedarray/Float32Array#__set
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+ )
+ (func $src-as/base/systems/InputSystem/InputSystem#handleMouseWheel (param $0 i32) (param $1 f32) (param $2 f32)
+  (local $3 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  i32.load offset=16
+  local.set $3
+  global.get $~lib/memory/__stack_pointer
+  local.get $3
+  i32.store
+  local.get $3
+  local.get $1
+  local.get $2
+  call $src-as/math/Vector2/Vector2#set
+  drop
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+ )
+ (func $src-as/exports/input/handleMouseWheel (param $0 f32) (param $1 f32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  call $src-as/base/World/World.get:main
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store offset=4
+  local.get $2
+  call $src-as/base/World/World#get<src-as/base/systems/InputSystem/InputSystem>
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  local.get $0
+  local.get $1
+  call $src-as/base/systems/InputSystem/InputSystem#handleMouseWheel
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+ )
+ (func $src-as/math/Vector2/Vector2#get:x (param $0 i32) (result f32)
+  (local $1 i32)
+  (local $2 f32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  i32.load
+  local.set $1
+  global.get $~lib/memory/__stack_pointer
+  local.get $1
+  i32.store
+  local.get $1
+  i32.const 0
+  call $~lib/typedarray/Float32Array#__get
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $2
+ )
+ (func $src-as/math/Vector2/Vector2#get:y (param $0 i32) (result f32)
+  (local $1 i32)
+  (local $2 f32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  i32.load
+  local.set $1
+  global.get $~lib/memory/__stack_pointer
+  local.get $1
+  i32.store
+  local.get $1
+  i32.const 1
+  call $~lib/typedarray/Float32Array#__get
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $2
+ )
+ (func $src-as/base/systems/InputSystem/InputSystem#handleMouseMove (param $0 i32) (param $1 f32) (param $2 f32)
+  (local $3 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  local.get $0
+  i32.load offset=12
+  local.set $3
+  global.get $~lib/memory/__stack_pointer
+  local.get $3
+  i32.store
+  local.get $3
+  local.get $1
+  local.get $0
+  i32.load offset=8
+  local.set $3
+  global.get $~lib/memory/__stack_pointer
+  local.get $3
+  i32.store offset=4
+  local.get $3
+  call $src-as/math/Vector2/Vector2#get:x
+  f32.sub
+  local.get $2
+  local.get $0
+  i32.load offset=8
+  local.set $3
+  global.get $~lib/memory/__stack_pointer
+  local.get $3
+  i32.store offset=4
+  local.get $3
+  call $src-as/math/Vector2/Vector2#get:y
+  f32.sub
+  call $src-as/math/Vector2/Vector2#set
+  drop
+  local.get $0
+  i32.load offset=8
+  local.set $3
+  global.get $~lib/memory/__stack_pointer
+  local.get $3
+  i32.store
+  local.get $3
+  local.get $1
+  local.get $2
+  call $src-as/math/Vector2/Vector2#set
+  drop
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+ )
+ (func $src-as/exports/input/handleMouseMove (param $0 f32) (param $1 f32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  call $src-as/base/World/World.get:main
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store offset=4
+  local.get $2
+  call $src-as/base/World/World#get<src-as/base/systems/InputSystem/InputSystem>
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  local.get $0
+  local.get $1
+  call $src-as/base/systems/InputSystem/InputSystem#handleMouseMove
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+ )
+ (func $src-as/base/systems/InputSystem/InputSystem#handleKeyDown (param $0 i32) (param $1 i32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  i32.load offset=24
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  local.get $1
+  call $~lib/set/Set<i32>#add
+  drop
+  local.get $0
+  i32.load offset=28
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  local.get $1
+  call $~lib/set/Set<i32>#add
+  drop
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+ )
+ (func $src-as/exports/input/handleKeyDown (param $0 i32)
+  (local $1 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  call $src-as/base/World/World.get:main
+  local.set $1
+  global.get $~lib/memory/__stack_pointer
+  local.get $1
+  i32.store offset=4
+  local.get $1
+  call $src-as/base/World/World#get<src-as/base/systems/InputSystem/InputSystem>
+  local.set $1
+  global.get $~lib/memory/__stack_pointer
+  local.get $1
+  i32.store
+  local.get $1
+  local.get $0
+  call $src-as/base/systems/InputSystem/InputSystem#handleKeyDown
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+ )
+ (func $src-as/base/systems/InputSystem/InputSystem#handleKeyUp (param $0 i32) (param $1 i32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  i32.load offset=24
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  local.get $1
+  call $~lib/set/Set<i32>#delete
+  drop
+  local.get $0
+  i32.load offset=28
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  local.get $1
+  call $~lib/set/Set<i32>#delete
+  drop
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+ )
+ (func $src-as/exports/input/handleKeyUp (param $0 i32)
+  (local $1 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  call $src-as/base/World/World.get:main
+  local.set $1
+  global.get $~lib/memory/__stack_pointer
+  local.get $1
+  i32.store offset=4
+  local.get $1
+  call $src-as/base/World/World#get<src-as/base/systems/InputSystem/InputSystem>
+  local.set $1
+  global.get $~lib/memory/__stack_pointer
+  local.get $1
+  i32.store
+  local.get $1
+  local.get $0
+  call $src-as/base/systems/InputSystem/InputSystem#handleKeyUp
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+ )
+ (func $src-as/base/World/World#get<src-as/WebGL2/systems/WebGLRenderSystem/WebGLRenderSystem> (param $0 i32) (result i32)
+  (local $1 i32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  i32.load offset=20
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  i32.const 127
+  call $~lib/map/Map<u32,src-as/base/Object/ObjectBase>#get
+  local.tee $1
+  i32.store offset=4
+  local.get $1
+  i32.const 127
+  call $~lib/rt/__instanceof
+  if (result i32)
+   local.get $1
+  else
+   i32.const 17456
+   i32.const 17520
+   i32.const 43
+   i32.const 41
+   call $~lib/builtins/abort
+   unreachable
+  end
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $2
+ )
+ (func $src-as/exports/render/handleResize (param $0 i32) (param $1 i32)
+  (local $2 f32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  (local $6 i32)
+  (local $7 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 12
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store offset=8
+  local.get $0
+  global.set $src-as/rendering/systems/RenderSystem/RenderSystem.canvasWidth
+  local.get $1
+  global.set $src-as/rendering/systems/RenderSystem/RenderSystem.canvasHeight
+  local.get $0
+  f32.convert_i32_u
+  local.get $1
+  f32.convert_i32_u
+  f32.div
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  call $src-as/base/World/World.get:main
+  local.set $7
+  global.get $~lib/memory/__stack_pointer
+  local.get $7
+  i32.store
+  local.get $7
+  call $src-as/base/World/World#get<src-as/WebGL2/systems/WebGLRenderSystem/WebGLRenderSystem>
+  local.tee $3
+  i32.store offset=4
+  global.get $~lib/memory/__stack_pointer
+  local.get $3
+  i32.load offset=16
+  i32.load offset=8
+  local.tee $4
+  i32.store offset=8
+  i32.const 0
+  local.set $5
+  loop $for-loop|0
+   local.get $5
+   local.get $4
+   call $~lib/array/Array<src-as/components/Camera/Camera>#get:length
+   i32.lt_s
+   local.set $6
+   local.get $6
+   if
+    local.get $4
+    local.get $5
+    call $~lib/array/Array<src-as/components/Camera/Camera>#__get
+    i32.load8_u offset=28
+    if
+     local.get $4
+     local.get $5
+     call $~lib/array/Array<src-as/components/Camera/Camera>#__get
+     local.set $7
+     global.get $~lib/memory/__stack_pointer
+     local.get $7
+     i32.store
+     local.get $7
+     i32.const 0
+     i32.const 0
+     local.get $0
+     local.get $1
+     local.get $2
+     call $src-as/components/Camera/Camera#setViewport
+     drop
+    end
+    local.get $5
+    i32.const 1
+    i32.add
+    local.set $5
+    br $for-loop|0
+   end
+  end
+  global.get $~lib/memory/__stack_pointer
+  i32.const 12
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+ )
+ (func $src-as/base/Query/TypedQuery<src-as/components/Transform/Transform>#addEntity (param $0 i32) (param $1 i32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  local.get $0
+  local.get $1
+  call $src-as/base/Query/Query#addEntity
+  local.get $0
+  i32.load offset=8
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  local.get $1
+  call $src-as/base/Entity/Entity#get<src-as/components/Transform/Transform>
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store offset=4
+  local.get $2
+  call $~lib/array/Array<src-as/components/Transform/Transform>#push
+  drop
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+ )
+ (func $src-as/base/Entity/Entity#get<src-as/components/Camera/Camera> (param $0 i32) (result i32)
+  (local $1 i32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  i32.load offset=8
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  i32.const 108
+  call $~lib/map/Map<u32,src-as/base/Component/Component>#get
+  local.tee $1
+  i32.store offset=4
+  local.get $1
+  i32.const 108
+  call $~lib/rt/__instanceof
+  if (result i32)
+   local.get $1
+  else
+   i32.const 17456
+   i32.const 17280
+   i32.const 39
+   i32.const 10
+   call $~lib/builtins/abort
+   unreachable
+  end
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $2
+ )
+ (func $src-as/base/Query/TypedQuery<src-as/components/Camera/Camera>#addEntity (param $0 i32) (param $1 i32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  local.get $0
+  local.get $1
+  call $src-as/base/Query/Query#addEntity
+  local.get $0
+  i32.load offset=8
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  local.get $1
+  call $src-as/base/Entity/Entity#get<src-as/components/Camera/Camera>
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store offset=4
+  local.get $2
+  call $~lib/array/Array<src-as/components/Camera/Camera>#push
+  drop
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+ )
+ (func $src-as/base/systems/TransformSystem/TransformSystem#onAdd (param $0 i32) (param $1 i32)
+  (local $2 i32)
+  (local $3 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  global.get $~lib/memory/__stack_pointer
+  local.get $1
+  call $src-as/base/Entity/Entity#get<src-as/components/Transform/Transform>
+  local.tee $2
+  i32.store
+  local.get $2
+  local.get $0
+  i32.load offset=20
+  i32.ne
+  if (result i32)
+   local.get $2
+   i32.load offset=36
+   i32.const 0
+   i32.eq
+  else
+   i32.const 0
+  end
+  if
+   local.get $2
+   local.get $0
+   i32.load offset=20
+   local.set $3
+   global.get $~lib/memory/__stack_pointer
+   local.get $3
+   i32.store offset=4
+   local.get $3
+   i32.const 0
+   call $src-as/components/Transform/Transform#setParent
+   drop
+  end
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+ )
+ (func $src-as/base/Entity/Entity#get<src-as/components/Mesh/Mesh> (param $0 i32) (result i32)
+  (local $1 i32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  i32.load offset=8
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  i32.const 113
+  call $~lib/map/Map<u32,src-as/base/Component/Component>#get
+  local.tee $1
+  i32.store offset=4
+  local.get $1
+  i32.const 113
+  call $~lib/rt/__instanceof
+  if (result i32)
+   local.get $1
+  else
+   i32.const 17456
+   i32.const 17280
+   i32.const 39
+   i32.const 10
+   call $~lib/builtins/abort
+   unreachable
+  end
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $2
+ )
+ (func $src-as/rendering/systems/RenderSystem/RenderSystem#onAdd (param $0 i32) (param $1 i32)
+  (local $2 i32)
+  (local $3 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  global.get $~lib/memory/__stack_pointer
+  local.get $1
+  call $src-as/base/Entity/Entity#get<src-as/components/Mesh/Mesh>
+  local.tee $2
+  i32.store
+  local.get $2
+  i32.load offset=16
+  i32.load8_u offset=12
+  if
+   local.get $0
+   i32.load offset=24
+   local.set $3
+   global.get $~lib/memory/__stack_pointer
+   local.get $3
+   i32.store offset=4
+   local.get $3
+   local.get $2
+   call $~lib/array/Array<src-as/components/Mesh/Mesh>#push
+   drop
+  else
+   local.get $0
+   i32.load offset=20
+   local.set $3
+   global.get $~lib/memory/__stack_pointer
+   local.get $3
+   i32.store offset=4
+   local.get $3
+   local.get $2
+   call $~lib/array/Array<src-as/components/Mesh/Mesh>#push
+   drop
+  end
+  local.get $0
+  local.get $2
+  call $src-as/rendering/systems/RenderSystem/RenderSystem#handleCreateMesh@virtual
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+ )
+ (func $src-as/base/World/World#get<src-as/components/Time/Time> (param $0 i32) (result i32)
+  (local $1 i32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  i32.load offset=20
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  i32.const 126
+  call $~lib/map/Map<u32,src-as/base/Object/ObjectBase>#get
+  local.tee $1
+  i32.store offset=4
+  local.get $1
+  i32.const 126
+  call $~lib/rt/__instanceof
+  if (result i32)
+   local.get $1
+  else
+   i32.const 17456
+   i32.const 17520
+   i32.const 43
+   i32.const 41
+   call $~lib/builtins/abort
+   unreachable
+  end
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $2
+ )
+ (func $src-as/components/Rotator/Rotator#start (param $0 i32)
+  (local $1 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  local.get $0
+  i32.load offset=4
+  local.set $1
+  global.get $~lib/memory/__stack_pointer
+  local.get $1
+  i32.store
+  local.get $1
+  call $src-as/base/World/World#get<src-as/components/Time/Time>
+  f32.load offset=8
+  call $src-as/components/Rotator/Rotator#set:startTime
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+ )
+ (func $src-as/base/Query/TypedQuery<src-as/components/Transform/Transform>#removeEntity (param $0 i32) (param $1 i32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 12
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store offset=8
+  local.get $0
+  local.get $1
+  call $src-as/base/Query/Query#removeEntity
+  local.get $0
+  i32.load offset=8
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  local.get $0
+  i32.load offset=8
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store offset=4
+  local.get $2
+  local.get $1
+  call $src-as/base/Entity/Entity#get<src-as/components/Transform/Transform>
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store offset=8
+  local.get $2
+  i32.const 0
+  call $~lib/array/Array<src-as/components/Transform/Transform>#indexOf
+  i32.const 1
+  call $~lib/array/Array<src-as/components/Transform/Transform>#splice
+  drop
+  global.get $~lib/memory/__stack_pointer
+  i32.const 12
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+ )
+ (func $src-as/base/Query/TypedQuery<src-as/components/Camera/Camera>#removeEntity (param $0 i32) (param $1 i32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 12
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store offset=8
+  local.get $0
+  local.get $1
+  call $src-as/base/Query/Query#removeEntity
+  local.get $0
+  i32.load offset=8
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  local.get $0
+  i32.load offset=8
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store offset=4
+  local.get $2
+  local.get $1
+  call $src-as/base/Entity/Entity#get<src-as/components/Camera/Camera>
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store offset=8
+  local.get $2
+  i32.const 0
+  call $~lib/array/Array<src-as/components/Camera/Camera>#indexOf
+  i32.const 1
+  call $~lib/array/Array<src-as/components/Camera/Camera>#splice
+  drop
+  global.get $~lib/memory/__stack_pointer
+  i32.const 12
+  i32.add
+  global.set $~lib/memory/__stack_pointer
  )
  (func $~lib/set/Set<src-as/base/Entity/Entity>#values (param $0 i32) (result i32)
   (local $1 i32)
@@ -40533,56 +45592,6 @@
   end
   global.get $~lib/memory/__stack_pointer
   i32.const 8
-  i32.add
-  global.set $~lib/memory/__stack_pointer
- )
- (func $src-as/math/Vector2/Vector2#set:x (param $0 i32) (param $1 f32)
-  (local $2 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store
-  local.get $0
-  i32.load
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  local.get $2
-  i32.store
-  local.get $2
-  i32.const 0
-  local.get $1
-  call $~lib/typedarray/Float32Array#__set
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.add
-  global.set $~lib/memory/__stack_pointer
- )
- (func $src-as/math/Vector2/Vector2#set:y (param $0 i32) (param $1 f32)
-  (local $2 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store
-  local.get $0
-  i32.load
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  local.get $2
-  i32.store
-  local.get $2
-  i32.const 1
-  local.get $1
-  call $~lib/typedarray/Float32Array#__set
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
   i32.add
   global.set $~lib/memory/__stack_pointer
  )
@@ -41125,13 +46134,13 @@
   local.tee $0
   i32.store offset=8
   local.get $0
-  i32.const 34
+  i32.const 35
   call $~lib/rt/__instanceof
   if (result i32)
    local.get $0
   else
-   i32.const 17760
-   i32.const 18080
+   i32.const 17456
+   i32.const 18240
    i32.const 33
    i32.const 4
    call $~lib/builtins/abort
@@ -41158,13 +46167,13 @@
   local.tee $0
   i32.store offset=8
   local.get $0
-  i32.const 34
+  i32.const 35
   call $~lib/rt/__instanceof
   if (result i32)
    local.get $0
   else
-   i32.const 17760
-   i32.const 18080
+   i32.const 17456
+   i32.const 18240
    i32.const 34
    i32.const 4
    call $~lib/builtins/abort
@@ -41302,13 +46311,13 @@
   local.tee $1
   i32.store offset=8
   local.get $1
-  i32.const 34
+  i32.const 35
   call $~lib/rt/__instanceof
   if (result i32)
    local.get $1
   else
-   i32.const 17760
-   i32.const 18368
+   i32.const 17456
+   i32.const 18464
    i32.const 67
    i32.const 4
    call $~lib/builtins/abort
@@ -41336,13 +46345,13 @@
   local.tee $1
   i32.store offset=8
   local.get $1
-  i32.const 34
+  i32.const 35
   call $~lib/rt/__instanceof
   if (result i32)
    local.get $1
   else
-   i32.const 17760
-   i32.const 18368
+   i32.const 17456
+   i32.const 18464
    i32.const 68
    i32.const 4
    call $~lib/builtins/abort
@@ -41370,13 +46379,13 @@
   local.tee $1
   i32.store offset=8
   local.get $1
-  i32.const 34
+  i32.const 35
   call $~lib/rt/__instanceof
   if (result i32)
    local.get $1
   else
-   i32.const 17760
-   i32.const 18368
+   i32.const 17456
+   i32.const 18464
    i32.const 69
    i32.const 4
    call $~lib/builtins/abort
@@ -41404,13 +46413,13 @@
   local.tee $1
   i32.store offset=8
   local.get $1
-  i32.const 34
+  i32.const 35
   call $~lib/rt/__instanceof
   if (result i32)
    local.get $1
   else
-   i32.const 17760
-   i32.const 18368
+   i32.const 17456
+   i32.const 18464
    i32.const 70
    i32.const 4
    call $~lib/builtins/abort
@@ -41492,13 +46501,13 @@
   local.tee $1
   i32.store offset=8
   local.get $1
-  i32.const 34
+  i32.const 35
   call $~lib/rt/__instanceof
   if (result i32)
    local.get $1
   else
-   i32.const 17760
-   i32.const 18448
+   i32.const 17456
+   i32.const 18544
    i32.const 28
    i32.const 4
    call $~lib/builtins/abort
@@ -41527,13 +46536,13 @@
   local.tee $1
   i32.store offset=8
   local.get $1
-  i32.const 34
+  i32.const 35
   call $~lib/rt/__instanceof
   if (result i32)
    local.get $1
   else
-   i32.const 17760
-   i32.const 18448
+   i32.const 17456
+   i32.const 18544
    i32.const 29
    i32.const 4
    call $~lib/builtins/abort
@@ -41561,13 +46570,13 @@
   local.tee $1
   i32.store offset=8
   local.get $1
-  i32.const 34
+  i32.const 35
   call $~lib/rt/__instanceof
   if (result i32)
    local.get $1
   else
-   i32.const 17760
-   i32.const 18448
+   i32.const 17456
+   i32.const 18544
    i32.const 30
    i32.const 4
    call $~lib/builtins/abort
@@ -41595,13 +46604,13 @@
   local.tee $1
   i32.store offset=8
   local.get $1
-  i32.const 34
+  i32.const 35
   call $~lib/rt/__instanceof
   if (result i32)
    local.get $1
   else
-   i32.const 17760
-   i32.const 18448
+   i32.const 17456
+   i32.const 18544
    i32.const 31
    i32.const 4
    call $~lib/builtins/abort
@@ -41630,13 +46639,13 @@
   local.tee $1
   i32.store offset=8
   local.get $1
-  i32.const 34
+  i32.const 35
   call $~lib/rt/__instanceof
   if (result i32)
    local.get $1
   else
-   i32.const 17760
-   i32.const 18448
+   i32.const 17456
+   i32.const 18544
    i32.const 32
    i32.const 4
    call $~lib/builtins/abort
@@ -41650,49 +46659,6 @@
   i32.const 12
   i32.add
   global.set $~lib/memory/__stack_pointer
- )
- (func $src-as/base/World/World#get<src-as/components/Time/Time> (param $0 i32) (result i32)
-  (local $1 i32)
-  (local $2 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 8
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i64.const 0
-  i64.store
-  global.get $~lib/memory/__stack_pointer
-  local.get $0
-  i32.load offset=20
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  local.get $2
-  i32.store
-  local.get $2
-  i32.const 99
-  call $~lib/map/Map<u32,src-as/base/Object/ObjectBase>#get
-  local.tee $1
-  i32.store offset=4
-  local.get $1
-  i32.const 99
-  call $~lib/rt/__instanceof
-  if (result i32)
-   local.get $1
-  else
-   i32.const 17760
-   i32.const 16976
-   i32.const 43
-   i32.const 41
-   call $~lib/builtins/abort
-   unreachable
-  end
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  i32.const 8
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $2
  )
  (func $src-as/rendering/systems/RenderSystem/RenderSystem#renderMesh (param $0 i32) (param $1 i32) (param $2 i32)
   (local $3 i32)
@@ -41890,13 +46856,13 @@
        if
         local.get $5
         local.tee $6
-        i32.const 34
+        i32.const 35
         call $~lib/rt/__instanceof
         if (result i32)
          local.get $6
         else
-         i32.const 17760
-         i32.const 18528
+         i32.const 17456
+         i32.const 18624
          i32.const 83
          i32.const 6
          call $~lib/builtins/abort
@@ -41937,13 +46903,13 @@
         if
          local.get $5
          local.tee $6
-         i32.const 34
+         i32.const 35
          call $~lib/rt/__instanceof
          if (result i32)
           local.get $6
          else
-          i32.const 17760
-          i32.const 18528
+          i32.const 17456
+          i32.const 18624
           i32.const 85
           i32.const 6
           call $~lib/builtins/abort
@@ -41967,7 +46933,7 @@
          f32.load offset=16
          call $~lib/typedarray/Float32Array#__set
         else
-         i32.const 18640
+         i32.const 18736
          local.set $7
          global.get $~lib/memory/__stack_pointer
          local.get $7
@@ -41981,7 +46947,7 @@
          i32.store offset=4
          local.get $7
          call $~lib/string/String#concat
-         i32.const 18528
+         i32.const 18624
          i32.const 87
          i32.const 5
          call $~lib/builtins/abort
@@ -42194,956 +47160,6 @@
   i32.add
   global.set $~lib/memory/__stack_pointer
  )
- (func $src-as/base/Query/TypedQuery<src-as/components/Transform/Transform>#addEntity (param $0 i32) (param $1 i32)
-  (local $2 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 8
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i64.const 0
-  i64.store
-  local.get $0
-  local.get $1
-  call $src-as/base/Query/Query#addEntity
-  local.get $0
-  i32.load offset=8
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  local.get $2
-  i32.store
-  local.get $2
-  local.get $1
-  call $src-as/base/Entity/Entity#get<src-as/components/Transform/Transform>
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  local.get $2
-  i32.store offset=4
-  local.get $2
-  call $~lib/array/Array<src-as/components/Transform/Transform>#push
-  drop
-  global.get $~lib/memory/__stack_pointer
-  i32.const 8
-  i32.add
-  global.set $~lib/memory/__stack_pointer
- )
- (func $src-as/base/Entity/Entity#get<src-as/components/Camera/Camera> (param $0 i32) (result i32)
-  (local $1 i32)
-  (local $2 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 8
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i64.const 0
-  i64.store
-  global.get $~lib/memory/__stack_pointer
-  local.get $0
-  i32.load offset=8
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  local.get $2
-  i32.store
-  local.get $2
-  i32.const 102
-  call $~lib/map/Map<u32,src-as/base/Component/Component>#get
-  local.tee $1
-  i32.store offset=4
-  local.get $1
-  i32.const 102
-  call $~lib/rt/__instanceof
-  if (result i32)
-   local.get $1
-  else
-   i32.const 17760
-   i32.const 17696
-   i32.const 39
-   i32.const 10
-   call $~lib/builtins/abort
-   unreachable
-  end
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  i32.const 8
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $2
- )
- (func $src-as/base/Query/TypedQuery<src-as/components/Camera/Camera>#addEntity (param $0 i32) (param $1 i32)
-  (local $2 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 8
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i64.const 0
-  i64.store
-  local.get $0
-  local.get $1
-  call $src-as/base/Query/Query#addEntity
-  local.get $0
-  i32.load offset=8
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  local.get $2
-  i32.store
-  local.get $2
-  local.get $1
-  call $src-as/base/Entity/Entity#get<src-as/components/Camera/Camera>
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  local.get $2
-  i32.store offset=4
-  local.get $2
-  call $~lib/array/Array<src-as/components/Camera/Camera>#push
-  drop
-  global.get $~lib/memory/__stack_pointer
-  i32.const 8
-  i32.add
-  global.set $~lib/memory/__stack_pointer
- )
- (func $src-as/base/systems/TransformSystem/TransformSystem#onAdd (param $0 i32) (param $1 i32)
-  (local $2 i32)
-  (local $3 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 8
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i64.const 0
-  i64.store
-  global.get $~lib/memory/__stack_pointer
-  local.get $1
-  call $src-as/base/Entity/Entity#get<src-as/components/Transform/Transform>
-  local.tee $2
-  i32.store
-  local.get $2
-  local.get $0
-  i32.load offset=20
-  i32.ne
-  if (result i32)
-   local.get $2
-   i32.load offset=36
-   i32.const 0
-   i32.eq
-  else
-   i32.const 0
-  end
-  if
-   local.get $2
-   local.get $0
-   i32.load offset=20
-   local.set $3
-   global.get $~lib/memory/__stack_pointer
-   local.get $3
-   i32.store offset=4
-   local.get $3
-   i32.const 0
-   call $src-as/components/Transform/Transform#setParent
-   drop
-  end
-  global.get $~lib/memory/__stack_pointer
-  i32.const 8
-  i32.add
-  global.set $~lib/memory/__stack_pointer
- )
- (func $src-as/base/Entity/Entity#get<src-as/components/Mesh/Mesh> (param $0 i32) (result i32)
-  (local $1 i32)
-  (local $2 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 8
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i64.const 0
-  i64.store
-  global.get $~lib/memory/__stack_pointer
-  local.get $0
-  i32.load offset=8
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  local.get $2
-  i32.store
-  local.get $2
-  i32.const 107
-  call $~lib/map/Map<u32,src-as/base/Component/Component>#get
-  local.tee $1
-  i32.store offset=4
-  local.get $1
-  i32.const 107
-  call $~lib/rt/__instanceof
-  if (result i32)
-   local.get $1
-  else
-   i32.const 17760
-   i32.const 17696
-   i32.const 39
-   i32.const 10
-   call $~lib/builtins/abort
-   unreachable
-  end
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  i32.const 8
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $2
- )
- (func $src-as/rendering/systems/RenderSystem/RenderSystem#onAdd (param $0 i32) (param $1 i32)
-  (local $2 i32)
-  (local $3 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 8
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i64.const 0
-  i64.store
-  global.get $~lib/memory/__stack_pointer
-  local.get $1
-  call $src-as/base/Entity/Entity#get<src-as/components/Mesh/Mesh>
-  local.tee $2
-  i32.store
-  local.get $2
-  i32.load offset=16
-  i32.load8_u offset=12
-  if
-   local.get $0
-   i32.load offset=24
-   local.set $3
-   global.get $~lib/memory/__stack_pointer
-   local.get $3
-   i32.store offset=4
-   local.get $3
-   local.get $2
-   call $~lib/array/Array<src-as/components/Mesh/Mesh>#push
-   drop
-  else
-   local.get $0
-   i32.load offset=20
-   local.set $3
-   global.get $~lib/memory/__stack_pointer
-   local.get $3
-   i32.store offset=4
-   local.get $3
-   local.get $2
-   call $~lib/array/Array<src-as/components/Mesh/Mesh>#push
-   drop
-  end
-  local.get $0
-  local.get $2
-  call $src-as/rendering/systems/RenderSystem/RenderSystem#handleCreateMesh@virtual
-  global.get $~lib/memory/__stack_pointer
-  i32.const 8
-  i32.add
-  global.set $~lib/memory/__stack_pointer
- )
- (func $src-as/components/Rotator/Rotator#start (param $0 i32)
-  (local $1 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store
-  local.get $0
-  local.get $0
-  i32.load offset=4
-  local.set $1
-  global.get $~lib/memory/__stack_pointer
-  local.get $1
-  i32.store
-  local.get $1
-  call $src-as/base/World/World#get<src-as/components/Time/Time>
-  f32.load offset=8
-  call $src-as/components/Rotator/Rotator#set:startTime
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.add
-  global.set $~lib/memory/__stack_pointer
- )
- (func $src-as/base/Query/TypedQuery<src-as/components/Transform/Transform>#removeEntity (param $0 i32) (param $1 i32)
-  (local $2 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 12
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i64.const 0
-  i64.store
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store offset=8
-  local.get $0
-  local.get $1
-  call $src-as/base/Query/Query#removeEntity
-  local.get $0
-  i32.load offset=8
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  local.get $2
-  i32.store
-  local.get $2
-  local.get $0
-  i32.load offset=8
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  local.get $2
-  i32.store offset=4
-  local.get $2
-  local.get $1
-  call $src-as/base/Entity/Entity#get<src-as/components/Transform/Transform>
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  local.get $2
-  i32.store offset=8
-  local.get $2
-  i32.const 0
-  call $~lib/array/Array<src-as/components/Transform/Transform>#indexOf
-  i32.const 1
-  call $~lib/array/Array<src-as/components/Transform/Transform>#splice
-  drop
-  global.get $~lib/memory/__stack_pointer
-  i32.const 12
-  i32.add
-  global.set $~lib/memory/__stack_pointer
- )
- (func $src-as/base/Query/TypedQuery<src-as/components/Camera/Camera>#removeEntity (param $0 i32) (param $1 i32)
-  (local $2 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 12
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i64.const 0
-  i64.store
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store offset=8
-  local.get $0
-  local.get $1
-  call $src-as/base/Query/Query#removeEntity
-  local.get $0
-  i32.load offset=8
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  local.get $2
-  i32.store
-  local.get $2
-  local.get $0
-  i32.load offset=8
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  local.get $2
-  i32.store offset=4
-  local.get $2
-  local.get $1
-  call $src-as/base/Entity/Entity#get<src-as/components/Camera/Camera>
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  local.get $2
-  i32.store offset=8
-  local.get $2
-  i32.const 0
-  call $~lib/array/Array<src-as/components/Camera/Camera>#indexOf
-  i32.const 1
-  call $~lib/array/Array<src-as/components/Camera/Camera>#splice
-  drop
-  global.get $~lib/memory/__stack_pointer
-  i32.const 12
-  i32.add
-  global.set $~lib/memory/__stack_pointer
- )
- (func $src-as/math/Vector2/Vector2#constructor (param $0 i32) (param $1 f32) (param $2 f32) (result i32)
-  (local $3 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 8
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i64.const 0
-  i64.store
-  local.get $0
-  i32.eqz
-  if
-   global.get $~lib/memory/__stack_pointer
-   i32.const 4
-   i32.const 91
-   call $~lib/rt/itcms/__new
-   local.tee $0
-   i32.store
-  end
-  local.get $0
-  i32.const 0
-  call $src-as/math/Vector2/Vector2#set:m
-  local.get $0
-  i32.const 0
-  i32.const 2
-  call $~lib/typedarray/Float32Array#constructor
-  call $src-as/math/Vector2/Vector2#set:m
-  local.get $0
-  i32.load
-  local.set $3
-  global.get $~lib/memory/__stack_pointer
-  local.get $3
-  i32.store offset=4
-  local.get $3
-  i32.const 0
-  local.get $1
-  call $~lib/typedarray/Float32Array#__set
-  local.get $0
-  i32.load
-  local.set $3
-  global.get $~lib/memory/__stack_pointer
-  local.get $3
-  i32.store offset=4
-  local.get $3
-  i32.const 1
-  local.get $2
-  call $~lib/typedarray/Float32Array#__set
-  local.get $0
-  local.set $3
-  global.get $~lib/memory/__stack_pointer
-  i32.const 8
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $3
- )
- (func $src-as/math/Vector2/Vector2#get:x (param $0 i32) (result f32)
-  (local $1 i32)
-  (local $2 f32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store
-  local.get $0
-  i32.load
-  local.set $1
-  global.get $~lib/memory/__stack_pointer
-  local.get $1
-  i32.store
-  local.get $1
-  i32.const 0
-  call $~lib/typedarray/Float32Array#__get
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $2
- )
- (func $src-as/math/Vector2/Vector2#get:y (param $0 i32) (result f32)
-  (local $1 i32)
-  (local $2 f32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store
-  local.get $0
-  i32.load
-  local.set $1
-  global.get $~lib/memory/__stack_pointer
-  local.get $1
-  i32.store
-  local.get $1
-  i32.const 1
-  call $~lib/typedarray/Float32Array#__get
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $2
- )
- (func $src-as/components/Rotator/Rotator#update (param $0 i32)
-  (local $1 i32)
-  (local $2 f32)
-  (local $3 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 16
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i64.const 0
-  i64.store
-  global.get $~lib/memory/__stack_pointer
-  i64.const 0
-  i64.store offset=8
-  global.get $~lib/memory/__stack_pointer
-  local.get $0
-  i32.load offset=4
-  local.set $3
-  global.get $~lib/memory/__stack_pointer
-  local.get $3
-  i32.store
-  local.get $3
-  call $src-as/base/World/World#get<src-as/components/Time/Time>
-  local.tee $1
-  i32.store offset=4
-  local.get $0
-  f32.load offset=12
-  local.get $1
-  f32.load offset=8
-  f32.add
-  local.set $2
-  i32.const 0
-  local.get $2
-  f32.const 0.4000000059604645
-  f32.mul
-  f32.const 1
-  call $src-as/math/PolarCoords/PolarCoords#constructor
-  local.set $3
-  global.get $~lib/memory/__stack_pointer
-  local.get $3
-  i32.store offset=12
-  local.get $3
-  i32.const 1
-  global.set $~argumentsLength
-  i32.const 0
-  call $src-as/math/Vector2/Vector2.fromPolar@varargs
-  local.set $3
-  global.get $~lib/memory/__stack_pointer
-  local.get $3
-  i32.store
-  local.get $3
-  local.get $0
-  i32.load offset=8
-  i32.load offset=20
-  local.set $3
-  global.get $~lib/memory/__stack_pointer
-  local.get $3
-  i32.store offset=8
-  local.get $3
-  call $src-as/math/Vector2/Vector2#toVector3
-  drop
-  local.get $0
-  i32.load offset=8
-  i32.load offset=20
-  local.set $3
-  global.get $~lib/memory/__stack_pointer
-  local.get $3
-  i32.store
-  local.get $3
-  local.get $0
-  i32.load offset=16
-  local.set $3
-  global.get $~lib/memory/__stack_pointer
-  local.get $3
-  i32.store offset=8
-  local.get $3
-  call $src-as/math/Vector3/Vector3#add
-  drop
-  local.get $0
-  i32.load offset=8
-  i32.load offset=28
-  local.set $3
-  global.get $~lib/memory/__stack_pointer
-  local.get $3
-  i32.store
-  local.get $3
-  i32.const 0
-  f32.const 0.30000001192092896
-  local.get $2
-  f32.mul
-  f32.const 0.5
-  local.get $2
-  f32.mul
-  f32.const 0
-  call $src-as/math/Vector3/Vector3#constructor
-  local.set $3
-  global.get $~lib/memory/__stack_pointer
-  local.get $3
-  i32.store offset=8
-  local.get $3
-  call $src-as/math/Quaternion/Quaternion#fromEulerAngles
-  drop
-  global.get $~lib/memory/__stack_pointer
-  i32.const 16
-  i32.add
-  global.set $~lib/memory/__stack_pointer
- )
- (func $src-as/WebGL2/systems/WebGLUniformBufferObjectSystem/WebGLUniformBufferObjectSystem#apply (param $0 i32) (param $1 i32)
-  (local $2 i32)
-  (local $3 externref)
-  (local $4 i32)
-  (local $5 i32)
-  (local $6 i32)
-  (local $7 i32)
-  (local $8 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 12
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i64.const 0
-  i64.store
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store offset=8
-  local.get $0
-  i32.load
-  local.set $8
-  global.get $~lib/memory/__stack_pointer
-  local.get $8
-  i32.store
-  local.get $8
-  local.get $1
-  call $~lib/map/Map<src-as/rendering/material/UniformBufferObject/UniformBufferObject,src-as/WebGL2/components/material/WebGLUniformBufferObject>#has
-  i32.eqz
-  if
-   global.get $~lib/memory/__stack_pointer
-   i32.const 12
-   i32.add
-   global.set $~lib/memory/__stack_pointer
-   return
-  end
-  global.get $~lib/memory/__stack_pointer
-  local.get $0
-  i32.load
-  local.set $8
-  global.get $~lib/memory/__stack_pointer
-  local.get $8
-  i32.store
-  local.get $8
-  local.get $1
-  call $~lib/map/Map<src-as/rendering/material/UniformBufferObject/UniformBufferObject,src-as/WebGL2/components/material/WebGLUniformBufferObject>#get
-  local.tee $2
-  i32.store offset=4
-  local.get $2
-  i32.load offset=8
-  call $src-as/imports/_host/get
-  local.set $3
-  global.get $src-as/WebGL2/imports/_constants/BufferType.UNIFORM_BUFFER
-  local.get $3
-  call $src-as/WebGL2/imports/_types/bindBuffer
-  i32.const 0
-  local.set $4
-  loop $for-loop|0
-   local.get $4
-   local.get $2
-   i32.load offset=12
-   local.set $8
-   global.get $~lib/memory/__stack_pointer
-   local.get $8
-   i32.store
-   local.get $8
-   call $~lib/array/Array<src-as/rendering/material/Uniform/Uniform>#get:length
-   i32.lt_s
-   local.set $5
-   local.get $5
-   if
-    block $case5|1
-     block $case4|1
-      block $case3|1
-       block $case2|1
-        block $case1|1
-         block $case0|1
-          local.get $2
-          i32.load offset=12
-          local.set $8
-          global.get $~lib/memory/__stack_pointer
-          local.get $8
-          i32.store
-          local.get $8
-          local.get $4
-          call $~lib/array/Array<src-as/rendering/material/Uniform/Uniform>#__get
-          i32.load offset=4
-          local.set $6
-          local.get $6
-          global.get $src-as/rendering/constants/enums/UniformType.FLOAT
-          i32.eq
-          br_if $case1|1
-          local.get $6
-          global.get $src-as/rendering/constants/enums/UniformType.FLOAT_VEC2
-          i32.eq
-          br_if $case2|1
-          local.get $6
-          global.get $src-as/rendering/constants/enums/UniformType.FLOAT_VEC3
-          i32.eq
-          br_if $case3|1
-          local.get $6
-          global.get $src-as/rendering/constants/enums/UniformType.FLOAT_VEC4
-          i32.eq
-          br_if $case4|1
-          local.get $6
-          global.get $src-as/rendering/constants/enums/UniformType.FLOAT_MAT4
-          i32.eq
-          br_if $case5|1
-          br $case0|1
-         end
-        end
-       end
-      end
-     end
-    end
-    global.get $~lib/memory/__stack_pointer
-    global.get $~lib/memory/__stack_pointer
-    local.get $2
-    i32.load offset=12
-    local.set $8
-    global.get $~lib/memory/__stack_pointer
-    local.get $8
-    i32.store
-    local.get $8
-    local.get $4
-    call $~lib/array/Array<src-as/rendering/material/Uniform/Uniform>#__get
-    local.tee $6
-    i32.store offset=8
-    local.get $6
-    i32.const 34
-    call $~lib/rt/__instanceof
-    if (result i32)
-     local.get $6
-    else
-     i32.const 17760
-     i32.const 18720
-     i32.const 78
-     i32.const 18
-     call $~lib/builtins/abort
-     unreachable
-    end
-    i32.load offset=12
-    local.tee $6
-    i32.store offset=8
-    local.get $2
-    i32.load offset=16
-    local.set $8
-    global.get $~lib/memory/__stack_pointer
-    local.get $8
-    i32.store
-    local.get $8
-    local.get $4
-    call $~lib/array/Array<u32>#__get
-    local.set $7
-    global.get $src-as/WebGL2/imports/_constants/BufferType.UNIFORM_BUFFER
-    local.get $7
-    local.get $6
-    i32.const 0
-    i32.const 0
-    call $src-as/WebGL2/imports/_types/bufferSubData__2
-    local.get $4
-    i32.const 1
-    i32.add
-    local.set $4
-    br $for-loop|0
-   end
-  end
-  global.get $src-as/WebGL2/imports/_constants/BufferType.UNIFORM_BUFFER
-  ref.null extern
-  call $src-as/WebGL2/imports/_types/bindBuffer
-  global.get $~lib/memory/__stack_pointer
-  i32.const 12
-  i32.add
-  global.set $~lib/memory/__stack_pointer
- )
- (func $src-as/WebGL2/systems/WebGLMaterialSystem/WebGLMaterialSystem#beforeRender (param $0 i32) (param $1 i32)
-  (local $2 i32)
-  (local $3 i32)
-  (local $4 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 8
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i64.const 0
-  i64.store
-  local.get $1
-  i32.load offset=12
-  global.get $src-as/rendering/constants/enums/Culling.Off
-  i32.eq
-  if
-   global.get $src-as/WebGL2/imports/_constants/Culling.CULL_FACE
-   call $src-as/WebGL2/imports/_types/disable
-  else
-   local.get $1
-   i32.load offset=12
-   global.get $src-as/rendering/constants/enums/Culling.Back
-   i32.eq
-   if
-    global.get $src-as/WebGL2/imports/_constants/Culling.CULL_FACE
-    call $src-as/WebGL2/imports/_types/enable
-    global.get $src-as/WebGL2/imports/_constants/Culling.BACK
-    call $src-as/WebGL2/imports/_types/cullFace
-   else
-    local.get $1
-    i32.load offset=12
-    global.get $src-as/rendering/constants/enums/Culling.Front
-    i32.eq
-    if
-     global.get $src-as/WebGL2/imports/_constants/Culling.FRONT
-     call $src-as/WebGL2/imports/_types/cullFace
-    else
-     local.get $1
-     i32.load offset=12
-     global.get $src-as/rendering/constants/enums/Culling.Both
-     i32.eq
-     if
-      global.get $src-as/WebGL2/imports/_constants/Culling.FRONT_AND_BACK
-      call $src-as/WebGL2/imports/_types/cullFace
-     end
-    end
-   end
-  end
-  i32.const 0
-  local.set $2
-  loop $for-loop|0
-   local.get $2
-   local.get $1
-   i32.load
-   local.set $4
-   global.get $~lib/memory/__stack_pointer
-   local.get $4
-   i32.store
-   local.get $4
-   call $~lib/array/Array<src-as/WebGL2/components/material/WebGLUniform>#get:length
-   i32.lt_s
-   local.set $3
-   local.get $3
-   if
-    local.get $1
-    i32.load
-    local.set $4
-    global.get $~lib/memory/__stack_pointer
-    local.get $4
-    i32.store offset=4
-    local.get $4
-    local.get $2
-    call $~lib/array/Array<src-as/WebGL2/components/material/WebGLUniform>#__get
-    local.set $4
-    global.get $~lib/memory/__stack_pointer
-    local.get $4
-    i32.store
-    local.get $4
-    call $src-as/WebGL2/components/material/WebGLUniform#apply@virtual
-    local.get $2
-    i32.const 1
-    i32.add
-    local.set $2
-    br $for-loop|0
-   end
-  end
-  global.get $~lib/memory/__stack_pointer
-  i32.const 8
-  i32.add
-  global.set $~lib/memory/__stack_pointer
- )
- (func $src-as/WebGL2/systems/WebGLMeshSystem/WebGLMeshSystem#render (param $0 i32) (param $1 i32)
-  (local $2 i32)
-  (local $3 externref)
-  (local $4 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 12
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i64.const 0
-  i64.store
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store offset=8
-  global.get $~lib/memory/__stack_pointer
-  local.get $0
-  i32.load offset=12
-  local.set $4
-  global.get $~lib/memory/__stack_pointer
-  local.get $4
-  i32.store
-  local.get $4
-  local.get $1
-  call $~lib/map/Map<src-as/components/Mesh/Mesh,src-as/WebGL2/components/mesh/WebGLMesh>#get
-  local.tee $2
-  i32.store offset=4
-  local.get $2
-  i32.load
-  i32.load
-  call $src-as/imports/_host/get
-  local.set $3
-  local.get $3
-  call $src-as/WebGL2/imports/_types/useProgram
-  local.get $0
-  i32.load offset=8
-  local.set $4
-  global.get $~lib/memory/__stack_pointer
-  local.get $4
-  i32.store
-  local.get $4
-  local.get $2
-  i32.load offset=8
-  local.set $4
-  global.get $~lib/memory/__stack_pointer
-  local.get $4
-  i32.store offset=8
-  local.get $4
-  call $src-as/WebGL2/systems/WebGLMaterialSystem/WebGLMaterialSystem#beforeRender
-  local.get $0
-  i32.load offset=4
-  local.set $4
-  global.get $~lib/memory/__stack_pointer
-  local.get $4
-  i32.store
-  local.get $4
-  local.get $2
-  i32.load offset=4
-  local.set $4
-  global.get $~lib/memory/__stack_pointer
-  local.get $4
-  i32.store offset=8
-  local.get $4
-  call $src-as/WebGL2/systems/WebGLGeometrySystem/WebGLGeometrySystem#render
-  ref.null extern
-  call $src-as/WebGL2/imports/_types/useProgram
-  global.get $~lib/memory/__stack_pointer
-  i32.const 12
-  i32.add
-  global.set $~lib/memory/__stack_pointer
- )
- (func $src-as/WebGL2/systems/WebGLRenderSystem/WebGLRenderSystem#handleRenderMesh (param $0 i32) (param $1 i32)
-  (local $2 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store
-  local.get $0
-  i32.load offset=32
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  local.get $2
-  i32.store
-  local.get $2
-  local.get $1
-  call $src-as/WebGL2/systems/WebGLMeshSystem/WebGLMeshSystem#render
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.add
-  global.set $~lib/memory/__stack_pointer
- )
  (func $src-as/WebGL2/systems/WebGLShaderSystem/WebGLShaderSystem#compileShader (param $0 i32) (param $1 i32) (param $2 i32) (result externref)
   (local $3 externref)
   (local $4 i32)
@@ -43172,7 +47188,7 @@
   if
    local.get $3
    call $src-as/WebGL2/imports/_types/deleteShader
-   i32.const 18864
+   i32.const 18816
    local.set $4
    global.get $~lib/memory/__stack_pointer
    local.get $4
@@ -43185,7 +47201,7 @@
    local.get $4
    i32.store offset=8
    local.get $4
-   i32.const 5536
+   i32.const 5632
    local.set $4
    global.get $~lib/memory/__stack_pointer
    local.get $4
@@ -43211,7 +47227,7 @@
    i32.store offset=4
    local.get $4
    call $~lib/string/String.__concat
-   i32.const 18944
+   i32.const 18896
    i32.const 29
    i32.const 4
    call $~lib/builtins/abort
@@ -43307,7 +47323,7 @@
   if
    local.get $4
    call $src-as/WebGL2/imports/_types/deleteProgram
-   i32.const 19056
+   i32.const 19008
    local.set $8
    global.get $~lib/memory/__stack_pointer
    local.get $8
@@ -43327,7 +47343,7 @@
    i32.store
    local.get $8
    call $~lib/string/String.__concat
-   i32.const 18944
+   i32.const 18896
    i32.const 49
    i32.const 4
    call $~lib/builtins/abort
@@ -43345,7 +47361,7 @@
    if
     local.get $4
     call $src-as/WebGL2/imports/_types/deleteProgram
-    i32.const 19152
+    i32.const 19104
     local.set $8
     global.get $~lib/memory/__stack_pointer
     local.get $8
@@ -43365,7 +47381,7 @@
     i32.store
     local.get $8
     call $~lib/string/String.__concat
-    i32.const 18944
+    i32.const 18896
     i32.const 56
     i32.const 5
     call $~lib/builtins/abort
@@ -43506,13 +47522,13 @@
     global.get $src-as/WebGL2/imports/_constants/BufferType.ARRAY_BUFFER
     local.get $1
     local.tee $3
-    i32.const 50
+    i32.const 51
     call $~lib/rt/__instanceof
     if (result i32)
      local.get $3
     else
-     i32.const 17760
-     i32.const 19232
+     i32.const 17456
+     i32.const 19184
      i32.const 155
      i32.const 50
      call $~lib/builtins/abort
@@ -43533,13 +47549,13 @@
    global.get $src-as/WebGL2/imports/_constants/BufferType.ARRAY_BUFFER
    local.get $1
    local.tee $3
-   i32.const 52
+   i32.const 53
    call $~lib/rt/__instanceof
    if (result i32)
     local.get $3
    else
-    i32.const 17760
-    i32.const 19232
+    i32.const 17456
+    i32.const 19184
     i32.const 158
     i32.const 50
     call $~lib/builtins/abort
@@ -43902,7 +47918,7 @@
   call $src-as/WebGL2/imports/_types/bindTransformFeedback
   global.get $~lib/memory/__stack_pointer
   local.get $1
-  i32.const 19680
+  i32.const 19632
   local.set $9
   global.get $~lib/memory/__stack_pointer
   local.get $9
@@ -44083,7 +48099,7 @@
   call $src-as/WebGL2/systems/WebGLGeometrySystem/WebGLGeometrySystem#createVAO
   local.set $8
   local.get $3
-  i32.const 19344
+  i32.const 19296
   local.set $16
   global.get $~lib/memory/__stack_pointer
   local.get $16
@@ -44100,8 +48116,8 @@
    i32.const 0
   end
   if
-   i32.const 19376
-   i32.const 19232
+   i32.const 19328
+   i32.const 19184
    i32.const 39
    i32.const 4
    call $~lib/builtins/abort
@@ -44620,13 +48636,13 @@
   global.get $~lib/memory/__stack_pointer
   local.get $1
   local.tee $2
-  i32.const 140
+  i32.const 121
   call $~lib/rt/__instanceof
   if (result i32)
    local.get $2
   else
-   i32.const 17760
-   i32.const 19872
+   i32.const 17456
+   i32.const 19824
    i32.const 105
    i32.const 19
    call $~lib/builtins/abort
@@ -44719,8 +48735,8 @@
    i32.const 32
    i32.ge_u
    if
-    i32.const 19776
-    i32.const 19872
+    i32.const 19728
+    i32.const 19824
     i32.const 58
     i32.const 5
     call $~lib/builtins/abort
@@ -44813,13 +48829,13 @@
         local.get $4
         local.get $1
         local.tee $5
-        i32.const 34
+        i32.const 35
         call $~lib/rt/__instanceof
         if (result i32)
          local.get $5
         else
-         i32.const 17760
-         i32.const 19872
+         i32.const 17456
+         i32.const 19824
          i32.const 82
          i32.const 46
          call $~lib/builtins/abort
@@ -44844,13 +48860,13 @@
        local.get $4
        local.get $1
        local.tee $5
-       i32.const 34
+       i32.const 35
        call $~lib/rt/__instanceof
        if (result i32)
         local.get $5
        else
-        i32.const 17760
-        i32.const 19872
+        i32.const 17456
+        i32.const 19824
         i32.const 84
         i32.const 45
         call $~lib/builtins/abort
@@ -44875,13 +48891,13 @@
       local.get $4
       local.get $1
       local.tee $5
-      i32.const 34
+      i32.const 35
       call $~lib/rt/__instanceof
       if (result i32)
        local.get $5
       else
-       i32.const 17760
-       i32.const 19872
+       i32.const 17456
+       i32.const 19824
        i32.const 86
        i32.const 45
        call $~lib/builtins/abort
@@ -44906,13 +48922,13 @@
      local.get $4
      local.get $1
      local.tee $5
-     i32.const 34
+     i32.const 35
      call $~lib/rt/__instanceof
      if (result i32)
       local.get $5
      else
-      i32.const 17760
-      i32.const 19872
+      i32.const 17456
+      i32.const 19824
       i32.const 88
       i32.const 45
       call $~lib/builtins/abort
@@ -44937,13 +48953,13 @@
     local.get $4
     local.get $1
     local.tee $5
-    i32.const 34
+    i32.const 35
     call $~lib/rt/__instanceof
     if (result i32)
      local.get $5
     else
-     i32.const 17760
-     i32.const 19872
+     i32.const 17456
+     i32.const 19824
      i32.const 90
      i32.const 45
      call $~lib/builtins/abort
@@ -44964,7 +48980,7 @@
     local.get $7
     return
    end
-   i32.const 21760
+   i32.const 21712
    local.set $7
    global.get $~lib/memory/__stack_pointer
    local.get $7
@@ -44980,7 +48996,7 @@
    i32.store
    local.get $7
    call $~lib/string/String#concat
-   i32.const 19872
+   i32.const 19824
    i32.const 92
    i32.const 5
    call $~lib/builtins/abort
@@ -45034,8 +49050,8 @@
   global.get $~lib/memory/__stack_pointer
   i32.const 0
   i32.const 2
-  i32.const 127
-  i32.const 19712
+  i32.const 143
+  i32.const 19664
   call $~lib/rt/__newArray
   local.tee $4
   i32.store offset=4
@@ -45098,8 +49114,8 @@
   global.get $~lib/memory/__stack_pointer
   i32.const 0
   i32.const 2
-  i32.const 125
-  i32.const 19744
+  i32.const 141
+  i32.const 19696
   call $~lib/rt/__newArray
   local.tee $5
   i32.store offset=20
@@ -45323,6 +49339,1141 @@
   local.get $2
   local.get $1
   call $src-as/WebGL2/systems/WebGLMeshSystem/WebGLMeshSystem#create
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+ )
+ (func $src-as/math/Quaternion/Quaternion#get:x (param $0 i32) (result f32)
+  (local $1 i32)
+  (local $2 f32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  i32.load
+  local.set $1
+  global.get $~lib/memory/__stack_pointer
+  local.get $1
+  i32.store
+  local.get $1
+  i32.const 0
+  call $~lib/typedarray/Float32Array#__get
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $2
+ )
+ (func $src-as/math/Quaternion/Quaternion#get:y (param $0 i32) (result f32)
+  (local $1 i32)
+  (local $2 f32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  i32.load
+  local.set $1
+  global.get $~lib/memory/__stack_pointer
+  local.get $1
+  i32.store
+  local.get $1
+  i32.const 1
+  call $~lib/typedarray/Float32Array#__get
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $2
+ )
+ (func $src-as/math/Quaternion/Quaternion#get:z (param $0 i32) (result f32)
+  (local $1 i32)
+  (local $2 f32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  i32.load
+  local.set $1
+  global.get $~lib/memory/__stack_pointer
+  local.get $1
+  i32.store
+  local.get $1
+  i32.const 2
+  call $~lib/typedarray/Float32Array#__get
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $2
+ )
+ (func $src-as/math/Quaternion/Quaternion#get:w (param $0 i32) (result f32)
+  (local $1 i32)
+  (local $2 f32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  i32.load
+  local.set $1
+  global.get $~lib/memory/__stack_pointer
+  local.get $1
+  i32.store
+  local.get $1
+  i32.const 3
+  call $~lib/typedarray/Float32Array#__get
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $2
+ )
+ (func $src-as/math/Quaternion/Quaternion#up (param $0 i32) (result i32)
+  (local $1 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  global.get $src-as/math/Vector3/Vector3._up
+  local.set $1
+  global.get $~lib/memory/__stack_pointer
+  local.get $1
+  i32.store
+  local.get $1
+  i32.const 1
+  global.set $~argumentsLength
+  i32.const 0
+  call $src-as/math/Quaternion/Quaternion#multiplyDirection@varargs
+  local.set $1
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $1
+ )
+ (func $src-as/components/Transform/Transform#translateY (param $0 i32) (param $1 f32) (result i32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 16
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store offset=8
+  local.get $0
+  i32.load offset=20
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  local.get $0
+  i32.load offset=28
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store offset=12
+  local.get $2
+  call $src-as/math/Quaternion/Quaternion#up
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store offset=8
+  local.get $2
+  local.get $1
+  call $src-as/math/Vector3/Vector3#scale
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store offset=4
+  local.get $2
+  call $src-as/math/Vector3/Vector3#add
+  drop
+  local.get $0
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  i32.const 16
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $2
+ )
+ (func $src-as/math/Quaternion/Quaternion#forward (param $0 i32) (result i32)
+  (local $1 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  global.get $src-as/math/Vector3/Vector3._forward
+  local.set $1
+  global.get $~lib/memory/__stack_pointer
+  local.get $1
+  i32.store
+  local.get $1
+  i32.const 1
+  global.set $~argumentsLength
+  i32.const 0
+  call $src-as/math/Quaternion/Quaternion#multiplyDirection@varargs
+  local.set $1
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $1
+ )
+ (func $src-as/components/Transform/Transform#translateZ (param $0 i32) (param $1 f32) (result i32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 16
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store offset=8
+  local.get $0
+  i32.load offset=20
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  local.get $0
+  i32.load offset=28
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store offset=12
+  local.get $2
+  call $src-as/math/Quaternion/Quaternion#forward
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store offset=8
+  local.get $2
+  local.get $1
+  call $src-as/math/Vector3/Vector3#scale
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store offset=4
+  local.get $2
+  call $src-as/math/Vector3/Vector3#add
+  drop
+  local.get $0
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  i32.const 16
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $2
+ )
+ (func $src-as/math/Quaternion/Quaternion#right (param $0 i32) (result i32)
+  (local $1 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  global.get $src-as/math/Vector3/Vector3._right
+  local.set $1
+  global.get $~lib/memory/__stack_pointer
+  local.get $1
+  i32.store
+  local.get $1
+  i32.const 1
+  global.set $~argumentsLength
+  i32.const 0
+  call $src-as/math/Quaternion/Quaternion#multiplyDirection@varargs
+  local.set $1
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $1
+ )
+ (func $src-as/components/Transform/Transform#translateX (param $0 i32) (param $1 f32) (result i32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 16
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store offset=8
+  local.get $0
+  i32.load offset=20
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  local.get $0
+  i32.load offset=28
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store offset=12
+  local.get $2
+  call $src-as/math/Quaternion/Quaternion#right
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store offset=8
+  local.get $2
+  local.get $1
+  call $src-as/math/Vector3/Vector3#scale
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store offset=4
+  local.get $2
+  call $src-as/math/Vector3/Vector3#add
+  drop
+  local.get $0
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  i32.const 16
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $2
+ )
+ (func $src-as/components/MouseKeyboardController/MouseKeyboardController#update (param $0 i32)
+  (local $1 i32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 12
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store offset=8
+  local.get $0
+  i32.load offset=12
+  i32.load8_u offset=22
+  if
+   global.get $~lib/memory/__stack_pointer
+   local.get $0
+   i32.load offset=8
+   i32.load offset=28
+   local.set $2
+   global.get $~lib/memory/__stack_pointer
+   local.get $2
+   i32.store
+   local.get $2
+   i32.const 0
+   global.set $~argumentsLength
+   i32.const 0
+   call $src-as/math/Quaternion/Quaternion#toEulerAngles@varargs
+   local.tee $1
+   i32.store offset=4
+   local.get $1
+   local.get $1
+   call $src-as/math/Vector3/Vector3#get:x
+   local.get $0
+   i32.load offset=12
+   i32.load offset=12
+   local.set $2
+   global.get $~lib/memory/__stack_pointer
+   local.get $2
+   i32.store
+   local.get $2
+   call $src-as/math/Vector2/Vector2#get:y
+   local.get $0
+   f32.load offset=16
+   f32.mul
+   f32.const -1
+   f32.mul
+   f32.add
+   call $src-as/math/Vector3/Vector3#set:x
+   local.get $1
+   local.get $1
+   call $src-as/math/Vector3/Vector3#get:y
+   local.get $0
+   i32.load offset=12
+   i32.load offset=12
+   local.set $2
+   global.get $~lib/memory/__stack_pointer
+   local.get $2
+   i32.store
+   local.get $2
+   call $src-as/math/Vector2/Vector2#get:x
+   local.get $0
+   f32.load offset=16
+   f32.mul
+   f32.add
+   call $src-as/math/Vector3/Vector3#set:y
+   local.get $0
+   i32.load offset=8
+   i32.load offset=28
+   local.set $2
+   global.get $~lib/memory/__stack_pointer
+   local.get $2
+   i32.store
+   local.get $2
+   local.get $1
+   call $src-as/math/Quaternion/Quaternion#fromEulerAngles
+   drop
+  end
+  local.get $0
+  i32.load offset=12
+  i32.load offset=16
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  call $src-as/math/Vector2/Vector2#get:y
+  f32.const 0
+  f32.ne
+  if
+   local.get $0
+   i32.load offset=8
+   local.set $2
+   global.get $~lib/memory/__stack_pointer
+   local.get $2
+   i32.store
+   local.get $2
+   local.get $0
+   f32.load offset=28
+   local.get $0
+   i32.load offset=12
+   i32.load offset=16
+   local.set $2
+   global.get $~lib/memory/__stack_pointer
+   local.get $2
+   i32.store offset=8
+   local.get $2
+   call $src-as/math/Vector2/Vector2#get:y
+   f32.mul
+   call $src-as/components/Transform/Transform#translateY
+   drop
+  end
+  local.get $0
+  i32.load offset=12
+  i32.load offset=28
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  global.get $src/constants/keyboardCode/KeyboardCode.KeyW
+  call $~lib/set/Set<i32>#has
+  if (result i32)
+   i32.const 1
+  else
+   local.get $0
+   i32.load offset=12
+   i32.load offset=28
+   local.set $2
+   global.get $~lib/memory/__stack_pointer
+   local.get $2
+   i32.store
+   local.get $2
+   global.get $src/constants/keyboardCode/KeyboardCode.ArrowUp
+   call $~lib/set/Set<i32>#has
+  end
+  if
+   local.get $0
+   i32.load offset=8
+   local.set $2
+   global.get $~lib/memory/__stack_pointer
+   local.get $2
+   i32.store
+   local.get $2
+   local.get $0
+   f32.load offset=24
+   call $src-as/components/Transform/Transform#translateZ
+   drop
+  end
+  local.get $0
+  i32.load offset=12
+  i32.load offset=28
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  global.get $src/constants/keyboardCode/KeyboardCode.KeyS
+  call $~lib/set/Set<i32>#has
+  if (result i32)
+   i32.const 1
+  else
+   local.get $0
+   i32.load offset=12
+   i32.load offset=28
+   local.set $2
+   global.get $~lib/memory/__stack_pointer
+   local.get $2
+   i32.store
+   local.get $2
+   global.get $src/constants/keyboardCode/KeyboardCode.ArrowDown
+   call $~lib/set/Set<i32>#has
+  end
+  if
+   local.get $0
+   i32.load offset=8
+   local.set $2
+   global.get $~lib/memory/__stack_pointer
+   local.get $2
+   i32.store
+   local.get $2
+   local.get $0
+   f32.load offset=24
+   f32.neg
+   call $src-as/components/Transform/Transform#translateZ
+   drop
+  end
+  local.get $0
+  i32.load offset=12
+  i32.load offset=28
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  global.get $src/constants/keyboardCode/KeyboardCode.KeyA
+  call $~lib/set/Set<i32>#has
+  if (result i32)
+   i32.const 1
+  else
+   local.get $0
+   i32.load offset=12
+   i32.load offset=28
+   local.set $2
+   global.get $~lib/memory/__stack_pointer
+   local.get $2
+   i32.store
+   local.get $2
+   global.get $src/constants/keyboardCode/KeyboardCode.ArrowLeft
+   call $~lib/set/Set<i32>#has
+  end
+  if
+   local.get $0
+   i32.load offset=8
+   local.set $2
+   global.get $~lib/memory/__stack_pointer
+   local.get $2
+   i32.store
+   local.get $2
+   local.get $0
+   f32.load offset=24
+   call $src-as/components/Transform/Transform#translateX
+   drop
+  end
+  local.get $0
+  i32.load offset=12
+  i32.load offset=28
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  global.get $src/constants/keyboardCode/KeyboardCode.KeyD
+  call $~lib/set/Set<i32>#has
+  if (result i32)
+   i32.const 1
+  else
+   local.get $0
+   i32.load offset=12
+   i32.load offset=28
+   local.set $2
+   global.get $~lib/memory/__stack_pointer
+   local.get $2
+   i32.store
+   local.get $2
+   global.get $src/constants/keyboardCode/KeyboardCode.ArrowRight
+   call $~lib/set/Set<i32>#has
+  end
+  if
+   local.get $0
+   i32.load offset=8
+   local.set $2
+   global.get $~lib/memory/__stack_pointer
+   local.get $2
+   i32.store
+   local.get $2
+   local.get $0
+   f32.load offset=24
+   f32.neg
+   call $src-as/components/Transform/Transform#translateX
+   drop
+  end
+  local.get $0
+  i32.load offset=12
+  i32.load offset=28
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  global.get $src/constants/keyboardCode/KeyboardCode.KeyQ
+  call $~lib/set/Set<i32>#has
+  if
+   local.get $0
+   i32.load offset=8
+   i32.load offset=28
+   local.set $2
+   global.get $~lib/memory/__stack_pointer
+   local.get $2
+   i32.store
+   local.get $2
+   f32.const 0
+   local.get $0
+   f32.load offset=20
+   f32.const 0
+   call $src-as/math/Quaternion/Quaternion#rotate
+   drop
+  end
+  local.get $0
+  i32.load offset=12
+  i32.load offset=28
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  global.get $src/constants/keyboardCode/KeyboardCode.KeyE
+  call $~lib/set/Set<i32>#has
+  if
+   local.get $0
+   i32.load offset=8
+   i32.load offset=28
+   local.set $2
+   global.get $~lib/memory/__stack_pointer
+   local.get $2
+   i32.store
+   local.get $2
+   f32.const 0
+   local.get $0
+   f32.load offset=20
+   f32.neg
+   f32.const 0
+   call $src-as/math/Quaternion/Quaternion#rotate
+   drop
+  end
+  global.get $~lib/memory/__stack_pointer
+  i32.const 12
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+ )
+ (func $src-as/components/Rotator/Rotator#update (param $0 i32)
+  (local $1 i32)
+  (local $2 f32)
+  (local $3 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 16
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store offset=8
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  i32.load offset=4
+  local.set $3
+  global.get $~lib/memory/__stack_pointer
+  local.get $3
+  i32.store
+  local.get $3
+  call $src-as/base/World/World#get<src-as/components/Time/Time>
+  local.tee $1
+  i32.store offset=4
+  local.get $0
+  f32.load offset=12
+  local.get $1
+  f32.load offset=8
+  f32.add
+  local.set $2
+  i32.const 0
+  local.get $2
+  f32.const 0.4000000059604645
+  f32.mul
+  f32.const 1
+  call $src-as/math/PolarCoords/PolarCoords#constructor
+  local.set $3
+  global.get $~lib/memory/__stack_pointer
+  local.get $3
+  i32.store offset=12
+  local.get $3
+  i32.const 1
+  global.set $~argumentsLength
+  i32.const 0
+  call $src-as/math/Vector2/Vector2.fromPolar@varargs
+  local.set $3
+  global.get $~lib/memory/__stack_pointer
+  local.get $3
+  i32.store
+  local.get $3
+  local.get $0
+  i32.load offset=8
+  i32.load offset=20
+  local.set $3
+  global.get $~lib/memory/__stack_pointer
+  local.get $3
+  i32.store offset=8
+  local.get $3
+  call $src-as/math/Vector2/Vector2#toVector3
+  drop
+  local.get $0
+  i32.load offset=8
+  i32.load offset=20
+  local.set $3
+  global.get $~lib/memory/__stack_pointer
+  local.get $3
+  i32.store
+  local.get $3
+  local.get $0
+  i32.load offset=16
+  local.set $3
+  global.get $~lib/memory/__stack_pointer
+  local.get $3
+  i32.store offset=8
+  local.get $3
+  call $src-as/math/Vector3/Vector3#add
+  drop
+  local.get $0
+  i32.load offset=8
+  i32.load offset=28
+  local.set $3
+  global.get $~lib/memory/__stack_pointer
+  local.get $3
+  i32.store
+  local.get $3
+  i32.const 0
+  f32.const 0.30000001192092896
+  local.get $2
+  f32.mul
+  f32.const 0.5
+  local.get $2
+  f32.mul
+  f32.const 0
+  call $src-as/math/Vector3/Vector3#constructor
+  local.set $3
+  global.get $~lib/memory/__stack_pointer
+  local.get $3
+  i32.store offset=8
+  local.get $3
+  call $src-as/math/Quaternion/Quaternion#fromEulerAngles
+  drop
+  global.get $~lib/memory/__stack_pointer
+  i32.const 16
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+ )
+ (func $src-as/WebGL2/systems/WebGLUniformBufferObjectSystem/WebGLUniformBufferObjectSystem#apply (param $0 i32) (param $1 i32)
+  (local $2 i32)
+  (local $3 externref)
+  (local $4 i32)
+  (local $5 i32)
+  (local $6 i32)
+  (local $7 i32)
+  (local $8 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 12
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store offset=8
+  local.get $0
+  i32.load
+  local.set $8
+  global.get $~lib/memory/__stack_pointer
+  local.get $8
+  i32.store
+  local.get $8
+  local.get $1
+  call $~lib/map/Map<src-as/rendering/material/UniformBufferObject/UniformBufferObject,src-as/WebGL2/components/material/WebGLUniformBufferObject>#has
+  i32.eqz
+  if
+   global.get $~lib/memory/__stack_pointer
+   i32.const 12
+   i32.add
+   global.set $~lib/memory/__stack_pointer
+   return
+  end
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  i32.load
+  local.set $8
+  global.get $~lib/memory/__stack_pointer
+  local.get $8
+  i32.store
+  local.get $8
+  local.get $1
+  call $~lib/map/Map<src-as/rendering/material/UniformBufferObject/UniformBufferObject,src-as/WebGL2/components/material/WebGLUniformBufferObject>#get
+  local.tee $2
+  i32.store offset=4
+  local.get $2
+  i32.load offset=8
+  call $src-as/imports/_host/get
+  local.set $3
+  global.get $src-as/WebGL2/imports/_constants/BufferType.UNIFORM_BUFFER
+  local.get $3
+  call $src-as/WebGL2/imports/_types/bindBuffer
+  i32.const 0
+  local.set $4
+  loop $for-loop|0
+   local.get $4
+   local.get $2
+   i32.load offset=12
+   local.set $8
+   global.get $~lib/memory/__stack_pointer
+   local.get $8
+   i32.store
+   local.get $8
+   call $~lib/array/Array<src-as/rendering/material/Uniform/Uniform>#get:length
+   i32.lt_s
+   local.set $5
+   local.get $5
+   if
+    block $case5|1
+     block $case4|1
+      block $case3|1
+       block $case2|1
+        block $case1|1
+         block $case0|1
+          local.get $2
+          i32.load offset=12
+          local.set $8
+          global.get $~lib/memory/__stack_pointer
+          local.get $8
+          i32.store
+          local.get $8
+          local.get $4
+          call $~lib/array/Array<src-as/rendering/material/Uniform/Uniform>#__get
+          i32.load offset=4
+          local.set $6
+          local.get $6
+          global.get $src-as/rendering/constants/enums/UniformType.FLOAT
+          i32.eq
+          br_if $case1|1
+          local.get $6
+          global.get $src-as/rendering/constants/enums/UniformType.FLOAT_VEC2
+          i32.eq
+          br_if $case2|1
+          local.get $6
+          global.get $src-as/rendering/constants/enums/UniformType.FLOAT_VEC3
+          i32.eq
+          br_if $case3|1
+          local.get $6
+          global.get $src-as/rendering/constants/enums/UniformType.FLOAT_VEC4
+          i32.eq
+          br_if $case4|1
+          local.get $6
+          global.get $src-as/rendering/constants/enums/UniformType.FLOAT_MAT4
+          i32.eq
+          br_if $case5|1
+          br $case0|1
+         end
+        end
+       end
+      end
+     end
+    end
+    global.get $~lib/memory/__stack_pointer
+    global.get $~lib/memory/__stack_pointer
+    local.get $2
+    i32.load offset=12
+    local.set $8
+    global.get $~lib/memory/__stack_pointer
+    local.get $8
+    i32.store
+    local.get $8
+    local.get $4
+    call $~lib/array/Array<src-as/rendering/material/Uniform/Uniform>#__get
+    local.tee $6
+    i32.store offset=8
+    local.get $6
+    i32.const 35
+    call $~lib/rt/__instanceof
+    if (result i32)
+     local.get $6
+    else
+     i32.const 17456
+     i32.const 21792
+     i32.const 78
+     i32.const 18
+     call $~lib/builtins/abort
+     unreachable
+    end
+    i32.load offset=12
+    local.tee $6
+    i32.store offset=8
+    local.get $2
+    i32.load offset=16
+    local.set $8
+    global.get $~lib/memory/__stack_pointer
+    local.get $8
+    i32.store
+    local.get $8
+    local.get $4
+    call $~lib/array/Array<u32>#__get
+    local.set $7
+    global.get $src-as/WebGL2/imports/_constants/BufferType.UNIFORM_BUFFER
+    local.get $7
+    local.get $6
+    i32.const 0
+    i32.const 0
+    call $src-as/WebGL2/imports/_types/bufferSubData__2
+    local.get $4
+    i32.const 1
+    i32.add
+    local.set $4
+    br $for-loop|0
+   end
+  end
+  global.get $src-as/WebGL2/imports/_constants/BufferType.UNIFORM_BUFFER
+  ref.null extern
+  call $src-as/WebGL2/imports/_types/bindBuffer
+  global.get $~lib/memory/__stack_pointer
+  i32.const 12
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+ )
+ (func $src-as/WebGL2/systems/WebGLMaterialSystem/WebGLMaterialSystem#beforeRender (param $0 i32) (param $1 i32)
+  (local $2 i32)
+  (local $3 i32)
+  (local $4 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  local.get $1
+  i32.load offset=12
+  global.get $src-as/rendering/constants/enums/Culling.Off
+  i32.eq
+  if
+   global.get $src-as/WebGL2/imports/_constants/Culling.CULL_FACE
+   call $src-as/WebGL2/imports/_types/disable
+  else
+   local.get $1
+   i32.load offset=12
+   global.get $src-as/rendering/constants/enums/Culling.Back
+   i32.eq
+   if
+    global.get $src-as/WebGL2/imports/_constants/Culling.CULL_FACE
+    call $src-as/WebGL2/imports/_types/enable
+    global.get $src-as/WebGL2/imports/_constants/Culling.BACK
+    call $src-as/WebGL2/imports/_types/cullFace
+   else
+    local.get $1
+    i32.load offset=12
+    global.get $src-as/rendering/constants/enums/Culling.Front
+    i32.eq
+    if
+     global.get $src-as/WebGL2/imports/_constants/Culling.FRONT
+     call $src-as/WebGL2/imports/_types/cullFace
+    else
+     local.get $1
+     i32.load offset=12
+     global.get $src-as/rendering/constants/enums/Culling.Both
+     i32.eq
+     if
+      global.get $src-as/WebGL2/imports/_constants/Culling.FRONT_AND_BACK
+      call $src-as/WebGL2/imports/_types/cullFace
+     end
+    end
+   end
+  end
+  i32.const 0
+  local.set $2
+  loop $for-loop|0
+   local.get $2
+   local.get $1
+   i32.load
+   local.set $4
+   global.get $~lib/memory/__stack_pointer
+   local.get $4
+   i32.store
+   local.get $4
+   call $~lib/array/Array<src-as/WebGL2/components/material/WebGLUniform>#get:length
+   i32.lt_s
+   local.set $3
+   local.get $3
+   if
+    local.get $1
+    i32.load
+    local.set $4
+    global.get $~lib/memory/__stack_pointer
+    local.get $4
+    i32.store offset=4
+    local.get $4
+    local.get $2
+    call $~lib/array/Array<src-as/WebGL2/components/material/WebGLUniform>#__get
+    local.set $4
+    global.get $~lib/memory/__stack_pointer
+    local.get $4
+    i32.store
+    local.get $4
+    call $src-as/WebGL2/components/material/WebGLUniform#apply@virtual
+    local.get $2
+    i32.const 1
+    i32.add
+    local.set $2
+    br $for-loop|0
+   end
+  end
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+ )
+ (func $src-as/WebGL2/systems/WebGLMeshSystem/WebGLMeshSystem#render (param $0 i32) (param $1 i32)
+  (local $2 i32)
+  (local $3 externref)
+  (local $4 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 12
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store offset=8
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  i32.load offset=12
+  local.set $4
+  global.get $~lib/memory/__stack_pointer
+  local.get $4
+  i32.store
+  local.get $4
+  local.get $1
+  call $~lib/map/Map<src-as/components/Mesh/Mesh,src-as/WebGL2/components/mesh/WebGLMesh>#get
+  local.tee $2
+  i32.store offset=4
+  local.get $2
+  i32.load
+  i32.load
+  call $src-as/imports/_host/get
+  local.set $3
+  local.get $3
+  call $src-as/WebGL2/imports/_types/useProgram
+  local.get $0
+  i32.load offset=8
+  local.set $4
+  global.get $~lib/memory/__stack_pointer
+  local.get $4
+  i32.store
+  local.get $4
+  local.get $2
+  i32.load offset=8
+  local.set $4
+  global.get $~lib/memory/__stack_pointer
+  local.get $4
+  i32.store offset=8
+  local.get $4
+  call $src-as/WebGL2/systems/WebGLMaterialSystem/WebGLMaterialSystem#beforeRender
+  local.get $0
+  i32.load offset=4
+  local.set $4
+  global.get $~lib/memory/__stack_pointer
+  local.get $4
+  i32.store
+  local.get $4
+  local.get $2
+  i32.load offset=4
+  local.set $4
+  global.get $~lib/memory/__stack_pointer
+  local.get $4
+  i32.store offset=8
+  local.get $4
+  call $src-as/WebGL2/systems/WebGLGeometrySystem/WebGLGeometrySystem#render
+  ref.null extern
+  call $src-as/WebGL2/imports/_types/useProgram
+  global.get $~lib/memory/__stack_pointer
+  i32.const 12
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+ )
+ (func $src-as/WebGL2/systems/WebGLRenderSystem/WebGLRenderSystem#handleRenderMesh (param $0 i32) (param $1 i32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  i32.load offset=32
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.store
+  local.get $2
+  local.get $1
+  call $src-as/WebGL2/systems/WebGLMeshSystem/WebGLMeshSystem#render
   global.get $~lib/memory/__stack_pointer
   i32.const 4
   i32.add
@@ -46547,7 +51698,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 24
-   i32.const 32
+   i32.const 33
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -46603,7 +51754,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 12
-   i32.const 30
+   i32.const 31
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -46649,7 +51800,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 16
-   i32.const 35
+   i32.const 36
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -46692,7 +51843,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 16
-   i32.const 34
+   i32.const 35
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -46818,7 +51969,7 @@
   local.set $2
   global.get $~lib/memory/__stack_pointer
   local.get $2
-  i32.const 44
+  i32.const 45
   call $~lib/rt/itcms/__new
   local.tee $3
   i32.store
@@ -46921,7 +52072,7 @@
   local.set $2
   global.get $~lib/memory/__stack_pointer
   local.get $2
-  i32.const 45
+  i32.const 46
   call $~lib/rt/itcms/__new
   local.tee $3
   i32.store
@@ -47088,7 +52239,7 @@
   local.set $2
   global.get $~lib/memory/__stack_pointer
   local.get $2
-  i32.const 46
+  i32.const 47
   call $~lib/rt/itcms/__new
   local.tee $3
   i32.store
@@ -47175,7 +52326,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 24
-   i32.const 41
+   i32.const 42
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -47233,7 +52384,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 28
-   i32.const 39
+   i32.const 40
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -47251,7 +52402,7 @@
   local.get $0
   i32.const 0
   i32.const 2
-  i32.const 42
+  i32.const 43
   i32.const 5072
   call $~lib/rt/__newArray
   call $src-as/rendering/geometry/Geometry/Geometry#set:attributeArr
@@ -47290,7 +52441,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 24
-   i32.const 40
+   i32.const 41
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -47348,7 +52499,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 32
-   i32.const 50
+   i32.const 51
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -47516,7 +52667,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 32
-   i32.const 52
+   i32.const 53
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -47610,7 +52761,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 12
-   i32.const 43
+   i32.const 44
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -47885,6 +53036,480 @@
   global.set $~lib/memory/__stack_pointer
   local.get $4
  )
+ (func $~lib/staticarray/StaticArray<~lib/staticarray/StaticArray<f32>>#constructor (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  (local $3 i32)
+  (local $4 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $1
+  i32.const 1073741820
+  i32.const 2
+  i32.shr_u
+  i32.gt_u
+  if
+   i32.const 768
+   i32.const 4784
+   i32.const 91
+   i32.const 60
+   call $~lib/builtins/abort
+   unreachable
+  end
+  local.get $1
+  i32.const 2
+  i32.shl
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.const 58
+  call $~lib/rt/itcms/__new
+  local.tee $3
+  i32.store
+  i32.const 2
+  global.get $~lib/shared/runtime/Runtime.Incremental
+  i32.ne
+  drop
+  local.get $3
+  local.set $4
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $4
+ )
+ (func $~lib/array/Array<~lib/staticarray/StaticArray<f32>>#__get (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  (local $3 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $1
+  local.get $0
+  i32.load offset=12
+  i32.ge_u
+  if
+   i32.const 96
+   i32.const 4208
+   i32.const 114
+   i32.const 42
+   call $~lib/builtins/abort
+   unreachable
+  end
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  i32.load offset=4
+  local.get $1
+  i32.const 2
+  i32.shl
+  i32.add
+  i32.load
+  local.tee $2
+  i32.store
+  i32.const 1
+  drop
+  i32.const 0
+  i32.eqz
+  drop
+  local.get $2
+  i32.eqz
+  if
+   i32.const 4256
+   i32.const 4208
+   i32.const 118
+   i32.const 40
+   call $~lib/builtins/abort
+   unreachable
+  end
+  local.get $2
+  local.set $3
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $3
+ )
+ (func $~lib/staticarray/StaticArray<~lib/staticarray/StaticArray<f32>>#__get (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  (local $3 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $1
+  local.get $0
+  call $~lib/staticarray/StaticArray<~lib/staticarray/StaticArray<f32>>#get:length
+  i32.ge_u
+  if
+   i32.const 96
+   i32.const 4784
+   i32.const 118
+   i32.const 41
+   call $~lib/builtins/abort
+   unreachable
+  end
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  local.get $1
+  i32.const 2
+  i32.shl
+  i32.add
+  i32.load
+  local.tee $2
+  i32.store
+  i32.const 1
+  drop
+  i32.const 0
+  i32.eqz
+  drop
+  local.get $2
+  i32.eqz
+  if
+   i32.const 4256
+   i32.const 4784
+   i32.const 122
+   i32.const 40
+   call $~lib/builtins/abort
+   unreachable
+  end
+  local.get $2
+  local.set $3
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $3
+ )
+ (func $~lib/staticarray/StaticArray<~lib/staticarray/StaticArray<u16>>#constructor (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  (local $3 i32)
+  (local $4 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $1
+  i32.const 1073741820
+  i32.const 2
+  i32.shr_u
+  i32.gt_u
+  if
+   i32.const 768
+   i32.const 4784
+   i32.const 91
+   i32.const 60
+   call $~lib/builtins/abort
+   unreachable
+  end
+  local.get $1
+  i32.const 2
+  i32.shl
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.const 60
+  call $~lib/rt/itcms/__new
+  local.tee $3
+  i32.store
+  i32.const 2
+  global.get $~lib/shared/runtime/Runtime.Incremental
+  i32.ne
+  drop
+  local.get $3
+  local.set $4
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $4
+ )
+ (func $~lib/array/Array<~lib/staticarray/StaticArray<u16>>#__get (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  (local $3 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $1
+  local.get $0
+  i32.load offset=12
+  i32.ge_u
+  if
+   i32.const 96
+   i32.const 4208
+   i32.const 114
+   i32.const 42
+   call $~lib/builtins/abort
+   unreachable
+  end
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  i32.load offset=4
+  local.get $1
+  i32.const 2
+  i32.shl
+  i32.add
+  i32.load
+  local.tee $2
+  i32.store
+  i32.const 1
+  drop
+  i32.const 0
+  i32.eqz
+  drop
+  local.get $2
+  i32.eqz
+  if
+   i32.const 4256
+   i32.const 4208
+   i32.const 118
+   i32.const 40
+   call $~lib/builtins/abort
+   unreachable
+  end
+  local.get $2
+  local.set $3
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $3
+ )
+ (func $~lib/staticarray/StaticArray<~lib/staticarray/StaticArray<u16>>#__get (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  (local $3 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $1
+  local.get $0
+  call $~lib/staticarray/StaticArray<~lib/staticarray/StaticArray<u16>>#get:length
+  i32.ge_u
+  if
+   i32.const 96
+   i32.const 4784
+   i32.const 118
+   i32.const 41
+   call $~lib/builtins/abort
+   unreachable
+  end
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  local.get $1
+  i32.const 2
+  i32.shl
+  i32.add
+  i32.load
+  local.tee $2
+  i32.store
+  i32.const 1
+  drop
+  i32.const 0
+  i32.eqz
+  drop
+  local.get $2
+  i32.eqz
+  if
+   i32.const 4256
+   i32.const 4784
+   i32.const 122
+   i32.const 40
+   call $~lib/builtins/abort
+   unreachable
+  end
+  local.get $2
+  local.set $3
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $3
+ )
+ (func $~lib/staticarray/StaticArray<~lib/staticarray/StaticArray<u8>>#constructor (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  (local $3 i32)
+  (local $4 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $1
+  i32.const 1073741820
+  i32.const 2
+  i32.shr_u
+  i32.gt_u
+  if
+   i32.const 768
+   i32.const 4784
+   i32.const 91
+   i32.const 60
+   call $~lib/builtins/abort
+   unreachable
+  end
+  local.get $1
+  i32.const 2
+  i32.shl
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.const 62
+  call $~lib/rt/itcms/__new
+  local.tee $3
+  i32.store
+  i32.const 2
+  global.get $~lib/shared/runtime/Runtime.Incremental
+  i32.ne
+  drop
+  local.get $3
+  local.set $4
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $4
+ )
+ (func $~lib/array/Array<~lib/staticarray/StaticArray<u8>>#__get (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  (local $3 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $1
+  local.get $0
+  i32.load offset=12
+  i32.ge_u
+  if
+   i32.const 96
+   i32.const 4208
+   i32.const 114
+   i32.const 42
+   call $~lib/builtins/abort
+   unreachable
+  end
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  i32.load offset=4
+  local.get $1
+  i32.const 2
+  i32.shl
+  i32.add
+  i32.load
+  local.tee $2
+  i32.store
+  i32.const 1
+  drop
+  i32.const 0
+  i32.eqz
+  drop
+  local.get $2
+  i32.eqz
+  if
+   i32.const 4256
+   i32.const 4208
+   i32.const 118
+   i32.const 40
+   call $~lib/builtins/abort
+   unreachable
+  end
+  local.get $2
+  local.set $3
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $3
+ )
+ (func $~lib/staticarray/StaticArray<~lib/staticarray/StaticArray<u8>>#__get (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  (local $3 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $1
+  local.get $0
+  call $~lib/staticarray/StaticArray<~lib/staticarray/StaticArray<u8>>#get:length
+  i32.ge_u
+  if
+   i32.const 96
+   i32.const 4784
+   i32.const 118
+   i32.const 41
+   call $~lib/builtins/abort
+   unreachable
+  end
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  local.get $1
+  i32.const 2
+  i32.shl
+  i32.add
+  i32.load
+  local.tee $2
+  i32.store
+  i32.const 1
+  drop
+  i32.const 0
+  i32.eqz
+  drop
+  local.get $2
+  i32.eqz
+  if
+   i32.const 4256
+   i32.const 4784
+   i32.const 122
+   i32.const 40
+   call $~lib/builtins/abort
+   unreachable
+  end
+  local.get $2
+  local.set $3
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $3
+ )
  (func $src-as/rendering/shader/Shader/Shader#constructor (param $0 i32) (param $1 i32) (param $2 i32) (param $3 i32) (result i32)
   (local $4 i32)
   global.get $~lib/memory/__stack_pointer
@@ -47900,7 +53525,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 12
-   i32.const 56
+   i32.const 63
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -47956,8 +53581,8 @@
    global.get $~lib/memory/__stack_pointer
    i32.const 0
    i32.const 2
-   i32.const 57
-   i32.const 7392
+   i32.const 64
+   i32.const 7488
    call $~lib/rt/__newArray
    local.tee $3
    i32.store
@@ -47989,7 +53614,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 8
-   i32.const 58
+   i32.const 65
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -48037,7 +53662,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 10
-   i32.const 60
+   i32.const 67
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -48048,8 +53673,8 @@
   local.get $0
   i32.const 0
   i32.const 2
-  i32.const 61
-  i32.const 16176
+  i32.const 68
+  i32.const 16272
   call $~lib/rt/__newArray
   call $src-as/math/SharedBuffer/SharedBuffer_f32<src-as/math/Vector3/Vector3>#set:instances
   local.get $0
@@ -48086,7 +53711,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 10
-   i32.const 59
+   i32.const 66
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -48122,7 +53747,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 10
-   i32.const 65
+   i32.const 72
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -48133,8 +53758,8 @@
   local.get $0
   i32.const 0
   i32.const 2
-  i32.const 66
-  i32.const 16208
+  i32.const 73
+  i32.const 16304
   call $~lib/rt/__newArray
   call $src-as/math/SharedBuffer/SharedBuffer_f32<src-as/math/Vector1/Vector1>#set:instances
   local.get $0
@@ -48171,7 +53796,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 10
-   i32.const 62
+   i32.const 69
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -48205,7 +53830,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 6
-   i32.const 67
+   i32.const 74
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -48245,7 +53870,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 24
-   i32.const 76
+   i32.const 83
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -48301,7 +53926,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 24
-   i32.const 77
+   i32.const 84
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -48357,7 +53982,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 24
-   i32.const 83
+   i32.const 90
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -48413,7 +54038,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 8
-   i32.const 78
+   i32.const 85
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -48448,7 +54073,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 24
-   i32.const 87
+   i32.const 94
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -48504,7 +54129,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 4
-   i32.const 84
+   i32.const 91
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -48538,7 +54163,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 32
-   i32.const 71
+   i32.const 78
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -48549,8 +54174,8 @@
   local.get $0
   i32.const 0
   i32.const 2
-  i32.const 75
-  i32.const 16768
+  i32.const 82
+  i32.const 16864
   call $~lib/rt/__newArray
   call $src-as/base/World/World#set:systems
   local.get $0
@@ -48615,619 +54240,6 @@
   global.set $~lib/memory/__stack_pointer
   local.get $1
  )
- (func $~lib/array/Array<src-as/base/System/System>#__get (param $0 i32) (param $1 i32) (result i32)
-  (local $2 i32)
-  (local $3 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store
-  local.get $1
-  local.get $0
-  i32.load offset=12
-  i32.ge_u
-  if
-   i32.const 96
-   i32.const 4208
-   i32.const 114
-   i32.const 42
-   call $~lib/builtins/abort
-   unreachable
-  end
-  global.get $~lib/memory/__stack_pointer
-  local.get $0
-  i32.load offset=4
-  local.get $1
-  i32.const 2
-  i32.shl
-  i32.add
-  i32.load
-  local.tee $2
-  i32.store
-  i32.const 1
-  drop
-  i32.const 0
-  i32.eqz
-  drop
-  local.get $2
-  i32.eqz
-  if
-   i32.const 4256
-   i32.const 4208
-   i32.const 118
-   i32.const 40
-   call $~lib/builtins/abort
-   unreachable
-  end
-  local.get $2
-  local.set $3
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $3
- )
- (func $src-as/base/Object/ObjectBase#constructor (param $0 i32) (result i32)
-  (local $1 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store
-  local.get $0
-  i32.eqz
-  if
-   global.get $~lib/memory/__stack_pointer
-   i32.const 0
-   i32.const 70
-   call $~lib/rt/itcms/__new
-   local.tee $0
-   i32.store
-  end
-  local.get $0
-  local.set $1
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $1
- )
- (func $src-as/base/System/System#constructor (param $0 i32) (param $1 i32) (result i32)
-  (local $2 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store
-  local.get $0
-  i32.eqz
-  if
-   global.get $~lib/memory/__stack_pointer
-   i32.const 8
-   i32.const 69
-   call $~lib/rt/itcms/__new
-   local.tee $0
-   i32.store
-  end
-  local.get $0
-  i32.const 0
-  call $src-as/base/System/System#set:priority
-  local.get $0
-  i32.const 0
-  call $src-as/base/System/System#set:world
-  global.get $~lib/memory/__stack_pointer
-  local.get $0
-  call $src-as/base/Object/ObjectBase#constructor
-  local.tee $0
-  i32.store
-  local.get $0
-  call $src-as/base/World/World.get:main
-  call $src-as/base/System/System#set:world
-  local.get $0
-  local.get $1
-  call $src-as/base/System/System#set:priority
-  local.get $0
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $2
- )
- (func $src-as/components/Time/Time#constructor (param $0 i32) (result i32)
-  (local $1 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store
-  local.get $0
-  i32.eqz
-  if
-   global.get $~lib/memory/__stack_pointer
-   i32.const 32
-   i32.const 99
-   call $~lib/rt/itcms/__new
-   local.tee $0
-   i32.store
-  end
-  global.get $~lib/memory/__stack_pointer
-  local.get $0
-  call $src-as/base/Object/ObjectBase#constructor
-  local.tee $0
-  i32.store
-  local.get $0
-  f32.const 0
-  call $src-as/components/Time/Time#set:start
-  local.get $0
-  f32.const 0
-  call $src-as/components/Time/Time#set:last
-  local.get $0
-  f32.const 0
-  call $src-as/components/Time/Time#set:elapsed
-  local.get $0
-  f32.const 0
-  call $src-as/components/Time/Time#set:now
-  local.get $0
-  f32.const 0
-  call $src-as/components/Time/Time#set:delta
-  local.get $0
-  i64.const 0
-  call $src-as/components/Time/Time#set:frame
-  local.get $0
-  local.set $1
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $1
- )
- (func $~lib/map/Map<u32,src-as/base/Object/ObjectBase>#set (param $0 i32) (param $1 i32) (param $2 i32) (result i32)
-  (local $3 i32)
-  (local $4 i32)
-  (local $5 i32)
-  (local $6 i32)
-  (local $7 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store
-  local.get $1
-  call $~lib/util/hash/HASH<u32>
-  local.set $3
-  local.get $0
-  local.get $1
-  local.get $3
-  call $~lib/map/Map<u32,src-as/base/Object/ObjectBase>#find
-  local.set $4
-  local.get $4
-  if
-   local.get $4
-   local.get $2
-   call $~lib/map/MapEntry<u32,src-as/base/Object/ObjectBase>#set:value
-   i32.const 1
-   drop
-   local.get $0
-   local.get $2
-   i32.const 1
-   call $~lib/rt/itcms/__link
-  else
-   local.get $0
-   i32.load offset=16
-   local.get $0
-   i32.load offset=12
-   i32.eq
-   if
-    local.get $0
-    local.get $0
-    i32.load offset=20
-    local.get $0
-    i32.load offset=12
-    i32.const 3
-    i32.mul
-    i32.const 4
-    i32.div_s
-    i32.lt_s
-    if (result i32)
-     local.get $0
-     i32.load offset=4
-    else
-     local.get $0
-     i32.load offset=4
-     i32.const 1
-     i32.shl
-     i32.const 1
-     i32.or
-    end
-    call $~lib/map/Map<u32,src-as/base/Object/ObjectBase>#rehash
-   end
-   global.get $~lib/memory/__stack_pointer
-   local.get $0
-   i32.load offset=8
-   local.tee $5
-   i32.store
-   local.get $5
-   local.get $0
-   local.get $0
-   i32.load offset=16
-   local.tee $6
-   i32.const 1
-   i32.add
-   call $~lib/map/Map<u32,src-as/base/Object/ObjectBase>#set:entriesOffset
-   local.get $6
-   i32.const 12
-   i32.mul
-   i32.add
-   local.set $4
-   local.get $4
-   local.get $1
-   call $~lib/map/MapEntry<u32,src-as/base/Object/ObjectBase>#set:key
-   i32.const 0
-   drop
-   local.get $4
-   local.get $2
-   call $~lib/map/MapEntry<u32,src-as/base/Object/ObjectBase>#set:value
-   i32.const 1
-   drop
-   local.get $0
-   local.get $2
-   i32.const 1
-   call $~lib/rt/itcms/__link
-   local.get $0
-   local.get $0
-   i32.load offset=20
-   i32.const 1
-   i32.add
-   call $~lib/map/Map<u32,src-as/base/Object/ObjectBase>#set:entriesCount
-   local.get $0
-   i32.load
-   local.get $3
-   local.get $0
-   i32.load offset=4
-   i32.and
-   i32.const 4
-   i32.mul
-   i32.add
-   local.set $6
-   local.get $4
-   local.get $6
-   i32.load
-   call $~lib/map/MapEntry<u32,src-as/base/Object/ObjectBase>#set:taggedNext
-   local.get $6
-   local.get $4
-   i32.store
-  end
-  local.get $0
-  local.set $7
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $7
- )
- (func $src-as/base/World/World#addSystem<src-as/base/systems/TimeSystem/TimeSystem> (param $0 i32) (result i32)
-  (local $1 i32)
-  (local $2 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store
-  local.get $0
-  call $src-as/base/World/World#has<src-as/base/systems/TimeSystem/TimeSystem>
-  if
-   local.get $0
-   local.set $2
-   global.get $~lib/memory/__stack_pointer
-   i32.const 4
-   i32.add
-   global.set $~lib/memory/__stack_pointer
-   local.get $2
-   return
-  end
-  local.get $0
-  call $src-as/base/World/World#bind
-  drop
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  call $src-as/base/systems/TimeSystem/TimeSystem#constructor
-  local.tee $1
-  i32.store
-  local.get $0
-  local.get $1
-  call $src-as/base/World/World#attachSystem<src-as/base/systems/TimeSystem/TimeSystem>
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $2
- )
- (func $~lib/set/Set<src-as/base/Entity/Entity>#constructor (param $0 i32) (result i32)
-  (local $1 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store
-  local.get $0
-  i32.eqz
-  if
-   global.get $~lib/memory/__stack_pointer
-   i32.const 24
-   i32.const 81
-   call $~lib/rt/itcms/__new
-   local.tee $0
-   i32.store
-  end
-  local.get $0
-  i32.const 0
-  i32.const 4
-  i32.const 4
-  i32.mul
-  call $~lib/arraybuffer/ArrayBuffer#constructor
-  call $~lib/set/Set<src-as/base/Entity/Entity>#set:buckets
-  local.get $0
-  i32.const 4
-  i32.const 1
-  i32.sub
-  call $~lib/set/Set<src-as/base/Entity/Entity>#set:bucketsMask
-  local.get $0
-  i32.const 0
-  i32.const 4
-  i32.const 8
-  i32.mul
-  call $~lib/arraybuffer/ArrayBuffer#constructor
-  call $~lib/set/Set<src-as/base/Entity/Entity>#set:entries
-  local.get $0
-  i32.const 4
-  call $~lib/set/Set<src-as/base/Entity/Entity>#set:entriesCapacity
-  local.get $0
-  i32.const 0
-  call $~lib/set/Set<src-as/base/Entity/Entity>#set:entriesOffset
-  local.get $0
-  i32.const 0
-  call $~lib/set/Set<src-as/base/Entity/Entity>#set:entriesCount
-  local.get $0
-  local.set $1
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $1
- )
- (func $src-as/base/System/ListenerSystem#constructor (param $0 i32) (param $1 i32) (param $2 i32) (result i32)
-  (local $3 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store
-  local.get $0
-  i32.eqz
-  if
-   global.get $~lib/memory/__stack_pointer
-   i32.const 16
-   i32.const 85
-   call $~lib/rt/itcms/__new
-   local.tee $0
-   i32.store
-  end
-  local.get $0
-  i32.const 0
-  call $~lib/set/Set<src-as/base/Entity/Entity>#constructor
-  call $src-as/base/System/ListenerSystem#set:entities
-  local.get $0
-  i32.const 0
-  call $src-as/base/System/ListenerSystem#set:components
-  global.get $~lib/memory/__stack_pointer
-  local.get $0
-  local.get $2
-  call $src-as/base/System/System#constructor
-  local.tee $0
-  i32.store
-  local.get $0
-  local.get $1
-  call $src-as/base/System/ListenerSystem#set:components
-  local.get $0
-  local.set $3
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $3
- )
- (func $src-as/base/Query/Query#constructor (param $0 i32) (param $1 i32) (result i32)
-  (local $2 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store
-  local.get $0
-  i32.eqz
-  if
-   global.get $~lib/memory/__stack_pointer
-   i32.const 8
-   i32.const 79
-   call $~lib/rt/itcms/__new
-   local.tee $0
-   i32.store
-  end
-  local.get $0
-  i32.const 0
-  call $src-as/base/Query/Query#set:componentIds
-  local.get $0
-  i32.const 0
-  call $~lib/set/Set<src-as/base/Entity/Entity>#constructor
-  call $src-as/base/Query/Query#set:entities
-  local.get $0
-  local.get $1
-  call $src-as/base/Query/Query#set:componentIds
-  local.get $0
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $2
- )
- (func $~lib/map/Map<u32,~lib/array/Array<src-as/base/Query/Query>>#set (param $0 i32) (param $1 i32) (param $2 i32) (result i32)
-  (local $3 i32)
-  (local $4 i32)
-  (local $5 i32)
-  (local $6 i32)
-  (local $7 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store
-  local.get $1
-  call $~lib/util/hash/HASH<u32>
-  local.set $3
-  local.get $0
-  local.get $1
-  local.get $3
-  call $~lib/map/Map<u32,~lib/array/Array<src-as/base/Query/Query>>#find
-  local.set $4
-  local.get $4
-  if
-   local.get $4
-   local.get $2
-   call $~lib/map/MapEntry<u32,~lib/array/Array<src-as/base/Query/Query>>#set:value
-   i32.const 1
-   drop
-   local.get $0
-   local.get $2
-   i32.const 1
-   call $~lib/rt/itcms/__link
-  else
-   local.get $0
-   i32.load offset=16
-   local.get $0
-   i32.load offset=12
-   i32.eq
-   if
-    local.get $0
-    local.get $0
-    i32.load offset=20
-    local.get $0
-    i32.load offset=12
-    i32.const 3
-    i32.mul
-    i32.const 4
-    i32.div_s
-    i32.lt_s
-    if (result i32)
-     local.get $0
-     i32.load offset=4
-    else
-     local.get $0
-     i32.load offset=4
-     i32.const 1
-     i32.shl
-     i32.const 1
-     i32.or
-    end
-    call $~lib/map/Map<u32,~lib/array/Array<src-as/base/Query/Query>>#rehash
-   end
-   global.get $~lib/memory/__stack_pointer
-   local.get $0
-   i32.load offset=8
-   local.tee $5
-   i32.store
-   local.get $5
-   local.get $0
-   local.get $0
-   i32.load offset=16
-   local.tee $6
-   i32.const 1
-   i32.add
-   call $~lib/map/Map<u32,~lib/array/Array<src-as/base/Query/Query>>#set:entriesOffset
-   local.get $6
-   i32.const 12
-   i32.mul
-   i32.add
-   local.set $4
-   local.get $4
-   local.get $1
-   call $~lib/map/MapEntry<u32,~lib/array/Array<src-as/base/Query/Query>>#set:key
-   i32.const 0
-   drop
-   local.get $4
-   local.get $2
-   call $~lib/map/MapEntry<u32,~lib/array/Array<src-as/base/Query/Query>>#set:value
-   i32.const 1
-   drop
-   local.get $0
-   local.get $2
-   i32.const 1
-   call $~lib/rt/itcms/__link
-   local.get $0
-   local.get $0
-   i32.load offset=20
-   i32.const 1
-   i32.add
-   call $~lib/map/Map<u32,~lib/array/Array<src-as/base/Query/Query>>#set:entriesCount
-   local.get $0
-   i32.load
-   local.get $3
-   local.get $0
-   i32.load offset=4
-   i32.and
-   i32.const 4
-   i32.mul
-   i32.add
-   local.set $6
-   local.get $4
-   local.get $6
-   i32.load
-   call $~lib/map/MapEntry<u32,~lib/array/Array<src-as/base/Query/Query>>#set:taggedNext
-   local.get $6
-   local.get $4
-   i32.store
-  end
-  local.get $0
-  local.set $7
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $7
- )
  (func $~lib/map/Map<u32,src-as/base/Component/Component>#constructor (param $0 i32) (result i32)
   (local $1 i32)
   global.get $~lib/memory/__stack_pointer
@@ -49243,7 +54255,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 24
-   i32.const 74
+   i32.const 81
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -49299,7 +54311,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 12
-   i32.const 72
+   i32.const 79
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -49458,6 +54470,34 @@
   global.set $~lib/memory/__stack_pointer
   local.get $7
  )
+ (func $src-as/base/Object/ObjectBase#constructor (param $0 i32) (result i32)
+  (local $1 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  i32.eqz
+  if
+   global.get $~lib/memory/__stack_pointer
+   i32.const 0
+   i32.const 77
+   call $~lib/rt/itcms/__new
+   local.tee $0
+   i32.store
+  end
+  local.get $0
+  local.set $1
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $1
+ )
  (func $src-as/base/World/World#get:entity (param $0 i32) (result i32)
   (local $1 i32)
   (local $2 i32)
@@ -49503,7 +54543,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 24
-   i32.const 95
+   i32.const 102
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -49559,7 +54599,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 41
-   i32.const 94
+   i32.const 101
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -49898,6 +54938,178 @@
   global.set $~lib/memory/__stack_pointer
   local.get $3
  )
+ (func $src-as/base/System/System#constructor (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  i32.eqz
+  if
+   global.get $~lib/memory/__stack_pointer
+   i32.const 8
+   i32.const 76
+   call $~lib/rt/itcms/__new
+   local.tee $0
+   i32.store
+  end
+  local.get $0
+  i32.const 0
+  call $src-as/base/System/System#set:priority
+  local.get $0
+  i32.const 0
+  call $src-as/base/System/System#set:world
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  call $src-as/base/Object/ObjectBase#constructor
+  local.tee $0
+  i32.store
+  local.get $0
+  call $src-as/base/World/World.get:main
+  call $src-as/base/System/System#set:world
+  local.get $0
+  local.get $1
+  call $src-as/base/System/System#set:priority
+  local.get $0
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $2
+ )
+ (func $~lib/map/Map<u32,src-as/base/Object/ObjectBase>#set (param $0 i32) (param $1 i32) (param $2 i32) (result i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  (local $6 i32)
+  (local $7 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $1
+  call $~lib/util/hash/HASH<u32>
+  local.set $3
+  local.get $0
+  local.get $1
+  local.get $3
+  call $~lib/map/Map<u32,src-as/base/Object/ObjectBase>#find
+  local.set $4
+  local.get $4
+  if
+   local.get $4
+   local.get $2
+   call $~lib/map/MapEntry<u32,src-as/base/Object/ObjectBase>#set:value
+   i32.const 1
+   drop
+   local.get $0
+   local.get $2
+   i32.const 1
+   call $~lib/rt/itcms/__link
+  else
+   local.get $0
+   i32.load offset=16
+   local.get $0
+   i32.load offset=12
+   i32.eq
+   if
+    local.get $0
+    local.get $0
+    i32.load offset=20
+    local.get $0
+    i32.load offset=12
+    i32.const 3
+    i32.mul
+    i32.const 4
+    i32.div_s
+    i32.lt_s
+    if (result i32)
+     local.get $0
+     i32.load offset=4
+    else
+     local.get $0
+     i32.load offset=4
+     i32.const 1
+     i32.shl
+     i32.const 1
+     i32.or
+    end
+    call $~lib/map/Map<u32,src-as/base/Object/ObjectBase>#rehash
+   end
+   global.get $~lib/memory/__stack_pointer
+   local.get $0
+   i32.load offset=8
+   local.tee $5
+   i32.store
+   local.get $5
+   local.get $0
+   local.get $0
+   i32.load offset=16
+   local.tee $6
+   i32.const 1
+   i32.add
+   call $~lib/map/Map<u32,src-as/base/Object/ObjectBase>#set:entriesOffset
+   local.get $6
+   i32.const 12
+   i32.mul
+   i32.add
+   local.set $4
+   local.get $4
+   local.get $1
+   call $~lib/map/MapEntry<u32,src-as/base/Object/ObjectBase>#set:key
+   i32.const 0
+   drop
+   local.get $4
+   local.get $2
+   call $~lib/map/MapEntry<u32,src-as/base/Object/ObjectBase>#set:value
+   i32.const 1
+   drop
+   local.get $0
+   local.get $2
+   i32.const 1
+   call $~lib/rt/itcms/__link
+   local.get $0
+   local.get $0
+   i32.load offset=20
+   i32.const 1
+   i32.add
+   call $~lib/map/Map<u32,src-as/base/Object/ObjectBase>#set:entriesCount
+   local.get $0
+   i32.load
+   local.get $3
+   local.get $0
+   i32.load offset=4
+   i32.and
+   i32.const 4
+   i32.mul
+   i32.add
+   local.set $6
+   local.get $4
+   local.get $6
+   i32.load
+   call $~lib/map/MapEntry<u32,src-as/base/Object/ObjectBase>#set:taggedNext
+   local.get $6
+   local.get $4
+   i32.store
+  end
+  local.get $0
+  local.set $7
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $7
+ )
  (func $src-as/base/World/World#getOrAddSystem<src-as/base/systems/BehaviorSystem/BehaviorSystem> (param $0 i32) (result i32)
   (local $1 i32)
   (local $2 i32)
@@ -49941,6 +55153,1360 @@
   i32.add
   global.set $~lib/memory/__stack_pointer
   local.get $2
+ )
+ (func $src-as/base/Component/BehaviorComponent#constructor (param $0 i32) (result i32)
+  (local $1 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  i32.eqz
+  if
+   global.get $~lib/memory/__stack_pointer
+   i32.const 8
+   i32.const 95
+   call $~lib/rt/itcms/__new
+   local.tee $0
+   i32.store
+  end
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  call $src-as/base/Component/Component#constructor
+  local.tee $0
+  i32.store
+  local.get $0
+  local.set $1
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $1
+ )
+ (func $~lib/set/Set<i32>#constructor (param $0 i32) (result i32)
+  (local $1 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  i32.eqz
+  if
+   global.get $~lib/memory/__stack_pointer
+   i32.const 24
+   i32.const 99
+   call $~lib/rt/itcms/__new
+   local.tee $0
+   i32.store
+  end
+  local.get $0
+  i32.const 0
+  i32.const 4
+  i32.const 4
+  i32.mul
+  call $~lib/arraybuffer/ArrayBuffer#constructor
+  call $~lib/set/Set<i32>#set:buckets
+  local.get $0
+  i32.const 4
+  i32.const 1
+  i32.sub
+  call $~lib/set/Set<i32>#set:bucketsMask
+  local.get $0
+  i32.const 0
+  i32.const 4
+  i32.const 8
+  i32.mul
+  call $~lib/arraybuffer/ArrayBuffer#constructor
+  call $~lib/set/Set<i32>#set:entries
+  local.get $0
+  i32.const 4
+  call $~lib/set/Set<i32>#set:entriesCapacity
+  local.get $0
+  i32.const 0
+  call $~lib/set/Set<i32>#set:entriesOffset
+  local.get $0
+  i32.const 0
+  call $~lib/set/Set<i32>#set:entriesCount
+  local.get $0
+  local.set $1
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $1
+ )
+ (func $src-as/base/World/World#getOrAdd<src-as/base/systems/InputSystem/InputSystem> (param $0 i32) (result i32)
+  (local $1 i32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  call $src-as/base/World/World#has<src-as/base/systems/InputSystem/InputSystem>
+  if
+   local.get $0
+   call $src-as/base/World/World#get<src-as/base/systems/InputSystem/InputSystem>
+   local.set $2
+   global.get $~lib/memory/__stack_pointer
+   i32.const 4
+   i32.add
+   global.set $~lib/memory/__stack_pointer
+   local.get $2
+   return
+  end
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  call $src-as/base/systems/InputSystem/InputSystem#constructor
+  local.tee $1
+  i32.store
+  local.get $0
+  local.get $1
+  call $src-as/base/World/World#set<src-as/base/systems/InputSystem/InputSystem>
+  drop
+  local.get $1
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $2
+ )
+ (func $src-as/utility/Viewport/Viewport#constructor (param $0 i32) (param $1 i32) (param $2 i32) (param $3 i32) (param $4 i32) (result i32)
+  (local $5 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  i32.eqz
+  if
+   global.get $~lib/memory/__stack_pointer
+   i32.const 16
+   i32.const 109
+   call $~lib/rt/itcms/__new
+   local.tee $0
+   i32.store
+  end
+  local.get $0
+  i32.const 0
+  call $src-as/utility/Viewport/Viewport#set:x
+  local.get $0
+  i32.const 0
+  call $src-as/utility/Viewport/Viewport#set:y
+  local.get $0
+  i32.const 0
+  call $src-as/utility/Viewport/Viewport#set:width
+  local.get $0
+  i32.const 0
+  call $src-as/utility/Viewport/Viewport#set:height
+  local.get $0
+  local.get $1
+  call $src-as/utility/Viewport/Viewport#set:x
+  local.get $0
+  local.get $2
+  call $src-as/utility/Viewport/Viewport#set:y
+  local.get $0
+  local.get $3
+  call $src-as/utility/Viewport/Viewport#set:width
+  local.get $0
+  local.get $4
+  call $src-as/utility/Viewport/Viewport#set:height
+  local.get $0
+  local.set $5
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $5
+ )
+ (func $src-as/components/Camera/Camera#constructor (param $0 i32) (param $1 f32) (param $2 f32) (param $3 f32) (param $4 f32) (result i32)
+  (local $5 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  i32.eqz
+  if
+   global.get $~lib/memory/__stack_pointer
+   i32.const 48
+   i32.const 108
+   call $~lib/rt/itcms/__new
+   local.tee $0
+   i32.store
+  end
+  local.get $0
+  i32.const 0
+  call $src-as/components/Camera/Camera#set:viewport
+  local.get $0
+  i32.const 0
+  call $src-as/components/Camera/Camera#set:view
+  local.get $0
+  i32.const 0
+  call $src-as/components/Camera/Camera#set:projection
+  local.get $0
+  i32.const 0
+  call $src-as/components/Camera/Camera#set:viewProjection
+  local.get $0
+  i32.const 1
+  call $src-as/components/Camera/Camera#set:fillCanvas
+  local.get $0
+  f32.const 0
+  call $src-as/components/Camera/Camera#set:_fov
+  local.get $0
+  f32.const 0
+  call $src-as/components/Camera/Camera#set:_aspect
+  local.get $0
+  f32.const 0
+  call $src-as/components/Camera/Camera#set:_near
+  local.get $0
+  f32.const 0
+  call $src-as/components/Camera/Camera#set:_far
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  call $src-as/base/Component/SpatialComponent#constructor
+  local.tee $0
+  i32.store
+  local.get $0
+  local.get $1
+  call $src-as/components/Camera/Camera#set:_fov
+  local.get $0
+  local.get $2
+  call $src-as/components/Camera/Camera#set:_aspect
+  local.get $0
+  local.get $3
+  call $src-as/components/Camera/Camera#set:_near
+  local.get $0
+  local.get $4
+  call $src-as/components/Camera/Camera#set:_far
+  local.get $0
+  i32.const 0
+  i32.const 0
+  global.set $~argumentsLength
+  i32.const 0
+  call $src-as/math/Matrix/Matrix#constructor@varargs
+  call $src-as/components/Camera/Camera#set:view
+  local.get $0
+  i32.const 0
+  i32.const 0
+  i32.const 0
+  global.get $src-as/rendering/systems/RenderSystem/RenderSystem.canvasWidth
+  global.get $src-as/rendering/systems/RenderSystem/RenderSystem.canvasHeight
+  call $src-as/utility/Viewport/Viewport#constructor
+  call $src-as/components/Camera/Camera#set:viewport
+  local.get $0
+  i32.const 0
+  i32.const 0
+  global.set $~argumentsLength
+  i32.const 0
+  call $src-as/math/Matrix/Matrix#constructor@varargs
+  call $src-as/components/Camera/Camera#set:projection
+  local.get $0
+  i32.const 0
+  i32.const 0
+  global.set $~argumentsLength
+  i32.const 0
+  call $src-as/math/Matrix/Matrix#constructor@varargs
+  call $src-as/components/Camera/Camera#set:viewProjection
+  local.get $0
+  call $src-as/components/Camera/Camera#_updatePerspective
+  drop
+  local.get $0
+  local.set $5
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $5
+ )
+ (func $~lib/array/Array<src-as/components/Camera/Camera>#__get (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  (local $3 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $1
+  local.get $0
+  i32.load offset=12
+  i32.ge_u
+  if
+   i32.const 96
+   i32.const 4208
+   i32.const 114
+   i32.const 42
+   call $~lib/builtins/abort
+   unreachable
+  end
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  i32.load offset=4
+  local.get $1
+  i32.const 2
+  i32.shl
+  i32.add
+  i32.load
+  local.tee $2
+  i32.store
+  i32.const 1
+  drop
+  i32.const 0
+  i32.eqz
+  drop
+  local.get $2
+  i32.eqz
+  if
+   i32.const 4256
+   i32.const 4208
+   i32.const 118
+   i32.const 40
+   call $~lib/builtins/abort
+   unreachable
+  end
+  local.get $2
+  local.set $3
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $3
+ )
+ (func $~lib/array/Array<u32>#constructor (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  (local $6 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  local.get $0
+  i32.eqz
+  if
+   global.get $~lib/memory/__stack_pointer
+   i32.const 16
+   i32.const 87
+   call $~lib/rt/itcms/__new
+   local.tee $0
+   i32.store
+  end
+  local.get $0
+  i32.const 0
+  call $~lib/array/Array<u32>#set:buffer
+  local.get $0
+  i32.const 0
+  call $~lib/array/Array<u32>#set:dataStart
+  local.get $0
+  i32.const 0
+  call $~lib/array/Array<u32>#set:byteLength
+  local.get $0
+  i32.const 0
+  call $~lib/array/Array<u32>#set:length_
+  local.get $1
+  i32.const 1073741820
+  i32.const 2
+  i32.shr_u
+  i32.gt_u
+  if
+   i32.const 768
+   i32.const 4208
+   i32.const 70
+   i32.const 60
+   call $~lib/builtins/abort
+   unreachable
+  end
+  local.get $1
+  local.tee $2
+  i32.const 8
+  local.tee $3
+  local.get $2
+  local.get $3
+  i32.gt_u
+  select
+  i32.const 2
+  i32.shl
+  local.set $4
+  global.get $~lib/memory/__stack_pointer
+  local.get $4
+  i32.const 0
+  call $~lib/rt/itcms/__new
+  local.tee $5
+  i32.store offset=4
+  i32.const 2
+  global.get $~lib/shared/runtime/Runtime.Incremental
+  i32.ne
+  drop
+  local.get $0
+  local.get $5
+  call $~lib/array/Array<u32>#set:buffer
+  local.get $0
+  local.get $5
+  call $~lib/array/Array<u32>#set:dataStart
+  local.get $0
+  local.get $4
+  call $~lib/array/Array<u32>#set:byteLength
+  local.get $0
+  local.get $1
+  call $~lib/array/Array<u32>#set:length_
+  local.get $0
+  local.set $6
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $6
+ )
+ (func $~lib/map/Map<u32,src-as/base/Component/Component>#keys (param $0 i32) (result i32)
+  (local $1 i32)
+  (local $2 i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  (local $6 i32)
+  (local $7 i32)
+  (local $8 i32)
+  (local $9 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  i32.load offset=8
+  local.set $1
+  local.get $0
+  i32.load offset=16
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  local.get $2
+  call $~lib/array/Array<u32>#constructor
+  local.tee $3
+  i32.store
+  i32.const 0
+  local.set $4
+  i32.const 0
+  local.set $5
+  loop $for-loop|0
+   local.get $5
+   local.get $2
+   i32.lt_s
+   local.set $6
+   local.get $6
+   if
+    local.get $1
+    local.get $5
+    i32.const 12
+    i32.mul
+    i32.add
+    local.set $7
+    local.get $7
+    i32.load offset=8
+    i32.const 1
+    i32.and
+    i32.eqz
+    if
+     local.get $3
+     local.get $4
+     local.tee $8
+     i32.const 1
+     i32.add
+     local.set $4
+     local.get $8
+     local.get $7
+     i32.load
+     call $~lib/array/Array<u32>#__set
+    end
+    local.get $5
+    i32.const 1
+    i32.add
+    local.set $5
+    br $for-loop|0
+   end
+  end
+  local.get $3
+  local.get $4
+  call $~lib/array/Array<u32>#set:length
+  local.get $3
+  local.set $9
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $9
+ )
+ (func $~lib/array/Array<src-as/base/Component/Component>#constructor (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  (local $6 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  local.get $0
+  i32.eqz
+  if
+   global.get $~lib/memory/__stack_pointer
+   i32.const 16
+   i32.const 118
+   call $~lib/rt/itcms/__new
+   local.tee $0
+   i32.store
+  end
+  local.get $0
+  i32.const 0
+  call $~lib/array/Array<src-as/base/Component/Component>#set:buffer
+  local.get $0
+  i32.const 0
+  call $~lib/array/Array<src-as/base/Component/Component>#set:dataStart
+  local.get $0
+  i32.const 0
+  call $~lib/array/Array<src-as/base/Component/Component>#set:byteLength
+  local.get $0
+  i32.const 0
+  call $~lib/array/Array<src-as/base/Component/Component>#set:length_
+  local.get $1
+  i32.const 1073741820
+  i32.const 2
+  i32.shr_u
+  i32.gt_u
+  if
+   i32.const 768
+   i32.const 4208
+   i32.const 70
+   i32.const 60
+   call $~lib/builtins/abort
+   unreachable
+  end
+  local.get $1
+  local.tee $2
+  i32.const 8
+  local.tee $3
+  local.get $2
+  local.get $3
+  i32.gt_u
+  select
+  i32.const 2
+  i32.shl
+  local.set $4
+  global.get $~lib/memory/__stack_pointer
+  local.get $4
+  i32.const 0
+  call $~lib/rt/itcms/__new
+  local.tee $5
+  i32.store offset=4
+  i32.const 2
+  global.get $~lib/shared/runtime/Runtime.Incremental
+  i32.ne
+  drop
+  local.get $0
+  local.get $5
+  call $~lib/array/Array<src-as/base/Component/Component>#set:buffer
+  local.get $0
+  local.get $5
+  call $~lib/array/Array<src-as/base/Component/Component>#set:dataStart
+  local.get $0
+  local.get $4
+  call $~lib/array/Array<src-as/base/Component/Component>#set:byteLength
+  local.get $0
+  local.get $1
+  call $~lib/array/Array<src-as/base/Component/Component>#set:length_
+  local.get $0
+  local.set $6
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $6
+ )
+ (func $~lib/array/Array<src-as/base/Component/BehaviorComponent>#splice (param $0 i32) (param $1 i32) (param $2 i32) (result i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  (local $6 i32)
+  (local $7 i32)
+  (local $8 i32)
+  (local $9 i32)
+  (local $10 i32)
+  (local $11 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  i32.load offset=12
+  local.set $3
+  local.get $1
+  i32.const 0
+  i32.lt_s
+  if (result i32)
+   local.get $3
+   local.get $1
+   i32.add
+   local.tee $4
+   i32.const 0
+   local.tee $5
+   local.get $4
+   local.get $5
+   i32.gt_s
+   select
+  else
+   local.get $1
+   local.tee $5
+   local.get $3
+   local.tee $4
+   local.get $5
+   local.get $4
+   i32.lt_s
+   select
+  end
+  local.set $1
+  local.get $2
+  local.tee $4
+  local.get $3
+  local.get $1
+  i32.sub
+  local.tee $5
+  local.get $4
+  local.get $5
+  i32.lt_s
+  select
+  local.tee $5
+  i32.const 0
+  local.tee $4
+  local.get $5
+  local.get $4
+  i32.gt_s
+  select
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.const 2
+  i32.const 96
+  i32.const 0
+  call $~lib/rt/__newArray
+  local.tee $6
+  i32.store
+  local.get $6
+  i32.load offset=4
+  local.set $7
+  local.get $0
+  i32.load offset=4
+  local.set $8
+  local.get $8
+  local.get $1
+  i32.const 2
+  i32.shl
+  i32.add
+  local.set $9
+  local.get $7
+  local.get $9
+  local.get $2
+  i32.const 2
+  i32.shl
+  memory.copy
+  local.get $1
+  local.get $2
+  i32.add
+  local.set $10
+  local.get $3
+  local.get $10
+  i32.ne
+  if
+   local.get $9
+   local.get $8
+   local.get $10
+   i32.const 2
+   i32.shl
+   i32.add
+   local.get $3
+   local.get $10
+   i32.sub
+   i32.const 2
+   i32.shl
+   memory.copy
+  end
+  local.get $0
+  local.get $3
+  local.get $2
+  i32.sub
+  call $~lib/array/Array<src-as/base/Component/BehaviorComponent>#set:length_
+  local.get $6
+  local.set $11
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $11
+ )
+ (func $src-as/rendering/material/Material/Material#constructor (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  (local $3 i32)
+  (local $4 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  i32.eqz
+  if
+   global.get $~lib/memory/__stack_pointer
+   i32.const 24
+   i32.const 114
+   call $~lib/rt/itcms/__new
+   local.tee $0
+   i32.store
+  end
+  local.get $0
+  i32.const 0
+  call $~lib/map/Map<~lib/string/String,src-as/rendering/material/Uniform/Uniform>#constructor
+  call $src-as/rendering/material/Material/Material#set:uniformMap
+  local.get $0
+  i32.const 0
+  i32.const 2
+  i32.const 32
+  i32.const 17824
+  call $~lib/rt/__newArray
+  call $src-as/rendering/material/Material/Material#set:uniformArr
+  local.get $0
+  i32.const 0
+  i32.const 2
+  i32.const 115
+  i32.const 17856
+  call $~lib/rt/__newArray
+  call $src-as/rendering/material/Material/Material#set:uniformBufferObjects
+  local.get $0
+  i32.const 0
+  call $src-as/rendering/material/Material/Material#set:transparent
+  local.get $0
+  global.get $src-as/rendering/constants/enums/Culling.Back
+  call $src-as/rendering/material/Material/Material#set:culling
+  local.get $0
+  i32.const 0
+  call $src-as/rendering/material/Material/Material#set:shader
+  local.get $0
+  local.get $1
+  call $src-as/rendering/material/Material/Material#set:shader
+  local.get $0
+  local.set $4
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $4
+ )
+ (func $src-as/rendering/material/Uniform/TypedUniform<src-as/math/Texture/Texture>#constructor (param $0 i32) (param $1 i32) (param $2 i32) (param $3 i32) (result i32)
+  (local $4 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  i32.eqz
+  if
+   global.get $~lib/memory/__stack_pointer
+   i32.const 16
+   i32.const 122
+   call $~lib/rt/itcms/__new
+   local.tee $0
+   i32.store
+  end
+  local.get $0
+  i32.const 0
+  call $src-as/rendering/material/Uniform/TypedUniform<src-as/math/Texture/Texture>#set:value
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  local.get $1
+  local.get $2
+  call $src-as/math/Texture/Texture#get:length
+  local.get $3
+  call $src-as/rendering/material/Uniform/Uniform#constructor
+  local.tee $0
+  i32.store
+  local.get $0
+  local.get $2
+  call $src-as/rendering/material/Uniform/TypedUniform<src-as/math/Texture/Texture>#set:value
+  local.get $0
+  local.set $4
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $4
+ )
+ (func $src-as/rendering/material/Uniform/Uniform_texture#constructor (param $0 i32) (param $1 i32) (param $2 i32) (param $3 i32) (result i32)
+  (local $4 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  i32.eqz
+  if
+   global.get $~lib/memory/__stack_pointer
+   i32.const 16
+   i32.const 121
+   call $~lib/rt/itcms/__new
+   local.tee $0
+   i32.store
+  end
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  local.get $1
+  local.get $2
+  local.get $3
+  call $src-as/rendering/material/Uniform/TypedUniform<src-as/math/Texture/Texture>#constructor
+  local.tee $0
+  i32.store
+  local.get $0
+  local.set $4
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $4
+ )
+ (func $src-as/components/Mesh/Mesh#constructor (param $0 i32) (param $1 i32) (param $2 i32) (result i32)
+  (local $3 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  i32.eqz
+  if
+   global.get $~lib/memory/__stack_pointer
+   i32.const 36
+   i32.const 113
+   call $~lib/rt/itcms/__new
+   local.tee $0
+   i32.store
+  end
+  local.get $0
+  i32.const 0
+  call $src-as/components/Mesh/Mesh#set:geometry
+  local.get $0
+  i32.const 0
+  call $src-as/components/Mesh/Mesh#set:material
+  local.get $0
+  i32.const 0
+  call $src-as/components/Mesh/Mesh#set:shader
+  local.get $0
+  i32.const 0
+  i32.const 0
+  global.set $~argumentsLength
+  i32.const 0
+  call $src-as/math/Matrix/Matrix#constructor@varargs
+  call $src-as/components/Mesh/Mesh#set:modelView
+  local.get $0
+  i32.const 0
+  i32.const 0
+  global.set $~argumentsLength
+  i32.const 0
+  call $src-as/math/Matrix/Matrix#constructor@varargs
+  call $src-as/components/Mesh/Mesh#set:modelViewProjection
+  local.get $0
+  i32.const 0
+  i32.const 0
+  global.set $~argumentsLength
+  i32.const 0
+  call $src-as/math/Matrix/Matrix#constructor@varargs
+  call $src-as/components/Mesh/Mesh#set:inverseTransposeModel
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  call $src-as/base/Component/SpatialComponent#constructor
+  local.tee $0
+  i32.store
+  local.get $0
+  local.get $1
+  call $src-as/components/Mesh/Mesh#set:geometry
+  local.get $0
+  local.get $2
+  call $src-as/components/Mesh/Mesh#set:material
+  local.get $0
+  local.get $0
+  i32.load offset=16
+  i32.load offset=20
+  call $src-as/components/Mesh/Mesh#set:shader
+  local.get $0
+  local.set $3
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $3
+ )
+ (func $~lib/array/Array<src-as/base/System/System>#__get (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  (local $3 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $1
+  local.get $0
+  i32.load offset=12
+  i32.ge_u
+  if
+   i32.const 96
+   i32.const 4208
+   i32.const 114
+   i32.const 42
+   call $~lib/builtins/abort
+   unreachable
+  end
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  i32.load offset=4
+  local.get $1
+  i32.const 2
+  i32.shl
+  i32.add
+  i32.load
+  local.tee $2
+  i32.store
+  i32.const 1
+  drop
+  i32.const 0
+  i32.eqz
+  drop
+  local.get $2
+  i32.eqz
+  if
+   i32.const 4256
+   i32.const 4208
+   i32.const 118
+   i32.const 40
+   call $~lib/builtins/abort
+   unreachable
+  end
+  local.get $2
+  local.set $3
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $3
+ )
+ (func $src-as/components/Time/Time#constructor (param $0 i32) (result i32)
+  (local $1 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  i32.eqz
+  if
+   global.get $~lib/memory/__stack_pointer
+   i32.const 32
+   i32.const 126
+   call $~lib/rt/itcms/__new
+   local.tee $0
+   i32.store
+  end
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  call $src-as/base/Object/ObjectBase#constructor
+  local.tee $0
+  i32.store
+  local.get $0
+  f32.const 0
+  call $src-as/components/Time/Time#set:start
+  local.get $0
+  f32.const 0
+  call $src-as/components/Time/Time#set:last
+  local.get $0
+  f32.const 0
+  call $src-as/components/Time/Time#set:elapsed
+  local.get $0
+  f32.const 0
+  call $src-as/components/Time/Time#set:now
+  local.get $0
+  f32.const 0
+  call $src-as/components/Time/Time#set:delta
+  local.get $0
+  i64.const 0
+  call $src-as/components/Time/Time#set:frame
+  local.get $0
+  local.set $1
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $1
+ )
+ (func $src-as/base/World/World#addSystem<src-as/base/systems/TimeSystem/TimeSystem> (param $0 i32) (result i32)
+  (local $1 i32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  call $src-as/base/World/World#has<src-as/base/systems/TimeSystem/TimeSystem>
+  if
+   local.get $0
+   local.set $2
+   global.get $~lib/memory/__stack_pointer
+   i32.const 4
+   i32.add
+   global.set $~lib/memory/__stack_pointer
+   local.get $2
+   return
+  end
+  local.get $0
+  call $src-as/base/World/World#bind
+  drop
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  call $src-as/base/systems/TimeSystem/TimeSystem#constructor
+  local.tee $1
+  i32.store
+  local.get $0
+  local.get $1
+  call $src-as/base/World/World#attachSystem<src-as/base/systems/TimeSystem/TimeSystem>
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $2
+ )
+ (func $~lib/set/Set<src-as/base/Entity/Entity>#constructor (param $0 i32) (result i32)
+  (local $1 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  i32.eqz
+  if
+   global.get $~lib/memory/__stack_pointer
+   i32.const 24
+   i32.const 88
+   call $~lib/rt/itcms/__new
+   local.tee $0
+   i32.store
+  end
+  local.get $0
+  i32.const 0
+  i32.const 4
+  i32.const 4
+  i32.mul
+  call $~lib/arraybuffer/ArrayBuffer#constructor
+  call $~lib/set/Set<src-as/base/Entity/Entity>#set:buckets
+  local.get $0
+  i32.const 4
+  i32.const 1
+  i32.sub
+  call $~lib/set/Set<src-as/base/Entity/Entity>#set:bucketsMask
+  local.get $0
+  i32.const 0
+  i32.const 4
+  i32.const 8
+  i32.mul
+  call $~lib/arraybuffer/ArrayBuffer#constructor
+  call $~lib/set/Set<src-as/base/Entity/Entity>#set:entries
+  local.get $0
+  i32.const 4
+  call $~lib/set/Set<src-as/base/Entity/Entity>#set:entriesCapacity
+  local.get $0
+  i32.const 0
+  call $~lib/set/Set<src-as/base/Entity/Entity>#set:entriesOffset
+  local.get $0
+  i32.const 0
+  call $~lib/set/Set<src-as/base/Entity/Entity>#set:entriesCount
+  local.get $0
+  local.set $1
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $1
+ )
+ (func $src-as/base/System/ListenerSystem#constructor (param $0 i32) (param $1 i32) (param $2 i32) (result i32)
+  (local $3 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  i32.eqz
+  if
+   global.get $~lib/memory/__stack_pointer
+   i32.const 16
+   i32.const 92
+   call $~lib/rt/itcms/__new
+   local.tee $0
+   i32.store
+  end
+  local.get $0
+  i32.const 0
+  call $~lib/set/Set<src-as/base/Entity/Entity>#constructor
+  call $src-as/base/System/ListenerSystem#set:entities
+  local.get $0
+  i32.const 0
+  call $src-as/base/System/ListenerSystem#set:components
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  local.get $2
+  call $src-as/base/System/System#constructor
+  local.tee $0
+  i32.store
+  local.get $0
+  local.get $1
+  call $src-as/base/System/ListenerSystem#set:components
+  local.get $0
+  local.set $3
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $3
+ )
+ (func $src-as/base/Query/Query#constructor (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  i32.eqz
+  if
+   global.get $~lib/memory/__stack_pointer
+   i32.const 8
+   i32.const 86
+   call $~lib/rt/itcms/__new
+   local.tee $0
+   i32.store
+  end
+  local.get $0
+  i32.const 0
+  call $src-as/base/Query/Query#set:componentIds
+  local.get $0
+  i32.const 0
+  call $~lib/set/Set<src-as/base/Entity/Entity>#constructor
+  call $src-as/base/Query/Query#set:entities
+  local.get $0
+  local.get $1
+  call $src-as/base/Query/Query#set:componentIds
+  local.get $0
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $2
+ )
+ (func $~lib/map/Map<u32,~lib/array/Array<src-as/base/Query/Query>>#set (param $0 i32) (param $1 i32) (param $2 i32) (result i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  (local $6 i32)
+  (local $7 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $1
+  call $~lib/util/hash/HASH<u32>
+  local.set $3
+  local.get $0
+  local.get $1
+  local.get $3
+  call $~lib/map/Map<u32,~lib/array/Array<src-as/base/Query/Query>>#find
+  local.set $4
+  local.get $4
+  if
+   local.get $4
+   local.get $2
+   call $~lib/map/MapEntry<u32,~lib/array/Array<src-as/base/Query/Query>>#set:value
+   i32.const 1
+   drop
+   local.get $0
+   local.get $2
+   i32.const 1
+   call $~lib/rt/itcms/__link
+  else
+   local.get $0
+   i32.load offset=16
+   local.get $0
+   i32.load offset=12
+   i32.eq
+   if
+    local.get $0
+    local.get $0
+    i32.load offset=20
+    local.get $0
+    i32.load offset=12
+    i32.const 3
+    i32.mul
+    i32.const 4
+    i32.div_s
+    i32.lt_s
+    if (result i32)
+     local.get $0
+     i32.load offset=4
+    else
+     local.get $0
+     i32.load offset=4
+     i32.const 1
+     i32.shl
+     i32.const 1
+     i32.or
+    end
+    call $~lib/map/Map<u32,~lib/array/Array<src-as/base/Query/Query>>#rehash
+   end
+   global.get $~lib/memory/__stack_pointer
+   local.get $0
+   i32.load offset=8
+   local.tee $5
+   i32.store
+   local.get $5
+   local.get $0
+   local.get $0
+   i32.load offset=16
+   local.tee $6
+   i32.const 1
+   i32.add
+   call $~lib/map/Map<u32,~lib/array/Array<src-as/base/Query/Query>>#set:entriesOffset
+   local.get $6
+   i32.const 12
+   i32.mul
+   i32.add
+   local.set $4
+   local.get $4
+   local.get $1
+   call $~lib/map/MapEntry<u32,~lib/array/Array<src-as/base/Query/Query>>#set:key
+   i32.const 0
+   drop
+   local.get $4
+   local.get $2
+   call $~lib/map/MapEntry<u32,~lib/array/Array<src-as/base/Query/Query>>#set:value
+   i32.const 1
+   drop
+   local.get $0
+   local.get $2
+   i32.const 1
+   call $~lib/rt/itcms/__link
+   local.get $0
+   local.get $0
+   i32.load offset=20
+   i32.const 1
+   i32.add
+   call $~lib/map/Map<u32,~lib/array/Array<src-as/base/Query/Query>>#set:entriesCount
+   local.get $0
+   i32.load
+   local.get $3
+   local.get $0
+   i32.load offset=4
+   i32.and
+   i32.const 4
+   i32.mul
+   i32.add
+   local.set $6
+   local.get $4
+   local.get $6
+   i32.load
+   call $~lib/map/MapEntry<u32,~lib/array/Array<src-as/base/Query/Query>>#set:taggedNext
+   local.get $6
+   local.get $4
+   i32.store
+  end
+  local.get $0
+  local.set $7
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $7
  )
  (func $~lib/map/Map<u32,~lib/array/Array<src-as/base/System/ListenerSystem>>#set (param $0 i32) (param $1 i32) (param $2 i32) (result i32)
   (local $3 i32)
@@ -50110,6 +56676,47 @@
   global.set $~lib/memory/__stack_pointer
   local.get $2
  )
+ (func $src-as/base/World/World#addSystem<src-as/base/systems/InputSystem/InputSystem> (param $0 i32) (result i32)
+  (local $1 i32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  call $src-as/base/World/World#has<src-as/base/systems/InputSystem/InputSystem>
+  if
+   local.get $0
+   local.set $2
+   global.get $~lib/memory/__stack_pointer
+   i32.const 4
+   i32.add
+   global.set $~lib/memory/__stack_pointer
+   local.get $2
+   return
+  end
+  local.get $0
+  call $src-as/base/World/World#bind
+  drop
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  call $src-as/base/systems/InputSystem/InputSystem#constructor
+  local.tee $1
+  i32.store
+  local.get $0
+  local.get $1
+  call $src-as/base/World/World#attachSystem<src-as/base/systems/InputSystem/InputSystem>
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $2
+ )
  (func $src-as/rendering/systems/UniformBufferObjectSystem/UniformBufferObjectSystem#constructor (param $0 i32) (result i32)
   (local $1 i32)
   global.get $~lib/memory/__stack_pointer
@@ -50125,7 +56732,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 0
-   i32.const 111
+   i32.const 117
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -50153,7 +56760,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 24
-   i32.const 130
+   i32.const 146
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -50209,7 +56816,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 8
-   i32.const 129
+   i32.const 145
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -50249,7 +56856,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 24
-   i32.const 128
+   i32.const 144
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -50305,7 +56912,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 12
-   i32.const 122
+   i32.const 138
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -50346,7 +56953,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 24
-   i32.const 120
+   i32.const 136
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -50402,7 +57009,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 24
-   i32.const 121
+   i32.const 137
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -50458,7 +57065,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 8
-   i32.const 116
+   i32.const 132
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -50494,7 +57101,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 24
-   i32.const 115
+   i32.const 131
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -50550,7 +57157,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 8
-   i32.const 113
+   i32.const 129
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -50585,7 +57192,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 24
-   i32.const 132
+   i32.const 148
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -50641,7 +57248,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 16
-   i32.const 112
+   i32.const 128
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -50676,54 +57283,6 @@
   local.set $2
   global.get $~lib/memory/__stack_pointer
   i32.const 4
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $2
- )
- (func $src-as/WebGL2/systems/WebGLRenderSystem/WebGLRenderSystem#constructor (param $0 i32) (result i32)
-  (local $1 i32)
-  (local $2 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 8
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i64.const 0
-  i64.store
-  local.get $0
-  i32.eqz
-  if
-   global.get $~lib/memory/__stack_pointer
-   i32.const 36
-   i32.const 100
-   call $~lib/rt/itcms/__new
-   local.tee $0
-   i32.store
-  end
-  local.get $0
-  i32.const 0
-  call $src-as/WebGL2/systems/WebGLRenderSystem/WebGLRenderSystem#set:meshSystem
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  call $src-as/WebGL2/systems/WebGLUniformBufferObjectSystem/WebGLUniformBufferObjectSystem#constructor
-  local.tee $1
-  i32.store offset=4
-  global.get $~lib/memory/__stack_pointer
-  local.get $0
-  local.get $1
-  call $src-as/rendering/systems/RenderSystem/RenderSystem#constructor
-  local.tee $0
-  i32.store
-  local.get $0
-  i32.const 0
-  local.get $1
-  call $src-as/WebGL2/systems/WebGLMeshSystem/WebGLMeshSystem#constructor
-  call $src-as/WebGL2/systems/WebGLRenderSystem/WebGLRenderSystem#set:meshSystem
-  local.get $0
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  i32.const 8
   i32.add
   global.set $~lib/memory/__stack_pointer
   local.get $2
@@ -50768,39 +57327,6 @@
   i32.add
   global.set $~lib/memory/__stack_pointer
   local.get $2
- )
- (func $src-as/base/Component/BehaviorComponent#constructor (param $0 i32) (result i32)
-  (local $1 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store
-  local.get $0
-  i32.eqz
-  if
-   global.get $~lib/memory/__stack_pointer
-   i32.const 8
-   i32.const 88
-   call $~lib/rt/itcms/__new
-   local.tee $0
-   i32.store
-  end
-  global.get $~lib/memory/__stack_pointer
-  local.get $0
-  call $src-as/base/Component/Component#constructor
-  local.tee $0
-  i32.store
-  local.get $0
-  local.set $1
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $1
  )
  (func $~lib/typedarray/Float32Array.wrap (param $0 i32) (param $1 i32) (param $2 i32) (result i32)
   (local $3 i32)
@@ -50992,7 +57518,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 4
-   i32.const 64
+   i32.const 71
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -51026,7 +57552,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 4
-   i32.const 63
+   i32.const 70
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -51136,8 +57662,8 @@
   global.set $~lib/memory/__stack_pointer
   local.get $3
  )
- (func $src-as/utility/Viewport/Viewport#constructor (param $0 i32) (param $1 i32) (param $2 i32) (param $3 i32) (param $4 i32) (result i32)
-  (local $5 i32)
+ (func $src-as/components/Rotator/Rotator#constructor (param $0 i32) (result i32)
+  (local $1 i32)
   global.get $~lib/memory/__stack_pointer
   i32.const 4
   i32.sub
@@ -51150,467 +57676,36 @@
   i32.eqz
   if
    global.get $~lib/memory/__stack_pointer
-   i32.const 16
-   i32.const 104
+   i32.const 20
+   i32.const 151
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
   end
-  local.get $0
-  i32.const 0
-  call $src-as/utility/Viewport/Viewport#set:x
-  local.get $0
-  i32.const 0
-  call $src-as/utility/Viewport/Viewport#set:y
-  local.get $0
-  i32.const 0
-  call $src-as/utility/Viewport/Viewport#set:width
-  local.get $0
-  i32.const 0
-  call $src-as/utility/Viewport/Viewport#set:height
-  local.get $0
-  local.get $1
-  call $src-as/utility/Viewport/Viewport#set:x
-  local.get $0
-  local.get $2
-  call $src-as/utility/Viewport/Viewport#set:y
-  local.get $0
-  local.get $3
-  call $src-as/utility/Viewport/Viewport#set:width
-  local.get $0
-  local.get $4
-  call $src-as/utility/Viewport/Viewport#set:height
-  local.get $0
-  local.set $5
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $5
- )
- (func $src-as/components/Camera/Camera#constructor (param $0 i32) (param $1 f32) (param $2 f32) (param $3 f32) (param $4 f32) (result i32)
-  (local $5 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store
-  local.get $0
-  i32.eqz
-  if
-   global.get $~lib/memory/__stack_pointer
-   i32.const 48
-   i32.const 102
-   call $~lib/rt/itcms/__new
-   local.tee $0
-   i32.store
-  end
-  local.get $0
-  i32.const 0
-  call $src-as/components/Camera/Camera#set:viewport
-  local.get $0
-  i32.const 0
-  call $src-as/components/Camera/Camera#set:view
-  local.get $0
-  i32.const 0
-  call $src-as/components/Camera/Camera#set:projection
-  local.get $0
-  i32.const 0
-  call $src-as/components/Camera/Camera#set:viewProjection
-  local.get $0
-  i32.const 1
-  call $src-as/components/Camera/Camera#set:fillCanvas
-  local.get $0
-  f32.const 0
-  call $src-as/components/Camera/Camera#set:_fov
-  local.get $0
-  f32.const 0
-  call $src-as/components/Camera/Camera#set:_aspect
-  local.get $0
-  f32.const 0
-  call $src-as/components/Camera/Camera#set:_near
-  local.get $0
-  f32.const 0
-  call $src-as/components/Camera/Camera#set:_far
   global.get $~lib/memory/__stack_pointer
   local.get $0
   call $src-as/base/Component/SpatialComponent#constructor
   local.tee $0
   i32.store
   local.get $0
-  local.get $1
-  call $src-as/components/Camera/Camera#set:_fov
-  local.get $0
-  local.get $2
-  call $src-as/components/Camera/Camera#set:_aspect
-  local.get $0
-  local.get $3
-  call $src-as/components/Camera/Camera#set:_near
-  local.get $0
-  local.get $4
-  call $src-as/components/Camera/Camera#set:_far
+  f32.const 0
+  call $src-as/components/Rotator/Rotator#set:startTime
   local.get $0
   i32.const 0
-  i32.const 0
-  global.set $~argumentsLength
-  i32.const 0
-  call $src-as/math/Matrix/Matrix#constructor@varargs
-  call $src-as/components/Camera/Camera#set:view
+  f32.const 0
+  f32.const 0
+  f32.const 0
+  call $src-as/math/Vector3/Vector3#constructor
+  call $src-as/components/Rotator/Rotator#set:offset
   local.get $0
-  i32.const 0
-  i32.const 0
-  i32.const 0
-  global.get $src-as/rendering/systems/RenderSystem/RenderSystem.canvasWidth
-  global.get $src-as/rendering/systems/RenderSystem/RenderSystem.canvasHeight
-  call $src-as/utility/Viewport/Viewport#constructor
-  call $src-as/components/Camera/Camera#set:viewport
-  local.get $0
-  i32.const 0
-  i32.const 0
-  global.set $~argumentsLength
-  i32.const 0
-  call $src-as/math/Matrix/Matrix#constructor@varargs
-  call $src-as/components/Camera/Camera#set:projection
-  local.get $0
-  i32.const 0
-  i32.const 0
-  global.set $~argumentsLength
-  i32.const 0
-  call $src-as/math/Matrix/Matrix#constructor@varargs
-  call $src-as/components/Camera/Camera#set:viewProjection
-  local.get $0
-  call $src-as/components/Camera/Camera#_updatePerspective
-  drop
-  local.get $0
-  local.set $5
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $5
- )
- (func $~lib/array/Array<src-as/components/Camera/Camera>#__get (param $0 i32) (param $1 i32) (result i32)
-  (local $2 i32)
-  (local $3 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store
-  local.get $1
-  local.get $0
-  i32.load offset=12
-  i32.ge_u
-  if
-   i32.const 96
-   i32.const 4208
-   i32.const 114
-   i32.const 42
-   call $~lib/builtins/abort
-   unreachable
-  end
-  global.get $~lib/memory/__stack_pointer
-  local.get $0
-  i32.load offset=4
-  local.get $1
-  i32.const 2
-  i32.shl
-  i32.add
-  i32.load
-  local.tee $2
-  i32.store
-  i32.const 1
-  drop
-  i32.const 0
-  i32.eqz
-  drop
-  local.get $2
-  i32.eqz
-  if
-   i32.const 4256
-   i32.const 4208
-   i32.const 118
-   i32.const 40
-   call $~lib/builtins/abort
-   unreachable
-  end
-  local.get $2
-  local.set $3
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $3
- )
- (func $~lib/array/Array<u32>#constructor (param $0 i32) (param $1 i32) (result i32)
-  (local $2 i32)
-  (local $3 i32)
-  (local $4 i32)
-  (local $5 i32)
-  (local $6 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 8
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i64.const 0
-  i64.store
-  local.get $0
-  i32.eqz
-  if
-   global.get $~lib/memory/__stack_pointer
-   i32.const 16
-   i32.const 80
-   call $~lib/rt/itcms/__new
-   local.tee $0
-   i32.store
-  end
-  local.get $0
-  i32.const 0
-  call $~lib/array/Array<u32>#set:buffer
-  local.get $0
-  i32.const 0
-  call $~lib/array/Array<u32>#set:dataStart
-  local.get $0
-  i32.const 0
-  call $~lib/array/Array<u32>#set:byteLength
-  local.get $0
-  i32.const 0
-  call $~lib/array/Array<u32>#set:length_
-  local.get $1
-  i32.const 1073741820
-  i32.const 2
-  i32.shr_u
-  i32.gt_u
-  if
-   i32.const 768
-   i32.const 4208
-   i32.const 70
-   i32.const 60
-   call $~lib/builtins/abort
-   unreachable
-  end
-  local.get $1
-  local.tee $2
-  i32.const 8
-  local.tee $3
-  local.get $2
-  local.get $3
-  i32.gt_u
-  select
-  i32.const 2
-  i32.shl
-  local.set $4
-  global.get $~lib/memory/__stack_pointer
-  local.get $4
-  i32.const 0
-  call $~lib/rt/itcms/__new
-  local.tee $5
-  i32.store offset=4
-  i32.const 2
-  global.get $~lib/shared/runtime/Runtime.Incremental
-  i32.ne
-  drop
-  local.get $0
-  local.get $5
-  call $~lib/array/Array<u32>#set:buffer
-  local.get $0
-  local.get $5
-  call $~lib/array/Array<u32>#set:dataStart
-  local.get $0
-  local.get $4
-  call $~lib/array/Array<u32>#set:byteLength
-  local.get $0
-  local.get $1
-  call $~lib/array/Array<u32>#set:length_
-  local.get $0
-  local.set $6
-  global.get $~lib/memory/__stack_pointer
-  i32.const 8
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $6
- )
- (func $~lib/map/Map<u32,src-as/base/Component/Component>#keys (param $0 i32) (result i32)
-  (local $1 i32)
-  (local $2 i32)
-  (local $3 i32)
-  (local $4 i32)
-  (local $5 i32)
-  (local $6 i32)
-  (local $7 i32)
-  (local $8 i32)
-  (local $9 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store
-  local.get $0
-  i32.load offset=8
   local.set $1
-  local.get $0
-  i32.load offset=16
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  local.get $2
-  call $~lib/array/Array<u32>#constructor
-  local.tee $3
-  i32.store
-  i32.const 0
-  local.set $4
-  i32.const 0
-  local.set $5
-  loop $for-loop|0
-   local.get $5
-   local.get $2
-   i32.lt_s
-   local.set $6
-   local.get $6
-   if
-    local.get $1
-    local.get $5
-    i32.const 12
-    i32.mul
-    i32.add
-    local.set $7
-    local.get $7
-    i32.load offset=8
-    i32.const 1
-    i32.and
-    i32.eqz
-    if
-     local.get $3
-     local.get $4
-     local.tee $8
-     i32.const 1
-     i32.add
-     local.set $4
-     local.get $8
-     local.get $7
-     i32.load
-     call $~lib/array/Array<u32>#__set
-    end
-    local.get $5
-    i32.const 1
-    i32.add
-    local.set $5
-    br $for-loop|0
-   end
-  end
-  local.get $3
-  local.get $4
-  call $~lib/array/Array<u32>#set:length
-  local.get $3
-  local.set $9
   global.get $~lib/memory/__stack_pointer
   i32.const 4
   i32.add
   global.set $~lib/memory/__stack_pointer
-  local.get $9
+  local.get $1
  )
- (func $~lib/array/Array<src-as/base/Component/Component>#constructor (param $0 i32) (param $1 i32) (result i32)
-  (local $2 i32)
-  (local $3 i32)
-  (local $4 i32)
-  (local $5 i32)
-  (local $6 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 8
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i64.const 0
-  i64.store
-  local.get $0
-  i32.eqz
-  if
-   global.get $~lib/memory/__stack_pointer
-   i32.const 16
-   i32.const 137
-   call $~lib/rt/itcms/__new
-   local.tee $0
-   i32.store
-  end
-  local.get $0
-  i32.const 0
-  call $~lib/array/Array<src-as/base/Component/Component>#set:buffer
-  local.get $0
-  i32.const 0
-  call $~lib/array/Array<src-as/base/Component/Component>#set:dataStart
-  local.get $0
-  i32.const 0
-  call $~lib/array/Array<src-as/base/Component/Component>#set:byteLength
-  local.get $0
-  i32.const 0
-  call $~lib/array/Array<src-as/base/Component/Component>#set:length_
-  local.get $1
-  i32.const 1073741820
-  i32.const 2
-  i32.shr_u
-  i32.gt_u
-  if
-   i32.const 768
-   i32.const 4208
-   i32.const 70
-   i32.const 60
-   call $~lib/builtins/abort
-   unreachable
-  end
-  local.get $1
-  local.tee $2
-  i32.const 8
-  local.tee $3
-  local.get $2
-  local.get $3
-  i32.gt_u
-  select
-  i32.const 2
-  i32.shl
-  local.set $4
-  global.get $~lib/memory/__stack_pointer
-  local.get $4
-  i32.const 0
-  call $~lib/rt/itcms/__new
-  local.tee $5
-  i32.store offset=4
-  i32.const 2
-  global.get $~lib/shared/runtime/Runtime.Incremental
-  i32.ne
-  drop
-  local.get $0
-  local.get $5
-  call $~lib/array/Array<src-as/base/Component/Component>#set:buffer
-  local.get $0
-  local.get $5
-  call $~lib/array/Array<src-as/base/Component/Component>#set:dataStart
-  local.get $0
-  local.get $4
-  call $~lib/array/Array<src-as/base/Component/Component>#set:byteLength
-  local.get $0
-  local.get $1
-  call $~lib/array/Array<src-as/base/Component/Component>#set:length_
-  local.get $0
-  local.set $6
-  global.get $~lib/memory/__stack_pointer
-  i32.const 8
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $6
- )
- (func $~lib/array/Array<src-as/base/Component/BehaviorComponent>#splice (param $0 i32) (param $1 i32) (param $2 i32) (result i32)
+ (func $~lib/array/Array<src-as/components/Transform/Transform>#splice (param $0 i32) (param $1 i32) (param $2 i32) (result i32)
   (local $3 i32)
   (local $4 i32)
   (local $5 i32)
@@ -51677,7 +57772,7 @@
   global.get $~lib/memory/__stack_pointer
   local.get $2
   i32.const 2
-  i32.const 89
+  i32.const 104
   i32.const 0
   call $~lib/rt/__newArray
   local.tee $6
@@ -51725,7 +57820,7 @@
   local.get $3
   local.get $2
   i32.sub
-  call $~lib/array/Array<src-as/base/Component/BehaviorComponent>#set:length_
+  call $~lib/array/Array<src-as/components/Transform/Transform>#set:length_
   local.get $6
   local.set $11
   global.get $~lib/memory/__stack_pointer
@@ -51734,10 +57829,16 @@
   global.set $~lib/memory/__stack_pointer
   local.get $11
  )
- (func $src-as/rendering/material/Material/Material#constructor (param $0 i32) (param $1 i32) (result i32)
-  (local $2 i32)
+ (func $~lib/array/Array<src-as/components/Camera/Camera>#splice (param $0 i32) (param $1 i32) (param $2 i32) (result i32)
   (local $3 i32)
   (local $4 i32)
+  (local $5 i32)
+  (local $6 i32)
+  (local $7 i32)
+  (local $8 i32)
+  (local $9 i32)
+  (local $10 i32)
+  (local $11 i32)
   global.get $~lib/memory/__stack_pointer
   i32.const 4
   i32.sub
@@ -51747,248 +57848,110 @@
   i32.const 0
   i32.store
   local.get $0
-  i32.eqz
-  if
-   global.get $~lib/memory/__stack_pointer
-   i32.const 24
-   i32.const 108
-   call $~lib/rt/itcms/__new
-   local.tee $0
-   i32.store
-  end
-  local.get $0
-  i32.const 0
-  call $~lib/map/Map<~lib/string/String,src-as/rendering/material/Uniform/Uniform>#constructor
-  call $src-as/rendering/material/Material/Material#set:uniformMap
-  local.get $0
-  i32.const 0
-  i32.const 2
-  i32.const 31
-  i32.const 18176
-  call $~lib/rt/__newArray
-  call $src-as/rendering/material/Material/Material#set:uniformArr
-  local.get $0
-  i32.const 0
-  i32.const 2
-  i32.const 109
-  i32.const 18208
-  call $~lib/rt/__newArray
-  call $src-as/rendering/material/Material/Material#set:uniformBufferObjects
-  local.get $0
-  i32.const 0
-  call $src-as/rendering/material/Material/Material#set:transparent
-  local.get $0
-  global.get $src-as/rendering/constants/enums/Culling.Back
-  call $src-as/rendering/material/Material/Material#set:culling
-  local.get $0
-  i32.const 0
-  call $src-as/rendering/material/Material/Material#set:shader
-  local.get $0
-  local.get $1
-  call $src-as/rendering/material/Material/Material#set:shader
-  local.get $0
-  local.set $4
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $4
- )
- (func $src-as/rendering/material/Uniform/TypedUniform<src-as/math/Texture/Texture>#constructor (param $0 i32) (param $1 i32) (param $2 i32) (param $3 i32) (result i32)
-  (local $4 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store
-  local.get $0
-  i32.eqz
-  if
-   global.get $~lib/memory/__stack_pointer
-   i32.const 16
-   i32.const 141
-   call $~lib/rt/itcms/__new
-   local.tee $0
-   i32.store
-  end
-  local.get $0
-  i32.const 0
-  call $src-as/rendering/material/Uniform/TypedUniform<src-as/math/Texture/Texture>#set:value
-  global.get $~lib/memory/__stack_pointer
-  local.get $0
-  local.get $1
-  local.get $2
-  call $src-as/math/Texture/Texture#get:length
-  local.get $3
-  call $src-as/rendering/material/Uniform/Uniform#constructor
-  local.tee $0
-  i32.store
-  local.get $0
-  local.get $2
-  call $src-as/rendering/material/Uniform/TypedUniform<src-as/math/Texture/Texture>#set:value
-  local.get $0
-  local.set $4
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $4
- )
- (func $src-as/rendering/material/Uniform/Uniform_texture#constructor (param $0 i32) (param $1 i32) (param $2 i32) (param $3 i32) (result i32)
-  (local $4 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store
-  local.get $0
-  i32.eqz
-  if
-   global.get $~lib/memory/__stack_pointer
-   i32.const 16
-   i32.const 140
-   call $~lib/rt/itcms/__new
-   local.tee $0
-   i32.store
-  end
-  global.get $~lib/memory/__stack_pointer
-  local.get $0
-  local.get $1
-  local.get $2
-  local.get $3
-  call $src-as/rendering/material/Uniform/TypedUniform<src-as/math/Texture/Texture>#constructor
-  local.tee $0
-  i32.store
-  local.get $0
-  local.set $4
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $4
- )
- (func $src-as/components/Mesh/Mesh#constructor (param $0 i32) (param $1 i32) (param $2 i32) (result i32)
-  (local $3 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store
-  local.get $0
-  i32.eqz
-  if
-   global.get $~lib/memory/__stack_pointer
-   i32.const 36
-   i32.const 107
-   call $~lib/rt/itcms/__new
-   local.tee $0
-   i32.store
-  end
-  local.get $0
-  i32.const 0
-  call $src-as/components/Mesh/Mesh#set:geometry
-  local.get $0
-  i32.const 0
-  call $src-as/components/Mesh/Mesh#set:material
-  local.get $0
-  i32.const 0
-  call $src-as/components/Mesh/Mesh#set:shader
-  local.get $0
-  i32.const 0
-  i32.const 0
-  global.set $~argumentsLength
-  i32.const 0
-  call $src-as/math/Matrix/Matrix#constructor@varargs
-  call $src-as/components/Mesh/Mesh#set:modelView
-  local.get $0
-  i32.const 0
-  i32.const 0
-  global.set $~argumentsLength
-  i32.const 0
-  call $src-as/math/Matrix/Matrix#constructor@varargs
-  call $src-as/components/Mesh/Mesh#set:modelViewProjection
-  local.get $0
-  i32.const 0
-  i32.const 0
-  global.set $~argumentsLength
-  i32.const 0
-  call $src-as/math/Matrix/Matrix#constructor@varargs
-  call $src-as/components/Mesh/Mesh#set:inverseTransposeModel
-  global.get $~lib/memory/__stack_pointer
-  local.get $0
-  call $src-as/base/Component/SpatialComponent#constructor
-  local.tee $0
-  i32.store
-  local.get $0
-  local.get $1
-  call $src-as/components/Mesh/Mesh#set:geometry
-  local.get $0
-  local.get $2
-  call $src-as/components/Mesh/Mesh#set:material
-  local.get $0
-  local.get $0
-  i32.load offset=16
-  i32.load offset=20
-  call $src-as/components/Mesh/Mesh#set:shader
-  local.get $0
+  i32.load offset=12
   local.set $3
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $3
- )
- (func $src-as/components/Rotator/Rotator#constructor (param $0 i32) (result i32)
-  (local $1 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store
-  local.get $0
-  i32.eqz
-  if
-   global.get $~lib/memory/__stack_pointer
-   i32.const 20
-   i32.const 142
-   call $~lib/rt/itcms/__new
-   local.tee $0
-   i32.store
-  end
-  global.get $~lib/memory/__stack_pointer
-  local.get $0
-  call $src-as/base/Component/SpatialComponent#constructor
-  local.tee $0
-  i32.store
-  local.get $0
-  f32.const 0
-  call $src-as/components/Rotator/Rotator#set:startTime
-  local.get $0
-  i32.const 0
-  f32.const 0
-  f32.const 0
-  f32.const 0
-  call $src-as/math/Vector3/Vector3#constructor
-  call $src-as/components/Rotator/Rotator#set:offset
-  local.get $0
-  local.set $1
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.add
-  global.set $~lib/memory/__stack_pointer
   local.get $1
+  i32.const 0
+  i32.lt_s
+  if (result i32)
+   local.get $3
+   local.get $1
+   i32.add
+   local.tee $4
+   i32.const 0
+   local.tee $5
+   local.get $4
+   local.get $5
+   i32.gt_s
+   select
+  else
+   local.get $1
+   local.tee $5
+   local.get $3
+   local.tee $4
+   local.get $5
+   local.get $4
+   i32.lt_s
+   select
+  end
+  local.set $1
+  local.get $2
+  local.tee $4
+  local.get $3
+  local.get $1
+  i32.sub
+  local.tee $5
+  local.get $4
+  local.get $5
+  i32.lt_s
+  select
+  local.tee $5
+  i32.const 0
+  local.tee $4
+  local.get $5
+  local.get $4
+  i32.gt_s
+  select
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  local.get $2
+  i32.const 2
+  i32.const 112
+  i32.const 0
+  call $~lib/rt/__newArray
+  local.tee $6
+  i32.store
+  local.get $6
+  i32.load offset=4
+  local.set $7
+  local.get $0
+  i32.load offset=4
+  local.set $8
+  local.get $8
+  local.get $1
+  i32.const 2
+  i32.shl
+  i32.add
+  local.set $9
+  local.get $7
+  local.get $9
+  local.get $2
+  i32.const 2
+  i32.shl
+  memory.copy
+  local.get $1
+  local.get $2
+  i32.add
+  local.set $10
+  local.get $3
+  local.get $10
+  i32.ne
+  if
+   local.get $9
+   local.get $8
+   local.get $10
+   i32.const 2
+   i32.shl
+   i32.add
+   local.get $3
+   local.get $10
+   i32.sub
+   i32.const 2
+   i32.shl
+   memory.copy
+  end
+  local.get $0
+  local.get $3
+  local.get $2
+  i32.sub
+  call $~lib/array/Array<src-as/components/Camera/Camera>#set:length_
+  local.get $6
+  local.set $11
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $11
  )
  (func $~lib/array/Array<src-as/base/Entity/Entity>#constructor (param $0 i32) (param $1 i32) (result i32)
   (local $2 i32)
@@ -52009,7 +57972,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 16
-   i32.const 143
+   i32.const 152
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -52211,7 +58174,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 16
-   i32.const 97
+   i32.const 104
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -52394,388 +58357,6 @@
   global.set $~lib/memory/__stack_pointer
   local.get $3
  )
- (func $~lib/array/Array<src-as/components/Transform/Transform>#splice (param $0 i32) (param $1 i32) (param $2 i32) (result i32)
-  (local $3 i32)
-  (local $4 i32)
-  (local $5 i32)
-  (local $6 i32)
-  (local $7 i32)
-  (local $8 i32)
-  (local $9 i32)
-  (local $10 i32)
-  (local $11 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store
-  local.get $0
-  i32.load offset=12
-  local.set $3
-  local.get $1
-  i32.const 0
-  i32.lt_s
-  if (result i32)
-   local.get $3
-   local.get $1
-   i32.add
-   local.tee $4
-   i32.const 0
-   local.tee $5
-   local.get $4
-   local.get $5
-   i32.gt_s
-   select
-  else
-   local.get $1
-   local.tee $5
-   local.get $3
-   local.tee $4
-   local.get $5
-   local.get $4
-   i32.lt_s
-   select
-  end
-  local.set $1
-  local.get $2
-  local.tee $4
-  local.get $3
-  local.get $1
-  i32.sub
-  local.tee $5
-  local.get $4
-  local.get $5
-  i32.lt_s
-  select
-  local.tee $5
-  i32.const 0
-  local.tee $4
-  local.get $5
-  local.get $4
-  i32.gt_s
-  select
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  local.get $2
-  i32.const 2
-  i32.const 97
-  i32.const 0
-  call $~lib/rt/__newArray
-  local.tee $6
-  i32.store
-  local.get $6
-  i32.load offset=4
-  local.set $7
-  local.get $0
-  i32.load offset=4
-  local.set $8
-  local.get $8
-  local.get $1
-  i32.const 2
-  i32.shl
-  i32.add
-  local.set $9
-  local.get $7
-  local.get $9
-  local.get $2
-  i32.const 2
-  i32.shl
-  memory.copy
-  local.get $1
-  local.get $2
-  i32.add
-  local.set $10
-  local.get $3
-  local.get $10
-  i32.ne
-  if
-   local.get $9
-   local.get $8
-   local.get $10
-   i32.const 2
-   i32.shl
-   i32.add
-   local.get $3
-   local.get $10
-   i32.sub
-   i32.const 2
-   i32.shl
-   memory.copy
-  end
-  local.get $0
-  local.get $3
-  local.get $2
-  i32.sub
-  call $~lib/array/Array<src-as/components/Transform/Transform>#set:length_
-  local.get $6
-  local.set $11
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $11
- )
- (func $~lib/array/Array<src-as/components/Camera/Camera>#splice (param $0 i32) (param $1 i32) (param $2 i32) (result i32)
-  (local $3 i32)
-  (local $4 i32)
-  (local $5 i32)
-  (local $6 i32)
-  (local $7 i32)
-  (local $8 i32)
-  (local $9 i32)
-  (local $10 i32)
-  (local $11 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store
-  local.get $0
-  i32.load offset=12
-  local.set $3
-  local.get $1
-  i32.const 0
-  i32.lt_s
-  if (result i32)
-   local.get $3
-   local.get $1
-   i32.add
-   local.tee $4
-   i32.const 0
-   local.tee $5
-   local.get $4
-   local.get $5
-   i32.gt_s
-   select
-  else
-   local.get $1
-   local.tee $5
-   local.get $3
-   local.tee $4
-   local.get $5
-   local.get $4
-   i32.lt_s
-   select
-  end
-  local.set $1
-  local.get $2
-  local.tee $4
-  local.get $3
-  local.get $1
-  i32.sub
-  local.tee $5
-  local.get $4
-  local.get $5
-  i32.lt_s
-  select
-  local.tee $5
-  i32.const 0
-  local.tee $4
-  local.get $5
-  local.get $4
-  i32.gt_s
-  select
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  local.get $2
-  i32.const 2
-  i32.const 106
-  i32.const 0
-  call $~lib/rt/__newArray
-  local.tee $6
-  i32.store
-  local.get $6
-  i32.load offset=4
-  local.set $7
-  local.get $0
-  i32.load offset=4
-  local.set $8
-  local.get $8
-  local.get $1
-  i32.const 2
-  i32.shl
-  i32.add
-  local.set $9
-  local.get $7
-  local.get $9
-  local.get $2
-  i32.const 2
-  i32.shl
-  memory.copy
-  local.get $1
-  local.get $2
-  i32.add
-  local.set $10
-  local.get $3
-  local.get $10
-  i32.ne
-  if
-   local.get $9
-   local.get $8
-   local.get $10
-   i32.const 2
-   i32.shl
-   i32.add
-   local.get $3
-   local.get $10
-   i32.sub
-   i32.const 2
-   i32.shl
-   memory.copy
-  end
-  local.get $0
-  local.get $3
-  local.get $2
-  i32.sub
-  call $~lib/array/Array<src-as/components/Camera/Camera>#set:length_
-  local.get $6
-  local.set $11
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $11
- )
- (func $src-as/math/PolarCoords/PolarCoords#constructor (param $0 i32) (param $1 f32) (param $2 f32) (result i32)
-  (local $3 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store
-  local.get $0
-  i32.eqz
-  if
-   global.get $~lib/memory/__stack_pointer
-   i32.const 8
-   i32.const 144
-   call $~lib/rt/itcms/__new
-   local.tee $0
-   i32.store
-  end
-  local.get $0
-  f32.const 0
-  call $src-as/math/PolarCoords/PolarCoords#set:angle
-  local.get $0
-  f32.const 0
-  call $src-as/math/PolarCoords/PolarCoords#set:radius
-  local.get $0
-  local.get $2
-  call $src-as/math/PolarCoords/PolarCoords#set:radius
-  local.get $0
-  local.get $1
-  call $src-as/math/PolarCoords/PolarCoords#set:angle
-  local.get $0
-  local.set $3
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $3
- )
- (func $src-as/math/Vector2/Vector2.fromPolar@varargs (param $0 i32) (param $1 i32) (result i32)
-  (local $2 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store
-  block $1of1
-   block $0of1
-    block $outOfRange
-     global.get $~argumentsLength
-     i32.const 1
-     i32.sub
-     br_table $0of1 $1of1 $outOfRange
-    end
-    unreachable
-   end
-   global.get $~lib/memory/__stack_pointer
-   i32.const 0
-   f32.const 0
-   f32.const 0
-   call $src-as/math/Vector2/Vector2#constructor
-   local.tee $1
-   i32.store
-  end
-  local.get $0
-  local.get $1
-  call $src-as/math/Vector2/Vector2.fromPolar
-  local.set $2
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $2
- )
- (func $~lib/array/Array<src-as/WebGL2/components/material/WebGLUniform>#__get (param $0 i32) (param $1 i32) (result i32)
-  (local $2 i32)
-  (local $3 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store
-  local.get $1
-  local.get $0
-  i32.load offset=12
-  i32.ge_u
-  if
-   i32.const 96
-   i32.const 4208
-   i32.const 114
-   i32.const 42
-   call $~lib/builtins/abort
-   unreachable
-  end
-  global.get $~lib/memory/__stack_pointer
-  local.get $0
-  i32.load offset=4
-  local.get $1
-  i32.const 2
-  i32.shl
-  i32.add
-  i32.load
-  local.tee $2
-  i32.store
-  i32.const 1
-  drop
-  i32.const 0
-  i32.eqz
-  drop
-  local.get $2
-  i32.eqz
-  if
-   i32.const 4256
-   i32.const 4208
-   i32.const 118
-   i32.const 40
-   call $~lib/builtins/abort
-   unreachable
-  end
-  local.get $2
-  local.set $3
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $3
- )
  (func $src-as/WebGL2/components/shader/WebGLShader#constructor (param $0 i32) (result i32)
   (local $1 i32)
   global.get $~lib/memory/__stack_pointer
@@ -52791,7 +58372,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 5
-   i32.const 114
+   i32.const 130
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -52960,7 +58541,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 16
-   i32.const 119
+   i32.const 135
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -53102,7 +58683,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 28
-   i32.const 118
+   i32.const 134
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -53359,7 +58940,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 2
-   i32.const 146
+   i32.const 154
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -53393,7 +58974,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 12
-   i32.const 145
+   i32.const 153
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -53491,7 +59072,7 @@
   global.get $~lib/memory/__stack_pointer
   i32.const 0
   i32.const 2
-  i32.const 119
+  i32.const 135
   i32.const 0
   call $~lib/rt/__newArray
   local.tee $2
@@ -53570,7 +59151,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 36
-   i32.const 117
+   i32.const 133
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -53816,7 +59397,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 16
-   i32.const 57
+   i32.const 64
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -53902,7 +59483,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 20
-   i32.const 126
+   i32.const 142
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -54076,7 +59657,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 4
-   i32.const 124
+   i32.const 140
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -54111,7 +59692,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 8
-   i32.const 151
+   i32.const 159
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -54151,7 +59732,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 8
-   i32.const 153
+   i32.const 161
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -54191,7 +59772,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 8
-   i32.const 152
+   i32.const 160
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -54226,7 +59807,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 8
-   i32.const 154
+   i32.const 162
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -54261,7 +59842,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 8
-   i32.const 155
+   i32.const 163
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -54296,7 +59877,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 8
-   i32.const 156
+   i32.const 164
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -54331,7 +59912,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 8
-   i32.const 157
+   i32.const 165
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -54378,8 +59959,8 @@
    i32.gt_s
   end
   if
-   i32.const 19984
-   i32.const 20112
+   i32.const 19936
+   i32.const 20064
    i32.const 373
    i32.const 5
    call $~lib/builtins/abort
@@ -54388,7 +59969,7 @@
   local.get $0
   i32.eqz
   if
-   i32.const 20176
+   i32.const 20128
    local.set $8
    global.get $~lib/memory/__stack_pointer
    i32.const 4
@@ -54533,7 +60114,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 16
-   i32.const 123
+   i32.const 139
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -54704,7 +60285,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 12
-   i32.const 131
+   i32.const 147
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -54856,6 +60437,285 @@
   i32.add
   global.set $~lib/memory/__stack_pointer
   local.get $7
+ )
+ (func $src-as/math/Quaternion/Quaternion#toEulerAngles@varargs (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  block $1of1
+   block $0of1
+    block $outOfRange
+     global.get $~argumentsLength
+     br_table $0of1 $1of1 $outOfRange
+    end
+    unreachable
+   end
+   global.get $~lib/memory/__stack_pointer
+   i32.const 0
+   f32.const 0
+   f32.const 0
+   f32.const 0
+   call $src-as/math/Vector3/Vector3#constructor
+   local.tee $1
+   i32.store
+  end
+  local.get $0
+  local.get $1
+  call $src-as/math/Quaternion/Quaternion#toEulerAngles
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $2
+ )
+ (func $src-as/math/Quaternion/Quaternion#multiplyDirection@varargs (param $0 i32) (param $1 i32) (param $2 i32) (result i32)
+  (local $3 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  block $1of1
+   block $0of1
+    block $outOfRange
+     global.get $~argumentsLength
+     i32.const 1
+     i32.sub
+     br_table $0of1 $1of1 $outOfRange
+    end
+    unreachable
+   end
+   global.get $~lib/memory/__stack_pointer
+   i32.const 0
+   f32.const 0
+   f32.const 0
+   f32.const 0
+   call $src-as/math/Vector3/Vector3#constructor
+   local.tee $2
+   i32.store
+  end
+  local.get $0
+  local.get $1
+  local.get $2
+  call $src-as/math/Quaternion/Quaternion#multiplyDirection
+  local.set $3
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $3
+ )
+ (func $src-as/math/Quaternion/Quaternion#rotate (param $0 i32) (param $1 f32) (param $2 f32) (param $3 f32) (result i32)
+  (local $4 i32)
+  (local $5 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  i32.const 0
+  global.set $~argumentsLength
+  i32.const 0
+  call $src-as/math/Quaternion/Quaternion#toEulerAngles@varargs
+  local.tee $4
+  i32.store
+  local.get $4
+  local.get $4
+  call $src-as/math/Vector3/Vector3#get:x
+  local.get $1
+  f32.add
+  call $src-as/math/Vector3/Vector3#set:x
+  local.get $4
+  local.get $4
+  call $src-as/math/Vector3/Vector3#get:y
+  local.get $2
+  f32.add
+  call $src-as/math/Vector3/Vector3#set:y
+  local.get $4
+  local.get $4
+  call $src-as/math/Vector3/Vector3#get:z
+  local.get $3
+  f32.add
+  call $src-as/math/Vector3/Vector3#set:z
+  local.get $0
+  local.get $4
+  call $src-as/math/Quaternion/Quaternion#fromEulerAngles
+  drop
+  local.get $0
+  local.set $5
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $5
+ )
+ (func $src-as/math/PolarCoords/PolarCoords#constructor (param $0 i32) (param $1 f32) (param $2 f32) (result i32)
+  (local $3 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  i32.eqz
+  if
+   global.get $~lib/memory/__stack_pointer
+   i32.const 8
+   i32.const 166
+   call $~lib/rt/itcms/__new
+   local.tee $0
+   i32.store
+  end
+  local.get $0
+  f32.const 0
+  call $src-as/math/PolarCoords/PolarCoords#set:angle
+  local.get $0
+  f32.const 0
+  call $src-as/math/PolarCoords/PolarCoords#set:radius
+  local.get $0
+  local.get $2
+  call $src-as/math/PolarCoords/PolarCoords#set:radius
+  local.get $0
+  local.get $1
+  call $src-as/math/PolarCoords/PolarCoords#set:angle
+  local.get $0
+  local.set $3
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $3
+ )
+ (func $src-as/math/Vector2/Vector2.fromPolar@varargs (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  block $1of1
+   block $0of1
+    block $outOfRange
+     global.get $~argumentsLength
+     i32.const 1
+     i32.sub
+     br_table $0of1 $1of1 $outOfRange
+    end
+    unreachable
+   end
+   global.get $~lib/memory/__stack_pointer
+   i32.const 0
+   f32.const 0
+   f32.const 0
+   call $src-as/math/Vector2/Vector2#constructor
+   local.tee $1
+   i32.store
+  end
+  local.get $0
+  local.get $1
+  call $src-as/math/Vector2/Vector2.fromPolar
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $2
+ )
+ (func $~lib/array/Array<src-as/WebGL2/components/material/WebGLUniform>#__get (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  (local $3 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $1
+  local.get $0
+  i32.load offset=12
+  i32.ge_u
+  if
+   i32.const 96
+   i32.const 4208
+   i32.const 114
+   i32.const 42
+   call $~lib/builtins/abort
+   unreachable
+  end
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  i32.load offset=4
+  local.get $1
+  i32.const 2
+  i32.shl
+  i32.add
+  i32.load
+  local.tee $2
+  i32.store
+  i32.const 1
+  drop
+  i32.const 0
+  i32.eqz
+  drop
+  local.get $2
+  i32.eqz
+  if
+   i32.const 4256
+   i32.const 4208
+   i32.const 118
+   i32.const 40
+   call $~lib/builtins/abort
+   unreachable
+  end
+  local.get $2
+  local.set $3
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $3
+ )
+ (func $export:src-as/exports/defaultWorld/defaultWorld (param $0 i32) (result i32)
+  (local $1 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  i32.store
+  local.get $0
+  call $src-as/exports/defaultWorld/defaultWorld
+  local.set $1
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $1
  )
  (func $export:src-as/exports/demos/rotatingCube (param $0 i32) (result i32)
   (local $1 i32)

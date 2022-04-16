@@ -4,6 +4,9 @@ import { Color8 } from './Color8'
 
 
 export class Color{
+	static clear: Color = new Color(0, 0, 0, 0)
+
+
 	static new(r: f32, g: f32, b: f32, a: f32 = 1): Color{ return new Color(r, g, b, a) }
 	static fromColor8(col: Color8): Color{
 		return new Color(<f32>col.r / 255, <f32>col.g / 255, <f32>col.b / 255, <f32>col.a / 255)

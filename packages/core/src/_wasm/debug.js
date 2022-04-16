@@ -28,77 +28,6 @@ export async function instantiate(module, imports = {}) {
         mask = mask >>> 0;
         __module0.clear(mask);
       },
-      bindBuffer(target, buffer) {
-        // src-as/WebGL2/imports/_types/bindBuffer(u32, externref) => void
-        target = target >>> 0;
-        __module0.bindBuffer(target, buffer);
-      },
-      bufferSubData__2(target, dstByteOffset, srcData, srcOffset, length) {
-        // src-as/WebGL2/imports/_types/bufferSubData__2(u32, i32, ~lib/typedarray/Float32Array, u32, u32?) => void
-        target = target >>> 0;
-        srcData = __liftTypedArray(Float32Array, srcData >>> 0);
-        srcOffset = srcOffset >>> 0;
-        length = length >>> 0;
-        __module0.bufferSubData__2(target, dstByteOffset, srcData, srcOffset, length);
-      },
-      enable(cap) {
-        // src-as/WebGL2/imports/_types/enable(u32) => void
-        cap = cap >>> 0;
-        __module0.enable(cap);
-      },
-      depthFunc(func) {
-        // src-as/WebGL2/imports/_types/depthFunc(u32) => void
-        func = func >>> 0;
-        __module0.depthFunc(func);
-      },
-      disable(cap) {
-        // src-as/WebGL2/imports/_types/disable(u32) => void
-        cap = cap >>> 0;
-        __module0.disable(cap);
-      },
-      cullFace(mode) {
-        // src-as/WebGL2/imports/_types/cullFace(u32) => void
-        mode = mode >>> 0;
-        __module0.cullFace(mode);
-      },
-      bindTransformFeedback(target, tf) {
-        // src-as/WebGL2/imports/_types/bindTransformFeedback(u32, externref) => void
-        target = target >>> 0;
-        __module0.bindTransformFeedback(target, tf);
-      },
-      beginTransformFeedback(primitiveMode) {
-        // src-as/WebGL2/imports/_types/beginTransformFeedback(u32) => void
-        primitiveMode = primitiveMode >>> 0;
-        __module0.beginTransformFeedback(primitiveMode);
-      },
-      drawArrays(mode, first, count) {
-        // src-as/WebGL2/imports/_types/drawArrays(u32, i32, i32) => void
-        mode = mode >>> 0;
-        __module0.drawArrays(mode, first, count);
-      },
-      drawElementsInstanced(mode, count, type, offset, instanceCount) {
-        // src-as/WebGL2/imports/_types/drawElementsInstanced(u32, i32, u32, i32, i32) => void
-        mode = mode >>> 0;
-        type = type >>> 0;
-        __module0.drawElementsInstanced(mode, count, type, offset, instanceCount);
-      },
-      drawArraysInstanced(mode, first, count, instanceCount) {
-        // src-as/WebGL2/imports/_types/drawArraysInstanced(u32, i32, i32, i32) => void
-        mode = mode >>> 0;
-        __module0.drawArraysInstanced(mode, first, count, instanceCount);
-      },
-      drawElements(mode, count, type, offset) {
-        // src-as/WebGL2/imports/_types/drawElements(u32, i32, u32, i32) => void
-        mode = mode >>> 0;
-        type = type >>> 0;
-        __module0.drawElements(mode, count, type, offset);
-      },
-      blendFunc(sfactor, dfactor) {
-        // src-as/WebGL2/imports/_types/blendFunc(u32, u32) => void
-        sfactor = sfactor >>> 0;
-        dfactor = dfactor >>> 0;
-        __module0.blendFunc(sfactor, dfactor);
-      },
       createShader(type) {
         // src-as/WebGL2/imports/_types/createShader(u32) => externref
         type = type >>> 0;
@@ -132,6 +61,11 @@ export async function instantiate(module, imports = {}) {
       getProgramInfoLog(program) {
         // src-as/WebGL2/imports/_types/getProgramInfoLog(externref) => ~lib/string/String
         return __lowerString(__module0.getProgramInfoLog(program)) || __notnull();
+      },
+      bindBuffer(target, buffer) {
+        // src-as/WebGL2/imports/_types/bindBuffer(u32, externref) => void
+        target = target >>> 0;
+        __module0.bindBuffer(target, buffer);
       },
       bufferData__3(target, srcData, usage) {
         // src-as/WebGL2/imports/_types/bufferData__3(u32, ~lib/typedarray/Float32Array, u32) => void
@@ -177,6 +111,11 @@ export async function instantiate(module, imports = {}) {
         usage = usage >>> 0;
         __module0.bufferData__5(target, srcData, usage);
       },
+      bindTransformFeedback(target, tf) {
+        // src-as/WebGL2/imports/_types/bindTransformFeedback(u32, externref) => void
+        target = target >>> 0;
+        __module0.bindTransformFeedback(target, tf);
+      },
       bindBufferBase(target, index, buffer) {
         // src-as/WebGL2/imports/_types/bindBufferBase(u32, u32, externref) => void
         target = target >>> 0;
@@ -204,13 +143,13 @@ export async function instantiate(module, imports = {}) {
       getUniformIndices(program, uniformNames) {
         // src-as/WebGL2/imports/_types/getUniformIndices(externref, ~lib/array/Array<~lib/string/String>) => ~lib/array/Array<u32>
         uniformNames = __liftArray(pointer => __liftString(new Uint32Array(memory.buffer)[pointer >>> 2]), 2, uniformNames >>> 0);
-        return __lowerArray((pointer, value) => { new Uint32Array(memory.buffer)[pointer >>> 2] = value; }, 80, 2, __module0.getUniformIndices(program, uniformNames)) || __notnull();
+        return __lowerArray((pointer, value) => { new Uint32Array(memory.buffer)[pointer >>> 2] = value; }, 87, 2, __module0.getUniformIndices(program, uniformNames)) || __notnull();
       },
       getActiveUniforms__1(program, uniformIndices, pname) {
         // src-as/WebGL2/imports/_types/getActiveUniforms__1(externref, ~lib/array/Array<u32>, u32) => ~lib/array/Array<u32>
         uniformIndices = __liftArray(pointer => new Uint32Array(memory.buffer)[pointer >>> 2], 2, uniformIndices >>> 0);
         pname = pname >>> 0;
-        return __lowerArray((pointer, value) => { new Uint32Array(memory.buffer)[pointer >>> 2] = value; }, 80, 2, __module0.getActiveUniforms__1(program, uniformIndices, pname)) || __notnull();
+        return __lowerArray((pointer, value) => { new Uint32Array(memory.buffer)[pointer >>> 2] = value; }, 87, 2, __module0.getActiveUniforms__1(program, uniformIndices, pname)) || __notnull();
       },
       uniformBlockBinding(program, uniformBlockIndex, uniformBlockBinding) {
         // src-as/WebGL2/imports/_types/uniformBlockBinding(externref, u32, u32) => void
@@ -251,6 +190,67 @@ export async function instantiate(module, imports = {}) {
         target = target >>> 0;
         pname = pname >>> 0;
         __module0.texParameteri(target, pname, param);
+      },
+      bufferSubData__2(target, dstByteOffset, srcData, srcOffset, length) {
+        // src-as/WebGL2/imports/_types/bufferSubData__2(u32, i32, ~lib/typedarray/Float32Array, u32, u32?) => void
+        target = target >>> 0;
+        srcData = __liftTypedArray(Float32Array, srcData >>> 0);
+        srcOffset = srcOffset >>> 0;
+        length = length >>> 0;
+        __module0.bufferSubData__2(target, dstByteOffset, srcData, srcOffset, length);
+      },
+      enable(cap) {
+        // src-as/WebGL2/imports/_types/enable(u32) => void
+        cap = cap >>> 0;
+        __module0.enable(cap);
+      },
+      depthFunc(func) {
+        // src-as/WebGL2/imports/_types/depthFunc(u32) => void
+        func = func >>> 0;
+        __module0.depthFunc(func);
+      },
+      disable(cap) {
+        // src-as/WebGL2/imports/_types/disable(u32) => void
+        cap = cap >>> 0;
+        __module0.disable(cap);
+      },
+      cullFace(mode) {
+        // src-as/WebGL2/imports/_types/cullFace(u32) => void
+        mode = mode >>> 0;
+        __module0.cullFace(mode);
+      },
+      beginTransformFeedback(primitiveMode) {
+        // src-as/WebGL2/imports/_types/beginTransformFeedback(u32) => void
+        primitiveMode = primitiveMode >>> 0;
+        __module0.beginTransformFeedback(primitiveMode);
+      },
+      drawArrays(mode, first, count) {
+        // src-as/WebGL2/imports/_types/drawArrays(u32, i32, i32) => void
+        mode = mode >>> 0;
+        __module0.drawArrays(mode, first, count);
+      },
+      drawElementsInstanced(mode, count, type, offset, instanceCount) {
+        // src-as/WebGL2/imports/_types/drawElementsInstanced(u32, i32, u32, i32, i32) => void
+        mode = mode >>> 0;
+        type = type >>> 0;
+        __module0.drawElementsInstanced(mode, count, type, offset, instanceCount);
+      },
+      drawArraysInstanced(mode, first, count, instanceCount) {
+        // src-as/WebGL2/imports/_types/drawArraysInstanced(u32, i32, i32, i32) => void
+        mode = mode >>> 0;
+        __module0.drawArraysInstanced(mode, first, count, instanceCount);
+      },
+      drawElements(mode, count, type, offset) {
+        // src-as/WebGL2/imports/_types/drawElements(u32, i32, u32, i32) => void
+        mode = mode >>> 0;
+        type = type >>> 0;
+        __module0.drawElements(mode, count, type, offset);
+      },
+      blendFunc(sfactor, dfactor) {
+        // src-as/WebGL2/imports/_types/blendFunc(u32, u32) => void
+        sfactor = sfactor >>> 0;
+        dfactor = dfactor >>> 0;
+        __module0.blendFunc(sfactor, dfactor);
       },
       uniform1fv(location, data, srcOffset, srcLength) {
         // src-as/WebGL2/imports/_types/uniform1fv(externref, ~lib/typedarray/Float32Array, u32?, u32?) => void
@@ -300,18 +300,12 @@ export async function instantiate(module, imports = {}) {
   const { exports } = await WebAssembly.instantiate(module, adaptedImports);
   const memory = exports.memory || imports.env.memory;
   const adaptedExports = Object.setPrototypeOf({
-    defaultWorld() {
-      // src-as/exports/mainFactories/defaultWorld() => src-as/base/World/World
-      return __liftInternref(exports.defaultWorld() >>> 0);
-    },
-    defaultCamera() {
-      // src-as/exports/cameraFactories/defaultCamera() => src-as/base/Entity/Entity
-      return __liftInternref(exports.defaultCamera() >>> 0);
-    },
-    rotatingCube(_shader) {
-      // src-as/exports/demos/rotatingCube(src-as/rendering/shader/Shader/Shader | null) => src-as/base/Entity/Entity
-      _shader = __lowerInternref(_shader);
-      return __liftInternref(exports.rotatingCube(_shader) >>> 0);
+    createDefaultCamera(keyboardControls, mouseControls) {
+      // src-as/exports/camera/createDefaultCamera(bool?, bool?) => src-as/base/Entity/Entity
+      keyboardControls = keyboardControls ? 1 : 0;
+      mouseControls = mouseControls ? 1 : 0;
+      exports.__setArgumentsLength(arguments.length);
+      return __liftInternref(exports.createDefaultCamera(keyboardControls, mouseControls) >>> 0);
     },
     unlitVertexColorShader: {
       // src-as/rendering/shader/unlit/unlitVertexColors/unlitVertexColorShader: src-as/rendering/shader/Shader/Shader
@@ -327,7 +321,31 @@ export async function instantiate(module, imports = {}) {
         return __liftInternref(exports.litShader.value >>> 0);
       }
     },
+    defaultWorld(options) {
+      // src-as/exports/defaultWorld/defaultWorld(src-as/exports/defaultWorld/DefaultWorldOptions) => src-as/base/World/World
+      options = __lowerRecord124(options) || __notnull();
+      return __liftInternref(exports.defaultWorld(options) >>> 0);
+    },
+    rotatingCube(_shader) {
+      // src-as/exports/demos/rotatingCube(src-as/rendering/shader/Shader/Shader | null) => src-as/base/Entity/Entity
+      _shader = __lowerInternref(_shader);
+      return __liftInternref(exports.rotatingCube(_shader) >>> 0);
+    },
   }, exports);
+  function __lowerRecord124(value) {
+    // src-as/exports/defaultWorld/DefaultWorldOptions
+    // Hint: Opt-out from lowering as a record by providing an empty constructor
+    if (value == null) return 0;
+    const pointer = exports.__pin(exports.__new(6, 124));
+    new Uint8Array(memory.buffer)[pointer + 0 >>> 0] = value.camera ? 1 : 0;
+    new Uint8Array(memory.buffer)[pointer + 1 >>> 0] = value.cameraKeyboardController ? 1 : 0;
+    new Uint8Array(memory.buffer)[pointer + 2 >>> 0] = value.cameraMouseController ? 1 : 0;
+    new Uint8Array(memory.buffer)[pointer + 3 >>> 0] = value.lights ? 1 : 0;
+    new Uint8Array(memory.buffer)[pointer + 4 >>> 0] = value.gizmos ? 1 : 0;
+    new Uint8Array(memory.buffer)[pointer + 5 >>> 0] = value.helloCube ? 1 : 0;
+    exports.__unpin(pointer);
+    return pointer;
+  }
   function __liftString(pointer) {
     if (!pointer) return null;
     const

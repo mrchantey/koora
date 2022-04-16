@@ -1,6 +1,7 @@
 import { applyGLOverloads, autoBind } from '../utils'
 import { GlueBase } from './GlueBase'
-import { KooraBindings, kooraBindings } from './kooraBindings'
+import { InputGlue } from './InputGlue'
+import { DefaultWorldOptions, KooraBindings, kooraBindings } from './kooraBindings'
 import { RenderGlue } from './RenderGlue'
 
 const listen = (gl, val) => {
@@ -30,6 +31,7 @@ export class KooraLoader extends GlueBase{
 		this.renderGlue = new RenderGlue(gl, canvas)
 		this.glues.push(this)
 		this.glues.push(this.renderGlue)
+		this.glues.push(new InputGlue(gl, canvas))
 
 		//zero means null
 		this.externMap.set(this.externId++, null)
@@ -59,9 +61,9 @@ export class KooraLoader extends GlueBase{
 				log: console.log.bind(console),
 				elapsed: performance.now.bind(performance),
 				now: Date.now.bind(Date),
-				set: this.externSet.bind(this),
-				get: this.externGet.bind(this),
-				remove: this.externRemove.bind(this)
+				set: this.externSet,
+				get: this.externGet,
+				remove: this.externRemove
 			},
 			env: {}
 		}
@@ -73,13 +75,20 @@ export class KooraLoader extends GlueBase{
 		
 		return this
 	}
-	start(): kooraBindings.__Internref71{
-		const world = this.wasmExports.defaultWorld()
-		// console.dir(a.toString())
+	start(options: false | Partial<DefaultWorldOptions> = {}): KooraLoader{		
+		if (options !== false)
+			this.wasmExports.defaultWorld({
+				lights: true,
+				camera: true,
+				gizmos: true,
+				cameraKeyboardController: false,
+				cameraMouseController: false,
+				helloCube: false,
+				...options
+			})
 		this.renderGlue.resize()
-		this.update = this.update.bind(this)
 		this.update()
-		return world
+		return this
 	}
 	update(){
 		this.wasmExports.update()
@@ -94,19 +103,21 @@ export class KooraLoader extends GlueBase{
 
 }
 
-interface InitOptions{
+export interface InitKooraOptions{
 	canvas?: HTMLCanvasElement
 	wasmUrl?: string
 	bindings?: KooraBindings
+	defaultWorld?: false | Partial<DefaultWorldOptions>
 }
 
-export const initKoora = async({ canvas, wasmUrl, bindings }: InitOptions = {}) => {	
+export const initKoora = async({ canvas, wasmUrl, bindings, defaultWorld }: InitKooraOptions = {}) => {	
 	const loader = new KooraLoader(canvas)
 	await loader.load(wasmUrl, bindings)
-	loader.start()
+	loader.start(defaultWorld)
 	return loader
 }
 //@ts-ignore
 window.initKoora = initKoora
-
-
+export interface KooraWindow extends Window{
+	initKoora: typeof initKoora
+}

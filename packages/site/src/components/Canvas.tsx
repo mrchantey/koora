@@ -1,11 +1,12 @@
 import React from 'react'
-import { KooraLoader } from '../../../core/src/loader/KooraLoader'
+import { KooraLoader, InitKooraOptions, KooraWindow } from '../../../core/src/entry'
 interface Props{
 	className?: string
+	options?: InitKooraOptions
 	onMount?: (loader: KooraLoader) => any
 }
 
-export const Canvas = ({ className, onMount }: Props) => {
+export const Canvas = ({ className, options, onMount }: Props) => {
 	
 	onMount ??= ({ wasmExports }) => {
 		wasmExports.rotatingCube(null)
@@ -14,12 +15,11 @@ export const Canvas = ({ className, onMount }: Props) => {
 	const canvasRef = React.useRef<HTMLCanvasElement>()
 
 	React.useEffect(() => {
-		const initOptions = {
+		(window as any as KooraWindow).initKoora({
 			canvas: canvasRef.current,
-			wasmUrl: '/wasm/debug.wasm'
-		}
-		//@ts-ignore
-		window.initKoora(initOptions)
+			wasmUrl: '/wasm/debug.wasm',
+			...options,
+		})
 			.then(onMount)
 	}, [])
 	

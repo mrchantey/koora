@@ -1,5 +1,6 @@
 import { DebounceResizeObserver } from '../utils'
 import { GlueBase } from './GlueBase'
+import { KooraExports } from './kooraBindings'
 
 export class RenderGlue extends GlueBase{
 
@@ -9,9 +10,10 @@ export class RenderGlue extends GlueBase{
 	constructor(gl: WebGL2RenderingContext, canvas: HTMLCanvasElement){
 		super(gl)
 		this.canvas = canvas
-		this.resizeObserver = new ResizeObserver(this.resize.bind(this))
+		this.resizeObserver = new ResizeObserver(this.resize)
 		this.resizeObserver.observe(this.canvas.parentElement)
 	}
+
 	resize(){
 		const width = this.canvas.clientWidth
 		const height = this.canvas.clientHeight

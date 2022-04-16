@@ -1,14 +1,4 @@
 
-
-
-export const autoBind = (obj: any) => {
-	for (const field in obj){
-		if (typeof obj[field] === 'function')
-			obj[field] = obj[field].bind(obj)
-	}
-}
-
-
 export const applyGLOverloads = (gl: WebGL2RenderingContext) => {
 	const glOverloads = [
 		['compressedTexImage3D', 2],

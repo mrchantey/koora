@@ -1,0 +1,23 @@
+---
+sidebar_position: 2
+---
+import {CodeSandbox}  from './demos'
+
+
+
+# Using the Framework
+
+
+In an ideal world Koora would be provided as some kind of wasm `.dll` file. Because AssemblyScript has a browser-based compiler we could very easily write live demos, compiling only what we need to.
+
+Currently working with Koora requires building the AssemblyScript locally. Below is a CodeSandbox demonstrating how the library can be used. Note that this is a `container` sandbox, because we need to use `node` to generate the wasm.
+
+:::tip
+to play with this sandbox:
+1. if it isn't already running, start the server `npm run start`
+2. in another terminal window, start listening for AssemblyScript changes: `npm run aswatch`
+3. make some changes to `src-as/index.ts` and see your changes!
+
+Note: CodeSandbox has about a 10 second delay when compiling, ideally this is all done locally
+:::
+<CodeSandbox/>

@@ -3,11 +3,24 @@ import { MouseKeyboardController, Transform, Camera } from '../components'
 import { Vector3, TAU } from '../math'
 import { RenderSystem } from '../rendering'
 
-export function defaultCamera(): Entity{
+export function createDefaultCamera(keyboardControls: bool = true, mouseControls: bool = true): Entity{
 		
-	const parent = World.main.createEntity()
-		// .add<MouseKeyboardController>()
-		.getOrAdd<Transform>()
+	const parentEntity = World.main.createEntity()
+		.add<Transform>()	
+		.add<MouseKeyboardController>()
+
+	const controller = parentEntity.get<MouseKeyboardController>()
+	if (!keyboardControls){
+		controller.keyRotationScalar = 0
+		controller.keyTranslationScalar = 0
+	}
+	if (!mouseControls){
+		controller.wheelTranslationScalar = 0
+		controller.mouseRotationScalar = 0
+	}
+
+	const parent = parentEntity.get<Transform>()
+		
 		
 	const backAngle = new Vector3(0, TAU * .5, 0)
 	// parent.rotation.lookAt(Vector3._back)

@@ -35,11 +35,11 @@ export default function Home() {
 	const { siteConfig } = useDocusaurusContext()
 	return (
 		<Layout
-			title={`Welcome to ${siteConfig.title}`}
+			title={'Home'}
 			// title={`${siteConfig.title}`}
 			description="AssemblyScript Game Framework">
 			<div className={styles.canvasContainer}>
-				<Canvas className={styles.canvas}/>
+				<Canvas options={{ defaultWorld: { cameraKeyboardController: true } }} className={styles.canvas}/>
 				<HomepageHeader />
 				<main>
 					<HomepageFeatures />

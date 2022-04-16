@@ -9,13 +9,10 @@
 		"prepublish": "npm version patch",
 		"build-as": "asc src-as/index.ts --target debug --config ./config/asconfig.json --exportRuntime --enable reference-types",
 		"watch-as": "onchange -i \"src-as/**/*\" -- npm run build-as",
-		"watch-src-test": "cross-env TS_NODE_PROJECT=\"../../config/webpack/tsconfig.webpack.json\" webpack --watch --config ../../config/webpack/webpack.config.ts --env entry=./src/_entry.ts",
-		"watch-src": "cross-env TS_NODE_PROJECT=\"../../config/webpack/tsconfig.webpack.json\" webpack --watch --config ../../config/webpack/webpack.config.ts --env optimize=false --env contentHash=false --env entry=./src/index.ts",
-		"DELETEME-watch-html": "onchange -i -k \"dist/**/*\" -- npm run test-html",
+		"watch-src": "cross-env TS_NODE_PROJECT=\"../../config/webpack/tsconfig.webpack.json\" webpack --watch --config ../../config/webpack/webpack.config.ts --env optimize=false --env contentHash=false",
 		"start": "live-server ./dist --no-browser",
-		"test-html": "live-server --no-browser --watch=./dist,./test",
 		"copy-build": "ts-node ./config/scripts/copy-build.ts",
-		"watch-build": "onchange -i \"dist/**/*.d.ts\" -- npm run copy-build"
+		"watch-build": "onchange -i \"dist/**/*.d.ts,dist/**/*.js\" -- npm run copy-build"
 	},
 	"repository": {
 		"type": "git",

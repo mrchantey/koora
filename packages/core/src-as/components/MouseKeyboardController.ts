@@ -7,8 +7,7 @@ export class MouseKeyboardController extends SpatialComponent{
 
 	mouseRotationScalar: f32 = 1
 	keyRotationScalar: f32 = 0.03
-	keyTranslationScalar: f32 = 0.1
-	
+	keyTranslationScalar: f32 = 0.1	
 	wheelTranslationScalar: f32 = 0.01
 	
 	constructor(){

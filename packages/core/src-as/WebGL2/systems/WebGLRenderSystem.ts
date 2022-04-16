@@ -1,6 +1,6 @@
 import { Mesh } from '../../components'
 import { Color } from '../../math'
-import { RenderSystem, UniformBufferObjectSystem } from '../../rendering'
+import { RenderSystem } from '../../rendering'
 import { Viewport } from '../../utility'
 import { gl } from '../imports'
 import { WebGLMeshSystem } from './WebGLMeshSystem'
@@ -15,6 +15,7 @@ export class WebGLRenderSystem extends RenderSystem{
 		const uboSystem = new WebGLUniformBufferObjectSystem()
 		super(uboSystem)
 		this.meshSystem = new WebGLMeshSystem(uboSystem)
+		this.clearColor(Color.clear)
 	}
 	clearColor(color: Color): void{
 		gl.clearColor(color.r, color.g, color.b, color.a)

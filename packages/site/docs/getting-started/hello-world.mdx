@@ -10,10 +10,9 @@ import {Canvas} from '../../src'
 Lets have a look at how to create a spinning cube! To get up and running quickly we can use the `defaultWorld` function, which will take care of the camera, lights and systems required for rendering.
 
 ```ts
-
 const world = defaultWorld()
 const cube = world.createEntity()
-	.attach(new Mesh(CubeGeometry.default,new Material(litShader)))
+	.attach(new Mesh(new CubeGeometry(),new Material(litShader)))
 ```
 
 Now we have what looks like a square, lets create a `Rotator` class and add it to our cube.
