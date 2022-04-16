@@ -92,6 +92,13 @@ export class Vector2 {
 		o.y = this.y / b.y
 		return o
 	}
+	// @ts-ignore: decorator
+	@inline @operator('%')
+	modRef(b: Vector2, o: Vector2 = new Vector2()): Vector2 {
+		o.x = this.x % b.x
+		o.y = this.y % b.y
+		return o
+	}
 	//TODO make all sets static
 	// @ts-ignore: decorator
 	@inline
@@ -123,6 +130,13 @@ export class Vector2 {
 	}
 	// @ts-ignore: decorator
 	@inline
+	static mod(a: Vector2, b: Vector2, ref: Vector2 = new Vector2()): Vector2 {
+		ref.x = a.x % b.x
+		ref.y = a.y % b.y
+		return ref
+	}
+	// @ts-ignore: decorator
+	@inline
 	add(b: Vector2): this { this.x += b.x; this.y += b.y; return this }
 	// @ts-ignore: decorator
 	@inline
@@ -133,6 +147,9 @@ export class Vector2 {
 	// @ts-ignore: decorator
 	@inline
 	div(b: Vector2): this { this.x /= b.x; this.y /= b.y; return this }
+	// @ts-ignore: decorator
+	@inline
+	mod(b: Vector2): this { this.x %= b.x; this.y %= b.y; return this }
 	// @ts-ignore: decorator
 	@inline
 	addValue(b: f32): this { this.x += b;	this.y += b; return this }
