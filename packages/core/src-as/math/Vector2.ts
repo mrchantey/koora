@@ -158,8 +158,11 @@ export class Vector2 {
 	subValue(b: f32): this { this.x -= b;	this.y -= b; return this }
 	// @ts-ignore: decorator
 	@inline
-	scale(b: f32): this { this.x *= b;	this.y *= b; return this }
+	scale(b: f32): this { this.x *= b; this.y *= b; return this }
 	// @ts-ignore: decorator
 	@inline
 	scaleDiv(b: f32): this { this.x /= b; this.y /= b; return this }
+	// @ts-ignore: decorator
+	@inline
+	scaleMod(b: f32): this { this.x %= b; this.y %= b; return this }
 }
