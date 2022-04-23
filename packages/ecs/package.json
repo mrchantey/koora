@@ -1,0 +1,31 @@
+{
+	"name": "@koora/ecs",
+	"version": "0.0.6",
+	"description": "AssemblyScript ECS Architecture",
+	"exports": {
+		"./loader": "./dist/main.js"
+	},
+	"scripts": {
+		"prepublish": "npm version patch",
+		"build-as": "asc src-as/index.ts --target debug --config ./config/assemblyscript/asconfig.json --exportRuntime --enable reference-types",
+		"watch-as": "onchange -i \"src-as/**/*\" -- npm run build-as",
+		"generate-components": "ts-node ./config/scripts/generate-components.ts"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/mrchantey/koora.git"
+	},
+	"keywords": [
+		"koora",
+		"assemblyscript",
+		"3d",
+		"game"
+	],
+	"author": "mrchantey",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/mrchantey/koora/issues"
+	},
+	"homepage": "https://github.com/mrchantey/koora#readme",
+	"dependencies": {}
+}
