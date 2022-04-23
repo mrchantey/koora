@@ -1,0 +1,13 @@
+{
+	"extends": "../../../../config/assemblyscript/asconfig.json",
+	"targets": {
+		"debug": {
+			"outFile": "../../dist/debug.wasm",
+			"textFile": "../../dist/debug.wat"
+		},
+		"release": {
+			"outFile": "../../dist/release.wasm",
+			"textFile": "../../dist/release.wat"
+		}
+	}
+}
