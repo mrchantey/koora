@@ -7,7 +7,7 @@
 	},
 	"scripts": {
 		"test": "jest --watchAll --runInBand --config ../../config/jest/jest.config.ts",
-		"make-proxies-test": "ts-node --project ./src/tsconfig.json ./src/cli.ts make-proxies -i test/common/testDir",
+		"make-proxies-test": "ts-node --project ../../config/typescript/tsconfig.json ./src/cli.ts make-proxies -i test/common/testDir",
 		"prepublish": "npm version patch",
 		"build-as": "asc src-as/index.ts --target debug --config ./config/assemblyscript/asconfig.json --exportRuntime --enable reference-types",
 		"watch-as": "onchange -i \"src-as/**/*\" -- npm run build-as"

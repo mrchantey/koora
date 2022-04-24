@@ -6,7 +6,7 @@ import { Vector2, Vector3 } from '../example'
 
 
 export class MyComponentProxy {
-	get stride(): u32{ return 48}
+	get stride(): u32{ return 48 }
 	get health(): f32{ return load<f32>(changetype<usize>(this) + 0) }
 	set health(value: f32){ store<f32>(changetype<usize>(this) + 0, value) }
 	get ammunition(): f32{ return load<f32>(changetype<usize>(this) + 4) }
