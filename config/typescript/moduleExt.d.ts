@@ -37,3 +37,4 @@ declare module '*.txt' { const val: string; export default val }
 declare module '*.glsl' { const val: string; export default val }
 declare module '*.vert' { const val: string; export default val }
 declare module '*.frag' { const val: string; export default val }
+declare module '*.md' { const val: string; export default val }
