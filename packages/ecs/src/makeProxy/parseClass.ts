@@ -20,7 +20,7 @@ export const parseClass = (file: string): ClassFile => {
 
 	const properties = middleLines
 		.map(line => line.trim())
-		.filter(line => line.length > 0)
+		.filter(line => line.length > 0 && line[0] !== '/')
 		.map(line => line.split(':').map(token => token.trim())) as any as [string, string]
 		
 	return {
