@@ -2,7 +2,7 @@
 	"scripts": {
 		"lint": "eslint -c ./config/eslint/.eslintrc.json ./packages/*/{src,test,config}/**/*.{js,jsx,ts,tsx,d.ts}",
 		"lint-fix": "npm run lint -- --fix",
-		"auto-index": "chantey autoIndex -w -ws -p src src-asc"
+		"auto-index": "chantey autoIndex -w -ws -i src src-asc -e site"
 	},
 	"workspaces": [
 		"packages/*"
@@ -11,7 +11,7 @@
 		"assemblyscript": "^0.20.4"
 	},
 	"devDependencies": {
-		"@chantey/cli": "^0.0.3",
+		"@chantey/cli": "^0.0.7",
 		"@types/fs-extra": "^9.0.13",
 		"@typescript-eslint/eslint-plugin": "^5.0.0",
 		"@typescript-eslint/parser": "^5.0.0",
