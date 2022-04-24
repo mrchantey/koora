@@ -1,3 +1,3 @@
-export * from './DebounceResizeObserver'
-export * from './classUtils'
 export * from './autoBind'
+export * from './classUtils'
+export * from './DebounceResizeObserver'
