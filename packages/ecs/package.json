@@ -6,10 +6,11 @@
 		"./loader": "./dist/main.js"
 	},
 	"scripts": {
+		"test": "jest --watchAll --runInBand --config ../../config/jest/jest.config.ts",
+		"make-proxies-test": "ts-node --project ./src/tsconfig.json ./src/cli.ts make-proxies -i test/common/testDir",
 		"prepublish": "npm version patch",
 		"build-as": "asc src-as/index.ts --target debug --config ./config/assemblyscript/asconfig.json --exportRuntime --enable reference-types",
-		"watch-as": "onchange -i \"src-as/**/*\" -- npm run build-as",
-		"generate-components": "ts-node ./config/scripts/generate-components.ts"
+		"watch-as": "onchange -i \"src-as/**/*\" -- npm run build-as"
 	},
 	"repository": {
 		"type": "git",
@@ -27,5 +28,8 @@
 		"url": "https://github.com/mrchantey/koora/issues"
 	},
 	"homepage": "https://github.com/mrchantey/koora#readme",
-	"dependencies": {}
+	"dependencies": {
+		"commander": "^9.2.0",
+		"fs-extra": "^10.1.0"
+	}
 }

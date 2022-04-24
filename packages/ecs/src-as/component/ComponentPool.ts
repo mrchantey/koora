@@ -1,11 +1,7 @@
 //sparse set ecs resource https://gist.github.com/dakom/82551fff5d2b843cbe1601bbaff2acbf
-export class ComponentProxy{
-	size: u32
-	sizeAligned: u32
-}
 
 type EID = u32
-export class ComponentPool<T extends ComponentProxy>{
+export class ComponentPool<T>{
 
 	stride: u32
 	ptr: usize = heap.alloc(0)
@@ -19,6 +15,8 @@ export class ComponentPool<T extends ComponentProxy>{
 	// componentList: T[] = []
 
 	add(eid: EID): void {
+		//@ts-ignore find cleaner way to do this
+		this.stride = instantiate<T>().stride
 		this.ptr = heap.realloc(this.ptr, ++this.count * this.stride)
 
 		const index = this.count - 1
