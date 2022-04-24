@@ -22,8 +22,8 @@ export class MemoryLayout{
 	
 	static Vector2: MemoryLayout = { size: 8, align: 8 }
 	static Vector3: MemoryLayout = { size: 16, align: 16 }//std140
-	static Vector3Packed: MemoryLayout = { size: 16, align: 16 }//std140
-	static Vector4: MemoryLayout = { size: 16, align: 16 }//std140
+	static Vector3Unpadded: MemoryLayout = { size: 16, align: 16 }
+	static Vector4: MemoryLayout = { size: 16, align: 16 }
 	
 	static Matrix: MemoryLayout = { size: 64, align: 16 }
 }
