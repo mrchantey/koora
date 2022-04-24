@@ -1,6 +1,6 @@
 {
 	"name": "koora",
-	"version": "0.0.6",
+	"version": "0.0.7",
 	"description": "AssemblyScript Game Framework",
 	"exports": {
 		"./loader": "./dist/main.js"
