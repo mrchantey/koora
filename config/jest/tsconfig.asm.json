@@ -1,0 +1,25 @@
+{
+	"$schema": "https://json.schemastore.org/tsconfig",
+	"extends": "assemblyscript/std/portable.json",
+	"compilerOptions": {
+		// "module": "ESNext",
+		//enables including json files for tests
+		// "composite": false,
+		//we shouldnt need to reassert this
+		// "esModuleInterop": true,
+		//in case of multiple dirs
+		// "rootDir": "../../",
+		// "allowJs": true, //for jest to include js es6 modules, required for three examples
+		// "checkJs": false //for jest to include js es6 modules
+	},
+	// "files": [
+	// 	"../typescript/moduleExt.d.ts",
+	// 	"./types.d.ts",
+	// 	"./setup.ts"
+	// ],
+	// "include": [
+	// 	"../../packages/*/src/**/*",
+	// 	"../../packages/*/test/common/**/*",
+	// 	"../../packages/*/test/jest/**/*"
+	// ]
+}
