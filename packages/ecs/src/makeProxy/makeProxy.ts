@@ -29,7 +29,7 @@ export const makeProxy = (classFile: ClassFile) => {
 				: `get ${name}(): ${type}{ return changetype<${type}>(changetype<usize>(this) + ${offset}) }`
 			const setStr = layout.primitive 
 				? `set ${name}(value: ${type}){ store<${type}>(changetype<usize>(this) + ${offset}, value) }`
-				: `set ${name}(value: ${type}){ memory.copy(changetype<usize>(this) + ${offset},changetype<usize>(value), ${layout.size}) }`
+				: `set ${name}(value: ${type}){ memory.copy(changetype<usize>(this) + ${offset}, changetype<usize>(value), ${layout.size}) }`
 			const str = `\t${getStr}\n\t${setStr}`
 			return { name, type, layout, offset, str }
 		})

@@ -16,7 +16,8 @@ export class ComponentPool<T>{
 
 	add(eid: EID): void {
 		//@ts-ignore find cleaner way to do this
-		this.stride = instantiate<T>().stride
+		// this.stride = instantiate<T>().stride
+		this.stride = changetype<T>(this.ptr).stride
 		this.ptr = heap.realloc(this.ptr, ++this.count * this.stride)
 
 		const index = this.count - 1

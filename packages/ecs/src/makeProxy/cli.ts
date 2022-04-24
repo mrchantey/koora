@@ -27,7 +27,8 @@ const execute = (args: Args) => {
 const run = (args: Args) => {
 	for (const relativeDir of args.include) {
 		const parentDir = path.resolve(process.cwd(), relativeDir)
-		
+		if (!fs.pathExistsSync(parentDir))
+			throw new Error(`path not found: ${parentDir}`)
 		const saveDir = path.resolve(parentDir, `../${path.basename(relativeDir)}Proxies`)
 		if (fs.pathExistsSync(saveDir))
 			fs.rmSync(saveDir, { force: true, recursive: true })
