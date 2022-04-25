@@ -9,6 +9,7 @@
 		"prepublish": "npm version patch",
 		"build-as": "asc src-as/exports/index.ts --target debug --config ./config/assemblyscript/asconfig.json --exportRuntime --enable reference-types",
 		"watch-as": "onchange -i \"src-as/**/*\" -- npm run build-as",
+		"build-src": "cross-env TS_NODE_PROJECT=\"../../config/webpack/tsconfig.webpack.json\" webpack --config ../../config/webpack/webpack.config.ts --env optimize=false --env contentHash=false",
 		"watch-src": "cross-env TS_NODE_PROJECT=\"../../config/webpack/tsconfig.webpack.json\" webpack --watch --config ../../config/webpack/webpack.config.ts --env optimize=false --env contentHash=false",
 		"start": "live-server ./dist --no-browser",
 		"copy-build": "ts-node ./config/scripts/copy-build.ts",
