@@ -9,6 +9,7 @@ packages/core/build-loader
 
 packages/site/.docusaurus
 packages/site/.cache-loader
+packages/site/static/wasm
 
 config/cypress/screenshots
 config/cypress/downloads

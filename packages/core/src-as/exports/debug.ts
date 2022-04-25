@@ -13,7 +13,6 @@ export function createDebugGizmos(): void{
 		.attach(new Mesh(new GridGeometry(21, 20), material))
 	grid.get<Transform>().rotation.fromEulerAngles(new Vector3(TAU / 4, 0, 0))
 
-	
 	const trans = World.main.createEntity()
 
 	// 	// .attach(new Mesh(CubeGeometry.default, unlitMaterial))
