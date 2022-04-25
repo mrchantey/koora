@@ -1,7 +1,10 @@
+/* --- AUTO-GENERATED - Do not edit directly --- */
+import { CTime } from '../components'
 
-
-export class TimeProxy {
+export class CTimeProxy {
 	get stride(): u32{ return 32 }
+
+	//primitives
 	get start(): f32{ return load<f32>(changetype<usize>(this) + 0) }
 	set start(value: f32){ store<f32>(changetype<usize>(this) + 0, value) }
 	get last(): f32{ return load<f32>(changetype<usize>(this) + 4) }
@@ -17,4 +20,3 @@ export class TimeProxy {
 
 }
 
-	

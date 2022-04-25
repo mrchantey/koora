@@ -34,8 +34,10 @@ const run = (args: Args) => {
 			fs.rmSync(saveDir, { force: true, recursive: true })
 		fs.mkdirSync(saveDir)
 		for (const filePath of readDirRecursive({ parentDir, includeFiles: true, includeDirs: false })){
+			if (filePath.includes('index.ts'))
+				continue
 			const text = fs.readFileSync(path.resolve(parentDir, filePath)).toString()
-			const proxyText = makeProxyFromText(text)
+			const proxyText = makeProxyFromText(text, path.basename(parentDir))
 			const fileSaveDir = path.resolve(saveDir, path.basename(filePath).replace('.ts', 'Proxy.ts'))
 			fs.writeFileSync(fileSaveDir, proxyText)
 		}

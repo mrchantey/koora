@@ -17,7 +17,9 @@ visit [koora.dev](https://koora.dev)
 
 ## Repo Guide
 
-Things are a little clunky at the moment, I was using as-pect but it is currently incompatible with AssemblyScript. 
+Things are a little clunky at the moment 😅
+
+### Up and running - Core
 
 To get up and running:
 1. Terminal 1: `npm run watch-as -w packages/core`
@@ -29,14 +31,21 @@ To get up and running:
 5. Visit `http://127.0.0.1:8080/?ktest`
 	- The query parameter just starts some debug stuff to check all is working
 
+### Up and running - Site
+
 To get site up and running
 1. Terminal 1: `npm run watch-build -w packages/core`
 	- this will update the sites build whenever the core build changes
 2. Terminal 2: `npm run start -w packages/site`
 	- start docusaurus
 
+### Up and running - Testing
+
 To test ecs proxy generator:
 1. `npm run make-proxies-test -w packages/ecs`
+
+Unit tests
+1. `npm run test -w packages/testing`
 
 ## TODO
 - Material UBOs

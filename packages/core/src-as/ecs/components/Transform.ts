@@ -1,6 +1,7 @@
+import { Transform } from '../../core'
 import { Matrix, Vector3, Quaternion } from '../../math'
 
-export class Transform{
+export class CTransform{
 	matrix: Matrix
 	worldMatrix: Matrix
 	inverseWorldMatrix: Matrix
@@ -9,7 +10,7 @@ export class Transform{
 	rotation: Quaternion
 	matrixAutoUpdate: bool
 
+	children: Set<Transform>
+	parent: Transform|null
 	
-	// children: Set<Transform>
-	// parent: Transform|null
 }

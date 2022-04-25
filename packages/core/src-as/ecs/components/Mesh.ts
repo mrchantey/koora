@@ -1,7 +1,7 @@
 import { Matrix } from '../../math'
 
 
-export class Mesh{
+export class CMesh{
 	modelView: Matrix
 	modelViewProjection: Matrix
 	inverseTransposeModel: Matrix

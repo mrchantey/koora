@@ -2,35 +2,39 @@
 //size in bytes
 //align indicates the following: ptr % align = ok
 
-
-export class MemoryLayout{
+export interface MemoryLayout{
 	align: number
 	size: number
-	primitive?: boolean = false
-	
-	static u8: MemoryLayout = { size: 1, align: 1, primitive: true }
-	static i8: MemoryLayout = { size: 1, align: 1, primitive: true }
-	static bool: MemoryLayout = { size: 1, align: 1, primitive: true }
-	
-	static u16: MemoryLayout = { size: 2, align: 2, primitive: true }
-	static i16: MemoryLayout = { size: 2, align: 2, primitive: true }
-	
-	static u32: MemoryLayout = { size: 4, align: 4, primitive: true }
-	static i32: MemoryLayout = { size: 4, align: 4, primitive: true }
-	static f32: MemoryLayout = { size: 4, align: 4, primitive: true }
-	
-	static i64: MemoryLayout = { size: 8, align: 8, primitive: true }
-	static u64: MemoryLayout = { size: 8, align: 8, primitive: true }	
-	static f64: MemoryLayout = { size: 8, align: 8, primitive: true }
-	
-	static Vector2: MemoryLayout = { size: 8, align: 8 }
-	static Vector3: MemoryLayout = { size: 16, align: 16 }//std140
-	static Vector3Unpadded: MemoryLayout = { size: 16, align: 16 }
-	static Vector4: MemoryLayout = { size: 16, align: 16 }
-	static Quaternion: MemoryLayout = { size: 16, align: 16 }
-	
-	static Matrix: MemoryLayout = { size: 64, align: 16 }
+	primitive?: boolean
 }
+
+export type MemoryLayoutMap = Record<string, MemoryLayout>
+const makeMemoryLayout = <T extends MemoryLayoutMap>(layout: T) => layout
+
+export const defaultMemoryLayoutMap = () => makeMemoryLayout({
+	u8: { size: 1, align: 1, primitive: true },
+	i8: { size: 1, align: 1, primitive: true },
+	bool: { size: 1, align: 1, primitive: true },
+
+	u16: { size: 2, align: 2, primitive: true },
+	i16: { size: 2, align: 2, primitive: true },
+
+	u32: { size: 4, align: 4, primitive: true },
+	i32: { size: 4, align: 4, primitive: true },
+	f32: { size: 4, align: 4, primitive: true },
+
+	i64: { size: 8, align: 8, primitive: true },
+	u64: { size: 8, align: 8, primitive: true },
+	f64: { size: 8, align: 8, primitive: true },
+
+	Vector2: { size: 8, align: 8 },
+	Vector3: { size: 16, align: 16 }, //std140
+	Vector3Unpadded: { size: 16, align: 16 },
+	Vector4: { size: 16, align: 16 },
+	Quaternion: { size: 16, align: 16 },
+
+	Matrix: { size: 64, align: 16 }
+})
 
 
 /*
