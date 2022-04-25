@@ -5,7 +5,7 @@ declare namespace __AdaptedExports {
    * @param mouseControls `bool`
    * @returns `src-as/base/Entity/Entity`
    */
-  export function createDefaultCamera(keyboardControls?: boolean, mouseControls?: boolean): __Internref79;
+  export function createDefaultCamera(keyboardControls?: boolean, mouseControls?: boolean): __Internref33;
   /**
    * src-as/exports/camera/removeAllCameras
    */
@@ -13,12 +13,12 @@ declare namespace __AdaptedExports {
   /** src-as/rendering/shader/unlit/unlitVertexColors/unlitVertexColorShader */
   export const unlitVertexColorShader: {
     /** @type `src-as/rendering/shader/Shader/Shader` */
-    get value(): __Internref63
+    get value(): __Internref84
   };
   /** src-as/rendering/shader/lit/litShader/litShader */
   export const litShader: {
     /** @type `src-as/rendering/shader/Shader/Shader` */
-    get value(): __Internref63
+    get value(): __Internref84
   };
   /**
    * src-as/exports/debug/createDebugGizmos
@@ -37,13 +37,13 @@ declare namespace __AdaptedExports {
    * @param options `src-as/exports/defaultWorld/DefaultWorldOptions`
    * @returns `src-as/base/World/World`
    */
-  export function defaultWorld(options: __Record124<undefined>): __Internref78;
+  export function defaultWorld(options: __Record119<undefined>): __Internref32;
   /**
    * src-as/exports/demos/rotatingCube
    * @param _shader `src-as/rendering/shader/Shader/Shader | null`
    * @returns `src-as/base/Entity/Entity`
    */
-  export function rotatingCube(_shader: __Internref63 | null): __Internref79;
+  export function rotatingCube(_shader: __Internref84 | null): __Internref33;
   /**
    * src-as/exports/input/handleMouseDown
    */
@@ -86,15 +86,15 @@ declare namespace __AdaptedExports {
   export function handleResize(width: number, height: number): void;
 }
 /** src-as/base/Entity/Entity */
-declare class __Internref79 extends Number {
-  private __nominal79: symbol;
+declare class __Internref33 extends Number {
+  private __nominal33: symbol;
 }
 /** src-as/rendering/shader/Shader/Shader */
-declare class __Internref63 extends Number {
-  private __nominal63: symbol;
+declare class __Internref84 extends Number {
+  private __nominal84: symbol;
 }
 /** src-as/exports/defaultWorld/DefaultWorldOptions */
-declare interface __Record124<TOmittable> {
+declare interface __Record119<TOmittable> {
   /** @type `bool` */
   camera: boolean | TOmittable;
   /** @type `bool` */
@@ -109,8 +109,8 @@ declare interface __Record124<TOmittable> {
   helloCube: boolean | TOmittable;
 }
 /** src-as/base/World/World */
-declare class __Internref78 extends Number {
-  private __nominal78: symbol;
+declare class __Internref32 extends Number {
+  private __nominal32: symbol;
 }
 /** Instantiates the compiled WebAssembly module with the given imports. */
 export declare function instantiate(module: WebAssembly.Module, imports: {

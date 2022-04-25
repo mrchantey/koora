@@ -1,4 +1,3 @@
-import { Vector3 } from '../../math'
 import { NormalUtils } from '../../utility'
 import { toTyped_f32, toTyped_u16, toTyped_u8 } from '../../utility/_ArrayUtils'
 import { gl } from '../../WebGL2'

@@ -1,18 +1,16 @@
-import { ListenerSystem, TypedQuery, renderSystemPriority, Entity, World } from '../../base'
-import { Camera, Mesh, DirectionalLight, Time } from '../../components'
+import { Camera, Mesh, DirectionalLight, Time, Transform } from '../components'
 import { Matrix } from '../../math'
 import { Viewport } from '../../utility'
-import { WebGLMeshSystem, WebGLRenderSystem } from '../../WebGL2'
-import { Ubo, UniformName } from '../constants'
-import { Uniform_f32 } from '../material'
+import { Ubo, UniformName, Uniform_f32 } from '../../rendering'
+import { ListenerSystem, TypedQuery, Entity, renderSystemPriority, World } from '../../base'
 import { UniformBufferObjectSystem } from './UniformBufferObjectSystem'
 
 export class RenderSystem extends ListenerSystem{
 
 	cameraQuery: TypedQuery<Camera>
 
-	opaqueMeshes: Mesh[] = []
-	transparentMeshes: Mesh[] = []
+	opaqueMeshes: Entity[] = []
+	transparentMeshes: Entity[] = []
 	static canvasWidth: u32 = 100
 	static canvasHeight: u32 = 100
 	uboSystem: UniformBufferObjectSystem	
@@ -28,9 +26,9 @@ export class RenderSystem extends ListenerSystem{
 	onAdd(entity: Entity): void {
 		const mesh = entity.get<Mesh>()
 		if (mesh.material.transparent)
-			this.transparentMeshes.push(mesh)
+			this.transparentMeshes.push(entity)
 		else
-			this.opaqueMeshes.push(mesh)
+			this.opaqueMeshes.push(entity)
 		this.handleCreateMesh(mesh)
 	}
 	
@@ -60,12 +58,15 @@ export class RenderSystem extends ListenerSystem{
 			}
 		}
 	}
-	renderMesh(camera: Camera, mesh: Mesh): void {
+	renderMesh(camera: Camera, entity: Entity): void {
+		const mesh = entity.get<Mesh>()
+		const transform = entity.get<Transform>()
 		//update even if unused by material, maybe others would use it?
+
 		//if so, this should execute just after transform system
-		Matrix.multiply(mesh.modelViewProjection, camera.viewProjection, mesh.transform.worldMatrix)
-		Matrix.multiply(mesh.modelView, camera.view, mesh.transform.worldMatrix)
-		Matrix.transpose(mesh.inverseTransposeModel, mesh.transform.inverseWorldMatrix)
+		Matrix.multiply(mesh.modelViewProjection, camera.viewProjection, transform.worldMatrix)
+		Matrix.multiply(mesh.modelView, camera.view, transform.worldMatrix)
+		Matrix.transpose(mesh.inverseTransposeModel, transform.inverseWorldMatrix)
 		mesh.applyUbo()
 		this.uboSystem.apply(Ubo.mesh)
 

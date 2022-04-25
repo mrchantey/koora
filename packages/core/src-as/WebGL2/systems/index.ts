@@ -1,3 +1,4 @@
+export * from './utility'
 export * from './WebGLGeometrySystem'
 export * from './WebGLMaterialSystem'
 export * from './WebGLMeshSystem'

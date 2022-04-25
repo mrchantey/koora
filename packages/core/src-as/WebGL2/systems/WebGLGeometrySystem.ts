@@ -20,8 +20,7 @@ export class WebGLGeometrySystem{
 		return glGeometry
 	}
 
-	create(geometry: Geometry, shader: WebGLShader): WebGLGeometry{
-		
+	create(geometry: Geometry, shader: WebGLShader): WebGLGeometry{		
 		const attributes: WebGLAttribute[] = new Array(geometry.attributeArr.length)
 		for (let i = 0; i < attributes.length; i++)
 			attributes[i] = this.getOrCreateAttribute(geometry.attributeArr[i])
@@ -129,7 +128,7 @@ export class WebGLGeometrySystem{
 		this.attributeMap.set(attr, glAttr)
 		return glAttr
 	}
-	
+		
 	createAttribute(attr: Attribute): WebGLAttribute{
 		const buffer = this.createBuffer(attr)
 		const bufferSwap = attr.varyingName

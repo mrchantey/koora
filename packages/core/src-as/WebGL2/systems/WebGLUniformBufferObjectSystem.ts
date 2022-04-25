@@ -1,5 +1,6 @@
+import { UniformBufferObjectSystem } from '../../core/systems/UniformBufferObjectSystem'
 import { host } from '../../imports'
-import { UniformBufferObject, UniformBufferObjectSystem, UniformType, Uniform_f32 } from '../../rendering'
+import { UniformBufferObject, UniformType, Uniform_f32 } from '../../rendering'
 import { WebGLShader, WebGLUniformBufferObject } from '../components'
 import { gl } from '../imports'
 import { bufferUsage } from './utility'

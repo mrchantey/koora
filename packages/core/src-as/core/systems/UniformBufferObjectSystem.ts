@@ -1,4 +1,4 @@
-import { UniformBufferObject } from '..'
+import { UniformBufferObject } from '../../rendering'
 
 
 export class UniformBufferObjectSystem{

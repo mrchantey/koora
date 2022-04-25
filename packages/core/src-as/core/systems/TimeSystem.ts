@@ -1,7 +1,6 @@
-import { Time } from '../../components'
+import { Time } from '../components'
 import { host } from '../../imports'
-import { System } from '../System'
-import { timeSystemPriority } from '../SystemPriority'
+import { System, timeSystemPriority } from '../../base'
 
 export class TimeSystem extends System{
 	time: Time

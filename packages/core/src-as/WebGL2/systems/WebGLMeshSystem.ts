@@ -1,4 +1,4 @@
-import { Mesh } from '../../components'
+import { Mesh } from '../../core/components/Mesh'
 import { host } from '../../imports'
 import { WebGLMesh } from '../components'
 import { gl } from '../imports'

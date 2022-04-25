@@ -1,5 +1,6 @@
-import { InputSystem, World } from '../base'
+import { World } from '../base'
 import { KeyboardCode } from '../constants'
+import { InputSystem } from '../core'
 
 
 export function handleMouseDown(): void{

@@ -1,5 +1,4 @@
 import { Color, Texture } from '../../math'
-import { Bitmap } from '../../math/Bitmap'
 import { Culling, Ubo, UniformName } from '../constants'
 import { Shader } from '../shader'
 import { Uniform, Uniform_texture } from './Uniform'

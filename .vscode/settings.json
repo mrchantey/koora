@@ -3,7 +3,14 @@
 		"**/node_modules": true,
 		"**/.docusaurus": true,
 		"**/package-lock.json": false,
-		"**/LICENSE": true,
+		// "**/LICENSE": true,
+	},
+	"search.exclude": {
+		"**/node_modules": true,
+		"**/bower_components": true,
+		"**/*.code-search": true,
+		"**/*.wat": true,
+		"**/*.wasm.map": true,
 	},
 	//linting settings
 	"eslint.format.enable": true,

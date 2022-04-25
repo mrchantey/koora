@@ -1,4 +1,4 @@
-import { Entity, SpatialComponent } from '../base'
+import { Component, Entity } from '../../base'
 
 export enum XREye{
 	Left,
@@ -7,7 +7,7 @@ export enum XREye{
 }
 
 
-export class XRRig extends SpatialComponent{
+export class XRRig extends Component{
 
 	constructor(
 		leftEye: Entity,

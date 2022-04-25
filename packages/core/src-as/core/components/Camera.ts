@@ -1,10 +1,11 @@
-import { SpatialComponent } from '../base'
-import { Matrix, TAU } from '../math'
-import { Ubo, UniformName, Uniform_f32 } from '../rendering'
-import { Viewport } from '../utility/Viewport'
-import { WebGLUniformBufferObjectSystem } from '../WebGL2'
+import { Matrix, TAU } from '../../math'
+import { Ubo, UniformName, Uniform_f32 } from '../../rendering'
+import { Viewport } from '../../utility'
+import { Component } from '../../base'
+import { Transform } from './Transform'
+import { RenderSystem } from '../systems'
 
-export class Camera extends SpatialComponent{
+export class Camera extends Component{
 
 	viewport: Viewport
 	view: Matrix
@@ -31,9 +32,11 @@ export class Camera extends SpatialComponent{
 		super()
 		this._fov = fov; this._aspect = aspect; this._near = near; this._far = far
 		this.view = new Matrix()
-		this.viewport = new Viewport()
+		//TODO components shouldnt depend on systems
+		this.viewport = new Viewport(0, 0, RenderSystem.canvasWidth, RenderSystem.canvasHeight)
 		this.projection = new Matrix()
 		this.viewProjection = new Matrix()
+		this.entity.getOrAdd<Transform>()
 		this._updatePerspective()
 	}
 
@@ -57,16 +60,18 @@ export class Camera extends SpatialComponent{
 		return this
 	}
 
+	//TODO put this in system
 	update(): void{
-		this.view.invert(this.transform.worldMatrix)
+		this.view.invert(this.entity.get<Transform>().worldMatrix)
 		Matrix.multiply(this.viewProjection, this.projection, this.view)
 	}
 
 
 	applyUbo(): void{
+		
 		(Ubo.camera.uniformMap.get(UniformName.View) as Uniform_f32).value = this.view.m;
 		(Ubo.camera.uniformMap.get(UniformName.Projection) as Uniform_f32).value = this.projection.m;
 		(Ubo.camera.uniformMap.get(UniformName.ViewProjection) as Uniform_f32).value = this.viewProjection.m;
-		(Ubo.camera.uniformMap.get(UniformName.CameraModel) as Uniform_f32).value = this.transform.worldMatrix.m
+		(Ubo.camera.uniformMap.get(UniformName.CameraModel) as Uniform_f32).value = this.entity.get<Transform>().worldMatrix.m
 	}
 }

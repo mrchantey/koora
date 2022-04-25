@@ -1,5 +1,4 @@
-import { Texture } from '../../math'
-import { Bitmap } from '../../math/Bitmap'
+import { Bitmap, Texture } from '../../math'
 import { UniformType } from '../constants'
 
 export class Uniform{

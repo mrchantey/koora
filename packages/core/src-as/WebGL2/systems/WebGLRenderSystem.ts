@@ -1,6 +1,6 @@
-import { Mesh } from '../../components'
+import { RenderSystem } from '../../core/systems/RenderSystem'
+import { Mesh } from '../../core/components'
 import { Color } from '../../math'
-import { RenderSystem } from '../../rendering'
 import { Viewport } from '../../utility'
 import { gl } from '../imports'
 import { WebGLMeshSystem } from './WebGLMeshSystem'

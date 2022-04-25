@@ -1,5 +1,4 @@
-import { BehaviorSystem } from './systems/BehaviorSystem'
-import { BehaviorComponent, CID, Component } from './Component'
+import { CID, Component } from './Component'
 import { EID, Entity } from './Entity'
 import { ListenerSystemManager } from './ListenerSystemManager'
 import { ObjectBase } from './Object'
@@ -107,15 +106,11 @@ export class World{
 	onAddComponent(entity: Entity, cid: CID, component: Component): World{
 		this.queryManager.onAddComponent(entity, cid)
 		this.listenerSystemManager.onAddEntity(entity, cid)
-		if (component instanceof BehaviorComponent)
-			this.getOrAddSystem<BehaviorSystem>().addBehavior(component as BehaviorComponent)
 		return this
 	}
 	onRemoveComponent(entity: Entity, cid: CID, component: Component): World{
 		this.queryManager.onRemoveComponent(entity, cid)
 		this.listenerSystemManager.onRemoveEntity(entity, cid)
-		if (component instanceof BehaviorComponent)
-			this.getOrAddSystem<BehaviorSystem>().removeBehavior(component as BehaviorComponent)
 		return this
 	}
 	onDisposeEntity(entity: Entity): World{

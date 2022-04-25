@@ -143,13 +143,13 @@ export async function instantiate(module, imports = {}) {
       getUniformIndices(program, uniformNames) {
         // src-as/WebGL2/imports/_types/getUniformIndices(externref, ~lib/array/Array<~lib/string/String>) => ~lib/array/Array<u32>
         uniformNames = __liftArray(pointer => __liftString(new Uint32Array(memory.buffer)[pointer >>> 2]), 2, uniformNames >>> 0);
-        return __lowerArray((pointer, value) => { new Uint32Array(memory.buffer)[pointer >>> 2] = value; }, 87, 2, __module0.getUniformIndices(program, uniformNames)) || __notnull();
+        return __lowerArray((pointer, value) => { new Uint32Array(memory.buffer)[pointer >>> 2] = value; }, 43, 2, __module0.getUniformIndices(program, uniformNames)) || __notnull();
       },
       getActiveUniforms__1(program, uniformIndices, pname) {
         // src-as/WebGL2/imports/_types/getActiveUniforms__1(externref, ~lib/array/Array<u32>, u32) => ~lib/array/Array<u32>
         uniformIndices = __liftArray(pointer => new Uint32Array(memory.buffer)[pointer >>> 2], 2, uniformIndices >>> 0);
         pname = pname >>> 0;
-        return __lowerArray((pointer, value) => { new Uint32Array(memory.buffer)[pointer >>> 2] = value; }, 87, 2, __module0.getActiveUniforms__1(program, uniformIndices, pname)) || __notnull();
+        return __lowerArray((pointer, value) => { new Uint32Array(memory.buffer)[pointer >>> 2] = value; }, 43, 2, __module0.getActiveUniforms__1(program, uniformIndices, pname)) || __notnull();
       },
       uniformBlockBinding(program, uniformBlockIndex, uniformBlockBinding) {
         // src-as/WebGL2/imports/_types/uniformBlockBinding(externref, u32, u32) => void
@@ -323,7 +323,7 @@ export async function instantiate(module, imports = {}) {
     },
     defaultWorld(options) {
       // src-as/exports/defaultWorld/defaultWorld(src-as/exports/defaultWorld/DefaultWorldOptions) => src-as/base/World/World
-      options = __lowerRecord124(options) || __notnull();
+      options = __lowerRecord119(options) || __notnull();
       return __liftInternref(exports.defaultWorld(options) >>> 0);
     },
     rotatingCube(_shader) {
@@ -332,11 +332,11 @@ export async function instantiate(module, imports = {}) {
       return __liftInternref(exports.rotatingCube(_shader) >>> 0);
     },
   }, exports);
-  function __lowerRecord124(value) {
+  function __lowerRecord119(value) {
     // src-as/exports/defaultWorld/DefaultWorldOptions
     // Hint: Opt-out from lowering as a record by providing an empty constructor
     if (value == null) return 0;
-    const pointer = exports.__pin(exports.__new(6, 124));
+    const pointer = exports.__pin(exports.__new(6, 119));
     new Uint8Array(memory.buffer)[pointer + 0 >>> 0] = value.camera ? 1 : 0;
     new Uint8Array(memory.buffer)[pointer + 1 >>> 0] = value.cameraKeyboardController ? 1 : 0;
     new Uint8Array(memory.buffer)[pointer + 2 >>> 0] = value.cameraMouseController ? 1 : 0;

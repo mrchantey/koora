@@ -1,4 +1,5 @@
-import { InputSystem, TimeSystem, TransformSystem, World } from '../base'
+import { World } from '../base'
+import { TimeSystem, TransformSystem, InputSystem, RotatorSystem, MouseKeyboardControllerSystem } from '../core'
 import { litShader } from '../rendering'
 import { WebGLRenderSystem } from '../WebGL2'
 import { createDefaultCamera } from './camera'
@@ -26,9 +27,11 @@ export function defaultWorld(options: DefaultWorldOptions): World{
 		.addSystem<TimeSystem>()
 		.addSystem<TransformSystem>()
 		.addSystem<InputSystem>()
+		.addSystem<RotatorSystem>()
 		.addSystem<WebGLRenderSystem>()
+		.addSystem<MouseKeyboardControllerSystem>()
 		
-	// renderSystem.clear()
+	// // renderSystem.clear()
 	if (options.lights)
 		createDefaultLights()
 	if (options.camera)

@@ -1,5 +1,5 @@
 import { World } from '../base'
-import { DirectionalLight } from '../components'
+import { DirectionalLight } from '../core/components'
 
 export function createDefaultLights(): void{
 	// World.main.createEntity()

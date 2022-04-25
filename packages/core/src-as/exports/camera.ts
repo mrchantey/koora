@@ -1,7 +1,7 @@
-import { Entity, World, TransformSystem } from '../base'
-import { MouseKeyboardController, Transform, Camera } from '../components'
+import { Entity, World } from '../base'
+import { MouseKeyboardController, Transform, Camera } from '../core/components'
 import { Vector3, TAU } from '../math'
-import { RenderSystem } from '../rendering'
+import { RenderSystem, TransformSystem } from '../core'
 
 export function createDefaultCamera(keyboardControls: bool = true, mouseControls: bool = true): Entity{
 		
@@ -46,7 +46,7 @@ export function removeAllCameras(): void{
 	const cameras = renderSystem.cameraQuery.components
 	for (let i = 0; i < cameras.length; i++){
 		const camera = cameras[i]
-		const parent = camera.transform.parent
+		const parent = camera.entity.get<Transform>().parent
 		if (parent != null && parent != root)
 			parent.entity.dispose()
 		camera.entity.dispose()

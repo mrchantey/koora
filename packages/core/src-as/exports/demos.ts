@@ -1,7 +1,6 @@
 import { Entity, World } from '../base'
-import { Mesh, Rotator } from '../components'
+import { Mesh, Rotator } from '../core/components'
 import { CubeGeometry, Shader, StandardMaterial, unlitVertexColorShader } from '../rendering'
-
 
 export function rotatingCube(_shader: Shader | null): Entity{
 	const shader = _shader == null ? unlitVertexColorShader : _shader

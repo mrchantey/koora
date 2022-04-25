@@ -1,5 +1,5 @@
 import { host, ExternID } from '../../imports'
-import { Culling, Uniform, UniformType } from '../../rendering'
+import { Culling, Uniform } from '../../rendering'
 import { gl } from '../imports'
 
 

@@ -1,8 +1,5 @@
-import { Transform } from '../../components'
-import { Entity } from '../Entity'
-import { TypedQuery } from '../Query'
-import { ListenerSystem } from '../System'
-import { transformSystemPriority } from '../SystemPriority'
+import { ListenerSystem, TypedQuery, transformSystemPriority, Entity } from '../../base'
+import { Transform } from '../components'
 
 export class TransformSystem extends ListenerSystem{
 	static id: u32 = idof<TransformSystem>()

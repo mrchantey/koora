@@ -1,6 +1,6 @@
-import { mat4 } from '../glMatrix'
-import { Matrix, Vector3, Quaternion } from '../math'
-import { Component } from '../base/Component'
+import { mat4 } from '../../glMatrix'
+import { Matrix, Vector3, Quaternion } from '../../math'
+import { Component } from '../../base'
 
 export class Transform extends Component{
 	matrix: Matrix

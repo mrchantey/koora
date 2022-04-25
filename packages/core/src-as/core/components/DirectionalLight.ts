@@ -1,11 +1,8 @@
-import { SpatialComponent, World } from '../base'
-import { Vector1, SharedBufferVector1, SharedBufferVector3, Vector3 } from '../math'
-import { Ubo, UniformName } from '../rendering/constants'
-import { Uniform_f32 } from '../rendering/material'
-import { WebGLUniformBufferObjectSystem } from '../WebGL2'
+import { Vector1, SharedBufferVector1, SharedBufferVector3, Vector3 } from '../../math'
+import { Ubo, UniformName, Uniform_f32 } from '../../rendering'
+import { Component } from '../../base'
 
-
-export class DirectionalLight extends SpatialComponent{
+export class DirectionalLight extends Component{
 
 	
 	static directionBuffer: SharedBufferVector3 = new SharedBufferVector3()

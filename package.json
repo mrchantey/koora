@@ -2,7 +2,7 @@
 	"scripts": {
 		"lint": "eslint -c ./config/eslint/.eslintrc.json ./packages/*/{src,test,config}/**/*.{js,jsx,ts,tsx,d.ts}",
 		"lint-fix": "npm run lint -- --fix",
-		"auto-index": "chantey autoIndex -w -ws -i src src-asc -e site"
+		"auto-index": "chantey autoIndex -w -ws -i src src-as -e site"
 	},
 	"workspaces": [
 		"packages/*"

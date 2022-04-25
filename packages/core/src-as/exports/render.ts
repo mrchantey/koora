@@ -1,5 +1,5 @@
 import { World } from '../base'
-import { RenderSystem } from '../rendering'
+import { RenderSystem } from '../core'
 import { WebGLRenderSystem } from '../WebGL2'
 
 

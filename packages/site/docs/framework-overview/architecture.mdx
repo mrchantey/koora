@@ -2,16 +2,28 @@
 sidebar_position: 1
 ---
 
-# Entities and Components
-
+# Architecture
 
 A Koora scene is made up of entities, each of which has multiple components. Probably the most common component is the `Transform`, which contains positions, rotations, matrices etc. 
 
 ## Entities
 
 An entity on its own can simply add, get and remove components.
-
+```ts
+const entity = world.createEntity()
+```
 
 ## Components
 
 Components can be used to store data and hold behaviors.
+```ts
+entity.add<Rotator>()
+```
+
+## Systems
+
+A System will operate on arrays of entities and their components.
+
+```ts
+world.addSystem<RotatorSystem>()
+```

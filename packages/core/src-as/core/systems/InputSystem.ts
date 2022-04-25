@@ -1,7 +1,6 @@
+import { System, SystemPriority, renderSystemPriority } from '../../base'
 import { KeyboardCode } from '../../constants'
 import { Vector2 } from '../../math'
-import { System } from '../System'
-import { SystemPriority, renderSystemPriority } from '../SystemPriority'
 
 export class InputSystem extends System{
 	static id: u32 = idof<InputSystem>()

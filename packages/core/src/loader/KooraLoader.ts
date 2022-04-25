@@ -59,13 +59,18 @@ export class KooraLoader extends GlueBase{
 			gl: this.gl,
 			host: {
 				log: console.log.bind(console),
+				log_f64: console.log.bind(console),
 				elapsed: performance.now.bind(performance),
 				now: Date.now.bind(Date),
 				set: this.externSet,
 				get: this.externGet,
 				remove: this.externRemove
 			},
-			env: {}
+			env: {
+				console: {
+					log: console.log.bind(console)
+				}
+			}
 		}
 		// console.dir(wasmImports)
 		const wasmModule = await WebAssembly.compileStreaming(fetch(wasmUrl))
