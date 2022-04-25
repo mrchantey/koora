@@ -1,0 +1,14 @@
+---
+sidebar_position: -1
+---
+# Troubleshooting
+
+
+## Memory
+
+The framework currently does not support dynamic wasm module memory `memory.grow etc`. This means that sufficient memory must be allocated when compiling. This can be done by using the `--initialMemory` flag. For the examples on this site we are currently setting this to 4, ie `--initialMemory 4`. Insufficient memory can result in peculiar bugs, some I've encountered have looked like array indexing out of bounds:
+
+```
+
+
+```

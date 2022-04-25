@@ -7,12 +7,12 @@
 	},
 	"scripts": {
 		"prepublish": "npm version patch",
-		"build-as": "asc src-as/exports/index.ts --target debug --config ./config/assemblyscript/asconfig.json --exportRuntime --enable reference-types --initialMemory 4",
+		"build-as": "asc src-as/exports/index.ts --target debug --config ./config/assemblyscript/asconfig.json --exportRuntime --enable reference-types",
 		"watch-as": "onchange -i \"src-as/**/*\" -- npm run build-as",
 		"watch-src": "cross-env TS_NODE_PROJECT=\"../../config/webpack/tsconfig.webpack.json\" webpack --watch --config ../../config/webpack/webpack.config.ts --env optimize=false --env contentHash=false",
 		"start": "live-server ./dist --no-browser",
 		"copy-build": "ts-node ./config/scripts/copy-build.ts",
-		"watch-build": "onchange -i \"dist/**/*.d.ts,dist/**/*.js\" -- npm run copy-build",
+		"watch-build": "onchange -i \"dist/**/*.d.ts\" \"dist/**/*.js\" -- npm run copy-build",
 		"make-proxies": "ts-node --project ../../config/typescript/tsconfig.json ../ecs/src/cli.ts make-proxies -i src-as/ecs/components",
 		"test-once": "asc test/as/index.ts --target debug --config ./config/assemblyscript/asconfig.json --exportRuntime --enable reference-types",
 		"test": "onchange -i \"src-as/**/*\" \"test/**/*\" -- npm run test-once"

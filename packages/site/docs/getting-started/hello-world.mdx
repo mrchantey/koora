@@ -3,7 +3,7 @@ sidebar_position: 1
 ---
 import {Canvas} from '../../src'
 
-# The spinning cube!
+# Hello Cube!
 
 <Canvas/>
 
@@ -15,20 +15,44 @@ const cube = world.createEntity()
 	.attach(new Mesh(new CubeGeometry(),new Material(litShader)))
 ```
 
-Now we have what looks like a square, lets create a `Rotator` class and add it to our cube.
+It doesn't do anything yet, so lets create a `RotatorSystem` to make the cube spin.
 ```ts
-class Rotator extends BehaviorComponent{
+class RotatorSystem extends ListenerSystem{
+	
+	constructor(){
+		super([idof<Transform>()])
+	}
+	
+	onUpdate(entity:Entity){
+		const transform = entity.get<Transform>()
+		const deltaTime = this.world.get<Time>().delta
+		transform.rotation.x += 0.01 * deltaTime
+	}
+}
+```
+Now we can add this system to our world.
+
+```ts
+const world = defaultWorld()
+    // highlight-next-line
+	.addSystem<RotatorSystem>()
+const cube = world.createEntity()
+	.attach(new Mesh(new CubeGeometry(),new Material(litShader)))
+```
+
+<!-- ```ts
+class Rotator extends Component{
 	update(){
 		const deltaTime = this.world.get<Time>().delta
 		this.transform.rotation.x += 0.01 * deltaTime
 	}
 }
 cube.add<Rotator>()
-```
+``` -->
+
+
 :::info
 `entity.add<Rotator>()` is the same as `entity.attach(new Rotator())`
 
 Under the hood the component is simply instantiated with no arguments in the constructor.
 :::
-
-Lets have a look at how this is working.

@@ -7,13 +7,13 @@ sidebar_position: 1
 Koora enables the creation of 3D games with AssemblyScript.
 
 :::info Is Koora for me?
-These are extremely early days for this library. If you're motivations are to actually produce a web-based game, chances are battle-hardened libraries like [three](https://threejs.org) and [babylon](https://babylonjs.com) will run circles around Koora in every way.
+This library is highly experimental, and ongoing maintenance is not guaranteed. If you're motivations are to actually produce a web-based game, battle-hardened libraries like [three](https://threejs.org) and [babylon](https://babylonjs.com) will run circles around Koora in every way.
 
 Otherwise, if you are interested in experimenting with game dev in AssemblyScript, read on intrepid adventurer! 🥳
 :::
 ## Overview
 
-The framework prioritizes modularity through an entity-component style architecture:
+The framework prioritizes modularity through an Entity-Component-System style architecture:
 
 ```ts
 
@@ -33,7 +33,3 @@ const enemy = world.createEntity()
 	.add<Health>()
 	.add<AIController>()
 ```
-
-:::info
-Koora uses terminology like `Entity`, `Component` and `System`, but it does **not** use a strict ECS Architecture. Instead components can be accessed directly from entities, and they can also contain behaviors.
-:::
