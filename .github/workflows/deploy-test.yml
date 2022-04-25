@@ -26,5 +26,5 @@ jobs:
         run: npm run build-src -w packages/core
       - name: Copy build to site
         run: npm run copy-build -w packages/core
-      - name: Test build website
+      - name: Build website
         run: npm run build -w packages/site
