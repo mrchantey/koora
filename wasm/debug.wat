@@ -1060,7 +1060,7 @@
  (global $~lib/memory/__data_end i32 (i32.const 23300))
  (global $~lib/memory/__stack_pointer (mut i32) (i32.const 39684))
  (global $~lib/memory/__heap_base i32 (i32.const 39684))
- (memory $0 4)
+ (memory $0 1)
  (data (i32.const 12) "\1c\00\00\00\00\00\00\00\00\00\00\00\05\00\00\00\08\00\00\00\01\00\00\00\00\00\00\00\00\00\00\00")
  (data (i32.const 44) "\1c\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\06\00\00\00z\00y\00x\00\00\00\00\00\00\00")
  (data (i32.const 76) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00$\00\00\00I\00n\00d\00e\00x\00 \00o\00u\00t\00 \00o\00f\00 \00r\00a\00n\00g\00e\00\00\00\00\00\00\00\00\00")
@@ -40928,13 +40928,13 @@
   (local $2 i32)
   (local $3 i32)
   global.get $~lib/memory/__stack_pointer
-  i32.const 28
+  i32.const 36
   i32.sub
   global.set $~lib/memory/__stack_pointer
   call $~stack_check
   global.get $~lib/memory/__stack_pointer
   i32.const 0
-  i32.const 28
+  i32.const 36
   memory.fill
   global.get $~lib/memory/__stack_pointer
   i32.const 0
@@ -41041,7 +41041,19 @@
   local.get $3
   i32.store offset=16
   local.get $3
-  local.get $0
+  i32.const 0
+  global.get $src-as/rendering/shader/unlit/unlitVertexColors/unlitVertexColorShader
+  local.set $3
+  global.get $~lib/memory/__stack_pointer
+  local.get $3
+  i32.store offset=28
+  local.get $3
+  call $src-as/rendering/material/Material/StandardMaterial#constructor
+  local.set $3
+  global.get $~lib/memory/__stack_pointer
+  local.get $3
+  i32.store offset=24
+  local.get $3
   call $src-as/core/components/Mesh/Mesh#constructor
   local.set $3
   global.get $~lib/memory/__stack_pointer
@@ -41050,9 +41062,9 @@
   local.get $3
   call $src-as/base/Entity/Entity#attach<src-as/core/components/Mesh/Mesh>
   local.tee $2
-  i32.store offset=24
+  i32.store offset=32
   global.get $~lib/memory/__stack_pointer
-  i32.const 28
+  i32.const 36
   i32.add
   global.set $~lib/memory/__stack_pointer
  )
