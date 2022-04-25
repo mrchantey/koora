@@ -9,15 +9,15 @@ export class ComponentPool<T>{
 	entityIndices: u32[] = []
 	entityList: EID[] = []
 
-	
+	constructor() {
+		//@ts-ignore find cleaner way to do this
+		this.stride = changetype<T>(this.ptr).stride
+	}
 
 	//TODO would maintaining this be cheaper than frequent changetype?
 	// componentList: T[] = []
 
 	add(eid: EID): void {
-		//@ts-ignore find cleaner way to do this
-		// this.stride = instantiate<T>().stride
-		this.stride = changetype<T>(this.ptr).stride
 		this.ptr = heap.realloc(this.ptr, ++this.count * this.stride)
 
 		const index = this.count - 1

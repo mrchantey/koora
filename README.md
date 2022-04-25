@@ -24,14 +24,19 @@ To get up and running:
    - This watches the `src-as` directory for changes
 2. Terminal 2: `npm run watch-src -w packages/core`
    - This starts webpack in watch mode, watching the `src` directory
-3. Terminal 3: `npm run start -w packages/core`
+4. Terminal 3: `npm run start -w packages/core`
    - This starts `live-server`, watching the build directory
-4. Visit `http://127.0.0.1:8080/?ktest`
+5. Visit `http://127.0.0.1:8080/?ktest`
 	- The query parameter just starts some debug stuff to check all is working
 
-FAQ
-- Why not use `webpack-dev-server`?
-  - its faster to not recompile the js when there is a change to the as
+To get site up and running
+1. Terminal 1: `npm run watch-build -w packages/core`
+	- this will update the sites build whenever the core build changes
+2. Terminal 2: `npm run start -w packages/site`
+	- start docusaurus
+
+To test ecs proxy generator:
+1. `npm run make-proxies-test -w packages/ecs`
 
 ## TODO
 - Material UBOs

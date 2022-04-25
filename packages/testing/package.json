@@ -5,5 +5,8 @@
 		"@as-pect/assembly": "^6.2.0",
 		"@as-pect/cli": "^6.2.4",
 		"assemblyscript": "^0.19.23"
+	},
+	"scripts": {
+		"test": "npx ts-node ../../../as-pect/packages/cli/src/index.ts --watch --config ./config/as-pect.config.js --nologo"
 	}
 }

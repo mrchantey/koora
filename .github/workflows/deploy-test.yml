@@ -20,5 +20,9 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
+      - name: Build assembly
+        run: npm run build-as -w packages/core
+      - name: Copy build to site
+        run: npm run copy-build -w packages/core
       - name: Test build website
         run: npm run build -w packages/site
