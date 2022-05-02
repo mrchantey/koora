@@ -3,6 +3,7 @@ import { ClassFile } from './parseClass'
 
 export interface ProxyInfo extends ClassFile{
 	usize: string
+	eidsize: string
 	proxyName: string
 	totalPadding: number
 	maxAlign: number
@@ -13,6 +14,7 @@ export interface ProxyInfo extends ClassFile{
 export const makeProxyInfo = (classFile: ClassFile): ProxyInfo => ({
 	...classFile,
 	usize: 'u32',
+	eidsize: 'u32',
 	proxyName: classFile.className + 'Proxy',
 	totalPadding: 0,
 	maxAlign: 0,

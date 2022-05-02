@@ -3,16 +3,16 @@ import { CTimeProxy, CTransformProxy, allocateProxy, Transform } from './import'
 
 describe('proxy', () => {
 	
-	beforeEach(() => {
-		
+	beforeEach(() => {		
 	})
 
-	test('simple proxy', () => {
+	test('primitive proxy', () => {
 		const proxy = allocateProxy<CTimeProxy>()
 		proxy.start = 10
 		expect(proxy.start).toBe(10)
-		log(proxy)
+		// log(proxy)
 	})
+
 	
 	test('reference proxy', () => {
 		const eid = 0

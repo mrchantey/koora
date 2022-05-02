@@ -1,10 +1,5 @@
-
 import { Vector2, Vector3 } from '../example'
 import { Transform } from '../example2'
-
-
-
-
 
 export class MyComponent{
 

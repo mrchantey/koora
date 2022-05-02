@@ -25,13 +25,23 @@ export class CTransformProxy {
 	//references
 	static childrenRefKeeper: Map<u32, Set<Transform>> = new Map()
 	get children(): Set<Transform>{ return changetype<Set<Transform>>(load<usize>(changetype<usize>(this) + 244)) }
-	set children(val: Set<Transform>){ store<usize>(changetype<usize>(this) + 244, changetype<usize>(val)) }
+	set children(val: Set<Transform>){ 
+		store<usize>(changetype<usize>(this) + 244, changetype<usize>(val))
+		CTransformProxy.childrenRefKeeper.set(this.eid, val)
+	}
 	static parentRefKeeper: Map<u32, Transform|null> = new Map()
 	get parent(): Transform|null{ return changetype<Transform|null>(load<usize>(changetype<usize>(this) + 248)) }
-	set parent(val: Transform|null){ store<usize>(changetype<usize>(this) + 248, changetype<usize>(val)) }
+	set parent(val: Transform|null){ 
+		store<usize>(changetype<usize>(this) + 248, changetype<usize>(val))
+		CTransformProxy.parentRefKeeper.set(this.eid, val)
+	}
+	get eid(): u32{ return load<u32>(changetype<usize>(this) + 252) }
+	set eid(value: u32){ store<u32>(changetype<usize>(this) + 252, value) }
 
 	//handle create
 	static handleCreate(proxy: CTransformProxy, eid: u32): void{
+		
+		proxy.eid = eid
 		const children = changetype<Set<Transform>>(0)
 		CTransformProxy.childrenRefKeeper.set(eid, children)
 		proxy.children = children
@@ -45,10 +55,10 @@ export class CTransformProxy {
 	//handle remove
 	static handleRemove(proxy: CTransformProxy, eid: u32): void{
 		CTransformProxy.childrenRefKeeper.delete(eid)
-		proxy.children = changetype<T>(0)
+		proxy.children = changetype<Set<Transform>>(0)
 
 		CTransformProxy.parentRefKeeper.delete(eid)
-		proxy.parent = changetype<T>(0)
+		proxy.parent = changetype<Transform|null>(0)
 
 	}	
 

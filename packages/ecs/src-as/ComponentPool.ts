@@ -1,6 +1,7 @@
 //sparse set ecs resource https://gist.github.com/dakom/82551fff5d2b843cbe1601bbaff2acbf
 
-type EID = u32
+import { EID } from './utility'
+
 export class ComponentPool<T>{
 
 	stride: u32
@@ -11,7 +12,7 @@ export class ComponentPool<T>{
 
 	constructor() {
 		//@ts-ignore find cleaner way to do this
-		this.stride = changetype<T>(this.ptr).stride
+		this.stride = changetype<T>(0).stride
 	}
 
 	//TODO would maintaining this be cheaper than frequent changetype?
@@ -25,12 +26,10 @@ export class ComponentPool<T>{
 		this.entityList[index] = eid
 	}
 
-	@inline
 	entityLocation(eid: EID): usize {
 		return this.poolLocation(this.entityIndices[eid])
 	}
 
-	@inline
 	poolLocation(index: u32): usize {
 		return this.ptr + index * this.stride
 	}

@@ -1,12 +1,7 @@
 /* --- AUTO-GENERATED - Do not edit directly --- */
 import { MyComponent } from '../testDir'
-
 import { Vector2, Vector3 } from '../example'
 import { Transform } from '../example2'
-
-
-
-
 
 export class MyComponentProxy {
 	get stride(): u32{ return 64 }
@@ -26,13 +21,23 @@ export class MyComponentProxy {
 	//references
 	static parentRefKeeper: Map<u32, Transform> = new Map()
 	get parent(): Transform{ return changetype<Transform>(load<usize>(changetype<usize>(this) + 48)) }
-	set parent(val: Transform){ store<usize>(changetype<usize>(this) + 48, changetype<usize>(val)) }
+	set parent(val: Transform){ 
+		store<usize>(changetype<usize>(this) + 48, changetype<usize>(val))
+		MyComponentProxy.parentRefKeeper.set(this.eid, val)
+	}
 	static childrenRefKeeper: Map<u32, Transform[]> = new Map()
 	get children(): Transform[]{ return changetype<Transform[]>(load<usize>(changetype<usize>(this) + 52)) }
-	set children(val: Transform[]){ store<usize>(changetype<usize>(this) + 52, changetype<usize>(val)) }
+	set children(val: Transform[]){ 
+		store<usize>(changetype<usize>(this) + 52, changetype<usize>(val))
+		MyComponentProxy.childrenRefKeeper.set(this.eid, val)
+	}
+	get eid(): u32{ return load<u32>(changetype<usize>(this) + 56) }
+	set eid(value: u32){ store<u32>(changetype<usize>(this) + 56, value) }
 
 	//handle create
 	static handleCreate(proxy: MyComponentProxy, eid: u32): void{
+		
+		proxy.eid = eid
 		const parent = changetype<Transform>(0)
 		MyComponentProxy.parentRefKeeper.set(eid, parent)
 		proxy.parent = parent
@@ -46,10 +51,10 @@ export class MyComponentProxy {
 	//handle remove
 	static handleRemove(proxy: MyComponentProxy, eid: u32): void{
 		MyComponentProxy.parentRefKeeper.delete(eid)
-		proxy.parent = changetype<T>(0)
+		proxy.parent = changetype<Transform>(0)
 
 		MyComponentProxy.childrenRefKeeper.delete(eid)
-		proxy.children = changetype<T>(0)
+		proxy.children = changetype<Transform[]>(0)
 
 	}	
 
