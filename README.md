@@ -1,10 +1,10 @@
 # koora
 
-**NOTE: This project is not in active development**
-
 AssemblyScript Game Framework
 
 visit [koora.dev](https://koora.dev)
+
+**NOTE: This project is not in active development**
 
 ## Packages
 
