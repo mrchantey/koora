@@ -1,4 +1,7 @@
 # koora
+
+**NOTE: This project is not in active development**
+
 AssemblyScript Game Framework
 
 visit [koora.dev](https://koora.dev)
@@ -17,7 +20,7 @@ visit [koora.dev](https://koora.dev)
 
 ## Repo Guide
 
-Things are a little clunky at the moment 😅
+There are quite a few steps to getting up and running, but the end result is hot reloading across both wasm and web.
 
 ### Up and running - Core
 
