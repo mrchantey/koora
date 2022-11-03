@@ -2,9 +2,12 @@
 
 AssemblyScript Game Framework
 
-visit [koora.dev](https://koora.dev)
+> **NOTE: This project is not in active development.**
+> 
+> I'm continuing my wasm experiments using [Rust and Bevy](https://bevyengine.org/)
 
-**NOTE: This project is not in active development**
+
+website: [koora.dev](https://koora.dev)
 
 ## Packages
 
